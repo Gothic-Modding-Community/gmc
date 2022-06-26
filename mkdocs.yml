@@ -1,0 +1,23 @@
+site_name: Gothic Modding Community
+
+theme:
+  name: material
+  logo: img/gmc_logo.png
+  palette:
+    primary: black
+
+nav:
+  - Home: index.md
+  - General information:
+    - Directory structure: DirectoryStructure.md
+    - VDFS - virtual file system :
+      - Virtual file system : VDFS.md
+      - GothicVDFS : GothicVDFS.md
+      - VDFS Tool : VDFSTool.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
