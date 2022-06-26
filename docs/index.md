@@ -6,6 +6,9 @@ First two Gothic games use the engine called ZenGin developed by Pranha Bytes an
 
 The content here is not meant to be taken as the holy word of modding. We are just modders sharing our experiences, knowledge and our favorite workflows.
 
-Feel free to open a pull request with our article, or propose changes.
+Feel free to open a pull request with your article, or propose changes.
 
-> Work in progress
+
+!!! note
+
+     Work in progress
