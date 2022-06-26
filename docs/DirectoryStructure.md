@@ -24,7 +24,9 @@ Modding is all about changing the game files and for that we have to know the di
         │   └── content
         │       └── CUTSCENE
         ├── Sound
-        └── Video
+        ├── Textures
+        ├── Video
+        └── Worlds
 ```
 
 ## `Data`

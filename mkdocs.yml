@@ -14,6 +14,21 @@ nav:
       - Virtual file system : VDFS.md
       - GothicVDFS : GothicVDFS.md
       - VDFS Tool : VDFSTool.md
+  - Animations:
+    - Overview: Animation.md
+  - Meshes:
+    - Overview: Meshes.md
+  - Music:
+    - Overview: Music.md
+  - Sound:
+    - Overview: Sound.md
+  - Textures:
+    - Overview: Textures.md
+  - Video:
+    - Overview: Video.md
+  - Worlds:
+    - Overview: Worlds.md
+  
 
 markdown_extensions:
   - admonition
