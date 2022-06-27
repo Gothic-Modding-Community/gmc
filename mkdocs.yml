@@ -28,7 +28,10 @@ nav:
     - Overview: Video.md
   - Worlds:
     - Overview: Worlds.md
-  
+  - Daedalus:
+    - Overview: Scripts.md
+    - Classes:
+      - C_ITEM: c_item.md
 
 markdown_extensions:
   - admonition
