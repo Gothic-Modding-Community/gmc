@@ -16,6 +16,10 @@ nav:
       - VDFS Tool : VDFSTool.md
   - Animations:
     - Overview: Animation.md
+    - MDS - ModelScript: MDS.md
+    - EventBlocks: AniEventBlocks.md
+    - Tutorials:
+      - Standalone animation: StandaloneAni.md
   - Meshes:
     - Overview: Meshes.md
   - Music:
