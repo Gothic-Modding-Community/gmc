@@ -1,6 +1,6 @@
 # GothicVDFS
 
-Gothic VDFSis still the most popular VDFS tool. It was created by NicoDE.
+Gothic VDFS is still the most popular VDFS tool. It was created by NicoDE.
 
 ## Download
 
