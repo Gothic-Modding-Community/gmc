@@ -48,6 +48,8 @@ This is the most important part of the header, which specifies in which format t
 - **BINARY** - Binary representation of the class instance which mostly copies the data 1:1 into/from the stream. In practice, this format is only used to store savefiles (.SAV).
 - **BIN_SAFE** - BinSafe, short for Binary Safe, is an extended version of Binary which stores type information along with the data itself. This is meant to make error checking for invalid data easier. There are also other changes which are explained below. Most if not all world files (.ZEN) are stored in this format.
 
+This property may not be present in older archives.
+
 `saveGame 0`
 
 Specifies if this archive is a savefile. This property may not be present in older archives.
@@ -64,17 +66,29 @@ The user which created this stream. This property may not be present in older ar
 
 Tells the parses that this is the end of the header.
 
+In version 0 archives, we may additionally find a property called `csum` which stores the checksum of the whole stream. However, this property is unused and equals `00000000` by default.
+
+If the archive utilizes `zCArchiverGeneric` then this header will also be followed by a short section specifying the number of object instances in this stream. In older versions, this property would be directly part of the main header.
+
 ```
 objects 2594     
 END
 ```
 
-If the archive utilizes `zCArchiverGeneric` then this header will also be followed by a short section specifying the number of object instances in this stream. In older versions, this property would be directly part of the main header. If the archive is created using `zCArchiverBinSafe`, then this data will be stored in a binary structure, however it will still be there.
+If the archive is created using `zCArchiverBinSafe`, then this data will be stored in the following binary structure:
 
-
-In version 0 archives, we may also find a property called `csum` which stores the checksum of the whole stream. However, this property is unused and equals `00000000` by default.
+```cpp
+struct BinSafeArchiveHeader
+{
+	uint32_t version;		// Always equals 2
+	uint32_t objectCount;	// Serves the same function as "objects n"
+	uint32_t chunkPos;		// Offset to chunk hash table
+};
+```
 
 ### Contents
+
+Looking further into the stream
 
 ## From the class' point of view
 
