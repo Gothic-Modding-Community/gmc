@@ -17,6 +17,7 @@ nav:
         - Virtual file system : VDFS.md
         - GothicVDFS : GothicVDFS.md
         - VDFS Tool : VDFSTool.md
+      - Object persistence: ObjectPersistence.md
     - Animations:
       - Overview: Animation.md
       - MDS - ModelScript: MDS.md
