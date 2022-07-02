@@ -5,37 +5,44 @@ theme:
   logo: img/gmc_logo.png
   palette:
     primary: black
+  features:
+    - navigation.sections
 
 nav:
   - Home: index.md
-  - General information:
-    - Directory structure: DirectoryStructure.md
-    - VDFS - virtual file system :
-      - Virtual file system : VDFS.md
-      - GothicVDFS : GothicVDFS.md
-      - VDFS Tool : VDFSTool.md
-  - Animations:
-    - Overview: Animation.md
-    - MDS - ModelScript: MDS.md
-    - EventBlocks: AniEventBlocks.md
-    - Tutorials:
-      - Standalone animation: StandaloneAni.md
-  - Meshes:
-    - Overview: Meshes.md
-  - Music:
-    - Overview: Music.md
-  - Sound:
-    - Overview: Sound.md
-  - Textures:
-    - Overview: Textures.md
-  - Video:
-    - Overview: Video.md
-  - Worlds:
-    - Overview: Worlds.md
-  - Daedalus:
-    - Overview: Scripts.md
-    - Classes:
-      - C_ITEM: c_item.md
+  - ZenGin (G1/G2):
+    - General information:
+      - Directory structure: DirectoryStructure.md
+      - VDFS - virtual file system :
+        - Virtual file system : VDFS.md
+        - GothicVDFS : GothicVDFS.md
+        - VDFS Tool : VDFSTool.md
+    - Animations:
+      - Overview: Animation.md
+      - MDS - ModelScript: MDS.md
+      - EventBlocks: AniEventBlocks.md
+      - Tutorials:
+        - Standalone animation: StandaloneAni.md
+    - Meshes:
+      - Overview: Meshes.md
+    - Music:
+      - Overview: Music.md
+    - Sound:
+      - Overview: Sound.md
+    - Textures:
+      - Overview: Textures.md
+    - Video:
+      - Overview: Video.md
+    - Worlds:
+      - Overview: Worlds.md
+    - Daedalus:
+      - Overview: Scripts.md
+      - Classes:
+        - C_ITEM: c_item.md
+  - Genome (G3/R1):
+    - Genome engine: Genome.md
+
+
 
 markdown_extensions:
   - admonition
