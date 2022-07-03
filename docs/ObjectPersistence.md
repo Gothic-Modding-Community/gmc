@@ -1,8 +1,8 @@
 # Object persistence
 
-Due to the nature of the program, the engine is required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, ZenGin implements a persistence system using the `zCArchiver` class and its derivatives, that allows individual engine classes to implement a routine specifying which data should be saved or loaded from disk, and in which manner.
+Due to the nature of the program, the engine is required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, ZenGin implements an object persistence system using the `zCArchiver` class and its derivatives, that allows individual engine classes to implement a routine specifying which data should be saved or loaded from disk, and in which manner.
 
-By calling on an interface provided by the `zCArchiver` class, a class (which must be derived from `zCObject`) can write data directly into a stream using several different modes. Primarily these are ASCII and BinSafe, however more is explained below.
+By calling on an interface provided by the `zCArchiver` class, a class (which must be derived from `zCObject`) can write data directly into a stream using several different modes. Primarily these are ASCII and BinSafe, however there are more options, as is explained below.
 
 ## Archive format
 
@@ -10,7 +10,7 @@ In order to understand better how this process works, it is best to look at a pr
 
 ### Header
 
-If you open up a file containing a serialized engine class instance, you will see the following at the start of the file:
+When you open up a ZenGin archive, you will see the following at the start of the file:
 
 ```
 ZenGin Archive
@@ -25,7 +25,7 @@ objects 2594
 END
 ```
 
-Let's look at each of these properites and what they mean:
+Let's look at each of these properties and what they mean:
 
 `ZenGin Archive`
 
@@ -38,6 +38,7 @@ Version specification. Can be either `0` or `1`. Both Gothic 1 and 2 are already
 `zCArchiverGeneric`
 
 Specifies which derived `zCArchiver` class should be used to read this stream. Accepted values are `zCArchiverGeneric` for ASCII and Binary archives, and `zCArchiverBinSafe` for BinSafe archives. More info below.
+This property may not be present in older archives.
 
 `ASCII`
 
@@ -47,8 +48,6 @@ This is the most important part of the header, which specifies in which format t
 - **ASCII_PROPS** - Same as ASCII except with more additional data that the developer can specify for visual clarity. In practice, it isn't used anywhere and mostly serves only to pretify debug info (try typing `ZWORLD VOBPROPS` in the console and look in zSpy ;) ).
 - **BINARY** - Binary representation of the class instance which mostly copies the data 1:1 into/from the stream. In practice, this format is only used to store savefiles (.SAV).
 - **BIN_SAFE** - BinSafe, short for Binary Safe, is an extended version of Binary which stores type information along with the data itself. This is meant to make error checking for invalid data easier. There are also other changes which are explained below. Most if not all world files (.ZEN) are stored in this format.
-
-This property may not be present in older archives.
 
 `saveGame 0`
 
@@ -68,7 +67,7 @@ Tells the parses that this is the end of the header.
 
 In version 0 archives, we may additionally find a property called `csum` which stores the checksum of the whole stream. However, this property is unused and equals `00000000` by default.
 
-If the archive utilizes `zCArchiverGeneric` then this header will also be followed by a short section specifying the number of object instances in this stream. In older versions, this property would be directly part of the main header.
+If the archive utilizes `zCArchiverGeneric` then this header will also be followed by a short section specifying the number of object instances in this stream. In older versions, this property would be directly part of the main header. This value will be used to initialize the objectList, which is an array of pointers where the addresses of loaded objects will be stored for later referencing.
 
 ```
 objects 2594     
@@ -88,9 +87,90 @@ struct BinSafeArchiveHeader
 
 ### Contents
 
-Looking further into the stream
+Looking further into the archive, we see what appears to be a nested structure.
 
-## From the class' point of view
+```
+
+[% oCWorld:zCWorld 64513 0]
+	[VobTree % 0 0]
+		childs0=int:1
+		[% zCVobLevelCompo:zCVob 12289 1]
+			pack=int:0
+			presetName=string:
+			bbox3DWS=rawFloat:-71919.9609 -13091.8232 -59900 108999.992 20014.0352 67399.9922 
+			trafoOSToWSRot=raw:0000803f0000000000000000000000000000803f0000000000000000000000000000803f
+			trafoOSToWSPos=vec3:0 0 0
+			vobName=string:LEVEL-VOB
+			visual=string:SURFACE.3DS
+			showVisual=bool:0
+			visualCamAlign=enum:0
+			cdStatic=bool:1
+			cdDyn=bool:0
+			staticVob=bool:0
+			dynShadow=enum:0
+			[visual zCMesh 0 2]
+			[]
+			[ai % 0 0]
+			[]
+		[]
+		...
+```
+
+Primarily, we differentiate between 2 different ...
+
+#### Chunks
+
+A chunk is a structure that groups properties together. Most of the time, a chunk represents a class instance, however this is not always true, as classes may arbitrarily create chunks as is needed. For example, the example above contains a chunk called `VobTree`, which does not represent a class instance, but only serves to make the reading of the archive easier.
+
+While in ASCII mode, the start of a chunk is represented using square brackets.
+
+`[% oCWorld:zCWorld 64513 0]`
+
+Inside the start of each chunk, there are 4 pieces of data separated by spaces, which are:
+
+- **Object name** - The name of the chunk to use while reading. If the chunk has no name then it will be simply equal to `%`.
+- **Class name** - The name of the class which this chunk represents. Class names are stored with their full inheritance hierarchy (e.g. `oCMobLadder:oCMobInter:oCMOB:zCVob`). In case the chunk is not an object, but an arbitrary chunk, then this field will be equal to `%` (`%` can also mean that this chunk is a nullptr). In some cases you may encounter `§` instead. This means that the object already exists and that the parser should look for it in the objectList using the object index. Using this mechanism, a single instance can be referenced multiple times without worrying about duplicity.
+- **Class version** - Used to ensure that the data being read is compatible with the current game/engine version, so that there are no mismatches in the data pattern. This value is different for every class and varies between game versions.
+- **Object index** - An index into the objectList under which this object will be stored. If the class name is equal to `§`, then this value will be used to retrieve an existing instance from the objectList.
+
+If this is a Binary archive, the same data will be stored in the following binary structure:
+
+```cpp
+struct BinaryObjectHeader
+{
+	uint32_t	objectSize;		// Size of the whole object in bytes
+	uint16_t	classVersion;
+	uint32_t	objectIndex;
+	char		objectName[];	// Null-terminated string
+	char		className[];	// Null-terminated string
+};
+```
+
+Oddly enough, if the archive is BinSafe, then the data will be encoded the same way as in ASCII mode, except that it will be stored as a property.
+
+```cpp
+struct BinSafeStringProperty
+{
+	uint32_t	type;	// String
+	uint16_t	length;	// Length of the text
+	char		text[];	// [% oCWorld:zCWorld 64513 0]
+};
+```
+
+In ASCII mode `[]` represents the end of the current chunk.
+
+#### Properties
+
+Inside the chunks, we find properties that store the actual data saved by the class:
+
+`visual=string:SURFACE.3DS`
+
+In ASCII mode the format is `name=type:value`
+
+
+## Implementation
+
+### A practical example
 
 Let's propose that we have class which is declared like so:
 
@@ -102,8 +182,8 @@ public:
 	zCMyClass()				{}
 	virtual ~zCMyClass()	{}
 	
-	virtual void Archive();
-	virtual void Unarchive();
+	virtual void Archive(zCArchiver&);
+	virtual void Unarchive(zCArchiver&);
 
 private:
 

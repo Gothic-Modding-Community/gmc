@@ -41,7 +41,9 @@ nav:
       - Classes:
         - C_ITEM: c_item.md
   - Genome (G3/R1):
-    - Genome engine: Genome.md
+    - General information:
+      - Genome engine: Genome.md
+      - Object persistence: GenomeObjectPersistence.md
 
 
 
