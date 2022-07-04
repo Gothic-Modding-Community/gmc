@@ -1,8 +1,8 @@
 # Object persistence
 
-In order to simplify the loading and saving data of varying types to the user's hard-drive, ZenGin implements a simple object persistence system using the `zCArchiver` class and its derivatives, that allow individual engine classes to implement a routine specifying which data should be saved or loaded from disk, and in which manner.
+In order to simplify loading and saving data of varying types from and to the user's hard-drive, ZenGin implements a simple object persistence system using the `zCArchiver` class and its derivatives, that allow individual engine classes to implement a routine specifying which data should be saved or loaded from disk, and in which manner.
 
-An object that is derived from the `zCObject` class may overload the `Archive` and `Unarchive` virtual methods. Within these methods, the class may then call on an interface provided by the `zCArchiver` class, which allows the it to directly read from/write to a stream using several different modes. Primarily these are ASCII and BinSafe, however there are more options, as is explained below.
+An object that is derived from the `zCObject` class may overload the `Archive` and `Unarchive` virtual methods. Within these methods, the class may then call on an interface provided by the `zCArchiver` class, which allows it to directly read from/write to a stream using several different modes. Primarily these are ASCII and BinSafe, however, there are more options, as is explained below.
 
 ## Archive format
 

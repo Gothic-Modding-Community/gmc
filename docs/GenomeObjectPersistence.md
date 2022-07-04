@@ -8,9 +8,9 @@ Due to the nature of the program, the engine is required to store and load a vas
 
 By using special preprocessor macros, any class derived from `bCObjectBase` may declare its own member properties in such a way that when the object written into a file using the `bCAccessorPropertyObject` class, its associated properties will be automatically serialized into the stream. When the object is then read back from the file, the class will be automatically initialized using the stored members.
 
-Additionally, classes may overload the `Read` and `Write` (`OnRead` and `OnWrite` in Risen 1) virtual methods, that allow the class to save additional data that is required during parsing (such as paths to other necessary files).
+Additionally, classes may overload the `Read` and `Write` (`OnRead` and `OnWrite` in Risen 1) virtual methods, that allow the class to save additional data required during parsing (such as paths to other necessary files).
 
-As this system is quite flexible, it is used to store most of the game's data, from meshes, animations and textures to level and quest data. This is quite different from [ZenGin, as its object persistence system](ObjectPersistence.md) is only used for worlds, saves, output units and parts of compiled meshes.
+As this system is quite flexible, it is used to store most of the game's data, from meshes, animations and textures to level and quest data. This is quite different from ZenGin, as [its object persistence system](ObjectPersistence.md) is only used for worlds, saves, output units and parts of compiled meshes.
 
 
 ### A practical example
