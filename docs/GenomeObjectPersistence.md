@@ -1,5 +1,17 @@
 # Object persistence
 
+!!! note "Warning about Risen 2, 3 and ELEX 1 and 2"
+
+     The following information only applies to the games Gothic 3 (2006) and Risen (2009). While newer Genome engine games share the same overall concepts, they have very important implementation details that would make them require their own section.
+
+Due to the nature of the program, the engine is required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, Genome implements an object persistence system using its own a runtime type information (RTTI) system.
+
+By using special preprocessor macros, any class derived from `bCObjectBase` may declare its own member properties in such a way that when the object written into a file using the `bCAccessorPropertyObject` class, its associated properties will be automatically serialized into the stream. When the object is then read back from the file, the class will be automatically initialized using the stored members.
+
+Additionally, classes may overload the `Read` and `Write` (`OnRead` and `OnWrite` in Risen 1) virtual methods, that allow the class to save additional data that is required during parsing (such as paths to other necessary files).
+
+As this system is quite flexible, it is used to store most of the game's data, from meshes, animations and textures to level and quest data. This is quite different from [ZenGin, as its object persistence system](ObjectPersistence.md) is only used for worlds, saves, output units and parts of compiled meshes.
+
 
 ### A practical example
 

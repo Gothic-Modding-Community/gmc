@@ -1,8 +1,8 @@
 # Object persistence
 
-Due to the nature of the program, the engine is required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, ZenGin implements an object persistence system using the `zCArchiver` class and its derivatives, that allows individual engine classes to implement a routine specifying which data should be saved or loaded from disk, and in which manner.
+In order to simplify the loading and saving data of varying types to the user's hard-drive, ZenGin implements a simple object persistence system using the `zCArchiver` class and its derivatives, that allow individual engine classes to implement a routine specifying which data should be saved or loaded from disk, and in which manner.
 
-By calling on an interface provided by the `zCArchiver` class, a class (which must be derived from `zCObject`) can write data directly into a stream using several different modes. Primarily these are ASCII and BinSafe, however there are more options, as is explained below.
+An object that is derived from the `zCObject` class may overload the `Archive` and `Unarchive` virtual methods. Within these methods, the class may then call on an interface provided by the `zCArchiver` class, which allows the it to directly read from/write to a stream using several different modes. Primarily these are ASCII and BinSafe, however there are more options, as is explained below.
 
 ## Archive format
 
@@ -185,8 +185,6 @@ public:
 	virtual void Archive(zCArchiver&);
 	virtual void Unarchive(zCArchiver&);
 
-private:
-
 	int myInt;
 	zCMyClass* myObject;
 	zCMyClass* secondPointerToMyObject;
@@ -200,16 +198,20 @@ The hypothetical class then implements these virtual functions:
 ```cpp
 void zCMyClass::Archive(zCArchiver& archiver)
 {
-	archiver.WriteInt("myInt", &myInt);
-	archiver.WriteObject("myObject", &myObject);
-	archiver.WriteObject("secondPointerToMyObject", &secondPointerToMyObject);
+	archiver.WriteInt("myInt", myInt);
+	archiver.WriteObject("myObject", myObject);
+	archiver.WriteChunkStart("myChunk", 0);
+	archiver.WriteObject("secondPointerToMyObject", secondPointerToMyObject);
+	archiver.WriteChunkEnd();
 }
 
 void zCMyClass::Unarchive(zCArchiver& archiver)
 {
-	archiver.ReadInt("myInt", &myInt);
-	archiver.ReadObject("myObject", &myObject);
-	archiver.ReadObject("secondPointerToMyObject", &secondPointerToMyObject);
+	archiver.ReadInt("myInt", myInt);
+	myObject = dynamic_cast<zCMyClass*>(archiver.ReadObject("myObject"));
+	archiver.ReadChunkStart("myChunk");
+	secondPointerToMyObject = dynamic_cast<zCMyClass*>(archiver.ReadObject("secondPointerToMyObject"));
+	archiver.ReadChunkStart();
 }
 
 ```
@@ -244,10 +246,14 @@ END
 		myInt=int:1
 		[myObject % 0 0]
 		[]
-		[secondPointerToMyObject % 0 0]
+		[myChunk % 0 0]
+			[secondPointerToMyObject % 0 0]
+			[]
 		[]
 	[]
-	[secondPointerToMyObject § 0 1]
+	[myChunk % 0 0]
+		[secondPointerToMyObject § 0 1]
+		[]
 	[]
 []
 ```
