@@ -12,7 +12,6 @@ Additionally, classes may overload the `Read` and `Write` (`OnRead` and `OnWrite
 
 As this system is quite flexible, it is used to store most of the game's data, from meshes, animations and textures to level and quest data. This is quite different from ZenGin, as [its object persistence system](ObjectPersistence.md) is only used for worlds, saves, output units and parts of compiled meshes.
 
-
 ### A practical example
 
 Let's propose that we have class which is declared like so:
