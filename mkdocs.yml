@@ -17,6 +17,7 @@ nav:
         - Virtual file system : VDFS.md
         - GothicVDFS : GothicVDFS.md
         - VDFS Tool : VDFSTool.md
+      - Object persistence: ObjectPersistence.md
     - Animations:
       - Overview: Animation.md
       - MDS - ModelScript: MDS.md
@@ -40,7 +41,9 @@ nav:
       - Classes:
         - C_ITEM: c_item.md
   - Genome (G3/R1):
-    - Genome engine: Genome.md
+    - General information:
+      - Genome engine: Genome.md
+      - Object persistence: GenomeObjectPersistence.md
 
 
 
@@ -50,3 +53,5 @@ markdown_extensions:
   - footnotes
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
