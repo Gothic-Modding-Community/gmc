@@ -37,7 +37,7 @@ Version specification. Can be either `0` or `1`. Both Gothic 1 and 2 are already
 
 `zCArchiverGeneric`
 
-Specifies which derived `zCArchiver` class should be used to read this stream. Accepted values are `zCArchiverGeneric` for ASCII and Binary archives, and `zCArchiverBinSafe` for BinSafe archives. More info below.
+Specifies which derived `zCArchiver` class should be used to read this archive. Accepted values are `zCArchiverGeneric` for ASCII and Binary archives, and `zCArchiverBinSafe` for BinSafe archives. More info below.
 This property may not be present in older archives.
 
 `ASCII`
@@ -55,21 +55,21 @@ Specifies if this archive is a savefile. This property may not be present in old
 
 `date 7.1.2001 23:9:19`
 
-The date at which this stream was created.
+The date at which this archive was created.
 
 `user roeske`
 
-The user which created this stream. This property may not be present in older archives.
+The user which created the archive. This property may not be present in older archives.
 
 `END`
 
 Tells the parses that this is the end of the header.
 
-In version 0 archives, we may additionally find a property called `csum` which stores the checksum of the whole stream. However, this property is unused and equals `00000000` by default.
+In version 0 archives, we may additionally find a property called `csum` which stores the checksum of the whole archive. However, this property is unused and equals `00000000` by default.
 
 In order to correctly read the archive's header across varying engine versions, one should not count on the properties always being in the same order or even being there at all.
 
-If the archive utilizes `zCArchiverGeneric` then this header will also be followed by a short section specifying the number of object instances in this stream. This value will be used to initialize the objectList, which is an array of pointers where the addresses of loaded objects will be stored for later referencing. In older versions, this property would be directly part of the main header. 
+If the archive utilizes `zCArchiverGeneric` then this header will also be followed by a short section specifying the number of object instances in this archive. This value will be used to initialize the objectList, which is an array of pointers where the addresses of loaded objects will be stored for later referencing. In older versions, this property would be directly part of the main header. 
 
 ```
 objects 2594     
@@ -122,7 +122,7 @@ Within ZenGin archives, we primarily differentiate between chunks and properties
 
 #### Chunks
 
-A chunk is a structure that groups properties together. Most of the time, a chunk represents a class instance, however, this is not always true, as classes may arbitrarily create chunks as is needed. For example, the example above contains a chunk called `VobTree`, which does not represent a class instance, but only serves to make the reading of the archive easier.
+A chunk is a structure that groups properties together. Most of the time, a chunk represents a class instance, however, this is not always true, as classes may arbitrarily create chunks as is needed. For example, the sample above contains a chunk called `VobTree`, which does not represent a class instance, but only serves to make the reading of the archive easier.
 
 While in ASCII mode, the start of a chunk is represented using square brackets.
 
@@ -179,9 +179,9 @@ By default, `zCArchiver` allows to store properties of the following types:
 
 - **Bool** - Stores a single-byte boolean value. In ASCII mode its `name=bool:1` and in Binary mode it's a single byte.
 
-- **String** - An ASCII encoded string. While in ASCII mode strings are stored as `name=string:value`. In Binary mode, strings are NULL terminated.
+- **String** - An ASCII encoded string. While in ASCII mode, strings are stored as `name=string:value`. In Binary mode, strings are NULL terminated.
 
-- **Vec3** - A three component vector, mainly used to store positional data. The ASCII mode format is `name=vec3:1.0 1.0 1.0`. In Binary mode the three components of the vector are stored in a series of 12 bytes.
+- **Vec3** - A three component vector, mainly used to store positional data. The ASCII mode format is `name=vec3:1.0 1.0 1.0`. In Binary mode the three components of the vector are stored in series, which equals to a total size of 12 bytes.
 
 - **Color** - A 32-bit color value stored as BGRA. In ASCII mode the color is stored as `name=color:255 255 255 255` while in Binary mode it's just 4 raw bytes.
 
@@ -199,7 +199,6 @@ enum TYPE
 	TYPE_STRING		= 0x1,
 	TYPE_INTEGER	= 0x2,
 	TYPE_FLOAT		= 0x3,
-	TYPE_HASH		= 0x12,
 	TYPE_BYTE		= 0x4,
 	TYPE_WORD		= 0x5,
 	TYPE_BOOL		= 0x6,
@@ -208,6 +207,7 @@ enum TYPE
 	TYPE_RAW		= 0x9,
 	TYPE_RAWFLOAT	= 0x10,
 	TYPE_ENUM		= 0x11
+	TYPE_HASH		= 0x12,
 };
 
 struct BinSafeProperty
@@ -225,8 +225,16 @@ struct BinSafeProperty
 		uint8_t		byteOrBoolValue;
 		zVEC3		vec3Value;
 		zCOLOR		colorValue;
-		char		rawValue[];
-		float		rawFloatValue[];
+		struct
+		{
+			uint16_t	rawLength;
+			char		rawValue[];
+		}
+		struct
+		{
+			uint16_t	rawFloatLength;
+			float		rawFloatValue[];
+		}		
 	};
 };
 ```
@@ -251,7 +259,7 @@ Instead of storing the raw value, properties may save a hash instead, which is t
 
 ## Implementation
 
-As mentioned in the opening paragraph, classes may use this functionality by overloading the `Archive` and `Unarchive` virtual methods, which pass an instance of `zCArchiver` by reference. When the class instance is then serialized and/or parsed, these methods are called and perform the desired serialization/parsing work.
+As mentioned in the opening paragraph, classes may use the described functionality by overloading the `Archive` and `Unarchive` virtual methods, which pass an instance of `zCArchiver` by reference. When the class instance is then serialized and/or parsed, these methods are called and perform the desired serialization/parsing work.
 
 Within these routines, the class uses methods provided by the `zCArchiver` instance. These methods return/accept a value of a specific type (e.g. ReadInt/WriteInt), while they do the actual reading/writing work behind the scenes based on the current mode (ASCII/Binary/BinSafe). The programmer writing the class then does not care whether the final archive will be saved as ASCII, Binary or BinSafe, as they only use the `zCArchiver` Read\* and Write\* methods.
 
@@ -284,7 +292,9 @@ The hypothetical class then implements these virtual functions:
 void zCMyClass::Archive(zCArchiver& archiver)
 {
 	archiver.WriteInt("myInt", myInt);
+	
 	archiver.WriteObject("myObject", myObject);
+	
 	archiver.WriteChunkStart("myChunk", 0);
 	archiver.WriteObject("secondPointerToMyObject", secondPointerToMyObject);
 	archiver.WriteChunkEnd();
@@ -293,10 +303,12 @@ void zCMyClass::Archive(zCArchiver& archiver)
 void zCMyClass::Unarchive(zCArchiver& archiver)
 {
 	archiver.ReadInt("myInt", myInt);
+	
 	myObject = dynamic_cast<zCMyClass*>(archiver.ReadObject("myObject"));
+	
 	archiver.ReadChunkStart("myChunk");
 	secondPointerToMyObject = dynamic_cast<zCMyClass*>(archiver.ReadObject("secondPointerToMyObject"));
-	archiver.ReadChunkStart();
+	archiver.ReadChunkEnd();
 }
 
 ```
@@ -305,13 +317,16 @@ We then initialize the class in the following way:
 
 ```cpp
 zCMyClass object;
-object.myInt = 1;
+
+object.myInt = 12121212;
+
 object.myObject = new zCMyClass();
-object.myObject->myInt = 1;
+object.myObject->myInt = 34343434;
+
 object.secondPointerToMyObject = object.myObject;
 ```
 
-If we now serialized, or to use the engine's term "archived", this instance into an ASCII stream, the result would look like this:
+If we now serialized, or to use the engine's term "archived", this instance into an ASCII archive, the result would look like this:
 
 ```
 ZenGin Archive
@@ -326,9 +341,9 @@ objects 2
 END
 
 [% zCMyClass 0 0]
-	myInt=int:1
+	myInt=int:12121212
 	[myObject zCMyClass 0 1]
-		myInt=int:1
+		myInt=int:34343434
 		[myObject % 0 0]
 		[]
 		[myChunk % 0 0]
