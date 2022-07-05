@@ -165,6 +165,70 @@ Inside the chunks, we find properties, which are key-value pairs that classes us
 
 `visual=string:SURFACE.3DS`
 
+By default, `zCArchiver` allows to store properties of the following types:
+
+- **Int** - A regular 32-bit integer. In ASCII mode its stored as `name=int:1`, while in Binary mode it's just the value stored as 4 bytes.
+
+- **Byte** - A 8-bit integer. ASCII mode doesn't differentiate between Int and Byte, so this will be stored as `name=int:1` regardless. Binary mode stores only the single byte.
+
+- **Word** - A 16-bit integer. ASCII mode doesn't differentiate between Int and Word, so this will be stored as `name=int:1` regardless. Binary mode stores only the 2 bytes.
+
+- **Float** - A standard IEEE 754 32-bit floating point number. In ASCII mode the format is `name=float:1.0`, while in Binary mode the float gets stored raw as 4 bytes.
+
+- **Bool** - Stores a single-byte boolean value. In ASCII mode its `name=bool:1` and in Binary mode its a single byte.
+
+- **String** - An ASCII encoded string. While in ASCII mode strings are stored as `name=string:value`. In Binary mode, strings are NULL terminated.
+
+- **Vec3** - A 3 component vector, mainly used to store positional data. The ASCII mode format is `name=vec3:1.0 1.0 1.0`. In Binary mode the tree components of the vector are stored in series.
+
+- **Color** - A 32-bit color value stored as BGRA. In ASCII mode the color is stored as `name=color:255 255 255 255` while in Binary mode its just 4 raw bytes.
+
+- **Raw** - Raw binary data. In order to maintain readability, in ASCII mode this gets store as a hex encoded string such as `name=raw:63D15B07`. In Binary mode, only the data itself is stored, without any other info. Be aware that due to this you must know the size of the data beforehand.
+
+- **RawFloat** - An array of floats, mainly used to store bounding boxes. In ASCII mode, the floats are stored as `name=rawFloat:1.0 1.0 1.0 1.0 1.0 1.0`. In Binary mode the floats are stored in series as raw bytes. Same as with `Raw`, you must know the size of the array beforehand.
+
+- **Enum** - An enum value. In ASCII mode it gets stored as `name=enum:1`. In Binary mode it behaves the same as `Int`.
+
+As you might have noticed, binary mode doesn't perform any kind of checks on if its reading the right property or even data of the correct type. This is why BinSafe mode exists, as it stores the property type in along with the data itself.
+
+```cpp
+enum TYPE
+{
+	TYPE_STRING		= 0x1,
+	TYPE_INTEGER	= 0x2,
+	TYPE_FLOAT		= 0x3,
+	TYPE_HASH		= 0x12,
+	TYPE_BYTE		= 0x4,
+	TYPE_WORD		= 0x5,
+	TYPE_BOOL		= 0x6,
+	TYPE_VEC3		= 0x7,
+	TYPE_COLOR		= 0x8,
+	TYPE_RAW		= 0x9,
+	TYPE_RAWFLOAT	= 0x10,
+	TYPE_ENUM		= 0x11
+};
+
+struct BinSafeProperty
+{
+	TYPE type;
+	union
+	{
+		struct
+		{
+			uint16_t	stringLength;
+			char		stringValue;
+		}
+		uint32_t	integerOrHashOrEnumValue;
+		float		floatValue;
+		uint8_t		byteOrBoolValue;
+		zVEC3		vec3Value;
+		zCOLOR		colorValue;
+		char		rawValue[];
+		float		rawFloatValue[];
+	};
+};
+```
+
 
 
 
