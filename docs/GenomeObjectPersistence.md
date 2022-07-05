@@ -2,7 +2,7 @@
 
 !!! note "Warning about Risen 2, 3 and ELEX 1 and 2"
 
-     The following information only applies to the games Gothic 3 (2006) and Risen (2009). While newer Genome engine games share the same overall concepts, they have very important implementation details that would make them require their own section.
+	 The following information only applies to the games Gothic 3 (2006) and Risen (2009). While newer Genome engine games share the same overall concepts, they have very important implementation details that would make them require their own section.
 
 Due to the nature of the program, the engine is required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, Genome implements an object persistence system using its own built-in runtime type information (RTTI) system.
 
@@ -32,7 +32,7 @@ struct eCArchiveFile
 	
 	char data[];
 	
-	uint32_t magic;    // DEADBEEF
+	uint32_t magic;	// DEADBEEF
 	uint8_t  version;  // 01
 	uint32_t count;
 	for( Count )
@@ -46,29 +46,85 @@ struct eCArchiveFile
 
 ### bCAccessorPropertyObject
 
+``` cpp
+bCAccessorPropertyObject::Read 
+{
+	uint16_t	version;	// 0x0001
+	bool		hasPropertyObject;
+	if (hasPropertyObject)
+	{
+		bCPropertyObjectSingleton::ReadObject
+		{
+			uint16_t	version;	// 0x0001
+			bool		isPersistable;	// 0x01 (GETrue)
+			bCString	className;
+			bCPropertyObjectFactory::ReadObject
+			{
+				uint16_t	version;		// 0x0001
+				bool		isRoot;			// 0x00 (GEFalse)
+				uint16_t	classVersion;
+				bTPropertyObject<%,%>::Read
+				{
+					bCPropertyObjectBase::Read
+					{
+						uint16_t version;	// 0x00C9 (201)
+					}
+					uint32_t size;
+				}
+				bTPropertyObject<%,%>::ReadData
+				{
+					bCPropertyObjectBase::ReadData
+					{
+						uint16_t version;	// 0x00C9 (201)
+						uint32_t count;
+						for (count)
+						{
+							bCString	name;
+							bCString	type;
+							uint16_t	version;	// 0x001E (30)
+							uint32_t	size;
+							uint8_t		value[size];
+						}
+					}
+					%::Read
+					{
+						// ClassName::OnRead/OnWrite()
+						// uint16_t ClassVersion; ...
+					}
+				}
+			}
+		}
+	}
+}
+```
+
+### eCProcessibleElement
+
+
 === "Gothic 3"
 
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
+	```cpp
+	eCProcessibleElement::Load
+	{
+		uint32_t magic; // 0xD0DEFADE
+		bCAccessorPropertyObject::Read
+		{
+			// Look above for bCAccessorPropertyObject definition
+		}
+	}
+	```
 
 === "Risen"
 
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-
-### eCProcessibleElement
+	```cpp
+	eCProcessibleElement::Load
+	{
+		bCAccessorPropertyObject::Read
+		{
+			// Look above for bCAccessorPropertyObject definition
+		}
+	}
+	```
 
 ## Implementation
 
