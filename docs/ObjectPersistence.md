@@ -229,8 +229,7 @@ struct BinSafeProperty
 };
 ```
 
-
-
+You might notice that BinSafe mode has an additional property type called Hash. This is due to the fact a hash table is located that at the end of BinSafe. Properties may save a hash instead which is then used to look up the value from the hashtable.
 
 ## Implementation
 
