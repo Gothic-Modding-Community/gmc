@@ -151,7 +151,7 @@ Oddly enough, if the archive is BinSafe, then the data will be encoded the same 
 ```cpp
 struct BinSafeObjectHeader
 {
-	uint32_t	type;	// 0x1 = zARC2_ID_STRING
+	uint32_t	type;	// 0x1 = TYPE_STRING
 	uint16_t	length;	// Length of the text
 	char		text[];	// [% oCWorld:zCWorld 64513 0]
 };
@@ -167,7 +167,7 @@ Inside the chunks, we find properties, which are key-value pairs that classes us
 
 By default, `zCArchiver` allows to store properties of the following types:
 
-- **Int** - A regular 32-bit integer. In ASCII mode its stored as `name=int:1`, while in Binary mode it's just the value stored as 4 bytes.
+- **Int** - A regular 32-bit integer. In ASCII mode int gets stored as `name=int:1`, while in Binary mode it's just the raw value stored as 4 bytes.
 
 - **Byte** - A 8-bit integer. ASCII mode doesn't differentiate between Int and Byte, so this will be stored as `name=int:1` regardless. Binary mode stores only the single byte.
 
@@ -179,11 +179,11 @@ By default, `zCArchiver` allows to store properties of the following types:
 
 - **String** - An ASCII encoded string. While in ASCII mode strings are stored as `name=string:value`. In Binary mode, strings are NULL terminated.
 
-- **Vec3** - A 3 component vector, mainly used to store positional data. The ASCII mode format is `name=vec3:1.0 1.0 1.0`. In Binary mode the tree components of the vector are stored in series.
+- **Vec3** - A three component vector, mainly used to store positional data. The ASCII mode format is `name=vec3:1.0 1.0 1.0`. In Binary mode the three components of the vector are stored in a series of 12 bytes.
 
 - **Color** - A 32-bit color value stored as BGRA. In ASCII mode the color is stored as `name=color:255 255 255 255` while in Binary mode its just 4 raw bytes.
 
-- **Raw** - Raw binary data. In order to maintain readability, in ASCII mode this gets store as a hex encoded string such as `name=raw:63D15B07`. In Binary mode, only the data itself is stored, without any other info. Be aware that due to this you must know the size of the data beforehand.
+- **Raw** - Raw binary data. In order to maintain readability, in ASCII mode this gets stored as a hex encoded string such as `name=raw:63D15B07`. In Binary mode, only the data itself is stored, without any other info. Be aware that due to this you must know the size of the data beforehand.
 
 - **RawFloat** - An array of floats, mainly used to store bounding boxes. In ASCII mode, the floats are stored as `name=rawFloat:1.0 1.0 1.0 1.0 1.0 1.0`. In Binary mode the floats are stored in series as raw bytes. Same as with `Raw`, you must know the size of the array beforehand.
 
@@ -216,7 +216,7 @@ struct BinSafeProperty
 		struct
 		{
 			uint16_t	stringLength;
-			char		stringValue;
+			char		stringValue[];
 		}
 		uint32_t	integerOrHashOrEnumValue;
 		float		floatValue;
@@ -229,9 +229,29 @@ struct BinSafeProperty
 };
 ```
 
-You might notice that BinSafe mode has an additional property type called Hash. This is due to the fact a hash table is located that at the end of BinSafe. Properties may save a hash instead which is then used to look up the value from the hashtable.
+Looking at the enumeration of types, you might notice that BinSafe mode has an additional property type called Hash. BinSafe archives include a hash table which is stored in the following manner:
+
+```cpp
+struct BinSafeHashTable
+{
+	uint32_t chunkCount;
+	for (chunkCount)
+	{
+		uint16_t	stringLength;
+		uint16_t	linearValue;
+		uint32_t	hashValue;
+		char		text[stringLength];
+	}
+};
+```
+
+Instead of storing the raw value, properties may save a hash instead, which is then used to look up the corresponding value from the hashtable.
 
 ## Implementation
+
+As mentioned in the opening paragraph, classes may use this functionality by overloading the `Archive` and `Unarchive` virtual methods, which pass an instance of `zCArchiver` by reference. When the class instance is then serialized and/or parsed, these methods are called and perform the desired serialization/parsing work.
+
+Within these routines, the class uses methods provided by the `zCArchiver` instance. These methods return/accept a value of a specific type (e.g. ReadInt/WriteInt), while they do the actual reading/writing work behind the scenes based on the current mode (ASCII/Binary/BinSafe). The programmer writing the class then does not care whether the final archive will be saved as ASCII, Binary or BinSafe, as they only use the `zCArchiver` Read\* and Write\* methods.
 
 ### A practical example
 
