@@ -44,10 +44,10 @@ This property may not be present in older archives.
 
 This is the most important part of the header, which specifies in which format the data is stored. There are 4 different modes:
 
-- **ASCII** - The simplest mode which stores data in human-readable ASCII notation (not unlike JSON for example). This is usually used when saving data during development and/or testing, while the final version of said data will most likely be stored as BIN_SAFE.
-- **ASCII_PROPS** - Same as ASCII except with more additional data that the developer can specify for visual clarity. In practice, it isn't used anywhere and mostly serves only to pretify debug info (try typing `ZWORLD VOBPROPS` in the console and look in zSpy ;) ).
-- **BINARY** - Binary representation of the class instance which mostly copies the data 1:1 into/from the stream. In practice, this format is only used to store savefiles (.SAV).
-- **BIN_SAFE** - BinSafe, short for Binary Safe, is an extended version of Binary which stores type information along with the data itself. This is meant to make error checking for invalid data easier. There are also other changes which are explained below. Most if not all world files (.ZEN) are stored in this format.
+- **ASCII** - The simplest mode, which stores data in human-readable ASCII notation (not unlike JSON for example). This is usually used when saving data during development and/or testing, while the final version of said data will most likely be stored as BIN_SAFE.
+- **ASCII_PROPS** - Same as ASCII except with more additional data that the developer can specify for visual clarity. In practice, it isn't used anywhere and mostly serves only to prettify debug info (try typing `ZWORLD VOBPROPS` in the console and look in zSpy ;) ).
+- **BINARY** - Binary representation of the class instance, which mostly copies the data 1:1 into/from the stream. In practice, this format is only used to store savefiles (.SAV).
+- **BIN_SAFE** - BinSafe, short for Binary Safe, is an extended version of Binary which stores type information along with the data itself. This is meant to make error checking for invalid data easier. There are also other changes which are explained below. Most, if not all world files (.ZEN) are stored in this format.
 
 `saveGame 0`
 
@@ -66,6 +66,8 @@ The user which created this stream. This property may not be present in older ar
 Tells the parses that this is the end of the header.
 
 In version 0 archives, we may additionally find a property called `csum` which stores the checksum of the whole stream. However, this property is unused and equals `00000000` by default.
+
+In order to correctly read the archive's header across varying engine versions, one should not count on the properties always being in the same order or even being there at all.
 
 If the archive utilizes `zCArchiverGeneric` then this header will also be followed by a short section specifying the number of object instances in this stream. This value will be used to initialize the objectList, which is an array of pointers where the addresses of loaded objects will be stored for later referencing. In older versions, this property would be directly part of the main header. 
 
@@ -120,7 +122,7 @@ Within ZenGin archives, we primarily differentiate between chunks and properties
 
 #### Chunks
 
-A chunk is a structure that groups properties together. Most of the time, a chunk represents a class instance, however this is not always true, as classes may arbitrarily create chunks as is needed. For example, the example above contains a chunk called `VobTree`, which does not represent a class instance, but only serves to make the reading of the archive easier.
+A chunk is a structure that groups properties together. Most of the time, a chunk represents a class instance, however, this is not always true, as classes may arbitrarily create chunks as is needed. For example, the example above contains a chunk called `VobTree`, which does not represent a class instance, but only serves to make the reading of the archive easier.
 
 While in ASCII mode, the start of a chunk is represented using square brackets.
 
@@ -128,7 +130,7 @@ While in ASCII mode, the start of a chunk is represented using square brackets.
 
 Inside the start of each chunk, there are 4 pieces of data separated by spaces, which are:
 
-- **Object name** - The name of the chunk to use while reading. If the chunk has no name then it will be simply equal to `%`.
+- **Object name** - The name of the chunk to use while reading. If the chunk has no name, then it will be simply equal to `%`.
 - **Class name** - The name of the class which this chunk represents. Class names are stored with their full inheritance hierarchy (e.g. `oCMobLadder:oCMobInter:oCMOB:zCVob`). In case the chunk is not an object, but an arbitrary chunk, then this field will be equal to `%` (`%` can also mean that this chunk is a nullptr). In some cases you may encounter the symbol `§` instead. This means that the object already exists and that the parser should look for it in the objectList using the object index. Using this mechanism, a single instance can be referenced multiple times without worrying about duplicity.
 - **Class version** - Used to ensure that the data being read is compatible with the current game/engine version, so that there are no mismatches in the data pattern. This value is different for every class and varies between game versions.
 - **Object index** - An index into the objectList under which this object will be stored. If the class name is equal to `§`, then this value will be used to retrieve an existing instance from the objectList.
@@ -167,7 +169,7 @@ Inside the chunks, we find properties, which are key-value pairs that classes us
 
 By default, `zCArchiver` allows to store properties of the following types:
 
-- **Int** - A regular 32-bit integer. In ASCII mode int gets stored as `name=int:1`, while in Binary mode it's just the raw value stored as 4 bytes.
+- **Int** - A regular 32-bit integer. In ASCII mode, int gets stored as `name=int:1`, while in Binary mode, it's just the raw value stored as 4 bytes.
 
 - **Byte** - A 8-bit integer. ASCII mode doesn't differentiate between Int and Byte, so this will be stored as `name=int:1` regardless. Binary mode stores only the single byte.
 
@@ -175,19 +177,19 @@ By default, `zCArchiver` allows to store properties of the following types:
 
 - **Float** - A standard IEEE 754 32-bit floating point number. In ASCII mode the format is `name=float:1.0`, while in Binary mode the float gets stored raw as 4 bytes.
 
-- **Bool** - Stores a single-byte boolean value. In ASCII mode its `name=bool:1` and in Binary mode its a single byte.
+- **Bool** - Stores a single-byte boolean value. In ASCII mode its `name=bool:1` and in Binary mode it's a single byte.
 
 - **String** - An ASCII encoded string. While in ASCII mode strings are stored as `name=string:value`. In Binary mode, strings are NULL terminated.
 
 - **Vec3** - A three component vector, mainly used to store positional data. The ASCII mode format is `name=vec3:1.0 1.0 1.0`. In Binary mode the three components of the vector are stored in a series of 12 bytes.
 
-- **Color** - A 32-bit color value stored as BGRA. In ASCII mode the color is stored as `name=color:255 255 255 255` while in Binary mode its just 4 raw bytes.
+- **Color** - A 32-bit color value stored as BGRA. In ASCII mode the color is stored as `name=color:255 255 255 255` while in Binary mode it's just 4 raw bytes.
 
 - **Raw** - Raw binary data. In order to maintain readability, in ASCII mode this gets stored as a hex encoded string such as `name=raw:63D15B07`. In Binary mode, only the data itself is stored, without any other info. Be aware that due to this you must know the size of the data beforehand.
 
 - **RawFloat** - An array of floats, mainly used to store bounding boxes. In ASCII mode, the floats are stored as `name=rawFloat:1.0 1.0 1.0 1.0 1.0 1.0`. In Binary mode the floats are stored in series as raw bytes. Same as with `Raw`, you must know the size of the array beforehand.
 
-- **Enum** - An enum value. In ASCII mode it gets stored as `name=enum:1`. In Binary mode it behaves the same as `Int`.
+- **Enum** - An enum value. In ASCII mode, it gets stored as `name=enum:1`. In Binary mode, it behaves the same as `Int`.
 
 As you might have noticed, binary mode doesn't perform any kind of checks on if its reading the right property or even data of the correct type. This is why BinSafe mode exists, as it stores the property type in along with the data itself.
 
@@ -245,7 +247,7 @@ struct BinSafeHashTable
 };
 ```
 
-Instead of storing the raw value, properties may save a hash instead, which is then used to look up the corresponding value from the hashtable.
+Instead of storing the raw value, properties may save a hash instead, which is then used to look up the corresponding value from the hash table.
 
 ## Implementation
 
@@ -255,7 +257,7 @@ Within these routines, the class uses methods provided by the `zCArchiver` insta
 
 ### A practical example
 
-Let's propose that we have class which is declared like so:
+Let's propose that we have a class which is declared like so:
 
 ```cpp
 class zCMyClass : public zCObject
@@ -345,3 +347,7 @@ Notice how `secondPointerToMyObject` doesn't have any contents. The character `�
 This allows an instance to be referenced from multiple places, without the need to worry about duplicity.
 
 If we used Binary or BinSafe mode, we would see a big blob of binary data instead. This would of course store the exact same data, although in a slightly less human-readable format.
+
+## Final thoughts
+
+I hope this helps you better understand the inner workings of ZenGin. If you want to see how Piranha Bytes went about implementing a much more advanced version of this system for their next engine, check out [Genome's object persistence system](GenomeObjectPersistence.md).
