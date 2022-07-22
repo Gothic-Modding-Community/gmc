@@ -13,9 +13,17 @@ zParserExtender extends ZenGins parser and adds many useful features. It signifi
 # Extensions and Externals
 zParserExtender adds quite a lot of new features and even some new syntax and keywords.
 
+**Extensions and Externals**
+  
 - [Native WHILE loop](zPE_while.md)
 - [Namespaces](zPE_namespaces.md)
 - [Event functions](zPE_events.md)
 - [C_Trigger class](zPE_c_trigger.md)
 - [External functions](zPE_externals.md)
 
+**Injection**
+  
+- [Daedalus injection](zPE_injection.md)
+- [META block](zPE_META.md)
+- [Hooks](zPE_hooks.md)
+- [Other features](zPE_other.md)

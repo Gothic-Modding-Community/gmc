@@ -53,7 +53,7 @@ nav:
           - Overview: zPE_injection.md
           - META block: zPE_META.md
           - Hooking: zPE_hooks.md
-          - Other functions: zPE_other.md
+          - Other features: zPE_other.md
   - Genome (G3/R1):
     - General information:
       - Genome engine: Genome.md
