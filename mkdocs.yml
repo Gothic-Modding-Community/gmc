@@ -40,6 +40,20 @@ nav:
       - Overview: Scripts.md
       - Classes:
         - C_ITEM: c_item.md
+    - Union plugins:
+      - zParserExtender:
+        - Overview: zParserExtender.md
+        - Extensions and Externals: 
+          - While loop: zPE_while.md
+          - Namespaces: zPE_namespaces.md
+          - Event functions: zPE_events.md
+          - C_Trigger class: zPE_c_trigger.md
+          - External functions: zPE_externals.md
+        - Injection:
+          - Overview: zPE_injection.md
+          - META block: zPE_META.md
+          - Hooking: zPE_hooks.md
+          - Other functions: zPE_other.md
   - Genome (G3/R1):
     - General information:
       - Genome engine: Genome.md
@@ -51,6 +65,10 @@ markdown_extensions:
   - admonition
   - codehilite
   - footnotes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.smartsymbols
   - pymdownx.superfences
   - pymdownx.tabbed:
