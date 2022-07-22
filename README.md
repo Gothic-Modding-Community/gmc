@@ -4,3 +4,5 @@ This repostiory will contain articles, tutorials and links to various tools that
 [Gothic Modding Community page](https://auronen.github.io/gmc/)
 
 [This repository](https://github.com/auronen/gmc/edit/main/README.md)
+
+[Discord server](https://discord.gg/mCpS5b5SUY)
