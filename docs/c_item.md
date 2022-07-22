@@ -6,7 +6,7 @@
   
 The `C_ITEM` class is used to define new items int the game.
 ## Class definition
-Class definition as it is defined in [`Scripts/Content/_intern/Clases.d`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/CLASSES.D) script file. 
+Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/CLASSES.D) script file. 
 <details>
   <summary>C_Item Daedalus class</summary>
 ```c++
