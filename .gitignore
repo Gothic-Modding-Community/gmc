@@ -1,1 +1,8 @@
+# Generated site
 site/
+
+# IDE config
+.idea
+
+# Virtual environment
+/venv/
