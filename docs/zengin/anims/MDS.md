@@ -153,8 +153,8 @@ aniBlend (ANI_NAME NEXT_ANI BLEND_IN BLEND_OUT)
 
 
 ### aniSync
-TODO: I think this one is not used.
+Not used in the game.
 
 ### aniBatch
-Not tested in engine - probably doesn't work well, isn't used in any of the games. Probably not wise to use it.
+Not used in the game.
 
