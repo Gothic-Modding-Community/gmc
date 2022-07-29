@@ -6,18 +6,22 @@ theme:
   palette:
     primary: black
   features:
-    - navigation.sections
-    - navigation.indexes 
+    - navigation.tabs
+    - navigation.indexes
 
 nav:
-  - Home: index.md
+  - Home:
+    - index.md
+    - Getting Started: GettingStarted_ZenGin.md
+    - ZenGin (G1/G2): zengin/general_info/DirectoryStructure.md
+    - Genome (G3/R1): genome/index.md
   - ZenGin (G1/G2):
     - General information:
       - Directory structure: zengin/general_info/DirectoryStructure.md
-      - VDFS - virtual file system : 
+      - VDFS - virtual file system: 
         - zengin/general_info/vdfs/index.md
-        - GothicVDFS : zengin/tools/GothicVDFS.md
-        - VDFS Tool : zengin/tools/VDFSTool.md
+        - GothicVDFS: zengin/tools/GothicVDFS.md
+        - VDFS Tool: zengin/tools/VDFSTool.md
       - Object persistence: zengin/general_info/ObjectPersistence.md
 
     - Animations: 
