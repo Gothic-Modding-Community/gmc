@@ -7,57 +7,77 @@ theme:
     primary: black
   features:
     - navigation.sections
+    - navigation.indexes 
 
 nav:
   - Home: index.md
   - ZenGin (G1/G2):
     - General information:
-      - Directory structure: DirectoryStructure.md
-      - VDFS - virtual file system :
-        - Virtual file system : VDFS.md
-        - GothicVDFS : GothicVDFS.md
-        - VDFS Tool : VDFSTool.md
-      - Object persistence: ObjectPersistence.md
-    - Animations:
-      - Overview: Animation.md
-      - MDS - ModelScript: MDS.md
-      - EventBlocks: AniEventBlocks.md
+      - Directory structure: zengin/general_info/DirectoryStructure.md
+      - VDFS - virtual file system : 
+        - zengin/general_info/vdfs/index.md
+        - GothicVDFS : zengin/tools/GothicVDFS.md
+        - VDFS Tool : zengin/tools/VDFSTool.md
+      - Object persistence: zengin/general_info/ObjectPersistence.md
+
+    - Animations: 
+      - zengin/anims/index.md
+      - MDS - ModelScript: zengin/anims/MDS.md
+      - EventBlocks: zengin/anims/AniEventBlocks.md
       - Tutorials:
-        - Standalone animation: StandaloneAni.md
-    - Meshes:
-      - Overview: Meshes.md
-    - Music:
-      - Overview: Music.md
+        - Standalone animation: zengin/anims/StandaloneAni.md
+
+    - Meshes: 
+      - zengin/meshes/index.md
+
+    - Music: 
+      - zengin/music/index.md
+
     - Sound:
-      - Overview: Sound.md
+      - zengin/sound/index.md
+
     - Textures:
-      - Overview: Textures.md
+      - zengin/textures/index.md
+
     - Video:
-      - Overview: Video.md
+      - zengin/video/index.md
+
     - Worlds:
-      - Overview: Worlds.md
-    - Daedalus:
-      - Overview: Scripts.md
+      - zengin/worlds/index.md
+
+    - Scripts: 
+      - zengin/scripts/index.md
       - Classes:
-        - C_ITEM: c_item.md
+        - C_ITEM: zengin/scripts/classes/c_item.md
+
     - Union plugins:
+      - zengin/union_plugins/index.md
       - zParserExtender:
-        - Overview: zParserExtender.md
+        - zengin/union_plugins/zParserExtender/index.md
         - Extensions and Externals: 
-          - While loop: zPE_while.md
-          - Namespaces: zPE_namespaces.md
-          - Event functions: zPE_events.md
-          - C_Trigger class: zPE_c_trigger.md
-          - External functions: zPE_externals.md
+          - While loop: zengin/union_plugins/zParserExtender/zPE_while.md
+          - Namespaces: zengin/union_plugins/zParserExtender/zPE_namespaces.md
+          - Event functions: zengin/union_plugins/zParserExtender/zPE_events.md
+          - C_Trigger class: zengin/union_plugins/zParserExtender/zPE_c_trigger.md
+          - External functions: zengin/union_plugins/zParserExtender/zPE_externals.md
         - Injection:
-          - Overview: zPE_injection.md
-          - META block: zPE_META.md
-          - Hooking: zPE_hooks.md
-          - Other features: zPE_other.md
+          - zengin/union_plugins/zParserExtender/zPE_injection.md
+          - META block: zengin/union_plugins/zParserExtender/zPE_META.md
+          - Hooking: zengin/union_plugins/zParserExtender/zPE_hooks.md
+          - Other features: zengin/union_plugins/zParserExtender/zPE_other.md
+
+    - Tools:
+      - zengin/tools/index.md
+      - Daedalus:
+        - Daedalus Language Server: zengin/tools/DLS.md
+      - VDFS tools:
+        - GothicVDFS: zengin/tools/GothicVDFS.md
+        - VDFS Tool: zengin/tools/VDFSTool.md
+
   - Genome (G3/R1):
-    - General information:
-      - Genome engine: Genome.md
-      - Object persistence: GenomeObjectPersistence.md
+    - General information: 
+      - genome/index.md
+      - Object persistence: genome/ObjectPersistence.mdf
 
 
 

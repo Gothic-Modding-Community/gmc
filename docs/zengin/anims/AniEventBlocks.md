@@ -26,6 +26,7 @@ Particle effects
 ```
 Morph mesh animations
 > Heads are animated using morph meshes, this feature is not used as much in the original game, but Chronicles of Myrtana uses it quite a lot. I hope to write about morphMesh animation too in the future.
+
 ```c++
 *eventMMStartAni (14	"T_HURT")
 ```

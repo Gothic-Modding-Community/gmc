@@ -1,4 +1,8 @@
 # MDS - model animation script
+
+!!! Tip
+    The MDS syntax is very simple and the scripts can be edited in any text editor, but it is easier to work in an editor with the proper syntac highlighting. [Daedalus Language Server](https://github.com/kirides/vscode-daedalus/releases)'s dev branch already merged the MDS grammar for syntax highlighting, we can expact it in the next release.
+
 Model animation script is a file, that describes what skeleton is to be used, what body meshes work with this set of animations and how the animations should be named, how fast they run, what animation is supposed to run after the current one is finished and much more.
 These files are located in `Gothic\_work\DATA\Anims\` directory. 
 

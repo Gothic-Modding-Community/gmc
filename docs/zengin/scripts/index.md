@@ -4,3 +4,7 @@ ZenGin uses its own scripting language called Daedalus. It is similar to C progr
 
 The `Scripts` directory is where the scripts live. You will be able to find Daedalus script files - `.d` extension and `.src` files, that list all of the files to be compiled.
 
+Daedalus scripts can be edited in any text editor. To get useful features like syntax highlighting you can use community developed tools like 
+
+ - [Gothic Sourcer](../tools/GothicSourcer.md)
+ - [Daedlus VS Code extension](../tools/DLS.md)

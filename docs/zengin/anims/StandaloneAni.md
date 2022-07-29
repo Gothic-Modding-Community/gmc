@@ -1,6 +1,14 @@
+!!! example "Acknowledgment"
+
+    This tutorial would not be possible without the ZenGin documentation available in the mod-kit, [Mark56](https://carnage-markus.blogspot.com) who helped me understand animations in the first place. [Fawkes](https://www.youtube.com/channel/UCheR2tr8u1CsUGG15Lu2mxQ) and his request for me to do some animations for his excellent mod - Replay Mod. And flosha from the Phoenix team, who was the one, to whom I offered to write this tutorial, to help with the development of the [Phoenix project](https://phoenixthegame.com/).
+
 # Standalone animation
 Let's start with the easiest animation, lets make a very simple gesturing animation.
 
+!!! info
+
+    Some of the videos that I write about in the text below are in this [play-list](https://www.youtube.com/playlist?list=PLn8QrKx4F-EITe0yG_2n0z9p4q6EAp6rx).
+    
 First we have to have the animation source files ready, I usually decompile them using [Gothic Sourcer](https://worldofplayers.ru/threads/41942/). In GothicSourcer you choose **Tools > Decompiler models > Dynamic (MDS or MSB)** and choose a MDS file of your choice - `Humans.mds` in our case and then click the decompile button.
 
 ## Animating

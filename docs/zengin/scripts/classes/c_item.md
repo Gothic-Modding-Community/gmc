@@ -45,7 +45,7 @@ CLASS C_Item
     VAR INT    change_value[3];            // Array of values of the attributes defined in change_atr
 
     // Parser functions
-    VAR FUNC   magic;                      
+    VAR FUNC   magic;
     VAR FUNC   on_equip;                   // Called on equpping an item
     VAR FUNC   on_unequip;                 // Called on unequipping an item
     VAR FUNC   on_state[4];
@@ -139,9 +139,7 @@ INSTANCE ItMw_testSword (C_Item)
 };
 ```
   
-  <details>
-  <summary>Inject full code</summary>
-Try injecting this code using <a href=/zParserExtender>zParserExtender</a> to test it in game right away. It is compatible with G2NotR.
+Try injecting the code below [zParserExtender](zPE_injection.md) to test it in game right away. It is compatible with G2NotR.
 
 ```c++
 INSTANCE ItMw_testSword (C_Item)
@@ -174,4 +172,92 @@ INSTANCE ItMw_testSword (C_Item)
     TEXT[5]         = NAME_Value;       COUNT[5] = value;
 };
 ```
-</details>
+To insert it into the game use `insert ItMw_testSword` in console.
+
+### text & count arrays
+These two arrays are used to put information into the item information box. 
+![Text and Count ](img/c_item_text_count.png)
+The maximum number of lines is 6. This is defined in the engine, but for script side class definiton is declared in the scripts too.
+```c++
+const int ITM_TEXT_MAX = 6;
+```
+This example shows an item with all elements of `TEXT` and `COUNT` array filled. 
+
+!!! note
+    Please notice the last `COUNT` element. It did not take the value we entered, but shows `10` which is the `value` of the item. This behaviour can be changed with Ikarus or Union.
+    
+![Item example](img/c_item_example.png)
+
+You can find the code below
+```c++
+INSTANCE ItMw_testSword (C_Item)
+{
+    name          = TXT_Spells[10];
+
+    mainflag      = ITEM_KAT_NF;
+    flags         = ITEM_SWD;
+    material      = MAT_METAL;
+
+    value         = 10;
+
+    damageTotal   = 10;
+    damagetype    = DAM_EDGE;
+    range         = 100;
+
+    cond_atr[2]   = ATR_STRENGTH;
+    cond_value[2] = 5;
+
+    change_atr[0] = ATR_DEXTERITY;
+    change_value[0] = 10;
+
+    visual        = "ItMw_010_1h_Sword_short_01.3DS";
+
+    description   = name;
+
+    TEXT[0]       = "Line 0";     COUNT[0]      = 0; 
+    TEXT[1]       = "Line 1";     COUNT[1]      = 1; 
+    TEXT[2]       = "Line 2";     COUNT[2]      = 2; 
+    TEXT[3]       = "Line 3";     COUNT[3]      = 3; 
+    TEXT[4]       = "Line 4";     COUNT[4]      = 34;
+    TEXT[5]       = "Line 5";     COUNT[5]      = 35;
+};
+```
+
+
+### description & name
+`description` - determines the name of the item in the inventory
+
+`name` - determines the focus name of the item in the world
+
+In the scripts you often find that the description is asigned the value of `name`.
+```c++
+INSTANCE ItMw_testSword (C_Item)
+{
+    name = "New amazing sword";
+    // ...
+    description   = name; // description now has the same value as '    // ...name'
+    // ...
+};
+```
+This is used in the case where you want to show the name of the item on focus too.
+
+There is a second way used in the scripts though, for example with magic scrolls the focus name in the world is "Scroll" and in inventory the scroll carries the name of the spell. This is how it is done.
+```c++
+INSTANCE ItSc_InstantFireball (C_Item)
+{
+	name 				=	NAME_Spruchrolle; // const string = "Scroll"
+    // ...
+	description			= 	NAME_SPL_InstantFireball; // const string = "Fireball"
+    // ...
+};
+```
+
+
+[comment]: <> ( ### damage & damageType & damageTotal)
+[comment]: <> ( TODO: This is very cool)
+
+[comment]: <> ( ### disguiseGuild)
+[comment]: <> ( Allows you to change an apparent guild while wearing the item.)
+
+[comment]: <> ( TODO )
+

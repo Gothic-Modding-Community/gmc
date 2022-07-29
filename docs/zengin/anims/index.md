@@ -1,11 +1,4 @@
 # Animation
-!!! info
-
-    Some of the videos that I write about in the text bellow are in this [play-list](https://www.youtube.com/playlist?list=PLn8QrKx4F-EITe0yG_2n0z9p4q6EAp6rx).
-
-!!! example "Acknowledgment"
-
-    This tutorial wouldn't be possible without the ZenGin documentation available in the mod-kit, [Mark56](ttps://carnage-markus.blogspot.com) who helped me understand animations in the first place. [Fawkes] and his request for me to do some animations for his excellent mod - Replay Mod. And flosha from the Phoenix team, who was the one, to whom I offered to write this tutorial, to help with the development of the [Phoenix project](https://phoenixthegame.com/).
 
 
 # Animations in ZenGin
