@@ -5,7 +5,23 @@ theme:
   name: material
   logo: img/gmc_logo.png
   palette:
-    primary: black
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: black
+      scheme: default
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      accent: light blue
+      scheme: slate
+      toggle:
+        icon: material/brightness-2
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.indexes
