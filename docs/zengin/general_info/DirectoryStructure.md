@@ -31,7 +31,7 @@ Modding is all about changing the game files and for that we have to know the di
 
 ## `Data`
 
-Data directory contains [`.vdf` volumes](VDFS.md) of the game. These contain `anims.vdf` - animations, `speech.vdf` - dubbing, `worlds.vdf` - world ZEN files.
+Data directory contains [`.vdf` volumes](vdfs/index.md) of the game. These contain `anims.vdf` - animations, `speech.vdf` - dubbing, `worlds.vdf` - world ZEN files.
 
 ## `Saves`
 
