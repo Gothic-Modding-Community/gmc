@@ -80,6 +80,15 @@ nav:
       - Object persistence: genome/ObjectPersistence.mdf
 
 
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/mCpS5b5SUY
+      name: Gothic Modding Comunity Discord Server
+    - icon: fontawesome/brands/github
+      link: https://github.com/auronen/gmc
+      name: Gothic Modding Comunity Github repository
+
 
 markdown_extensions:
   - admonition
