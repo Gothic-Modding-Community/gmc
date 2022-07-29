@@ -1,4 +1,5 @@
 site_name: Gothic Modding Community
+site_url: https://auronen.github.io/gmc/
 
 theme:
   name: material
@@ -81,7 +82,7 @@ nav:
   - Genome (G3/R1):
     - General information: 
       - genome/index.md
-      - Object persistence: genome/ObjectPersistence.mdf
+      - Object persistence: genome/ObjectPersistence.md
 
 
 extra:

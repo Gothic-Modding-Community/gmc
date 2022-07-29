@@ -10,7 +10,7 @@ By using special preprocessor macros, any class derived from `bCObjectBase` may 
 
 Additionally, classes may overload the `Read` and `Write` (`OnRead` and `OnWrite` in Risen 1) virtual methods, that allow the class to save additional data required during parsing (such as paths to other necessary files).
 
-As this system is quite flexible, it is used to store most of the game's data, from meshes, animations and textures to level and quest data. This is quite different from ZenGin, as [its object persistence system](ObjectPersistence.md) is only used for worlds, saves, output units and parts of compiled meshes.
+As this system is quite flexible, it is used to store most of the game's data, from meshes, animations and textures to level and quest data. This is quite different from ZenGin, as [its object persistence system](../zengin/general_info/ObjectPersistence.md) is only used for worlds, saves, output units and parts of compiled meshes.
 
 ## File format
 

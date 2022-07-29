@@ -1,5 +1,5 @@
 # Native WHILE loop
-Just like [Ikarus](/docs/fnotready.md) zParserExtender implements a while loop.
+Just like [Ikarus](../../../notready.md) zParserExtender implements a while loop.
 
 ```c++
 var int value; value = 10;
