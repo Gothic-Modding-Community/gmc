@@ -12,6 +12,7 @@ theme:
 nav:
   - Home:
     - index.md
+    - Getting Started: GettingStarted_ZenGin.md
     - ZenGin (G1/G2): zengin/general_info/DirectoryStructure.md
     - Genome (G3/R1): genome/index.md
   - ZenGin (G1/G2):
