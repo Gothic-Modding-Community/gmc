@@ -3,6 +3,7 @@ site_url: https://auronen.github.io/gmc/
 
 theme:
   name: material
+  favicon: img/gmc_logo.png
   logo: img/gmc_logo.png
   palette:
     primary: black
