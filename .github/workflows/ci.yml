@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  GMC_SHOW_UPDATE_TIME: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,7 +16,7 @@ jobs:
         with:
           # Number of commits to fetch. 0 indicates all history.
           # Default: 1
-          # 0 is needed for the update time plugin to properly work
+          # 0 is needed for the update time plugin to work properly
           fetch-depth: 0
       - uses: actions/setup-python@v2
         with:

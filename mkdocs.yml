@@ -133,4 +133,8 @@ markdown_extensions:
 
 plugins:
   - git-revision-date-localized:
-      type: timeago
+      enabled: !ENV [GMC_SHOW_UPDATE_TIME, False]
+      type: iso_datetime
+      timezone: Europe/Warsaw
+      exclude:
+        - index.md
