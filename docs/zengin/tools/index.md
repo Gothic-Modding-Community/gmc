@@ -6,7 +6,7 @@ The community has developed many tools to help with the creation of Gothic mods.
 !!! note
     This list is work in progress
 
-**[Daedalus](../scripts/)**
+**[Daedalus](../scripts/index.md)**
 
  - [Daedalus Language Server](https://github.com/kirides/vscode-daedalus) - a VS Code/VS Codium extension that adds IDE like functionality for Daedalus scripting language
  - [Ikarus](https://github.com/Lehona/Ikarus) - A daedalus library for the game Gothic. Exploits the interpreter to allow arbitrary memory access and defines a lot of useful functions for interfacing with the engine. 

@@ -31,7 +31,7 @@ StringIndexingMode = -1
 ```
 
 ## MARVIN console commands
-zParserExtender adds console commands that saves copies of the `.dat` files with the injected code.
+zParserExtender adds console commands that save copies of the `.dat` files with the injected code.
 
 !!! warning
     If the mod uses Ikarus, the `CompileDat` option (in the `.ini` file) should be used, since a fatal error may occur whe using the command.
@@ -79,6 +79,6 @@ func event GameInit()
 ```
 
 ## Other engine fixes
-1. When creating a item instance, the instance is placed into the global `item` instance
+1. When creating an item instance, the instance is placed into the global `item` instance
 2. On DAT file load, the engine restores the original symbol hierarchy
 3. When loading a save, the engine now skips unkonw symbols, insted of crashing

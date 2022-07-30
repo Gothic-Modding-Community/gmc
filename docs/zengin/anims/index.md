@@ -2,7 +2,7 @@
 
 
 # Animations in ZenGin
-Animations (apart from maybe advanced programming work using Ikarus or Union) are on of the most advanced modding techniques, since you not only must understand the way they work, but also know how to write the animation script and understand the whole sceme selection system, naming convention and of course know how to animate (that is my biggest problem :D). To get a new animation into ZenGin (the Gothic engine) is not difficult per se, I would describe it as tedious.
+Animations (apart from maybe advanced programming work using Ikarus or Union) are one of the most advanced modding techniques, since you not only must understand the way they work, but also know how to write the animation script and understand the whole sceme selection system, naming convention and of course know how to animate (that is my biggest problem :D). To get a new animation into ZenGin (the Gothic engine) is not difficult per se, I would describe it as tedious.
 
 Luckily, there are tools to help us to achieve our goal - get a new animation to be used by the engine, and in effect, to be used and seen in the game.
 
@@ -41,4 +41,4 @@ The animations we are concerned with are the skeletal ones. I divide them into f
 4. Mandatory animations - running, walking, sneaking
 5. Combined/interpolated animations - picking stuff up, aiming with a bow/crossbow
 
-All of these animations are defined in a MDS file about which we will talk about in the next section.
+All of these animations are defined in an MDS file about which we will talk about in the next section.

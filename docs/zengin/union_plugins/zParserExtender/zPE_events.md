@@ -1,5 +1,5 @@
 # Event functions
-Event functions are functions sharing the same name, that can be defined multiple times, but only once per file. Such functions are useful for implementing *callback* type functions. Every time an event is called, all instances of the same name will be called. The event is `func` with a return type `event`. Events are defined globally, meaning, they ignore namespace they are in. To call an event from a script, use the external function [`Hlp_DoEvent(var string funcName)`](#hlp-help-functions).
+Event functions are functions sharing the same name, that can be defined multiple times, but only once per file. Such functions are useful for implementing *callback* type functions. Every time an event is called, all instances of the same name will be called. The event is `func` with a return type `event`. Events are defined globally, meaning, they ignore namespace they are in. To call an event from a script, use the external function [`Hlp_DoEvent(var string funcName)`](zPE_externals.md#hlp-help-functions).
 
 ```c++
 func void GiveXP()
@@ -15,9 +15,10 @@ func event OnGiveXP()
     // called, when function GiveXP (above) is called.
 };
 ```
-Plugin implements two of these [event functions](#event-functions-and-variables)
+
+Plugin implements two of these [event functions](zPE_externals.md#event-functions-and-variables)
 
 - `func event GameInit()` - called when entering the main menu on game start
 - `func event GameLoop()` - called every frame when a world is loaded
 
-Define these in any file in your scripts and they will be automatically called
+Define these in any file in your scripts, and they will be automatically called

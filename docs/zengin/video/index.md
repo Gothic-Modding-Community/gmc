@@ -4,7 +4,7 @@ To get a video cutscene, intro or outro into the game the video needs to be in a
 
 ## Editing the video
 
-Okay, I know this might be a bit out of the scope of this, but the video you recorded has to be edited. My go to editor for this is [kdenlive](https://kdenlive.org/en/). It works very well, it is free and open source and it supports BINK video as an input, which is great if you want to include subtitles in the video.
+Okay, I know this might be a bit out of the scope of this, but the video you recorded has to be edited. My go-to editor for this is [kdenlive](https://kdenlive.org/en/). It works very well, it is free and open source, and it supports BINK video as an input, which is great if you want to include subtitles in the video.
 
 My version of kdenlive does not knw how to export video straight to `.bik`, so I just export my video to `.mp4` and then convert it with RAD Video Tools.
 
