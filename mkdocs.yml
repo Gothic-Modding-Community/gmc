@@ -118,6 +118,8 @@ extra:
 
 
 markdown_extensions:
+  - toc:
+      permalink: 𐌾
   - admonition
   - codehilite
   - footnotes
