@@ -132,6 +132,7 @@ markdown_extensions:
       alternate_style: true
 
 plugins:
+  - search
   - git-revision-date-localized:
       enabled: !ENV [GMC_SHOW_UPDATE_TIME, False]
       type: iso_datetime
