@@ -10,9 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          # Number of commits to fetch. 0 indicates all history.
+          # Default: 1
+          # 0 is needed for the update time plugin to properly work
+          fetch-depth: 0
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material 
+      - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
 
       - run: mkdocs gh-deploy --force
