@@ -1,9 +1,15 @@
 site_name: Gothic Modding Community
 site_url: https://auronen.github.io/gmc/
 
+repo_name: auronen/gmc
+repo_url: https://github.com/auronen/gmc/
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   logo: img/gmc_logo.png
+  icon:
+    repo: fontawesome/brands/github
   palette:
     primary: black
   features:
@@ -106,4 +112,4 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
