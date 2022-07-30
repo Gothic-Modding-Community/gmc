@@ -3,6 +3,7 @@ zParserExtender also implements cyclical functions (called triggers - not to e c
 
 ## Class definition
 To define a trigger, the `C_Trigger` class is used:
+
 ```c++
 /// Union zPraserExtender Trigger class
 class C_Trigger
@@ -22,7 +23,8 @@ class C_Trigger
 ```
 
 ## Creating instances
-There are two [external functions](#ai-functions-for-working-with-ai)
+There are two [external functions](zPE_externals.md#ai-functions-for-working-with-ai)
+
 ```c++
 // function returns a trigger with no NPC (self, other or victim) bound to it
 func C_Trigger AI_StartTriggerScript( var string funcName,
@@ -39,6 +41,7 @@ func C_Trigger AI_StartTriggerScriptEx( var string funcName,
 Both of these functions return an instance of `C_Trigger`. You can, of course, configure the instance after its creation (for example to fill in the `AIVariables` with relevant data). The trigger function has the required signature if 'func int f()'. It must return a value indicating the state of the loop - if the function returns `LOOP_END` the trigger will be stopped and the instance deleted, if `LOOP_CONTINUE` is returned, the function will be called again after `Delay` ms have passed.
 
 ## Poison example
+
 ```c++
 // Implement a trigger to simulate the effect of poison debuff:
 // Let's create a trigger on function `c_loop` with a call interval of 1 second.
@@ -52,6 +55,7 @@ trigger.AIVariables[1] = 5;  // how much damage to deal each iteration
 ```
 
 The trigger function
+
 ```c++
 func int c_loop()
 {
@@ -79,10 +83,11 @@ trigger creted using this function works in all worlds. A trigger is considered 
 trigger created with this function only works in the world in which it was created. A trigger is considered local if it has been presented with at least one NPC in `self`, `other` or `victim` (not null ). If you want to create a trigger, but without linking to any NPC, it is recommended to simply pass hero as `self` to the trigger.
 
 ## Saving
-The plugin creates a new save archive to save the information of the triggers, that does not conflict with any of the built in save files.
+The plugin creates a new save archive to save the information of the triggers, that does not conflict with any of the built-in save files.
 
 ## Searching
-To search for a specifin trigger, for example by NPC, the [trigger external functions](#ai-functions-for-working-with-ai) can be used.
+To search for a specifin trigger, for example by NPC, the [trigger external functions](zPE_externals.md#ai-functions-for-working-with-ai) can be used.
+
 ```c++
 // This way you can disable all triggers running on the `hero` instance
 var C_Trigger trigget = FirstTrigger;
