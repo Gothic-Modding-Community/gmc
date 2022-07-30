@@ -5,7 +5,7 @@ To get started, you will need Gothic MDK (Mod development kit). MDK contains scr
 
 # MDK Contents
 
-The MDK contains a lot of things, let's see whats's inside.
+The MDK contains a lot of things, let's see what is inside.
 
 ## Scripts
 

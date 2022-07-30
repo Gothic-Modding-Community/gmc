@@ -2,7 +2,7 @@
 
 In order to simplify the process of loading and saving data of varying types to and from the user's hard-drive, ZenGin implements a simple object persistence system using the `zCArchiver` class and its derivatives, that allow individual engine classes to implement a routine specifying which data should be saved or loaded from disk, and in which manner.
 
-An object that is derived from the `zCObject` class may overload the `Archive` and `Unarchive` virtual methods. Within these methods, the class may then call on an interface provided by the `zCArchiver` class, which allows it to directly read from/write to a stream using several different modes. Primarily these are ASCII and BinSafe, however, there are more options, as is explained below.
+An object that is derived from the `zCObject` class may overload the `Archive` and `Unarchive` virtual methods. Within these methods, the class may then call on an interface provided by the `zCArchiver` class, which allows it to directly read from/write to a stream using several modes. Primarily these are ASCII and BinSafe, however, there are more options, as is explained below.
 
 ## Archive format
 
@@ -47,7 +47,7 @@ This is the most important part of the header, which specifies in which format t
 - **ASCII** - The simplest mode, which stores data in human-readable ASCII notation (not unlike JSON for example). This is usually used when saving data during development and/or testing, while the final version of said data will most likely be stored as BIN_SAFE.
 - **ASCII_PROPS** - Same as ASCII except with more additional data that the developer can specify for visual clarity. In practice, it isn't used anywhere and mostly serves only to prettify debug info (try typing `ZWORLD VOBPROPS` in the console and look in zSpy ;) ).
 - **BINARY** - Binary representation of the class instance, which mostly copies the data 1:1 into/from the stream. In practice, this format is only used to store savefiles (.SAV).
-- **BIN_SAFE** - BinSafe, short for Binary Safe, is an extended version of Binary which stores type information along with the data itself. This is meant to make error checking for invalid data easier. There are also other changes which are explained below. Most, if not all world files (.ZEN) are stored in this format.
+- **BIN_SAFE** - BinSafe, short for Binary Safe, is an extended version of Binary which stores type information along with the data itself. This is meant to make error checking for invalid data easier. There are other changes which are explained below. Most, if not all world files (.ZEN) are stored in this format.
 
 `saveGame 0`
 
@@ -191,7 +191,7 @@ By default, `zCArchiver` allows to store properties of the following types:
 
 - **Enum** - An enum value. In ASCII mode, it gets stored as `name=enum:1`. In Binary mode, it behaves the same as `Int`.
 
-As you might have noticed, binary mode doesn't perform any kind of checks on if its reading the right property or even data of the correct type. This is why BinSafe mode exists, as it stores the property type in along with the data itself.
+As you might have noticed, binary mode doesn't perform any kind of checks on if it's reading the right property or even data of the correct type. This is why BinSafe mode exists, as it stores the property type in along with the data itself.
 
 ```cpp
 enum TYPE

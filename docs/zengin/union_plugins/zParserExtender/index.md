@@ -4,11 +4,11 @@ zParserExtender extends ZenGins parser and adds many useful features. It signifi
 !!! note
     This is mostly a translation of the original [release post](https://worldofplayers.ru/threads/41999/)
 
-|Contacts||
-|:--- | :--- |
-| Author | [:material-badge-account-horizontal: Gratt](https://worldofplayers.ru/members/97625/) |
-| GitHub | [:material-github: zParserExtender](https://github.com/Gratt-5r2/zParserExtender)|
-| Forum | [:material-forum: zParserExtender](https://worldofplayers.ru/threads/41999/) |
+| Contacts ||
+|:---------| :--- |
+| Author   | [:material-badge-account-horizontal: Gratt](https://worldofplayers.ru/members/97625/) |
+| GitHub   | [:material-github: zParserExtender](https://github.com/Gratt-5r2/zParserExtender)|
+| Forum    | [:material-forum: zParserExtender](https://worldofplayers.ru/threads/41999/) |
 
 # Extensions and Externals
 zParserExtender adds quite a lot of new features and even some new syntax and keywords.

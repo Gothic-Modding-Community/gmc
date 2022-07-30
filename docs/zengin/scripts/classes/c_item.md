@@ -4,11 +4,12 @@
     Heavily inspired by the amazing documentation site [Gothic library](http://www.gothic-library.ru)
 
   
-The `C_ITEM` class is used to define new items int the game.
+The `C_ITEM` class is used to define new items in the game.
 ## Class definition
 Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/CLASSES.D) script file. 
 <details>
   <summary>C_Item Daedalus class</summary>
+
 ```c++
 CLASS C_Item
 {
@@ -85,6 +86,7 @@ CLASS C_Item
     var int    inv_animate                 // Should the item rotate in the inventory
 }
 ```
+
 </details>
 
 It has many member variables, but not all of them are used for every item. It is not necessary to define every one of these variables for every item, as it was discussed on [InsideGothic](https://ataulien.github.io/Inside-Gothic/objects/item/).
@@ -121,9 +123,9 @@ INSTANCE ItMw_testSword (C_Item)
 ```  
 
 !!! Warning
-    Do not change `ATR_HITPOINTS`, `ATR_MANA`, `ATR_HITPOINTS_MAX` or `ATR_MANA_MAX`, it will result in a unwanted behaviour with max health or max mana.
+    Do not change `ATR_HITPOINTS`, `ATR_MANA`, `ATR_HITPOINTS_MAX` or `ATR_MANA_MAX`, it will result in an unwanted behaviour with max health or max mana.
 
-You can change `ATR_HITPOINTS_MAX` and `ATR_MANA_MAX` attributes in [on_equip](#on_equip) and [on_unequip](#on_unequip)
+You can change `ATR_HITPOINTS_MAX` and `ATR_MANA_MAX` attributes in [on_equip](#class-definition) and [on_unequip](#class-definition)
 
 ### cond_atr & cond_value
  `cond_atr` stores the attributes that will be checked as a requirement to equip an item, the amount specified in `cond_value`.

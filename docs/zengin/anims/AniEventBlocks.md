@@ -1,5 +1,5 @@
 ## Animation event blocks
-With animations we often need to perform some other actions, like playing a sound effect, inserting item into NPCs hand or changing a item instance into a different one (turning a raw steel into hot raw steel).
+With animations, we often need to perform some other actions, like playing a sound effect, inserting item into NPCs hand or changing an item instance into a different one (turning a raw steel into hot raw steel).
 
 Example:
 ```c++

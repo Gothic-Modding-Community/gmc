@@ -1,10 +1,11 @@
 # External functions
 External functions are Daedalus functions (defined in the engine itself) used to interface with the enigne. zParseExtender adds quite a huge amount of new functions, that help scripters to interface with the engine in more ways, that was possible before (without script extenders such as Ikarus and LeGo).
 
-## CAST - data type conversion functions
+## CAST data type conversion functions
 External functions for data type conversion and pointer casting.
 <details>
   <summary>Show code</summary>
+
 ```c++
 func instance Cast_PointerToInstance( var int address )
 
@@ -22,12 +23,14 @@ func int Cast_InstanceIsMob( var instance object )
 
 func int Cast_GetInstanceIndex( var instance object )
 ```
+
 </details>
 
-## HLP - help functions
+## HLP help functions
 Helper functions, used for safety checks or to get specific information from the engine.
 <details>
   <summary>Show code</summary>
+
 ```c++
 func int Hlp_HasFocusVob( var C_NPC npc )
 
@@ -64,16 +67,17 @@ func void Hlp_WriteOptionInt(var string optName, var string section, var string 
 func void Hlp_WriteOptionFloat(var string optName, var string section, var string entry, var float value)
 
 func void Hlp_WriteOptionString(var string optName, var string section, var string entry, var string value)
-
-
 ```
+
 </details>
-## WLD - world manipulation functions
+
+## WLD world manipulation functions
 Functions related to the world. 
+
 <details>
   <summary>Show code</summary>
-```c++
 
+```c++
 func void Wld_ChangeLevel( var string world , var string waypoint )
 
 func instance Wld_FindVob( var string vobname )
@@ -99,17 +103,17 @@ func void Wld_ToggleRain( var float weight , var flaot time )
 func void Wld_SetWeatherType( var int type )
 
 func int Wld_GetWeatherType()
-
-
 ```
+
 </details>
-## MDL - model functions
+
+## MDL model functions
 Functions to tweak animation and other model related settings.
+
 <details>
   <summary>Show code</summary>
+
 ```c++
-
-
 func int Mdl_GetAnimationIndex( var C_NPC npc , var string ani_name )
 
 func string Mdl_GetAnimationName( var C_NPC npc , var int ani_index )
@@ -127,17 +131,17 @@ func float Mdl_SetAnimationFPS( var C_NPC npc , var int idx , var float fps )
 func float Mdl_ResetAnimationFPS( var C_NPC npc , var int ani_index )
 
 func void Mdl_SetVisible( var C_NPC npc , var int isVisible )
-
-
 ```
+
 </details>
-## NPC - character functions
+
+## NPC character functions
 NPC realted functions.
+
 <details>
   <summary>Show code</summary>
+
 ```c++
-
-
 func void Npc_SetAsHero( var C_NPC npc )
 
 func void Npc_OpenInventory( var C_NPC npc )
@@ -145,17 +149,17 @@ func void Npc_OpenInventory( var C_NPC npc )
 func void Npc_OpenInventorySteal( var C_NPC npc )
 
 func void Npc_OpenInventoryTrade( var C_NPC npc )
-
-
 ```
+
 </details>
-## MOB - interactive object functions
+
+## MOB interactive object functions
 Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.
+
 <details>
   <summary>Show code</summary>
+
 ```c++
-
-
 func void Mob_Destroy( var instance object )
 
 func void Mob_RemoveItem( var instance object , var int item )
@@ -177,16 +181,17 @@ func void Mob_SetLocked( var instance object , var int locked )
 func instance Mob_GetKeyInstance( var instance object )
 
 func void Mob_SetKeyInstance( var instance object , var int key )
-
-
 ```
+
 </details>
-## AI - functions for working with AI
+
+## AI functions for working with AI
 Functions to work with the new `C_Trigger` class and NPC's AI queue.
+
 <details>
   <summary>Show code</summary>
-```c++
 
+```c++
 func void AI_CallScript(var string funcName, var C_Npc slf, var C_Npc oth)
 
 func C_Trigger AI_StartTriggerScript(var string funcName, var int delay)
@@ -221,14 +226,16 @@ AI_GetNextTriggerByVictim(var C_Trigger startTrigger, var C_Npc victim);
 
 AI_GetNextTriggerByNPCs(var C_Trigger startTrigger, var C_Npc self, var C_Npc other, var C_Npc victim);
 ```
+
 </details>
-## PAR - Functions for parser manipulation
+
+## PAR functions for parser manipulation
 Parser functions are used to manipulate the parsers. Retrieve SymbolID, access arrays and such.
+
 <details>
   <summary>Show code</summary>
+
 ```c++
-
-
 func int Par_GetParserID(var string parName);
 
 func int Par_GetSymbolID(var int parId, var string symName);
@@ -262,13 +269,16 @@ func void Par_SetSymbolValueIntArray(var int value, var int parId, var int symId
 func void Par_SetSymbolValueFloatArray(var float value, var int parId, var int symId, var int arrayId);
 
 func void Par_SetSymbolValueStringArray(var string value, var int parId, var int symId, var int arrayId);
-
 ```
+
 </details>
+
 ## Event functions and variables
 On top of external functions, zParserExtender also adds functi
+
 <details>
   <summary>Show code</summary>
+
 ```c++
 func event GameLoop()
 
@@ -277,7 +287,6 @@ func event GameInit()
 const instance null
 
 const float nan
-
-
 ```
+
 </details>

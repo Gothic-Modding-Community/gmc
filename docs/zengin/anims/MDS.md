@@ -10,7 +10,7 @@ You will see a lot of long and scary code, but it is actually very simple, lets 
 
 
 !!! hint "Don't forget to use the search"
-    If you search this file for `t_Yes`, you will get a example of the first type of animation - "standalone"
+    If you search this file for `t_Yes`, you will get an example of the first type of animation - "standalone"
     
     To play the animation in game you use this console command `play ani t_yes`.
 
@@ -57,7 +57,7 @@ ani (ANI_NAME LAYER NEXT_ANI BLEND_IN BLEND_OUT FLAGS ASC_NAME ANI_DIR START_FRA
 ```
 `ani` - is a keyword, we are defining new animation
 
-Let's describe all of the parameters
+Let's describe all the parameters
 
 `ANI_NAME`    - animation name, we use it in Daedalus as animation identifier
 
@@ -97,7 +97,7 @@ If we set it to 0.5, it takes 0.5 seconds for this animation to take full effect
 `END_FRAME`   - on what frame from the source file the animation ends
 
 ### aniAlias
-This is probably the second most useful command, it is used to do, what its name suggests it does, and that is creating a alias (similar to hard link for my fellow unix users) for already defined animations.
+This is probably the second most useful command, it is used to do, what its name suggests it does, and that is creating an alias (similar to hard link for my fellow unix users) for already defined animations.
 
 Example:
 ```c++
