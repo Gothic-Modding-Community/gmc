@@ -118,6 +118,10 @@ extra:
       name: Gothic Modding Comunity Github repository
 
 
+extra_javascript:
+  - js/extra.js
+
+
 markdown_extensions:
   - toc:
       permalink: 𐌾
