@@ -136,12 +136,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/zPE_dialogues/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/zPE_events/</loc>
          <lastmod>2022-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/zPE_extern/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/zPE_externals/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/zPE_helperclasses/</loc>
          <lastmod>2022-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -166,7 +181,82 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/zPE_testelse/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/zPE_while/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_AI/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_CAST/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_HLP/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_MDL/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_MOB/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_NPC/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_PAR/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_VOB/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_WLD/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_eventsandvars/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_log/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_menu/</loc>
+         <lastmod>2022-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/union_plugins/zParserExtender/externals/zPE_string/</loc>
          <lastmod>2022-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
