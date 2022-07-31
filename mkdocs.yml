@@ -110,6 +110,9 @@ nav:
 
 extra_css:
   - css/extra.css
+
+extra_javascript:
+  - js/extra.js
   
 extra:
   social:
@@ -119,6 +122,8 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/auronen/gmc
       name: Gothic Modding Comunity Github repository
+
+
 
 markdown_extensions:
   - toc:
