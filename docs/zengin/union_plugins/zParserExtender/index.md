@@ -18,8 +18,14 @@ zParserExtender adds quite a lot of new features and even some new syntax and ke
 - [Native WHILE loop](zPE_while.md)
 - [Namespaces](zPE_namespaces.md)
 - [Event functions](zPE_events.md)
-- [C_Trigger class](zPE_c_trigger.md)
+- [Test-else binding](zPE_testelse.md)
+- [Extern binding](zPE_extern.md)
 - [External functions](zPE_externals.md)
+
+**Classes**
+
+- [C_Trigger class](zPE_c_trigger.md)
+- [Engine classes](zPE_helperclasses.md)
 
 **Injection**
   
@@ -27,3 +33,21 @@ zParserExtender adds quite a lot of new features and even some new syntax and ke
 - [META block](zPE_META.md)
 - [Hooks](zPE_hooks.md)
 - [Other features](zPE_other.md)
+
+**External functions**  
+[zParserExtender -  External functions](externals/index.md)
+
+ - [String functions](externals/zPE_string.md)
+ - [Menu function](externals/zPE_menu.md)
+ - [Log function](externals/zPE_log.md)
+ - [Event function](externals/zPE_eventsandvars.md)
+ - [CAST functions](externals/zPE_CAST.md)
+ - [HLP functions](externals/zPE_HLP.md)
+ - [WLD functions](externals/zPE_WLD.md)
+ - [MDL functions](externals/zPE_MDL.md)
+ - [NPC functions](externals/zPE_NPC.md)
+ - [MOB functions](externals/zPE_MOB.md)
+ - [AI functions](externals/zPE_AI.md)
+ - [PAR functions](externals/zPE_PAR.md)
+ - [VOB functions](externals/zPE_VOB.md)
+

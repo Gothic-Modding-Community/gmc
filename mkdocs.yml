@@ -44,8 +44,8 @@ nav:
       - Directory structure: zengin/general_info/DirectoryStructure.md
       - VDFS - virtual file system: 
         - zengin/general_info/vdfs/index.md
-        - GothicVDFS: zengin/tools/GothicVDFS.md
-        - VDFS Tool: zengin/tools/VDFSTool.md
+        - GothicVDFS:       zengin/tools/GothicVDFS.md
+        - VDFS Tool:        zengin/tools/VDFSTool.md
       - Object persistence: zengin/general_info/ObjectPersistence.md
 
     - Animations: 
@@ -82,17 +82,38 @@ nav:
       - zengin/union_plugins/index.md
       - zParserExtender:
         - zengin/union_plugins/zParserExtender/index.md
-        - Extensions and Externals: 
-          - While loop: zengin/union_plugins/zParserExtender/zPE_while.md
-          - Namespaces: zengin/union_plugins/zParserExtender/zPE_namespaces.md
-          - Event functions: zengin/union_plugins/zParserExtender/zPE_events.md
-          - C_Trigger class: zengin/union_plugins/zParserExtender/zPE_c_trigger.md
-          - External functions: zengin/union_plugins/zParserExtender/zPE_externals.md
-        - Injection:
+        - Syntax extensions:
+          - While loop:         zengin/union_plugins/zParserExtender/zPE_while.md
+          - Namespaces:         zengin/union_plugins/zParserExtender/zPE_namespaces.md
+          - Event functions:    zengin/union_plugins/zParserExtender/zPE_events.md
+          - Test-else binding:  zengin/union_plugins/zParserExtender/zPE_testelse.md
+          - Extern binding:     zengin/union_plugins/zParserExtender/zPE_extern.md
+          - Dialogue constants: zengin/union_plugins/zParserExtender/zPE_dialogues.md
+        - Classes:
+          - C_Trigger class:    zengin/union_plugins/zParserExtender/zPE_c_trigger.md
+          - Engine classes:     zengin/union_plugins/zParserExtender/zPE_helperclasses.md
+#         - External functions: zengin/union_plugins/zParserExtender/zPE_externals.md
+        - Daedalus Injection:
           - zengin/union_plugins/zParserExtender/zPE_injection.md
-          - META block: zengin/union_plugins/zParserExtender/zPE_META.md
-          - Hooking: zengin/union_plugins/zParserExtender/zPE_hooks.md
+          - META block:     zengin/union_plugins/zParserExtender/zPE_META.md
+          - Hooking:        zengin/union_plugins/zParserExtender/zPE_hooks.md
           - Other features: zengin/union_plugins/zParserExtender/zPE_other.md
+        - Externals:
+          - zengin/union_plugins/zParserExtender/externals/index.md
+          - String functions: zengin/union_plugins/zParserExtender/externals/zPE_string.md
+          - Menu function:    zengin/union_plugins/zParserExtender/externals/zPE_menu.md
+          - Log function:     zengin/union_plugins/zParserExtender/externals/zPE_log.md
+          - Event function:   zengin/union_plugins/zParserExtender/externals/zPE_eventsandvars.md
+          - CAST functions:   zengin/union_plugins/zParserExtender/externals/zPE_CAST.md
+          - HLP functions:    zengin/union_plugins/zParserExtender/externals/zPE_HLP.md
+          - WLD functions:    zengin/union_plugins/zParserExtender/externals/zPE_WLD.md
+          - MDL functions:    zengin/union_plugins/zParserExtender/externals/zPE_MDL.md
+          - NPC functions:    zengin/union_plugins/zParserExtender/externals/zPE_NPC.md
+          - MOB functions:    zengin/union_plugins/zParserExtender/externals/zPE_MOB.md
+          - AI functions:     zengin/union_plugins/zParserExtender/externals/zPE_AI.md
+          - PAR functions:    zengin/union_plugins/zParserExtender/externals/zPE_PAR.md
+          - VOB functions:    zengin/union_plugins/zParserExtender/externals/zPE_VOB.md
+
 
     - Tools:
       - zengin/tools/index.md
@@ -100,7 +121,7 @@ nav:
         - Daedalus Language Server: zengin/tools/DLS.md
       - VDFS tools:
         - GothicVDFS: zengin/tools/GothicVDFS.md
-        - VDFS Tool: zengin/tools/VDFSTool.md
+        - VDFS Tool:  zengin/tools/VDFSTool.md
 
   - Genome (G3/R1):
     - General information: 

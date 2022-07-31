@@ -12,6 +12,8 @@ The community has developed many tools to help with the creation of Gothic mods.
  - [Ikarus](https://github.com/Lehona/Ikarus) - A daedalus library for the game Gothic. Exploits the interpreter to allow arbitrary memory access and defines a lot of useful functions for interfacing with the engine. 
  - [LeGo](https://github.com/Lehona/LeGo) - A daedalus library for the game Gothic. It contains various packages to support modders.
  - [AFSP](https://github.com/auronen/AF-Script-Packet) - Fawkes' & Auronen's script package for Gothic 1 and Gothic 2: Night of the Raven.
+ - [Ninja](https://github.com/szapp/Ninja) - Ninja introduces the possibility of true modular modifications for the
+video games Gothic and Gothic 2 Night of the Raven.
  
 **[VDFS tools](../general_info/vdfs)**
 
