@@ -52,6 +52,7 @@ This is where the magic happens:
 - `Meshes` - contains meshes source and compiled files.
 	- `_compiled` - contains compiled meshes
 - `Music` - contains music files.
+- `Presets` - contains basic presets.
 - `Scripts`
 	- `_compiled` - contains compiled scripts - `.dat` files
   	- `Content` - contains scripts that make up the content of the game.
