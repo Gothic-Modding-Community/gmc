@@ -1,0 +1,23 @@
+/* Stretch content area */
+.md-main__inner.md-grid {
+  /* Default 61rem */
+  max-width: 75rem;
+}
+
+/* Shrink header and footer to the content size*/
+.md-grid {
+  /* Default 61rem */
+  max-width: 50rem;
+}
+
+@media screen and (min-width: 60em) {
+  /* Decrease the width of the repository link button */
+  .md-header__source {
+    max-width: 7rem;
+    width: 7rem;
+  }
+  /* Increase width of the repository link text */
+  .md-source__repository {
+    max-width: 100%;
+  }
+}

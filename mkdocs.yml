@@ -108,6 +108,12 @@ nav:
       - Object persistence: genome/ObjectPersistence.md
 
 
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - js/extra.js
+  
 extra:
   social:
     - icon: fontawesome/brands/discord
@@ -117,9 +123,6 @@ extra:
       link: https://github.com/auronen/gmc
       name: Gothic Modding Comunity Github repository
 
-
-extra_javascript:
-  - js/extra.js
 
 
 markdown_extensions:
@@ -136,3 +139,12 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enabled: !ENV [GMC_SHOW_UPDATE_TIME, False]
+      type: iso_datetime
+      timezone: Europe/Warsaw
+      exclude:
+        - index.md
