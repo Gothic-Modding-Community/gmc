@@ -7,13 +7,17 @@ window.addEventListener("DOMContentLoaded", _ => {
 });
 
 function gmcExternalLinks() {
+    const hostname = window.location.hostname;
+    const domainParts = hostname.split('.');
+    const githubId = domainParts[1] === "github" ? domainParts[0] : "auronen";
+    const repoUrl = `github.com/${githubId}`;
+
     // Regex to match urls starting with
-    // https://127.0.0.1
-    // https://auronen ...
-    // https://github.com/auronen ...
-    const regex = /^(?:https?:\/\/)?(?:www)?(127\.0\.0\.1|auronen|github\.com\/auronen)/;
+    // https://$hostname
+    // https://$repoUrl
+    const regex = new RegExp(`^(?:https?:\/\/)?(${hostname}|${repoUrl})`);
     const anchors = document.querySelectorAll(".md-content a");
-    let className = "external-link";
+    const className = "external-link";
 
     anchors.forEach( a => {
         if (regex.test(a.href)) {
