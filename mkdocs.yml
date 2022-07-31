@@ -107,6 +107,10 @@ nav:
       - genome/index.md
       - Object persistence: genome/ObjectPersistence.md
 
+
+extra_css:
+  - css/extra.css
+  
 extra:
   social:
     - icon: fontawesome/brands/discord
