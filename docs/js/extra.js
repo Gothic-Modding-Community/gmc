@@ -36,16 +36,24 @@ function gmcExternalLinks() {
 
 function gmcExpandNavigation() {
     const activeNav = document.querySelector(".md-nav__link--active").parentElement;
-    const toggles = activeNav.querySelectorAll('input[type="checkbox"]');
-    toggles.forEach( t => {
-        if (t.checked) {
-            gmcDebug(`⏩ ${t.id} already checked`);
-            return;
+    const children = activeNav.querySelector("nav > ul").children;
+
+    for (let i = 0; i < children.length; i++) {
+        const toggle = children[i].querySelector('input[type="checkbox"]');
+
+        if (!toggle) {
+            gmcDebug(`⏩ toggle not present`);
+            continue;
         }
 
-        t.checked = true;
-        gmcDebug(`✅ Expanded '${t.id}'`);
-    })
+        if (toggle.checked) {
+            gmcDebug(`⏩ '${toggle.id}' already checked`);
+            continue;
+        }
+
+        toggle.checked = true;
+        gmcDebug(`✅ Expanded '${toggle.id}'`);
+    }
 }
 
 function gmcDebug(message) {
