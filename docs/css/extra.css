@@ -21,3 +21,11 @@
     max-width: 100%;
   }
 }
+
+/* 16:9 aspect ratio and centering */
+/* Works on top of mkdocs-video */
+.video-container {
+  width: 32rem;
+  height: 18rem;
+  margin: auto;
+}
