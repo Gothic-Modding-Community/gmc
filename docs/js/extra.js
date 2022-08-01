@@ -3,6 +3,7 @@
 let gGMC_DEBUG = false;
 
 window.addEventListener("DOMContentLoaded", _ => {
+    gmcExpandNavigation();
     gmcExternalLinks();
 });
 
@@ -31,6 +32,20 @@ function gmcExternalLinks() {
         a.classList.add(className);
         gmcDebug(`✅ Added '${className}' class to ${a.href}`);
     });
+}
+
+function gmcExpandNavigation() {
+    const activeNav = document.querySelector(".md-nav__link--active").parentElement;
+    const toggles = activeNav.querySelectorAll('input[type="checkbox"]');
+    toggles.forEach( t => {
+        if (t.checked) {
+            gmcDebug(`⏩ ${t.id} already checked`);
+            return;
+        }
+
+        t.checked = true;
+        gmcDebug(`✅ Expanded '${t.id}'`);
+    })
 }
 
 function gmcDebug(message) {
