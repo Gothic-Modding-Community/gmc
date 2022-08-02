@@ -21,3 +21,8 @@
     max-width: 100%;
   }
 }
+
+/* Special character added to external links*/
+.md-content a.external-link::after {
+  content: "[➽]";
+}
