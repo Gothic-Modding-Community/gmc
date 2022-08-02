@@ -2543,7 +2543,7 @@
 <h2 id="class-definition">Class definition<a class="headerlink" href="#class-definition" title="Permanent link">𐌾</a></h2>
 <p>Class definition as it is defined in <a href="https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164"><code>Scripts/Content/_intern/Classes.d</code></a> script file.</p>
 <details>
-  <summary>C_Item Daedalus class</summary>
+  <summary>C_Info Daedalus class</summary>
 
 <div class="highlight"><pre><span></span><code><span class="n">CLASS</span><span class="w"> </span><span class="n">C_Info</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -2633,7 +2633,7 @@
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is why the end dialogues usually have <code>nr = 999;</code> this is the highest number therefore will always show up at the bottom.</p>
+<p>This is why the end dialogues usually have <code>nr = 999;</code> this is the highest number out of any dialogues therefore will always show up at the bottom. (999 is not the highest number the <code>nr</code> can store, it is just considered the highest number, as there will hardly be 998 dialogue instances for a single character)</p>
 </div>
 <h3 id="important">important<a class="headerlink" href="#important" title="Permanent link">𐌾</a></h3>
 <p>The <code>important</code> member variable determines, whether the NPC will automatically address the player or not.</p>
@@ -2760,7 +2760,7 @@
 <p>Trade manager has been added to ZenGin not that long before the release of Gothic 1 (as discussed and discovered on <a href="https://discord.gg/CK4VAR7fpH">Phoenix the Game Discord server</a> with the acquisition of Gothic version <code>0.94k</code>). In version 0.94 the trade manager worked quite differently and used a special (nowadays unused) Daedalus class <code>C_ItemReact</code>.</p>
 </div>
 <h3 id="permanent">permanent<a class="headerlink" href="#permanent" title="Permanent link">𐌾</a></h3>
-<p>Dialogues with <code>permanent = TRUE</code> do not dispensary after the dialogue is played. This is used for dialogues where you ask for directions or flavor dialogues for unnamed NPCs.</p>
+<p>Dialogues with <code>permanent = TRUE</code> do not disappear after the dialogue is played. This is used for dialogues where you ask for directions or flavor dialogues for unnamed NPCs.</p>
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
 <p>Frequently used external function <code>Npc_KnowsInfo</code> which returns true if the dialogue instance has been played has had a bug in the implementation for a long time. This bug made it impossible to use this function with dialogue instances with <code>permanent = TRUE</code> as it would always return <code>FALSE</code>. This has been fixed in <code>Union 1.0m</code>.</p>
@@ -2768,14 +2768,14 @@
 <h2 id="zparserextender">zParserExtender<a class="headerlink" href="#zparserextender" title="Permanent link">𐌾</a></h2>
 <p>zParserExtender implements some Quality of Life features for dialogues. More information can be found in <a href="../../../union_plugins/zParserExtender/zPE_dialogues/">Dialogue constants article</a></p>
 <h2 id="af-script-packet">AF Script Packet<a class="headerlink" href="#af-script-packet" title="Permanent link">𐌾</a></h2>
-<p>Enhaced Info Manager (implemented using Ikarus and LeGo) adds tun of customisation and additional features to dialogues. More information can be found in the <a href="../../extenders/afsp/">AFSP Enahnced Information Manager article</a></p>
+<p>Enhaced Info Manager (implemented using Ikarus and LeGo) adds tun of customisation and additional features to dialogues. More information can be found in the <a href="../../extenders/afsp/">AFSP Enhanced Information Manager article</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-02 16:59:20</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-02 17:39:43</span>
       
     
   </small>
