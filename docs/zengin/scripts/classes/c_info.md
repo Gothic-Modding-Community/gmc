@@ -9,7 +9,7 @@ The `C_INFO` class is used to define dialogues in the game.
 Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164) script file.
 
 <details>
-  <summary>C_Item Daedalus class</summary>
+  <summary>C_Info Daedalus class</summary>
 
 ```c++
 CLASS C_Info
@@ -66,7 +66,7 @@ INSTANCE Info_Diego_Gamestart (C_INFO)
 };
 ```
 !!! Note
-    This is why the end dialogues usually have `nr = 999;` this is the highest number therefore will always show up at the bottom.
+    This is why the end dialogues usually have `nr = 999;` this is the highest number out of any dialogues therefore will always show up at the bottom. (999 is not the highest number the `nr` can store, it is just considered the highest number, as there will hardly be 998 dialogue instances for a single character)
 
 ### important
 The `important` member variable determines, whether the NPC will automatically address the player or not.
@@ -197,7 +197,7 @@ FUNC VOID  Stt_311_Fisk_Trade_Info()
     Trade manager has been added to ZenGin not that long before the release of Gothic 1 (as discussed and discovered on [Phoenix the Game Discord server](https://discord.gg/CK4VAR7fpH) with the acquisition of Gothic version `0.94k`). In version 0.94 the trade manager worked quite differently and used a special (nowadays unused) Daedalus class `C_ItemReact`.
 
 ### permanent
-Dialogues with `permanent = TRUE` do not dispensary after the dialogue is played. This is used for dialogues where you ask for directions or flavor dialogues for unnamed NPCs.
+Dialogues with `permanent = TRUE` do not disappear after the dialogue is played. This is used for dialogues where you ask for directions or flavor dialogues for unnamed NPCs.
 
 !!! Bug
     Frequently used external function `Npc_KnowsInfo` which returns true if the dialogue instance has been played has had a bug in the implementation for a long time. This bug made it impossible to use this function with dialogue instances with `permanent = TRUE` as it would always return `FALSE`. This has been fixed in `Union 1.0m`.
@@ -206,5 +206,5 @@ Dialogues with `permanent = TRUE` do not dispensary after the dialogue is played
 zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../../../union_plugins/zParserExtender/zPE_dialogues/)
 
 ## AF Script Packet
-Enhaced Info Manager (implemented using Ikarus and LeGo) adds tun of customisation and additional features to dialogues. More information can be found in the [AFSP Enahnced Information Manager article](../../scripts/extenders/afsp/index.md)
+Enhaced Info Manager (implemented using Ikarus and LeGo) adds tun of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
 
