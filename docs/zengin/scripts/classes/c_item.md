@@ -6,7 +6,7 @@
   
 The `C_ITEM` class is used to define new items in the game.
 ## Class definition
-Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/CLASSES.D) script file. 
+Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L79) script file. 
 <details>
   <summary>C_Item Daedalus class</summary>
 
@@ -84,7 +84,7 @@ CLASS C_Item
     var int    inv_roty                    // Y-axis rotation
     var int    inv_rotz                    // Z-axis rotation
     var int    inv_animate                 // Should the item rotate in the inventory
-}
+};
 ```
 
 </details>
