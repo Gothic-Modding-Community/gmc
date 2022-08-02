@@ -2167,15 +2167,15 @@
 </div>
 <p>A windows pops up, you can read some interesting information about the model you are about to import, what we are interested in is, that <strong>Completely replace current scene</strong> is ticked, we want to use <strong>Armature modifier</strong>, and we also want to <strong>Try to connect bones</strong> and <strong>Use sample meshes from folder</strong>. You should provide a path to a directory with the sample meshes - these are meshes for items, that usually go into slot bones. And lastly, the <strong>space transformation scale</strong> should be set to <strong>0.01</strong>, this is because ZenGin works with centimeter units and one unit in Blender is a meter.</p>
 <p>Click import and wait for the magic to happen.</p>
-<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/UKltt7mOfj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/UKltt7mOfj0" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>This video shows a freshly imported model with all default meshes.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Now if we wanted to play (or edit) existing animation, we can now load it on top of this. Just do as before <strong>File &gt; Import &gt; Kerrax ASCII model (.asc)</strong> and select different animation file (or armour file) for example <code>Hum_SmokeHerb_Layer_M01.asc</code> for an animation file.
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/FDicnSwhv0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/FDicnSwhv0w" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div>    </p>
 </div>
 <p>Gothic characters are modular, you can change their heads on the fly (during gameplay even, as seen in this amazing video of my dear friend and colleague Fawkes - <a href="https://www.youtube.com/watch?v=2GBmpeyqKIA">Head changing</a>), let's add a head, so we can see how the whole body will behave while we are animating. <strong>File &gt; Import &gt; Kerrax ASCII model (.asc)</strong> and navigate to your head model (for this, you will have to decompile it, like we did with the body itself). I will import <code>HUM_HEAD_PONY.ASC</code>. Please make sure to select the target bone for importing <strong>Bip01 Head</strong>, this will attach the head to the proper bone, just like the engine does it.</p>
-<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/AzotIDHFCSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/AzotIDHFCSo" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>Now we have everything ready to start animating. The video shows the DopeSheet a nice way to edit keyframes.</p>
 <div class="admonition tip">
 <p class="admonition-title">DopeSheet</p>
@@ -2186,13 +2186,13 @@
 <p class="admonition-title">Tip</p>
 <p>If you don't know, what the animation is called, just go into the game, and make your character to perform the animation you want, while in MARVIN mode, you can press <code>G</code> and the animation information (and some other info too) will be displayed right on the screen</p>
 </div>
-<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/boUwngFLA-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/boUwngFLA-U" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>In this video you can see, that the idle standing animation is <code>s_run</code>. Because we want to make an animation, that is going to start from this idle animation, we will import it into blender. Where do we find it? Just look into the <code>.mds</code> file, look for <code>s_run</code> name and get the name of the file.
 <div class="highlight"><pre><span></span><code><span class="n">ani</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;s_Run&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;s_Run&quot;</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="n">MI</span><span class="w"> </span><span class="s">&quot;Hum_RunAmbient_M01.asc&quot;</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 As we can see, we have to import the <code>Hum_RunAmbient_M01.asc</code> file. </p>
 <p>Next goes the first trick. Since we want our animation to end exactly, as it started - wither because we want the hero to continue his standing animation, or we want to make a looping animation we somehow have to copy the pose. I use the DopeSheet screen, to delete all keyframes and then copy the keyframe set from keyframe number 0 and then drag it somewhere to the end of the timeline.</p>
-<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/2vOMrM-9aWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/2vOMrM-9aWc" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>Once the animation is done, we have to export it into a <code>asc</code> format again, <strong>File &gt; Export &gt; Kerrax ASCII model (.asc)</strong> and then save it to <code>_work\data\Anims\asc\</code> so the engine can see it and convert it.
 There are many options here, that we will explore later, but we have tick <strong>Export animation</strong> and pick bones that we want to export - this is useful for animations that are played on different layers (dialoge gestures, scratching head, scratching a shoulder,...).</p>
 <h2 id="animation-script">Animation script<a class="headerlink" href="#animation-script" title="Permanent link">𐌾</a></h2>
@@ -2207,7 +2207,7 @@ There are many options here, that we will explore later, but we have tick <stron
 </code></pre></div></p>
 <p>Save the <code>Humans.mds</code> file and try it in game. Nothing happens! The reason is, the <code>mds</code> has been already compiled, and we have to recompile it. The easiest is to go to <code>Anims\_compiled</code> and delete <code>HUMANS.MSB</code>.
 Run the game and try to play the animation again (<code>play ani t_backpain</code> in MARVIN console) now everything should work.</p>
-<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/-i2un91x1UI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/-i2un91x1UI" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>Amazing, now you have your first animation in the game. And you can use it to do some fun stuff, like in dialogues using the <code>AI_PlayAni</code> function.</p>
 <h2 id="example-dialogue">Example dialogue<a class="headerlink" href="#example-dialogue" title="Permanent link">𐌾</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">DIA_Xardas_Back</span><span class="w"> </span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
@@ -2235,14 +2235,14 @@ Run the game and try to play the animation again (<code>play ani t_backpain</cod
 <span class="w">    </span><span class="n">AI_StopProcessInfos</span><span class="p">(</span><span class="n">self</span><span class="p">);</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/G14lgjA49wU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/G14lgjA49wU" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-07-30 05:34:03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-01 16:08:27</span>
       
     
   </small>

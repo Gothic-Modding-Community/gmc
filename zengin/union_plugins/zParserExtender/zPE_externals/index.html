@@ -2044,63 +2044,63 @@
       
         <li class="md-nav__item">
   <a href="#cast-data-type-conversion-functions" class="md-nav__link">
-    CAST - data type conversion functions
+    CAST data type conversion functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#hlp-help-functions" class="md-nav__link">
-    HLP - help functions
+    HLP help functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#wld-world-manipulation-functions" class="md-nav__link">
-    WLD - world manipulation functions
+    WLD world manipulation functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#mdl-model-functions" class="md-nav__link">
-    MDL - model functions
+    MDL model functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#npc-character-functions" class="md-nav__link">
-    NPC - character functions
+    NPC character functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#mob-interactive-object-functions" class="md-nav__link">
-    MOB - interactive object functions
+    MOB interactive object functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#ai-functions-for-working-with-ai" class="md-nav__link">
-    AI - functions for working with AI
+    AI functions for working with AI
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#par-functions-for-parser-manipulation" class="md-nav__link">
-    PAR - functions for parser manipulation
+    PAR functions for parser manipulation
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#vob-functions-for-object-manipulation" class="md-nav__link">
-    VOB - functions for object manipulation
+    VOB functions for object manipulation
   </a>
   
 </li>
@@ -2153,7 +2153,7 @@
 
 <h1 id="external-functions">External functions<a class="headerlink" href="#external-functions" title="Permanent link">𐌾</a></h1>
 <p>External functions are Daedalus functions (defined in the engine itself) used to interface with the enigne. zParseExtender adds quite a huge amount of new functions, that help scripters to interface with the engine in more ways, that was possible before (without script extenders such as Ikarus and LeGo).</p>
-<h2 id="cast-data-type-conversion-functions">CAST - data type conversion functions<a class="headerlink" href="#cast-data-type-conversion-functions" title="Permanent link">𐌾</a></h2>
+<h2 id="cast-data-type-conversion-functions">CAST data type conversion functions<a class="headerlink" href="#cast-data-type-conversion-functions" title="Permanent link">𐌾</a></h2>
 <p>External functions for data type conversion and pointer casting.</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">Cast_PointerToInstance</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
@@ -2190,7 +2190,7 @@
 <span class="c1">/// @return class zCObject identifier</span>
 <span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Cast_CheckVobClassID</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">classId</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="hlp-help-functions">HLP - help functions<a class="headerlink" href="#hlp-help-functions" title="Permanent link">𐌾</a></h2>
+<h2 id="hlp-help-functions">HLP help functions<a class="headerlink" href="#hlp-help-functions" title="Permanent link">𐌾</a></h2>
 <p>Helper functions, used for safety checks or to get specific information from the engine.</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Hlp_HasFocusVob</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
@@ -2228,7 +2228,7 @@
 
 <span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Hlp_WriteOptionString</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">optName</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">section</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">entry</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="wld-world-manipulation-functions">WLD - world manipulation functions<a class="headerlink" href="#wld-world-manipulation-functions" title="Permanent link">𐌾</a></h2>
+<h2 id="wld-world-manipulation-functions">WLD world manipulation functions<a class="headerlink" href="#wld-world-manipulation-functions" title="Permanent link">𐌾</a></h2>
 <p>Functions related to the world. </p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Wld_ChangeLevel</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">world</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">waypoint</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
@@ -2254,7 +2254,7 @@
 
 <span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Wld_GetWeatherType</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="mdl-model-functions">MDL - model functions<a class="headerlink" href="#mdl-model-functions" title="Permanent link">𐌾</a></h2>
+<h2 id="mdl-model-functions">MDL model functions<a class="headerlink" href="#mdl-model-functions" title="Permanent link">𐌾</a></h2>
 <p>Functions to tweak animation and other model related settings.</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Mdl_GetAnimationIndex</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">ani_name</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
@@ -2291,7 +2291,7 @@
 <span class="c1">/// @param npc npc to be affected</span>
 <span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mdl_ResetNpcSpeedMultiplier</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="npc-character-functions">NPC - character functions<a class="headerlink" href="#npc-character-functions" title="Permanent link">𐌾</a></h2>
+<h2 id="npc-character-functions">NPC character functions<a class="headerlink" href="#npc-character-functions" title="Permanent link">𐌾</a></h2>
 <p>NPC realted functions.</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Npc_SetAsHero</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
@@ -2334,7 +2334,7 @@
 <span class="c1">/// @param dropIt should the object be dropped</span>
 <span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Npc_RemoveFromSlot</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">slotName</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dropIt</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="mob-interactive-object-functions">MOB - interactive object functions<a class="headerlink" href="#mob-interactive-object-functions" title="Permanent link">𐌾</a></h2>
+<h2 id="mob-interactive-object-functions">MOB interactive object functions<a class="headerlink" href="#mob-interactive-object-functions" title="Permanent link">𐌾</a></h2>
 <p>Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_Destroy</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
@@ -2358,7 +2358,7 @@
 
 <span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_SetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="ai-functions-for-working-with-ai">AI - functions for working with AI<a class="headerlink" href="#ai-functions-for-working-with-ai" title="Permanent link">𐌾</a></h2>
+<h2 id="ai-functions-for-working-with-ai">AI functions for working with AI<a class="headerlink" href="#ai-functions-for-working-with-ai" title="Permanent link">𐌾</a></h2>
 <p>Functions to work with the new <code>C_Trigger</code> class and NPC's AI queue.</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AI_CallScript</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">oth</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
@@ -2401,7 +2401,7 @@
 <span class="c1">/// @return string containing the Steam username, or empty string</span>
 <span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Hlp_GetSteamPersonalName</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="par-functions-for-parser-manipulation">PAR - functions for parser manipulation<a class="headerlink" href="#par-functions-for-parser-manipulation" title="Permanent link">𐌾</a></h2>
+<h2 id="par-functions-for-parser-manipulation">PAR functions for parser manipulation<a class="headerlink" href="#par-functions-for-parser-manipulation" title="Permanent link">𐌾</a></h2>
 <p>Parser functions are used to manipulate the parsers. Retrieve SymbolID, access arrays and such.</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Par_GetParserID</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">parName</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
@@ -2437,7 +2437,7 @@
 
 <span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Par_SetSymbolValueStringArray</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">parId</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">symId</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arrayId</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="vob-functions-for-object-manipulation">VOB - functions for object manipulation<a class="headerlink" href="#vob-functions-for-object-manipulation" title="Permanent link">𐌾</a></h2>
+<h2 id="vob-functions-for-object-manipulation">VOB functions for object manipulation<a class="headerlink" href="#vob-functions-for-object-manipulation" title="Permanent link">𐌾</a></h2>
 <p>VOB functions allow you to manipulate game world objects.
 <div class="highlight"><pre><span></span><code><span class="c1">/// Returns the current position of the object in the world</span>
 <span class="c1">/// </span>
@@ -2635,7 +2635,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-07-31 17:32:59</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-01 16:08:27</span>
       
     
   </small>
