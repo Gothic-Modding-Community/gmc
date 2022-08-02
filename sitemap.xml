@@ -76,7 +76,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/classes/c_info/</loc>
+         <lastmod>2022-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/classes/c_item/</loc>
+         <lastmod>2022-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/</loc>
+         <lastmod>2022-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/afsp/</loc>
+         <lastmod>2022-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/afsp/afsp_eim/</loc>
+         <lastmod>2022-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/ikarus/</loc>
+         <lastmod>2022-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/</loc>
          <lastmod>2022-08-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
