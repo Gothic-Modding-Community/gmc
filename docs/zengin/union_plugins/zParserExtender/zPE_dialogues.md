@@ -1,5 +1,5 @@
-# Dialogues constants
-To simplify dialoguess, you can define up to 2 auxiliary variables (or constants) into which values corresponding to the current `C_Info` instance will be dynamically written.
+# Dialogue constants
+To simplify dialogues, you can define up to 2 auxiliary variables (or constants) into which values corresponding to the current `C_Info` instance will be dynamically written.
 
 ## DIA_CurrentInstance
 ```c++
@@ -24,7 +24,7 @@ func int C_HeroKnowsCurrentInfo()
 ```c++
 var string DIA_CurrentName
 ```
-Contains the name of the current instance of C_Info. Can be useful for debugging purposes. Should be defined in scripts. Usage scenarios:
+Contains the name of the current instance of `C_Info`. Can be useful for debugging purposes. Should be defined in scripts. Usage scenarios:
 ```c++
 Hlp_PrintConsole(DIA_CurrentName);
 Hlp_PrintConsole(Str_Format("%s[%s]", DIA_CurrentName, self.name);
