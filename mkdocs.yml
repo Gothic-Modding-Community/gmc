@@ -78,6 +78,16 @@ nav:
       - Classes:
         - C_ITEM: zengin/scripts/classes/c_item.md
         - C_INFO: zengin/scripts/classes/c_info.md
+      - Extenders:
+        - zengin/scripts/extenders/index.md
+        - Ikarus:
+          - zengin/scripts/extenders/ikarus/index.md
+        - LeGo:
+          - zengin/scripts/extenders/lego/index.md
+        - AFSP:
+          - zengin/scripts/extenders/afsp/index.md
+          - Enhanced Info Manager: zengin/scripts/extenders/afsp/afsp_eim.md
+        - zParserExtender: zengin/union_plugins/zParserExtender/index.md
 
     - Union plugins:
       - zengin/union_plugins/index.md
