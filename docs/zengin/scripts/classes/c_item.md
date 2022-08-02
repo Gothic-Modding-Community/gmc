@@ -263,3 +263,10 @@ INSTANCE ItSc_InstantFireball (C_Item)
 
 [comment]: <> ( TODO )
 
+### hp & hp_max
+Both of these parameters are unused.
+
+!!! Trivia
+    In alpha ZenGin versions the player was able to destroy objects. This feature was abandoned in the course of the development.  
+    This video shows the reconstruction of this feature.  
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/A3xoytKMLgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
