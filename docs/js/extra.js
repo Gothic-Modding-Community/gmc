@@ -3,6 +3,7 @@
 let gGMC_DEBUG = false;
 
 window.addEventListener("DOMContentLoaded", _ => {
+    gmcExpandNavigation();
     gmcExternalLinks();
 });
 
@@ -35,6 +36,28 @@ function gmcExternalLinks() {
         a.classList.add(className);
         gmcDebug(`✅ Added '${className}' class to ${a.href}`);
     });
+}
+
+function gmcExpandNavigation() {
+    const activeNav = document.querySelector(".md-nav__link--active").parentElement;
+    const children = activeNav.querySelector("nav > ul").children;
+
+    for (let i = 0; i < children.length; i++) {
+        const toggle = children[i].querySelector('input[type="checkbox"]');
+
+        if (!toggle) {
+            gmcDebug(`⏩ toggle not present`);
+            continue;
+        }
+
+        if (toggle.checked) {
+            gmcDebug(`⏩ '${toggle.id}' already checked`);
+            continue;
+        }
+
+        toggle.checked = true;
+        gmcDebug(`✅ Expanded '${toggle.id}'`);
+    }
 }
 
 function gmcDebug(message) {
