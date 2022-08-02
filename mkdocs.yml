@@ -77,6 +77,7 @@ nav:
       - zengin/scripts/index.md
       - Classes:
         - C_ITEM: zengin/scripts/classes/c_item.md
+        - C_INFO: zengin/scripts/classes/c_info.md
 
     - Union plugins:
       - zengin/union_plugins/index.md
