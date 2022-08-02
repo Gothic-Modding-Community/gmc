@@ -1,7 +1,7 @@
 # External functions
 External functions are Daedalus functions (defined in the engine itself) used to interface with the enigne. zParseExtender adds quite a huge amount of new functions, that help scripters to interface with the engine in more ways, that was possible before (without script extenders such as Ikarus and LeGo).
 
-## CAST - data type conversion functions
+## CAST data type conversion functions
 External functions for data type conversion and pointer casting.
 
 ```c++
@@ -44,7 +44,7 @@ func int Cast_CheckVobClassID( var int classId, var instance object ) {};
 
 
 
-## HLP - help functions
+## HLP help functions
 Helper functions, used for safety checks or to get specific information from the engine.
 
 
@@ -89,7 +89,7 @@ func void Hlp_WriteOptionString(var string optName, var string section, var stri
 
 
 
-## WLD - world manipulation functions
+## WLD world manipulation functions
 Functions related to the world. 
 
 
@@ -123,7 +123,7 @@ func int Wld_GetWeatherType() {};
 
 
 
-## MDL - model functions
+## MDL model functions
 Functions to tweak animation and other model related settings.
 
 
@@ -169,7 +169,7 @@ func void Mdl_ResetNpcSpeedMultiplier( var C_Npc npc ) {};
 
 
 
-## NPC - character functions
+## NPC character functions
 NPC realted functions.
 
 
@@ -221,7 +221,7 @@ func void Npc_RemoveFromSlot(var C_Npc npc, var string slotName, var int dropIt)
 
 
 
-## MOB - interactive object functions
+## MOB interactive object functions
 Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.
 
 
@@ -253,7 +253,7 @@ func void Mob_SetKeyInstance( var instance object, var int key ) {};
 
 
 
-## AI - functions for working with AI
+## AI functions for working with AI
 Functions to work with the new `C_Trigger` class and NPC's AI queue.
 
 
@@ -305,7 +305,7 @@ func string Hlp_GetSteamPersonalName() {};
 
 
 
-## PAR - functions for parser manipulation
+## PAR functions for parser manipulation
 Parser functions are used to manipulate the parsers. Retrieve SymbolID, access arrays and such.
 
 
@@ -347,7 +347,7 @@ func void Par_SetSymbolValueFloatArray(var float value, var int parId, var int s
 func void Par_SetSymbolValueStringArray(var string value, var int parId, var int symId, var int arrayId) {};
 ```
 
-## VOB - functions for object manipulation
+## VOB functions for object manipulation
 VOB functions allow you to manipulate game world objects.
 ```c++
 /// Returns the current position of the object in the world

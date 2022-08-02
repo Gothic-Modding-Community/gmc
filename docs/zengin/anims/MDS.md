@@ -14,7 +14,7 @@ You will see a lot of long and scary code, but it is actually very simple, lets 
     
     To play the animation in game you use this console command `play ani t_yes`.
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/aOyuGVWDefc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+    ![type:video](https://www.youtube.com/embed/aOyuGVWDefc)
 
     
 ## Syntax and keywords
