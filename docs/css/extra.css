@@ -65,7 +65,7 @@
           animation: heart 1000ms infinite;
 }
 
-/* Stupid animations I stole from here: https://github.com/squidfunk/mkdocs-material/discussions/3850 */
+/* Beautiful heart beat animation I found here: https://github.com/squidfunk/mkdocs-material/discussions/3850 */
 @keyframes heart 
 {
     0%, 40%, 80%, 100%
