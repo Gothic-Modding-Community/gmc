@@ -7,6 +7,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   favicon: img/gmc_logo.png
   logo: img/gmc_logo.png
   icon:
