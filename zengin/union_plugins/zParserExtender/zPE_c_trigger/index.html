@@ -2419,16 +2419,57 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-                
-  <a href="https://github.com/auronen/gmc/edit/main/docs/zengin/union_plugins/zParserExtender/zPE_c_trigger.md" title="Edit this page" class="md-content__button md-icon">
+                <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Edit button -->
+
+  <a
+    href="https://github.com/auronen/gmc/edit/main/docs/zengin/union_plugins/zParserExtender/zPE_c_trigger.md"
+    title="Edit this page"
+    class="md-content__button md-icon"
+  >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
+<!-- Tags -->
 
-<h1 id="trigger-functions-and-the-c_trigger-class">Trigger functions and the <code>C_Trigger</code> class<a class="headerlink" href="#trigger-functions-and-the-c_trigger-class" title="Permanent link">𐌾</a></h1>
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it
+  doesn't, the page title (or respectively site name) is used
+  as the main headline.
+-->
+
+
+<!--
+  Markdown content
+  Replace permalink 𐌾 icon with SVG html
+  https://stackoverflow.com/questions/11529470/is-there-a-tool-to-create-svg-paths-from-an-svg-file
+-->
+<h1 id="trigger-functions-and-the-c_trigger-class">Trigger functions and the <code>C_Trigger</code> class<a class="headerlink" href="#trigger-functions-and-the-c_trigger-class" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h1>
 <p>zParserExtender also implements cyclical functions (called triggers - not to e confused with triggers in ZEN files) similar to a part of the functionality implemented in <a href="../../../../notready/">LeGo AI_Functions</a>. These functions are called independently after a specified period of time. These triggers can also store a user information, up to 16 int variables can be stored in each trigger, as well as <code>self</code>, <code>other</code> and <code>victim</code> instances.</p>
-<h2 id="class-definition">Class definition<a class="headerlink" href="#class-definition" title="Permanent link">𐌾</a></h2>
+<h2 id="class-definition">Class definition<a class="headerlink" href="#class-definition" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>To define a trigger, the <code>C_Trigger</code> class is used:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">/// Union zPraserExtender Trigger class</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">C_Trigger</span><span class="w"></span>
@@ -2446,7 +2487,7 @@
 <span class="cm">    */</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="creating-instances">Creating instances<a class="headerlink" href="#creating-instances" title="Permanent link">𐌾</a></h2>
+<h2 id="creating-instances">Creating instances<a class="headerlink" href="#creating-instances" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>There are two <a href="../zPE_externals/#ai-functions-for-working-with-ai">external functions</a></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// function returns a trigger with no NPC (self, other or victim) bound to it</span>
 <span class="n">func</span><span class="w"> </span><span class="n">C_Trigger</span><span class="w"> </span><span class="n">AI_StartTriggerScript</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"></span>
@@ -2460,7 +2501,7 @@
 <span class="w">                                        </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">vct</span><span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 <p>Both of these functions return an instance of <code>C_Trigger</code>. You can, of course, configure the instance after its creation (for example to fill in the <code>AIVariables</code> with relevant data). The trigger function has the required signature if 'func int f()'. It must return a value indicating the state of the loop - if the function returns <code>LOOP_END</code> the trigger will be stopped and the instance deleted, if <code>LOOP_CONTINUE</code> is returned, the function will be called again after <code>Delay</code> ms have passed.</p>
-<h2 id="poison-example">Poison example<a class="headerlink" href="#poison-example" title="Permanent link">𐌾</a></h2>
+<h2 id="poison-example">Poison example<a class="headerlink" href="#poison-example" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1">// Implement a trigger to simulate the effect of poison debuff:</span>
 <span class="c1">// Let&#39;s create a trigger on function `c_loop` with a call interval of 1 second.</span>
 <span class="c1">// When the function is called, the instance hero will be placed in self (although it can be any other NPC if desired).</span>
@@ -2488,7 +2529,7 @@
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">LOOP_CONTINUE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="trigger-scope">Trigger scope<a class="headerlink" href="#trigger-scope" title="Permanent link">𐌾</a></h2>
+<h2 id="trigger-scope">Trigger scope<a class="headerlink" href="#trigger-scope" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>Triggers can be divided into two types:</p>
 <ul>
 <li>Global trigger ( AI_StartTriggerScript )</br>
@@ -2496,9 +2537,9 @@ trigger creted using this function works in all worlds. A trigger is considered 
 <li>Local trigger ( AI_StartTriggerScriptEx)</br>
 trigger created with this function only works in the world in which it was created. A trigger is considered local if it has been presented with at least one NPC in <code>self</code>, <code>other</code> or <code>victim</code> (not null ). If you want to create a trigger, but without linking to any NPC, it is recommended to simply pass hero as <code>self</code> to the trigger.</li>
 </ul>
-<h2 id="saving">Saving<a class="headerlink" href="#saving" title="Permanent link">𐌾</a></h2>
+<h2 id="saving">Saving<a class="headerlink" href="#saving" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>The plugin creates a new save archive to save the information of the triggers, that does not conflict with any of the built-in save files.</p>
-<h2 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link">𐌾</a></h2>
+<h2 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>To search for a specifin trigger, for example by NPC, the <a href="../zPE_externals/#ai-functions-for-working-with-ai">trigger external functions</a> can be used.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// This way you can disable all triggers running on the `hero` instance</span>
 <span class="n">var</span><span class="w"> </span><span class="n">C_Trigger</span><span class="w"> </span><span class="n">trigget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FirstTrigger</span><span class="p">;</span><span class="w"></span>
@@ -2510,6 +2551,8 @@ trigger created with this function only works in the world in which it was creat
 <span class="w">    </span><span class="n">trigget_saved</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
+
+<!-- Source file information -->
 
   <hr>
 <div class="md-source-file">

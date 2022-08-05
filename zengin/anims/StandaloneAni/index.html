@@ -2375,25 +2375,66 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-                
-  <a href="https://github.com/auronen/gmc/edit/main/docs/zengin/anims/StandaloneAni.md" title="Edit this page" class="md-content__button md-icon">
+                <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Edit button -->
+
+  <a
+    href="https://github.com/auronen/gmc/edit/main/docs/zengin/anims/StandaloneAni.md"
+    title="Edit this page"
+    class="md-content__button md-icon"
+  >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
+<!-- Tags -->
 
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it
+  doesn't, the page title (or respectively site name) is used
+  as the main headline.
+-->
+
+
+<!--
+  Markdown content
+  Replace permalink 𐌾 icon with SVG html
+  https://stackoverflow.com/questions/11529470/is-there-a-tool-to-create-svg-paths-from-an-svg-file
+-->
 <div class="admonition example">
 <p class="admonition-title">Acknowledgment</p>
 <p>This tutorial would not be possible without the ZenGin documentation available in the mod-kit, <a href="https://carnage-markus.blogspot.com">Mark56</a> who helped me understand animations in the first place. <a href="https://www.youtube.com/channel/UCheR2tr8u1CsUGG15Lu2mxQ">Fawkes</a> and his request for me to do some animations for his excellent mod - Replay Mod. And flosha from the Phoenix team, who was the one, to whom I offered to write this tutorial, to help with the development of the <a href="https://phoenixthegame.com/">Phoenix project</a>.</p>
 </div>
-<h1 id="standalone-animation">Standalone animation<a class="headerlink" href="#standalone-animation" title="Permanent link">𐌾</a></h1>
+<h1 id="standalone-animation">Standalone animation<a class="headerlink" href="#standalone-animation" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h1>
 <p>Let's start with the easiest animation, lets make a very simple gesturing animation.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Some of the videos that I write about in the text below are in this <a href="https://www.youtube.com/playlist?list=PLn8QrKx4F-EITe0yG_2n0z9p4q6EAp6rx">play-list</a>.</p>
 </div>
 <p>First we have to have the animation source files ready, I usually decompile them using <a href="https://worldofplayers.ru/threads/41942/">Gothic Sourcer</a>. In GothicSourcer you choose <strong>Tools &gt; Decompiler models &gt; Dynamic (MDS or MSB)</strong> and choose an MDS file of your choice - <code>Humans.mds</code> in our case and then click the decompile button.</p>
-<h2 id="animating">Animating<a class="headerlink" href="#animating" title="Permanent link">𐌾</a></h2>
+<h2 id="animating">Animating<a class="headerlink" href="#animating" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>Open Blender, <strong>File &gt; Import &gt; Kerrax ASCII model (.asc)</strong>, navigate to the folder with your decompiled animation files and select <code>HUM_BODY_NAKED0.ASC</code>, this file contains the skeleton and skin model for human NPCs.</p>
 <div class="admonition tip">
 <p class="admonition-title">What bone hierarchy is this model using?</p>
@@ -2433,7 +2474,7 @@ As we can see, we have to import the <code>Hum_RunAmbient_M01.asc</code> file. <
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/2vOMrM-9aWc" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>Once the animation is done, we have to export it into a <code>asc</code> format again, <strong>File &gt; Export &gt; Kerrax ASCII model (.asc)</strong> and then save it to <code>_work\data\Anims\asc\</code> so the engine can see it and convert it.
 There are many options here, that we will explore later, but we have tick <strong>Export animation</strong> and pick bones that we want to export - this is useful for animations that are played on different layers (dialoge gestures, scratching head, scratching a shoulder,...).</p>
-<h2 id="animation-script">Animation script<a class="headerlink" href="#animation-script" title="Permanent link">𐌾</a></h2>
+<h2 id="animation-script">Animation script<a class="headerlink" href="#animation-script" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>Now, that we have exported the animation, now we have to define it in <code>Humans.mds</code>. </p>
 <p>Open the file, scroll to the end and define a new animation. </p>
 <div class="admonition attention">
@@ -2447,7 +2488,7 @@ There are many options here, that we will explore later, but we have tick <stron
 Run the game and try to play the animation again (<code>play ani t_backpain</code> in MARVIN console) now everything should work.</p>
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/-i2un91x1UI" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>Amazing, now you have your first animation in the game. And you can use it to do some fun stuff, like in dialogues using the <code>AI_PlayAni</code> function.</p>
-<h2 id="example-dialogue">Example dialogue<a class="headerlink" href="#example-dialogue" title="Permanent link">𐌾</a></h2>
+<h2 id="example-dialogue">Example dialogue<a class="headerlink" href="#example-dialogue" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">DIA_Xardas_Back</span><span class="w"> </span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">NONE_100_Xardas</span><span class="p">;</span><span class="w"></span>
@@ -2474,6 +2515,8 @@ Run the game and try to play the animation again (<code>play ani t_backpain</cod
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/G14lgjA49wU" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
+
+<!-- Source file information -->
 
   <hr>
 <div class="md-source-file">

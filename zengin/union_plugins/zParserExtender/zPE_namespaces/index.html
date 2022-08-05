@@ -2405,16 +2405,57 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-                
-  <a href="https://github.com/auronen/gmc/edit/main/docs/zengin/union_plugins/zParserExtender/zPE_namespaces.md" title="Edit this page" class="md-content__button md-icon">
+                <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Edit button -->
+
+  <a
+    href="https://github.com/auronen/gmc/edit/main/docs/zengin/union_plugins/zParserExtender/zPE_namespaces.md"
+    title="Edit this page"
+    class="md-content__button md-icon"
+  >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
+<!-- Tags -->
 
-<h1 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">𐌾</a></h1>
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it
+  doesn't, the page title (or respectively site name) is used
+  as the main headline.
+-->
+
+
+<!--
+  Markdown content
+  Replace permalink 𐌾 icon with SVG html
+  https://stackoverflow.com/questions/11529470/is-there-a-tool-to-create-svg-paths-from-an-svg-file
+-->
+<h1 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h1>
 <p>zParserExtender also implements namespaces. Namespaces ensure that all symbols inside the namespace are unique.</p>
-<h2 id="defining-a-namespace">Defining a namespace<a class="headerlink" href="#defining-a-namespace" title="Permanent link">𐌾</a></h2>
+<h2 id="defining-a-namespace">Defining a namespace<a class="headerlink" href="#defining-a-namespace" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>To define a namespace the new keyword <code>namespace</code> is used.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Regular scripts</label><label for="__tabbed_1_2">Injectable scripts</label></div>
 <div class="tabbed-content">
@@ -2438,7 +2479,7 @@
 </div>
 </div>
 </div>
-<h2 id="namespace-nesting">Namespace nesting<a class="headerlink" href="#namespace-nesting" title="Permanent link">𐌾</a></h2>
+<h2 id="namespace-nesting">Namespace nesting<a class="headerlink" href="#namespace-nesting" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>Namespaces can be nested for finer control. In case of injection, the namespace defined in META is applied to all code inside the script.</p>
 <p>To go deeper into the namespaces you use the namespace operator <code>:</code>. This code shows function with the same name within three different namespaces. The call in <code>GameInit</code> is made from the global namespace.
 <div class="highlight"><pre><span></span><code><span class="k">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
@@ -2467,7 +2508,7 @@
 <span class="w">    </span><span class="nl">zTestNamespace03</span><span class="p">:</span><span class="n">zTestNamespace04</span><span class="o">:</span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
-<h2 id="namespace-traversal">Namespace traversal<a class="headerlink" href="#namespace-traversal" title="Permanent link">𐌾</a></h2>
+<h2 id="namespace-traversal">Namespace traversal<a class="headerlink" href="#namespace-traversal" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>To go up a namespace tree you use the namespace operator <code>:</code> without specifying a namespace. Number of operators determines how many levels you go up.</p>
 <div class="highlight"><span class="filename">Exiting nested namespaces</span><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">func01</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -2506,7 +2547,7 @@
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<h2 id="optional-namespace-specification">Optional namespace specification<a class="headerlink" href="#optional-namespace-specification" title="Permanent link">𐌾</a></h2>
+<h2 id="optional-namespace-specification">Optional namespace specification<a class="headerlink" href="#optional-namespace-specification" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>There are three cases where the namespace prefix is optional</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Shares the same namespace</label><label for="__tabbed_2_2">If the funciton is in higher level namespace</label><label for="__tabbed_2_3">If <code>using</code> is psecified in the META block</label></div>
 <div class="tabbed-content">
@@ -2573,7 +2614,7 @@
 </div>
 </div>
 </div>
-<h2 id="global-namespace-and-daedalus-hooking">Global namespace and Daedalus hooking<a class="headerlink" href="#global-namespace-and-daedalus-hooking" title="Permanent link">𐌾</a></h2>
+<h2 id="global-namespace-and-daedalus-hooking">Global namespace and Daedalus hooking<a class="headerlink" href="#global-namespace-and-daedalus-hooking" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h2>
 <p>Namespace can not only be defined to an existing symbol, but also to define new ones. Next code example shows how to implement a hook to a global instance.</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -2588,6 +2629,8 @@
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 To hook and object not only the signature, but also the namespace has to match. To hook an instance from a different space it is syntactically allowed to explicitly specify to which namespace the object will belong. This means that to hook instance <code>ItAr_Pir_L_Addon</code> from the namespace <code>zTestNamespace01</code> to a global namespace, you have to refer to the global namespace using the namespace operator <code>:</code>. Since the function will be defined globally (as every symbol in ZenGin), it will be a part of the <code>zTestNamespace01</code>, that means that all functions will be local to this namespace.</p>
+
+<!-- Source file information -->
 
   <hr>
 <div class="md-source-file">
