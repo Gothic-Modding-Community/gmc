@@ -85,6 +85,7 @@ nav:
           - zengin/scripts/extenders/ikarus/index.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
+          - Talents: zengin/scripts/extenders/lego/Talents.md
         - AFSP:
           - zengin/scripts/extenders/afsp/index.md
           - Enhanced Info Manager: zengin/scripts/extenders/afsp/afsp_eim.md
