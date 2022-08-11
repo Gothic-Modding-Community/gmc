@@ -89,6 +89,7 @@ nav:
           - ItemHelper:      zengin/scripts/extenders/lego/ItemHelper.md
           - ConsoleCommands: zengin/scripts/extenders/lego/ConsoleCommands.md
           - Trialoge:        zengin/scripts/extenders/lego/Trialoge.md
+          - Misc:            zengin/scripts/extenders/lego/Misc.md
         - AFSP:
           - zengin/scripts/extenders/afsp/index.md
           - Enhanced Info Manager: zengin/scripts/extenders/afsp/afsp_eim.md
