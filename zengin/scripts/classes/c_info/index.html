@@ -2783,7 +2783,7 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>It is not necessary to return <code>0</code> or <code>FALSE</code> from the function as it will be explicitly filled by the zCParser, but it is a good practice for readability to <code>return FALSE</code>.</p>
+<p>It is not necessary to return <code>FALSE</code> from dialogue conditions, but in other cases it can very rarely cause subtle bugs. It is thus good practice to always return some value, even if that is <code>FALSE</code>.</p>
 </div>
 <h3 id="information">information<a class="headerlink" href="#information" title="Permanent link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"> <path id="Imported Path" fill="none" stroke="black" stroke-width="1" d="M 8.62,2.17 C 3.15,4.65 0.75,8.62 0.75,14.85 0.75,19.27 2.55,22.88 6.23,25.80 8.85,27.90 9.75,28.12 15.45,28.42 20.70,28.58 21.83,28.42 22.20,27.45 23.03,25.28 24.00,26.17 24.00,29.10 24.00,31.80 24.23,32.03 28.12,33.97 30.45,35.10 32.62,36.00 33.00,36.00 33.45,36.00 33.75,31.88 33.75,25.50 33.75,25.50 33.75,15.00 33.75,15.00 33.75,15.00 27.00,15.00 27.00,15.00 23.33,15.00 20.25,15.30 20.25,15.60 20.25,15.97 21.08,17.02 22.12,18.00 24.45,20.17 24.45,21.30 22.35,22.80 19.80,24.60 15.45,24.30 12.98,22.20 11.03,20.55 10.88,19.95 10.88,15.07 10.88,10.27 11.10,9.60 12.98,7.72 14.78,5.92 15.68,5.62 20.55,5.40 20.55,5.40 26.17,5.10 26.17,5.10 26.17,5.10 29.93,8.62 29.93,8.62 29.93,8.62 33.75,12.22 33.75,12.22 33.75,12.22 33.75,6.30 33.75,6.30 33.75,6.30 33.75,0.45 33.75,0.45 33.75,0.45 32.18,1.95 32.18,1.95 30.68,3.52 30.60,3.52 27.90,2.17 24.08,0.22 12.90,0.22 8.62,2.17 Z"/></svg></a></h3>
 <p>The <code>information</code> function contains the function name (without double quotes <code>""</code> as <code>func</code> is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPC's will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: <code>{DialogueName}_Info</code>.</p>
@@ -2870,7 +2870,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-02 17:39:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-11 22:58:42</span>
       
     
   </small>
