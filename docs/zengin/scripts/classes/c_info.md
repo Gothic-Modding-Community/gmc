@@ -33,8 +33,8 @@ CLASS C_Info
 |-----------------------------|--------|-------------------------------------------------------------------------------------|
 | [npc](#npc)                 | int    | npc instance to have the dialogue                                                   |
 | [nr](#nr)                   | int    | dialogue order number                                                               |
-| [important](#important)     | int    | npc addresses player automatically                                                    |
-| [condition](#condition)     | func   | condition function whether the dialogue is shown or not                              |
+| [important](#important)     | int    | npc addresses player automatically                                                  |
+| [condition](#condition)     | func   | condition function whether the dialogue is shown or not                             |
 | [information](#information) | func   | function called on dialogue selection - contains the dialogue lines and other logic |
 | [description](#description) | string | text shown in the dialogue box                                                      |
 | [trade](#trade)             | int    | is it a trade dialogue                                                              |
@@ -118,7 +118,7 @@ Condition function with signature `func int f()`. If the function returns `TRUE`
     };
     ```
 !!! Tip
-    It is not necessary to return `0` or `FALSE` from the function as it will be explicitly filled by the zCParser, but it is a good practice for readability to `return FALSE`.
+    It is not necessary to return `FALSE` from dialogue conditions, but in other cases it can very rarely cause subtle bugs. It is thus good practice to always return some value, even if that is `FALSE`.
 
 
 ### information
