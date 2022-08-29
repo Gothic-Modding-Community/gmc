@@ -4,4 +4,4 @@ Union allows you to load `.dll` files - ZenGin extensions. These range from intr
 
 ## List of plugins
 
-- [zParserExtender](zParserExtender/index.md) - Merge, override or inject new scripts for compiled `.DAT` files. Or use the extended functionality with new set of external functions and classes.
+- [zParserExtender](../scripts/extenders/zParserExtender/index.md) - Merge, override or inject new scripts for compiled `.DAT` files. Or use the extended functionality with new set of external functions and classes.

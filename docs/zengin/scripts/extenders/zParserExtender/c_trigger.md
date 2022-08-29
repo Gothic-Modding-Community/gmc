@@ -1,5 +1,5 @@
 # Trigger functions and the `C_Trigger` class
-zParserExtender also implements cyclical functions (called triggers - not to e confused with triggers in ZEN files) similar to a part of the functionality implemented in [LeGo AI_Functions](../../../notready.md). These functions are called independently after a specified period of time. These triggers can also store a user information, up to 16 int variables can be stored in each trigger, as well as `self`, `other` and `victim` instances.
+zParserExtender also implements cyclical functions (called triggers - not to e confused with triggers in ZEN files) similar to a part of the functionality implemented in [LeGo AI_Functions](../../../../notready.md). These functions are called independently after a specified period of time. These triggers can also store a user information, up to 16 int variables can be stored in each trigger, as well as `self`, `other` and `victim` instances.
 
 ## Class definition
 To define a trigger, the `C_Trigger` class is used:
@@ -23,7 +23,7 @@ class C_Trigger
 ```
 
 ## Creating instances
-There are two [external functions](zPE_externals.md#ai-functions-for-working-with-ai)
+There are two [external functions](externals.md#ai-functions-for-working-with-ai)
 
 ```c++
 // function returns a trigger with no NPC (self, other or victim) bound to it
@@ -86,7 +86,7 @@ trigger created with this function only works in the world in which it was creat
 The plugin creates a new save archive to save the information of the triggers, that does not conflict with any of the built-in save files.
 
 ## Searching
-To search for a specifin trigger, for example by NPC, the [trigger external functions](zPE_externals.md#ai-functions-for-working-with-ai) can be used.
+To search for a specifin trigger, for example by NPC, the [trigger external functions](externals.md#ai-functions-for-working-with-ai) can be used.
 
 ```c++
 // This way you can disable all triggers running on the `hero` instance

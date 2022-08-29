@@ -141,7 +141,7 @@ INSTANCE ItMw_testSword (C_Item)
 };
 ```
   
-Try injecting the code below [zParserExtender](../../union_plugins/zParserExtender/zPE_injection.md) to test it in game right away. It is compatible with G2NotR.
+Try injecting the code below [zParserExtender](../../scripts/extenders/zParserExtender/injection.md) to test it in game right away. It is compatible with G2NotR.
 
 ```c++
 INSTANCE ItMw_testSword (C_Item)

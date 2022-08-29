@@ -94,43 +94,47 @@ nav:
         - AFSP:
           - zengin/scripts/extenders/afsp/index.md
           - Enhanced Info Manager: zengin/scripts/extenders/afsp/afsp_eim.md
-        - zParserExtender: zengin/union_plugins/zParserExtender/index.md
+        - zParserExtender: 
+          - zengin/scripts/extenders/zParserExtender/index.md
+          - Syntax extensions:
+            - While loop:         zengin/scripts/extenders/zParserExtender/while.md
+            - Namespaces:         zengin/scripts/extenders/zParserExtender/namespaces.md
+            - Event functions:    zengin/scripts/extenders/zParserExtender/events.md
+            - Test-else binding:  zengin/scripts/extenders/zParserExtender/testelse.md
+            - Extern binding:     zengin/scripts/extenders/zParserExtender/extern.md
+            - Dialogue constants: zengin/scripts/extenders/zParserExtender/dialogues.md
+          - Classes:
+            - C_Trigger class:    zengin/scripts/extenders/zParserExtender/c_trigger.md
+            - Engine classes:     zengin/scripts/extenders/zParserExtender/helperclasses.md
+#           - External functions: zengin/scripts/extenders/zPArserExtender/externals.md
+          - Daedalus Injection:
+            - zengin/scripts/extenders/zParserExtender/injection.md
+            - META block:     zengin/scripts/extenders/zParserExtender/META.md
+            - Hooking:        zengin/scripts/extenders/zParserExtender/hooks.md
+            - Other features: zengin/scripts/extenders/zParserExtender/other.md
+          - Externals:
+            - zengin/scripts/extenders/zParserExtender/externals/index.md
+            - String functions: zengin/scripts/extenders/zParserExtender/externals/string.md
+            - Menu function:    zengin/scripts/extenders/zParserExtender/externals/menu.md
+            - Log function:     zengin/scripts/extenders/zParserExtender/externals/log.md
+            - Event function:   zengin/scripts/extenders/zParserExtender/externals/eventsandvars.md
+            - CAST functions:   zengin/scripts/extenders/zParserExtender/externals/CAST.md
+            - HLP functions:    zengin/scripts/extenders/zParserExtender/externals/HLP.md
+            - WLD functions:    zengin/scripts/extenders/zParserExtender/externals/WLD.md
+            - MDL functions:    zengin/scripts/extenders/zParserExtender/externals/MDL.md
+            - NPC functions:    zengin/scripts/extenders/zParserExtender/externals/NPC.md
+            - MOB functions:    zengin/scripts/extenders/zParserExtender/externals/MOB.md
+            - AI functions:     zengin/scripts/extenders/zParserExtender/externals/AI.md
+            - PAR functions:    zengin/scripts/extenders/zParserExtender/externals/PAR.md
+            - VOB functions:    zengin/scripts/extenders/zParserExtender/externals/VOB.md
+          - Examples:
+            - Sign post example: zengin/scripts/extenders/zParserExtender/examples/signposts.md
+
 
     - Union plugins:
       - zengin/union_plugins/index.md
-      - zParserExtender:
-        - zengin/union_plugins/zParserExtender/index.md
-        - Syntax extensions:
-          - While loop:         zengin/union_plugins/zParserExtender/zPE_while.md
-          - Namespaces:         zengin/union_plugins/zParserExtender/zPE_namespaces.md
-          - Event functions:    zengin/union_plugins/zParserExtender/zPE_events.md
-          - Test-else binding:  zengin/union_plugins/zParserExtender/zPE_testelse.md
-          - Extern binding:     zengin/union_plugins/zParserExtender/zPE_extern.md
-          - Dialogue constants: zengin/union_plugins/zParserExtender/zPE_dialogues.md
-        - Classes:
-          - C_Trigger class:    zengin/union_plugins/zParserExtender/zPE_c_trigger.md
-          - Engine classes:     zengin/union_plugins/zParserExtender/zPE_helperclasses.md
-#         - External functions: zengin/union_plugins/zParserExtender/zPE_externals.md
-        - Daedalus Injection:
-          - zengin/union_plugins/zParserExtender/zPE_injection.md
-          - META block:     zengin/union_plugins/zParserExtender/zPE_META.md
-          - Hooking:        zengin/union_plugins/zParserExtender/zPE_hooks.md
-          - Other features: zengin/union_plugins/zParserExtender/zPE_other.md
-        - Externals:
-          - zengin/union_plugins/zParserExtender/externals/index.md
-          - String functions: zengin/union_plugins/zParserExtender/externals/zPE_string.md
-          - Menu function:    zengin/union_plugins/zParserExtender/externals/zPE_menu.md
-          - Log function:     zengin/union_plugins/zParserExtender/externals/zPE_log.md
-          - Event function:   zengin/union_plugins/zParserExtender/externals/zPE_eventsandvars.md
-          - CAST functions:   zengin/union_plugins/zParserExtender/externals/zPE_CAST.md
-          - HLP functions:    zengin/union_plugins/zParserExtender/externals/zPE_HLP.md
-          - WLD functions:    zengin/union_plugins/zParserExtender/externals/zPE_WLD.md
-          - MDL functions:    zengin/union_plugins/zParserExtender/externals/zPE_MDL.md
-          - NPC functions:    zengin/union_plugins/zParserExtender/externals/zPE_NPC.md
-          - MOB functions:    zengin/union_plugins/zParserExtender/externals/zPE_MOB.md
-          - AI functions:     zengin/union_plugins/zParserExtender/externals/zPE_AI.md
-          - PAR functions:    zengin/union_plugins/zParserExtender/externals/zPE_PAR.md
-          - VOB functions:    zengin/union_plugins/zParserExtender/externals/zPE_VOB.md
+#      - zParserExtender:
+#        - zengin/scripts/extenders/zPArserExtender/index.md
 
 
     - Tools:
