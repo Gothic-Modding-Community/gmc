@@ -77,8 +77,9 @@ nav:
     - Scripts: 
       - zengin/scripts/index.md
       - Classes:
-        - C_ITEM: zengin/scripts/classes/c_item.md
         - C_INFO: zengin/scripts/classes/c_info.md
+        - C_ITEM: zengin/scripts/classes/c_item.md
+        - C_SVM:  zengin/scripts/classes/c_svm.md
       - Extenders:
         - zengin/scripts/extenders/index.md
         - Ikarus:
