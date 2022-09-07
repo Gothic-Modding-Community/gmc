@@ -12,4 +12,4 @@ You can open a pull request in [this repository](https://github.com/auronen/gmc/
 
 !!! note
 
-     Work in progress
+     This is the `dev` branch. We can use this ti check stuff before it goes live on the real site.
