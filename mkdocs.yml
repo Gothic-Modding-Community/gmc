@@ -131,8 +131,8 @@ nav:
             - Sign post example: zengin/scripts/extenders/zParserExtender/examples/signposts.md
 
 
-    - Union plugins:
-      - zengin/union_plugins/index.md
+    - Union:
+      - zengin/union/index.md
 #      - zParserExtender:
 #        - zengin/scripts/extenders/zPArserExtender/index.md
 
