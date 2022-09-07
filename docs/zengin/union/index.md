@@ -10,3 +10,5 @@ Gothic API a set of 4 interfaces (each for one different ZenGin version) that al
 
 ## PATCH file format
 The `.patch` file contains one or more small programs that are designed to change the engine code (game executable). Usually used to fix bugs. Union plug-ins contain a embedded `.patch` file, this file usually contains changes to the binary necessary for the proper function of the plug-in.
+
+## dev pageg test
