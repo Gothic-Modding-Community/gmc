@@ -12,4 +12,4 @@ You can open a pull request in [this repository](https://github.com/auronen/gmc/
 
 !!! note
 
-     This is the `dev` branch. We can use this to check stuff before it goes live on the real site. It runs on [gmc.cokoliv.eu](gmc.cokoliv.eu)
+     This is the `dev` branch. We can use this to check stuff before it goes live on the real site. It runs on [gmc.cokoliv.eu](https://gmc.cokoliv.eu)
