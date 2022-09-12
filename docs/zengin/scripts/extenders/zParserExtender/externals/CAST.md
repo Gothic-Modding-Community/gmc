@@ -101,7 +101,7 @@ func int Cast_CheckVobClassID( var int classId, var instance object ) {};
 - `object` - object instance
 - `return` - class zCObject identifier
 
-## Externals with docu comments
+# Externals with docu comments
 ```c++
 /// Converts memory address (pointer) to a instance
 /// 
