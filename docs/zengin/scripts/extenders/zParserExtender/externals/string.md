@@ -1,13 +1,13 @@
 # String function
 Functions to manipulate and format strings.
 
-### Str_Format
+## Str_Format
 Returns formatted string using format specifiers
 
 Format specifiers:  
 `%s` - inserts a string  
-`%i` - inserts an integer number  
-`%x` - inserts an integer in hexadecimal  
+`%i` - inserts an integer  
+`%x` - inserts an integer in hexadecimal format  
 `%f` - inserts a floating point number  
 `%b` - inserts a logical expression  
 `%p` - inserts a pointer  
@@ -17,7 +17,33 @@ func string Str_Format( var string format, ... ) {};
 
 - `return` - formatted string
 
-### Str_GetLocalizedString
+### Examples
+
+Very powerful function, can be used to streamline strings used in the scripts as well as optimize them for translations.
+
+Define constants containing the string with format specifiers.
+```c++
+const string MENU_SAVE = "Slot %i - press ENTER to save in this slot.";
+const string MENU_LOAD = "Slot %i - press ENTER to load saved game.";
+```  
+Then define two format functions as such:
+```c++
+func string GetSaveSlotString (var int number)
+{
+  return Str_format(MENU_SAVE, number);
+};
+```
+```c++
+func string GetLoadSlotString (var int number)
+{
+    return Str_format(MENU_LOAD, number);
+};
+```
+!!! Tip
+    Since the whole translatable string is saved in one constant, it is very easy for translators to change the word order. This was not possible to do without code change to the `ConcatStrings` funcion calls within the scripts.  
+    With this simple change, translators have to translate only 2 strings instead of 30 (15 + 15 slots) and only 2 strings are compiled into the compiled `Menu.dat` file.
+
+## Str_GetLocalizedString
 Returns a string in the current language, otherwise in English.  
 Arguments MUST be encoded in **UTF-8!** The result string will be converted to apropriate ANSI string.
 
@@ -34,7 +60,7 @@ func string Str_GetLocalizedString( var string russian,
 - `polish` - Polish string
 - `return` - string in the current language
 
-### Str_GetLocalizedStringEx
+## Str_GetLocalizedStringEx
 Returns a string in the current language, otherwise in English.
 Offers additional languages
 
@@ -59,7 +85,7 @@ func string Str_GetLocalizedStringEx( var string russian,
 - `spanish` - Spanish string
 - `return` - string in the current language
 
-### Str_UTF8_to_ANSI
+## Str_UTF8_to_ANSI
 Converts UTF-8 string into an ANSI string with codePage
 ```c++
 func string Str_UTF8_to_ANSI( var string utf8, var int codePage ) {};
@@ -69,7 +95,7 @@ func string Str_UTF8_to_ANSI( var string utf8, var int codePage ) {};
 - `codePage` - codePage id, can be obtained from Str_GetCurrentCP
 - `return` - string encoded with the correct codepage
 
-### Str_GetCurrentCP
+## Str_GetCurrentCP
 Return the code page corresponding to the current language set in the Union System
 ```c++
 func int Str_GetCurrentCP() {};
@@ -77,7 +103,7 @@ func int Str_GetCurrentCP() {};
 
 - `return` - code page corresponding to the current language
 
-### Str_GetLength
+## Str_GetLength
 Returns the length of a string
 ```c++
 func int Str_GetLength( var int str ) {};
