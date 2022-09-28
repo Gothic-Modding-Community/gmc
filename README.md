@@ -10,4 +10,4 @@ This repostiory will contain articles, tutorials and links to various tools that
 ## Development page
 Development page reflects the [`dev`](https://github.com/auronen/gmc/tree/dev) branch, serves as a check before it is merged into `main` branch.
 
-[Dev page](https://auronen.github.io/gmc/)
+[Dev page](https://gmc.cokoliv.eu)
