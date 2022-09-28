@@ -1863,6 +1863,19 @@
     Str_Format
   </a>
   
+    <nav class="md-nav" aria-label="Str_Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2513,6 +2526,19 @@
     Str_Format
   </a>
   
+    <nav class="md-nav" aria-label="Str_Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2579,12 +2605,12 @@
 
 <h1 id="string-function">String function<a class="headerlink" href="#string-function" title="Permanent link"></a></h1>
 <p>Functions to manipulate and format strings.</p>
-<h3 id="str_format">Str_Format<a class="headerlink" href="#str_format" title="Permanent link"></a></h3>
+<h2 id="str_format">Str_Format<a class="headerlink" href="#str_format" title="Permanent link"></a></h2>
 <p>Returns formatted string using format specifiers</p>
 <p>Format specifiers:<br />
 <code>%s</code> - inserts a string<br />
-<code>%i</code> - inserts an integer number<br />
-<code>%x</code> - inserts an integer in hexadecimal<br />
+<code>%i</code> - inserts an integer<br />
+<code>%x</code> - inserts an integer in hexadecimal format<br />
 <code>%f</code> - inserts a floating point number<br />
 <code>%b</code> - inserts a logical expression<br />
 <code>%p</code> - inserts a pointer<br />
@@ -2593,7 +2619,29 @@
 <ul>
 <li><code>return</code> - formatted string</li>
 </ul>
-<h3 id="str_getlocalizedstring">Str_GetLocalizedString<a class="headerlink" href="#str_getlocalizedstring" title="Permanent link"></a></h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h3>
+<p>Very powerful function, can be used to streamline strings used in the scripts as well as optimize them for translations.</p>
+<p>Define constants containing the string with format specifiers.
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">MENU_SAVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Slot %i - press ENTER to save in this slot.&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">MENU_LOAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Slot %i - press ENTER to load saved game.&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+Then define two format functions as such:
+<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">GetSaveSlotString</span><span class="w"> </span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">Str_format</span><span class="p">(</span><span class="n">MENU_SAVE</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">GetLoadSlotString</span><span class="w"> </span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Str_format</span><span class="p">(</span><span class="n">MENU_LOAD</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Since the whole translatable string is saved in one constant, it is very easy for translators to change the word order. This was not possible to do without code change to the <code>ConcatStrings</code> funcion calls within the scripts.<br />
+With this simple change, translators have to translate only 2 strings instead of 30 (15 + 15 slots) and only 2 strings are compiled into the compiled <code>Menu.dat</code> file.</p>
+</div>
+<h2 id="str_getlocalizedstring">Str_GetLocalizedString<a class="headerlink" href="#str_getlocalizedstring" title="Permanent link"></a></h2>
 <p>Returns a string in the current language, otherwise in English.<br />
 Arguments MUST be encoded in <strong>UTF-8!</strong> The result string will be converted to apropriate ANSI string.</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_GetLocalizedString</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"></span>
@@ -2608,7 +2656,7 @@ Arguments MUST be encoded in <strong>UTF-8!</strong> The result string will be c
 <li><code>polish</code> - Polish string</li>
 <li><code>return</code> - string in the current language</li>
 </ul>
-<h3 id="str_getlocalizedstringex">Str_GetLocalizedStringEx<a class="headerlink" href="#str_getlocalizedstringex" title="Permanent link"></a></h3>
+<h2 id="str_getlocalizedstringex">Str_GetLocalizedStringEx<a class="headerlink" href="#str_getlocalizedstringex" title="Permanent link"></a></h2>
 <p>Returns a string in the current language, otherwise in English.
 Offers additional languages</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_GetLocalizedStringEx</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span>
@@ -2631,7 +2679,7 @@ Offers additional languages</p>
 <li><code>spanish</code> - Spanish string</li>
 <li><code>return</code> - string in the current language</li>
 </ul>
-<h3 id="str_utf8_to_ansi">Str_UTF8_to_ANSI<a class="headerlink" href="#str_utf8_to_ansi" title="Permanent link"></a></h3>
+<h2 id="str_utf8_to_ansi">Str_UTF8_to_ANSI<a class="headerlink" href="#str_utf8_to_ansi" title="Permanent link"></a></h2>
 <p>Converts UTF-8 string into an ANSI string with codePage
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_UTF8_to_ANSI</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">utf8</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">codePage</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
@@ -2640,14 +2688,14 @@ Offers additional languages</p>
 <li><code>codePage</code> - codePage id, can be obtained from Str_GetCurrentCP</li>
 <li><code>return</code> - string encoded with the correct codepage</li>
 </ul>
-<h3 id="str_getcurrentcp">Str_GetCurrentCP<a class="headerlink" href="#str_getcurrentcp" title="Permanent link"></a></h3>
+<h2 id="str_getcurrentcp">Str_GetCurrentCP<a class="headerlink" href="#str_getcurrentcp" title="Permanent link"></a></h2>
 <p>Return the code page corresponding to the current language set in the Union System
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Str_GetCurrentCP</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>return</code> - code page corresponding to the current language</li>
 </ul>
-<h3 id="str_getlength">Str_GetLength<a class="headerlink" href="#str_getlength" title="Permanent link"></a></h3>
+<h2 id="str_getlength">Str_GetLength<a class="headerlink" href="#str_getlength" title="Permanent link"></a></h2>
 <p>Returns the length of a string
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Str_GetLength</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
@@ -2716,7 +2764,7 @@ Offers additional languages</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-09-13 00:23:10</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-09-29 00:28:53</span>
       
     
   </small>
