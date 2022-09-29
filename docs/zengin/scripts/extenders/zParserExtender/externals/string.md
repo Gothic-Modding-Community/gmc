@@ -15,6 +15,8 @@ Format specifiers:
 func string Str_Format( var string format, ... ) {};
 ```
 
+- `format` - format string containing format specifiers
+- `...` - parameters to be subtituted to the format specifiers
 - `return` - formatted string
 
 ### Examples
