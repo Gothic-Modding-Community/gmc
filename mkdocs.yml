@@ -148,6 +148,8 @@ nav:
     - General information: 
       - genome/index.md
       - Object persistence: genome/ObjectPersistence.md
+    - Tools:
+      - genome/tools/index.md
 
 
 extra_css:
