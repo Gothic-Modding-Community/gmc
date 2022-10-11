@@ -60,7 +60,7 @@ func string Str_GetLocalizedString( var string russian,
 - `english` - English string
 - `german` - German string
 - `polish` - Polish string
-- `return` - string in the current language
+- `return` - string in the current language, as it is set in Union
 
 ## Str_GetLocalizedStringEx
 Returns a string in the current language, otherwise in English.
@@ -71,9 +71,9 @@ func string Str_GetLocalizedStringEx( var string russian,
                                       var string english,
                                       var string german,
                                       var string polish,
-                                      var string czech,
                                       var string romanian,
                                       var string italian,
+                                      var string czech,
                                       var string spanish ) {};
 ```
 
@@ -81,11 +81,11 @@ func string Str_GetLocalizedStringEx( var string russian,
 - `english` - English string
 - `german` - German string
 - `polish` - Polish string
-- `czech` - Czech  string
 - `romanian` - Romanian string
 - `italian` - Italian string
+- `czech` - Czech  string
 - `spanish` - Spanish string
-- `return` - string in the current language
+- `return` - string in the current language, as it is set in Union
 
 ## Str_UTF8_to_ANSI
 Converts UTF-8 string into an ANSI string with codePage
@@ -148,13 +148,13 @@ func string Str_GetLocalizedString( var string russian, var string english, var 
 /// @param english  English string
 /// @param german   German string
 /// @param polish   Polish string
-/// @param czech    Czech  string
 /// @param romanian Romanian string
 /// @param italian  Italian string
+/// @param czech    Czech  string
 /// @param spanish  Spanish string
 ///
 /// @return string in the current language
-func string Str_GetLocalizedStringEx( var string russian, var string english, var string german, var string polish, var string czech, var string romanian, var string italian, var string spanish ) {};
+func string Str_GetLocalizedStringEx( var string russian, var string english, var string german, var string polish, var string romanian, var string italian, var string czech, var string spanish ) {};
 
 /// Converts UTF-8 string into an ANSI string with codePage
 ///
