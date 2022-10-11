@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/string/">
       
       <link rel="icon" href="../../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -2412,6 +2412,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3">
@@ -2480,6 +2482,49 @@
     </li>
   
 
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../../../genome/tools/">Tools</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
           
         </ul>
@@ -2617,6 +2662,8 @@
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_Format</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
+<li><code>format</code> - format string containing format specifiers</li>
+<li><code>...</code> - parameters to be subtituted to the format specifiers</li>
 <li><code>return</code> - formatted string</li>
 </ul>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h3>
@@ -2654,7 +2701,7 @@ Arguments MUST be encoded in <strong>UTF-8!</strong> The result string will be c
 <li><code>english</code> - English string</li>
 <li><code>german</code> - German string</li>
 <li><code>polish</code> - Polish string</li>
-<li><code>return</code> - string in the current language</li>
+<li><code>return</code> - string in the current language, as it is set in Union</li>
 </ul>
 <h2 id="str_getlocalizedstringex">Str_GetLocalizedStringEx<a class="headerlink" href="#str_getlocalizedstringex" title="Permanent link"></a></h2>
 <p>Returns a string in the current language, otherwise in English.
@@ -2663,9 +2710,9 @@ Offers additional languages</p>
 <span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"></span>
 <span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"></span>
 <span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">polish</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">czech</span><span class="p">,</span><span class="w"></span>
 <span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">romanian</span><span class="p">,</span><span class="w"></span>
 <span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">italian</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">czech</span><span class="p">,</span><span class="w"></span>
 <span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">spanish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
@@ -2673,11 +2720,11 @@ Offers additional languages</p>
 <li><code>english</code> - English string</li>
 <li><code>german</code> - German string</li>
 <li><code>polish</code> - Polish string</li>
-<li><code>czech</code> - Czech  string</li>
 <li><code>romanian</code> - Romanian string</li>
 <li><code>italian</code> - Italian string</li>
+<li><code>czech</code> - Czech  string</li>
 <li><code>spanish</code> - Spanish string</li>
-<li><code>return</code> - string in the current language</li>
+<li><code>return</code> - string in the current language, as it is set in Union</li>
 </ul>
 <h2 id="str_utf8_to_ansi">Str_UTF8_to_ANSI<a class="headerlink" href="#str_utf8_to_ansi" title="Permanent link"></a></h2>
 <p>Converts UTF-8 string into an ANSI string with codePage
@@ -2735,13 +2782,13 @@ Offers additional languages</p>
 <span class="c1">/// @param english  English string</span>
 <span class="c1">/// @param german   German string</span>
 <span class="c1">/// @param polish   Polish string</span>
-<span class="c1">/// @param czech    Czech  string</span>
 <span class="c1">/// @param romanian Romanian string</span>
 <span class="c1">/// @param italian  Italian string</span>
+<span class="c1">/// @param czech    Czech  string</span>
 <span class="c1">/// @param spanish  Spanish string</span>
 <span class="c1">///</span>
 <span class="c1">/// @return string in the current language</span>
-<span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_GetLocalizedStringEx</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">polish</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">czech</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">romanian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">italian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">spanish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_GetLocalizedStringEx</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">polish</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">romanian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">italian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">czech</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">spanish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
 <span class="c1">/// Converts UTF-8 string into an ANSI string with codePage</span>
 <span class="c1">///</span>
@@ -2764,7 +2811,7 @@ Offers additional languages</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-09-29 00:28:53</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-11 13:53:07</span>
       
     
   </small>
@@ -2861,7 +2908,7 @@ Offers additional languages</p>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
       
         <script src="../../../../../../js/extra.js"></script>
       

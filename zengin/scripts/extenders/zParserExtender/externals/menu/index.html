@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/menu/">
       
       <link rel="icon" href="../../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -1877,6 +1877,19 @@
     Menu_SearchItems
   </a>
   
+    <nav class="md-nav" aria-label="Menu_SearchItems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2364,6 +2377,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3">
@@ -2441,6 +2456,49 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../../../genome/tools/">Tools</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2478,6 +2536,19 @@
     Menu_SearchItems
   </a>
   
+    <nav class="md-nav" aria-label="Menu_SearchItems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2508,10 +2579,30 @@
 
 
 <h1 id="menu-function">Menu function<a class="headerlink" href="#menu-function" title="Permanent link"></a></h1>
-<h3 id="menu_searchitems">Menu_SearchItems<a class="headerlink" href="#menu_searchitems" title="Permanent link"></a></h3>
-<p>Find all <code>C_MenuItem</code> object instances by the mask and automatically places them in the current menu instance
+<h2 id="menu_searchitems">Menu_SearchItems<a class="headerlink" href="#menu_searchitems" title="Permanent link"></a></h2>
+<p>Find all <code>C_MenuItem</code> object instances by the mask and automatically places them in the current menu instance</p>
 <div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Menu_SearchItems</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+</code></pre></div>
+<ul>
+<li><code>mask</code> - string mask used in the search for menu items</li>
+</ul>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link"></a></h3>
+<p>This function is used in the Union Menu <a href="../../injection#api-script">API script</a>.<br />
+In this script the <code>Menu_SearchItems</code> external is used to collect all Union menu scripts, that are placed into the Union &amp; Plugins menu, that will appear in the game if you use any of the plugins, that use this feature.  </p>
+<div class="highlight"><span class="filename">Usage of Menu_SearchItems external function</span><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">MENU_OPT_UNION</span><span class="p">(</span><span class="n">C_MENU_DEF</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Menu_SearchItems</span><span class="p">(</span><span class="s">&quot;MENUITEM_UNION_AUTO_*&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">MENU_OPT_UNION_PY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1200</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">backpic</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">MENU_BACK_PIC</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UNION_MENUITEM_TITLE&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">items</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UNION_MENUITEM_BACK&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">defaultoutgame</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">defaultingame</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Flags</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">Flags</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MENU_SHOW_INFO</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>In this case all instances of the name <code>MENUITEM_UNION_AUTO_*</code> (<code>*</code> being a wildcard, that can be substituted with anything). The plugin will search the scripts and find all instances (in the case of <a href="">zGamePad</a> it is <a href="https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zGamePad_Menu.d#L28-L33"><code>MenuItem_Union_Auto_zGamePad</code></a>)</p>
+<p>This example comes from the <code>zUnionMenu.d</code> injectable <a href="../../injection#api-script">API script</a>, that is part of the <a href="">zGamePad</a> plugin, <a href="https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zUnionMenu.d#L47-L57">GitHub link</a>.</p>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1">/// Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance</span>
 <span class="c1">/// </span>
@@ -2524,7 +2615,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-09-13 00:23:10</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-11 13:53:07</span>
       
     
   </small>
@@ -2621,7 +2712,7 @@
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
       
         <script src="../../../../../../js/extra.js"></script>
       
