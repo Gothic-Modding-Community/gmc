@@ -86,6 +86,7 @@ nav:
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
           - Talents:         zengin/scripts/extenders/lego/Talents.md
+          - Bars:            zengin/scripts/extenders/lego/Bars.md
           - ItemHelper:      zengin/scripts/extenders/lego/ItemHelper.md
           - ConsoleCommands: zengin/scripts/extenders/lego/ConsoleCommands.md
           - Trialoge:        zengin/scripts/extenders/lego/Trialoge.md
