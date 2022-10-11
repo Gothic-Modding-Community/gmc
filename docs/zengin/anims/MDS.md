@@ -44,7 +44,7 @@ s_BSANVIL_S0
 ```
 State animation for the blacksmith's anvil and its first state.
 
-### `ani`
+### ani
 This is the main command you will be using while defining new animations.
 
 Example:
@@ -158,3 +158,75 @@ Not used in the game.
 ### aniBatch
 Not used in the game.
 
+## Animation state machine
+More complex animations, such as MOBSI animations, form a state machine - a animation set.
+
+!!! warning
+    Only a diagram test
+
+```c++ title="MDS script for the big chest"
+Model ("CHESTBIG_OCCRATELARGE")
+{
+    meshAndTree ("CHESTBIG_OCCRATELARGE.asc")
+
+    aniEnum
+    {
+// Closed chest
+        ani         ("s_S0"                 1   "s_S0"  0.0 0.0 M.  "CHESTBIG_USE.asc"  F   20  20)
+// Opening the chest 
+        ani         ("t_S0_2_S1"            1   "s_S1"  0.0 0.0 M.  "CHESTBIG_USE.ASC"  F   50  79)
+        {
+            *eventSFX   (50 "chest_try")
+            *eventSFX   (55 "chest_open")
+        }
+// Opened chest
+        ani         ("s_S1"                 1   "s_S1"  0.0 0.0 M.  "CHESTBIG_USE.asc"  F   80  80)
+// Closing the chest
+        ani         ("t_S1_2_S0"            1   "s_S0"  0.0 0.0 M.  "CHESTBIG_USE.asc"  R   50  79)
+        {
+            *eventSFX   (78 "chest_close")
+        }
+// Pick lock broken
+        ani         ("t_S0_Try"             1   "s_S0"  0.0 0.0 M.  "CHESTBIG_USE.asc"          F   96  124)
+        {
+            *eventSFX   (100    "chest_try")
+            *eventSFX   (115    "Hammer")
+        }
+    }
+}
+```
+``` mermaid
+stateDiagram-v2
+    s_S0      : Closed chest
+    t_S0_2_S1 : Opening the chest
+    s_S1      : Opened chest
+    t_S1_2_S0 : Closing the chest
+    t_S0_Try  : Pick lock broken
+    [*] --> s_S0
+    s_S0 --> s_S0
+
+    s_S0 --> t_S0_2_S1
+    t_S0_2_S1 --> s_S1
+    s_S1 --> s_S1
+
+    s_S1 --> t_S1_2_S0
+    t_S1_2_S0 --> s_S0
+
+    s_S0 --> t_S0_Try
+    t_S0_Try --> s_S0
+```
+``` mermaid
+stateDiagram-v2
+    [*] --> s_S0
+    s_S0 --> s_S0
+
+    s_S0 --> t_S0_2_S1
+    t_S0_2_S1 --> s_S1
+    s_S1 --> s_S1
+
+    s_S1 --> t_S1_2_S0
+    t_S1_2_S0 --> s_S0
+
+    s_S0 --> t_S0_Try
+    t_S0_Try --> s_S0
+```
