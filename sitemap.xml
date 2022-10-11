@@ -121,6 +121,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/Bars/</loc>
+         <lastmod>2022-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/ConsoleCommands/</loc>
          <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
