@@ -7,7 +7,6 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  custom_dir: overrides
   favicon: img/gmc_logo.png
   logo: img/gmc_logo.png
   icon:
@@ -131,8 +130,8 @@ nav:
             - Sign post example: zengin/scripts/extenders/zParserExtender/examples/signposts.md
 
 
-    - Union plugins:
-      - zengin/union_plugins/index.md
+    - Union:
+      - zengin/union/index.md
 #      - zParserExtender:
 #        - zengin/scripts/extenders/zPArserExtender/index.md
 
@@ -149,6 +148,8 @@ nav:
     - General information: 
       - genome/index.md
       - Object persistence: genome/ObjectPersistence.md
+    - Tools:
+      - genome/tools/index.md
 
 
 extra_css:
@@ -170,7 +171,7 @@ extra:
 
 markdown_extensions:
   - toc:
-      permalink: 𐌾
+      permalink: ""
   - admonition
   - codehilite
   - footnotes

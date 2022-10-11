@@ -177,7 +177,7 @@ At the start of the function we check if the index is not out of bounds, if it i
         tp_index = 0;
     };
 ```
-Notice the use of [`Str_Format`](../externals/string.md) function for the formatted output.
+Notice the use of [`Str_Format`](../externals/string.md#str_format) function for the formatted output.
 ```c++
 // give information to the player
 Print(Str_Format("Sign %i/%i", tp_index+1, NUM_OF_SIGNS));
