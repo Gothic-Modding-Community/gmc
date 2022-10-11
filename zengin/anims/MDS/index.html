@@ -735,6 +735,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#animation-state-machine" class="md-nav__link">
+    Animation state machine
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2610,6 +2617,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#animation-state-machine" class="md-nav__link">
+    Animation state machine
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2662,7 +2676,7 @@ State animation for the looping animation.
 <div class="highlight"><pre><span></span><code>s_BSANVIL_S0
 </code></pre></div>
 State animation for the blacksmith's anvil and its first state.</p>
-<h3 id="ani"><code>ani</code><a class="headerlink" href="#ani" title="Permanent link"></a></h3>
+<h3 id="ani">ani<a class="headerlink" href="#ani" title="Permanent link"></a></h3>
 <p>This is the main command you will be using while defining new animations.</p>
 <p>Example:
 <div class="highlight"><pre><span></span><code><span class="n">ani</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;t_Yes&quot;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w"> </span><span class="s">&quot;Hum_Yes_M01.asc&quot;</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">44</span><span class="p">)</span><span class="w"></span>
@@ -2737,13 +2751,80 @@ Syntax:
 <p>Not used in the game.</p>
 <h3 id="anibatch">aniBatch<a class="headerlink" href="#anibatch" title="Permanent link"></a></h3>
 <p>Not used in the game.</p>
+<h2 id="animation-state-machine">Animation state machine<a class="headerlink" href="#animation-state-machine" title="Permanent link"></a></h2>
+<p>More complex animations, such as MOBSI animations, form a state machine - a animation set.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only a diagram test</p>
+</div>
+<p><div class="highlight"><span class="filename">MDS script for the big chest</span><pre><span></span><code><span class="n">Model</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;CHESTBIG_OCCRATELARGE&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">meshAndTree</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;CHESTBIG_OCCRATELARGE.asc&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">aniEnum</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="c1">// Closed chest</span>
+<span class="w">        </span><span class="n">ani</span><span class="w">         </span><span class="p">(</span><span class="s">&quot;s_S0&quot;</span><span class="w">                 </span><span class="mi">1</span><span class="w">   </span><span class="s">&quot;s_S0&quot;</span><span class="w">  </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w">  </span><span class="s">&quot;CHESTBIG_USE.asc&quot;</span><span class="w">  </span><span class="n">F</span><span class="w">   </span><span class="mi">20</span><span class="w">  </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="c1">// Opening the chest </span>
+<span class="w">        </span><span class="n">ani</span><span class="w">         </span><span class="p">(</span><span class="s">&quot;t_S0_2_S1&quot;</span><span class="w">            </span><span class="mi">1</span><span class="w">   </span><span class="s">&quot;s_S1&quot;</span><span class="w">  </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w">  </span><span class="s">&quot;CHESTBIG_USE.ASC&quot;</span><span class="w">  </span><span class="n">F</span><span class="w">   </span><span class="mi">50</span><span class="w">  </span><span class="mi">79</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">eventSFX</span><span class="w">   </span><span class="p">(</span><span class="mi">50</span><span class="w"> </span><span class="s">&quot;chest_try&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">eventSFX</span><span class="w">   </span><span class="p">(</span><span class="mi">55</span><span class="w"> </span><span class="s">&quot;chest_open&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="c1">// Opened chest</span>
+<span class="w">        </span><span class="n">ani</span><span class="w">         </span><span class="p">(</span><span class="s">&quot;s_S1&quot;</span><span class="w">                 </span><span class="mi">1</span><span class="w">   </span><span class="s">&quot;s_S1&quot;</span><span class="w">  </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w">  </span><span class="s">&quot;CHESTBIG_USE.asc&quot;</span><span class="w">  </span><span class="n">F</span><span class="w">   </span><span class="mi">80</span><span class="w">  </span><span class="mi">80</span><span class="p">)</span><span class="w"></span>
+<span class="c1">// Closing the chest</span>
+<span class="w">        </span><span class="n">ani</span><span class="w">         </span><span class="p">(</span><span class="s">&quot;t_S1_2_S0&quot;</span><span class="w">            </span><span class="mi">1</span><span class="w">   </span><span class="s">&quot;s_S0&quot;</span><span class="w">  </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w">  </span><span class="s">&quot;CHESTBIG_USE.asc&quot;</span><span class="w">  </span><span class="n">R</span><span class="w">   </span><span class="mi">50</span><span class="w">  </span><span class="mi">79</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">eventSFX</span><span class="w">   </span><span class="p">(</span><span class="mi">78</span><span class="w"> </span><span class="s">&quot;chest_close&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="c1">// Pick lock broken</span>
+<span class="w">        </span><span class="n">ani</span><span class="w">         </span><span class="p">(</span><span class="s">&quot;t_S0_Try&quot;</span><span class="w">             </span><span class="mi">1</span><span class="w">   </span><span class="s">&quot;s_S0&quot;</span><span class="w">  </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w">  </span><span class="s">&quot;CHESTBIG_USE.asc&quot;</span><span class="w">          </span><span class="n">F</span><span class="w">   </span><span class="mi">96</span><span class="w">  </span><span class="mi">124</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">eventSFX</span><span class="w">   </span><span class="p">(</span><span class="mi">100</span><span class="w">    </span><span class="s">&quot;chest_try&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">eventSFX</span><span class="w">   </span><span class="p">(</span><span class="mi">115</span><span class="w">    </span><span class="s">&quot;Hammer&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<pre class="mermaid"><code>stateDiagram-v2
+    s_S0      : Closed chest
+    t_S0_2_S1 : Opening the chest
+    s_S1      : Opened chest
+    t_S1_2_S0 : Closing the chest
+    t_S0_Try  : Pick lock broken
+    [*] --&gt; s_S0
+    s_S0 --&gt; s_S0
+
+    s_S0 --&gt; t_S0_2_S1
+    t_S0_2_S1 --&gt; s_S1
+    s_S1 --&gt; s_S1
+
+    s_S1 --&gt; t_S1_2_S0
+    t_S1_2_S0 --&gt; s_S0
+
+    s_S0 --&gt; t_S0_Try
+    t_S0_Try --&gt; s_S0</code></pre>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; s_S0
+    s_S0 --&gt; s_S0
+
+    s_S0 --&gt; t_S0_2_S1
+    t_S0_2_S1 --&gt; s_S1
+    s_S1 --&gt; s_S1
+
+    s_S1 --&gt; t_S1_2_S0
+    t_S1_2_S0 --&gt; s_S0
+
+    s_S0 --&gt; t_S0_Try
+    t_S0_Try --&gt; s_S0</code></pre></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-01 16:08:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-11 22:35:16</span>
       
     
   </small>
