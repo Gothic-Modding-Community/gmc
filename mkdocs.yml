@@ -130,10 +130,10 @@ nav:
             - Sign post example: zengin/scripts/extenders/zParserExtender/examples/signposts.md
 
 
-    - Union:
+    - Union plugins:
       - zengin/union/index.md
-#      - zParserExtender:
-#        - zengin/scripts/extenders/zPArserExtender/index.md
+      - zParserExtender:
+        - zengin/union/zgamepad.md
 
 
     - Tools:
