@@ -2918,9 +2918,9 @@ The general structure of the bind starts with the keyword <code>KeyRecord</code>
 </code></pre></div></p>
 <ul>
 <li><code>Id</code> - unique identifier, used by other users to override this control binding</li>
-<li><code>[modifier]</code> - can be empty or take the value of <code>Toggled</code>
-If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.
-If the value is <code>Toggled</code>, the control binding will work only when the player holds down the specified button or button combination.</li>
+<li><code>[modifier]</code> - can be empty or take the value of <code>Toggled</code><br />
+If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.<br />
+If the value is <code>Toggled</code>, the control binding will work only when the player toggles the button or button combination. (One press to start sneaking, another press to stop sneaking)</li>
 <li><code>Combination</code> - these are the gamepad buttons that the player must press or hold to activate the control binding.</li>
 <li><code>Emulation</code> - specify which buttons will be emulated. You can specify absolute buttons, or that are defined in the game settings (logical).</li>
 <li><code>Condition</code> - specify the condition under which the control binding can be activated. To invert condition, use the operator <code>!</code> before the operand (!Cond_IsOverlayTop, !JOY_B)</li>
@@ -2985,7 +2985,7 @@ KeyRecord Toggled
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-13 08:15:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-13 13:06:50</span>
       
     
   </small>
