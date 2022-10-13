@@ -1,0 +1,31 @@
+# Engine logical keys
+Logical keys are the keys you set in keyboard settings in the game menu. These can fill multiple roles in different situations, gamepad controls can be set to emulate these logical keys.
+```
+GAME_LEFT
+GAME_RIGHT
+GAME_UP
+GAME_DOWN
+GAME_ACTION
+GAME_SLOW
+GAME_ACTION2
+GAME_WEAPON
+GAME_SMOVE
+GAME_SMOVE2
+GAME_SHIFT
+GAME_END
+GAME_INVENTORY
+GAME_LOOK
+GAME_SNEAK
+GAME_STRAFELEFT
+GAME_STRAFERIGHT
+GAME_SCREEN_STATUS
+GAME_SCREEN_LOG
+GAME_SCREEN_MAP
+GAME_LOOK_FP
+GAME_LOCK_TARGET
+GAME_PARADE
+GAME_ACTIONLEFT
+GAME_ACTIONRIGHT
+GAME_LAME_POTION
+GAME_LAME_HEAL
+```

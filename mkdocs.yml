@@ -133,9 +133,13 @@ nav:
 
     - Union plugins:
       - zengin/union/index.md
-      - zParserExtender:
-        - zengin/union/zgamepad.md
-
+      - zGamePad:
+        - zengin/union/zgamepad/index.md
+        - Controls customization: zengin/union/zgamepad/controls.md
+        - Gamepad key list: zengin/union/zgamepad/keys_gamepad.md
+        - Engine logical key list: zengin/union/zgamepad/keys_engine_logical.md
+        - Engine absolute key list: zengin/union/zgamepad/keys_engine_absolute.md
+        - Logical function list: zengin/union/zgamepad/logical_functions.md
 
     - Tools:
       - zengin/tools/index.md
