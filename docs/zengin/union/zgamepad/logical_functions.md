@@ -1,5 +1,5 @@
 # Logical function names
-Conditions, when to show, or allow the control binding to work, are specified using these logiac function. They describe different useful states of the game or user interface, allowing the user to set, when will certain control work. 
+Conditions, when to show, or allow the control binding to work, are specified using these logic functions. They describe different useful states of the game or user interface, allowing the user to set, when will certain control work. 
 ```
 Cond_FightMode        - player is in the fight mode
 Cond_FightModeMelee   - player is in the melee fight mode
@@ -29,5 +29,4 @@ Cond_UsesPicklock     - player is picking a lock now
 Cond_IsOnTrade        - player is trading
 Cond_IsOverlayTop     - gamepad overlay object is open on the top
 Cond_IsMenuTop        - game menu is open on the top
-Cond_OnSpellBook      - magic selection ring is active
 ```

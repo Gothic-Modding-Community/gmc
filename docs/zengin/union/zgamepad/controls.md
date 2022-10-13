@@ -69,9 +69,9 @@ KeyRecord [modifier]
 ```
 
 - `Id` - unique identifier, used by other users to override this control binding
-- `[modifier]` - can be empty or take the value of `Toggled`
-If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.
-If the value is `Toggled`, the control binding will work only when the player holds down the specified button or button combination.
+- `[modifier]` - can be empty or take the value of `Toggled`  
+If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.  
+If the value is `Toggled`, the control binding will work only when the player toggles the button or button combination. (One press to start sneaking, another press to stop sneaking)
 - `Combination` - these are the gamepad buttons that the player must press or hold to activate the control binding.
 - `Emulation` - specify which buttons will be emulated. You can specify absolute buttons, or that are defined in the game settings (logical).
 - `Condition` - specify the condition under which the control binding can be activated. To invert condition, use the operator `!` before the operand (!Cond_IsOverlayTop, !JOY_B)
