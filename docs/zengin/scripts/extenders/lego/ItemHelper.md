@@ -17,7 +17,7 @@ No initialization
 ## Functions
 
 ### ITM_GetPtr
-```c++
+```dae
 int ITM_GetPtr(int instance)
 ```
 

@@ -4,7 +4,7 @@ External functions are Daedalus functions (defined in the engine itself) used to
 ## CAST data type conversion functions
 External functions for data type conversion and pointer casting.
 
-```c++
+```dae
 func instance Cast_PointerToInstance( var int address ) {};
 
 func int Cast_InstanceToPointer( var instance object ) {};
@@ -49,7 +49,7 @@ Helper functions, used for safety checks or to get specific information from the
 
 
 
-```c++
+```dae
 func int Hlp_HasFocusVob( var C_NPC npc ) {};
 
 func instance Hlp_GetFocusVob( var C_NPC npc ) {};
@@ -95,7 +95,7 @@ Functions related to the world.
 
 
 
-```c++
+```dae
 func void Wld_ChangeLevel( var string world, var string waypoint ) {};
 
 func instance Wld_FindVob( var string vobname ) {};
@@ -129,7 +129,7 @@ Functions to tweak animation and other model related settings.
 
 
 
-```c++
+```dae
 func int Mdl_GetAnimationIndex( var C_NPC npc, var string ani_name ) {};
 
 func string Mdl_GetAnimationName( var C_NPC npc, var int ani_index ) {};
@@ -175,7 +175,7 @@ NPC realted functions.
 
 
 
-```c++
+```dae
 func void Npc_SetAsHero( var C_NPC npc ) {};
 
 func void Npc_OpenInventory( var C_NPC npc ) {};
@@ -227,7 +227,7 @@ Functions to manipulate interactive objects like destroying MOBs, setting lockpi
 
 
 
-```c++
+```dae
 func void Mob_Destroy( var instance object ) {};
 
 func void Mob_RemoveItem( var instance object, var int item ) {};
@@ -259,7 +259,7 @@ Functions to work with the new `C_Trigger` class and NPC's AI queue.
 
 
 
-```c++
+```dae
 func void AI_CallScript(var string funcName, var C_Npc slf, var C_Npc oth) {};
 
 func C_Trigger AI_StartTriggerScript(var string funcName, var int delay) {};
@@ -311,7 +311,7 @@ Parser functions are used to manipulate the parsers. Retrieve SymbolID, access a
 
 
 
-```c++
+```dae
 func int Par_GetParserID(var string parName) {};
 
 func int Par_GetSymbolID(var int parId, var string symName) {};
@@ -349,7 +349,7 @@ func void Par_SetSymbolValueStringArray(var string value, var int parId, var int
 
 ## VOB functions for object manipulation
 VOB functions allow you to manipulate game world objects.
-```c++
+```dae
 /// Returns the current position of the object in the world
 /// 
 /// @param vob vob to ge the position of
@@ -448,7 +448,7 @@ func void Vob_SetMobInterData( var C_Vob mobLock, var C_MobLockable_Data data ) 
 
 ## String function
 Functions to manipulate and format strings.
-```c++
+```dae
 /// Returns formatted string using format specifiers
 /// 
 /// Format specifiers:
@@ -505,7 +505,7 @@ func int Str_GetLength( var int str ) {};
 ```
 
 ## Menu function
-```c++
+```dae
 /// Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance
 /// 
 /// @param mask regex like mask for searching
@@ -514,7 +514,7 @@ func void Menu_SearchItems( var string mask ) {};
 
 ## Log functions
 As discussed on [Inside Gothic](), vanilla Gothic has no way of getting the status of a quest. These functions implement that functionality.
-```c++
+```dae
 /// Returns the status of diary topic
 /// Not found   - (-1)
 /// Free        - 0
@@ -545,7 +545,7 @@ On top of external functions, zParserExtender also adds functi
 
 
 
-```c++
+```dae
 func event GameLoop() {};
 
 func event GameInit() {};

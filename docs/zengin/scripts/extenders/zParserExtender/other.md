@@ -36,7 +36,7 @@ zParserExtender adds console commands that save copies of the `.dat` files with 
 !!! warning
     If the mod uses Ikarus, the `CompileDat` option (in the `.ini` file) should be used, since a fatal error may occur whe using the command.
 
-```c++
+```dae
 Parser SaveDat OU        - exports OU.Edited.bin
 Parser SaveDat Game      - exports Gothic.Edited.dat
 Parser SaveDat SFX       - exports SFX.Edited.dat
@@ -51,7 +51,7 @@ Parser Export Stringlist - exports the full string table to Scripts\Exports\Stri
 ## Launch options
 Command line parameters can be passed to the game's exe via the command line or using GothicStarter_Mod.
 
-```c++
+```dae
 -zReparse_OU     - parses and creates OU.bin
 -zReparse_Game   - parses and creates Gothic.dat
 -zReparse_SFX    - parses and creates SFX.dat
@@ -71,7 +71,7 @@ Command line parameters can be passed to the game's exe via the command line or 
 The original zParser doesn't allow direct access to `const string` arrays. zParserExtender allows you to do so.
 
 Example:
-```c++
+```dae
 func event GameInit()
 {
     Hlp_MessageBox(TXT_INV_CAT[4]); // Prints "Artifacts"

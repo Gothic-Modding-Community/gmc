@@ -4,7 +4,7 @@ Functions to manipulate interactive objects like destroying MOBs, setting lockpi
 ## Mob_Destroy
 Marks oCMOB as destroyed, changes the visual to visualDestroyed (if present).
 
-```c++
+```dae
 func void Mob_Destroy( var instance object ) {};
 ```
 
@@ -13,7 +13,7 @@ func void Mob_Destroy( var instance object ) {};
 ## Mob_RemoveItem
 Removes an item from a oCMobContainer
 
-```c++
+```dae
 func void Mob_RemoveItem( var instance object, var int item ) {};
 ```
 
@@ -23,7 +23,7 @@ func void Mob_RemoveItem( var instance object, var int item ) {};
 ## Mob_RemoveItems
 Removes specified number of items from a oCMobContainer
 
-```c++
+```dae
 func void Mob_RemoveItems( var instance object, var int item, var int cnt ) {};
 ```
 
@@ -34,7 +34,7 @@ func void Mob_RemoveItems( var instance object, var int item, var int cnt ) {};
 ## Mob_InsertItem
 Inserts an item into a oCMobContainer
 
-```c++
+```dae
 func void Mob_InsertItem( var instance object, var int item ) {};
 ```
 
@@ -44,7 +44,7 @@ func void Mob_InsertItem( var instance object, var int item ) {};
 ## Mob_InsertItems
 Inserts specified number of items into a oCMobContainer
 
-```c++
+```dae
 func void Mob_InsertItems( var instance object, var int item, var int cnt ) {};
 ```
 
@@ -55,7 +55,7 @@ func void Mob_InsertItems( var instance object, var int item, var int cnt ) {};
 ## Mob_GetLockCombination
 Returns a lock combination of a oCMobContainer
 
-```c++
+```dae
 func string Mob_GetLockCombination( var instance object ) {};
 ```
 
@@ -65,7 +65,7 @@ func string Mob_GetLockCombination( var instance object ) {};
 ## Mob_SetLockCombination
 Sets a lock combination to a oCMobContainer
 
-```c++
+```dae
 func void Mob_SetLockCombination( var instance object, var string comb ) {};
 ```
 
@@ -75,7 +75,7 @@ func void Mob_SetLockCombination( var instance object, var string comb ) {};
 ## Mob_IsLocked
 Returns `TRUE` if the object is locked
 
-```c++
+```dae
 func int Mob_IsLocked( var instance object ) {};
 ```
 
@@ -85,7 +85,7 @@ func int Mob_IsLocked( var instance object ) {};
 ## Mob_SetLocked
 Set the lock status of the object
 
-```c++
+```dae
 func void Mob_SetLocked( var instance object, var int locked ) {};
 ```
 
@@ -95,7 +95,7 @@ func void Mob_SetLocked( var instance object, var int locked ) {};
 ## Mob_GetKeyInstance
 Returns the key instance, that unlocks the object
 
-```c++
+```dae
 func instance Mob_GetKeyInstance( var instance object ) {};
 ```
 
@@ -105,7 +105,7 @@ func instance Mob_GetKeyInstance( var instance object ) {};
 ## Mob_SetKeyInstance
 Stets the key instance, that unlocks the object
 
-```c++
+```dae
 func void Mob_SetKeyInstance( var instance object, var int key ) {};
 ```
 
@@ -114,7 +114,7 @@ func void Mob_SetKeyInstance( var instance object, var int key ) {};
 
 ## Externals with docu comments
 
-```c++
+```dae
 /// Marks oCMOB as destroyed, changes the visual to visualDestroyed (if present).
 ///
 /// @param object oCMOB to be destroyed

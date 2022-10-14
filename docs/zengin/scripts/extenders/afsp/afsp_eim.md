@@ -31,7 +31,7 @@ Set font color for highlighted dialogue choice.
 ```
 hs@[hex color value]
 ```
-```c++ title="Example"
+```dae title="Example"
 description = "h@2a85a3 hs@2ea9d1 This dialogue is blue.";
 ```
 
@@ -44,7 +44,7 @@ Set font itself for highlighted dialogue choice.
 ```
 fs@[font name]
 ```
-```c++ title="Example"
+```dae title="Example"
 description = "f@font_old_20_white.tga fs@font_old_10_white.tga This dialogue has a different font, when selected.";
 ```
 
@@ -61,7 +61,7 @@ Align text right
 ```
 ar@
 ```
-```c++ title="Example"
+```dae title="Example"
 description = "al@ This dialogue has LEFT alignment.";
 description = "ac@ This dialogue has CENTER alignment.";
 description = "ar@ This dialogue has RIGHT alignment.";
@@ -78,7 +78,7 @@ Input field allows you to turn a dialogue choice into a input text field.
 ```
 a@
 ```
-```c++ title="Example"
+```dae title="Example"
 INSTANCE DIA_Xardas_Password (C_Info)
 {
     npc         = NONE_100_Xardas;
@@ -130,7 +130,7 @@ This feature is a bit more complex:
 !!! Notice
     Notice we are using "*dummy*" as a description, since it is going to get updated. If something goes wrong, the "*dummy*" string shows up and you can clearly tell somethings went wrong.
 
-```c++
+```dae
 INSTANCE PC_Pan_Cook_Meat (C_Info)
 {
     nr           = 1;
@@ -143,7 +143,7 @@ INSTANCE PC_Pan_Cook_Meat (C_Info)
 
 2. Most of the magic takes place in the condition function (apart from the code behind the scenes, of course).
 
-```c++
+```dae
 var int selectedMeat; // global variable for this spinner value
 
 FUNC INT PC_Pan_Cook_Meat_Condition ()
@@ -200,7 +200,7 @@ FUNC INT PC_Pan_Cook_Meat_Condition ()
 
 3. We can use the spinner value stored in `selectedMeat` variable here in the info function, to create the meat (or do other stuff with it).
 
-```c++
+```dae
 FUNC VOID PC_Pan_Cook_Meat_Info () {
        //If we don't have any meat ... don't cook any :)
        if (!NPC_HasItems (self, ItFoMuttonRaw)) { return; };
@@ -224,7 +224,7 @@ FUNC VOID PC_Pan_Cook_Meat_Info () {
 <details>
   <summary>Spinner example</summary>
 
-```c++
+```dae
 INSTANCE PC_Pan_Cook_Meat (C_Info)
 {
        nr           = 1;

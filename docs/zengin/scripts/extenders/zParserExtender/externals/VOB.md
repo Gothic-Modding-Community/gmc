@@ -4,7 +4,7 @@ VOB functions allow you to manipulate game world objects.
 ## Vob_GetVobPosition
 Returns the current position of the object in the world
 
-```c++
+```dae
 func C_Position Vob_GetVobPosition( var C_Vob vob ) {};
 ```
 
@@ -14,7 +14,7 @@ func C_Position Vob_GetVobPosition( var C_Vob vob ) {};
 ## Vob_SetVobPosition
 Sets the current position of the object in the world
 
-```c++
+```dae
 func void Vob_SetVobPosition( var C_Vob vob, var C_Position pos ) {};
 ```
 
@@ -24,7 +24,7 @@ func void Vob_SetVobPosition( var C_Vob vob, var C_Position pos ) {};
 ## Vob_GetVobData
 Returns the universal data of the zCVob object
 
-```c++
+```dae
 func C_Vob_Data Vob_GetVobData( var C_Vob vob ) {};
 ```
 
@@ -34,7 +34,7 @@ func C_Vob_Data Vob_GetVobData( var C_Vob vob ) {};
 ## Vob_SetVobData
 Sets the universal data to a zCVob object
 
-```c++
+```dae
 func void Vob_SetVobData( var C_Vob vob, var C_Vob_Data data ) {};
 ```
 
@@ -44,7 +44,7 @@ func void Vob_SetVobData( var C_Vob vob, var C_Vob_Data data ) {};
 ## Vob_GetLightData
 Returns zCVobLight object data
 
-```c++
+```dae
 func C_Light_Data Vob_GetLightData( var C_Vob vobLight ) {};
 ```
 
@@ -54,7 +54,7 @@ func C_Light_Data Vob_GetLightData( var C_Vob vobLight ) {};
 ## Vob_SetLightData
 Sets the data of a zCVobLight object
 
-```c++
+```dae
 func void Vob_SetLightData( var C_Vob vobLight, var C_Light_Data data ) {};
 ```
 
@@ -64,7 +64,7 @@ func void Vob_SetLightData( var C_Vob vobLight, var C_Light_Data data ) {};
 ## Vob_ClearLightAniList
 Clears the list of animation colours for the light source
 
-```c++
+```dae
 func void Vob_ClearLightAniList( var C_Vob vobLight ) {};
 ```
 
@@ -73,7 +73,7 @@ func void Vob_ClearLightAniList( var C_Vob vobLight ) {};
 ## Vob_AddLightAniColor
 Adds a color to the colour list
 
-```c++
+```dae
 func void Vob_AddLightAniColor( var C_Vob vobLight, var C_Color col ) {};
 ```
 
@@ -83,7 +83,7 @@ func void Vob_AddLightAniColor( var C_Vob vobLight, var C_Color col ) {};
 ## Vob_AddLightAniColorRGB
 Adds a color to the colour list
 
-```c++
+```dae
 func void Vob_AddLightAniColorRGB( var C_Vob vobLight,
 ```
 
@@ -95,7 +95,7 @@ func void Vob_AddLightAniColorRGB( var C_Vob vobLight,
 ## Vob_GetMobData
 Returns the data of the oCMOB object
 
-```c++
+```dae
 func C_Mob_Data Vob_GetMobData( var C_Vob mob ) {};
 ```
 
@@ -105,7 +105,7 @@ func C_Mob_Data Vob_GetMobData( var C_Vob mob ) {};
 ## Vob_SetMobData
 Sets the data of the oCMOB object
 
-```c++
+```dae
 func void Vob_SetMobData( var C_Vob mob, var C_Mob_Data data ) {};
 ```
 
@@ -115,7 +115,7 @@ func void Vob_SetMobData( var C_Vob mob, var C_Mob_Data data ) {};
 ## Vob_GetMobInterData
 Returns the data of the oCMobInter object
 
-```c++
+```dae
 func MobInter_Data Vob_GetMobInterData( var C_Vob mobInter ) {};
 ```
 
@@ -125,7 +125,7 @@ func MobInter_Data Vob_GetMobInterData( var C_Vob mobInter ) {};
 ## Vob_SetMobInterData
 Sets the data of the oCMobInter object
 
-```c++
+```dae
 func void Vob_SetMobInterData( var C_Vob mobInter, var C_MobInter_Data data ) {};
 ```
 
@@ -135,7 +135,7 @@ func void Vob_SetMobInterData( var C_Vob mobInter, var C_MobInter_Data data ) {}
 ## Vob_GetMobInterData
 Returns the data of the oCMobLockable object
 
-```c++
+```dae
 func void C_MobLockable_Data Vob_GetMobInterData( var C_Vob mobLock ) {};
 ```
 
@@ -145,7 +145,7 @@ func void C_MobLockable_Data Vob_GetMobInterData( var C_Vob mobLock ) {};
 ## Vob_SetMobInterData
 Sets the data of the oCMobLockable object
 
-```c++
+```dae
 func void Vob_SetMobInterData( var C_Vob mobLock, var C_MobLockable_Data data ) {};
 ```
 
@@ -154,7 +154,7 @@ func void Vob_SetMobInterData( var C_Vob mobLock, var C_MobLockable_Data data ) 
 
 ## Externals with docu comments
 
-```c++
+```dae
 /// Returns the current position of the object in the world
 /// 
 /// @param vob vob to ge the position of

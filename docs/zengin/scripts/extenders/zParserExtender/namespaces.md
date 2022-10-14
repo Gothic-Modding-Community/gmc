@@ -5,7 +5,7 @@ zParserExtender also implements namespaces. Namespaces ensure that all symbols i
 To define a namespace the new keyword `namespace` is used.
 
 === "Regular scripts"
-    ```c++
+    ```dae
     namespace zTestNamespace
     {
         var int var01;
@@ -13,7 +13,7 @@ To define a namespace the new keyword `namespace` is used.
     };
     ```
 === "Injectable scripts"
-    ```c++
+    ```dae
     META
     {
         Namespace = zTestNamespace;
@@ -28,7 +28,7 @@ To define a namespace the new keyword `namespace` is used.
 Namespaces can be nested for finer control. In case of injection, the namespace defined in META is applied to all code inside the script.
 
 To go deeper into the namespaces you use the namespace operator `:`. This code shows function with the same name within three different namespaces. The call in `GameInit` is made from the global namespace.
-```c++
+```dae
 namespace zTestNamespace01
 {
     func void func01() { };
@@ -60,7 +60,7 @@ func event GameInit()
 
 To go up a namespace tree you use the namespace operator `:` without specifying a namespace. Number of operators determines how many levels you go up.
 
-```c++ title="Exiting nested namespaces"
+```dae title="Exiting nested namespaces"
 func void func01()
 {
     Hlp_MessageBox("#1");
@@ -104,7 +104,7 @@ namespace zTestNamespace01
 There are three cases where the namespace prefix is optional
 
 === "Shares the same namespace"
-    ```c++
+    ```dae
     namespace zTestNamespace01
     {
         func void func01()
@@ -120,7 +120,7 @@ There are three cases where the namespace prefix is optional
     };
     ```
 === "If the funciton is in higher level namespace"
-    ```c++
+    ```dae
     func void func01()
     {
         Hlp_MessageBox("#1");
@@ -144,7 +144,7 @@ There are three cases where the namespace prefix is optional
     };
     ```
 === "If `using` is psecified in the META block"
-    ```c++
+    ```dae
     META
     {
         using = zTestNamespace01;
@@ -169,7 +169,7 @@ There are three cases where the namespace prefix is optional
 
 Namespace can not only be defined to an existing symbol, but also to define new ones. Next code example shows how to implement a hook to a global instance.
 
-```c++
+```dae
 namespace zTestNamespace01
 {
     const string Var01 = "New instance name";

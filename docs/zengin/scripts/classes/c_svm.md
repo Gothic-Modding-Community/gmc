@@ -20,27 +20,27 @@ The `C_SVM` class is used to define sound dialogues (smalltalk, reactions), that
 
 ## Rules
 The number of instances is defined by a constant integer with a specified name read by the engine.
-```c++
+```dae
 const int SVM_MODULES = 18;
 ```
 !!! Info
     The value `SVM_MODULES = 18` means 18 SVMs will be parsed by the engine and because the first one `SVM_0` is empty, the final number of voices is 18 - 1 = 17.
 Instances of the `C_SVM` class **must** have the name `SVM_XXX`.
-```c++
+```dae
 instance svm_1(c_svm)
 {
    // ...
 };
 ```
 The first instance `svm_0` is always empty, it is used internally by the engine.
-```c++
+```dae
 instance svm_0(c_svm) {};
 ```
 ## Usage in the scripts
 While some of the defined SVMs are used automatically by the engine - the 20 smalltalk lines for example, others are used in the scripts.  
 To instruct the engine to run a specific SVM a `AI_OutputSVM` external function is used, in the original scripts it is wrapped in a script function [B_Say](https://github.com/VaanaCZ/gothic-1-classic-scripts/blob/6204f608f506f169035c58552197285bce4ffa39/_work/Data/Scripts/Content/AI/AI_Intern/B_Functions.d#L111-L120).  
 To reference the SVM, you use the `$` symbol followed by the name of the member variable in the `C_SVM` class definition.  
-```c++ hl_lines="4"
+```dae hl_lines="4"
 // some code
 	{
 		PrintScreen	("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",1);
@@ -49,7 +49,7 @@ To reference the SVM, you use the `$` symbol followed by the name of the member 
 // some code
 ```
 Here the `$NOLEARNNOPOINTS` references the `var string NoLearnNoPoints` in [SVM.D](https://github.com/VaanaCZ/gothic-1-classic-scripts/blob/6204f608f506f169035c58552197285bce4ffa39/_work/Data/Scripts/Content/Story/SVM.d#L125). The voice is then chosen automatically by the engine.
-```c++ hl_lines="6"
+```dae hl_lines="6"
 class C_SVM
 {
     //...

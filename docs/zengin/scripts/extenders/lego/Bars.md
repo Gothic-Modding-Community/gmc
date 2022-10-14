@@ -8,7 +8,7 @@ With this package it is very easy to add new bars for e.g. stamina.
 
 ## Initialization
 Initialize with `LeGo_Bars` flag.
-```c++
+```dae
 LeGo_Init(LeGo_Bars)
 ```
 ## Implementation
@@ -21,7 +21,7 @@ LeGo_Init(LeGo_Bars)
 
 ### Bar_Create
 Creates a new bar from a constructor instance.
-```c++
+```dae
 int Bar_Create(instance bar)
 ```
 
@@ -30,7 +30,7 @@ int Bar_Create(instance bar)
 
 ### Bar_Delete
 Deletes a bar from the screen and from memory. 
-```c++
+```dae
 void Bar_Delete(int handle)
 ```
 
@@ -38,7 +38,7 @@ void Bar_Delete(int handle)
 
 ### Bar_SetMax
 Changes a bar's maximum value, but does not update its bar length (only `Bar_SetPercent`, `Bar_SetPromille` and `Bar_SetValue`)
-```c++
+```dae
 void Bar_SetMax(int handle, int max)
 ```
 
@@ -47,7 +47,7 @@ void Bar_SetMax(int handle, int max)
 
 ### Bar_SetValue
 Sets the value of the bar.
-```c++
+```dae
 void Bar_SetValue(int handle, int value)
 ```
 
@@ -56,7 +56,7 @@ void Bar_SetValue(int handle, int value)
 
 ### Bar_SetPercent
 Sets the value of the bar, but as a percentage (0..100).
-```c++
+```dae
 void Bar_SetPercent(int handle, int percent)
 ```
 
@@ -65,7 +65,7 @@ void Bar_SetPercent(int handle, int percent)
 
 ### Bar_SetPromille
 Sets the value of the bar, but in per mille (0..1000).
-```c++
+```dae
 void Bar_SetPromille(int handle, int promille)
 ```
 
@@ -74,7 +74,7 @@ void Bar_SetPromille(int handle, int promille)
 
 ### Bar_Hide
 Hides a bar. It will not be deleted. 
-```c++
+```dae
 void Bar_Hide(int handle)
 ```
 
@@ -82,7 +82,7 @@ void Bar_Hide(int handle)
 
 ### Bar_Show
 Displays a bar again after using `Bar_Hide`. 
-```c++
+```dae
 void Bar_Show(int handle)
 ```
 
@@ -90,7 +90,7 @@ void Bar_Show(int handle)
 
 ### Bar_MoveTo
 Move the bar to virtual position. 
-```c++
+```dae
 void Bar_MoveTo(int handle, int x, int y)
 ```
 
@@ -100,7 +100,7 @@ void Bar_MoveTo(int handle, int x, int y)
 
 ### Bar_SetAlpha
 Sets the opacity of the bar.
-```c++
+```dae
 void Bar_SetAlpha(int handle, int alpha)
 ```
 
@@ -109,7 +109,7 @@ void Bar_SetAlpha(int handle, int alpha)
 
 ### Bar_SetBarTexture
 Sets the foreground texture of the bar.
-```c++
+```dae
 void Bar_SetBarTexture(int handle, string texture)
 ```
 
@@ -118,7 +118,7 @@ void Bar_SetBarTexture(int handle, string texture)
 
 ### Bar_SetBackTexture
 Sets the background texture of the bar.
-```c++
+```dae
 void Bar_SetBackTexture(int handle, string texture)
 ```
 - `handle` - handle returned from `Bar_Create`
@@ -131,7 +131,7 @@ void Bar_SetBackTexture(int handle, string texture)
 ### Display a simple bar
 First we just create a bar that does nothing.
 It should only be half full (or empty?) on the screen.
-```c++
+```dae
 func void Example_1()
 {
     var int bar; bar = Bar_Create(GothicBar@); // Create a new bar
@@ -142,7 +142,7 @@ Finished. Without any settings? And what is `GothicBar`? Let's take a look at a 
 
 ### A dedicated experience bar
 Bars implement the `Bar` class. It looks like this:
-```c++
+```dae
 class Bar
 {
     var int x;          // X position on screen (middle of bar)
@@ -158,7 +158,7 @@ class Bar
 };
 ```
 The `GothicBar` prototype is a bar that mimics the standard Gothic status bar.
-```c++
+```dae
 prototype GothicBar(Bar)
 {
     x = Print_Screen[PS_X] / 2;
@@ -178,7 +178,7 @@ It's much easier to set up a new instance using this prototype. Standard vanilla
 GothicBar is located in the middle of the screen and looks exactly like the Gothic Underwater Bar.  
 But lets make a bar that hangs in the top left of the picture and displays the experience points.  
 Derive again GothicBar and only change the position. Of course, add a loop using the FrameFunctions:
-```c++
+```dae
 // Instance created from 
 instance Bar_1(GothicBar)
 {

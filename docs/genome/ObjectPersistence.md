@@ -103,7 +103,7 @@ bCAccessorPropertyObject::Read
 
 === "Gothic 3"
 
-	```cpp
+	```dae
 	eCProcessibleElement::Load
 	{
 		uint32_t magic; // 0xD0DEFADE
@@ -116,7 +116,7 @@ bCAccessorPropertyObject::Read
 
 === "Risen"
 
-	```cpp
+	```dae
 	eCProcessibleElement::Load
 	{
 		bCAccessorPropertyObject::Read
@@ -132,7 +132,7 @@ bCAccessorPropertyObject::Read
 
 Let's propose that we have a class which is declared like so:
 
-```cpp
+```dae
 class gCMyClass : public bCObjectRefBase
 {
 public:
@@ -155,7 +155,7 @@ private:
 
 The hypothetical class then implements these virtual functions:
 
-```cpp
+```dae
 bEResult gCMyClass::Write(bCOStream& file)
 {
 	file << someData;
@@ -172,7 +172,7 @@ bEResult gCMyClass::Read(bCIStream& file)
 
 We then initialize the class in the following way:
 
-```cpp
+```dae
 gCMyClass object;
 object.myInt = 1;
 object.someData = 1;

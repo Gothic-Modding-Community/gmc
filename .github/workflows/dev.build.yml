@@ -24,5 +24,6 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-git-revision-date-localized-plugin
       - run: pip install mkdocs-video
+      - run: pip install git+https://github.com/kamilkrzyskow/gothic-lexer.git
 
       - run: mkdocs gh-deploy --force --remote-branch gh-dev-page

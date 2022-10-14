@@ -2,7 +2,7 @@
 With animations, we often need to perform some other actions, like playing a sound effect, inserting item into NPCs hand or changing an item instance into a different one (turning a raw steel into hot raw steel).
 
 Example:
-```c++
+```dae
 ani ("s_RunL" 1 "s_RunL" 0.0 0.1 M. "Hum_RunLoop_M01.asc" F 12 31)
 {
 	*eventSFXGrnd	(12	"Run")
@@ -14,12 +14,12 @@ The example shows the animation and its event block. We place these events into 
 
 There are many events to choose from to choose from, here are some examples:
 Sound effects
-```c++
+```dae
 *eventSFXGrnd (12 "Run")
 *eventSFX     (10 "Swim")
 ```
 Particle effects
-```c++
+```dae
 *eventPFX     (12       "ZMODELLANDDUST"   "Bip01")
 *eventPFX     (35   1	"BUBBLES"          "BIP01 HEAD"	ATTACH)
 *eventPFXStop (45   1)
@@ -27,11 +27,11 @@ Particle effects
 Morph mesh animations
 > Heads are animated using morph meshes, this feature is not used as much in the original game, but Chronicles of Myrtana uses it quite a lot. I hope to write about morphMesh animation too in the future.
 
-```c++
+```dae
 *eventMMStartAni (14	"T_HURT")
 ```
 Event tags
-```c++
+```dae
 *eventTag (5 "DEF_FIGHTMODE"	"")
 
 *eventTag (0 "DEF_HIT_LIMB"  "ZS_RIGHTHAND")

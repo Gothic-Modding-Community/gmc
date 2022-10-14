@@ -15,7 +15,7 @@ No initialization
 
 ### atan2f
 Calculates the arcus tangent of an angle between the origin and (x, y) point
-```c++
+```dae
 float atan2f(int x, int y)
 ```
 
@@ -25,7 +25,7 @@ float atan2f(int x, int y)
 
 ### sin
 Calculates the sine of an angle given in radians.
-```c++
+```dae
 float sin (float angle)
 ```
 
@@ -34,7 +34,7 @@ float sin (float angle)
 
 ### cos
 Calculates the cosine of an angle given in radians.
-```c++
+```dae
 float cos (float angle)
 ```
 
@@ -44,7 +44,7 @@ float cos (float angle)
 
 ### tan
 Calculates the tangent of an angle given in radians.
-```c++
+```dae
 float tan (float angle)
 ```
 
@@ -53,7 +53,7 @@ float tan (float angle)
 
 ### asin
 Calculates the arcus sine
-```c++
+```dae
 float asin (float sine)
 ```
 
@@ -62,7 +62,7 @@ float asin (float sine)
 
 ### acos
 Calculates the arcus cosine
-```c++
+```dae
 float acos (float cosine)
 ```
 
@@ -72,7 +72,7 @@ float acos (float cosine)
 
 ### distance2D
 Calculates the distance between two points on a two-dimensional plane
-```c++
+```dae
 int distance2D(int x1, int x2, int y1, int y2)
 ```
 
@@ -84,7 +84,7 @@ int distance2D(int x1, int x2, int y1, int y2)
 
 ### distance2Df
 Calculates the distance between two points on a two-dimensional plane as Ikarus `floats`
-```c++
+```dae
 float distance2Df(float x1, float x2, float y1, float y2)
 ```
 

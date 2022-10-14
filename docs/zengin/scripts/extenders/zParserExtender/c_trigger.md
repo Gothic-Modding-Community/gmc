@@ -4,7 +4,7 @@ zParserExtender also implements cyclical functions (called triggers - not to e c
 ## Class definition
 To define a trigger, the `C_Trigger` class is used:
 
-```c++
+```dae
 /// Union zPraserExtender Trigger class
 class C_Trigger
 {
@@ -25,7 +25,7 @@ class C_Trigger
 ## Creating instances
 There are two [external functions](externals.md#ai-functions-for-working-with-ai)
 
-```c++
+```dae
 // function returns a trigger with no NPC (self, other or victim) bound to it
 func C_Trigger AI_StartTriggerScript( var string funcName,
                                       var int delay)
@@ -42,7 +42,7 @@ Both of these functions return an instance of `C_Trigger`. You can, of course, c
 
 ## Poison example
 
-```c++
+```dae
 // Implement a trigger to simulate the effect of poison debuff:
 // Let's create a trigger on function `c_loop` with a call interval of 1 second.
 // When the function is called, the instance hero will be placed in self (although it can be any other NPC if desired).
@@ -56,7 +56,7 @@ trigger.AIVariables[1] = 5;  // how much damage to deal each iteration
 
 The trigger function
 
-```c++
+```dae
 func int c_loop()
 {
     // Create a loop end check, if the number of
@@ -88,7 +88,7 @@ The plugin creates a new save archive to save the information of the triggers, t
 ## Searching
 To search for a specifin trigger, for example by NPC, the [trigger external functions](externals.md#ai-functions-for-working-with-ai) can be used.
 
-```c++
+```dae
 // This way you can disable all triggers running on the `hero` instance
 var C_Trigger trigget = FirstTrigger;
 var C_Trigger trigget_saved;

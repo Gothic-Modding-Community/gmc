@@ -7,7 +7,7 @@ This package allows you to create conversations with any number of NPC's and con
 
 ## Initialization
 Initialize with `LeGo_Trialoge` flag.
-```c++
+```dae
 LeGo_Init(LeGo_Trialoge)
 ```
 ## Implementation
@@ -17,7 +17,7 @@ LeGo_Init(LeGo_Trialoge)
 
 ### EquipWeapon
 Sektenspinner's function. (Taken from the forum.) 
-```c++
+```dae
 void EquipWeapon(c_npc slf, int ItemInstance)
 ```
 
@@ -26,7 +26,7 @@ void EquipWeapon(c_npc slf, int ItemInstance)
 
 ### Npc_GetArmor
 Returns NPC's equipped armor.
-```c++
+```dae
 int Npc_GetArmor(c_npc slf)
 ```
 
@@ -35,7 +35,7 @@ int Npc_GetArmor(c_npc slf)
 
 ### Npc_GetMeleeWeapon
 Returns NPC's equipped melee weapon.
-```c++
+```dae
 int Npc_GetMeleeWeapon(c_npc slf)
 ```
 
@@ -43,31 +43,31 @@ int Npc_GetMeleeWeapon(c_npc slf)
 
 ### DiaCAM_Update
 Sektenspinner's function. Updates the dialogue camera. (Used internally.)
-```c++
+```dae
 void DiaCAM_Update()
 ```
 
 ### DiaCAM_Disable
 Completely disable the dialogue cameras.
-```c++
+```dae
 void DiaCAM_Disable()
 ```
 
 ### DiaCAM_Enable
 Resets the dialogue cameras to the default settings.
-```c++
+```dae
 void DiaCAM_Enable()
 
 ```
 ### TRIA_Wait
 Makes `self` and `other` wait for each other, e.g. for `AI_GotoW`P actions for synchronization. 
-```c++
+```dae
 void TRIA_Wait()
 ```
 
 ### TRIA_Invite
 Invites an NPC into a conversation. Must be called before `TRIA_Start`.
-```c++
+```dae
 void TRIA_Invite(c_npc slf)
 ```
 
@@ -75,19 +75,19 @@ void TRIA_Invite(c_npc slf)
 
 ### TRIA_Start
 Starts trialogues. Before that, all NPC's should be invited by `TRI_Invite`.
-```c++
+```dae
 void TRIA_Start()
 ```
 
 ### TRIA_Barrier
 Similar to `TRIA_Wait` but applies to all participating NPCs.
-```c++
+```dae
 void TRIA_Barrier()
 ```
 
 ### TRIA_Next
 Sets the called npc to `self`.
-```c++
+```dae
 void TRIA_Next(c_npc n0)
 ```
 
@@ -95,7 +95,7 @@ void TRIA_Next(c_npc n0)
 
 ### TRIA_Cam
 Starts a tracking shot. 
-```c++
+```dae
 void TRIA_Cam(string evt)
 ```
 
@@ -103,7 +103,7 @@ void TRIA_Cam(string evt)
 
 ### TRIA_Finish
 Ends an ongoing trialogue. Must always be called at the end, otherwise no further trialogues can be started.
-```c++
+```dae
 void TRIA_Finish()
 ```
 
@@ -120,7 +120,7 @@ The following conversation is resolved via the trialogues:
    6. **Hero:**    Sure?
    7. **Arto:**    I have to ask you to leave now
    8. **Hero:**    Well...
-```c++
+```dae
 instance TRIA_Test (C_INFO)
 {
     npc         = PAL_100_Friend;

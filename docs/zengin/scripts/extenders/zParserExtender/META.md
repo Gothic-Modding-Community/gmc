@@ -2,7 +2,7 @@
 The META block is optional, but if it is specified, it has to be the very first thing in the file, without any indent or a comment above it.
 
 Syntax:
-```c++
+```dae
 META
 {
     Parser // specifies into which compiled file the scripts are going to be injected

@@ -4,7 +4,7 @@ Functions related to the world.
 ## Wld_ChangeLevel
 Trigger level change.
 
-```c++
+```dae
 func void Wld_ChangeLevel( var string world, var string waypoint ) {};
 ```
 
@@ -14,7 +14,7 @@ func void Wld_ChangeLevel( var string world, var string waypoint ) {};
 ## Wld_FindVob
 Return the VOB instsance based on its name.
 
-```c++
+```dae
 func instance Wld_FindVob( var string vobname ) {};
 ```
 
@@ -23,7 +23,7 @@ func instance Wld_FindVob( var string vobname ) {};
 
 ## Wld_PlayEffectVob
 
-```c++
+```dae
 func void Wld_PlayEffectVob( var string effect,
                              var instance pvob,
                              var int level,
@@ -41,7 +41,7 @@ func void Wld_PlayEffectVob( var string effect,
 
 ## Wld_PlayEffectAt
 
-```c++
+```dae
 func void Wld_PlayEffectAt(  var string effect,
                              var instance coord,
                              var int level,
@@ -59,7 +59,7 @@ func void Wld_PlayEffectAt(  var string effect,
 
 ## Wld_ToggleRain
 
-```c++
+```dae
 func void Wld_ToggleRain( var float weight, var flaot time ) {};
 ```
 
@@ -73,7 +73,7 @@ Types:
 - `0` - snow
 - `1` - rain
 
-```c++
+```dae
 func void Wld_SetWeatherType( var int type ) {};
 ```
 
@@ -86,7 +86,7 @@ Types:
 - `0` - snow
 - `1` - rain
 
-```c++
+```dae
 func int Wld_GetWeatherType() {};
 ```
 
@@ -94,7 +94,7 @@ func int Wld_GetWeatherType() {};
 
 ## Externals with docu comments
 
-```c++
+```dae
 func void Wld_ChangeLevel( var string world, var string waypoint ) {};
 
 func instance Wld_FindVob( var string vobname ) {};

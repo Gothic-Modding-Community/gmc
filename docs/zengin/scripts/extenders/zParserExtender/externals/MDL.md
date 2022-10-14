@@ -4,7 +4,7 @@ Functions to tweak animation and other model related settings.
 
 
 
-```c++
+```dae
 func int Mdl_GetAnimationIndex( var C_NPC npc, var string ani_name ) {};
 
 func string Mdl_GetAnimationName( var C_NPC npc, var int ani_index ) {};

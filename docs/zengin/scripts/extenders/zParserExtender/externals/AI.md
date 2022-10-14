@@ -4,7 +4,7 @@ Functions to work with the new `C_Trigger` class and NPC's AI queue.
 
 
 
-```c++
+```dae
 func void AI_CallScript(var string funcName, var C_Npc slf, var C_Npc oth) {};
 
 func C_Trigger AI_StartTriggerScript(var string funcName, var int delay) {};

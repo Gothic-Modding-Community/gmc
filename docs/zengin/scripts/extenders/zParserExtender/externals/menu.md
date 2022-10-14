@@ -3,7 +3,7 @@
 ## Menu_SearchItems
 Find all `C_MenuItem` object instances by the mask and automatically places them in the current menu instance
 
-```c++
+```dae
 func void Menu_SearchItems( var string mask ) {};
 ```
 
@@ -13,7 +13,7 @@ func void Menu_SearchItems( var string mask ) {};
 This function is used in the Union Menu [API script](../../injection#api-script).  
 In this script the `Menu_SearchItems` external is used to collect all Union menu scripts, that are placed into the Union & Plugins menu, that will appear in the game if you use any of the plugins, that use this feature.  
 
-```c++ title="Usage of Menu_SearchItems external function"
+```dae title="Usage of Menu_SearchItems external function"
 instance MENU_OPT_UNION(C_MENU_DEF)
 {
     Menu_SearchItems("MENUITEM_UNION_AUTO_*");
@@ -32,7 +32,7 @@ In this case all instances of the name `MENUITEM_UNION_AUTO_*` (`*` being a wild
 This example comes from the `zUnionMenu.d` injectable [API script](../../injection#api-script), that is part of the [zGamePad]() plugin, [GitHub link](https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zUnionMenu.d#L47-L57).
 
 ## Externals with docu comments
-```c++
+```dae
 /// Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance
 /// 
 /// @param mask regex like mask for searching

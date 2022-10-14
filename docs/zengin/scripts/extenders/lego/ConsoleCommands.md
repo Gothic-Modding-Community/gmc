@@ -8,7 +8,7 @@ This package allows you to create new console commands.
 
 ## Initialization
 Initialize with `LeGo_ConsoleCommands` flag.
-```c++
+```dae
 LeGo_Init(LeGo_ConsoleCommands)
 ```
 
@@ -19,7 +19,7 @@ LeGo_Init(LeGo_ConsoleCommands)
 
 ### CC_Register
 Registers a new console command.
-```c++
+```dae
 void CC_Register(func f, string cmdPrefix, string description)
 ```
 
@@ -29,7 +29,7 @@ void CC_Register(func f, string cmdPrefix, string description)
 
 ### CC_Remove
 Removes a function from the console commands.
-```c++
+```dae
 void CC_Remove(func f)
 ```
 
@@ -37,7 +37,7 @@ void CC_Remove(func f)
 
 ### CC_Active
 Checks whether the function passed is already part of a console command.
-```c++
+```dae
 int CC_Active(func f)
 ```
 
@@ -49,14 +49,14 @@ int CC_Active(func f)
 ### Basic command example
 As a basic example let's create a version command that prints a version of our modification.  
 First we declare a constant `string` variable to hold the version string to be shown.
-```c++
+```dae
 const string Mod_Version = "My mod version 0.1alpha";
 ```
 Next we create the command function.
 !!! Note
     Notice the correct function signature. If you do not adhere to the correct function signature the command will crash the game.
 
-```c++
+```dae
 // This function is called by our console
 func string CC_ModVersion (var string param)
 {
@@ -64,14 +64,14 @@ func string CC_ModVersion (var string param)
 };
 ```
 Then we have to register the functions. For convenience I create a new `RegisterConsoleFunctions` function to initialize all console commands. The function is really simple.
-```c++
+```dae
 func void RegisterConsoleFunctions()
 {
 	CC_Register (CC_ModVersion, "mod_version", "Version of my amazing mod.");
 };
 ```
 Lastaly we have to call this function from `INIT_GLOBAL` function.
-```c++
+```dae
 func void INIT_GLOBAL()
 {
 	// will be called for every world (from INIT_<LevelName>)
