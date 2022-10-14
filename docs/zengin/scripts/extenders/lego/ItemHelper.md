@@ -17,8 +17,8 @@ No initialization
 ## Functions
 
 ### ITM_GetPtr
-```c++
-int ITM_GetPtr(int instance)
+```dae
+func int ITM_GetPtr(var int instance) {};
 ```
 
 - `instance`- `C_Item` instance to get the pointer of

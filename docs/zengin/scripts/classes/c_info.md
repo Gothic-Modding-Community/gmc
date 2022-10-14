@@ -11,7 +11,7 @@ Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https
 <details>
   <summary>C_Info Daedalus class</summary>
 
-```c++
+```dae
 CLASS C_Info
 {
     var int    npc;         // npc instance has the dialogue
@@ -46,7 +46,7 @@ Description of the class member variables.
 
 ### npc
 Sets what NPC will have this dialogue instance. Set a NPC instance.
-```c++
+```dae
 INSTANCE Info_Diego_Gamestart (C_INFO)
 {
 	npc	= PC_Thief; // NPC instance for Diego
@@ -57,7 +57,7 @@ INSTANCE Info_Diego_Gamestart (C_INFO)
 ### nr
 The `nr` member variables determines the order of shown dialogues. Dialogues are ordered in the ascending order - instances with higher `nr` are below instances with lower `nr`.
 
-```c++
+```dae
 INSTANCE Info_Diego_Gamestart (C_INFO)
 {
     // ...
@@ -86,7 +86,7 @@ When `important` is set to `TRUE` the description is not needed, since the dialo
 Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it return `FALSE` it is not displayed. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Condition`.
 
 === "Conditioned dialogue"
-    ```c++
+    ```dae
     INSTANCE Info_Diego_Gamestart (C_INFO)
     {
         // ...
@@ -104,7 +104,7 @@ Condition function with signature `func int f()`. If the function returns `TRUE`
     };
     ```
 === "Unconditioned dialogue"
-    ```c++
+    ```dae
     INSTANCE Info_Diego_EXIT_Gamestart(C_INFO)
     {
         // ...
@@ -124,7 +124,7 @@ Condition function with signature `func int f()`. If the function returns `TRUE`
 ### information
 The `information` function contains the function name (without double quotes `""` as `func` is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPC's will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Info`.
 
-```c++
+```dae
 INSTANCE Info_Diego_Gamestart (C_INFO)
 {
     npc         = PC_Thief;
@@ -157,7 +157,7 @@ FUNC VOID Info_Diego_Gamestart_Info()
 ### description
 Specify a string that will be shown in the dialogue window.
 
-```c++
+```dae
 instance DIA_XARDAS_GMC(C_INFO)
 {
     // ...
@@ -170,7 +170,7 @@ instance DIA_XARDAS_GMC(C_INFO)
 
 ### trade
 If `trade` is set to `TRUE` the trading interface will be launched after the content `information` function is finished.
-```c++ title="Fisk's trade dialogue"
+```dae title="Fisk's trade dialogue"
 instance  Stt_311_Fisk_Trade (C_INFO)
 {
     npc         = Stt_311_Fisk;

@@ -10,7 +10,7 @@ Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https
 <details>
   <summary>C_Item Daedalus class</summary>
 
-```c++
+```dae
 CLASS C_Item
 {
     // For all Items
@@ -98,7 +98,7 @@ A selection of the most important class members.
   `change_atr` stores the attributes that will be changad by the amount specified in `change_value`.
 
 NPCs have these attributes:
-```c++
+```dae
 const int ATR_HITPOINTS      =  0;  // Hit points
 const int ATR_HITPOINTS_MAX  =  1;  // Max hitpoints
 const int ATR_MANA           =  2;  // Mana
@@ -112,7 +112,7 @@ const int ATR_REGENERATEMANA =  7;  // Mana regeneration per second
 
 This can be used on all eqippable items, to change the attributes. As an example, we can create a sword, that has a 10 point dexterity bonus.
 
-```c++
+```dae
 INSTANCE ItMw_testSword (C_Item)
 {
     // some code
@@ -131,7 +131,7 @@ You can change `ATR_HITPOINTS_MAX` and `ATR_MANA_MAX` attributes in [on_equip](#
  `cond_atr` stores the attributes that will be checked as a requirement to equip an item, the amount specified in `cond_value`.
 
 The next example sword is equippable only, if the NPC has at least 5 strength. If the requirements are not met [`G_CanNotUse()`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/G_Functions/G_CanNotUse.d) is called.
-```c++
+```dae
 INSTANCE ItMw_testSword (C_Item)
 {
     // some code
@@ -143,7 +143,7 @@ INSTANCE ItMw_testSword (C_Item)
   
 Try injecting the code below [zParserExtender](../../scripts/extenders/zParserExtender/injection.md) to test it in game right away. It is compatible with G2NotR.
 
-```c++
+```dae
 INSTANCE ItMw_testSword (C_Item)
 {
     name            = TXT_Spells[10]; // demonstrates the usage of direct constr array access
@@ -180,7 +180,7 @@ To insert it into the game use `insert ItMw_testSword` in console.
 These two arrays are used to put information into the item information box. 
 ![Text and Count ](../../../img/c_item_text_count.png)
 The maximum number of lines is 6. This is defined in the engine, but for script side class definiton is declared in the scripts too.
-```c++
+```dae
 const int ITM_TEXT_MAX = 6;
 ```
 This example shows an item with all elements of `TEXT` and `COUNT` array filled. 
@@ -191,7 +191,7 @@ This example shows an item with all elements of `TEXT` and `COUNT` array filled.
 ![Item example](../../../img/c_item_example.png)
 
 You can find the code below
-```c++
+```dae
 INSTANCE ItMw_testSword (C_Item)
 {
     name          = TXT_Spells[10];
@@ -232,7 +232,7 @@ INSTANCE ItMw_testSword (C_Item)
 `name` - determines the focus name of the item in the world
 
 In the scripts you often find that the description is asigned the value of `name`.
-```c++
+```dae
 INSTANCE ItMw_testSword (C_Item)
 {
     name = "New amazing sword";
@@ -244,7 +244,7 @@ INSTANCE ItMw_testSword (C_Item)
 This is used in the case where you want to show the name of the item on focus too.
 
 There is a second way used in the scripts though, for example with magic scrolls the focus name in the world is "Scroll" and in inventory the scroll carries the name of the spell. This is how it is done.
-```c++
+```dae
 INSTANCE ItSc_InstantFireball (C_Item)
 {
 	name 				=	NAME_Spruchrolle; // const string = "Scroll"

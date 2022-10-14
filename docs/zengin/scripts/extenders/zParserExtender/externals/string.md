@@ -11,7 +11,7 @@ Format specifiers:
 `%f` - inserts a floating point number  
 `%b` - inserts a logical expression  
 `%p` - inserts a pointer  
-```c++
+```dae
 func string Str_Format( var string format, ... ) {};
 ```
 
@@ -24,18 +24,18 @@ func string Str_Format( var string format, ... ) {};
 Very powerful function, can be used to streamline strings used in the scripts as well as optimize them for translations.
 
 Define constants containing the string with format specifiers.
-```c++
+```dae
 const string MENU_SAVE = "Slot %i - press ENTER to save in this slot.";
 const string MENU_LOAD = "Slot %i - press ENTER to load saved game.";
 ```  
 Then define two format functions as such:
-```c++
+```dae
 func string GetSaveSlotString (var int number)
 {
   return Str_format(MENU_SAVE, number);
 };
 ```
-```c++
+```dae
 func string GetLoadSlotString (var int number)
 {
     return Str_format(MENU_LOAD, number);
@@ -49,7 +49,7 @@ func string GetLoadSlotString (var int number)
 Returns a string in the current language, otherwise in English.  
 Arguments MUST be encoded in **UTF-8!** The result string will be converted to apropriate ANSI string.
 
-```c++
+```dae
 func string Str_GetLocalizedString( var string russian,
                                     var string english,
                                     var string german,
@@ -66,7 +66,7 @@ func string Str_GetLocalizedString( var string russian,
 Returns a string in the current language, otherwise in English.
 Offers additional languages
 
-```c++
+```dae
 func string Str_GetLocalizedStringEx( var string russian, 
                                       var string english,
                                       var string german,
@@ -89,7 +89,7 @@ func string Str_GetLocalizedStringEx( var string russian,
 
 ## Str_UTF8_to_ANSI
 Converts UTF-8 string into an ANSI string with codePage
-```c++
+```dae
 func string Str_UTF8_to_ANSI( var string utf8, var int codePage ) {};
 ```
 
@@ -99,7 +99,7 @@ func string Str_UTF8_to_ANSI( var string utf8, var int codePage ) {};
 
 ## Str_GetCurrentCP
 Return the code page corresponding to the current language set in the Union System
-```c++
+```dae
 func int Str_GetCurrentCP() {};
 ```
 
@@ -107,7 +107,7 @@ func int Str_GetCurrentCP() {};
 
 ## Str_GetLength
 Returns the length of a string
-```c++
+```dae
 func int Str_GetLength( var int str ) {};
 ```
 
@@ -116,7 +116,7 @@ func int Str_GetLength( var int str ) {};
 
 ## Externals with docu comments
 
-```c++
+```dae
 /// Returns formatted string using format specifiers
 /// 
 /// Format specifiers:

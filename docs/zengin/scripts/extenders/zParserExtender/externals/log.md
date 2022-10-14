@@ -11,7 +11,7 @@ Returns the status of diary topic
 - `3` - Failure
 - `4` - Obsolete
 
-```c++
+```dae
 func int Log_GetTopicStatus(var string topic)
 ```
 
@@ -26,7 +26,7 @@ Returns the topic the diary topic is in
 - `1` - Notes
 - `2` - All
 
-```c++
+```dae
 func int Log_GetTopicSection(var string topic)
 ```
 
@@ -34,7 +34,7 @@ func int Log_GetTopicSection(var string topic)
 - `return` - topic section
 
 ## Externals with docu comments
-```c++
+```dae
 /// Returns the status of diary topic
 /// Not found   - (-1)
 /// Free        - 0

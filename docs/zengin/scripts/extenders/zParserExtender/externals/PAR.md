@@ -1,6 +1,6 @@
 # PAR - functions for parser manipulation
 Parser functions are used to manipulate the parsers. Retrieve SymbolID, access arrays and such.
-```c++
+```dae
 func int Par_GetParserID(var string parName) {};
 
 func int Par_GetSymbolID(var int parId, var string symName) {};

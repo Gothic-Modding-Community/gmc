@@ -9,8 +9,8 @@ Hook/replacement will be performed only, if the `MergeMode` setting is set to tr
 When an object (instanc, function or variable) is hooked/replaced, the original one is available under the same name with the `_old` suffix (`PC_Hero` -> `PC_Hero_old`), this allows you to refer to the old object.
 
 ## Function hook example
-```c++
-void void ZS_Attack_Loop()
+```dae
+func void ZS_Attack_Loop()
 {
     // if the enemy is a player and has no weapon, then
     // also sheath the weapon.
@@ -30,7 +30,7 @@ This kind of substitution works for instances and variables too.
     While hooking instances, you have to take care not to call the prototype. Prototype should be always changed back to the original class.
   
     
-    ```c++ title="This is wrong"
+    ```dae title="This is wrong"
     instance pc_hero(Npc_Default)
     {
         pc_hero_old();
@@ -40,7 +40,7 @@ This kind of substitution works for instances and variables too.
     This leads to a double call of `prototype Npc_Default` which is considered an unsafe practice with undefined behaviour.
 
 The correct way is to call it like this:
-```c++
+```dae
 instance pc_hero(C_NPC) // no prototype Npc_Default
 {
     pc_hero_old();
@@ -58,7 +58,7 @@ All new or replaced dialogues will immediately become available, including from 
 !!! warning
     Currently not working as intended (I think). The old dialogue is still used and as a result you will end up with both the old and the new dialogue (unless you edit the old condition function).
   
-```c++
+```dae
 instance DIA_XARDAS_HELLO(C_INFO)
 {
     DIA_XARDAS_HELLO_old();

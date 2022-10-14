@@ -1,7 +1,7 @@
 # Native WHILE loop
 Just like [Ikarus](../../../../notready.md) zParserExtender implements a while loop.
 
-```c++
+```dae
 var int value; value = 10;
 while(value > 0)
 {

@@ -8,7 +8,7 @@ This class represents basic pointer to a game world object.
 
 ## C_Color
 Represents color in the RGBA format
-```c++
+```dae
 class C_Color
 {
     var int R; // red channel value
@@ -20,7 +20,7 @@ class C_Color
 
 ## C_Position
 Represents 3D position in the world
-```c++
+```dae
 class C_Position
 {
     var int X; // X coordinate
@@ -29,7 +29,7 @@ class C_Position
 };
 ```
 Externals:
-```c++
+```dae
 /// Returns the current position of the object in the world
 /// 
 /// @param vob vob to ge the position of
@@ -48,7 +48,7 @@ func void Vob_SetVobPosition( var C_Vob vob, var C_Position pos ) {};
     
 ## C_VOB_DATA
 Represents universal `zCVob` class
-```c++
+```dae
 class C_VOB_DATA
 {
     var string Name;              // object name
@@ -68,7 +68,7 @@ class C_VOB_DATA
 };
 ```
 Externals:
-```c++
+```dae
 /// Returns the universal data of the zCVob object
 ///
 /// @param vob VOB to get the position of
@@ -83,7 +83,7 @@ func void Vob_SetVobData( var C_Vob vob, var C_Vob_Data data ) {};
 ```
 ## C_LIGHT_DATA
 Represents `zCVobLight` objects
-```c++
+```dae
 class C_LIGHT_DATA
 {
     var int R;                // red light intensity
@@ -108,7 +108,7 @@ class C_LIGHT_DATA
 };
 ```
 Externals:
-```c++
+```dae
 /// Returns zCVobLight object data
 ///
 /// @param vobLight vobLight object
@@ -145,7 +145,7 @@ func void Vob_AddLightAniColorRGB( var C_Vob vobLight,
 ```
 ## C_MOB_DATA
 Represents  data for the used oCMOB object
-```c++
+```dae
 class C_MOB_DATA
 {
     var string VisibleName;     // name shown above the object
@@ -164,7 +164,7 @@ class C_MOB_DATA
     var int FocusNameIndex;     // the script string of the displayed name
 };
 ```
-```c++
+```dae
 /// Returns the data of the oCMOB object
 ///
 /// @param mob oCMOB object
@@ -179,7 +179,7 @@ func void Vob_SetMobData( var C_Vob mob, var C_Mob_Data data ) {};
 ```
 ## C_MOBINTER_DATA
 Represents data for the interactive object `oCMobInter`
-```c++
+```dae
 class C_MOBINTER_DATA
 {
     var string TriggerTarget;   // object name which will be triggered by OnTrigger
@@ -195,7 +195,7 @@ class C_MOBINTER_DATA
     var int NpcStateAni;        // current character animation
 };
 ```
-```c++
+```dae
 /// Returns the data of the oCMobInter object
 ///
 /// @param mobInter oCMobInter object
@@ -210,7 +210,7 @@ func void Vob_SetMobInterData( var C_Vob mobInter, var C_MobInter_Data data ) {}
 ```
 ## C_MOBLOCKABLE_DATA
 Represents data for the locked interactive object `oCMobLockable`
-```c++
+```dae
 class C_MOBLOCKABLE_DATA
 {
     var int Locked;         // whether the object is locked
@@ -220,7 +220,7 @@ class C_MOBLOCKABLE_DATA
     var string PickLockStr; // combination to open the object ("LRRLR")
 };
 ```
-```c++
+```dae
 /// Returns the data of the oCMobLockable object
 ///
 /// @param mobLock oCMobLockable object

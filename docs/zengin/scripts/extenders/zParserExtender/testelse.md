@@ -12,11 +12,11 @@ The result can be combined from several arguments. Round brackets `()` ca be use
 
 
 The operator can be used anywhere in the script file. It is syntactically similar to `if else` statement, but curly braces `{}` can be omitted for single-line operations. For example:
-```c++ title="SteamActivated constant is set only when Steam is active"
+```dae title="SteamActivated constant is set only when Steam is active"
   test Steam var const SteamActivated = 1;
 ```
 
-```c++ title="Example of a logical expression with an else branch"
+```dae title="Example of a logical expression with an else branch"
   test SteamActivated && G2A 
   {
     // TODO

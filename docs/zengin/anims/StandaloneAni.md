@@ -17,7 +17,7 @@ Open Blender, **File > Import > Kerrax ASCII model (.asc)**, navigate to the fol
 !!! tip "What bone hierarchy is this model using?"
     From the `.mds` file, if you open it again, there is a command `meshAndTree` that specifies, what model contains the skeleton. And there lies our answer:
     
-    ```c++
+    ```dae
     Model ("HuS")
     {
         meshAndTree ("Hum_Body_Naked0.ASC" DONT_USE_MESH)
@@ -52,7 +52,7 @@ We can import an animation into Blender as a base.
 ![type:video](https://www.youtube.com/embed/boUwngFLA-U)
 
 In this video you can see, that the idle standing animation is `s_run`. Because we want to make an animation, that is going to start from this idle animation, we will import it into blender. Where do we find it? Just look into the `.mds` file, look for `s_run` name and get the name of the file.
-```c++
+```dae
 ani	("s_Run" 1 "s_Run" 0.1 0.1 MI "Hum_RunAmbient_M01.asc" F 1 50)
 ```
 As we can see, we have to import the `Hum_RunAmbient_M01.asc` file. 
@@ -74,7 +74,7 @@ Open the file, scroll to the end and define a new animation.
     All ani code has to be between the curly brackets, this means you have to insert it before the last two closing curly brackets `} }`.
 
 Let's write it
-```c++
+```dae
 ani ("t_backpain" 1 "" 0.0 0.0 M. "Hum_back.ASC" F 0 121)
 ```
 
@@ -87,7 +87,7 @@ Amazing, now you have your first animation in the game. And you can use it to do
 
 
 ## Example dialogue
-```c++
+```dae
 instance DIA_Xardas_Back (C_INFO)
 {
     npc         = NONE_100_Xardas;

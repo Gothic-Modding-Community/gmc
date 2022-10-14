@@ -12,8 +12,9 @@ Talents package uses one free AIVar variables, the default is AIVar with the ind
 
 ## Initialization
 Initialize with `LeGo_PermMem` flag.
-```c++
-LeGo_Init(LeGo_PermMem)
+```dae
+func void LeGo_Init(var int flags) {};
+LeGo_Init(LeGo_PermMem);
 ```
 
 ## Implementation
@@ -24,8 +25,8 @@ LeGo_Init(LeGo_PermMem)
 ### NPC_GetID
 Returns unique ID specific for provided NPC.
 
-```c++
-int NPC_GetID(c_npc slf)
+```dae
+func int NPC_GetID(var c_npc slf) {};
 ```
 
 - `slf` NPC
@@ -33,8 +34,8 @@ int NPC_GetID(c_npc slf)
 
 ### NPC_FindByID
 Finds the NPC pointer of an NPC with the given ID.
-```c++
-int NPC_FindByID(int ID)
+```dae
+func int NPC_FindByID(var int ID) {};
 ```
 
 - `ID` - NPC ID
@@ -42,9 +43,8 @@ int NPC_FindByID(int ID)
 
 ### NPC_FindByID
 Finds the NPC pointer of an NPC with the given ID.
-```c++
-
-int NPC_FindByID(int ID)
+```dae
+func int NPC_FindByID(var int ID) {};
 ```
 
 - `ID` NPC ID
@@ -52,17 +52,16 @@ int NPC_FindByID(int ID)
 
 ### TAL_CreateTalent
 Creates a talent, into which you can later save a value for every NPC (just like AI_Var).
-```c++
-int TAL_CreateTalent()
+```dae
+func int TAL_CreateTalent() {};
 ```
 
 - `return` - Value that can be later used as a talent index
 
 ### TAL_SetValue
 Sets a new value to the specified talent.
-```c++
-
-void TAL_SetValue(c_npc npc, int talent, int value)
+```dae
+func void TAL_SetValue(var c_npc npc, var int talent, var int value) {};
 ```
 
 - `npc` - Set the talent value for this NPC
@@ -71,8 +70,8 @@ void TAL_SetValue(c_npc npc, int talent, int value)
 
 ### TAL_GetValue
 Returns the value of a save talent for specified NPC.
-```c++
-int TAL_GetValue(c_npc npc, int talent)
+```dae
+func int TAL_GetValue(var c_npc npc, var int talent) {};
 ```
 
 - `npc` - Get the talent value from this NPC

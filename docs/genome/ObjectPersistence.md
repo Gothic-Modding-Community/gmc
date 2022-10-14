@@ -16,14 +16,14 @@ As this system is quite flexible, it is used to store most of the game's data, f
 
 ### Files
 
-``` cpp
+```cpp
 struct bCIOStream
 {
 	char data[];
 };
 ```
 
-``` cpp
+```cpp
 struct eCArchiveFile
 {
 	char8_t  magic[8];  // "GENOMFLE"
@@ -46,7 +46,7 @@ struct eCArchiveFile
 
 ### bCAccessorPropertyObject
 
-``` cpp
+```cpp
 bCAccessorPropertyObject::Read 
 {
 	uint16_t	version;	// 0x0001
@@ -179,7 +179,3 @@ object.someData = 1;
 ```
 
 If we now serialized, or to use the engine's term "archived", this instance into an ASCII stream, the result would look like this:
-
-```
-
-```

@@ -1,6 +1,6 @@
 # NPC - character functions
 NPC realted functions.
-```c++
+```dae
 func void Npc_SetAsHero( var C_NPC npc ) {};
 
 func void Npc_OpenInventory( var C_NPC npc ) {};

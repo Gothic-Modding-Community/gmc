@@ -3,7 +3,7 @@ External functions for data type conversion and pointer casting.
 
 ### Cast_PointerToInstance
 Converts memory address (pointer) to an instance
-```c++
+```dae
 func instance Cast_PointerToInstance(var int address) {};
 ```
 
@@ -12,7 +12,7 @@ func instance Cast_PointerToInstance(var int address) {};
 
 ### Cast_InstanceToPointer
 Converts instance to a memory address (pointer)
-```c++
+```dae
 func int Cast_InstanceToPointer( var instance object) {};
 ```
 
@@ -21,7 +21,7 @@ func int Cast_InstanceToPointer( var instance object) {};
 
 ### Cast_PointerToNpc
 Casts memory address (pointer) to an NPC
-```c++
+```dae
 func C_NPC Cast_PointerToNpc( var int address) {};
 ```
 
@@ -30,7 +30,7 @@ func C_NPC Cast_PointerToNpc( var int address) {};
 
 ### Cast_PointerToItem
 Casts memory address (pointer) to an Item
-```c++
+```dae
 func C_ITEM Cast_PointerToItem( var int address) {};
 ```
 
@@ -39,7 +39,7 @@ func C_ITEM Cast_PointerToItem( var int address) {};
 
 ### Cast_InstanceIsNpc
 Checks whether object is an NPC
-```c++
+```dae
 func int Cast_InstanceIsNpc( var instance object) {};
 ```
 
@@ -48,7 +48,7 @@ func int Cast_InstanceIsNpc( var instance object) {};
 
 ### Cast_InstanceIsItem
 Checks whether object is an Item
-```c++
+```dae
 func int Cast_InstanceIsItem( var instance object) {};
 ```
 
@@ -57,7 +57,7 @@ func int Cast_InstanceIsItem( var instance object) {};
 
 ### Cast_InstanceIsMob
 Checks whether object is an MOB
-```c++
+```dae
 func int Cast_InstanceIsMob( var instance object) {};
 ```
 
@@ -66,7 +66,7 @@ func int Cast_InstanceIsMob( var instance object) {};
 
 ### Cast_GetInstanceIndex
 Returns symbolID of the object, returns -1 when not found
-```c++
+```dae
 func int Cast_GetInstanceIndex( var instance object) {};
 ```
 
@@ -75,7 +75,7 @@ func int Cast_GetInstanceIndex( var instance object) {};
 
 ### Cast_GetClassID
 Returns the class identifier of a class by its name
-```c++
+```dae
 func int Cast_GetClassID( var string className ) {};
 ```
 
@@ -84,7 +84,7 @@ func int Cast_GetClassID( var string className ) {};
 
 ### Cast_GetVobClassID
 Returns class identifier of the zCObject vob class
-```c++
+```dae
 func int Cast_GetVobClassID( var instance object ) {};
 ```
 
@@ -93,7 +93,7 @@ func int Cast_GetVobClassID( var instance object ) {};
 
 ### Cast_CheckVobClassID
 Checks if the classId class is the parent class of the object
-```c++
+```dae
 func int Cast_CheckVobClassID( var int classId, var instance object ) {};
 ```
 
@@ -102,7 +102,7 @@ func int Cast_CheckVobClassID( var int classId, var instance object ) {};
 - `return` - class zCObject identifier
 
 # Externals with docu comments
-```c++
+```dae
 /// Converts memory address (pointer) to a instance
 /// 
 /// @param address object pointer
