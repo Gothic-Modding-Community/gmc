@@ -108,7 +108,7 @@ FUNC VOID DIA_Xardas_Password_Info () {
 ## Dialogue numbers
 This feature shows a dialogue number next to the dialogue line (visual for [Dialogue keyboard controls](#dialogue-keyboard-controls))  
 To turn this on, you just set `InfoManagerNumKeysNumbers` variable to true. (in your `INIT_GLOBAL()` function)
-```
+```dae
 InfoManagerNumKeysNumbers = TRUE;
 ```
 
@@ -117,7 +117,7 @@ InfoManagerNumKeysNumbers = TRUE;
     This has also been fixed int Union and we noticed a strange behavior with different keyboard layouts.
 
 This feature changes the way number keys affect dialogue selection. The first dialogue is no longer 0, by pressing appropriate number you highlight the dialogue option.
-```
+```dae
 InfoManagerNumKeysControls = TRUE;
 ```
 

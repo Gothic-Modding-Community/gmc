@@ -78,7 +78,7 @@ END
 
 If the archive is created using `zCArchiverBinSafe`, then this data will be stored in the following binary structure:
 
-```dae
+```cpp
 struct BinSafeArchiveHeader
 {
 	uint32_t version;		// Always equals 2
@@ -137,7 +137,7 @@ Inside the start of each chunk, there are 4 pieces of data separated by spaces, 
 
 If this is a Binary archive, the same data will be stored in the following binary structure:
 
-```dae
+```cpp
 struct BinaryObjectHeader
 {
 	uint32_t	objectSize;		// Size of the whole object in bytes
@@ -150,7 +150,7 @@ struct BinaryObjectHeader
 
 Oddly enough, if the archive is BinSafe, then the data will be encoded the same way as in ASCII mode, except that it will be stored as a type-checked property.
 
-```dae
+```cpp
 struct BinSafeObjectHeader
 {
 	uint32_t	type;	// 0x1 = TYPE_STRING
@@ -193,7 +193,7 @@ By default, `zCArchiver` allows to store properties of the following types:
 
 As you might have noticed, binary mode doesn't perform any kind of checks on if it's reading the right property or even data of the correct type. This is why BinSafe mode exists, as it stores the property type in along with the data itself.
 
-```dae
+```cpp
 enum TYPE
 {
 	TYPE_STRING		= 0x1,
@@ -241,7 +241,7 @@ struct BinSafeProperty
 
 Looking at the enumeration of types, you might notice that BinSafe mode has an additional property type called Hash. BinSafe archives include a hash table which is stored in the following manner:
 
-```dae
+```cpp
 struct BinSafeHashTable
 {
 	uint32_t chunkCount;
@@ -267,7 +267,7 @@ Within these routines, the class uses methods provided by the `zCArchiver` insta
 
 Let's propose that we have a class which is declared like so:
 
-```dae
+```cpp
 class zCMyClass : public zCObject
 {
 public:
@@ -288,7 +288,7 @@ public:
 
 The hypothetical class then implements these virtual functions:
 
-```dae
+```cpp
 void zCMyClass::Archive(zCArchiver& archiver)
 {
 	archiver.WriteInt("myInt", myInt);
@@ -315,7 +315,7 @@ void zCMyClass::Unarchive(zCArchiver& archiver)
 
 We then initialize the class in the following way:
 
-```dae
+```cpp
 zCMyClass object;
 
 object.myInt = 12121212;

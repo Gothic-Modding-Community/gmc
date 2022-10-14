@@ -16,14 +16,14 @@ As this system is quite flexible, it is used to store most of the game's data, f
 
 ### Files
 
-``` cpp
+```cpp
 struct bCIOStream
 {
 	char data[];
 };
 ```
 
-``` cpp
+```cpp
 struct eCArchiveFile
 {
 	char8_t  magic[8];  // "GENOMFLE"
@@ -46,7 +46,7 @@ struct eCArchiveFile
 
 ### bCAccessorPropertyObject
 
-``` cpp
+```cpp
 bCAccessorPropertyObject::Read 
 {
 	uint16_t	version;	// 0x0001
@@ -103,7 +103,7 @@ bCAccessorPropertyObject::Read
 
 === "Gothic 3"
 
-	```dae
+	```cpp
 	eCProcessibleElement::Load
 	{
 		uint32_t magic; // 0xD0DEFADE
@@ -116,7 +116,7 @@ bCAccessorPropertyObject::Read
 
 === "Risen"
 
-	```dae
+	```cpp
 	eCProcessibleElement::Load
 	{
 		bCAccessorPropertyObject::Read
@@ -132,7 +132,7 @@ bCAccessorPropertyObject::Read
 
 Let's propose that we have a class which is declared like so:
 
-```dae
+```cpp
 class gCMyClass : public bCObjectRefBase
 {
 public:
@@ -155,7 +155,7 @@ private:
 
 The hypothetical class then implements these virtual functions:
 
-```dae
+```cpp
 bEResult gCMyClass::Write(bCOStream& file)
 {
 	file << someData;
@@ -172,14 +172,10 @@ bEResult gCMyClass::Read(bCIStream& file)
 
 We then initialize the class in the following way:
 
-```dae
+```cpp
 gCMyClass object;
 object.myInt = 1;
 object.someData = 1;
 ```
 
 If we now serialized, or to use the engine's term "archived", this instance into an ASCII stream, the result would look like this:
-
-```
-
-```

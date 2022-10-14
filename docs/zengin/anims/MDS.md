@@ -195,7 +195,7 @@ Model ("CHESTBIG_OCCRATELARGE")
     }
 }
 ```
-``` mermaid
+```mermaid
 stateDiagram-v2
     s_S0      : Closed chest
     t_S0_2_S1 : Opening the chest
@@ -215,7 +215,7 @@ stateDiagram-v2
     s_S0 --> t_S0_Try
     t_S0_Try --> s_S0
 ```
-``` mermaid
+```mermaid
 stateDiagram-v2
     [*] --> s_S0
     s_S0 --> s_S0

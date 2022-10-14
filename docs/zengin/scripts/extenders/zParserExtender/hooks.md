@@ -10,7 +10,7 @@ When an object (instanc, function or variable) is hooked/replaced, the original 
 
 ## Function hook example
 ```dae
-void void ZS_Attack_Loop()
+func void ZS_Attack_Loop()
 {
     // if the enemy is a player and has no weapon, then
     // also sheath the weapon.
