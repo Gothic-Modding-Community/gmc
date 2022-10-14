@@ -9,7 +9,8 @@ This package allows you to create new console commands.
 ## Initialization
 Initialize with `LeGo_ConsoleCommands` flag.
 ```dae
-LeGo_Init(LeGo_ConsoleCommands)
+func void LeGo_Init(var int flags) {};
+LeGo_Init(LeGo_ConsoleCommands);
 ```
 
 ## Implementation
@@ -20,7 +21,7 @@ LeGo_Init(LeGo_ConsoleCommands)
 ### CC_Register
 Registers a new console command.
 ```dae
-void CC_Register(func f, string cmdPrefix, string description)
+func void CC_Register(var func f, var string cmdPrefix, var string description) {};
 ```
 
 - `f` - This function is executed when the command `cmdPrefix` is entered in the console. The function signature is `func string f(var string p0)`. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.
@@ -30,7 +31,7 @@ void CC_Register(func f, string cmdPrefix, string description)
 ### CC_Remove
 Removes a function from the console commands.
 ```dae
-void CC_Remove(func f)
+func void CC_Remove(var func f) {};
 ```
 
 - f - This function will be removed, i.e. the associated command will no longer work.
@@ -38,7 +39,7 @@ void CC_Remove(func f)
 ### CC_Active
 Checks whether the function passed is already part of a console command.
 ```dae
-int CC_Active(func f)
+func int CC_Active(var func f) {};
 ```
 
 - `f` - function being checked

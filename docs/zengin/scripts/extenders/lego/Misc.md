@@ -16,7 +16,7 @@ No initialization
 ### atan2f
 Calculates the arcus tangent of an angle between the origin and (x, y) point
 ```dae
-float atan2f(int x, int y)
+func float atan2f(var int x, var int y) {};
 ```
 
 - `x` -  x-coordinate
@@ -26,7 +26,7 @@ float atan2f(int x, int y)
 ### sin
 Calculates the sine of an angle given in radians.
 ```dae
-float sin (float angle)
+func float sin (var float angle) {};
 ```
 
 - `angle` - the angle in radians as a Ikarus `float`
@@ -35,7 +35,7 @@ float sin (float angle)
 ### cos
 Calculates the cosine of an angle given in radians.
 ```dae
-float cos (float angle)
+func float cos (var float angle) {};
 ```
 
 - `angle` - the angle in radians as a Ikarus `float`
@@ -45,7 +45,7 @@ float cos (float angle)
 ### tan
 Calculates the tangent of an angle given in radians.
 ```dae
-float tan (float angle)
+func float tan (var float angle) {};
 ```
 
 - `angle` - the angle in radians as a Ikarus `float`
@@ -54,7 +54,7 @@ float tan (float angle)
 ### asin
 Calculates the arcus sine
 ```dae
-float asin (float sine)
+func float asin (var float sine) {};
 ```
 
 - `sine` - the sine of an angle
@@ -63,7 +63,7 @@ float asin (float sine)
 ### acos
 Calculates the arcus cosine
 ```dae
-float acos (float cosine)
+func float acos (var float cosine) {};
 ```
 
 - `sine` - the cosine of an angle
@@ -73,7 +73,7 @@ float acos (float cosine)
 ### distance2D
 Calculates the distance between two points on a two-dimensional plane
 ```dae
-int distance2D(int x1, int x2, int y1, int y2)
+func int distance2D(var int x1, var int x2, var int y1, var int y2) {};
 ```
 
 - `x1` - X-coordinate of the first point
@@ -85,7 +85,7 @@ int distance2D(int x1, int x2, int y1, int y2)
 ### distance2Df
 Calculates the distance between two points on a two-dimensional plane as Ikarus `floats`
 ```dae
-float distance2Df(float x1, float x2, float y1, float y2)
+func float distance2Df(var float x1, var float x2, var float y1, var float y2) {};
 ```
 
 - `x1` - X-coordinate of the first point

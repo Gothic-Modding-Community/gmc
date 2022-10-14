@@ -8,7 +8,8 @@ This package allows you to create conversations with any number of NPC's and con
 ## Initialization
 Initialize with `LeGo_Trialoge` flag.
 ```dae
-LeGo_Init(LeGo_Trialoge)
+func void LeGo_Init(var int flags) {};
+LeGo_Init(LeGo_Trialoge);
 ```
 ## Implementation
 [:material-github: Trialoge.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Trialoge.d)
@@ -18,7 +19,7 @@ LeGo_Init(LeGo_Trialoge)
 ### EquipWeapon
 Sektenspinner's function. (Taken from the forum.) 
 ```dae
-void EquipWeapon(c_npc slf, int ItemInstance)
+func void EquipWeapon(var c_npc slf, var int ItemInstance) {};
 ```
 
 - `slf` - NPC to have a weapon equipped
@@ -27,7 +28,7 @@ void EquipWeapon(c_npc slf, int ItemInstance)
 ### Npc_GetArmor
 Returns NPC's equipped armor.
 ```dae
-int Npc_GetArmor(c_npc slf)
+func int Npc_GetArmor(var c_npc slf) {};
 ```
 
 - `slf` - NPC to get the armour from
@@ -36,7 +37,7 @@ int Npc_GetArmor(c_npc slf)
 ### Npc_GetMeleeWeapon
 Returns NPC's equipped melee weapon.
 ```dae
-int Npc_GetMeleeWeapon(c_npc slf)
+func int Npc_GetMeleeWeapon(var c_npc slf) {};
 ```
 
 - `slf` - NPC to get the weapon from
@@ -44,31 +45,30 @@ int Npc_GetMeleeWeapon(c_npc slf)
 ### DiaCAM_Update
 Sektenspinner's function. Updates the dialogue camera. (Used internally.)
 ```dae
-void DiaCAM_Update()
+func void DiaCAM_Update() {};
 ```
 
 ### DiaCAM_Disable
 Completely disable the dialogue cameras.
 ```dae
-void DiaCAM_Disable()
+func void DiaCAM_Disable() {};
 ```
 
 ### DiaCAM_Enable
 Resets the dialogue cameras to the default settings.
 ```dae
-void DiaCAM_Enable()
-
+func void DiaCAM_Enable() {};
 ```
 ### TRIA_Wait
 Makes `self` and `other` wait for each other, e.g. for `AI_GotoW`P actions for synchronization. 
 ```dae
-void TRIA_Wait()
+func void TRIA_Wait() {};
 ```
 
 ### TRIA_Invite
 Invites an NPC into a conversation. Must be called before `TRIA_Start`.
 ```dae
-void TRIA_Invite(c_npc slf)
+func void TRIA_Invite(c_npc slf) {};
 ```
 
 - `slf` - The invited NPC
@@ -76,19 +76,19 @@ void TRIA_Invite(c_npc slf)
 ### TRIA_Start
 Starts trialogues. Before that, all NPC's should be invited by `TRI_Invite`.
 ```dae
-void TRIA_Start()
+func void TRIA_Start() {};
 ```
 
 ### TRIA_Barrier
 Similar to `TRIA_Wait` but applies to all participating NPCs.
 ```dae
-void TRIA_Barrier()
+func void TRIA_Barrier() {};
 ```
 
 ### TRIA_Next
 Sets the called npc to `self`.
 ```dae
-void TRIA_Next(c_npc n0)
+func void TRIA_Next(c_npc n0) {};
 ```
 
 - `n0` - can be addressed with `self`
@@ -96,7 +96,7 @@ void TRIA_Next(c_npc n0)
 ### TRIA_Cam
 Starts a tracking shot. 
 ```dae
-void TRIA_Cam(string evt)
+func void TRIA_Cam(string evt) {};
 ```
 
 - `evt` - the name of the tracking shot in Spacer. If `""` is passed, the running trace shot will be aborted
@@ -104,7 +104,7 @@ void TRIA_Cam(string evt)
 ### TRIA_Finish
 Ends an ongoing trialogue. Must always be called at the end, otherwise no further trialogues can be started.
 ```dae
-void TRIA_Finish()
+func void TRIA_Finish() {};
 ```
 
 ## Examples

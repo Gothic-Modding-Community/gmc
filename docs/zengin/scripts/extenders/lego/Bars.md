@@ -9,7 +9,8 @@ With this package it is very easy to add new bars for e.g. stamina.
 ## Initialization
 Initialize with `LeGo_Bars` flag.
 ```dae
-LeGo_Init(LeGo_Bars)
+func void LeGo_Init(var int flags) {};
+LeGo_Init(LeGo_Bars);
 ```
 ## Implementation
 [:material-github: Bars.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Bars.d)
@@ -22,7 +23,7 @@ LeGo_Init(LeGo_Bars)
 ### Bar_Create
 Creates a new bar from a constructor instance.
 ```dae
-int Bar_Create(instance bar)
+func int Bar_Create(var int bar) {};
 ```
 
 - `bar` - constructor instance of 'Bar' class
@@ -31,7 +32,7 @@ int Bar_Create(instance bar)
 ### Bar_Delete
 Deletes a bar from the screen and from memory. 
 ```dae
-void Bar_Delete(int handle)
+func void Bar_Delete(var int handle) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -39,7 +40,7 @@ void Bar_Delete(int handle)
 ### Bar_SetMax
 Changes a bar's maximum value, but does not update its bar length (only `Bar_SetPercent`, `Bar_SetPromille` and `Bar_SetValue`)
 ```dae
-void Bar_SetMax(int handle, int max)
+func void Bar_SetMax(var int handle, var int max) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -48,7 +49,7 @@ void Bar_SetMax(int handle, int max)
 ### Bar_SetValue
 Sets the value of the bar.
 ```dae
-void Bar_SetValue(int handle, int value)
+func void Bar_SetValue(var int handle, var int value) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -57,7 +58,7 @@ void Bar_SetValue(int handle, int value)
 ### Bar_SetPercent
 Sets the value of the bar, but as a percentage (0..100).
 ```dae
-void Bar_SetPercent(int handle, int percent)
+func void Bar_SetPercent(var int handle, var int percent) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -66,7 +67,7 @@ void Bar_SetPercent(int handle, int percent)
 ### Bar_SetPromille
 Sets the value of the bar, but in per mille (0..1000).
 ```dae
-void Bar_SetPromille(int handle, int promille)
+func void Bar_SetPromille(var int handle, var int promille) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -75,7 +76,7 @@ void Bar_SetPromille(int handle, int promille)
 ### Bar_Hide
 Hides a bar. It will not be deleted. 
 ```dae
-void Bar_Hide(int handle)
+func void Bar_Hide(var int handle) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -83,7 +84,7 @@ void Bar_Hide(int handle)
 ### Bar_Show
 Displays a bar again after using `Bar_Hide`. 
 ```dae
-void Bar_Show(int handle)
+func void Bar_Show(var int handle) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -91,7 +92,7 @@ void Bar_Show(int handle)
 ### Bar_MoveTo
 Move the bar to virtual position. 
 ```dae
-void Bar_MoveTo(int handle, int x, int y)
+func void Bar_MoveTo(var int handle, var int x, var int y) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -101,7 +102,7 @@ void Bar_MoveTo(int handle, int x, int y)
 ### Bar_SetAlpha
 Sets the opacity of the bar.
 ```dae
-void Bar_SetAlpha(int handle, int alpha)
+func void Bar_SetAlpha(var int handle, var int alpha) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -110,7 +111,7 @@ void Bar_SetAlpha(int handle, int alpha)
 ### Bar_SetBarTexture
 Sets the foreground texture of the bar.
 ```dae
-void Bar_SetBarTexture(int handle, string texture)
+func void Bar_SetBarTexture(var int handle, var string texture) {};
 ```
 
 - `handle` - handle returned from `Bar_Create`
@@ -119,8 +120,9 @@ void Bar_SetBarTexture(int handle, string texture)
 ### Bar_SetBackTexture
 Sets the background texture of the bar.
 ```dae
-void Bar_SetBackTexture(int handle, string texture)
+func void Bar_SetBackTexture(var int handle, var string texture) {};
 ```
+
 - `handle` - handle returned from `Bar_Create`
 - `texture` - The new background texture
 
