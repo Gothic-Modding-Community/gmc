@@ -2710,36 +2710,36 @@
 </div>
 <p>When an object (instanc, function or variable) is hooked/replaced, the original one is available under the same name with the <code>_old</code> suffix (<code>PC_Hero</code> -&gt; <code>PC_Hero_old</code>), this allows you to refer to the old object.</p>
 <h2 id="function-hook-example">Function hook example<a class="headerlink" href="#function-hook-example" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ZS_Attack_Loop</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ZS_Attack_Loop</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// if the enemy is a player and has no weapon, then</span>
-<span class="w">    </span><span class="c1">// also sheath the weapon.</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Npc_IsPlayer</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">Npc_HasReadiedWeapon</span><span class="p">(</span><span class="n">other</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="c">// if the enemy is a player and has no weapon, then</span><span class="w"></span>
+<span class="w">    </span><span class="c">// also sheath the weapon.</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Externals">Npc_IsPlayer</span><span class="p">(</span><span class="bp">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nb nb-Externals">Npc_HasReadiedWeapon</span><span class="p">(</span><span class="bp">other</span><span class="p">))</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">LOOP_END</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kr">return</span><span class="w"> </span><span class="n">LOOP_END</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">// otherwise call the original function</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ZS_Attack_Loop_Old</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c">// otherwise call the original function</span><span class="w"></span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">ZS_Attack_Loop_Old</span><span class="p">();</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <p>This kind of substitution works for instances and variables too.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>While hooking instances, you have to take care not to call the prototype. Prototype should be always changed back to the original class.</p>
-<p><div class="highlight"><span class="filename">This is wrong</span><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">pc_hero</span><span class="p">(</span><span class="n">Npc_Default</span><span class="p">)</span><span class="w"></span>
+<p><div class="highlight"><span class="filename">This is wrong</span><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">pc_hero</span><span class="p">(</span><span class="nc">Npc_Default</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">pc_hero_old</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pepe&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pepe&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 This leads to a double call of <code>prototype Npc_Default</code> which is considered an unsafe practice with undefined behaviour.</p>
 </div>
 <p>The correct way is to call it like this:
-<div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">pc_hero</span><span class="p">(</span><span class="n">C_NPC</span><span class="p">)</span><span class="w"> </span><span class="c1">// no prototype Npc_Default</span>
+<div class="highlight"><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">pc_hero</span><span class="p">(</span><span class="nc">C_NPC</span><span class="p">)</span><span class="w"> </span><span class="c">// no prototype Npc_Default</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">pc_hero_old</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pepe&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pepe&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w">  </span>
 </code></pre></div>
 This way the prototype is called in the original function <code>pc_hero_old()</code> and not for the second time, when creating the new hooked instance.</p>
@@ -2750,10 +2750,10 @@ This way the prototype is called in the original function <code>pc_hero_old()</c
 <p class="admonition-title">Warning</p>
 <p>Currently not working as intended (I think). The old dialogue is still used and as a result you will end up with both the old and the new dialogue (unless you edit the old condition function).</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">DIA_XARDAS_HELLO</span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">DIA_XARDAS_HELLO</span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">DIA_XARDAS_HELLO_old</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">important</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">important</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 
@@ -2762,7 +2762,7 @@ This way the prototype is called in the original function <code>pc_hero_old()</c
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:43:28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

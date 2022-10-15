@@ -2727,7 +2727,7 @@
 <li><code>3</code> - Failure</li>
 <li><code>4</code> - Obsolete</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Log_GetTopicStatus</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicStatus</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>topic</code> - name of the topic</li>
@@ -2741,34 +2741,34 @@
 <li><code>1</code> - Notes</li>
 <li><code>2</code> - All</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Log_GetTopicSection</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicSection</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>topic</code> - name of the topic</li>
 <li><code>return</code> - topic section</li>
 </ul>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1">/// Returns the status of diary topic</span>
-<span class="c1">/// Not found   - (-1)</span>
-<span class="c1">/// Free        - 0</span>
-<span class="c1">/// Running     - 1</span>
-<span class="c1">/// Success     - 2</span>
-<span class="c1">/// Failure     - 3</span>
-<span class="c1">/// Obsolete    - 4</span>
-<span class="c1">///</span>
-<span class="c1">/// @param topic name of the topic</span>
-<span class="c1">/// @return topic status</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Log_GetTopicStatus</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Returns the status of diary topic</span><span class="w"></span>
+<span class="c">/// Not found   - (-1)</span><span class="w"></span>
+<span class="c">/// Free        - 0</span><span class="w"></span>
+<span class="c">/// Running     - 1</span><span class="w"></span>
+<span class="c">/// Success     - 2</span><span class="w"></span>
+<span class="c">/// Failure     - 3</span><span class="w"></span>
+<span class="c">/// Obsolete    - 4</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param topic name of the topic</span><span class="w"></span>
+<span class="c">/// @return topic status</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicStatus</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns the topic the diary topic is in</span>
-<span class="c1">/// Not found   - (-1)</span>
-<span class="c1">/// Missions    - 0</span>
-<span class="c1">/// Notes       - 1</span>
-<span class="c1">/// All         - 2</span>
-<span class="c1">///</span>
-<span class="c1">/// @param topic name of the topic</span>
-<span class="c1">/// @return topic section</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Log_GetTopicSection</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns the topic the diary topic is in</span><span class="w"></span>
+<span class="c">/// Not found   - (-1)</span><span class="w"></span>
+<span class="c">/// Missions    - 0</span><span class="w"></span>
+<span class="c">/// Notes       - 1</span><span class="w"></span>
+<span class="c">/// All         - 2</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param topic name of the topic</span><span class="w"></span>
+<span class="c">/// @return topic section</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicSection</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 
   <hr>
@@ -2776,7 +2776,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-11 13:53:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

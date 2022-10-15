@@ -2778,26 +2778,26 @@
 <p class="admonition-title">Warning</p>
 <p>If the mod uses Ikarus, the <code>CompileDat</code> option (in the <code>.ini</code> file) should be used, since a fatal error may occur whe using the command.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="n">Parser</span><span class="w"> </span><span class="n">SaveDat</span><span class="w"> </span><span class="n">OU</span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">OU</span><span class="p">.</span><span class="n">Edited</span><span class="p">.</span><span class="n">bin</span><span class="w"></span>
-<span class="n">Parser</span><span class="w"> </span><span class="n">SaveDat</span><span class="w"> </span><span class="n">Game</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">Gothic</span><span class="p">.</span><span class="n">Edited</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="n">Parser</span><span class="w"> </span><span class="n">SaveDat</span><span class="w"> </span><span class="n">SFX</span><span class="w">       </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">SFX</span><span class="p">.</span><span class="n">Edited</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="n">Parser</span><span class="w"> </span><span class="n">SaveDat</span><span class="w"> </span><span class="n">PFX</span><span class="w">       </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">ParticleFX</span><span class="p">.</span><span class="n">Edited</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="n">Parser</span><span class="w"> </span><span class="n">SaveDat</span><span class="w"> </span><span class="n">VFX</span><span class="w">       </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">VisualFX</span><span class="p">.</span><span class="n">Edited</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="n">Parser</span><span class="w"> </span><span class="n">SaveDat</span><span class="w"> </span><span class="n">Camera</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">Camera</span><span class="p">.</span><span class="n">Edited</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="n">Parser</span><span class="w"> </span><span class="n">SaveDat</span><span class="w"> </span><span class="n">Menu</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">Menu</span><span class="p">.</span><span class="n">Edited</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="n">Parser</span><span class="w"> </span><span class="n">SaveDat</span><span class="w"> </span><span class="n">Music</span><span class="w">     </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">Music</span><span class="p">.</span><span class="n">Edited</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="n">Parser</span><span class="w"> </span><span class="n">Export</span><span class="w"> </span><span class="n">Stringlist</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">exports</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">full</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Scripts</span><span class="err">\</span><span class="n">Exports</span><span class="err">\</span><span class="n">StringList</span><span class="p">.</span><span class="n">d</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code>Parser SaveDat OU        - exports OU.Edited.bin
+Parser SaveDat Game      - exports Gothic.Edited.dat
+Parser SaveDat SFX       - exports SFX.Edited.dat
+Parser SaveDat PFX       - exports ParticleFX.Edited.dat
+Parser SaveDat VFX       - exports VisualFX.Edited.dat
+Parser SaveDat Camera    - exports Camera.Edited.dat
+Parser SaveDat Menu      - exports Menu.Edited.dat
+Parser SaveDat Music     - exports Music.Edited.dat
+Parser Export Stringlist - exports the full string table to Scripts\Exports\StringList.d
 </code></pre></div>
 <h2 id="launch-options">Launch options<a class="headerlink" href="#launch-options" title="Permanent link"></a></h2>
 <p>Command line parameters can be passed to the game's exe via the command line or using GothicStarter_Mod.</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span><span class="n">zReparse_OU</span><span class="w">     </span><span class="o">-</span><span class="w"> </span><span class="n">parses</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">OU</span><span class="p">.</span><span class="n">bin</span><span class="w"></span>
-<span class="o">-</span><span class="n">zReparse_Game</span><span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="n">parses</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">Gothic</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="o">-</span><span class="n">zReparse_SFX</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">parses</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">SFX</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="o">-</span><span class="n">zReparse_PFX</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">parses</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">ParticleFX</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="o">-</span><span class="n">zReparse_VFX</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">parses</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">VisualFX</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="o">-</span><span class="n">zReparse_Camera</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">parses</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">Camera</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="o">-</span><span class="n">zReparse_Menu</span><span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="n">parses</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">Menu</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
-<span class="o">-</span><span class="n">zReparse_Music</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">parses</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">Music</span><span class="p">.</span><span class="n">dat</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code>zReparse_OU     - parses and creates OU.bin
+zReparse_Game   - parses and creates Gothic.dat
+zReparse_SFX    - parses and creates SFX.dat
+zReparse_PFX    - parses and creates ParticleFX.dat
+zReparse_VFX    - parses and creates VisualFX.dat
+zReparse_Camera - parses and creates Camera.dat
+zReparse_Menu   - parses and creates Menu.dat
+zReparse_Music  - parses and creates Music.dat
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2809,9 +2809,9 @@
 <h2 id="const-array-access">Const array access<a class="headerlink" href="#const-array-access" title="Permanent link"></a></h2>
 <p>The original zParser doesn't allow direct access to <code>const string</code> arrays. zParserExtender allows you to do so.</p>
 <p>Example:
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="n">GameInit</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Hlp_MessageBox</span><span class="p">(</span><span class="n">TXT_INV_CAT</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Prints &quot;Artifacts&quot;</span>
+<span class="w">    </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="n">TXT_INV_CAT</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span><span class="w"> </span><span class="c">// Prints &quot;Artifacts&quot;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="other-engine-fixes">Other engine fixes<a class="headerlink" href="#other-engine-fixes" title="Permanent link"></a></h2>
@@ -2826,7 +2826,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:43:28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

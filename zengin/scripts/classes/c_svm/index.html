@@ -2762,44 +2762,44 @@
 </table>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link"></a></h2>
 <p>The number of instances is defined by a constant integer with a specified name read by the engine.
-<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SVM_MODULES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SVM_MODULES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The value <code>SVM_MODULES = 18</code> means 18 SVMs will be parsed by the engine and because the first one <code>SVM_0</code> is empty, the final number of voices is 18 - 1 = 17.</p>
 </div>
 <p>Instances of the <code>C_SVM</code> class <strong>must</strong> have the name <code>SVM_XXX</code>.
-<div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">svm_1</span><span class="p">(</span><span class="n">c_svm</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">svm_1</span><span class="p">(</span><span class="nc">c_svm</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="c1">// ...</span>
+<span class="w">   </span><span class="c">// ...</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 The first instance <code>svm_0</code> is always empty, it is used internally by the engine.
-<div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">svm_0</span><span class="p">(</span><span class="n">c_svm</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">svm_0</span><span class="p">(</span><span class="nc">c_svm</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="usage-in-the-scripts">Usage in the scripts<a class="headerlink" href="#usage-in-the-scripts" title="Permanent link"></a></h2>
 <p>While some of the defined SVMs are used automatically by the engine - the 20 smalltalk lines for example, others are used in the scripts.<br />
 To instruct the engine to run a specific SVM a <code>AI_OutputSVM</code> external function is used, in the original scripts it is wrapped in a script function <a href="https://github.com/VaanaCZ/gothic-1-classic-scripts/blob/6204f608f506f169035c58552197285bce4ffa39/_work/Data/Scripts/Content/AI/AI_Intern/B_Functions.d#L111-L120">B_Say</a>.<br />
 To reference the SVM, you use the <code>$</code> symbol followed by the name of the member variable in the <code>C_SVM</code> class definition.<br />
-<div class="highlight"><pre><span></span><code><span class="c1">// some code</span>
+<div class="highlight"><pre><span></span><code><span class="c">// some code</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">PrintScreen</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Not enough skill points!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="mi">-1</span><span class="p">,</span><span class="s">&quot;FONT_OLD_20_WHITE.TGA&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="hll"><span class="w">        </span><span class="n">B_Say</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;$NOLEARNNOPOINTS&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nb nb-Externals">PrintScreen</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Not enough skill points!&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;FONT_OLD_20_WHITE.TGA&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="n">B_Say</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;$NOLEARNNOPOINTS&quot;</span><span class="p">);</span><span class="w"></span>
 </span><span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="c1">// some code</span>
+<span class="c">// some code</span><span class="w"></span>
 </code></pre></div>
 Here the <code>$NOLEARNNOPOINTS</code> references the <code>var string NoLearnNoPoints</code> in <a href="https://github.com/VaanaCZ/gothic-1-classic-scripts/blob/6204f608f506f169035c58552197285bce4ffa39/_work/Data/Scripts/Content/Story/SVM.d#L125">SVM.D</a>. The voice is then chosen automatically by the engine.
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">C_SVM</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">C_SVM</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">//...</span>
+<span class="w">    </span><span class="c">//...</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">// Lehrer-Kommentare</span>
-<span class="hll"><span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">NoLearnNoPoints</span><span class="p">;</span><span class="w">       </span><span class="c1">// NSC-Lehrer verbietet Steigerung - keine Lernpunkte!</span>
-</span><span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">NoLearnOverMax</span><span class="p">;</span><span class="w">        </span><span class="c1">// NSC-Lehrer verbietet Attribut-Steigerung über 100</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">NoLearnYouAlreadyKnow</span><span class="p">;</span><span class="w"> </span><span class="c1">// Du mußt erst Fortgeschritten sein, bevor du ein Meister werden kannst!</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">NoLearnYoureBetter</span><span class="p">;</span><span class="w">    </span><span class="c1">// Du bist jetzt schon besser!</span>
+<span class="w">    </span><span class="c">// Lehrer-Kommentare</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">NoLearnNoPoints</span><span class="p">;</span><span class="w">       </span><span class="c">// NSC-Lehrer verbietet Steigerung - keine Lernpunkte!</span><span class="w"></span>
+</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">NoLearnOverMax</span><span class="p">;</span><span class="w">        </span><span class="c">// NSC-Lehrer verbietet Attribut-Steigerung über 100</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">NoLearnYouAlreadyKnow</span><span class="p">;</span><span class="w"> </span><span class="c">// Du mußt erst Fortgeschritten sein, bevor du ein Meister werden kannst!</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">NoLearnYoureBetter</span><span class="p">;</span><span class="w">    </span><span class="c">// Du bist jetzt schon besser!</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//...</span>
+<span class="w">    </span><span class="c">//...</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 
@@ -2808,7 +2808,7 @@ Here the <code>$NOLEARNNOPOINTS</code> references the <code>var string NoLearnNo
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:39:21</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

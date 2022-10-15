@@ -2643,17 +2643,17 @@
 
 <h1 id="event-functions">Event functions<a class="headerlink" href="#event-functions" title="Permanent link"></a></h1>
 <p>Event functions are functions sharing the same name, that can be defined multiple times, but only once per file. Such functions are useful for implementing <em>callback</em> type functions. Every time an event is called, all instances of the same name will be called. The event is <code>func</code> with a return type <code>event</code>. Events are defined globally, meaning, they ignore namespace they are in. To call an event from a script, use the external function <a href="../externals/#hlp-help-functions"><code>Hlp_DoEvent(var string funcName)</code></a>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GiveXP</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">GiveXP</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">Hlp_DoEvent</span><span class="p">(</span><span class="s">&quot;OnGiveXP&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">func</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="n">OnGiveXP</span><span class="p">()</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">OnGiveXP</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// TODO</span>
-<span class="w">    </span><span class="c1">// This function can be defined in many files to do different things</span>
-<span class="w">    </span><span class="c1">// more appropriate for that file&#39;s context and all of them will be</span>
-<span class="w">    </span><span class="c1">// called, when function GiveXP (above) is called.</span>
+<span class="w">    </span><span class="c">// TODO</span><span class="w"></span>
+<span class="w">    </span><span class="c">// This function can be defined in many files to do different things</span><span class="w"></span>
+<span class="w">    </span><span class="c">// more appropriate for that file&#39;s context and all of them will be</span><span class="w"></span>
+<span class="w">    </span><span class="c">// called, when function GiveXP (above) is called.</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <p>Plugin implements two of these <a href="../externals/#event-functions-and-variables">event functions</a></p>
@@ -2668,7 +2668,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:43:28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

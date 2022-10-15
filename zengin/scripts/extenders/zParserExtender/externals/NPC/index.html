@@ -2643,46 +2643,46 @@
 
 <h1 id="npc-character-functions">NPC - character functions<a class="headerlink" href="#npc-character-functions" title="Permanent link"></a></h1>
 <p>NPC realted functions.
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Npc_SetAsHero</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Npc_SetAsHero</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Npc_OpenInventory</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Npc_OpenInventory</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Npc_OpenInventorySteal</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Npc_OpenInventorySteal</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Npc_OpenInventoryTrade</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Npc_OpenInventoryTrade</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns an item in NPC&#39;s left hand slot</span>
-<span class="c1">///</span>
-<span class="c1">/// @param npc npc to be affected</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Item</span><span class="w"> </span><span class="n">Npc_GetLeftHandItem</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns an item in NPC&#39;s left hand slot</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param npc npc to be affected</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_Item</span><span class="w"> </span><span class="nf">Npc_GetLeftHandItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns an item in NPC&#39;s right hand slot</span>
-<span class="c1">///</span>
-<span class="c1">/// @param npc npc to be affected</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Item</span><span class="w"> </span><span class="n">Npc_GetRightHandItem</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns an item in NPC&#39;s right hand slot</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param npc npc to be affected</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_Item</span><span class="w"> </span><span class="nf">Npc_GetRightHandItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns an item from a slot with the slotName</span>
-<span class="c1">///</span>
-<span class="c1">/// @param npc npc to be affected</span>
-<span class="c1">/// @param slotName name of the slot</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Item</span><span class="w"> </span><span class="n">Npc_GetSlotItem</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">slotName</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns an item from a slot with the slotName</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param npc npc to be affected</span><span class="w"></span>
+<span class="c">/// @param slotName name of the slot</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_Item</span><span class="w"> </span><span class="nf">Npc_GetSlotItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">slotName</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Places an instance of the oCVom class (including items and NPCs) object into the slotName of the NPC</span>
-<span class="c1">/// The copyInInv parameter determines wheter a copy of the object should remian in the character&#39;s inventory</span>
-<span class="c1">///</span>
-<span class="c1">/// @param npc npc to remove the item from</span>
-<span class="c1">/// @param slotName name of the slot fro which to remove the item</span>
-<span class="c1">/// @param object object to be inserted into the slot</span>
-<span class="c1">/// @param copyInInv should a copy of the object stay in character inventory</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Npc_PutInSlot</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">slotName</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">copyInInv</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Places an instance of the oCVom class (including items and NPCs) object into the slotName of the NPC</span><span class="w"></span>
+<span class="c">/// The copyInInv parameter determines wheter a copy of the object should remian in the character&#39;s inventory</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param npc npc to remove the item from</span><span class="w"></span>
+<span class="c">/// @param slotName name of the slot fro which to remove the item</span><span class="w"></span>
+<span class="c">/// @param object object to be inserted into the slot</span><span class="w"></span>
+<span class="c">/// @param copyInInv should a copy of the object stay in character inventory</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Npc_PutInSlot</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">slotName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">copyInInv</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Removes an object from the slotName of the NPC.</span>
-<span class="c1">/// The dropIt parameter in Gothic 2 defines, wheter or not the object should drop out of the slot. In Gothic 1, this parameter is reserved and must be 0.</span>
-<span class="c1">///</span>
-<span class="c1">/// @param npc npc to remove the item from</span>
-<span class="c1">/// @param slotName name of the slot fro which to remove the item</span>
-<span class="c1">/// @param dropIt should the object be dropped</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Npc_RemoveFromSlot</span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">slotName</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dropIt</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Removes an object from the slotName of the NPC.</span><span class="w"></span>
+<span class="c">/// The dropIt parameter in Gothic 2 defines, wheter or not the object should drop out of the slot. In Gothic 1, this parameter is reserved and must be 0.</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param npc npc to remove the item from</span><span class="w"></span>
+<span class="c">/// @param slotName name of the slot fro which to remove the item</span><span class="w"></span>
+<span class="c">/// @param dropIt should the object be dropped</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Npc_RemoveFromSlot</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">slotName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dropIt</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 
   <hr>
@@ -2690,7 +2690,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:43:28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

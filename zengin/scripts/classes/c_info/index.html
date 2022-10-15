@@ -2874,16 +2874,16 @@
 <details>
   <summary>C_Info Daedalus class</summary>
 
-<div class="highlight"><pre><span></span><code><span class="n">CLASS</span><span class="w"> </span><span class="n">C_Info</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">CLASS</span><span class="w"> </span><span class="nc">C_Info</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">npc</span><span class="p">;</span><span class="w">         </span><span class="c1">// npc instance has the dialogue</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">nr</span><span class="p">;</span><span class="w">          </span><span class="c1">// number of the dialogue (for sorting)</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">important</span><span class="p">;</span><span class="w">   </span><span class="c1">// should the npc start the dialogue automatically</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">func</span><span class="w">   </span><span class="n">condition</span><span class="p">;</span><span class="w">   </span><span class="c1">// condition function</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">func</span><span class="w">   </span><span class="n">information</span><span class="p">;</span><span class="w"> </span><span class="c1">// function called on selecting the dialogue</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">;</span><span class="w"> </span><span class="c1">// text in the dialogue box</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">trade</span><span class="p">;</span><span class="w">       </span><span class="c1">// should the dialogue show the trade window</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">permanent</span><span class="p">;</span><span class="w">   </span><span class="c1">// should the dialogue be permanent or only one time deal</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">npc</span><span class="p">;</span><span class="w">         </span><span class="c">// npc instance has the dialogue</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">nr</span><span class="p">;</span><span class="w">          </span><span class="c">// number of the dialogue (for sorting)</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">important</span><span class="p">;</span><span class="w">   </span><span class="c">// should the npc start the dialogue automatically</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w">   </span><span class="n">condition</span><span class="p">;</span><span class="w">   </span><span class="c">// condition function</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w">   </span><span class="n">information</span><span class="p">;</span><span class="w"> </span><span class="c">// function called on selecting the dialogue</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">description</span><span class="p">;</span><span class="w"> </span><span class="c">// text in the dialogue box</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">trade</span><span class="p">;</span><span class="w">       </span><span class="c">// should the dialogue show the trade window</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">permanent</span><span class="p">;</span><span class="w">   </span><span class="c">// should the dialogue be permanent or only one time deal</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 
@@ -2945,19 +2945,19 @@
 <p>Description of the class member variables.</p>
 <h3 id="npc">npc<a class="headerlink" href="#npc" title="Permanent link"></a></h3>
 <p>Sets what NPC will have this dialogue instance. Set a NPC instance.
-<div class="highlight"><pre><span></span><code><span class="n">INSTANCE</span><span class="w"> </span><span class="nf">Info_Diego_Gamestart</span><span class="w"> </span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">Info_Diego_Gamestart</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">npc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Thief</span><span class="p">;</span><span class="w"> </span><span class="c1">// NPC instance for Diego</span>
-<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="vi">npc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Thief</span><span class="p">;</span><span class="w"> </span><span class="c">// NPC instance for Diego</span><span class="w"></span>
+<span class="w">    </span><span class="c">// ...</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <h3 id="nr">nr<a class="headerlink" href="#nr" title="Permanent link"></a></h3>
 <p>The <code>nr</code> member variables determines the order of shown dialogues. Dialogues are ordered in the ascending order - instances with higher <code>nr</code> are below instances with lower <code>nr</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">INSTANCE</span><span class="w"> </span><span class="nf">Info_Diego_Gamestart</span><span class="w"> </span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">Info_Diego_Gamestart</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// ...</span>
-<span class="w">    </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="c">// ...</span><span class="w"></span>
+<span class="w">    </span><span class="vi">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c">// ...</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <div class="admonition note">
@@ -2984,34 +2984,34 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Conditioned dialogue</label><label for="__tabbed_1_2">Unconditioned dialogue</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">INSTANCE</span><span class="w"> </span><span class="nf">Info_Diego_Gamestart</span><span class="w"> </span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">Info_Diego_Gamestart</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// ...</span>
-<span class="w">    </span><span class="n">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="c">// ...</span><span class="w"></span>
+<span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c">// ...</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">INT</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Condition</span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="nf">Info_Diego_Gamestart_Condition</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Kapitel</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// Show only when chapter is less than 2</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">Kapitel</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c">// Show only when chapter is less than 2</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"> </span><span class="c1">// Not needed, but added for readability</span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"> </span><span class="c">// Not needed, but added for readability</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">INSTANCE</span><span class="w"> </span><span class="nf">Info_Diego_EXIT_Gamestart</span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">Info_Diego_EXIT_Gamestart</span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// ...</span>
-<span class="w">    </span><span class="n">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Info_Diego_EXIT_Gamestart_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="c">// ...</span><span class="w"></span>
+<span class="w">    </span><span class="vi">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Info_Diego_EXIT_Gamestart_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c">// ...</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">INT</span><span class="w"> </span><span class="n">Info_Diego_EXIT_Gamestart_Condition</span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="nf">Info_Diego_EXIT_Gamestart_Condition</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"> </span><span class="c1">// or return 1;</span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"> </span><span class="c">// or return 1;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 </div>
@@ -3023,65 +3023,65 @@
 </div>
 <h3 id="information">information<a class="headerlink" href="#information" title="Permanent link"></a></h3>
 <p>The <code>information</code> function contains the function name (without double quotes <code>""</code> as <code>func</code> is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPC's will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: <code>{DialogueName}_Info</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">INSTANCE</span><span class="w"> </span><span class="nf">Info_Diego_Gamestart</span><span class="w"> </span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">Info_Diego_Gamestart</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Thief</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Info</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">important</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Thief</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Info</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">important</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">INT</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Condition</span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="nf">Info_Diego_Gamestart_Condition</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Kapitel</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">Kapitel</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">VOID</span><span class="w"> </span><span class="n">Info_Diego_Gamestart_Info</span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">Info_Diego_Gamestart_Info</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">AI_Output</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">hero</span><span class="p">,</span><span class="s">&quot;Info_Diego_Gamestart_11_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//I&#39;m Diego.</span>
-<span class="w">    </span><span class="n">AI_Output</span><span class="p">(</span><span class="n">hero</span><span class="p">,</span><span class="n">self</span><span class="p">,</span><span class="s">&quot;Info_Diego_Gamestart_15_01&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//I&#39;m...</span>
-<span class="w">    </span><span class="n">AI_Output</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">hero</span><span class="p">,</span><span class="s">&quot;Info_Diego_Gamestart_11_02&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//I&#39;m not interested in who you are. You&#39;ve just arrived. I look after the new arrivals. That&#39;s all for now.</span>
-<span class="w">    </span><span class="n">AI_Output</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">hero</span><span class="p">,</span><span class="s">&quot;Info_Diego_Gamestart_11_03&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//If you plan to stay alive for a while, you should talk to me. But of course I won&#39;t keep you from choosing your own destruction. Well, what do you think?</span>
+<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="bp">hero</span><span class="p">,</span><span class="s">&quot;Info_Diego_Gamestart_11_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//I&#39;m Diego.</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="bp">self</span><span class="p">,</span><span class="s">&quot;Info_Diego_Gamestart_15_01&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//I&#39;m...</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="bp">hero</span><span class="p">,</span><span class="s">&quot;Info_Diego_Gamestart_11_02&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//I&#39;m not interested in who you are. You&#39;ve just arrived. I look after the new arrivals. That&#39;s all for now.</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="bp">hero</span><span class="p">,</span><span class="s">&quot;Info_Diego_Gamestart_11_03&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//If you plan to stay alive for a while, you should talk to me. But of course I won&#39;t keep you from choosing your own destruction. Well, what do you think?</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">B_Kapitelwechsel</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Show the chapter 1 screen</span>
+<span class="w">    </span><span class="n">B_Kapitelwechsel</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">// Show the chapter 1 screen</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <h3 id="description">description<a class="headerlink" href="#description" title="Permanent link"></a></h3>
 <p>Specify a string that will be shown in the dialogue window.</p>
-<div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">DIA_XARDAS_GMC</span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">DIA_XARDAS_GMC</span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// ...</span>
-<span class="w">    </span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, is this the GMC site?&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c">// ...</span><span class="w"></span>
+<span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, is this the GMC site?&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <p><img alt="Description" src="../../../../img/c_info_description.png" /></p>
 <h3 id="trade">trade<a class="headerlink" href="#trade" title="Permanent link"></a></h3>
 <p>If <code>trade</code> is set to <code>TRUE</code> the trading interface will be launched after the content <code>information</code> function is finished.
-<div class="highlight"><span class="filename">Fisk's trade dialogue</span><pre><span></span><code><span class="n">instance</span><span class="w">  </span><span class="nf">Stt_311_Fisk_Trade</span><span class="w"> </span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><span class="filename">Fisk's trade dialogue</span><pre><span></span><code><span class="kd">instance</span><span class="w">  </span><span class="n">Stt_311_Fisk_Trade</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">Stt_311_Fisk</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Stt_311_Fisk_Trade_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stt_311_Fisk_Trade_Info</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Show me your goods.&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">trade</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">Stt_311_Fisk</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Stt_311_Fisk_Trade_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stt_311_Fisk_Trade_Info</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Show me your goods.&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">trade</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="n">Stt_311_Fisk_Trade_Condition</span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="nf">Stt_311_Fisk_Trade_Condition</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">VOID</span><span class="w">  </span><span class="n">Stt_311_Fisk_Trade_Info</span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w">  </span><span class="nf">Stt_311_Fisk_Trade_Info</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Stt_311_Fisk_Trade_15_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//Show me your goods.</span>
+<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Stt_311_Fisk_Trade_15_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Show me your goods.</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <div class="admonition trivia">
@@ -3104,7 +3104,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:43:28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

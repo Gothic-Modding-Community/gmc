@@ -2795,35 +2795,35 @@
 <p>This class represents basic pointer to a game world object.</p>
 <h2 id="c_color">C_Color<a class="headerlink" href="#c_color" title="Permanent link"></a></h2>
 <p>Represents color in the RGBA format
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">C_Color</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">C_Color</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">R</span><span class="p">;</span><span class="w"> </span><span class="c1">// red channel value</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">G</span><span class="p">;</span><span class="w"> </span><span class="c1">// green channel value</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="c1">// blue channel value</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w"> </span><span class="c1">// alpha channel value</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">R</span><span class="p">;</span><span class="w"> </span><span class="c">// red channel value</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">G</span><span class="p">;</span><span class="w"> </span><span class="c">// green channel value</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="c">// blue channel value</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w"> </span><span class="c">// alpha channel value</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="c_position">C_Position<a class="headerlink" href="#c_position" title="Permanent link"></a></h2>
 <p>Represents 3D position in the world
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">C_Position</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">C_Position</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="c1">// X coordinate</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Y coordinate</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Z</span><span class="p">;</span><span class="w"> </span><span class="c1">// Z coordinate</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="c">// X coordinate</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c">// Y coordinate</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Z</span><span class="p">;</span><span class="w"> </span><span class="c">// Z coordinate</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 Externals:
-<div class="highlight"><pre><span></span><code><span class="c1">/// Returns the current position of the object in the world</span>
-<span class="c1">/// </span>
-<span class="c1">/// @param vob vob to ge the position of</span>
-<span class="c1">/// @return C_Position instace - position of the VOB</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Position</span><span class="w"> </span><span class="n">Vob_GetVobPosition</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vob</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Returns the current position of the object in the world</span><span class="w"></span>
+<span class="c">/// </span><span class="w"></span>
+<span class="c">/// @param vob vob to ge the position of</span><span class="w"></span>
+<span class="c">/// @return C_Position instace - position of the VOB</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_Position</span><span class="w"> </span><span class="nf">Vob_GetVobPosition</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vob</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Sets the current position of the object in the world</span>
-<span class="c1">/// </span>
-<span class="c1">/// @param vob vob to get the position of</span>
-<span class="c1">/// @param pos new position of the vob</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_SetVobPosition</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vob</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Position</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Sets the current position of the object in the world</span><span class="w"></span>
+<span class="c">/// </span><span class="w"></span>
+<span class="c">/// @param vob vob to get the position of</span><span class="w"></span>
+<span class="c">/// @param pos new position of the vob</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_SetVobPosition</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vob</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Position</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2831,180 +2831,180 @@ Externals:
 </div>
 <h2 id="c_vob_data">C_VOB_DATA<a class="headerlink" href="#c_vob_data" title="Permanent link"></a></h2>
 <p>Represents universal <code>zCVob</code> class
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">C_VOB_DATA</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">C_VOB_DATA</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span><span class="w">              </span><span class="c1">// object name</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">VisualAlpha</span><span class="p">;</span><span class="w">        </span><span class="c1">// object&#39;s transparency 0.0 - 1.0</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ShowVisual</span><span class="p">;</span><span class="w">           </span><span class="c1">// display the mode</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DrawBBox3D</span><span class="p">;</span><span class="w">           </span><span class="c1">// show objects bounding box</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">VisualAlphaEnabled</span><span class="p">;</span><span class="w">   </span><span class="c1">// enables objects transparency</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">PhysicsEnabled</span><span class="p">;</span><span class="w">       </span><span class="c1">// enables object&#39;s physics</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IgnoredByTraceRay</span><span class="p">;</span><span class="w">    </span><span class="c1">// allow any object collisions</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">CollDetectionStatic</span><span class="p">;</span><span class="w">  </span><span class="c1">// allow collision with static world polygons</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">CollDetectionDynamic</span><span class="p">;</span><span class="w"> </span><span class="c1">// allow collision with dynamic world objects</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">CastDynShadow</span><span class="p">;</span><span class="w">        </span><span class="c1">// display shadow of the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LightColorStatDirty</span><span class="p">;</span><span class="w">  </span><span class="c1">// allow static liging of the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LightColorDynDirty</span><span class="p">;</span><span class="w">   </span><span class="c1">// allow dynamic lighing of the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SleepingMode</span><span class="p">;</span><span class="w">         </span><span class="c1">// sets object&#39;s activity mode (0 - inactive, 1 - active, 2 - AI only)</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DontWriteIntoArchive</span><span class="p">;</span><span class="w"> </span><span class="c1">// turns of the serialization of this object to the save file </span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span><span class="w">              </span><span class="c">// object name</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">VisualAlpha</span><span class="p">;</span><span class="w">        </span><span class="c">// object&#39;s transparency 0.0 - 1.0</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ShowVisual</span><span class="p">;</span><span class="w">           </span><span class="c">// display the mode</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DrawBBox3D</span><span class="p">;</span><span class="w">           </span><span class="c">// show objects bounding box</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">VisualAlphaEnabled</span><span class="p">;</span><span class="w">   </span><span class="c">// enables objects transparency</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">PhysicsEnabled</span><span class="p">;</span><span class="w">       </span><span class="c">// enables object&#39;s physics</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IgnoredByTraceRay</span><span class="p">;</span><span class="w">    </span><span class="c">// allow any object collisions</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">CollDetectionStatic</span><span class="p">;</span><span class="w">  </span><span class="c">// allow collision with static world polygons</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">CollDetectionDynamic</span><span class="p">;</span><span class="w"> </span><span class="c">// allow collision with dynamic world objects</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">CastDynShadow</span><span class="p">;</span><span class="w">        </span><span class="c">// display shadow of the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LightColorStatDirty</span><span class="p">;</span><span class="w">  </span><span class="c">// allow static liging of the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LightColorDynDirty</span><span class="p">;</span><span class="w">   </span><span class="c">// allow dynamic lighing of the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SleepingMode</span><span class="p">;</span><span class="w">         </span><span class="c">// sets object&#39;s activity mode (0 - inactive, 1 - active, 2 - AI only)</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DontWriteIntoArchive</span><span class="p">;</span><span class="w"> </span><span class="c">// turns of the serialization of this object to the save file </span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 Externals:
-<div class="highlight"><pre><span></span><code><span class="c1">/// Returns the universal data of the zCVob object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param vob VOB to get the position of</span>
-<span class="c1">/// @return general vob data C_Vob_Data</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Vob_Data</span><span class="w"> </span><span class="n">Vob_GetVobData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vob</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Returns the universal data of the zCVob object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param vob VOB to get the position of</span><span class="w"></span>
+<span class="c">/// @return general vob data C_Vob_Data</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_Vob_Data</span><span class="w"> </span><span class="nf">Vob_GetVobData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vob</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Sets the universal data to a zCVob object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param vob VOB to get the position of</span>
-<span class="c1">/// @param data general vob data C_Vob_Data</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_SetVobData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vob</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Sets the universal data to a zCVob object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param vob VOB to get the position of</span><span class="w"></span>
+<span class="c">/// @param data general vob data C_Vob_Data</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_SetVobData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vob</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="c_light_data">C_LIGHT_DATA<a class="headerlink" href="#c_light_data" title="Permanent link"></a></h2>
 <p>Represents <code>zCVobLight</code> objects
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">C_LIGHT_DATA</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">C_LIGHT_DATA</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">R</span><span class="p">;</span><span class="w">                </span><span class="c1">// red light intensity</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">G</span><span class="p">;</span><span class="w">                </span><span class="c1">// green light intensity</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w">                </span><span class="c1">// blue light intensity</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Range</span><span class="p">;</span><span class="w">            </span><span class="c1">// radius</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeInv</span><span class="p">;</span><span class="w">         </span><span class="c1">// </span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeBackup</span><span class="p">;</span><span class="w">      </span><span class="c1">// </span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeAniActFrame</span><span class="p">;</span><span class="w"> </span><span class="c1">// current light animation frame for the radius</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeAniFPS</span><span class="p">;</span><span class="w">      </span><span class="c1">// speed of light animation for the radius</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ColorAniActFrame</span><span class="p">;</span><span class="w"> </span><span class="c1">// current light animation frame for colour</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ColorAniFPS</span><span class="p">;</span><span class="w">      </span><span class="c1">// speed of light animation for colour</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SpotConeAngleDeg</span><span class="p">;</span><span class="w"> </span><span class="c1">// angle of cone light source</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IsStatic</span><span class="p">;</span><span class="w">         </span><span class="c1">// whether the source is static</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeAniSmooth</span><span class="p">;</span><span class="w">   </span><span class="c1">// [UNUSED]</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeAniLoop</span><span class="p">;</span><span class="w">     </span><span class="c1">// [UNUSED]</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ColorAniSmooth</span><span class="p">;</span><span class="w">   </span><span class="c1">// allows soft transitions between colours</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ColorAniLoop</span><span class="p">;</span><span class="w">     </span><span class="c1">// [UNUSED]</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IsTurnedOn</span><span class="p">;</span><span class="w">       </span><span class="c1">// whether the light source is on</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LightQuality</span><span class="p">;</span><span class="w">     </span><span class="c1">// source quality (when statically compiling light) (0 - high, 1 - medium, 2 - low)</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LightType</span><span class="p">;</span><span class="w">        </span><span class="c1">// type of source (at static light compilation) (0 - point, 1 - cone)</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">R</span><span class="p">;</span><span class="w">                </span><span class="c">// red light intensity</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">G</span><span class="p">;</span><span class="w">                </span><span class="c">// green light intensity</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w">                </span><span class="c">// blue light intensity</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Range</span><span class="p">;</span><span class="w">            </span><span class="c">// radius</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeInv</span><span class="p">;</span><span class="w">         </span><span class="c">// </span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeBackup</span><span class="p">;</span><span class="w">      </span><span class="c">// </span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeAniActFrame</span><span class="p">;</span><span class="w"> </span><span class="c">// current light animation frame for the radius</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeAniFPS</span><span class="p">;</span><span class="w">      </span><span class="c">// speed of light animation for the radius</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ColorAniActFrame</span><span class="p">;</span><span class="w"> </span><span class="c">// current light animation frame for colour</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ColorAniFPS</span><span class="p">;</span><span class="w">      </span><span class="c">// speed of light animation for colour</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SpotConeAngleDeg</span><span class="p">;</span><span class="w"> </span><span class="c">// angle of cone light source</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IsStatic</span><span class="p">;</span><span class="w">         </span><span class="c">// whether the source is static</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeAniSmooth</span><span class="p">;</span><span class="w">   </span><span class="c">// [UNUSED]</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RangeAniLoop</span><span class="p">;</span><span class="w">     </span><span class="c">// [UNUSED]</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ColorAniSmooth</span><span class="p">;</span><span class="w">   </span><span class="c">// allows soft transitions between colours</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ColorAniLoop</span><span class="p">;</span><span class="w">     </span><span class="c">// [UNUSED]</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IsTurnedOn</span><span class="p">;</span><span class="w">       </span><span class="c">// whether the light source is on</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LightQuality</span><span class="p">;</span><span class="w">     </span><span class="c">// source quality (when statically compiling light) (0 - high, 1 - medium, 2 - low)</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LightType</span><span class="p">;</span><span class="w">        </span><span class="c">// type of source (at static light compilation) (0 - point, 1 - cone)</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 Externals:
-<div class="highlight"><pre><span></span><code><span class="c1">/// Returns zCVobLight object data</span>
-<span class="c1">///</span>
-<span class="c1">/// @param vobLight vobLight object</span>
-<span class="c1">/// @return C_Light_Data of the light</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Light_Data</span><span class="w"> </span><span class="n">Vob_GetLightData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Returns zCVobLight object data</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param vobLight vobLight object</span><span class="w"></span>
+<span class="c">/// @return C_Light_Data of the light</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_Light_Data</span><span class="w"> </span><span class="nf">Vob_GetLightData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Sets the data of a zCVobLight object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param vobLight object to apply the light data to</span>
-<span class="c1">/// @param data C_Light_Data light data to be set</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_SetLightData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Light_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Sets the data of a zCVobLight object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param vobLight object to apply the light data to</span><span class="w"></span>
+<span class="c">/// @param data C_Light_Data light data to be set</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_SetLightData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Light_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Clears the list of animation colours for the light source</span>
-<span class="c1">///</span>
-<span class="c1">/// @param vobLight light vob</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_ClearLightAniList</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Clears the list of animation colours for the light source</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param vobLight light vob</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_ClearLightAniList</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Adds a color to the colour list</span>
-<span class="c1">///</span>
-<span class="c1">/// @param vobLight object to apply the colour to</span>
-<span class="c1">/// @param col colour to be applied</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_AddLightAniColor</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Color</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Adds a color to the colour list</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param vobLight object to apply the colour to</span><span class="w"></span>
+<span class="c">/// @param col colour to be applied</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_AddLightAniColor</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Color</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Adds a color to the colour list</span>
-<span class="c1">///</span>
-<span class="c1">/// @param vobLight object to apply the colour to</span>
-<span class="c1">/// @param r red colour channel</span>
-<span class="c1">/// @param g green colour channel </span>
-<span class="c1">/// @param b blue colour channel</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_AddLightAniColorRGB</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                   </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                   </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                   </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Adds a color to the colour list</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param vobLight object to apply the colour to</span><span class="w"></span>
+<span class="c">/// @param r red colour channel</span><span class="w"></span>
+<span class="c">/// @param g green colour channel </span><span class="w"></span>
+<span class="c">/// @param b blue colour channel</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_AddLightAniColorRGB</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">vobLight</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                   </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                   </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                   </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="c_mob_data">C_MOB_DATA<a class="headerlink" href="#c_mob_data" title="Permanent link"></a></h2>
 <p>Represents  data for the used oCMOB object
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">C_MOB_DATA</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">C_MOB_DATA</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">VisibleName</span><span class="p">;</span><span class="w">     </span><span class="c1">// name shown above the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Hitpoints</span><span class="p">;</span><span class="w">          </span><span class="c1">// number of hitpoints</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Damage</span><span class="p">;</span><span class="w">             </span><span class="c1">// damage the object can cause</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IsDestroyed</span><span class="p">;</span><span class="w">        </span><span class="c1">// if the object is destroyed</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Moveable</span><span class="p">;</span><span class="w">           </span><span class="c1">// whether the object can be moved</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Takeable</span><span class="p">;</span><span class="w">           </span><span class="c1">// whether the object can be taken</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">FocusOverride</span><span class="p">;</span><span class="w">      </span><span class="c1">// if the object will redefine focus in combat mode</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SndMat</span><span class="p">;</span><span class="w">             </span><span class="c1">// object&#39;s material (0 - wood, 1 - stone, 2 - metal, 3 - skin, 4 - clay, 5 - glass)</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">VisualDestroyed</span><span class="p">;</span><span class="w"> </span><span class="c1">// model when the object is destroyed</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">OwnerStr</span><span class="p">;</span><span class="w">        </span><span class="c1">// name of the instance of the owner of the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">OwnerGuildStr</span><span class="p">;</span><span class="w">   </span><span class="c1">// name of the guild of the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Owner</span><span class="p">;</span><span class="w">              </span><span class="c1">// instance of the owner</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">OwnerGuild</span><span class="p">;</span><span class="w">         </span><span class="c1">// guild instance</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">FocusNameIndex</span><span class="p">;</span><span class="w">     </span><span class="c1">// the script string of the displayed name</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">VisibleName</span><span class="p">;</span><span class="w">     </span><span class="c">// name shown above the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Hitpoints</span><span class="p">;</span><span class="w">          </span><span class="c">// number of hitpoints</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Damage</span><span class="p">;</span><span class="w">             </span><span class="c">// damage the object can cause</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IsDestroyed</span><span class="p">;</span><span class="w">        </span><span class="c">// if the object is destroyed</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Moveable</span><span class="p">;</span><span class="w">           </span><span class="c">// whether the object can be moved</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Takeable</span><span class="p">;</span><span class="w">           </span><span class="c">// whether the object can be taken</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">FocusOverride</span><span class="p">;</span><span class="w">      </span><span class="c">// if the object will redefine focus in combat mode</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SndMat</span><span class="p">;</span><span class="w">             </span><span class="c">// object&#39;s material (0 - wood, 1 - stone, 2 - metal, 3 - skin, 4 - clay, 5 - glass)</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">VisualDestroyed</span><span class="p">;</span><span class="w"> </span><span class="c">// model when the object is destroyed</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">OwnerStr</span><span class="p">;</span><span class="w">        </span><span class="c">// name of the instance of the owner of the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">OwnerGuildStr</span><span class="p">;</span><span class="w">   </span><span class="c">// name of the guild of the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Owner</span><span class="p">;</span><span class="w">              </span><span class="c">// instance of the owner</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">OwnerGuild</span><span class="p">;</span><span class="w">         </span><span class="c">// guild instance</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">FocusNameIndex</span><span class="p">;</span><span class="w">     </span><span class="c">// the script string of the displayed name</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// Returns the data of the oCMOB object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param mob oCMOB object</span>
-<span class="c1">/// @return mob data</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Mob_Data</span><span class="w"> </span><span class="n">Vob_GetMobData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">mob</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Returns the data of the oCMOB object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param mob oCMOB object</span><span class="w"></span>
+<span class="c">/// @return mob data</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_Mob_Data</span><span class="w"> </span><span class="nf">Vob_GetMobData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">mob</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Sets the data of the oCMOB object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param mob oCMOB object</span>
-<span class="c1">/// @param data C_Mob_Data to be set </span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_SetMobData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">mob</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Mob_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Sets the data of the oCMOB object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param mob oCMOB object</span><span class="w"></span>
+<span class="c">/// @param data C_Mob_Data to be set </span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_SetMobData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">mob</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Mob_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="c_mobinter_data">C_MOBINTER_DATA<a class="headerlink" href="#c_mobinter_data" title="Permanent link"></a></h2>
 <p>Represents data for the interactive object <code>oCMobInter</code>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">C_MOBINTER_DATA</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">C_MOBINTER_DATA</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">TriggerTarget</span><span class="p">;</span><span class="w">   </span><span class="c1">// object name which will be triggered by OnTrigger</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">UseWithItem</span><span class="p">;</span><span class="w">     </span><span class="c1">// name of the object instance that is needed for interaction</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Sceme</span><span class="p">;</span><span class="w">           </span><span class="c1">// name of the scene that corresponds to the object and character animations</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">ConditionFunc</span><span class="p">;</span><span class="w">   </span><span class="c1">// scripting condition under which the interaction can be performed</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">OnStateFuncName</span><span class="p">;</span><span class="w"> </span><span class="c1">// the name pattern of the functions that will be called when the object changes the state</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">State</span><span class="p">;</span><span class="w">              </span><span class="c1">// the current state of the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">State_num</span><span class="p">;</span><span class="w">          </span><span class="c1">// number of object&#39;s states</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">State_target</span><span class="w">        </span><span class="c1">// current state of the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Rewind</span><span class="p">;</span><span class="w">             </span><span class="c1">// prohibits object updating</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MobStateAni</span><span class="p">;</span><span class="w">        </span><span class="c1">// current animation of the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NpcStateAni</span><span class="p">;</span><span class="w">        </span><span class="c1">// current character animation</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">TriggerTarget</span><span class="p">;</span><span class="w">   </span><span class="c">// object name which will be triggered by OnTrigger</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">UseWithItem</span><span class="p">;</span><span class="w">     </span><span class="c">// name of the object instance that is needed for interaction</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Sceme</span><span class="p">;</span><span class="w">           </span><span class="c">// name of the scene that corresponds to the object and character animations</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ConditionFunc</span><span class="p">;</span><span class="w">   </span><span class="c">// scripting condition under which the interaction can be performed</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">OnStateFuncName</span><span class="p">;</span><span class="w"> </span><span class="c">// the name pattern of the functions that will be called when the object changes the state</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">State</span><span class="p">;</span><span class="w">              </span><span class="c">// the current state of the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">State_num</span><span class="p">;</span><span class="w">          </span><span class="c">// number of object&#39;s states</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">State_target</span><span class="w">        </span><span class="c">// current state of the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Rewind</span><span class="p">;</span><span class="w">             </span><span class="c">// prohibits object updating</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MobStateAni</span><span class="p">;</span><span class="w">        </span><span class="c">// current animation of the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NpcStateAni</span><span class="p">;</span><span class="w">        </span><span class="c">// current character animation</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// Returns the data of the oCMobInter object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param mobInter oCMobInter object</span>
-<span class="c1">/// @return MobInter_Data of the object</span>
-<span class="n">func</span><span class="w"> </span><span class="n">MobInter_Data</span><span class="w"> </span><span class="n">Vob_GetMobInterData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">mobInter</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Returns the data of the oCMobInter object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param mobInter oCMobInter object</span><span class="w"></span>
+<span class="c">/// @return MobInter_Data of the object</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">MobInter_Data</span><span class="w"> </span><span class="nf">Vob_GetMobInterData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">mobInter</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Sets the data of the oCMobInter object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param mobInter oCMobInter object</span>
-<span class="c1">/// @param data MobInter_Data of the object</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_SetMobInterData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">mobInter</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_MobInter_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Sets the data of the oCMobInter object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param mobInter oCMobInter object</span><span class="w"></span>
+<span class="c">/// @param data MobInter_Data of the object</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_SetMobInterData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">mobInter</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_MobInter_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="c_moblockable_data">C_MOBLOCKABLE_DATA<a class="headerlink" href="#c_moblockable_data" title="Permanent link"></a></h2>
 <p>Represents data for the locked interactive object <code>oCMobLockable</code>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">C_MOBLOCKABLE_DATA</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">C_MOBLOCKABLE_DATA</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Locked</span><span class="p">;</span><span class="w">         </span><span class="c1">// whether the object is locked</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AutoOpen</span><span class="p">;</span><span class="w">       </span><span class="c1">// [UNUSED]</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">PickLockNr</span><span class="p">;</span><span class="w">     </span><span class="c1">// current rotation number </span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">KeyInstance</span><span class="p">;</span><span class="w"> </span><span class="c1">// key instance name for the object</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">PickLockStr</span><span class="p">;</span><span class="w"> </span><span class="c1">// combination to open the object (&quot;LRRLR&quot;)</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Locked</span><span class="p">;</span><span class="w">         </span><span class="c">// whether the object is locked</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AutoOpen</span><span class="p">;</span><span class="w">       </span><span class="c">// [UNUSED]</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">PickLockNr</span><span class="p">;</span><span class="w">     </span><span class="c">// current rotation number </span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">KeyInstance</span><span class="p">;</span><span class="w"> </span><span class="c">// key instance name for the object</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">PickLockStr</span><span class="p">;</span><span class="w"> </span><span class="c">// combination to open the object (&quot;LRRLR&quot;)</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// Returns the data of the oCMobLockable object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param mobLock oCMobLockable object</span>
-<span class="c1">/// @param data MobInter_Data of the object</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_MobLockable_Data</span><span class="w"> </span><span class="n">Vob_GetMobInterData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">mobLock</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Returns the data of the oCMobLockable object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param mobLock oCMobLockable object</span><span class="w"></span>
+<span class="c">/// @param data MobInter_Data of the object</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_MobLockable_Data</span><span class="w"> </span><span class="nf">Vob_GetMobInterData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">mobLock</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Sets the data of the oCMobLockable object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param mobLock oCMobLockable object</span>
-<span class="c1">/// @param data C_MobLockable_Data of the object</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Vob_SetMobInterData</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_Vob</span><span class="w"> </span><span class="n">mobLock</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">C_MobLockable_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Sets the data of the oCMobLockable object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param mobLock oCMobLockable object</span><span class="w"></span>
+<span class="c">/// @param data C_MobLockable_Data of the object</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Vob_SetMobInterData</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob</span><span class="w"> </span><span class="n">mobLock</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_MobLockable_Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 
   <hr>
@@ -3012,7 +3012,7 @@ Externals:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:43:28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

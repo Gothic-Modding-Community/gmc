@@ -2808,7 +2808,7 @@
 <code>%f</code> - inserts a floating point number<br />
 <code>%b</code> - inserts a logical expression<br />
 <code>%p</code> - inserts a pointer<br />
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_Format</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_Format</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>format</code> - format string containing format specifiers</li>
@@ -2818,18 +2818,18 @@
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h3>
 <p>Very powerful function, can be used to streamline strings used in the scripts as well as optimize them for translations.</p>
 <p>Define constants containing the string with format specifiers.
-<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">MENU_SAVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Slot %i - press ENTER to save in this slot.&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">MENU_LOAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Slot %i - press ENTER to load saved game.&quot;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">MENU_SAVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Slot %i - press ENTER to save in this slot.&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">MENU_LOAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Slot %i - press ENTER to load saved game.&quot;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 Then define two format functions as such:
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">GetSaveSlotString</span><span class="w"> </span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetSaveSlotString</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">Str_format</span><span class="p">(</span><span class="n">MENU_SAVE</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kr">return</span><span class="w"> </span><span class="nb nb-ZParserExtender">Str_format</span><span class="p">(</span><span class="n">MENU_SAVE</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">GetLoadSlotString</span><span class="w"> </span><span class="p">(</span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetLoadSlotString</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Str_format</span><span class="p">(</span><span class="n">MENU_LOAD</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nb nb-ZParserExtender">Str_format</span><span class="p">(</span><span class="n">MENU_LOAD</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <div class="admonition tip">
@@ -2840,10 +2840,10 @@ With this simple change, translators have to translate only 2 strings instead of
 <h2 id="str_getlocalizedstring">Str_GetLocalizedString<a class="headerlink" href="#str_getlocalizedstring" title="Permanent link"></a></h2>
 <p>Returns a string in the current language, otherwise in English.<br />
 Arguments MUST be encoded in <strong>UTF-8!</strong> The result string will be converted to apropriate ANSI string.</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_GetLocalizedString</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">polish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_GetLocalizedString</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">polish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>russian</code> - Russian string</li>
@@ -2855,14 +2855,14 @@ Arguments MUST be encoded in <strong>UTF-8!</strong> The result string will be c
 <h2 id="str_getlocalizedstringex">Str_GetLocalizedStringEx<a class="headerlink" href="#str_getlocalizedstringex" title="Permanent link"></a></h2>
 <p>Returns a string in the current language, otherwise in English.
 Offers additional languages</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_GetLocalizedStringEx</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">polish</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">romanian</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">italian</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">czech</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">spanish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_GetLocalizedStringEx</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                                      </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">polish</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">romanian</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">italian</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">czech</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">spanish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>russian</code> - Russian string</li>
@@ -2877,7 +2877,7 @@ Offers additional languages</p>
 </ul>
 <h2 id="str_utf8_to_ansi">Str_UTF8_to_ANSI<a class="headerlink" href="#str_utf8_to_ansi" title="Permanent link"></a></h2>
 <p>Converts UTF-8 string into an ANSI string with codePage
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_UTF8_to_ANSI</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">utf8</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">codePage</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_UTF8_to_ANSI</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">utf8</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">codePage</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>utf8</code> - string encoded in UTF8</li>
@@ -2886,73 +2886,73 @@ Offers additional languages</p>
 </ul>
 <h2 id="str_getcurrentcp">Str_GetCurrentCP<a class="headerlink" href="#str_getcurrentcp" title="Permanent link"></a></h2>
 <p>Return the code page corresponding to the current language set in the Union System
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Str_GetCurrentCP</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Str_GetCurrentCP</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>return</code> - code page corresponding to the current language</li>
 </ul>
 <h2 id="str_getlength">Str_GetLength<a class="headerlink" href="#str_getlength" title="Permanent link"></a></h2>
 <p>Returns the length of a string
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Str_GetLength</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Str_GetLength</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>str</code> - string to be measured</li>
 <li><code>return</code> - length of the string</li>
 </ul>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1">/// Returns formatted string using format specifiers</span>
-<span class="c1">/// </span>
-<span class="c1">/// Format specifiers:</span>
-<span class="c1">/// %s - inserts a string</span>
-<span class="c1">/// %i - inserts a integer number</span>
-<span class="c1">/// %x - inserts a integer in hexadecimal</span>
-<span class="c1">/// %f - inserts a floating point number</span>
-<span class="c1">/// %b - inserts a logical expression</span>
-<span class="c1">/// %p - inserts a pointer</span>
-<span class="c1">/// </span>
-<span class="c1">/// @return formatted string</span>
-<span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_Format</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Returns formatted string using format specifiers</span><span class="w"></span>
+<span class="c">/// </span><span class="w"></span>
+<span class="c">/// Format specifiers:</span><span class="w"></span>
+<span class="c">/// %s - inserts a string</span><span class="w"></span>
+<span class="c">/// %i - inserts a integer number</span><span class="w"></span>
+<span class="c">/// %x - inserts a integer in hexadecimal</span><span class="w"></span>
+<span class="c">/// %f - inserts a floating point number</span><span class="w"></span>
+<span class="c">/// %b - inserts a logical expression</span><span class="w"></span>
+<span class="c">/// %p - inserts a pointer</span><span class="w"></span>
+<span class="c">/// </span><span class="w"></span>
+<span class="c">/// @return formatted string</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_Format</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns a string in the current language, otherwise in English.</span>
-<span class="c1">/// Arguments MUST be encoded in UTF-8! The result string will be converted to apropriate ANSI string.</span>
-<span class="c1">///</span>
-<span class="c1">/// @param russian Russian string</span>
-<span class="c1">/// @param english English string</span>
-<span class="c1">/// @param german  German string</span>
-<span class="c1">/// @param polish  Polish string</span>
-<span class="c1">///</span>
-<span class="c1">/// @return string in the current language</span>
-<span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_GetLocalizedString</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">polish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns a string in the current language, otherwise in English.</span><span class="w"></span>
+<span class="c">/// Arguments MUST be encoded in UTF-8! The result string will be converted to apropriate ANSI string.</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param russian Russian string</span><span class="w"></span>
+<span class="c">/// @param english English string</span><span class="w"></span>
+<span class="c">/// @param german  German string</span><span class="w"></span>
+<span class="c">/// @param polish  Polish string</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @return string in the current language</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_GetLocalizedString</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">polish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns a string in the current language, otherwise in English.</span>
-<span class="c1">/// Offers additional languages</span>
-<span class="c1">///</span>
-<span class="c1">/// @param russian  Russian string</span>
-<span class="c1">/// @param english  English string</span>
-<span class="c1">/// @param german   German string</span>
-<span class="c1">/// @param polish   Polish string</span>
-<span class="c1">/// @param romanian Romanian string</span>
-<span class="c1">/// @param italian  Italian string</span>
-<span class="c1">/// @param czech    Czech  string</span>
-<span class="c1">/// @param spanish  Spanish string</span>
-<span class="c1">///</span>
-<span class="c1">/// @return string in the current language</span>
-<span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_GetLocalizedStringEx</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">polish</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">romanian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">italian</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">czech</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">spanish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns a string in the current language, otherwise in English.</span><span class="w"></span>
+<span class="c">/// Offers additional languages</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param russian  Russian string</span><span class="w"></span>
+<span class="c">/// @param english  English string</span><span class="w"></span>
+<span class="c">/// @param german   German string</span><span class="w"></span>
+<span class="c">/// @param polish   Polish string</span><span class="w"></span>
+<span class="c">/// @param romanian Romanian string</span><span class="w"></span>
+<span class="c">/// @param italian  Italian string</span><span class="w"></span>
+<span class="c">/// @param czech    Czech  string</span><span class="w"></span>
+<span class="c">/// @param spanish  Spanish string</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @return string in the current language</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_GetLocalizedStringEx</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">russian</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">english</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">german</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">polish</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">romanian</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">italian</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">czech</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">spanish</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Converts UTF-8 string into an ANSI string with codePage</span>
-<span class="c1">///</span>
-<span class="c1">/// @param utf8 string encoded in UTF8</span>
-<span class="c1">/// @param codePage codePage id, can be obtained from Str_GetCurrentCP </span>
-<span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Str_UTF8_to_ANSI</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">utf8</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">codePage</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Converts UTF-8 string into an ANSI string with codePage</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param utf8 string encoded in UTF8</span><span class="w"></span>
+<span class="c">/// @param codePage codePage id, can be obtained from Str_GetCurrentCP </span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_UTF8_to_ANSI</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">utf8</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">codePage</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Return the code page corresponding to the current language set in the Union System</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Str_GetCurrentCP</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Return the code page corresponding to the current language set in the Union System</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Str_GetCurrentCP</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns the length of a string</span>
-<span class="c1">///</span>
-<span class="c1">/// @param str string to be measured</span>
-<span class="c1">/// @return length of the string</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Str_GetLength</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns the length of a string</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param str string to be measured</span><span class="w"></span>
+<span class="c">/// @return length of the string</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Str_GetLength</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 
   <hr>
@@ -2960,7 +2960,7 @@ Offers additional languages</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-11 13:53:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

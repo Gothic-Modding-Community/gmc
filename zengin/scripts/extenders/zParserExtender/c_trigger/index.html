@@ -2761,14 +2761,14 @@
 <p>zParserExtender also implements cyclical functions (called triggers - not to e confused with triggers in ZEN files) similar to a part of the functionality implemented in <a href="../../../../../notready/">LeGo AI_Functions</a>. These functions are called independently after a specified period of time. These triggers can also store a user information, up to 16 int variables can be stored in each trigger, as well as <code>self</code>, <code>other</code> and <code>victim</code> instances.</p>
 <h2 id="class-definition">Class definition<a class="headerlink" href="#class-definition" title="Permanent link"></a></h2>
 <p>To define a trigger, the <code>C_Trigger</code> class is used:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">/// Union zPraserExtender Trigger class</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">C_Trigger</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Union zPraserExtender Trigger class</span><span class="w"></span>
+<span class="kd">class</span><span class="w"> </span><span class="nc">C_Trigger</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Delay</span><span class="p">;</span><span class="w"> </span><span class="c1">// defines the frequency (in miliseconds) at which the function will be called.</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Enabled</span><span class="p">;</span><span class="w"> </span><span class="c1">// determines if the trigger is active. If the value is equal to zero, the trigger is destroyed.</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w"> </span><span class="c1">// user data, which can be set independently when creating trigger (yes, you can write there absolutely everything you want).</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Delay</span><span class="p">;</span><span class="w"> </span><span class="c">// defines the frequency (in miliseconds) at which the function will be called.</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Enabled</span><span class="p">;</span><span class="w"> </span><span class="c">// determines if the trigger is active. If the value is equal to zero, the trigger is destroyed.</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w"> </span><span class="c">// user data, which can be set independently when creating trigger (yes, you can write there absolutely everything you want).</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">// Hidden variable members</span>
+<span class="w">    </span><span class="c">// Hidden variable members</span><span class="w"></span>
 <span class="w">    </span><span class="cm">/*</span>
 <span class="cm">     - Func   - The function that the trigger will call.</span>
 <span class="cm">     - Self   - The NPC that will be placed in `self` when the function is called.</span>
@@ -2779,44 +2779,44 @@
 </code></pre></div>
 <h2 id="creating-instances">Creating instances<a class="headerlink" href="#creating-instances" title="Permanent link"></a></h2>
 <p>There are two <a href="../externals/#ai-functions-for-working-with-ai">external functions</a></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// function returns a trigger with no NPC (self, other or victim) bound to it</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Trigger</span><span class="w"> </span><span class="n">AI_StartTriggerScript</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                      </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">// function returns a trigger with no NPC (self, other or victim) bound to it</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_StartTriggerScript</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="p">)</span><span class="w"></span>
 
-<span class="c1">// function is extended, if certain participants need to be assigned to it</span>
-<span class="n">func</span><span class="w"> </span><span class="n">C_Trigger</span><span class="w"> </span><span class="n">AI_StartTriggerScriptEx</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                        </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                        </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                        </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">oth</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                        </span><span class="n">var</span><span class="w"> </span><span class="n">C_Npc</span><span class="w"> </span><span class="n">vct</span><span class="p">)</span><span class="w"> </span>
+<span class="c">// function is extended, if certain participants need to be assigned to it</span><span class="w"></span>
+<span class="n">func</span><span class="w"> </span><span class="n">C_Trigger</span><span class="w"> </span><span class="nb nb-ZParserExtender">AI_StartTriggerScriptEx</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                        </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                        </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                        </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">oth</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                        </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">vct</span><span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 <p>Both of these functions return an instance of <code>C_Trigger</code>. You can, of course, configure the instance after its creation (for example to fill in the <code>AIVariables</code> with relevant data). The trigger function has the required signature if 'func int f()'. It must return a value indicating the state of the loop - if the function returns <code>LOOP_END</code> the trigger will be stopped and the instance deleted, if <code>LOOP_CONTINUE</code> is returned, the function will be called again after <code>Delay</code> ms have passed.</p>
 <h2 id="poison-example">Poison example<a class="headerlink" href="#poison-example" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1">// Implement a trigger to simulate the effect of poison debuff:</span>
-<span class="c1">// Let&#39;s create a trigger on function `c_loop` with a call interval of 1 second.</span>
-<span class="c1">// When the function is called, the instance hero will be placed in self (although it can be any other NPC if desired).</span>
-<span class="c1">// The rest of the instances are left null (not used).</span>
+<div class="highlight"><pre><span></span><code><span class="c">// Implement a trigger to simulate the effect of poison debuff:</span><span class="w"></span>
+<span class="c">// Let&#39;s create a trigger on function `c_loop` with a call interval of 1 second.</span><span class="w"></span>
+<span class="c">// When the function is called, the instance hero will be placed in self (although it can be any other NPC if desired).</span><span class="w"></span>
+<span class="c">// The rest of the instances are left null (not used).</span><span class="w"></span>
 
-<span class="n">var</span><span class="w"> </span><span class="n">C_Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">;</span><span class="w"></span>
-<span class="n">trigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AI_StartTriggerScriptEx</span><span class="p">(</span><span class="s">&quot;c_loop&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">hero</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">);</span><span class="w"></span>
-<span class="n">trigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span><span class="w"> </span><span class="c1">// how many times the function should be called</span>
-<span class="n">trigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">  </span><span class="c1">// how much damage to deal each iteration</span>
+<span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">;</span><span class="w"></span>
+<span class="n">trigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-ZParserExtender">AI_StartTriggerScriptEx</span><span class="p">(</span><span class="s">&quot;c_loop&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="bp">null</span><span class="p">,</span><span class="w"> </span><span class="bp">null</span><span class="p">);</span><span class="w"></span>
+<span class="n">trigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span><span class="w"> </span><span class="c">// how many times the function should be called</span><span class="w"></span>
+<span class="n">trigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">  </span><span class="c">// how much damage to deal each iteration</span><span class="w"></span>
 </code></pre></div>
 <p>The trigger function</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c_loop</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">c_loop</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Create a loop end check, if the number of</span>
-<span class="w">    </span><span class="c1">// available iterations has reached 0. If it did</span>
-<span class="w">    </span><span class="c1">// we stop the trigger by returning the LOOP_END value.</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">SelfTrigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="c">// Create a loop end check, if the number of</span><span class="w"></span>
+<span class="w">    </span><span class="c">// available iterations has reached 0. If it did</span><span class="w"></span>
+<span class="w">    </span><span class="c">// we stop the trigger by returning the LOOP_END value.</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">SelfTrigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Loop_end</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="n">Loop_end</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">SelfTrigger</span><span class="p">.</span><span class="n">Delay</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">         </span><span class="c1">// Accelerate loop each call by 20 ms</span>
-<span class="w">    </span><span class="n">SelfTrigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Reduce number of remaining repeats</span>
-<span class="w">    </span><span class="n">self</span><span class="p">.</span><span class="n">Attribute</span><span class="p">[</span><span class="n">ATR_HITPOINTS</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">SelfTrigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// Take health from self</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">LOOP_CONTINUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">SelfTrigger</span><span class="p">.</span><span class="n">Delay</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">         </span><span class="c">// Accelerate loop each call by 20 ms</span><span class="w"></span>
+<span class="w">    </span><span class="n">SelfTrigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">// Reduce number of remaining repeats</span><span class="w"></span>
+<span class="w">    </span><span class="bp">self</span><span class="p">.</span><span class="n">Attribute</span><span class="p">[</span><span class="n">ATR_HITPOINTS</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">SelfTrigger</span><span class="p">.</span><span class="n">AIVariables</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c">// Take health from self</span><span class="w"></span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">LOOP_CONTINUE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <h2 id="trigger-scope">Trigger scope<a class="headerlink" href="#trigger-scope" title="Permanent link"></a></h2>
@@ -2831,14 +2831,14 @@ trigger created with this function only works in the world in which it was creat
 <p>The plugin creates a new save archive to save the information of the triggers, that does not conflict with any of the built-in save files.</p>
 <h2 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link"></a></h2>
 <p>To search for a specifin trigger, for example by NPC, the <a href="../externals/#ai-functions-for-working-with-ai">trigger external functions</a> can be used.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// This way you can disable all triggers running on the `hero` instance</span>
-<span class="n">var</span><span class="w"> </span><span class="n">C_Trigger</span><span class="w"> </span><span class="n">trigget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FirstTrigger</span><span class="p">;</span><span class="w"></span>
-<span class="n">var</span><span class="w"> </span><span class="n">C_Trigger</span><span class="w"> </span><span class="n">trigget_saved</span><span class="p">;</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Hlp_IsNULL</span><span class="p">(</span><span class="n">trigget</span><span class="p">))</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">// This way you can disable all triggers running on the `hero` instance</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FirstTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigget_saved</span><span class="p">;</span><span class="w"></span>
+<span class="kr">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nb nb-ZParserExtender">Hlp_IsNULL</span><span class="p">(</span><span class="n">trigget</span><span class="p">))</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">trigget_saved</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trigger</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">trigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AI_GetNextTriggerBySelf</span><span class="p">(</span><span class="n">hero</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">trigget_saved</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">trigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-ZParserExtender">AI_GetNextTriggerBySelf</span><span class="p">(</span><span class="bp">hero</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">trigget_saved</span><span class="p">.</span><span class="n">Enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 
@@ -2847,7 +2847,7 @@ trigger created with this function only works in the world in which it was creat
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:43:28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

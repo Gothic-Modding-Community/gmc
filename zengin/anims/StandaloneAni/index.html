@@ -2777,29 +2777,29 @@ Run the game and try to play the animation again (<code>play ani t_backpain</cod
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/-i2un91x1UI" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>Amazing, now you have your first animation in the game. And you can use it to do some fun stuff, like in dialogues using the <code>AI_PlayAni</code> function.</p>
 <h2 id="example-dialogue">Example dialogue<a class="headerlink" href="#example-dialogue" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="w"> </span><span class="nf">DIA_Xardas_Back</span><span class="w"> </span><span class="p">(</span><span class="n">C_INFO</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">DIA_Xardas_Back</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">NONE_100_Xardas</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Info</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;What&#39;s wrong?&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">NONE_100_Xardas</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Info</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;What&#39;s wrong?&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">DIA_Xardas_Back_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Info</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">hero</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// My back hurts so much.</span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DIA_Xardas_Back_Info</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// My back hurts so much.</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">// This is our animation!!!!!</span>
-<span class="w">    </span><span class="n">AI_PlayAni</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;T_BACKPAIN&quot;</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">hero</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_01&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// How do YOU feel?</span>
+<span class="w">    </span><span class="c">// This is our animation!!!!!</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">AI_PlayAni</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;T_BACKPAIN&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_01&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// How do YOU feel?</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="n">hero</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_02&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// My back is fine.</span>
-<span class="w">    </span><span class="n">AI_StopProcessInfos</span><span class="p">(</span><span class="n">self</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_02&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// My back is fine.</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">AI_StopProcessInfos</span><span class="p">(</span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/G14lgjA49wU" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
@@ -2809,7 +2809,7 @@ Run the game and try to play the animation again (<code>play ani t_backpain</cod
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-01 16:08:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

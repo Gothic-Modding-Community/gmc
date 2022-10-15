@@ -2970,7 +2970,8 @@
 </ul>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link"></a></h2>
 <p>Initialize with <code>LeGo_Bars</code> flag.
-<div class="highlight"><pre><span></span><code><span class="n">LeGo_Init</span><span class="p">(</span><span class="n">LeGo_Bars</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">LeGo_Init</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="n">LeGo_Init</span><span class="p">(</span><span class="n">LeGo_Bars</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link"></a></h2>
 <p><a href="https://github.com/Lehona/LeGo/blob/dev/Bars.d"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg></span> Bars.d on GitHub</a></p>
@@ -2981,7 +2982,7 @@
 </div>
 <h3 id="bar_create">Bar_Create<a class="headerlink" href="#bar_create" title="Permanent link"></a></h3>
 <p>Creates a new bar from a constructor instance.
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">Bar_Create</span><span class="p">(</span><span class="n">instance</span><span class="w"> </span><span class="n">bar</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Bar_Create</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>bar</code> - constructor instance of 'Bar' class</li>
@@ -2989,14 +2990,14 @@
 </ul>
 <h3 id="bar_delete">Bar_Delete<a class="headerlink" href="#bar_delete" title="Permanent link"></a></h3>
 <p>Deletes a bar from the screen and from memory. 
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_Delete</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_Delete</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
 </ul>
 <h3 id="bar_setmax">Bar_SetMax<a class="headerlink" href="#bar_setmax" title="Permanent link"></a></h3>
 <p>Changes a bar's maximum value, but does not update its bar length (only <code>Bar_SetPercent</code>, <code>Bar_SetPromille</code> and <code>Bar_SetValue</code>)
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_SetMax</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetMax</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
@@ -3004,7 +3005,7 @@
 </ul>
 <h3 id="bar_setvalue">Bar_SetValue<a class="headerlink" href="#bar_setvalue" title="Permanent link"></a></h3>
 <p>Sets the value of the bar.
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_SetValue</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetValue</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
@@ -3012,7 +3013,7 @@
 </ul>
 <h3 id="bar_setpercent">Bar_SetPercent<a class="headerlink" href="#bar_setpercent" title="Permanent link"></a></h3>
 <p>Sets the value of the bar, but as a percentage (0..100).
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_SetPercent</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">percent</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetPercent</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">percent</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
@@ -3020,7 +3021,7 @@
 </ul>
 <h3 id="bar_setpromille">Bar_SetPromille<a class="headerlink" href="#bar_setpromille" title="Permanent link"></a></h3>
 <p>Sets the value of the bar, but in per mille (0..1000).
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_SetPromille</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">promille</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetPromille</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">promille</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
@@ -3028,21 +3029,21 @@
 </ul>
 <h3 id="bar_hide">Bar_Hide<a class="headerlink" href="#bar_hide" title="Permanent link"></a></h3>
 <p>Hides a bar. It will not be deleted. 
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_Hide</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_Hide</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
 </ul>
 <h3 id="bar_show">Bar_Show<a class="headerlink" href="#bar_show" title="Permanent link"></a></h3>
 <p>Displays a bar again after using <code>Bar_Hide</code>. 
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_Show</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_Show</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
 </ul>
 <h3 id="bar_moveto">Bar_MoveTo<a class="headerlink" href="#bar_moveto" title="Permanent link"></a></h3>
 <p>Move the bar to virtual position. 
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_MoveTo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_MoveTo</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
@@ -3051,7 +3052,7 @@
 </ul>
 <h3 id="bar_setalpha">Bar_SetAlpha<a class="headerlink" href="#bar_setalpha" title="Permanent link"></a></h3>
 <p>Sets the opacity of the bar.
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_SetAlpha</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alpha</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetAlpha</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alpha</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
@@ -3059,7 +3060,7 @@
 </ul>
 <h3 id="bar_setbartexture">Bar_SetBarTexture<a class="headerlink" href="#bar_setbartexture" title="Permanent link"></a></h3>
 <p>Sets the foreground texture of the bar.
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_SetBarTexture</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">texture</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetBarTexture</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">texture</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
@@ -3067,10 +3068,12 @@
 </ul>
 <h3 id="bar_setbacktexture">Bar_SetBackTexture<a class="headerlink" href="#bar_setbacktexture" title="Permanent link"></a></h3>
 <p>Sets the background texture of the bar.
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">Bar_SetBackTexture</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">texture</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-- <code>handle</code> - handle returned from <code>Bar_Create</code>
-- <code>texture</code> - The new background texture</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetBackTexture</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">texture</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</code></pre></div></p>
+<ul>
+<li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
+<li><code>texture</code> - The new background texture</li>
+</ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3079,74 +3082,74 @@
 <h3 id="display-a-simple-bar">Display a simple bar<a class="headerlink" href="#display-a-simple-bar" title="Permanent link"></a></h3>
 <p>First we just create a bar that does nothing.
 It should only be half full (or empty?) on the screen.
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Example_1</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Example_1</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="p">;</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Bar_Create</span><span class="p">(</span><span class="n">GothicBar</span><span class="err">@</span><span class="p">);</span><span class="w"> </span><span class="c1">// Create a new bar</span>
-<span class="w">    </span><span class="n">Bar_SetPercent</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span><span class="w">                   </span><span class="c1">// And set the value to 50%</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="p">;</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Bar_Create</span><span class="p">(</span><span class="n">GothicBar@</span><span class="p">);</span><span class="w"> </span><span class="c">// Create a new bar</span><span class="w"></span>
+<span class="w">    </span><span class="n">Bar_SetPercent</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span><span class="w">                   </span><span class="c">// And set the value to 50%</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 Finished. Without any settings? And what is <code>GothicBar</code>? Let's take a look at a more elaborate example.</p>
 <h3 id="a-dedicated-experience-bar">A dedicated experience bar<a class="headerlink" href="#a-dedicated-experience-bar" title="Permanent link"></a></h3>
 <p>Bars implement the <code>Bar</code> class. It looks like this:
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">          </span><span class="c1">// X position on screen (middle of bar)</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">          </span><span class="c1">// Y position on screen (middle of bar)</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">barTop</span><span class="p">;</span><span class="w">     </span><span class="c1">// Spacing bar - background top/bottom</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">barLeft</span><span class="p">;</span><span class="w">    </span><span class="c1">// Spacing bar - background left/right</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w">      </span><span class="c1">// Width</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w">     </span><span class="c1">// Height</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">backTex</span><span class="p">;</span><span class="w"> </span><span class="c1">// background texture</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">barTex</span><span class="p">;</span><span class="w">  </span><span class="c1">// Actual bar texture</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w">      </span><span class="c1">// Start value</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">valueMax</span><span class="p">;</span><span class="w">   </span><span class="c1">// Maximum value</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">          </span><span class="c">// X position on screen (middle of bar)</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">          </span><span class="c">// Y position on screen (middle of bar)</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">barTop</span><span class="p">;</span><span class="w">     </span><span class="c">// Spacing bar - background top/bottom</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">barLeft</span><span class="p">;</span><span class="w">    </span><span class="c">// Spacing bar - background left/right</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w">      </span><span class="c">// Width</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w">     </span><span class="c">// Height</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">backTex</span><span class="p">;</span><span class="w"> </span><span class="c">// background texture</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">barTex</span><span class="p">;</span><span class="w">  </span><span class="c">// Actual bar texture</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w">      </span><span class="c">// Start value</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">valueMax</span><span class="p">;</span><span class="w">   </span><span class="c">// Maximum value</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 The <code>GothicBar</code> prototype is a bar that mimics the standard Gothic status bar.
-<div class="highlight"><pre><span></span><code><span class="n">prototype</span><span class="w"> </span><span class="nf">GothicBar</span><span class="p">(</span><span class="n">Bar</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">prototype</span><span class="w"> </span><span class="n">GothicBar</span><span class="p">(</span><span class="nc">Bar</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Print_Screen</span><span class="p">[</span><span class="n">PS_X</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Print_Screen</span><span class="p">[</span><span class="n">PS_Y</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">barTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">barLeft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">backTex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bar_Back.tga&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">barTex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bar_Misc.tga&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">valueMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Print_Screen</span><span class="p">[</span><span class="n">PS_X</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Print_Screen</span><span class="p">[</span><span class="n">PS_Y</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">barTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">barLeft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">backTex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bar_Back.tga&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">barTex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bar_Misc.tga&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">valueMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <p>It's much easier to set up a new instance using this prototype. Standard vanilla status bar  can be easily created using the <code>GothicBar</code> instance, as seen in the example below.<br />
 GothicBar is located in the middle of the screen and looks exactly like the Gothic Underwater Bar.<br />
 But lets make a bar that hangs in the top left of the picture and displays the experience points.<br />
 Derive again GothicBar and only change the position. Of course, add a loop using the FrameFunctions:
-<div class="highlight"><pre><span></span><code><span class="c1">// Instance created from </span>
-<span class="n">instance</span><span class="w"> </span><span class="nf">Bar_1</span><span class="p">(</span><span class="n">GothicBar</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">// Instance created from </span><span class="w"></span>
+<span class="kd">instance</span><span class="w"> </span><span class="n">Bar_1</span><span class="p">(</span><span class="nc">GothicBar</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Example_1</span><span class="p">()</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Example_1</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Example_1 could e.g. be called in Init_Global</span>
+<span class="w">    </span><span class="c">// Example_1 could e.g. be called in Init_Global</span><span class="w"></span>
 <span class="w">    </span><span class="n">FF_ApplyOnce</span><span class="p">(</span><span class="n">Loop_1</span><span class="p">);</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Loop_1</span><span class="p">()</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Loop_1</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Example_1 gets this loop running.</span>
-<span class="w">    </span><span class="c1">// Here the bar should be constructed once</span>
-<span class="w">    </span><span class="c1">// and then adapted to the EXP of the hero:</span>
-<span class="w">    </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MyBar</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">Hlp_IsValidHandle</span><span class="p">(</span><span class="n">MyBar</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="c">// Example_1 gets this loop running.</span><span class="w"></span>
+<span class="w">    </span><span class="c">// Here the bar should be constructed once</span><span class="w"></span>
+<span class="w">    </span><span class="c">// and then adapted to the EXP of the hero:</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MyBar</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="p">(</span><span class="o">!</span><span class="n">Hlp_IsValidHandle</span><span class="p">(</span><span class="n">MyBar</span><span class="p">))</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">MyBar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Bar_Create</span><span class="p">(</span><span class="n">Bar_1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Our Bar_1</span>
+<span class="w">        </span><span class="n">MyBar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Bar_Create</span><span class="p">(</span><span class="n">Bar_1</span><span class="p">);</span><span class="w"> </span><span class="c">// Our Bar_1</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// The rest is probably self-explanatory:</span>
-<span class="w">    </span><span class="n">Bar_SetMax</span><span class="p">(</span><span class="n">MyBar</span><span class="p">,</span><span class="w"> </span><span class="n">hero</span><span class="p">.</span><span class="n">exp_next</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">Bar_SetValue</span><span class="p">(</span><span class="n">MyBar</span><span class="p">,</span><span class="w"> </span><span class="n">hero</span><span class="p">.</span><span class="n">exp</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c">// The rest is probably self-explanatory:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Bar_SetMax</span><span class="p">(</span><span class="n">MyBar</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">.</span><span class="n">exp_next</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Bar_SetValue</span><span class="p">(</span><span class="n">MyBar</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">.</span><span class="n">exp</span><span class="p">);</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <div class="admonition note">
@@ -3159,7 +3162,7 @@ Derive again GothicBar and only change the position. Of course, add a loop using
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-11 20:44:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

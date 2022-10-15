@@ -2845,14 +2845,14 @@
 <p>Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.</p>
 <h2 id="mob_destroy">Mob_Destroy<a class="headerlink" href="#mob_destroy" title="Permanent link"></a></h2>
 <p>Marks oCMOB as destroyed, changes the visual to visualDestroyed (if present).</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_Destroy</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_Destroy</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMOB to be destroyed</li>
 </ul>
 <h2 id="mob_removeitem">Mob_RemoveItem<a class="headerlink" href="#mob_removeitem" title="Permanent link"></a></h2>
 <p>Removes an item from a oCMobContainer</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_RemoveItem</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_RemoveItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="bp">item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobContainer object</li>
@@ -2860,7 +2860,7 @@
 </ul>
 <h2 id="mob_removeitems">Mob_RemoveItems<a class="headerlink" href="#mob_removeitems" title="Permanent link"></a></h2>
 <p>Removes specified number of items from a oCMobContainer</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_RemoveItems</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_RemoveItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="bp">item</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobContainer object</li>
@@ -2869,7 +2869,7 @@
 </ul>
 <h2 id="mob_insertitem">Mob_InsertItem<a class="headerlink" href="#mob_insertitem" title="Permanent link"></a></h2>
 <p>Inserts an item into a oCMobContainer</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_InsertItem</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_InsertItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="bp">item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobContainer object</li>
@@ -2877,7 +2877,7 @@
 </ul>
 <h2 id="mob_insertitems">Mob_InsertItems<a class="headerlink" href="#mob_insertitems" title="Permanent link"></a></h2>
 <p>Inserts specified number of items into a oCMobContainer</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_InsertItems</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_InsertItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="bp">item</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobContainer object</li>
@@ -2886,7 +2886,7 @@
 </ul>
 <h2 id="mob_getlockcombination">Mob_GetLockCombination<a class="headerlink" href="#mob_getlockcombination" title="Permanent link"></a></h2>
 <p>Returns a lock combination of a oCMobContainer</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Mob_GetLockCombination</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Mob_GetLockCombination</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobContainer object</li>
@@ -2894,7 +2894,7 @@
 </ul>
 <h2 id="mob_setlockcombination">Mob_SetLockCombination<a class="headerlink" href="#mob_setlockcombination" title="Permanent link"></a></h2>
 <p>Sets a lock combination to a oCMobContainer</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_SetLockCombination</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">comb</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_SetLockCombination</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">comb</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobContainer object</li>
@@ -2902,7 +2902,7 @@
 </ul>
 <h2 id="mob_islocked">Mob_IsLocked<a class="headerlink" href="#mob_islocked" title="Permanent link"></a></h2>
 <p>Returns <code>TRUE</code> if the object is locked</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Mob_IsLocked</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Mob_IsLocked</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobLockable object</li>
@@ -2910,7 +2910,7 @@
 </ul>
 <h2 id="mob_setlocked">Mob_SetLocked<a class="headerlink" href="#mob_setlocked" title="Permanent link"></a></h2>
 <p>Set the lock status of the object</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_SetLocked</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">locked</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_SetLocked</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">locked</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobLockable object</li>
@@ -2918,7 +2918,7 @@
 </ul>
 <h2 id="mob_getkeyinstance">Mob_GetKeyInstance<a class="headerlink" href="#mob_getkeyinstance" title="Permanent link"></a></h2>
 <p>Returns the key instance, that unlocks the object</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">Mob_GetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Mob_GetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobLockable object</li>
@@ -2926,79 +2926,79 @@
 </ul>
 <h2 id="mob_setkeyinstance">Mob_SetKeyInstance<a class="headerlink" href="#mob_setkeyinstance" title="Permanent link"></a></h2>
 <p>Stets the key instance, that unlocks the object</p>
-<div class="highlight"><pre><span></span><code><span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_SetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_SetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li><code>object</code> - oCMobLockable object</li>
 <li><code>key</code> - the key C_ITEM instance</li>
 </ul>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1">/// Marks oCMOB as destroyed, changes the visual to visualDestroyed (if present).</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMOB to be destroyed</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_Destroy</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c">/// Marks oCMOB as destroyed, changes the visual to visualDestroyed (if present).</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMOB to be destroyed</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_Destroy</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Removes an item from a oCMobContainer</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobContainer object</span>
-<span class="c1">/// @param item {C_ITEM} item to be removed</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_RemoveItem</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Removes an item from a oCMobContainer</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobContainer object</span><span class="w"></span>
+<span class="c">/// @param item {C_ITEM} item to be removed</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_RemoveItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="bp">item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Removes specified number of items from a oCMobContainer</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobContainer object</span>
-<span class="c1">/// @param item {C_ITEM} item to be removed</span>
-<span class="c1">/// @param cnt number of items to be removed</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_RemoveItems</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Removes specified number of items from a oCMobContainer</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobContainer object</span><span class="w"></span>
+<span class="c">/// @param item {C_ITEM} item to be removed</span><span class="w"></span>
+<span class="c">/// @param cnt number of items to be removed</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_RemoveItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="bp">item</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Inserts an item into a oCMobContainer</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobContainer object</span>
-<span class="c1">/// @param item {C_ITEM} item to be inserted</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_InsertItem</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Inserts an item into a oCMobContainer</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobContainer object</span><span class="w"></span>
+<span class="c">/// @param item {C_ITEM} item to be inserted</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_InsertItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="bp">item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Inserts specified number of items into a oCMobContainer</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobContainer object</span>
-<span class="c1">/// @param item {C_ITEM} item to be inserted</span>
-<span class="c1">/// @param cnt number of items to be inserted</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_InsertItems</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Inserts specified number of items into a oCMobContainer</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobContainer object</span><span class="w"></span>
+<span class="c">/// @param item {C_ITEM} item to be inserted</span><span class="w"></span>
+<span class="c">/// @param cnt number of items to be inserted</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_InsertItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="bp">item</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns a lock combination of a oCMobContainer</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobContainer object</span>
-<span class="c1">/// @return lock combination</span>
-<span class="n">func</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">Mob_GetLockCombination</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns a lock combination of a oCMobContainer</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobContainer object</span><span class="w"></span>
+<span class="c">/// @return lock combination</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Mob_GetLockCombination</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Sets a lock combination to a oCMobContainer</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobContainer object</span>
-<span class="c1">/// @param comb lock combination</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_SetLockCombination</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">comb</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Sets a lock combination to a oCMobContainer</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobContainer object</span><span class="w"></span>
+<span class="c">/// @param comb lock combination</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_SetLockCombination</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">comb</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns `TRUE` if the object is locked</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobLockable object</span>
-<span class="c1">/// @return `TRUE` if locked, `FALSE` if unlocked</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Mob_IsLocked</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns `TRUE` if the object is locked</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobLockable object</span><span class="w"></span>
+<span class="c">/// @return `TRUE` if locked, `FALSE` if unlocked</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Mob_IsLocked</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Set the lock status of the object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobLockable object</span>
-<span class="c1">/// @param locked [TRUE, FALSE] lock or unlock the object</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_SetLocked</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">locked</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Set the lock status of the object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobLockable object</span><span class="w"></span>
+<span class="c">/// @param locked [TRUE, FALSE] lock or unlock the object</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_SetLocked</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">locked</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Returns the key instance, that unlocks the object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobLockable object</span>
-<span class="c1">/// @return the key C_ITEM instance</span>
-<span class="n">func</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">Mob_GetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Returns the key instance, that unlocks the object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobLockable object</span><span class="w"></span>
+<span class="c">/// @return the key C_ITEM instance</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Mob_GetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">/// Stets the key instance, that unlocks the object</span>
-<span class="c1">///</span>
-<span class="c1">/// @param object oCMobLockable object</span>
-<span class="c1">/// @param key the key C_ITEM instance</span>
-<span class="n">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Mob_SetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="c">/// Stets the key instance, that unlocks the object</span><span class="w"></span>
+<span class="c">///</span><span class="w"></span>
+<span class="c">/// @param object oCMobLockable object</span><span class="w"></span>
+<span class="c">/// @param key the key C_ITEM instance</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mob_SetKeyInstance</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 
   <hr>
@@ -3006,7 +3006,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-11 13:53:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>

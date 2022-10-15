@@ -115,3 +115,58 @@
 {
   animation: heart 1000ms infinite;
 }
+
+/* region pygments highlight override */
+
+:root {
+    --gmc-code-hl-externals-color: #2e7700;
+    --gmc-code-hl-zparserextender-color: #b00048;
+    --gmc-code-hl-variable-color: #716e00;
+    --gmc-code-hl-string-color: #694e37;
+    --gmc-code-hl-type-color: #197277;
+}
+
+@media screen
+{
+    [data-md-color-scheme=slate]
+    {
+        --gmc-code-hl-externals-color: #50c000;
+        --gmc-code-hl-zparserextender-color: #ff2e8c;
+        --gmc-code-hl-variable-color: #b7b400;
+        --gmc-code-hl-string-color: #ce9172;
+        --gmc-code-hl-type-color: #2bbac5;
+    }
+}
+
+.highlight .nb-Externals
+{
+    color: var(--gmc-code-hl-externals-color);
+}
+
+.highlight .nb-ZParserExtender
+{
+    color: var(--gmc-code-hl-zparserextender-color);
+}
+
+.highlight .vi
+{
+    color: var(--gmc-code-hl-variable-color);
+}
+
+.highlight .s
+{
+    color: var(--gmc-code-hl-string-color);
+}
+
+.highlight .kt
+{
+    color: var(--gmc-code-hl-type-color);
+}
+
+.highlight .kc
+{
+    color: var(--md-code-hl-keyword-color);
+    font-style: italic;
+}
+
+/* endregion */

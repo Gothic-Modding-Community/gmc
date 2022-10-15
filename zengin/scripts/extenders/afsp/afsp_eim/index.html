@@ -2886,35 +2886,35 @@ Align text right
 <p>Input field allows you to turn a dialogue choice into a input text field.
 <div class="highlight"><pre><span></span><code>a@
 </code></pre></div>
-<div class="highlight"><span class="filename">Example</span><pre><span></span><code><span class="n">INSTANCE</span><span class="w"> </span><span class="nf">DIA_Xardas_Password</span><span class="w"> </span><span class="p">(</span><span class="n">C_Info</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">DIA_Xardas_Password</span><span class="w"> </span><span class="p">(</span><span class="nc">C_Info</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">NONE_100_Xardas</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Password_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Password_Info</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a@ What is the password to get to the Mages of Water?&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">NONE_100_Xardas</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Password_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Password_Info</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a@ What is the password to get to the Mages of Water?&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">INT</span><span class="w"> </span><span class="n">DIA_Xardas_Password_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="nf">DIA_Xardas_Password_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">VOID</span><span class="w"> </span><span class="n">DIA_Xardas_Password_Info</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerAnswer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TETRIANDOCH&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">DIA_Xardas_Password_Info</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Externals">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerAnswer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TETRIANDOCH&quot;</span><span class="p">))</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">PrintScreen</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Yes that is correct!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;font_old_10_white.tga&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nb nb-Externals">PrintScreen</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Yes that is correct!&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;font_old_10_white.tga&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="kr">else</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">PrintScreen</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;No that is wrong!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;font_old_10_white.tga&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nb nb-Externals">PrintScreen</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;No that is wrong!&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;font_old_10_white.tga&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="dialogue-numbers">Dialogue numbers<a class="headerlink" href="#dialogue-numbers" title="Permanent link"></a></h2>
 <p>This feature shows a dialogue number next to the dialogue line (visual for <a href="#dialogue-keyboard-controls">Dialogue keyboard controls</a>)<br />
 To turn this on, you just set <code>InfoManagerNumKeysNumbers</code> variable to true. (in your <code>INIT_GLOBAL()</code> function)
-<div class="highlight"><pre><span></span><code>InfoManagerNumKeysNumbers = TRUE;
+<div class="highlight"><pre><span></span><code><span class="n">InfoManagerNumKeysNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="dialogue-keyboard-controls">Dialogue keyboard controls<a class="headerlink" href="#dialogue-keyboard-controls" title="Permanent link"></a></h2>
 <div class="admonition note">
@@ -2922,7 +2922,7 @@ To turn this on, you just set <code>InfoManagerNumKeysNumbers</code> variable to
 <p>This has also been fixed int Union and we noticed a strange behavior with different keyboard layouts.</p>
 </div>
 <p>This feature changes the way number keys affect dialogue selection. The first dialogue is no longer 0, by pressing appropriate number you highlight the dialogue option.
-<div class="highlight"><pre><span></span><code>InfoManagerNumKeysControls = TRUE;
+<div class="highlight"><pre><span></span><code><span class="n">InfoManagerNumKeysControls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="spinners">Spinners<a class="headerlink" href="#spinners" title="Permanent link"></a></h2>
 <p>This is by far the most flashy feature of EIM, it allows you to use left/right arrow keys on a dialogue option to increase/decease numerical value. This can be used in many ways.</p>
@@ -2932,90 +2932,90 @@ To turn this on, you just set <code>InfoManagerNumKeysNumbers</code> variable to
 <p class="admonition-title">Notice</p>
 <p>Notice we are using "<em>dummy</em>" as a description, since it is going to get updated. If something goes wrong, the "<em>dummy</em>" string shows up and you can clearly tell somethings went wrong.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="n">INSTANCE</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat</span><span class="w"> </span><span class="p">(</span><span class="n">C_Info</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat</span><span class="w"> </span><span class="p">(</span><span class="nc">C_Info</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">nr</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">condition</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">information</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Info</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">permanent</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">description</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dummy&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">//Description is updated in PC_Pan_Cook_Meat_Condition</span>
+<span class="w">    </span><span class="vi">nr</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">condition</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">information</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Info</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">permanent</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="vi">description</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dummy&quot;</span><span class="p">;</span><span class="w"> </span><span class="c">//Description is updated in PC_Pan_Cook_Meat_Condition</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <ol>
 <li>Most of the magic takes place in the condition function (apart from the code behind the scenes, of course).</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">;</span><span class="w"> </span><span class="c1">// global variable for this spinner value</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">;</span><span class="w"> </span><span class="c">// global variable for this spinner value</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">INT</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOBSI_DIALOG_PAN</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOBSI_DIALOG_PAN</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">lastSpinnerID</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">lastSpinnerID</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">//Default initial value</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c">//Default initial value</span><span class="w"></span>
 
-<span class="w">        </span><span class="c1">//Check currently selected spinned ID --&gt; is it this one?</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerSpinnerID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CookMeat&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="w">        </span><span class="c">//Check currently selected spinned ID --&gt; is it this one?</span><span class="w"></span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Externals">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerSpinnerID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CookMeat&quot;</span><span class="p">))</span><span class="w"></span>
 <span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="c1">//Setup spinner if spinner ID has changed</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerSpinnerID</span><span class="p">,</span><span class="w"> </span><span class="n">lastSpinnerID</span><span class="p">))</span><span class="w"></span>
+<span class="w">            </span><span class="c">//Setup spinner if spinner ID has changed</span><span class="w"></span>
+<span class="w">            </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nb nb-Externals">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerSpinnerID</span><span class="p">,</span><span class="w"> </span><span class="n">lastSpinnerID</span><span class="p">))</span><span class="w"></span>
 <span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="c1">//Restore previous value</span>
+<span class="w">                </span><span class="c">//Restore previous value</span><span class="w"></span>
 <span class="w">                </span><span class="n">InfoManagerSpinnerValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">            </span><span class="c1">//Page Up/Down quantity</span>
+<span class="w">            </span><span class="c">//Page Up/Down quantity</span><span class="w"></span>
 <span class="w">            </span><span class="n">InfoManagerSpinnerPageSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">            </span><span class="c1">//Min/Max value (Home/End keys)</span>
+<span class="w">            </span><span class="c">//Min/Max value (Home/End keys)</span><span class="w"></span>
 <span class="w">            </span><span class="n">InfoManagerSpinnerValueMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span><span class="n">InfoManagerSpinnerValueMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">            </span><span class="c1">//Update number which is shown in description (in case it was changed by _HOOK_VIEWDIALOGCHOICE_HANDLEEVENT</span>
+<span class="w">            </span><span class="c">//Update number which is shown in description (in case it was changed by _HOOK_VIEWDIALOGCHOICE_HANDLEEVENT</span><span class="w"></span>
 <span class="w">            </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfoManagerSpinnerValue</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">        </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">lastSpinnerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfoManagerSpinnerID</span><span class="p">;</span><span class="w"> </span><span class="c1">//Remember last active spinner ID</span>
+<span class="w">        </span><span class="n">lastSpinnerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfoManagerSpinnerID</span><span class="p">;</span><span class="w"> </span><span class="c">//Remember last active spinner ID</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">newDescription</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">newDescription</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">        </span><span class="c1">//Spinner ID &#39;CookMeat&#39;</span>
+<span class="w">        </span><span class="c">//Spinner ID &#39;CookMeat&#39;</span><span class="w"></span>
 <span class="w">        </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;s@CookMeat Cook some meat: &quot;</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="n">IntToString</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="p">));</span><span class="w"></span>
-<span class="w">        </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; / &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="n">IntToString</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Externals">IntToString</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; / &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Externals">IntToString</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="p">));</span><span class="w"></span>
 
-<span class="w">        </span><span class="c1">//Update description</span>
+<span class="w">        </span><span class="c">//Update description</span><span class="w"></span>
 <span class="w">        </span><span class="n">PC_Pan_Cook_Meat</span><span class="p">.</span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newDescription</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <ol>
 <li>We can use the spinner value stored in <code>selectedMeat</code> variable here in the info function, to create the meat (or do other stuff with it).</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="n">FUNC</span><span class="w"> </span><span class="n">VOID</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Info</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="c1">//If we don&#39;t have any meat ... don&#39;t cook any :)</span>
-<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat_Info</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="c">//If we don&#39;t have any meat ... don&#39;t cook any :)</span><span class="w"></span>
+<span class="w">       </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nb nb-Externals">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">return</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">       </span><span class="c1">//This should not happen - but you never know!</span>
-<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">       </span><span class="c">//This should not happen - but you never know!</span><span class="w"></span>
+<span class="w">       </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">return</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">       </span><span class="c1">//This should not happen either! but just in case</span>
-<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">              </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="c">//This should not happen either! but just in case</span><span class="w"></span>
+<span class="w">       </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Externals">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">);</span><span class="w"></span>
 <span class="w">       </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">       </span><span class="n">NPC_RemoveInvItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">,</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">);</span><span class="w"></span>
-<span class="w">       </span><span class="n">CreateInvItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMutton</span><span class="p">,</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="nb nb-Externals">NPC_RemoveInvItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">,</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="nb nb-Externals">CreateInvItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMutton</span><span class="p">,</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">       </span><span class="c1">//Reset value for next time</span>
+<span class="w">       </span><span class="c">//Reset value for next time</span><span class="w"></span>
 <span class="w">       </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
@@ -3023,113 +3023,113 @@ To turn this on, you just set <code>InfoManagerNumKeysNumbers</code> variable to
 <details>
   <summary>Spinner example</summary>
 
-<div class="highlight"><pre><span></span><code><span class="n">INSTANCE</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat</span><span class="w"> </span><span class="p">(</span><span class="n">C_Info</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat</span><span class="w"> </span><span class="p">(</span><span class="nc">C_Info</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="n">nr</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="n">condition</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="n">information</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Info</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="n">permanent</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="n">description</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dummy&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">//Description is updated in PC_Pan_Cook_Meat_Condition</span>
+<span class="w">       </span><span class="vi">nr</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">condition</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">information</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Info</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">permanent</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">description</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dummy&quot;</span><span class="p">;</span><span class="w"> </span><span class="c">//Description is updated in PC_Pan_Cook_Meat_Condition</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">INT</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOBSI_DIALOG_PAN</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOBSI_DIALOG_PAN</span><span class="p">)</span><span class="w"></span>
 <span class="w">   </span><span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">lastSpinnerID</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">lastSpinnerID</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">       </span><span class="n">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">//Default initial value</span>
+<span class="w">       </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c">//Default initial value</span><span class="w"></span>
 
-<span class="w">       </span><span class="c1">//Check currently selected spinned ID --&gt; is it this one?</span>
-<span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerSpinnerID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CookMeat&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="w">       </span><span class="c">//Check currently selected spinned ID --&gt; is it this one?</span><span class="w"></span>
+<span class="w">       </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Externals">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerSpinnerID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CookMeat&quot;</span><span class="p">))</span><span class="w"></span>
 <span class="w">       </span><span class="p">{</span><span class="w"></span>
-<span class="w">             </span><span class="c1">//Setup spinner if spinner ID has changed</span>
-<span class="w">             </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerSpinnerID</span><span class="p">,</span><span class="w"> </span><span class="n">lastSpinnerID</span><span class="p">))</span><span class="w"></span>
+<span class="w">             </span><span class="c">//Setup spinner if spinner ID has changed</span><span class="w"></span>
+<span class="w">             </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nb nb-Externals">Hlp_StrCmp</span><span class="w"> </span><span class="p">(</span><span class="n">InfoManagerSpinnerID</span><span class="p">,</span><span class="w"> </span><span class="n">lastSpinnerID</span><span class="p">))</span><span class="w"></span>
 <span class="w">             </span><span class="p">{</span><span class="w"></span>
-<span class="w">                 </span><span class="c1">//Restore previous value</span>
+<span class="w">                 </span><span class="c">//Restore previous value</span><span class="w"></span>
 <span class="w">                 </span><span class="n">InfoManagerSpinnerValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">;</span><span class="w"></span>
 <span class="w">             </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">             </span><span class="c1">//Page Up/Down quantity</span>
+<span class="w">             </span><span class="c">//Page Up/Down quantity</span><span class="w"></span>
 <span class="w">             </span><span class="n">InfoManagerSpinnerPageSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">             </span><span class="c1">//Min/Max value (Home/End keys)</span>
+<span class="w">             </span><span class="c">//Min/Max value (Home/End keys)</span><span class="w"></span>
 <span class="w">             </span><span class="n">InfoManagerSpinnerValueMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="w">             </span><span class="n">InfoManagerSpinnerValueMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">             </span><span class="c1">//Update number which is shown in description (in case it was changed by _HOOK_VIEWDIALOGCHOICE_HANDLEEVENT</span>
+<span class="w">             </span><span class="c">//Update number which is shown in description (in case it was changed by _HOOK_VIEWDIALOGCHOICE_HANDLEEVENT</span><span class="w"></span>
 <span class="w">             </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfoManagerSpinnerValue</span><span class="p">;</span><span class="w"></span>
 <span class="w">       </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">       </span><span class="n">lastSpinnerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfoManagerSpinnerID</span><span class="p">;</span><span class="w"> </span><span class="c1">//Remember last active spinner ID</span>
+<span class="w">       </span><span class="n">lastSpinnerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfoManagerSpinnerID</span><span class="p">;</span><span class="w"> </span><span class="c">//Remember last active spinner ID</span><span class="w"></span>
 
-<span class="w">       </span><span class="n">var</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">newDescription</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">newDescription</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">       </span><span class="c1">//Spinner ID &#39;CookMeat&#39;</span>
+<span class="w">       </span><span class="c">//Spinner ID &#39;CookMeat&#39;</span><span class="w"></span>
 <span class="w">       </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;s@CookMeat Cook some meat: &quot;</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">       </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="n">IntToString</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="p">));</span><span class="w"></span>
-<span class="w">       </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; / &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">       </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="n">IntToString</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="p">));</span><span class="w"></span>
+<span class="w">       </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Externals">IntToString</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="p">));</span><span class="w"></span>
+<span class="w">       </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; / &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="n">newDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">ConcatStrings</span><span class="w"> </span><span class="p">(</span><span class="n">newDescription</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Externals">IntToString</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="p">));</span><span class="w"></span>
 
-<span class="w">       </span><span class="c1">//Update description</span>
+<span class="w">       </span><span class="c">//Update description</span><span class="w"></span>
 <span class="w">       </span><span class="n">PC_Pan_Cook_Meat</span><span class="p">.</span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newDescription</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="w">   </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="kr">return</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">VOID</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Info</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat_Info</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">//If we don&#39;t have any meat ... don&#39;t cook any :)</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c">//If we don&#39;t have any meat ... don&#39;t cook any :)</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nb nb-Externals">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">return</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//This should not happen - but you never know!</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c">//This should not happen - but you never know!</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">return</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//This should not happen either! but just in case</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">)))</span><span class="w"></span>
+<span class="w">    </span><span class="c">//This should not happen either! but just in case</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Externals">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">)))</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">           </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">);</span><span class="w"></span>
+<span class="w">           </span><span class="n">selectedMeat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">NPC_HasItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">NPC_RemoveInvItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">,</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">CreateInvItems</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMutton</span><span class="p">,</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">NPC_RemoveInvItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMuttonRaw</span><span class="p">,</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nb nb-Externals">CreateInvItems</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">ItFoMutton</span><span class="p">,</span><span class="w"> </span><span class="n">selectedMeat</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//Reset value for next time</span>
+<span class="w">    </span><span class="c">//Reset value for next time</span><span class="w"></span>
 <span class="w">    </span><span class="n">InfoManagerSpinnerValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">INSTANCE</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat_Exit</span><span class="w"> </span><span class="p">(</span><span class="n">C_Info</span><span class="p">)</span><span class="w"></span>
+<span class="kd">INSTANCE</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Exit</span><span class="w"> </span><span class="p">(</span><span class="nc">C_Info</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="n">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">999</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="n">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Exit_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="n">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Exit_Info</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="n">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
-<span class="w">       </span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;End&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">999</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Exit_Condition</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Exit_Info</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;End&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">INT</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Exit_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat_Exit_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOBSI_DIALOG_PAN</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOBSI_DIALOG_PAN</span><span class="p">)</span><span class="w"></span>
 <span class="w">   </span><span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">TRUE</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 <span class="w">   </span><span class="p">};</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="kr">return</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
-<span class="n">FUNC</span><span class="w"> </span><span class="n">VOID</span><span class="w"> </span><span class="n">PC_Pan_Cook_Meat_Exit_Info</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
+<span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">PC_Pan_Cook_Meat_Exit_Info</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MOBSI_DIALOG_NONE</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MOBSI_DIALOG_NONE</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="n">PLAYER_MOBSI_PRODUCTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MOBSI_DIALOG_NONE</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">hero</span><span class="p">.</span><span class="n">aivar</span><span class="w"> </span><span class="p">[</span><span class="n">AIV_INVINCIBLE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">AI_StopProcessInfos</span><span class="w"> </span><span class="p">(</span><span class="n">hero</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="bp">hero</span><span class="p">.</span><span class="n">aivar</span><span class="w"> </span><span class="p">[</span><span class="n">AIV_INVINCIBLE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nb nb-Externals">AI_StopProcessInfos</span><span class="w"> </span><span class="p">(</span><span class="bp">hero</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
@@ -3140,7 +3140,7 @@ To turn this on, you just set <code>InfoManagerNumKeysNumbers</code> variable to
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-02 16:59:59</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
       
     
   </small>
