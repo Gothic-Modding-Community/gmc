@@ -1,11 +1,82 @@
 "use strict";
 
+class MarkCodeLineManager {
+    constructor() {
+        this.lineElement = null;
+        this.className = "hll";
+    }
+    setElement() {
+        if (this.lineElement) {
+            this.unsetElement();
+        }
+
+        let hash = window.location.hash;
+
+        if (hash === "") {
+            gmcDebug(`⏩ hash is empty`);
+            return;
+        }
+
+        this.lineElement = document.querySelector(hash);
+
+        if (!this.lineElement) {
+            return;
+        }
+
+        gmcAddClassToElement(this.className, this.lineElement, hash);
+        this.showHiddenMarkedLine();
+    }
+    unsetElement() {
+        if (!this.lineElement) {
+            return;
+        }
+        this.lineElement.classList.remove(this.className);
+        this.lineElement = null;
+    }
+    showHiddenMarkedLine() {
+        let tabbedBlock = this.lineElement.closest(".tabbed-block");
+
+        if (!tabbedBlock || window.getComputedStyle(tabbedBlock).display !== "none") {
+            return;
+        }
+
+        let tabbedContent = tabbedBlock.parentElement;
+        let childBlocks = tabbedContent.children;
+        let blockIndex;
+
+        for (blockIndex = 0; blockIndex < childBlocks.length; blockIndex++) {
+          if (childBlocks[blockIndex] === tabbedBlock) {
+            break;
+          }
+        }
+
+        let blockInputElement = tabbedContent.parentElement.children[blockIndex];
+        blockInputElement.click();
+    }
+}
+
 let gGMC_DEBUG = false;
+let gMarkCodeLineManager = new MarkCodeLineManager();
 
 window.addEventListener("DOMContentLoaded", _ => {
+    gMarkCodeLineManager.setElement();
     gmcExpandNavigation();
     gmcExternalLinks();
 });
+
+window.addEventListener("hashchange", _ => {
+    gMarkCodeLineManager.setElement();
+})
+
+function gmcAddClassToElement(className, element, elementName) {
+    if (element.classList.contains(className)) {
+        gmcDebug(`⏩ Class '${className}' already present for ${elementName}`);
+        return;
+    }
+
+    element.classList.add(className);
+    gmcDebug(`✅ Added '${className}' class to ${elementName}`);
+}
 
 function gmcExternalLinks() {
     const hostname = window.location.hostname;
@@ -21,20 +92,14 @@ function gmcExternalLinks() {
     const className = "external-link";
 
     anchors.forEach( a => {
-        if (regex.test(a.href)) {
-            gmcDebug(`⏩ Regex matched for ${a.href}`);
+        if (a.href === "" || regex.test(a.href)) {
+            gmcDebug(`⏩ Regex matched for ${a.href} or is empty`);
             return;
         }
 
         a.setAttribute("target", "_blank");
 
-        if (a.classList.contains(className)) {
-            gmcDebug(`⏩ Class '${className}' already present for ${a.href}`);
-            return;
-        }
-
-        a.classList.add(className);
-        gmcDebug(`✅ Added '${className}' class to ${a.href}`);
+        gmcAddClassToElement(className, a, a.href);
     });
 }
 
