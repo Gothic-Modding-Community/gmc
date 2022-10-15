@@ -31,6 +31,13 @@
     }
 }
 
+/* center the images */
+.md-content img {
+    display: block;
+    margin: 1em auto;
+    min-width: 75%;
+}
+
 /* endregion */
 
 /* 16:9 aspect ratio and centering */
