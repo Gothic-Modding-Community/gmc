@@ -90,7 +90,7 @@ Condition function with signature `func int f()`. If the function returns `TRUE`
     INSTANCE Info_Diego_Gamestart (C_INFO)
     {
         // ...
-        condition   = Info_Diego_Gamestart_Condition;
+        condition = Info_Diego_Gamestart_Condition;
         // ...
     };
 
