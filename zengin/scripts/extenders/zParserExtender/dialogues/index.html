@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/dialogues/">
       
       <link rel="icon" href="../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2704,26 +2704,33 @@
 <h1 id="dialogue-constants">Dialogue constants<a class="headerlink" href="#dialogue-constants" title="Permanent link"></a></h1>
 <p>To simplify dialogues, you can define up to 2 auxiliary variables (or constants) into which values corresponding to the current <code>C_Info</code> instance will be dynamically written.</p>
 <h2 id="dia_currentinstance">DIA_CurrentInstance<a class="headerlink" href="#dia_currentinstance" title="Permanent link"></a></h2>
-<p><div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DIA_CurrentInstance</span><span class="w"></span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DIA_CurrentInstance</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 Contains the ID of the current <code>C_Info</code> instance. Can greatly simplify code or make it more reusable. Should be defined in scripts.  </p>
-<div class="highlight"><span class="filename">Example usage</span><pre><span></span><code><span class="nb nb-Externals">Info_ClearChoices</span><span class="p">(</span><span class="n">DIA_CurrentInstance</span><span class="p">);</span><span class="w"></span>
-<span class="nb nb-Externals">Info_AddChoice</span><span class="p">(</span><span class="n">DIA_CurrentInstance</span><span class="p">,</span><span class="w"> </span><span class="cm">/*text*/</span><span class="p">,</span><span class="w"> </span><span class="cm">/*func*/</span><span class="p">);</span><span class="w"></span>
-<span class="nb nb-Externals">Npc_KnowsInfo</span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="n">DIA_CurrentInstance</span><span class="p">);</span><span class="w"> </span><span class="c">// In this case DIA_CurrentInstance contains the last C_Info instance??</span><span class="w"></span>
-</code></pre></div>
-<div class="highlight"><span class="filename">Create a wrapper function based on this variable</span><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">C_HeroKnowsCurrentInfo</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nb nb-Externals">Npc_KnowsInfo</span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="n">DIA_CurrentInstance</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Example usage</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
+<span class="normal"><a href="#example-1-2">2</a></span>
+<span class="normal"><a href="#example-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="nb nb-Externals">Info_ClearChoices</span><span class="p">(</span><span class="n">DIA_CurrentInstance</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-1-2"><a id="example-1-2" name="example-1-2"></a><span class="nb nb-Externals">Info_AddChoice</span><span class="p">(</span><span class="n">DIA_CurrentInstance</span><span class="p">,</span><span class="w"> </span><span class="cm">/*text*/</span><span class="p">,</span><span class="w"> </span><span class="cm">/*func*/</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-1-3"><a id="example-1-3" name="example-1-3"></a><span class="nb nb-Externals">Npc_KnowsInfo</span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="n">DIA_CurrentInstance</span><span class="p">);</span><span class="w"> </span><span class="c">// In this case DIA_CurrentInstance contains the last C_Info instance??</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Create a wrapper function based on this variable</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
+<span class="normal"><a href="#example-2-2">2</a></span>
+<span class="normal"><a href="#example-2-3">3</a></span>
+<span class="normal"><a href="#example-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">C_HeroKnowsCurrentInfo</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nb nb-Externals">Npc_KnowsInfo</span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="n">DIA_CurrentInstance</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="dia_currentname">DIA_CurrentName<a class="headerlink" href="#dia_currentname" title="Permanent link"></a></h2>
-<p><div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">DIA_CurrentName</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">DIA_CurrentName</span><span class="p">;</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 Contains the name of the current instance of <code>C_Info</code>. Can be useful for debugging purposes. Should be defined in scripts. Usage scenarios:
-<div class="highlight"><pre><span></span><code><span class="nb nb-ZParserExtender">Hlp_PrintConsole</span><span class="p">(</span><span class="n">DIA_CurrentName</span><span class="p">);</span><span class="w"></span>
-<span class="nb nb-ZParserExtender">Hlp_PrintConsole</span><span class="p">(</span><span class="nb nb-ZParserExtender">Str_Format</span><span class="p">(</span><span class="s">&quot;%s[%s]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DIA_CurrentName</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="p">);</span><span class="w"></span>
-<span class="nb nb-Externals">Hlp_StrCmp</span><span class="p">(</span><span class="n">DIA_CurrentName</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_DiegoOw_Teach&quot;</span><span class="p">);</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
+<span class="normal"><a href="#example-4-2">2</a></span>
+<span class="normal"><a href="#example-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="nb nb-ZParserExtender">Hlp_PrintConsole</span><span class="p">(</span><span class="n">DIA_CurrentName</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-4-2"><a id="example-4-2" name="example-4-2"></a><span class="nb nb-ZParserExtender">Hlp_PrintConsole</span><span class="p">(</span><span class="nb nb-ZParserExtender">Str_Format</span><span class="p">(</span><span class="s">&quot;%s[%s]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DIA_CurrentName</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-4-3"><a id="example-4-3" name="example-4-3"></a><span class="nb nb-Externals">Hlp_StrCmp</span><span class="p">(</span><span class="n">DIA_CurrentName</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_DiegoOw_Teach&quot;</span><span class="p">);</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 
   <hr>
 <div class="md-source-file">

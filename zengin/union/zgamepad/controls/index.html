@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/union/zgamepad/controls/">
       
       <link rel="icon" href="../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2867,55 +2867,80 @@
 </div>
 <h3 id="regions">Regions<a class="headerlink" href="#regions" title="Permanent link"></a></h3>
 <p>The format supports code blocks specified by the <code>#region</code> and <code>#endregion</code> keywords, these regions do not have any syntactical meaning, they offer a convenient way to collapse sections of the code in editors with the syntax highlighting capabilites (Notepad++)</p>
-<div class="highlight"><span class="filename">Regions</span><pre><span></span><code>#region strings
- // TODO
-#endregion
-
-#region fight scheme
- // TODO
-#endregion
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Regions</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
+<span class="normal"><a href="#example-0-2">2</a></span>
+<span class="normal"><a href="#example-0-3">3</a></span>
+<span class="normal"><a href="#example-0-4">4</a></span>
+<span class="normal"><a href="#example-0-5">5</a></span>
+<span class="normal"><a href="#example-0-6">6</a></span>
+<span class="normal"><a href="#example-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a>#region strings
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a> // TODO
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a>#endregion
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a>
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a>#region fight scheme
+</span><span id="example-0-6"><a id="example-0-6" name="example-0-6"></a> // TODO
+</span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a>#endregion
+</span></code></pre></div></td></tr></table></div>
 <h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link"></a></h3>
 <p>Comments are useful for quick informations, or just to disable some old code, that might come in handy later. The <code>.gamepad</code> file syntax supports C++ line comments using two forward slashes <code>//</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Comments can be used only at the start of any given line!</p>
 </div>
-<div class="highlight"><span class="filename">Comments</span><pre><span></span><code>// this is a comment
-KeyRecord // this is NOT a comment
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Comments</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
+<span class="normal"><a href="#example-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a>// this is a comment
+</span><span id="example-1-2"><a id="example-1-2" name="example-1-2"></a>KeyRecord // this is NOT a comment
+</span></code></pre></div></td></tr></table></div>
 <h3 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link"></a></h3>
 <p>Strings are used for interactive hints. They should be defined at the top of the file. To define a string, use the keyword <code>String</code>. Strings have the following format:
-<div class="highlight"><span class="filename">Multilang string syntax</span><pre><span></span><code>String [id]
-  [langTag] [text]
-  [langTag] [text]
-  [langTag] [text]
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Multilang string syntax</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
+<span class="normal"><a href="#example-2-2">2</a></span>
+<span class="normal"><a href="#example-2-3">3</a></span>
+<span class="normal"><a href="#example-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a>String [id]
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a>  [langTag] [text]
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a>  [langTag] [text]
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a>  [langTag] [text]
+</span></code></pre></div></td></tr></table></div></p>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link"></a></h4>
-<p><div class="highlight"><pre><span></span><code>String interact
-    Rus &quot;Взаимодействовать&quot;
-    Eng &quot;Interact&quot;
-    Pol &quot;Interakcja&quot;
-    Deu &quot;Interagieren&quot;
-
-String remove_weapon
-    Rus &quot;Убрать оружие&quot;
-    Eng &quot;Remove weapon&quot;
-    Pol &quot;Chowanie broni&quot;
-    Deu &quot;Waffe entfernen&quot;
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1"> 1</a></span>
+<span class="normal"><a href="#example-3-2"> 2</a></span>
+<span class="normal"><a href="#example-3-3"> 3</a></span>
+<span class="normal"><a href="#example-3-4"> 4</a></span>
+<span class="normal"><a href="#example-3-5"> 5</a></span>
+<span class="normal"><a href="#example-3-6"> 6</a></span>
+<span class="normal"><a href="#example-3-7"> 7</a></span>
+<span class="normal"><a href="#example-3-8"> 8</a></span>
+<span class="normal"><a href="#example-3-9"> 9</a></span>
+<span class="normal"><a href="#example-3-10">10</a></span>
+<span class="normal"><a href="#example-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a>String interact
+</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a>    Rus &quot;Взаимодействовать&quot;
+</span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a>    Eng &quot;Interact&quot;
+</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a>    Pol &quot;Interakcja&quot;
+</span><span id="example-3-5"><a id="example-3-5" name="example-3-5"></a>    Deu &quot;Interagieren&quot;
+</span><span id="example-3-6"><a id="example-3-6" name="example-3-6"></a>
+</span><span id="example-3-7"><a id="example-3-7" name="example-3-7"></a>String remove_weapon
+</span><span id="example-3-8"><a id="example-3-8" name="example-3-8"></a>    Rus &quot;Убрать оружие&quot;
+</span><span id="example-3-9"><a id="example-3-9" name="example-3-9"></a>    Eng &quot;Remove weapon&quot;
+</span><span id="example-3-10"><a id="example-3-10" name="example-3-10"></a>    Pol &quot;Chowanie broni&quot;
+</span><span id="example-3-11"><a id="example-3-11" name="example-3-11"></a>    Deu &quot;Waffe entfernen&quot;
+</span></code></pre></div></td></tr></table></div>
 The string <code>name</code> must be unique and is used to reference the string while defining hints.
 The language tag matches the language in <code>SystemPack.ini</code>. If the file does not contain the user's language, English will be taken by default. If there is no English, then the first one.</p>
 <h3 id="control-bindings">Control bindings<a class="headerlink" href="#control-bindings" title="Permanent link"></a></h3>
 <p>A binding is a description of an event that includes emulation object and conditions. Hints are part of the binding.
 The general structure of the bind starts with the keyword <code>KeyRecord</code> and has the following format:
-<div class="highlight"><span class="filename">Control binding</span><pre><span></span><code>KeyRecord [modifier]
-  Id          [key name]
-  Combination [gamepad keys]
-  Emulation   [engine logical and absolute keys]
-  Condition   [engine logical, absolute keys or logical functions]
-  Help        [name of the hint string]
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Control binding</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
+<span class="normal"><a href="#example-4-2">2</a></span>
+<span class="normal"><a href="#example-4-3">3</a></span>
+<span class="normal"><a href="#example-4-4">4</a></span>
+<span class="normal"><a href="#example-4-5">5</a></span>
+<span class="normal"><a href="#example-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a>KeyRecord [modifier]
+</span><span id="example-4-2"><a id="example-4-2" name="example-4-2"></a>  Id          [key name]
+</span><span id="example-4-3"><a id="example-4-3" name="example-4-3"></a>  Combination [gamepad keys]
+</span><span id="example-4-4"><a id="example-4-4" name="example-4-4"></a>  Emulation   [engine logical and absolute keys]
+</span><span id="example-4-5"><a id="example-4-5" name="example-4-5"></a>  Condition   [engine logical, absolute keys or logical functions]
+</span><span id="example-4-6"><a id="example-4-6" name="example-4-6"></a>  Help        [name of the hint string]
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>Id</code> - unique identifier, used by other users to override this control binding</li>
 <li><code>[modifier]</code> - can be empty or take the value of <code>Toggled</code><br />
@@ -2939,41 +2964,65 @@ If the value is <code>Toggled</code>, the control binding will work only when th
 <p>All operators are optional! This means if a binding should only show a hint, it doesn't have to contain Combination.</p>
 </div>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link"></a></h4>
-<div class="highlight"><span class="filename">Control binding examples</span><pre><span></span><code>KeyRecord
-  Id          StopUsingPicklock
-  Combination JOY_B
-  Emulation   KEY_DOWN
-  Condition   Cond_InterfaceIsOpen, Cond_UsesPicklock, !JOY_B
-
-KeyRecord Toggled
-  Id          ReturnToHumanForm
-  Combination JOY_A
-  Emulation   KEY_RETURN
-  Condition   Cond_InTransformation
-  Help        end_transform
-
-KeyRecord
-  Id          QuickRingSelectSlot
-  Combination JOY_RSTICK_FULL
-  Condition   !Cond_InventoryIsOpen, Cond_IsOverlayTop
-  Help        focus_item
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Control binding examples</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1"> 1</a></span>
+<span class="normal"><a href="#example-5-2"> 2</a></span>
+<span class="normal"><a href="#example-5-3"> 3</a></span>
+<span class="normal"><a href="#example-5-4"> 4</a></span>
+<span class="normal"><a href="#example-5-5"> 5</a></span>
+<span class="normal"><a href="#example-5-6"> 6</a></span>
+<span class="normal"><a href="#example-5-7"> 7</a></span>
+<span class="normal"><a href="#example-5-8"> 8</a></span>
+<span class="normal"><a href="#example-5-9"> 9</a></span>
+<span class="normal"><a href="#example-5-10">10</a></span>
+<span class="normal"><a href="#example-5-11">11</a></span>
+<span class="normal"><a href="#example-5-12">12</a></span>
+<span class="normal"><a href="#example-5-13">13</a></span>
+<span class="normal"><a href="#example-5-14">14</a></span>
+<span class="normal"><a href="#example-5-15">15</a></span>
+<span class="normal"><a href="#example-5-16">16</a></span>
+<span class="normal"><a href="#example-5-17">17</a></span>
+<span class="normal"><a href="#example-5-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a>KeyRecord
+</span><span id="example-5-2"><a id="example-5-2" name="example-5-2"></a>  Id          StopUsingPicklock
+</span><span id="example-5-3"><a id="example-5-3" name="example-5-3"></a>  Combination JOY_B
+</span><span id="example-5-4"><a id="example-5-4" name="example-5-4"></a>  Emulation   KEY_DOWN
+</span><span id="example-5-5"><a id="example-5-5" name="example-5-5"></a>  Condition   Cond_InterfaceIsOpen, Cond_UsesPicklock, !JOY_B
+</span><span id="example-5-6"><a id="example-5-6" name="example-5-6"></a>
+</span><span id="example-5-7"><a id="example-5-7" name="example-5-7"></a>KeyRecord Toggled
+</span><span id="example-5-8"><a id="example-5-8" name="example-5-8"></a>  Id          ReturnToHumanForm
+</span><span id="example-5-9"><a id="example-5-9" name="example-5-9"></a>  Combination JOY_A
+</span><span id="example-5-10"><a id="example-5-10" name="example-5-10"></a>  Emulation   KEY_RETURN
+</span><span id="example-5-11"><a id="example-5-11" name="example-5-11"></a>  Condition   Cond_InTransformation
+</span><span id="example-5-12"><a id="example-5-12" name="example-5-12"></a>  Help        end_transform
+</span><span id="example-5-13"><a id="example-5-13" name="example-5-13"></a>
+</span><span id="example-5-14"><a id="example-5-14" name="example-5-14"></a>KeyRecord
+</span><span id="example-5-15"><a id="example-5-15" name="example-5-15"></a>  Id          QuickRingSelectSlot
+</span><span id="example-5-16"><a id="example-5-16" name="example-5-16"></a>  Combination JOY_RSTICK_FULL
+</span><span id="example-5-17"><a id="example-5-17" name="example-5-17"></a>  Condition   !Cond_InventoryIsOpen, Cond_IsOverlayTop
+</span><span id="example-5-18"><a id="example-5-18" name="example-5-18"></a>  Help        focus_item
+</span></code></pre></div></td></tr></table></div>
 <h3 id="controls-override">Controls override<a class="headerlink" href="#controls-override" title="Permanent link"></a></h3>
 <p>If you want to change or remove bindings from another controls file, use the <code>KeyDisable</code> keyword.<br />
 <a href="https://github.com/Gratt-5r2/zGamePad/blob/master/Utils/controls.gamepad">Default controls file</a></p>
-<p><div class="highlight"><span class="filename">Controls override syntax</span><pre><span></span><code>KeyDisable [fileName].[Id]
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Controls override syntax</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a>KeyDisable [fileName].[Id]
+</span></code></pre></div></td></tr></table></div>
 Where <code>fileName</code> is the name of the controls file without extension and <code>id</code> is a key of the binding.</p>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link"></a></h4>
-<div class="highlight"><span class="filename">Controls override example</span><pre><span></span><code>// remove key from the main controls file
-KeyDisable Controls.ArrowDown
-
-// create new key based on the same buttons
-KeyRecord Toggled
-  Id          ArrowDownNew
-  Combination JOY_DOWN
-  Emulation   GAME_DOWN
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Controls override example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span>
+<span class="normal"><a href="#example-7-2">2</a></span>
+<span class="normal"><a href="#example-7-3">3</a></span>
+<span class="normal"><a href="#example-7-4">4</a></span>
+<span class="normal"><a href="#example-7-5">5</a></span>
+<span class="normal"><a href="#example-7-6">6</a></span>
+<span class="normal"><a href="#example-7-7">7</a></span>
+<span class="normal"><a href="#example-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a>// remove key from the main controls file
+</span><span id="example-7-2"><a id="example-7-2" name="example-7-2"></a>KeyDisable Controls.ArrowDown
+</span><span id="example-7-3"><a id="example-7-3" name="example-7-3"></a>
+</span><span id="example-7-4"><a id="example-7-4" name="example-7-4"></a>// create new key based on the same buttons
+</span><span id="example-7-5"><a id="example-7-5" name="example-7-5"></a>KeyRecord Toggled
+</span><span id="example-7-6"><a id="example-7-6" name="example-7-6"></a>  Id          ArrowDownNew
+</span><span id="example-7-7"><a id="example-7-7" name="example-7-7"></a>  Combination JOY_DOWN
+</span><span id="example-7-8"><a id="example-7-8" name="example-7-8"></a>  Emulation   GAME_DOWN
+</span></code></pre></div></td></tr></table></div>
 <h2 id="customization-example">Customization example<a class="headerlink" href="#customization-example" title="Permanent link"></a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>

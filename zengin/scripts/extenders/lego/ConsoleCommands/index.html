@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/lego/ConsoleCommands/">
       
       <link rel="icon" href="../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2830,16 +2830,17 @@
 </ul>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link"></a></h2>
 <p>Initialize with <code>LeGo_ConsoleCommands</code> flag.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">LeGo_Init</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-<span class="n">LeGo_Init</span><span class="p">(</span><span class="n">LeGo_ConsoleCommands</span><span class="p">);</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
+<span class="normal"><a href="#example-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">LeGo_Init</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="n">LeGo_Init</span><span class="p">(</span><span class="n">LeGo_ConsoleCommands</span><span class="p">);</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link"></a></h2>
 <p><a href="https://github.com/Lehona/LeGo/blob/dev/ConsoleCommands.d"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg></span> ConsoleCommands.d on GitHub</a></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link"></a></h2>
 <h3 id="cc_register">CC_Register<a class="headerlink" href="#cc_register" title="Permanent link"></a></h3>
 <p>Registers a new console command.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CC_Register</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">cmdPrefix</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">description</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CC_Register</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">cmdPrefix</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">description</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>f</code> - This function is executed when the command <code>cmdPrefix</code> is entered in the console. The function signature is <code>func string f(var string p0)</code>. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.</li>
 <li><code>cmdPrefix</code> - This is the command that can be entered in the console.</li>
@@ -2847,15 +2848,15 @@
 </ul>
 <h3 id="cc_remove">CC_Remove<a class="headerlink" href="#cc_remove" title="Permanent link"></a></h3>
 <p>Removes a function from the console commands.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CC_Remove</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CC_Remove</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li>f - This function will be removed, i.e. the associated command will no longer work.</li>
 </ul>
 <h3 id="cc_active">CC_Active<a class="headerlink" href="#cc_active" title="Permanent link"></a></h3>
 <p>Checks whether the function passed is already part of a console command.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CC_Active</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CC_Active</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>f</code> - function being checked</li>
 <li><code>return</code> - <code>TRUE</code> if there is a corresponding function, <code>FALSE</code> otherwise.</li>
@@ -2864,44 +2865,67 @@
 <h3 id="basic-command-example">Basic command example<a class="headerlink" href="#basic-command-example" title="Permanent link"></a></h3>
 <p>As a basic example let's create a version command that prints a version of our modification.<br />
 First we declare a constant <code>string</code> variable to hold the version string to be shown.
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Mod_Version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;My mod version 0.1alpha&quot;</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Mod_Version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;My mod version 0.1alpha&quot;</span><span class="p">;</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 Next we create the command function.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Notice the correct function signature. If you do not adhere to the correct function signature the command will crash the game.</p>
 </div>
-<p><div class="highlight"><pre><span></span><code><span class="c">// This function is called by our console</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">CC_ModVersion</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">param</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">Mod_Version</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span>
+<span class="normal"><a href="#example-5-2">2</a></span>
+<span class="normal"><a href="#example-5-3">3</a></span>
+<span class="normal"><a href="#example-5-4">4</a></span>
+<span class="normal"><a href="#example-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="c">// This function is called by our console</span><span class="w"></span>
+</span><span id="example-5-2"><a id="example-5-2" name="example-5-2"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">CC_ModVersion</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">param</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-5-3"><a id="example-5-3" name="example-5-3"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-5-4"><a id="example-5-4" name="example-5-4"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">Mod_Version</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-5-5"><a id="example-5-5" name="example-5-5"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 Then we have to register the functions. For convenience I create a new <code>RegisterConsoleFunctions</code> function to initialize all console commands. The function is really simple.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">RegisterConsoleFunctions</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">CC_Register</span><span class="w"> </span><span class="p">(</span><span class="n">CC_ModVersion</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mod_version&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Version of my amazing mod.&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span>
+<span class="normal"><a href="#example-6-2">2</a></span>
+<span class="normal"><a href="#example-6-3">3</a></span>
+<span class="normal"><a href="#example-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">RegisterConsoleFunctions</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-6-2"><a id="example-6-2" name="example-6-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-3"><a id="example-6-3" name="example-6-3"></a><span class="w">    </span><span class="n">CC_Register</span><span class="w"> </span><span class="p">(</span><span class="n">CC_ModVersion</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mod_version&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Version of my amazing mod.&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-6-4"><a id="example-6-4" name="example-6-4"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 Lastaly we have to call this function from <code>INIT_GLOBAL</code> function.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">INIT_GLOBAL</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c">// will be called for every world (from INIT_&lt;LevelName&gt;)</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-Externals">Game_InitGerman</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Ikarus initialization</span><span class="w"></span>
-<span class="w">    </span><span class="n">MEM_InitAll</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// LeGo initialization</span><span class="w"></span>
-<span class="w">    </span><span class="n">LeGo_Init</span><span class="p">(</span><span class="n">LeGo_ConsoleCommands</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Here we register all of our commands</span><span class="w"></span>
-<span class="w">    </span><span class="n">RegisterConsoleFunctions</span><span class="p">();</span><span class="w"></span>
-
-
-<span class="w">    </span><span class="c">// the rest of the code </span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1"> 1</a></span>
+<span class="normal"><a href="#example-7-2"> 2</a></span>
+<span class="normal"><a href="#example-7-3"> 3</a></span>
+<span class="normal"><a href="#example-7-4"> 4</a></span>
+<span class="normal"><a href="#example-7-5"> 5</a></span>
+<span class="normal"><a href="#example-7-6"> 6</a></span>
+<span class="normal"><a href="#example-7-7"> 7</a></span>
+<span class="normal"><a href="#example-7-8"> 8</a></span>
+<span class="normal"><a href="#example-7-9"> 9</a></span>
+<span class="normal"><a href="#example-7-10">10</a></span>
+<span class="normal"><a href="#example-7-11">11</a></span>
+<span class="normal"><a href="#example-7-12">12</a></span>
+<span class="normal"><a href="#example-7-13">13</a></span>
+<span class="normal"><a href="#example-7-14">14</a></span>
+<span class="normal"><a href="#example-7-15">15</a></span>
+<span class="normal"><a href="#example-7-16">16</a></span>
+<span class="normal"><a href="#example-7-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">INIT_GLOBAL</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-7-2"><a id="example-7-2" name="example-7-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-7-3"><a id="example-7-3" name="example-7-3"></a><span class="w">    </span><span class="c">// will be called for every world (from INIT_&lt;LevelName&gt;)</span><span class="w"></span>
+</span><span id="example-7-4"><a id="example-7-4" name="example-7-4"></a><span class="w">    </span><span class="nb nb-Externals">Game_InitGerman</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-7-5"><a id="example-7-5" name="example-7-5"></a>
+</span><span id="example-7-6"><a id="example-7-6" name="example-7-6"></a><span class="w">    </span><span class="c">// Ikarus initialization</span><span class="w"></span>
+</span><span id="example-7-7"><a id="example-7-7" name="example-7-7"></a><span class="w">    </span><span class="n">MEM_InitAll</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-7-8"><a id="example-7-8" name="example-7-8"></a>
+</span><span id="example-7-9"><a id="example-7-9" name="example-7-9"></a><span class="w">    </span><span class="c">// LeGo initialization</span><span class="w"></span>
+</span><span id="example-7-10"><a id="example-7-10" name="example-7-10"></a><span class="w">    </span><span class="n">LeGo_Init</span><span class="p">(</span><span class="n">LeGo_ConsoleCommands</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-7-11"><a id="example-7-11" name="example-7-11"></a>
+</span><span id="example-7-12"><a id="example-7-12" name="example-7-12"></a><span class="w">    </span><span class="c">// Here we register all of our commands</span><span class="w"></span>
+</span><span id="example-7-13"><a id="example-7-13" name="example-7-13"></a><span class="w">    </span><span class="n">RegisterConsoleFunctions</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-7-14"><a id="example-7-14" name="example-7-14"></a>
+</span><span id="example-7-15"><a id="example-7-15" name="example-7-15"></a>
+</span><span id="example-7-16"><a id="example-7-16" name="example-7-16"></a><span class="w">    </span><span class="c">// the rest of the code </span><span class="w"></span>
+</span><span id="example-7-17"><a id="example-7-17" name="example-7-17"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 
   <hr>
 <div class="md-source-file">

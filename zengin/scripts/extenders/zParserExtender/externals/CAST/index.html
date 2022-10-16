@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/CAST/">
       
       <link rel="icon" href="../../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2831,161 +2831,226 @@
 <p>External functions for data type conversion and pointer casting.</p>
 <h3 id="cast_pointertoinstance">Cast_PointerToInstance<a class="headerlink" href="#cast_pointertoinstance" title="Permanent link"></a></h3>
 <p>Converts memory address (pointer) to an instance
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Cast_PointerToInstance</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Cast_PointerToInstance</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>address</code> - object pointer</li>
 <li><code>return</code> - instance of the object</li>
 </ul>
 <h3 id="cast_instancetopointer">Cast_InstanceToPointer<a class="headerlink" href="#cast_instancetopointer" title="Permanent link"></a></h3>
 <p>Converts instance to a memory address (pointer)
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceToPointer</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceToPointer</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>object</code> - object instance</li>
 <li><code>return</code> - memory address (pointer) of the object</li>
 </ul>
 <h3 id="cast_pointertonpc">Cast_PointerToNpc<a class="headerlink" href="#cast_pointertonpc" title="Permanent link"></a></h3>
 <p>Casts memory address (pointer) to an NPC
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="nf">Cast_PointerToNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="nf">Cast_PointerToNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>address</code> - npc pointer</li>
 <li><code>return</code> - NPC instance</li>
 </ul>
 <h3 id="cast_pointertoitem">Cast_PointerToItem<a class="headerlink" href="#cast_pointertoitem" title="Permanent link"></a></h3>
 <p>Casts memory address (pointer) to an Item
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">C_ITEM</span><span class="w"> </span><span class="nf">Cast_PointerToItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_ITEM</span><span class="w"> </span><span class="nf">Cast_PointerToItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>address</code> - item pointer</li>
 <li><code>return</code> - item instance</li>
 </ul>
 <h3 id="cast_instanceisnpc">Cast_InstanceIsNpc<a class="headerlink" href="#cast_instanceisnpc" title="Permanent link"></a></h3>
 <p>Checks whether object is an NPC
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>object</code> - object to check</li>
 <li><code>return</code> - <code>TRUE</code> or <code>FALSE</code></li>
 </ul>
 <h3 id="cast_instanceisitem">Cast_InstanceIsItem<a class="headerlink" href="#cast_instanceisitem" title="Permanent link"></a></h3>
 <p>Checks whether object is an Item
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>object</code> - object to check</li>
 <li><code>return</code> - <code>TRUE</code> or <code>FALSE</code></li>
 </ul>
 <h3 id="cast_instanceismob">Cast_InstanceIsMob<a class="headerlink" href="#cast_instanceismob" title="Permanent link"></a></h3>
 <p>Checks whether object is an MOB
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsMob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsMob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>object</code> - object to check</li>
 <li><code>return</code> - <code>TRUE</code> or <code>FALSE</code></li>
 </ul>
 <h3 id="cast_getinstanceindex">Cast_GetInstanceIndex<a class="headerlink" href="#cast_getinstanceindex" title="Permanent link"></a></h3>
 <p>Returns symbolID of the object, returns -1 when not found
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetInstanceIndex</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetInstanceIndex</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>object</code> - instance of an object</li>
 <li><code>return</code> - symbol table index, -1 when not found</li>
 </ul>
 <h3 id="cast_getclassid">Cast_GetClassID<a class="headerlink" href="#cast_getclassid" title="Permanent link"></a></h3>
 <p>Returns the class identifier of a class by its name
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>className</code> - name of the class</li>
 <li><code>return</code> - class identifier</li>
 </ul>
 <h3 id="cast_getvobclassid">Cast_GetVobClassID<a class="headerlink" href="#cast_getvobclassid" title="Permanent link"></a></h3>
 <p>Returns class identifier of the zCObject vob class
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>object</code> - object instance</li>
 <li><code>return</code> - class zCObject identifier</li>
 </ul>
 <h3 id="cast_checkvobclassid">Cast_CheckVobClassID<a class="headerlink" href="#cast_checkvobclassid" title="Permanent link"></a></h3>
 <p>Checks if the classId class is the parent class of the object
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_CheckVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">classId</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_CheckVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">classId</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>classId</code> - class identifier, from Cast_GetClassID function</li>
 <li><code>object</code> - object instance</li>
 <li><code>return</code> - class zCObject identifier</li>
 </ul>
 <h1 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h1>
-<div class="highlight"><pre><span></span><code><span class="c">/// Converts memory address (pointer) to a instance</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param address object pointer</span><span class="w"></span>
-<span class="c">/// @return instance of the object</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Cast_PointerToInstance</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Converts instance to a memory address (pointer)</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param object object instance</span><span class="w"></span>
-<span class="c">/// @return memory address (pointer) of the object</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceToPointer</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Casts memory address (pointer) to an NPC</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param address npc pointer</span><span class="w"></span>
-<span class="c">/// @return NPC instance</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="nf">Cast_PointerToNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Casts memory address (pointer) to an Item</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param address item pointer</span><span class="w"></span>
-<span class="c">/// @return Item instance</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">C_ITEM</span><span class="w"> </span><span class="nf">Cast_PointerToItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Checks whether object is an NPC</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param object object to check</span><span class="w"></span>
-<span class="c">/// @return `TRUE` or `FALSE`</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Checks whether object is an Item</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param object object to check</span><span class="w"></span>
-<span class="c">/// @return `TRUE` or `FALSE`</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Checks whether object is an MOB</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param object object to check</span><span class="w"></span>
-<span class="c">/// @return `TRUE` or `FALSE`</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsMob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Returns symbolID of the object, returns -1 when not found</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param object instance of an object</span><span class="w"></span>
-<span class="c">/// @return symbol table index, -1 when not found</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetInstanceIndex</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Returns the class identifier of a class by its name</span><span class="w"></span>
-<span class="c">///</span><span class="w"></span>
-<span class="c">/// @param className name of the class</span><span class="w"></span>
-<span class="c">/// @return class identifier</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Returns class identifier of the zCObject vob class</span><span class="w"></span>
-<span class="c">///</span><span class="w"></span>
-<span class="c">/// @param object object instance</span><span class="w"></span>
-<span class="c">/// @return class zCObject identifier</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Checks if the classId class is the parent class of the object</span><span class="w"></span>
-<span class="c">///</span><span class="w"></span>
-<span class="c">/// @param classId class identifier, from Cast_GetClassID function</span><span class="w"></span>
-<span class="c">/// @param object object instance</span><span class="w"></span>
-<span class="c">/// @return class zCObject identifier</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_CheckVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">classId</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1"> 1</a></span>
+<span class="normal"><a href="#example-11-2"> 2</a></span>
+<span class="normal"><a href="#example-11-3"> 3</a></span>
+<span class="normal"><a href="#example-11-4"> 4</a></span>
+<span class="normal"><a href="#example-11-5"> 5</a></span>
+<span class="normal"><a href="#example-11-6"> 6</a></span>
+<span class="normal"><a href="#example-11-7"> 7</a></span>
+<span class="normal"><a href="#example-11-8"> 8</a></span>
+<span class="normal"><a href="#example-11-9"> 9</a></span>
+<span class="normal"><a href="#example-11-10">10</a></span>
+<span class="normal"><a href="#example-11-11">11</a></span>
+<span class="normal"><a href="#example-11-12">12</a></span>
+<span class="normal"><a href="#example-11-13">13</a></span>
+<span class="normal"><a href="#example-11-14">14</a></span>
+<span class="normal"><a href="#example-11-15">15</a></span>
+<span class="normal"><a href="#example-11-16">16</a></span>
+<span class="normal"><a href="#example-11-17">17</a></span>
+<span class="normal"><a href="#example-11-18">18</a></span>
+<span class="normal"><a href="#example-11-19">19</a></span>
+<span class="normal"><a href="#example-11-20">20</a></span>
+<span class="normal"><a href="#example-11-21">21</a></span>
+<span class="normal"><a href="#example-11-22">22</a></span>
+<span class="normal"><a href="#example-11-23">23</a></span>
+<span class="normal"><a href="#example-11-24">24</a></span>
+<span class="normal"><a href="#example-11-25">25</a></span>
+<span class="normal"><a href="#example-11-26">26</a></span>
+<span class="normal"><a href="#example-11-27">27</a></span>
+<span class="normal"><a href="#example-11-28">28</a></span>
+<span class="normal"><a href="#example-11-29">29</a></span>
+<span class="normal"><a href="#example-11-30">30</a></span>
+<span class="normal"><a href="#example-11-31">31</a></span>
+<span class="normal"><a href="#example-11-32">32</a></span>
+<span class="normal"><a href="#example-11-33">33</a></span>
+<span class="normal"><a href="#example-11-34">34</a></span>
+<span class="normal"><a href="#example-11-35">35</a></span>
+<span class="normal"><a href="#example-11-36">36</a></span>
+<span class="normal"><a href="#example-11-37">37</a></span>
+<span class="normal"><a href="#example-11-38">38</a></span>
+<span class="normal"><a href="#example-11-39">39</a></span>
+<span class="normal"><a href="#example-11-40">40</a></span>
+<span class="normal"><a href="#example-11-41">41</a></span>
+<span class="normal"><a href="#example-11-42">42</a></span>
+<span class="normal"><a href="#example-11-43">43</a></span>
+<span class="normal"><a href="#example-11-44">44</a></span>
+<span class="normal"><a href="#example-11-45">45</a></span>
+<span class="normal"><a href="#example-11-46">46</a></span>
+<span class="normal"><a href="#example-11-47">47</a></span>
+<span class="normal"><a href="#example-11-48">48</a></span>
+<span class="normal"><a href="#example-11-49">49</a></span>
+<span class="normal"><a href="#example-11-50">50</a></span>
+<span class="normal"><a href="#example-11-51">51</a></span>
+<span class="normal"><a href="#example-11-52">52</a></span>
+<span class="normal"><a href="#example-11-53">53</a></span>
+<span class="normal"><a href="#example-11-54">54</a></span>
+<span class="normal"><a href="#example-11-55">55</a></span>
+<span class="normal"><a href="#example-11-56">56</a></span>
+<span class="normal"><a href="#example-11-57">57</a></span>
+<span class="normal"><a href="#example-11-58">58</a></span>
+<span class="normal"><a href="#example-11-59">59</a></span>
+<span class="normal"><a href="#example-11-60">60</a></span>
+<span class="normal"><a href="#example-11-61">61</a></span>
+<span class="normal"><a href="#example-11-62">62</a></span>
+<span class="normal"><a href="#example-11-63">63</a></span>
+<span class="normal"><a href="#example-11-64">64</a></span>
+<span class="normal"><a href="#example-11-65">65</a></span>
+<span class="normal"><a href="#example-11-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="c">/// Converts memory address (pointer) to a instance</span><span class="w"></span>
+</span><span id="example-11-2"><a id="example-11-2" name="example-11-2"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-11-3"><a id="example-11-3" name="example-11-3"></a><span class="c">/// @param address object pointer</span><span class="w"></span>
+</span><span id="example-11-4"><a id="example-11-4" name="example-11-4"></a><span class="c">/// @return instance of the object</span><span class="w"></span>
+</span><span id="example-11-5"><a id="example-11-5" name="example-11-5"></a><span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Cast_PointerToInstance</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-6"><a id="example-11-6" name="example-11-6"></a>
+</span><span id="example-11-7"><a id="example-11-7" name="example-11-7"></a><span class="c">/// Converts instance to a memory address (pointer)</span><span class="w"></span>
+</span><span id="example-11-8"><a id="example-11-8" name="example-11-8"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-11-9"><a id="example-11-9" name="example-11-9"></a><span class="c">/// @param object object instance</span><span class="w"></span>
+</span><span id="example-11-10"><a id="example-11-10" name="example-11-10"></a><span class="c">/// @return memory address (pointer) of the object</span><span class="w"></span>
+</span><span id="example-11-11"><a id="example-11-11" name="example-11-11"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceToPointer</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-12"><a id="example-11-12" name="example-11-12"></a>
+</span><span id="example-11-13"><a id="example-11-13" name="example-11-13"></a><span class="c">/// Casts memory address (pointer) to an NPC</span><span class="w"></span>
+</span><span id="example-11-14"><a id="example-11-14" name="example-11-14"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-11-15"><a id="example-11-15" name="example-11-15"></a><span class="c">/// @param address npc pointer</span><span class="w"></span>
+</span><span id="example-11-16"><a id="example-11-16" name="example-11-16"></a><span class="c">/// @return NPC instance</span><span class="w"></span>
+</span><span id="example-11-17"><a id="example-11-17" name="example-11-17"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="nf">Cast_PointerToNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-18"><a id="example-11-18" name="example-11-18"></a>
+</span><span id="example-11-19"><a id="example-11-19" name="example-11-19"></a><span class="c">/// Casts memory address (pointer) to an Item</span><span class="w"></span>
+</span><span id="example-11-20"><a id="example-11-20" name="example-11-20"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-11-21"><a id="example-11-21" name="example-11-21"></a><span class="c">/// @param address item pointer</span><span class="w"></span>
+</span><span id="example-11-22"><a id="example-11-22" name="example-11-22"></a><span class="c">/// @return Item instance</span><span class="w"></span>
+</span><span id="example-11-23"><a id="example-11-23" name="example-11-23"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_ITEM</span><span class="w"> </span><span class="nf">Cast_PointerToItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-24"><a id="example-11-24" name="example-11-24"></a>
+</span><span id="example-11-25"><a id="example-11-25" name="example-11-25"></a><span class="c">/// Checks whether object is an NPC</span><span class="w"></span>
+</span><span id="example-11-26"><a id="example-11-26" name="example-11-26"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-11-27"><a id="example-11-27" name="example-11-27"></a><span class="c">/// @param object object to check</span><span class="w"></span>
+</span><span id="example-11-28"><a id="example-11-28" name="example-11-28"></a><span class="c">/// @return `TRUE` or `FALSE`</span><span class="w"></span>
+</span><span id="example-11-29"><a id="example-11-29" name="example-11-29"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-30"><a id="example-11-30" name="example-11-30"></a>
+</span><span id="example-11-31"><a id="example-11-31" name="example-11-31"></a><span class="c">/// Checks whether object is an Item</span><span class="w"></span>
+</span><span id="example-11-32"><a id="example-11-32" name="example-11-32"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-11-33"><a id="example-11-33" name="example-11-33"></a><span class="c">/// @param object object to check</span><span class="w"></span>
+</span><span id="example-11-34"><a id="example-11-34" name="example-11-34"></a><span class="c">/// @return `TRUE` or `FALSE`</span><span class="w"></span>
+</span><span id="example-11-35"><a id="example-11-35" name="example-11-35"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-36"><a id="example-11-36" name="example-11-36"></a>
+</span><span id="example-11-37"><a id="example-11-37" name="example-11-37"></a><span class="c">/// Checks whether object is an MOB</span><span class="w"></span>
+</span><span id="example-11-38"><a id="example-11-38" name="example-11-38"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-11-39"><a id="example-11-39" name="example-11-39"></a><span class="c">/// @param object object to check</span><span class="w"></span>
+</span><span id="example-11-40"><a id="example-11-40" name="example-11-40"></a><span class="c">/// @return `TRUE` or `FALSE`</span><span class="w"></span>
+</span><span id="example-11-41"><a id="example-11-41" name="example-11-41"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsMob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-42"><a id="example-11-42" name="example-11-42"></a>
+</span><span id="example-11-43"><a id="example-11-43" name="example-11-43"></a><span class="c">/// Returns symbolID of the object, returns -1 when not found</span><span class="w"></span>
+</span><span id="example-11-44"><a id="example-11-44" name="example-11-44"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-11-45"><a id="example-11-45" name="example-11-45"></a><span class="c">/// @param object instance of an object</span><span class="w"></span>
+</span><span id="example-11-46"><a id="example-11-46" name="example-11-46"></a><span class="c">/// @return symbol table index, -1 when not found</span><span class="w"></span>
+</span><span id="example-11-47"><a id="example-11-47" name="example-11-47"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetInstanceIndex</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-48"><a id="example-11-48" name="example-11-48"></a>
+</span><span id="example-11-49"><a id="example-11-49" name="example-11-49"></a><span class="c">/// Returns the class identifier of a class by its name</span><span class="w"></span>
+</span><span id="example-11-50"><a id="example-11-50" name="example-11-50"></a><span class="c">///</span><span class="w"></span>
+</span><span id="example-11-51"><a id="example-11-51" name="example-11-51"></a><span class="c">/// @param className name of the class</span><span class="w"></span>
+</span><span id="example-11-52"><a id="example-11-52" name="example-11-52"></a><span class="c">/// @return class identifier</span><span class="w"></span>
+</span><span id="example-11-53"><a id="example-11-53" name="example-11-53"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-54"><a id="example-11-54" name="example-11-54"></a>
+</span><span id="example-11-55"><a id="example-11-55" name="example-11-55"></a><span class="c">/// Returns class identifier of the zCObject vob class</span><span class="w"></span>
+</span><span id="example-11-56"><a id="example-11-56" name="example-11-56"></a><span class="c">///</span><span class="w"></span>
+</span><span id="example-11-57"><a id="example-11-57" name="example-11-57"></a><span class="c">/// @param object object instance</span><span class="w"></span>
+</span><span id="example-11-58"><a id="example-11-58" name="example-11-58"></a><span class="c">/// @return class zCObject identifier</span><span class="w"></span>
+</span><span id="example-11-59"><a id="example-11-59" name="example-11-59"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-11-60"><a id="example-11-60" name="example-11-60"></a>
+</span><span id="example-11-61"><a id="example-11-61" name="example-11-61"></a><span class="c">/// Checks if the classId class is the parent class of the object</span><span class="w"></span>
+</span><span id="example-11-62"><a id="example-11-62" name="example-11-62"></a><span class="c">///</span><span class="w"></span>
+</span><span id="example-11-63"><a id="example-11-63" name="example-11-63"></a><span class="c">/// @param classId class identifier, from Cast_GetClassID function</span><span class="w"></span>
+</span><span id="example-11-64"><a id="example-11-64" name="example-11-64"></a><span class="c">/// @param object object instance</span><span class="w"></span>
+</span><span id="example-11-65"><a id="example-11-65" name="example-11-65"></a><span class="c">/// @return class zCObject identifier</span><span class="w"></span>
+</span><span id="example-11-66"><a id="example-11-66" name="example-11-66"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_CheckVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">classId</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">

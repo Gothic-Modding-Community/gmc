@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/namespaces/">
       
       <link rel="icon" href="../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2750,174 +2750,302 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Regular scripts</label><label for="__tabbed_1_2">Injectable scripts</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">var01</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
+<span class="normal"><a href="#example-0-2">2</a></span>
+<span class="normal"><a href="#example-0-3">3</a></span>
+<span class="normal"><a href="#example-0-4">4</a></span>
+<span class="normal"><a href="#example-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace</span><span class="w"></span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">var01</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a><span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">META</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Namespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zTestNamespace</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">var01</span><span class="p">;</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
+<span class="normal"><a href="#example-1-2">2</a></span>
+<span class="normal"><a href="#example-1-3">3</a></span>
+<span class="normal"><a href="#example-1-4">4</a></span>
+<span class="normal"><a href="#example-1-5">5</a></span>
+<span class="normal"><a href="#example-1-6">6</a></span>
+<span class="normal"><a href="#example-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="n">META</span><span class="w"></span>
+</span><span id="example-1-2"><a id="example-1-2" name="example-1-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-1-3"><a id="example-1-3" name="example-1-3"></a><span class="w">    </span><span class="n">Namespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zTestNamespace</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-4"><a id="example-1-4" name="example-1-4"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-1-5"><a id="example-1-5" name="example-1-5"></a>
+</span><span id="example-1-6"><a id="example-1-6" name="example-1-6"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">var01</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-7"><a id="example-1-7" name="example-1-7"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <h2 id="namespace-nesting">Namespace nesting<a class="headerlink" href="#namespace-nesting" title="Permanent link"></a></h2>
 <p>Namespaces can be nested for finer control. In case of injection, the namespace defined in META is applied to all code inside the script.</p>
 <p>To go deeper into the namespaces you use the namespace operator <code>:</code>. This code shows function with the same name within three different namespaces. The call in <code>GameInit</code> is made from the global namespace.
-<div class="highlight"><pre><span></span><code><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace02</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace03</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace04</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c">// In this case, the reference is from global namespace to zTestNamespace</span><span class="w"></span>
-<span class="w">    </span><span class="nl">zTestNamespace01</span><span class="p">:</span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="nl">zTestNamespace02</span><span class="p">:</span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="nl">zTestNamespace03</span><span class="p">:</span><span class="nl">zTestNamespace04</span><span class="p">:</span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1"> 1</a></span>
+<span class="normal"><a href="#example-2-2"> 2</a></span>
+<span class="normal"><a href="#example-2-3"> 3</a></span>
+<span class="normal"><a href="#example-2-4"> 4</a></span>
+<span class="normal"><a href="#example-2-5"> 5</a></span>
+<span class="normal"><a href="#example-2-6"> 6</a></span>
+<span class="normal"><a href="#example-2-7"> 7</a></span>
+<span class="normal"><a href="#example-2-8"> 8</a></span>
+<span class="normal"><a href="#example-2-9"> 9</a></span>
+<span class="normal"><a href="#example-2-10">10</a></span>
+<span class="normal"><a href="#example-2-11">11</a></span>
+<span class="normal"><a href="#example-2-12">12</a></span>
+<span class="normal"><a href="#example-2-13">13</a></span>
+<span class="normal"><a href="#example-2-14">14</a></span>
+<span class="normal"><a href="#example-2-15">15</a></span>
+<span class="normal"><a href="#example-2-16">16</a></span>
+<span class="normal"><a href="#example-2-17">17</a></span>
+<span class="normal"><a href="#example-2-18">18</a></span>
+<span class="normal"><a href="#example-2-19">19</a></span>
+<span class="normal"><a href="#example-2-20">20</a></span>
+<span class="normal"><a href="#example-2-21">21</a></span>
+<span class="normal"><a href="#example-2-22">22</a></span>
+<span class="normal"><a href="#example-2-23">23</a></span>
+<span class="normal"><a href="#example-2-24">24</a></span>
+<span class="normal"><a href="#example-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a>
+</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace02</span><span class="w"></span>
+</span><span id="example-2-7"><a id="example-2-7" name="example-2-7"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-2-8"><a id="example-2-8" name="example-2-8"></a><span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-2-9"><a id="example-2-9" name="example-2-9"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-2-10"><a id="example-2-10" name="example-2-10"></a>
+</span><span id="example-2-11"><a id="example-2-11" name="example-2-11"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace03</span><span class="w"></span>
+</span><span id="example-2-12"><a id="example-2-12" name="example-2-12"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-2-13"><a id="example-2-13" name="example-2-13"></a><span class="w">    </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace04</span><span class="w"></span>
+</span><span id="example-2-14"><a id="example-2-14" name="example-2-14"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-2-15"><a id="example-2-15" name="example-2-15"></a><span class="w">      </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-2-16"><a id="example-2-16" name="example-2-16"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-2-17"><a id="example-2-17" name="example-2-17"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-2-18"><a id="example-2-18" name="example-2-18"></a>
+</span><span id="example-2-19"><a id="example-2-19" name="example-2-19"></a><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-2-20"><a id="example-2-20" name="example-2-20"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-2-21"><a id="example-2-21" name="example-2-21"></a><span class="w">    </span><span class="c">// In this case, the reference is from global namespace to zTestNamespace</span><span class="w"></span>
+</span><span id="example-2-22"><a id="example-2-22" name="example-2-22"></a><span class="w">    </span><span class="nl">zTestNamespace01</span><span class="p">:</span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-2-23"><a id="example-2-23" name="example-2-23"></a><span class="w">    </span><span class="nl">zTestNamespace02</span><span class="p">:</span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-2-24"><a id="example-2-24" name="example-2-24"></a><span class="w">    </span><span class="nl">zTestNamespace03</span><span class="p">:</span><span class="nl">zTestNamespace04</span><span class="p">:</span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-2-25"><a id="example-2-25" name="example-2-25"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h2 id="namespace-traversal">Namespace traversal<a class="headerlink" href="#namespace-traversal" title="Permanent link"></a></h2>
 <p>To go up a namespace tree you use the namespace operator <code>:</code> without specifying a namespace. Number of operators determines how many levels you go up.</p>
-<div class="highlight"><span class="filename">Exiting nested namespaces</span><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#1&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#2&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace02</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#3&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">};</span><span class="w"></span>
-
-<span class="w">        </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace03</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#4&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="p">};</span><span class="w"></span>
-
-<span class="w">            </span><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="p">:::</span><span class="n">func01</span><span class="p">();</span><span class="w"> </span><span class="c">// Calls the function 3 levels up</span><span class="w"></span>
-<span class="w">                </span><span class="p">::</span><span class="n">func01</span><span class="p">();</span><span class="w">  </span><span class="c">// Calls the function 2 levels up</span><span class="w"></span>
-<span class="w">                </span><span class="p">:</span><span class="n">func01</span><span class="p">();</span><span class="w">   </span><span class="c">// Calls the function 1 level up</span><span class="w"></span>
-<span class="w">                </span><span class="n">func01</span><span class="p">();</span><span class="w">    </span><span class="c">// Calls the function from the current namespace</span><span class="w"></span>
-<span class="w">            </span><span class="p">};</span><span class="w"></span>
-<span class="w">        </span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exiting nested namespaces</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1"> 1</a></span>
+<span class="normal"><a href="#example-3-2"> 2</a></span>
+<span class="normal"><a href="#example-3-3"> 3</a></span>
+<span class="normal"><a href="#example-3-4"> 4</a></span>
+<span class="normal"><a href="#example-3-5"> 5</a></span>
+<span class="normal"><a href="#example-3-6"> 6</a></span>
+<span class="normal"><a href="#example-3-7"> 7</a></span>
+<span class="normal"><a href="#example-3-8"> 8</a></span>
+<span class="normal"><a href="#example-3-9"> 9</a></span>
+<span class="normal"><a href="#example-3-10">10</a></span>
+<span class="normal"><a href="#example-3-11">11</a></span>
+<span class="normal"><a href="#example-3-12">12</a></span>
+<span class="normal"><a href="#example-3-13">13</a></span>
+<span class="normal"><a href="#example-3-14">14</a></span>
+<span class="normal"><a href="#example-3-15">15</a></span>
+<span class="normal"><a href="#example-3-16">16</a></span>
+<span class="normal"><a href="#example-3-17">17</a></span>
+<span class="normal"><a href="#example-3-18">18</a></span>
+<span class="normal"><a href="#example-3-19">19</a></span>
+<span class="normal"><a href="#example-3-20">20</a></span>
+<span class="normal"><a href="#example-3-21">21</a></span>
+<span class="normal"><a href="#example-3-22">22</a></span>
+<span class="normal"><a href="#example-3-23">23</a></span>
+<span class="normal"><a href="#example-3-24">24</a></span>
+<span class="normal"><a href="#example-3-25">25</a></span>
+<span class="normal"><a href="#example-3-26">26</a></span>
+<span class="normal"><a href="#example-3-27">27</a></span>
+<span class="normal"><a href="#example-3-28">28</a></span>
+<span class="normal"><a href="#example-3-29">29</a></span>
+<span class="normal"><a href="#example-3-30">30</a></span>
+<span class="normal"><a href="#example-3-31">31</a></span>
+<span class="normal"><a href="#example-3-32">32</a></span>
+<span class="normal"><a href="#example-3-33">33</a></span>
+<span class="normal"><a href="#example-3-34">34</a></span>
+<span class="normal"><a href="#example-3-35">35</a></span>
+<span class="normal"><a href="#example-3-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a><span class="w">    </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#1&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-5"><a id="example-3-5" name="example-3-5"></a>
+</span><span id="example-3-6"><a id="example-3-6" name="example-3-6"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
+</span><span id="example-3-7"><a id="example-3-7" name="example-3-7"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-8"><a id="example-3-8" name="example-3-8"></a><span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-3-9"><a id="example-3-9" name="example-3-9"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-10"><a id="example-3-10" name="example-3-10"></a><span class="w">        </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#2&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-3-11"><a id="example-3-11" name="example-3-11"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-12"><a id="example-3-12" name="example-3-12"></a>
+</span><span id="example-3-13"><a id="example-3-13" name="example-3-13"></a><span class="w">    </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace02</span><span class="w"></span>
+</span><span id="example-3-14"><a id="example-3-14" name="example-3-14"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-15"><a id="example-3-15" name="example-3-15"></a><span class="w">        </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-3-16"><a id="example-3-16" name="example-3-16"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-17"><a id="example-3-17" name="example-3-17"></a><span class="w">            </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#3&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-3-18"><a id="example-3-18" name="example-3-18"></a><span class="w">        </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-19"><a id="example-3-19" name="example-3-19"></a>
+</span><span id="example-3-20"><a id="example-3-20" name="example-3-20"></a><span class="w">        </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace03</span><span class="w"></span>
+</span><span id="example-3-21"><a id="example-3-21" name="example-3-21"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-22"><a id="example-3-22" name="example-3-22"></a><span class="w">            </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-3-23"><a id="example-3-23" name="example-3-23"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-24"><a id="example-3-24" name="example-3-24"></a><span class="w">                </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#4&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-3-25"><a id="example-3-25" name="example-3-25"></a><span class="w">            </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-26"><a id="example-3-26" name="example-3-26"></a>
+</span><span id="example-3-27"><a id="example-3-27" name="example-3-27"></a><span class="w">            </span><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-3-28"><a id="example-3-28" name="example-3-28"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-29"><a id="example-3-29" name="example-3-29"></a><span class="w">                </span><span class="p">:::</span><span class="n">func01</span><span class="p">();</span><span class="w"> </span><span class="c">// Calls the function 3 levels up</span><span class="w"></span>
+</span><span id="example-3-30"><a id="example-3-30" name="example-3-30"></a><span class="w">                </span><span class="p">::</span><span class="n">func01</span><span class="p">();</span><span class="w">  </span><span class="c">// Calls the function 2 levels up</span><span class="w"></span>
+</span><span id="example-3-31"><a id="example-3-31" name="example-3-31"></a><span class="w">                </span><span class="p">:</span><span class="n">func01</span><span class="p">();</span><span class="w">   </span><span class="c">// Calls the function 1 level up</span><span class="w"></span>
+</span><span id="example-3-32"><a id="example-3-32" name="example-3-32"></a><span class="w">                </span><span class="n">func01</span><span class="p">();</span><span class="w">    </span><span class="c">// Calls the function from the current namespace</span><span class="w"></span>
+</span><span id="example-3-33"><a id="example-3-33" name="example-3-33"></a><span class="w">            </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-34"><a id="example-3-34" name="example-3-34"></a><span class="w">        </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-35"><a id="example-3-35" name="example-3-35"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-36"><a id="example-3-36" name="example-3-36"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="optional-namespace-specification">Optional namespace specification<a class="headerlink" href="#optional-namespace-specification" title="Permanent link"></a></h2>
 <p>There are three cases where the namespace prefix is optional</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Shares the same namespace</label><label for="__tabbed_2_2">If the funciton is in higher level namespace</label><label for="__tabbed_2_3">If <code>using</code> is psecified in the META block</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#1&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c">// Function call from the current namespace</span><span class="w"></span>
-<span class="w">        </span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1"> 1</a></span>
+<span class="normal"><a href="#example-4-2"> 2</a></span>
+<span class="normal"><a href="#example-4-3"> 3</a></span>
+<span class="normal"><a href="#example-4-4"> 4</a></span>
+<span class="normal"><a href="#example-4-5"> 5</a></span>
+<span class="normal"><a href="#example-4-6"> 6</a></span>
+<span class="normal"><a href="#example-4-7"> 7</a></span>
+<span class="normal"><a href="#example-4-8"> 8</a></span>
+<span class="normal"><a href="#example-4-9"> 9</a></span>
+<span class="normal"><a href="#example-4-10">10</a></span>
+<span class="normal"><a href="#example-4-11">11</a></span>
+<span class="normal"><a href="#example-4-12">12</a></span>
+<span class="normal"><a href="#example-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
+</span><span id="example-4-2"><a id="example-4-2" name="example-4-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-4-3"><a id="example-4-3" name="example-4-3"></a><span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-4-4"><a id="example-4-4" name="example-4-4"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-4-5"><a id="example-4-5" name="example-4-5"></a><span class="w">        </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#1&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-4-6"><a id="example-4-6" name="example-4-6"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-4-7"><a id="example-4-7" name="example-4-7"></a>
+</span><span id="example-4-8"><a id="example-4-8" name="example-4-8"></a><span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-4-9"><a id="example-4-9" name="example-4-9"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-4-10"><a id="example-4-10" name="example-4-10"></a><span class="w">        </span><span class="c">// Function call from the current namespace</span><span class="w"></span>
+</span><span id="example-4-11"><a id="example-4-11" name="example-4-11"></a><span class="w">        </span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-4-12"><a id="example-4-12" name="example-4-12"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-4-13"><a id="example-4-13" name="example-4-13"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#1&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#2&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace02</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
-<span class="w">      </span><span class="p">{</span><span class="w"></span>
-<span class="w">          </span><span class="c">// Function call from the global namespace</span><span class="w"></span>
-<span class="w">          </span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1"> 1</a></span>
+<span class="normal"><a href="#example-5-2"> 2</a></span>
+<span class="normal"><a href="#example-5-3"> 3</a></span>
+<span class="normal"><a href="#example-5-4"> 4</a></span>
+<span class="normal"><a href="#example-5-5"> 5</a></span>
+<span class="normal"><a href="#example-5-6"> 6</a></span>
+<span class="normal"><a href="#example-5-7"> 7</a></span>
+<span class="normal"><a href="#example-5-8"> 8</a></span>
+<span class="normal"><a href="#example-5-9"> 9</a></span>
+<span class="normal"><a href="#example-5-10">10</a></span>
+<span class="normal"><a href="#example-5-11">11</a></span>
+<span class="normal"><a href="#example-5-12">12</a></span>
+<span class="normal"><a href="#example-5-13">13</a></span>
+<span class="normal"><a href="#example-5-14">14</a></span>
+<span class="normal"><a href="#example-5-15">15</a></span>
+<span class="normal"><a href="#example-5-16">16</a></span>
+<span class="normal"><a href="#example-5-17">17</a></span>
+<span class="normal"><a href="#example-5-18">18</a></span>
+<span class="normal"><a href="#example-5-19">19</a></span>
+<span class="normal"><a href="#example-5-20">20</a></span>
+<span class="normal"><a href="#example-5-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-5-2"><a id="example-5-2" name="example-5-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-5-3"><a id="example-5-3" name="example-5-3"></a><span class="w">    </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#1&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-5-4"><a id="example-5-4" name="example-5-4"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-5-5"><a id="example-5-5" name="example-5-5"></a>
+</span><span id="example-5-6"><a id="example-5-6" name="example-5-6"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
+</span><span id="example-5-7"><a id="example-5-7" name="example-5-7"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-5-8"><a id="example-5-8" name="example-5-8"></a><span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-5-9"><a id="example-5-9" name="example-5-9"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-5-10"><a id="example-5-10" name="example-5-10"></a><span class="w">       </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#2&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-5-11"><a id="example-5-11" name="example-5-11"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-5-12"><a id="example-5-12" name="example-5-12"></a>
+</span><span id="example-5-13"><a id="example-5-13" name="example-5-13"></a><span class="w">    </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace02</span><span class="w"></span>
+</span><span id="example-5-14"><a id="example-5-14" name="example-5-14"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-5-15"><a id="example-5-15" name="example-5-15"></a><span class="w">      </span><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-5-16"><a id="example-5-16" name="example-5-16"></a><span class="w">      </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-5-17"><a id="example-5-17" name="example-5-17"></a><span class="w">          </span><span class="c">// Function call from the global namespace</span><span class="w"></span>
+</span><span id="example-5-18"><a id="example-5-18" name="example-5-18"></a><span class="w">          </span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-5-19"><a id="example-5-19" name="example-5-19"></a><span class="w">        </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-5-20"><a id="example-5-20" name="example-5-20"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-5-21"><a id="example-5-21" name="example-5-21"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">META</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">using</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zTestNamespace01</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#1&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c">// Calls the function with the namespace specified in the META block</span><span class="w"></span>
-<span class="w">    </span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1"> 1</a></span>
+<span class="normal"><a href="#example-6-2"> 2</a></span>
+<span class="normal"><a href="#example-6-3"> 3</a></span>
+<span class="normal"><a href="#example-6-4"> 4</a></span>
+<span class="normal"><a href="#example-6-5"> 5</a></span>
+<span class="normal"><a href="#example-6-6"> 6</a></span>
+<span class="normal"><a href="#example-6-7"> 7</a></span>
+<span class="normal"><a href="#example-6-8"> 8</a></span>
+<span class="normal"><a href="#example-6-9"> 9</a></span>
+<span class="normal"><a href="#example-6-10">10</a></span>
+<span class="normal"><a href="#example-6-11">11</a></span>
+<span class="normal"><a href="#example-6-12">12</a></span>
+<span class="normal"><a href="#example-6-13">13</a></span>
+<span class="normal"><a href="#example-6-14">14</a></span>
+<span class="normal"><a href="#example-6-15">15</a></span>
+<span class="normal"><a href="#example-6-16">16</a></span>
+<span class="normal"><a href="#example-6-17">17</a></span>
+<span class="normal"><a href="#example-6-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="n">META</span><span class="w"></span>
+</span><span id="example-6-2"><a id="example-6-2" name="example-6-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-3"><a id="example-6-3" name="example-6-3"></a><span class="w">    </span><span class="n">using</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zTestNamespace01</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-4"><a id="example-6-4" name="example-6-4"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-6-5"><a id="example-6-5" name="example-6-5"></a>
+</span><span id="example-6-6"><a id="example-6-6" name="example-6-6"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
+</span><span id="example-6-7"><a id="example-6-7" name="example-6-7"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-8"><a id="example-6-8" name="example-6-8"></a><span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">func01</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-6-9"><a id="example-6-9" name="example-6-9"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-10"><a id="example-6-10" name="example-6-10"></a><span class="w">       </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="s">&quot;#1&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-6-11"><a id="example-6-11" name="example-6-11"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-6-12"><a id="example-6-12" name="example-6-12"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-6-13"><a id="example-6-13" name="example-6-13"></a>
+</span><span id="example-6-14"><a id="example-6-14" name="example-6-14"></a><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-6-15"><a id="example-6-15" name="example-6-15"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-16"><a id="example-6-16" name="example-6-16"></a><span class="w">    </span><span class="c">// Calls the function with the namespace specified in the META block</span><span class="w"></span>
+</span><span id="example-6-17"><a id="example-6-17" name="example-6-17"></a><span class="w">    </span><span class="n">func01</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-6-18"><a id="example-6-18" name="example-6-18"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <h2 id="global-namespace-and-daedalus-hooking">Global namespace and Daedalus hooking<a class="headerlink" href="#global-namespace-and-daedalus-hooking" title="Permanent link"></a></h2>
 <p>Namespace can not only be defined to an existing symbol, but also to define new ones. Next code example shows how to implement a hook to a global instance.</p>
-<p><div class="highlight"><pre><span></span><code><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Var01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;New instance name&quot;</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Hooking the global instance</span><span class="w"></span>
-<span class="w">    </span><span class="kd">instance</span><span class="w"> </span><span class="p">:</span><span class="n">ItAr_Pir_L_Addon</span><span class="p">(</span><span class="nc">C_Item</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">ItAr_Pir_L_Addon_Old</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="vi">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Var01</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1"> 1</a></span>
+<span class="normal"><a href="#example-7-2"> 2</a></span>
+<span class="normal"><a href="#example-7-3"> 3</a></span>
+<span class="normal"><a href="#example-7-4"> 4</a></span>
+<span class="normal"><a href="#example-7-5"> 5</a></span>
+<span class="normal"><a href="#example-7-6"> 6</a></span>
+<span class="normal"><a href="#example-7-7"> 7</a></span>
+<span class="normal"><a href="#example-7-8"> 8</a></span>
+<span class="normal"><a href="#example-7-9"> 9</a></span>
+<span class="normal"><a href="#example-7-10">10</a></span>
+<span class="normal"><a href="#example-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">namespace</span><span class="w"> </span><span class="nn">zTestNamespace01</span><span class="w"></span>
+</span><span id="example-7-2"><a id="example-7-2" name="example-7-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-7-3"><a id="example-7-3" name="example-7-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Var01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;New instance name&quot;</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-7-4"><a id="example-7-4" name="example-7-4"></a>
+</span><span id="example-7-5"><a id="example-7-5" name="example-7-5"></a><span class="w">    </span><span class="c">// Hooking the global instance</span><span class="w"></span>
+</span><span id="example-7-6"><a id="example-7-6" name="example-7-6"></a><span class="w">    </span><span class="kd">instance</span><span class="w"> </span><span class="p">:</span><span class="n">ItAr_Pir_L_Addon</span><span class="p">(</span><span class="nc">C_Item</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-7-7"><a id="example-7-7" name="example-7-7"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-7-8"><a id="example-7-8" name="example-7-8"></a><span class="w">        </span><span class="n">ItAr_Pir_L_Addon_Old</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-7-9"><a id="example-7-9" name="example-7-9"></a><span class="w">        </span><span class="vi">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Var01</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-7-10"><a id="example-7-10" name="example-7-10"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-7-11"><a id="example-7-11" name="example-7-11"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 To hook and object not only the signature, but also the namespace has to match. To hook an instance from a different space it is syntactically allowed to explicitly specify to which namespace the object will belong. This means that to hook instance <code>ItAr_Pir_L_Addon</code> from the namespace <code>zTestNamespace01</code> to a global namespace, you have to refer to the global namespace using the namespace operator <code>:</code>. Since the function will be defined globally (as every symbol in ZenGin), it will be a part of the <code>zTestNamespace01</code>, that means that all functions will be local to this namespace.</p>
 
   <hr>

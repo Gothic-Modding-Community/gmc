@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/other/">
       
       <link rel="icon" href="../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2746,59 +2746,98 @@
 <h1 id="other-functions-of-the-extender">Other functions of the extender<a class="headerlink" href="#other-functions-of-the-extender" title="Permanent link"></a></h1>
 <h2 id="ini-parameters">ini parameters<a class="headerlink" href="#ini-parameters" title="Permanent link"></a></h2>
 <p>The choice of ini file depends on how the game was launched. If it was launched from Gothic.exe, then the parameters will be read from <code>SystemPack.ini</code>. If it was launched through GothicStarter.exe, then they will be read from the ini of the mod.</p>
-<div class="highlight"><pre><span></span><code><span class="k">[zParserExtender]</span><span class="w"></span>
-<span class="na">LoadScript(obsolete)</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="c1">;specifies a parser-script format script to run the scripts. The parameter is currently invalid.</span><span class="w"></span>
-
-<span class="na">MergeMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">True</span><span class="w"></span>
-<span class="c1">;specifies whether injections will produce hooks.</span><span class="w"></span>
-
-<span class="na">CompileDat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span><span class="w"></span>
-<span class="c1">;Determines if a copy of DAT file which has been modified by injection will be created.</span><span class="w"></span>
-
-<span class="na">CompileOU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span><span class="w"></span>
-<span class="c1">;determines if a copy of an injection-modified OU file will be created.</span><span class="w"></span>
-
-<span class="na">NativeWhile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span><span class="w"></span>
-<span class="c1">;Determines if a WHILE loop will be compiled. Defaults to False (for Ninja compatibility).</span><span class="w"></span>
-
-<span class="na">MessagesLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
-<span class="c1">;sets the output level. The higher the level, the more information will be printed to the debug console.</span><span class="w"></span>
-
-<span class="na">StringIndexingMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">-1</span><span class="w"></span>
-<span class="c1">;defines string indexing mode (see string indexing). Default value is -1.</span><span class="w"></span>
-<span class="c1">;Default   = -1 - The default mode for the moment is Repair mode.</span><span class="w"></span>
-<span class="c1">;Disabled  =  0 - Do nothing with the indices.</span><span class="w"></span>
-<span class="c1">;TopSymbol =  1 - The plugin finds the uppermost unnamed string and sets a counter for it.</span><span class="w"></span>
-<span class="c1">;Repair    =  2 - The plugin goes through the whole string table and, if the indexing order is broken, puts the correct names. The counter is set on the basis of the search.</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
+<span class="normal"><a href="#example-0-2"> 2</a></span>
+<span class="normal"><a href="#example-0-3"> 3</a></span>
+<span class="normal"><a href="#example-0-4"> 4</a></span>
+<span class="normal"><a href="#example-0-5"> 5</a></span>
+<span class="normal"><a href="#example-0-6"> 6</a></span>
+<span class="normal"><a href="#example-0-7"> 7</a></span>
+<span class="normal"><a href="#example-0-8"> 8</a></span>
+<span class="normal"><a href="#example-0-9"> 9</a></span>
+<span class="normal"><a href="#example-0-10">10</a></span>
+<span class="normal"><a href="#example-0-11">11</a></span>
+<span class="normal"><a href="#example-0-12">12</a></span>
+<span class="normal"><a href="#example-0-13">13</a></span>
+<span class="normal"><a href="#example-0-14">14</a></span>
+<span class="normal"><a href="#example-0-15">15</a></span>
+<span class="normal"><a href="#example-0-16">16</a></span>
+<span class="normal"><a href="#example-0-17">17</a></span>
+<span class="normal"><a href="#example-0-18">18</a></span>
+<span class="normal"><a href="#example-0-19">19</a></span>
+<span class="normal"><a href="#example-0-20">20</a></span>
+<span class="normal"><a href="#example-0-21">21</a></span>
+<span class="normal"><a href="#example-0-22">22</a></span>
+<span class="normal"><a href="#example-0-23">23</a></span>
+<span class="normal"><a href="#example-0-24">24</a></span>
+<span class="normal"><a href="#example-0-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="k">[zParserExtender]</span><span class="w"></span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="na">LoadScript(obsolete)</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a><span class="c1">;specifies a parser-script format script to run the scripts. The parameter is currently invalid.</span><span class="w"></span>
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a>
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a><span class="na">MergeMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">True</span><span class="w"></span>
+</span><span id="example-0-6"><a id="example-0-6" name="example-0-6"></a><span class="c1">;specifies whether injections will produce hooks.</span><span class="w"></span>
+</span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a>
+</span><span id="example-0-8"><a id="example-0-8" name="example-0-8"></a><span class="na">CompileDat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span><span class="w"></span>
+</span><span id="example-0-9"><a id="example-0-9" name="example-0-9"></a><span class="c1">;Determines if a copy of DAT file which has been modified by injection will be created.</span><span class="w"></span>
+</span><span id="example-0-10"><a id="example-0-10" name="example-0-10"></a>
+</span><span id="example-0-11"><a id="example-0-11" name="example-0-11"></a><span class="na">CompileOU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span><span class="w"></span>
+</span><span id="example-0-12"><a id="example-0-12" name="example-0-12"></a><span class="c1">;determines if a copy of an injection-modified OU file will be created.</span><span class="w"></span>
+</span><span id="example-0-13"><a id="example-0-13" name="example-0-13"></a>
+</span><span id="example-0-14"><a id="example-0-14" name="example-0-14"></a><span class="na">NativeWhile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span><span class="w"></span>
+</span><span id="example-0-15"><a id="example-0-15" name="example-0-15"></a><span class="c1">;Determines if a WHILE loop will be compiled. Defaults to False (for Ninja compatibility).</span><span class="w"></span>
+</span><span id="example-0-16"><a id="example-0-16" name="example-0-16"></a>
+</span><span id="example-0-17"><a id="example-0-17" name="example-0-17"></a><span class="na">MessagesLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+</span><span id="example-0-18"><a id="example-0-18" name="example-0-18"></a><span class="c1">;sets the output level. The higher the level, the more information will be printed to the debug console.</span><span class="w"></span>
+</span><span id="example-0-19"><a id="example-0-19" name="example-0-19"></a>
+</span><span id="example-0-20"><a id="example-0-20" name="example-0-20"></a><span class="na">StringIndexingMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">-1</span><span class="w"></span>
+</span><span id="example-0-21"><a id="example-0-21" name="example-0-21"></a><span class="c1">;defines string indexing mode (see string indexing). Default value is -1.</span><span class="w"></span>
+</span><span id="example-0-22"><a id="example-0-22" name="example-0-22"></a><span class="c1">;Default   = -1 - The default mode for the moment is Repair mode.</span><span class="w"></span>
+</span><span id="example-0-23"><a id="example-0-23" name="example-0-23"></a><span class="c1">;Disabled  =  0 - Do nothing with the indices.</span><span class="w"></span>
+</span><span id="example-0-24"><a id="example-0-24" name="example-0-24"></a><span class="c1">;TopSymbol =  1 - The plugin finds the uppermost unnamed string and sets a counter for it.</span><span class="w"></span>
+</span><span id="example-0-25"><a id="example-0-25" name="example-0-25"></a><span class="c1">;Repair    =  2 - The plugin goes through the whole string table and, if the indexing order is broken, puts the correct names. The counter is set on the basis of the search.</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="marvin-console-commands">MARVIN console commands<a class="headerlink" href="#marvin-console-commands" title="Permanent link"></a></h2>
 <p>zParserExtender adds console commands that save copies of the <code>.dat</code> files with the injected code.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If the mod uses Ikarus, the <code>CompileDat</code> option (in the <code>.ini</code> file) should be used, since a fatal error may occur whe using the command.</p>
 </div>
-<div class="highlight"><pre><span></span><code>Parser SaveDat OU        - exports OU.Edited.bin
-Parser SaveDat Game      - exports Gothic.Edited.dat
-Parser SaveDat SFX       - exports SFX.Edited.dat
-Parser SaveDat PFX       - exports ParticleFX.Edited.dat
-Parser SaveDat VFX       - exports VisualFX.Edited.dat
-Parser SaveDat Camera    - exports Camera.Edited.dat
-Parser SaveDat Menu      - exports Menu.Edited.dat
-Parser SaveDat Music     - exports Music.Edited.dat
-Parser Export Stringlist - exports the full string table to Scripts\Exports\StringList.d
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
+<span class="normal"><a href="#example-1-2">2</a></span>
+<span class="normal"><a href="#example-1-3">3</a></span>
+<span class="normal"><a href="#example-1-4">4</a></span>
+<span class="normal"><a href="#example-1-5">5</a></span>
+<span class="normal"><a href="#example-1-6">6</a></span>
+<span class="normal"><a href="#example-1-7">7</a></span>
+<span class="normal"><a href="#example-1-8">8</a></span>
+<span class="normal"><a href="#example-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a>Parser SaveDat OU        - exports OU.Edited.bin
+</span><span id="example-1-2"><a id="example-1-2" name="example-1-2"></a>Parser SaveDat Game      - exports Gothic.Edited.dat
+</span><span id="example-1-3"><a id="example-1-3" name="example-1-3"></a>Parser SaveDat SFX       - exports SFX.Edited.dat
+</span><span id="example-1-4"><a id="example-1-4" name="example-1-4"></a>Parser SaveDat PFX       - exports ParticleFX.Edited.dat
+</span><span id="example-1-5"><a id="example-1-5" name="example-1-5"></a>Parser SaveDat VFX       - exports VisualFX.Edited.dat
+</span><span id="example-1-6"><a id="example-1-6" name="example-1-6"></a>Parser SaveDat Camera    - exports Camera.Edited.dat
+</span><span id="example-1-7"><a id="example-1-7" name="example-1-7"></a>Parser SaveDat Menu      - exports Menu.Edited.dat
+</span><span id="example-1-8"><a id="example-1-8" name="example-1-8"></a>Parser SaveDat Music     - exports Music.Edited.dat
+</span><span id="example-1-9"><a id="example-1-9" name="example-1-9"></a>Parser Export Stringlist - exports the full string table to Scripts\Exports\StringList.d
+</span></code></pre></div></td></tr></table></div>
 <h2 id="launch-options">Launch options<a class="headerlink" href="#launch-options" title="Permanent link"></a></h2>
 <p>Command line parameters can be passed to the game's exe via the command line or using GothicStarter_Mod.</p>
-<div class="highlight"><pre><span></span><code>zReparse_OU     - parses and creates OU.bin
-zReparse_Game   - parses and creates Gothic.dat
-zReparse_SFX    - parses and creates SFX.dat
-zReparse_PFX    - parses and creates ParticleFX.dat
-zReparse_VFX    - parses and creates VisualFX.dat
-zReparse_Camera - parses and creates Camera.dat
-zReparse_Menu   - parses and creates Menu.dat
-zReparse_Music  - parses and creates Music.dat
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
+<span class="normal"><a href="#example-2-2">2</a></span>
+<span class="normal"><a href="#example-2-3">3</a></span>
+<span class="normal"><a href="#example-2-4">4</a></span>
+<span class="normal"><a href="#example-2-5">5</a></span>
+<span class="normal"><a href="#example-2-6">6</a></span>
+<span class="normal"><a href="#example-2-7">7</a></span>
+<span class="normal"><a href="#example-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a>zReparse_OU     - parses and creates OU.bin
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a>zReparse_Game   - parses and creates Gothic.dat
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a>zReparse_SFX    - parses and creates SFX.dat
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a>zReparse_PFX    - parses and creates ParticleFX.dat
+</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a>zReparse_VFX    - parses and creates VisualFX.dat
+</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a>zReparse_Camera - parses and creates Camera.dat
+</span><span id="example-2-7"><a id="example-2-7" name="example-2-7"></a>zReparse_Menu   - parses and creates Menu.dat
+</span><span id="example-2-8"><a id="example-2-8" name="example-2-8"></a>zReparse_Music  - parses and creates Music.dat
+</span></code></pre></div></td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want to compile OU, you also have to include the Game parameter</p>
@@ -2809,11 +2848,14 @@ zReparse_Music  - parses and creates Music.dat
 <h2 id="const-array-access">Const array access<a class="headerlink" href="#const-array-access" title="Permanent link"></a></h2>
 <p>The original zParser doesn't allow direct access to <code>const string</code> arrays. zParserExtender allows you to do so.</p>
 <p>Example:
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="n">TXT_INV_CAT</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span><span class="w"> </span><span class="c">// Prints &quot;Artifacts&quot;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span>
+<span class="normal"><a href="#example-3-2">2</a></span>
+<span class="normal"><a href="#example-3-3">3</a></span>
+<span class="normal"><a href="#example-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">GameInit</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a><span class="w">    </span><span class="nb nb-ZParserExtender">Hlp_MessageBox</span><span class="p">(</span><span class="n">TXT_INV_CAT</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span><span class="w"> </span><span class="c">// Prints &quot;Artifacts&quot;</span><span class="w"></span>
+</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h2 id="other-engine-fixes">Other engine fixes<a class="headerlink" href="#other-engine-fixes" title="Permanent link"></a></h2>
 <ol>
 <li>When creating an item instance, the instance is placed into the global <code>item</code> instance</li>

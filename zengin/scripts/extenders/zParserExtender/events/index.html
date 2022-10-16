@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/events/">
       
       <link rel="icon" href="../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2643,19 +2643,30 @@
 
 <h1 id="event-functions">Event functions<a class="headerlink" href="#event-functions" title="Permanent link"></a></h1>
 <p>Event functions are functions sharing the same name, that can be defined multiple times, but only once per file. Such functions are useful for implementing <em>callback</em> type functions. Every time an event is called, all instances of the same name will be called. The event is <code>func</code> with a return type <code>event</code>. Events are defined globally, meaning, they ignore namespace they are in. To call an event from a script, use the external function <a href="../externals/#hlp-help-functions"><code>Hlp_DoEvent(var string funcName)</code></a>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">GiveXP</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Hlp_DoEvent</span><span class="p">(</span><span class="s">&quot;OnGiveXP&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">OnGiveXP</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c">// TODO</span><span class="w"></span>
-<span class="w">    </span><span class="c">// This function can be defined in many files to do different things</span><span class="w"></span>
-<span class="w">    </span><span class="c">// more appropriate for that file&#39;s context and all of them will be</span><span class="w"></span>
-<span class="w">    </span><span class="c">// called, when function GiveXP (above) is called.</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
+<span class="normal"><a href="#example-0-2"> 2</a></span>
+<span class="normal"><a href="#example-0-3"> 3</a></span>
+<span class="normal"><a href="#example-0-4"> 4</a></span>
+<span class="normal"><a href="#example-0-5"> 5</a></span>
+<span class="normal"><a href="#example-0-6"> 6</a></span>
+<span class="normal"><a href="#example-0-7"> 7</a></span>
+<span class="normal"><a href="#example-0-8"> 8</a></span>
+<span class="normal"><a href="#example-0-9"> 9</a></span>
+<span class="normal"><a href="#example-0-10">10</a></span>
+<span class="normal"><a href="#example-0-11">11</a></span>
+<span class="normal"><a href="#example-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">GiveXP</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a><span class="w">    </span><span class="n">Hlp_DoEvent</span><span class="p">(</span><span class="s">&quot;OnGiveXP&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a>
+</span><span id="example-0-6"><a id="example-0-6" name="example-0-6"></a><span class="kd">func</span><span class="w"> </span><span class="kt">event</span><span class="w"> </span><span class="nf">OnGiveXP</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-0-8"><a id="example-0-8" name="example-0-8"></a><span class="w">    </span><span class="c">// TODO</span><span class="w"></span>
+</span><span id="example-0-9"><a id="example-0-9" name="example-0-9"></a><span class="w">    </span><span class="c">// This function can be defined in many files to do different things</span><span class="w"></span>
+</span><span id="example-0-10"><a id="example-0-10" name="example-0-10"></a><span class="w">    </span><span class="c">// more appropriate for that file&#39;s context and all of them will be</span><span class="w"></span>
+</span><span id="example-0-11"><a id="example-0-11" name="example-0-11"></a><span class="w">    </span><span class="c">// called, when function GiveXP (above) is called.</span><span class="w"></span>
+</span><span id="example-0-12"><a id="example-0-12" name="example-0-12"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>Plugin implements two of these <a href="../externals/#event-functions-and-variables">event functions</a></p>
 <ul>
 <li><code>func event GameInit()</code> - called when entering the main menu on game start</li>

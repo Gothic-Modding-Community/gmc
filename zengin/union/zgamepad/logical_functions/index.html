@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/union/zgamepad/logical_functions/">
       
       <link rel="icon" href="../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2639,35 +2639,62 @@
 
 <h1 id="logical-function-names">Logical function names<a class="headerlink" href="#logical-function-names" title="Permanent link"></a></h1>
 <p>Conditions, when to show, or allow the control binding to work, are specified using these logic functions. They describe different useful states of the game or user interface, allowing the user to set, when will certain control work. 
-<div class="highlight"><pre><span></span><code>Cond_FightMode        - player is in the fight mode
-Cond_FightModeMelee   - player is in the melee fight mode
-Cond_FightModeRange   - player is in the ranged fight mode
-Cond_FightModeMagic   - player is in the magical fight mode
-Cond_CanShoot         - player is in the aim mode and can shoot now
-Cond_CanSneaking      - player is sneaking now
-Cond_Diving           - player is diving now
-Cond_HasFocusVob      - player has a focus vob
-Cond_HasFocusNpc      - player has a focus npc
-Cond_OnChooseWeapon   - weapon selection is active
-Cond_InventoryIsOpen  - inventory is open
-Cond_InTransformation - player is transformed
-Cond_VideoIsOpen      - video is playing
-Cond_CanLockTarget    - player in the fight mode now and can lock the focus vob
-Cond_G1               - this engine is a Gothic 1 (or sequel)
-Cond_G2               - this engine is a Gothic 2 NoTR (or classic)
-Cond_IsDialogTop      - dialog window is open on the top
-Cond_IsDocumentTop    - document object is open on the top
-Cond_IsOverlayTop     - gamepad overlay object is open on the top
-Cond_IsMenuTop        - game menu is open on the top
-Cond_OnSpellBook      - magic selection ring is active
-Cond_IsPlayerTalking  - player is talking to someone
-Cond_InterfaceIsOpen  - open any interface element
-Cond_HasLeftContainer - the left container is open (chest, plunder, trader)
-Cond_UsesPicklock     - player is picking a lock now
-Cond_IsOnTrade        - player is trading
-Cond_IsOverlayTop     - gamepad overlay object is open on the top
-Cond_IsMenuTop        - game menu is open on the top
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
+<span class="normal"><a href="#example-0-2"> 2</a></span>
+<span class="normal"><a href="#example-0-3"> 3</a></span>
+<span class="normal"><a href="#example-0-4"> 4</a></span>
+<span class="normal"><a href="#example-0-5"> 5</a></span>
+<span class="normal"><a href="#example-0-6"> 6</a></span>
+<span class="normal"><a href="#example-0-7"> 7</a></span>
+<span class="normal"><a href="#example-0-8"> 8</a></span>
+<span class="normal"><a href="#example-0-9"> 9</a></span>
+<span class="normal"><a href="#example-0-10">10</a></span>
+<span class="normal"><a href="#example-0-11">11</a></span>
+<span class="normal"><a href="#example-0-12">12</a></span>
+<span class="normal"><a href="#example-0-13">13</a></span>
+<span class="normal"><a href="#example-0-14">14</a></span>
+<span class="normal"><a href="#example-0-15">15</a></span>
+<span class="normal"><a href="#example-0-16">16</a></span>
+<span class="normal"><a href="#example-0-17">17</a></span>
+<span class="normal"><a href="#example-0-18">18</a></span>
+<span class="normal"><a href="#example-0-19">19</a></span>
+<span class="normal"><a href="#example-0-20">20</a></span>
+<span class="normal"><a href="#example-0-21">21</a></span>
+<span class="normal"><a href="#example-0-22">22</a></span>
+<span class="normal"><a href="#example-0-23">23</a></span>
+<span class="normal"><a href="#example-0-24">24</a></span>
+<span class="normal"><a href="#example-0-25">25</a></span>
+<span class="normal"><a href="#example-0-26">26</a></span>
+<span class="normal"><a href="#example-0-27">27</a></span>
+<span class="normal"><a href="#example-0-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a>Cond_FightMode        - player is in the fight mode
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a>Cond_FightModeMelee   - player is in the melee fight mode
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a>Cond_FightModeRange   - player is in the ranged fight mode
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a>Cond_FightModeMagic   - player is in the magical fight mode
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a>Cond_CanShoot         - player is in the aim mode and can shoot now
+</span><span id="example-0-6"><a id="example-0-6" name="example-0-6"></a>Cond_CanSneaking      - player is sneaking now
+</span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a>Cond_Diving           - player is diving now
+</span><span id="example-0-8"><a id="example-0-8" name="example-0-8"></a>Cond_HasFocusVob      - player has a focus vob
+</span><span id="example-0-9"><a id="example-0-9" name="example-0-9"></a>Cond_HasFocusNpc      - player has a focus npc
+</span><span id="example-0-10"><a id="example-0-10" name="example-0-10"></a>Cond_OnChooseWeapon   - weapon selection is active
+</span><span id="example-0-11"><a id="example-0-11" name="example-0-11"></a>Cond_InventoryIsOpen  - inventory is open
+</span><span id="example-0-12"><a id="example-0-12" name="example-0-12"></a>Cond_InTransformation - player is transformed
+</span><span id="example-0-13"><a id="example-0-13" name="example-0-13"></a>Cond_VideoIsOpen      - video is playing
+</span><span id="example-0-14"><a id="example-0-14" name="example-0-14"></a>Cond_CanLockTarget    - player in the fight mode now and can lock the focus vob
+</span><span id="example-0-15"><a id="example-0-15" name="example-0-15"></a>Cond_G1               - this engine is a Gothic 1 (or sequel)
+</span><span id="example-0-16"><a id="example-0-16" name="example-0-16"></a>Cond_G2               - this engine is a Gothic 2 NoTR (or classic)
+</span><span id="example-0-17"><a id="example-0-17" name="example-0-17"></a>Cond_IsDialogTop      - dialog window is open on the top
+</span><span id="example-0-18"><a id="example-0-18" name="example-0-18"></a>Cond_IsDocumentTop    - document object is open on the top
+</span><span id="example-0-19"><a id="example-0-19" name="example-0-19"></a>Cond_IsOverlayTop     - gamepad overlay object is open on the top
+</span><span id="example-0-20"><a id="example-0-20" name="example-0-20"></a>Cond_IsMenuTop        - game menu is open on the top
+</span><span id="example-0-21"><a id="example-0-21" name="example-0-21"></a>Cond_OnSpellBook      - magic selection ring is active
+</span><span id="example-0-22"><a id="example-0-22" name="example-0-22"></a>Cond_IsPlayerTalking  - player is talking to someone
+</span><span id="example-0-23"><a id="example-0-23" name="example-0-23"></a>Cond_InterfaceIsOpen  - open any interface element
+</span><span id="example-0-24"><a id="example-0-24" name="example-0-24"></a>Cond_HasLeftContainer - the left container is open (chest, plunder, trader)
+</span><span id="example-0-25"><a id="example-0-25" name="example-0-25"></a>Cond_UsesPicklock     - player is picking a lock now
+</span><span id="example-0-26"><a id="example-0-26" name="example-0-26"></a>Cond_IsOnTrade        - player is trading
+</span><span id="example-0-27"><a id="example-0-27" name="example-0-27"></a>Cond_IsOverlayTop     - gamepad overlay object is open on the top
+</span><span id="example-0-28"><a id="example-0-28" name="example-0-28"></a>Cond_IsMenuTop        - game menu is open on the top
+</span></code></pre></div></td></tr></table></div></p>
 
   <hr>
 <div class="md-source-file">

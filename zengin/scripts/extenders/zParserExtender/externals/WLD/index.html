@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/WLD/">
       
       <link rel="icon" href="../../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2789,28 +2789,33 @@
 <p>Functions related to the world. </p>
 <h2 id="wld_changelevel">Wld_ChangeLevel<a class="headerlink" href="#wld_changelevel" title="Permanent link"></a></h2>
 <p>Trigger level change.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_ChangeLevel</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">world</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">waypoint</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_ChangeLevel</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">world</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">waypoint</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>world</code> - name of the world </li>
 <li><code>waypoint</code> - target waypoint</li>
 </ul>
 <h2 id="wld_findvob">Wld_FindVob<a class="headerlink" href="#wld_findvob" title="Permanent link"></a></h2>
 <p>Return the VOB instsance based on its name.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Wld_FindVob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">vobname</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Wld_FindVob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">vobname</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>vobname</code> - name of the vob</li>
 <li><code>return</code> - zCVob pointer</li>
 </ul>
 <h2 id="wld_playeffectvob">Wld_PlayEffectVob<a class="headerlink" href="#wld_playeffectvob" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_PlayEffectVob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">pvob</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_type</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_speed</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
+<span class="normal"><a href="#example-2-2">2</a></span>
+<span class="normal"><a href="#example-2-3">3</a></span>
+<span class="normal"><a href="#example-2-4">4</a></span>
+<span class="normal"><a href="#example-2-5">5</a></span>
+<span class="normal"><a href="#example-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_PlayEffectVob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">pvob</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_type</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_speed</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>effect</code> - effect name</li>
 <li><code>pvob</code> - Vob to play the effecet at</li>
@@ -2820,13 +2825,18 @@
 <li><code>damage_speed</code> - damage interval</li>
 </ul>
 <h2 id="wld_playeffectat">Wld_PlayEffectAt<a class="headerlink" href="#wld_playeffectat" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_PlayEffectAt</span><span class="p">(</span><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">coord</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_type</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_speed</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span>
+<span class="normal"><a href="#example-3-2">2</a></span>
+<span class="normal"><a href="#example-3-3">3</a></span>
+<span class="normal"><a href="#example-3-4">4</a></span>
+<span class="normal"><a href="#example-3-5">5</a></span>
+<span class="normal"><a href="#example-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_PlayEffectAt</span><span class="p">(</span><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">coord</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-3-5"><a id="example-3-5" name="example-3-5"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_type</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-3-6"><a id="example-3-6" name="example-3-6"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_speed</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>effect</code> - effect name</li>
 <li><code>coords</code> - world coordinates to play the effecet at</li>
@@ -2836,8 +2846,8 @@
 <li><code>damage_speed</code> - damage interval</li>
 </ul>
 <h2 id="wld_togglerain">Wld_ToggleRain<a class="headerlink" href="#wld_togglerain" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_ToggleRain</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">weight</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">flaot</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_ToggleRain</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">weight</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">flaot</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>weight</code> - the strength of the rain</li>
 <li><code>time</code> - rain duration</li>
@@ -2849,8 +2859,8 @@ Types:</p>
 <li><code>0</code> - snow</li>
 <li><code>1</code> - rain</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_SetWeatherType</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_SetWeatherType</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>type</code> - weather type</li>
 </ul>
@@ -2861,36 +2871,58 @@ Types:  </p>
 <li><code>0</code> - snow</li>
 <li><code>1</code> - rain</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Wld_GetWeatherType</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Wld_GetWeatherType</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>return</code> - weather type</li>
 </ul>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_ChangeLevel</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">world</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">waypoint</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Wld_FindVob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">vobname</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_PlayEffectVob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">pvob</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_type</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_speed</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_PlayEffectAt</span><span class="p">(</span><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">coord</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_type</span><span class="p">,</span><span class="w"></span>
-<span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_speed</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_ToggleRain</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">weight</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">flaot</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_SetWeatherType</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Wld_GetWeatherType</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1"> 1</a></span>
+<span class="normal"><a href="#example-7-2"> 2</a></span>
+<span class="normal"><a href="#example-7-3"> 3</a></span>
+<span class="normal"><a href="#example-7-4"> 4</a></span>
+<span class="normal"><a href="#example-7-5"> 5</a></span>
+<span class="normal"><a href="#example-7-6"> 6</a></span>
+<span class="normal"><a href="#example-7-7"> 7</a></span>
+<span class="normal"><a href="#example-7-8"> 8</a></span>
+<span class="normal"><a href="#example-7-9"> 9</a></span>
+<span class="normal"><a href="#example-7-10">10</a></span>
+<span class="normal"><a href="#example-7-11">11</a></span>
+<span class="normal"><a href="#example-7-12">12</a></span>
+<span class="normal"><a href="#example-7-13">13</a></span>
+<span class="normal"><a href="#example-7-14">14</a></span>
+<span class="normal"><a href="#example-7-15">15</a></span>
+<span class="normal"><a href="#example-7-16">16</a></span>
+<span class="normal"><a href="#example-7-17">17</a></span>
+<span class="normal"><a href="#example-7-18">18</a></span>
+<span class="normal"><a href="#example-7-19">19</a></span>
+<span class="normal"><a href="#example-7-20">20</a></span>
+<span class="normal"><a href="#example-7-21">21</a></span>
+<span class="normal"><a href="#example-7-22">22</a></span>
+<span class="normal"><a href="#example-7-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_ChangeLevel</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">world</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">waypoint</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-7-2"><a id="example-7-2" name="example-7-2"></a>
+</span><span id="example-7-3"><a id="example-7-3" name="example-7-3"></a><span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Wld_FindVob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">vobname</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-7-4"><a id="example-7-4" name="example-7-4"></a>
+</span><span id="example-7-5"><a id="example-7-5" name="example-7-5"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_PlayEffectVob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-6"><a id="example-7-6" name="example-7-6"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">pvob</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-7"><a id="example-7-7" name="example-7-7"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-8"><a id="example-7-8" name="example-7-8"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-9"><a id="example-7-9" name="example-7-9"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_type</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-10"><a id="example-7-10" name="example-7-10"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_speed</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-7-11"><a id="example-7-11" name="example-7-11"></a>
+</span><span id="example-7-12"><a id="example-7-12" name="example-7-12"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_PlayEffectAt</span><span class="p">(</span><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">effect</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-13"><a id="example-7-13" name="example-7-13"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">coord</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-14"><a id="example-7-14" name="example-7-14"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-15"><a id="example-7-15" name="example-7-15"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-16"><a id="example-7-16" name="example-7-16"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_type</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-7-17"><a id="example-7-17" name="example-7-17"></a><span class="w">                             </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage_speed</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-7-18"><a id="example-7-18" name="example-7-18"></a>
+</span><span id="example-7-19"><a id="example-7-19" name="example-7-19"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_ToggleRain</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">weight</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">flaot</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-7-20"><a id="example-7-20" name="example-7-20"></a>
+</span><span id="example-7-21"><a id="example-7-21" name="example-7-21"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Wld_SetWeatherType</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-7-22"><a id="example-7-22" name="example-7-22"></a>
+</span><span id="example-7-23"><a id="example-7-23" name="example-7-23"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Wld_GetWeatherType</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">

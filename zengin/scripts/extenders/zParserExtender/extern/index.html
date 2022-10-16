@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/extern/">
       
       <link rel="icon" href="../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2643,11 +2643,14 @@
 
 <h1 id="extern-binding">Extern binding<a class="headerlink" href="#extern-binding" title="Permanent link"></a></h1>
 <p>The <code>extern</code> binding allows you to secure your code against overriding or undefined symbol. Keyword <code>extern</code> before declaration means that if object of the same name exists, source object should be used. If not, a new one will be created.
-<div class="highlight"><pre><span></span><code><span class="n">extern</span><span class="w"> </span><span class="kd">instance</span><span class="w"> </span><span class="n">PC_Hero</span><span class="p">(</span><span class="nc">C_Npc</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c">// TODO</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
+<span class="normal"><a href="#example-0-2">2</a></span>
+<span class="normal"><a href="#example-0-3">3</a></span>
+<span class="normal"><a href="#example-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="n">extern</span><span class="w"> </span><span class="kd">instance</span><span class="w"> </span><span class="n">PC_Hero</span><span class="p">(</span><span class="nc">C_Npc</span><span class="p">)</span><span class="w"> </span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a><span class="w">  </span><span class="c">// TODO</span><span class="w"></span>
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 
   <hr>
 <div class="md-source-file">

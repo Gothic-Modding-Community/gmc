@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/general_info/ObjectPersistence/">
       
       <link rel="icon" href="../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2822,17 +2822,26 @@
 <p>In order to better understand how this process works, it is best to look at an example of a .ZEN file containing an instance of an <code>oCWorld</code> object.</p>
 <h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link"></a></h3>
 <p>When you open up a ZenGin archive, you will see the following at the start of the file:</p>
-<div class="highlight"><pre><span></span><code>ZenGin Archive
-ver 1
-zCArchiverGeneric
-ASCII
-saveGame 0
-date 7.1.2001 23:9:19
-user roeske
-END
-objects 2594     
-END
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
+<span class="normal"><a href="#example-0-2"> 2</a></span>
+<span class="normal"><a href="#example-0-3"> 3</a></span>
+<span class="normal"><a href="#example-0-4"> 4</a></span>
+<span class="normal"><a href="#example-0-5"> 5</a></span>
+<span class="normal"><a href="#example-0-6"> 6</a></span>
+<span class="normal"><a href="#example-0-7"> 7</a></span>
+<span class="normal"><a href="#example-0-8"> 8</a></span>
+<span class="normal"><a href="#example-0-9"> 9</a></span>
+<span class="normal"><a href="#example-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a>ZenGin Archive
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a>ver 1
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a>zCArchiverGeneric
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a>ASCII
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a>saveGame 0
+</span><span id="example-0-6"><a id="example-0-6" name="example-0-6"></a>date 7.1.2001 23:9:19
+</span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a>user roeske
+</span><span id="example-0-8"><a id="example-0-8" name="example-0-8"></a>END
+</span><span id="example-0-9"><a id="example-0-9" name="example-0-9"></a>objects 2594     
+</span><span id="example-0-10"><a id="example-0-10" name="example-0-10"></a>END
+</span></code></pre></div></td></tr></table></div>
 <p>Let's look at each of these properties and what they mean:</p>
 <p><code>ZenGin Archive</code></p>
 <p>This simply specifies that the following data is a <code>zCArchiver</code> archive.</p>
@@ -2860,43 +2869,71 @@ This property may not be present in older archives.</p>
 <p>In version 0 archives, we may additionally find a property called <code>csum</code> which stores the checksum of the whole archive. However, this property is unused and equals <code>00000000</code> by default.</p>
 <p>In order to correctly read the archive's header across varying engine versions, one should not count on the properties always being in the same order or even being there at all.</p>
 <p>If the archive utilizes <code>zCArchiverGeneric</code> then this header will also be followed by a short section specifying the number of object instances in this archive. This value will be used to initialize the objectList, which is an array of pointers where the addresses of loaded objects will be stored for later referencing. In older versions, this property would be directly part of the main header. </p>
-<div class="highlight"><pre><span></span><code>objects 2594     
-END
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
+<span class="normal"><a href="#example-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a>objects 2594     
+</span><span id="example-1-2"><a id="example-1-2" name="example-1-2"></a>END
+</span></code></pre></div></td></tr></table></div>
 <p>If the archive is created using <code>zCArchiverBinSafe</code>, then this data will be stored in the following binary structure:</p>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">BinSafeArchiveHeader</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">version</span><span class="p">;</span><span class="w">       </span><span class="c1">// Always equals 2</span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">objectCount</span><span class="p">;</span><span class="w">   </span><span class="c1">// Serves the same function as &quot;objects n&quot;</span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">chunkPos</span><span class="p">;</span><span class="w">      </span><span class="c1">// Offset to chunk hash table</span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
+<span class="normal"><a href="#example-2-2">2</a></span>
+<span class="normal"><a href="#example-2-3">3</a></span>
+<span class="normal"><a href="#example-2-4">4</a></span>
+<span class="normal"><a href="#example-2-5">5</a></span>
+<span class="normal"><a href="#example-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BinSafeArchiveHeader</span><span class="w"></span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">version</span><span class="p">;</span><span class="w">       </span><span class="c1">// Always equals 2</span>
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">objectCount</span><span class="p">;</span><span class="w">   </span><span class="c1">// Serves the same function as &quot;objects n&quot;</span>
+</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">chunkPos</span><span class="p">;</span><span class="w">      </span><span class="c1">// Offset to chunk hash table</span>
+</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link"></a></h3>
 <p>Looking further into the archive, we see what appears to be a nested structure.</p>
-<div class="highlight"><pre><span></span><code>[% oCWorld:zCWorld 64513 0]
-    [VobTree % 0 0]
-        childs0=int:1
-        [% zCVobLevelCompo:zCVob 12289 1]
-            pack=int:0
-            presetName=string:
-            bbox3DWS=rawFloat:-71919.9609 -13091.8232 -59900 108999.992 20014.0352 67399.9922 
-            trafoOSToWSRot=raw:0000803f0000000000000000000000000000803f0000000000000000000000000000803f
-            trafoOSToWSPos=vec3:0 0 0
-            vobName=string:LEVEL-VOB
-            visual=string:SURFACE.3DS
-            showVisual=bool:0
-            visualCamAlign=enum:0
-            cdStatic=bool:1
-            cdDyn=bool:0
-            staticVob=bool:0
-            dynShadow=enum:0
-            [visual zCMesh 0 2]
-            []
-            [ai % 0 0]
-            []
-        []
-        ...
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1"> 1</a></span>
+<span class="normal"><a href="#example-3-2"> 2</a></span>
+<span class="normal"><a href="#example-3-3"> 3</a></span>
+<span class="normal"><a href="#example-3-4"> 4</a></span>
+<span class="normal"><a href="#example-3-5"> 5</a></span>
+<span class="normal"><a href="#example-3-6"> 6</a></span>
+<span class="normal"><a href="#example-3-7"> 7</a></span>
+<span class="normal"><a href="#example-3-8"> 8</a></span>
+<span class="normal"><a href="#example-3-9"> 9</a></span>
+<span class="normal"><a href="#example-3-10">10</a></span>
+<span class="normal"><a href="#example-3-11">11</a></span>
+<span class="normal"><a href="#example-3-12">12</a></span>
+<span class="normal"><a href="#example-3-13">13</a></span>
+<span class="normal"><a href="#example-3-14">14</a></span>
+<span class="normal"><a href="#example-3-15">15</a></span>
+<span class="normal"><a href="#example-3-16">16</a></span>
+<span class="normal"><a href="#example-3-17">17</a></span>
+<span class="normal"><a href="#example-3-18">18</a></span>
+<span class="normal"><a href="#example-3-19">19</a></span>
+<span class="normal"><a href="#example-3-20">20</a></span>
+<span class="normal"><a href="#example-3-21">21</a></span>
+<span class="normal"><a href="#example-3-22">22</a></span>
+<span class="normal"><a href="#example-3-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a>[% oCWorld:zCWorld 64513 0]
+</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a>    [VobTree % 0 0]
+</span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a>        childs0=int:1
+</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a>        [% zCVobLevelCompo:zCVob 12289 1]
+</span><span id="example-3-5"><a id="example-3-5" name="example-3-5"></a>            pack=int:0
+</span><span id="example-3-6"><a id="example-3-6" name="example-3-6"></a>            presetName=string:
+</span><span id="example-3-7"><a id="example-3-7" name="example-3-7"></a>            bbox3DWS=rawFloat:-71919.9609 -13091.8232 -59900 108999.992 20014.0352 67399.9922 
+</span><span id="example-3-8"><a id="example-3-8" name="example-3-8"></a>            trafoOSToWSRot=raw:0000803f0000000000000000000000000000803f0000000000000000000000000000803f
+</span><span id="example-3-9"><a id="example-3-9" name="example-3-9"></a>            trafoOSToWSPos=vec3:0 0 0
+</span><span id="example-3-10"><a id="example-3-10" name="example-3-10"></a>            vobName=string:LEVEL-VOB
+</span><span id="example-3-11"><a id="example-3-11" name="example-3-11"></a>            visual=string:SURFACE.3DS
+</span><span id="example-3-12"><a id="example-3-12" name="example-3-12"></a>            showVisual=bool:0
+</span><span id="example-3-13"><a id="example-3-13" name="example-3-13"></a>            visualCamAlign=enum:0
+</span><span id="example-3-14"><a id="example-3-14" name="example-3-14"></a>            cdStatic=bool:1
+</span><span id="example-3-15"><a id="example-3-15" name="example-3-15"></a>            cdDyn=bool:0
+</span><span id="example-3-16"><a id="example-3-16" name="example-3-16"></a>            staticVob=bool:0
+</span><span id="example-3-17"><a id="example-3-17" name="example-3-17"></a>            dynShadow=enum:0
+</span><span id="example-3-18"><a id="example-3-18" name="example-3-18"></a>            [visual zCMesh 0 2]
+</span><span id="example-3-19"><a id="example-3-19" name="example-3-19"></a>            []
+</span><span id="example-3-20"><a id="example-3-20" name="example-3-20"></a>            [ai % 0 0]
+</span><span id="example-3-21"><a id="example-3-21" name="example-3-21"></a>            []
+</span><span id="example-3-22"><a id="example-3-22" name="example-3-22"></a>        []
+</span><span id="example-3-23"><a id="example-3-23" name="example-3-23"></a>        ...
+</span></code></pre></div></td></tr></table></div>
 <p>Within ZenGin archives, we primarily differentiate between chunks and properties:</p>
 <h4 id="chunks">Chunks<a class="headerlink" href="#chunks" title="Permanent link"></a></h4>
 <p>A chunk is a structure that groups properties together. Most of the time, a chunk represents a class instance, however, this is not always true, as classes may arbitrarily create chunks as is needed. For example, the sample above contains a chunk called <code>VobTree</code>, which does not represent a class instance, but only serves to make the reading of the archive easier.</p>
@@ -2910,23 +2947,35 @@ END
 <li><strong>Object index</strong> - An index into the objectList under which this object will be stored. If the class name is equal to <code>§</code>, then this value will be used to retrieve an existing instance from the objectList.</li>
 </ul>
 <p>If this is a Binary archive, the same data will be stored in the following binary structure:</p>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">BinaryObjectHeader</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">objectSize</span><span class="p">;</span><span class="w">     </span><span class="c1">// Size of the whole object in bytes</span>
-<span class="w">    </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">classVersion</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">objectIndex</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">char</span><span class="w">        </span><span class="n">objectName</span><span class="p">[];</span><span class="w">   </span><span class="c1">// Null-terminated string</span>
-<span class="w">    </span><span class="kt">char</span><span class="w">        </span><span class="n">className</span><span class="p">[];</span><span class="w">    </span><span class="c1">// Null-terminated string</span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
+<span class="normal"><a href="#example-4-2">2</a></span>
+<span class="normal"><a href="#example-4-3">3</a></span>
+<span class="normal"><a href="#example-4-4">4</a></span>
+<span class="normal"><a href="#example-4-5">5</a></span>
+<span class="normal"><a href="#example-4-6">6</a></span>
+<span class="normal"><a href="#example-4-7">7</a></span>
+<span class="normal"><a href="#example-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BinaryObjectHeader</span><span class="w"></span>
+</span><span id="example-4-2"><a id="example-4-2" name="example-4-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-4-3"><a id="example-4-3" name="example-4-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">objectSize</span><span class="p">;</span><span class="w">     </span><span class="c1">// Size of the whole object in bytes</span>
+</span><span id="example-4-4"><a id="example-4-4" name="example-4-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">classVersion</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-4-5"><a id="example-4-5" name="example-4-5"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">objectIndex</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-4-6"><a id="example-4-6" name="example-4-6"></a><span class="w">    </span><span class="kt">char</span><span class="w">        </span><span class="n">objectName</span><span class="p">[];</span><span class="w">   </span><span class="c1">// Null-terminated string</span>
+</span><span id="example-4-7"><a id="example-4-7" name="example-4-7"></a><span class="w">    </span><span class="kt">char</span><span class="w">        </span><span class="n">className</span><span class="p">[];</span><span class="w">    </span><span class="c1">// Null-terminated string</span>
+</span><span id="example-4-8"><a id="example-4-8" name="example-4-8"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>Oddly enough, if the archive is BinSafe, then the data will be encoded the same way as in ASCII mode, except that it will be stored as a type-checked property.</p>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">BinSafeObjectHeader</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">type</span><span class="p">;</span><span class="w">   </span><span class="c1">// 0x1 = TYPE_STRING</span>
-<span class="w">    </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">length</span><span class="p">;</span><span class="w"> </span><span class="c1">// Length of the text</span>
-<span class="w">    </span><span class="kt">char</span><span class="w">        </span><span class="n">text</span><span class="p">[];</span><span class="w"> </span><span class="c1">// [% oCWorld:zCWorld 64513 0]</span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span>
+<span class="normal"><a href="#example-5-2">2</a></span>
+<span class="normal"><a href="#example-5-3">3</a></span>
+<span class="normal"><a href="#example-5-4">4</a></span>
+<span class="normal"><a href="#example-5-5">5</a></span>
+<span class="normal"><a href="#example-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BinSafeObjectHeader</span><span class="w"></span>
+</span><span id="example-5-2"><a id="example-5-2" name="example-5-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-5-3"><a id="example-5-3" name="example-5-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">type</span><span class="p">;</span><span class="w">   </span><span class="c1">// 0x1 = TYPE_STRING</span>
+</span><span id="example-5-4"><a id="example-5-4" name="example-5-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">length</span><span class="p">;</span><span class="w"> </span><span class="c1">// Length of the text</span>
+</span><span id="example-5-5"><a id="example-5-5" name="example-5-5"></a><span class="w">    </span><span class="kt">char</span><span class="w">        </span><span class="n">text</span><span class="p">[];</span><span class="w"> </span><span class="c1">// [% oCWorld:zCWorld 64513 0]</span>
+</span><span id="example-5-6"><a id="example-5-6" name="example-5-6"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>In ASCII mode <code>[]</code> represents the end of the current chunk.</p>
 <h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link"></a></h4>
 <p>Inside the chunks, we find properties, which are key-value pairs that classes use to store the actual data. Each property stores its name, type and value. In ASCII mode the format for this is<code>name=type:value</code>. For example:</p>
@@ -2968,147 +3017,266 @@ END
 </li>
 </ul>
 <p>As you might have noticed, binary mode doesn't perform any kind of checks on if it's reading the right property or even data of the correct type. This is why BinSafe mode exists, as it stores the property type in along with the data itself.</p>
-<div class="highlight"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="nc">TYPE</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_STRING</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_INTEGER</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mh">0x2</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_FLOAT</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mh">0x3</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_BYTE</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x4</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_WORD</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x5</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_BOOL</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x6</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_VEC3</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x7</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_COLOR</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_RAW</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mh">0x9</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_RAWFLOAT</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_ENUM</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x11</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE_HASH</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x12</span><span class="p">,</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="k">struct</span><span class="w"> </span><span class="nc">BinSafeProperty</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">TYPE</span><span class="w"> </span><span class="n">type</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">union</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">struct</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">stringLength</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="kt">char</span><span class="w">        </span><span class="n">stringValue</span><span class="p">[];</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">integerOrHashOrEnumValue</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="kt">float</span><span class="w">       </span><span class="n">floatValue</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="kt">uint8_t</span><span class="w">     </span><span class="n">byteOrBoolValue</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">zVEC3</span><span class="w">       </span><span class="n">vec3Value</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">zCOLOR</span><span class="w">      </span><span class="n">colorValue</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">struct</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">rawLength</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="kt">char</span><span class="w">        </span><span class="n">rawValue</span><span class="p">[];</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="k">struct</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">rawFloatLength</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="kt">float</span><span class="w">       </span><span class="n">rawFloatValue</span><span class="p">[];</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w">       </span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1"> 1</a></span>
+<span class="normal"><a href="#example-6-2"> 2</a></span>
+<span class="normal"><a href="#example-6-3"> 3</a></span>
+<span class="normal"><a href="#example-6-4"> 4</a></span>
+<span class="normal"><a href="#example-6-5"> 5</a></span>
+<span class="normal"><a href="#example-6-6"> 6</a></span>
+<span class="normal"><a href="#example-6-7"> 7</a></span>
+<span class="normal"><a href="#example-6-8"> 8</a></span>
+<span class="normal"><a href="#example-6-9"> 9</a></span>
+<span class="normal"><a href="#example-6-10">10</a></span>
+<span class="normal"><a href="#example-6-11">11</a></span>
+<span class="normal"><a href="#example-6-12">12</a></span>
+<span class="normal"><a href="#example-6-13">13</a></span>
+<span class="normal"><a href="#example-6-14">14</a></span>
+<span class="normal"><a href="#example-6-15">15</a></span>
+<span class="normal"><a href="#example-6-16">16</a></span>
+<span class="normal"><a href="#example-6-17">17</a></span>
+<span class="normal"><a href="#example-6-18">18</a></span>
+<span class="normal"><a href="#example-6-19">19</a></span>
+<span class="normal"><a href="#example-6-20">20</a></span>
+<span class="normal"><a href="#example-6-21">21</a></span>
+<span class="normal"><a href="#example-6-22">22</a></span>
+<span class="normal"><a href="#example-6-23">23</a></span>
+<span class="normal"><a href="#example-6-24">24</a></span>
+<span class="normal"><a href="#example-6-25">25</a></span>
+<span class="normal"><a href="#example-6-26">26</a></span>
+<span class="normal"><a href="#example-6-27">27</a></span>
+<span class="normal"><a href="#example-6-28">28</a></span>
+<span class="normal"><a href="#example-6-29">29</a></span>
+<span class="normal"><a href="#example-6-30">30</a></span>
+<span class="normal"><a href="#example-6-31">31</a></span>
+<span class="normal"><a href="#example-6-32">32</a></span>
+<span class="normal"><a href="#example-6-33">33</a></span>
+<span class="normal"><a href="#example-6-34">34</a></span>
+<span class="normal"><a href="#example-6-35">35</a></span>
+<span class="normal"><a href="#example-6-36">36</a></span>
+<span class="normal"><a href="#example-6-37">37</a></span>
+<span class="normal"><a href="#example-6-38">38</a></span>
+<span class="normal"><a href="#example-6-39">39</a></span>
+<span class="normal"><a href="#example-6-40">40</a></span>
+<span class="normal"><a href="#example-6-41">41</a></span>
+<span class="normal"><a href="#example-6-42">42</a></span>
+<span class="normal"><a href="#example-6-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">TYPE</span><span class="w"></span>
+</span><span id="example-6-2"><a id="example-6-2" name="example-6-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-3"><a id="example-6-3" name="example-6-3"></a><span class="w">    </span><span class="n">TYPE_STRING</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-4"><a id="example-6-4" name="example-6-4"></a><span class="w">    </span><span class="n">TYPE_INTEGER</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mh">0x2</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-5"><a id="example-6-5" name="example-6-5"></a><span class="w">    </span><span class="n">TYPE_FLOAT</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mh">0x3</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-6"><a id="example-6-6" name="example-6-6"></a><span class="w">    </span><span class="n">TYPE_BYTE</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x4</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-7"><a id="example-6-7" name="example-6-7"></a><span class="w">    </span><span class="n">TYPE_WORD</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x5</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-8"><a id="example-6-8" name="example-6-8"></a><span class="w">    </span><span class="n">TYPE_BOOL</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x6</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-9"><a id="example-6-9" name="example-6-9"></a><span class="w">    </span><span class="n">TYPE_VEC3</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x7</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-10"><a id="example-6-10" name="example-6-10"></a><span class="w">    </span><span class="n">TYPE_COLOR</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-11"><a id="example-6-11" name="example-6-11"></a><span class="w">    </span><span class="n">TYPE_RAW</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mh">0x9</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-12"><a id="example-6-12" name="example-6-12"></a><span class="w">    </span><span class="n">TYPE_RAWFLOAT</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-13"><a id="example-6-13" name="example-6-13"></a><span class="w">    </span><span class="n">TYPE_ENUM</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x11</span><span class="w"></span>
+</span><span id="example-6-14"><a id="example-6-14" name="example-6-14"></a><span class="w">    </span><span class="n">TYPE_HASH</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0x12</span><span class="p">,</span><span class="w"></span>
+</span><span id="example-6-15"><a id="example-6-15" name="example-6-15"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-6-16"><a id="example-6-16" name="example-6-16"></a>
+</span><span id="example-6-17"><a id="example-6-17" name="example-6-17"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BinSafeProperty</span><span class="w"></span>
+</span><span id="example-6-18"><a id="example-6-18" name="example-6-18"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-19"><a id="example-6-19" name="example-6-19"></a><span class="w">    </span><span class="n">TYPE</span><span class="w"> </span><span class="n">type</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-20"><a id="example-6-20" name="example-6-20"></a><span class="w">    </span><span class="k">union</span><span class="w"></span>
+</span><span id="example-6-21"><a id="example-6-21" name="example-6-21"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-22"><a id="example-6-22" name="example-6-22"></a><span class="w">        </span><span class="k">struct</span><span class="w"></span>
+</span><span id="example-6-23"><a id="example-6-23" name="example-6-23"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-24"><a id="example-6-24" name="example-6-24"></a><span class="w">            </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">stringLength</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-25"><a id="example-6-25" name="example-6-25"></a><span class="w">            </span><span class="kt">char</span><span class="w">        </span><span class="n">stringValue</span><span class="p">[];</span><span class="w"></span>
+</span><span id="example-6-26"><a id="example-6-26" name="example-6-26"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+</span><span id="example-6-27"><a id="example-6-27" name="example-6-27"></a><span class="w">        </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">integerOrHashOrEnumValue</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-28"><a id="example-6-28" name="example-6-28"></a><span class="w">        </span><span class="kt">float</span><span class="w">       </span><span class="n">floatValue</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-29"><a id="example-6-29" name="example-6-29"></a><span class="w">        </span><span class="kt">uint8_t</span><span class="w">     </span><span class="n">byteOrBoolValue</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-30"><a id="example-6-30" name="example-6-30"></a><span class="w">        </span><span class="n">zVEC3</span><span class="w">       </span><span class="n">vec3Value</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-31"><a id="example-6-31" name="example-6-31"></a><span class="w">        </span><span class="n">zCOLOR</span><span class="w">      </span><span class="n">colorValue</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-32"><a id="example-6-32" name="example-6-32"></a><span class="w">        </span><span class="k">struct</span><span class="w"></span>
+</span><span id="example-6-33"><a id="example-6-33" name="example-6-33"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-34"><a id="example-6-34" name="example-6-34"></a><span class="w">            </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">rawLength</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-35"><a id="example-6-35" name="example-6-35"></a><span class="w">            </span><span class="kt">char</span><span class="w">        </span><span class="n">rawValue</span><span class="p">[];</span><span class="w"></span>
+</span><span id="example-6-36"><a id="example-6-36" name="example-6-36"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+</span><span id="example-6-37"><a id="example-6-37" name="example-6-37"></a><span class="w">        </span><span class="k">struct</span><span class="w"></span>
+</span><span id="example-6-38"><a id="example-6-38" name="example-6-38"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-6-39"><a id="example-6-39" name="example-6-39"></a><span class="w">            </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">rawFloatLength</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-6-40"><a id="example-6-40" name="example-6-40"></a><span class="w">            </span><span class="kt">float</span><span class="w">       </span><span class="n">rawFloatValue</span><span class="p">[];</span><span class="w"></span>
+</span><span id="example-6-41"><a id="example-6-41" name="example-6-41"></a><span class="w">        </span><span class="p">}</span><span class="w">       </span>
+</span><span id="example-6-42"><a id="example-6-42" name="example-6-42"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
+</span><span id="example-6-43"><a id="example-6-43" name="example-6-43"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>Looking at the enumeration of types, you might notice that BinSafe mode has an additional property type called Hash. BinSafe archives include a hash table which is stored in the following manner:</p>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">BinSafeHashTable</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">chunkCount</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">chunkCount</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">stringLength</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">linearValue</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">hashValue</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="kt">char</span><span class="w">        </span><span class="n">text</span><span class="p">[</span><span class="n">stringLength</span><span class="p">];</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1"> 1</a></span>
+<span class="normal"><a href="#example-7-2"> 2</a></span>
+<span class="normal"><a href="#example-7-3"> 3</a></span>
+<span class="normal"><a href="#example-7-4"> 4</a></span>
+<span class="normal"><a href="#example-7-5"> 5</a></span>
+<span class="normal"><a href="#example-7-6"> 6</a></span>
+<span class="normal"><a href="#example-7-7"> 7</a></span>
+<span class="normal"><a href="#example-7-8"> 8</a></span>
+<span class="normal"><a href="#example-7-9"> 9</a></span>
+<span class="normal"><a href="#example-7-10">10</a></span>
+<span class="normal"><a href="#example-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BinSafeHashTable</span><span class="w"></span>
+</span><span id="example-7-2"><a id="example-7-2" name="example-7-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-7-3"><a id="example-7-3" name="example-7-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">chunkCount</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-7-4"><a id="example-7-4" name="example-7-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">chunkCount</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-7-5"><a id="example-7-5" name="example-7-5"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-7-6"><a id="example-7-6" name="example-7-6"></a><span class="w">        </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">stringLength</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-7-7"><a id="example-7-7" name="example-7-7"></a><span class="w">        </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">linearValue</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-7-8"><a id="example-7-8" name="example-7-8"></a><span class="w">        </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">hashValue</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-7-9"><a id="example-7-9" name="example-7-9"></a><span class="w">        </span><span class="kt">char</span><span class="w">        </span><span class="n">text</span><span class="p">[</span><span class="n">stringLength</span><span class="p">];</span><span class="w"></span>
+</span><span id="example-7-10"><a id="example-7-10" name="example-7-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</span><span id="example-7-11"><a id="example-7-11" name="example-7-11"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>Instead of storing the raw value, properties may save a hash instead, which is then used to look up the corresponding value from the hash table.</p>
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link"></a></h2>
 <p>As mentioned in the opening paragraph, classes may use the described functionality by overloading the <code>Archive</code> and <code>Unarchive</code> virtual methods, which pass an instance of <code>zCArchiver</code> by reference. When the class instance is then serialized and/or parsed, these methods are called and perform the desired serialization/parsing work.</p>
 <p>Within these routines, the class uses methods provided by the <code>zCArchiver</code> instance. These methods return/accept a value of a specific type (e.g. ReadInt/WriteInt), while they do the actual reading/writing work behind the scenes based on the current mode (ASCII/Binary/BinSafe). The programmer writing the class then does not care whether the final archive will be saved as ASCII, Binary or BinSafe, as they only use the <code>zCArchiver</code> Read* and Write* methods.</p>
 <h3 id="a-practical-example">A practical example<a class="headerlink" href="#a-practical-example" title="Permanent link"></a></h3>
 <p>Let's propose that we have a class which is declared like so:</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">zCMyClass</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">zCObject</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">zCMyClass</span><span class="p">()</span><span class="w">             </span><span class="p">{}</span><span class="w"></span>
-<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">zCMyClass</span><span class="p">()</span><span class="w">    </span><span class="p">{}</span><span class="w"></span>
-
-<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Archive</span><span class="p">(</span><span class="n">zCArchiver</span><span class="o">&amp;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Unarchive</span><span class="p">(</span><span class="n">zCArchiver</span><span class="o">&amp;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">myInt</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">zCMyClass</span><span class="o">*</span><span class="w"> </span><span class="n">myObject</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">zCMyClass</span><span class="o">*</span><span class="w"> </span><span class="n">secondPointerToMyObject</span><span class="p">;</span><span class="w"></span>
-
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1"> 1</a></span>
+<span class="normal"><a href="#example-8-2"> 2</a></span>
+<span class="normal"><a href="#example-8-3"> 3</a></span>
+<span class="normal"><a href="#example-8-4"> 4</a></span>
+<span class="normal"><a href="#example-8-5"> 5</a></span>
+<span class="normal"><a href="#example-8-6"> 6</a></span>
+<span class="normal"><a href="#example-8-7"> 7</a></span>
+<span class="normal"><a href="#example-8-8"> 8</a></span>
+<span class="normal"><a href="#example-8-9"> 9</a></span>
+<span class="normal"><a href="#example-8-10">10</a></span>
+<span class="normal"><a href="#example-8-11">11</a></span>
+<span class="normal"><a href="#example-8-12">12</a></span>
+<span class="normal"><a href="#example-8-13">13</a></span>
+<span class="normal"><a href="#example-8-14">14</a></span>
+<span class="normal"><a href="#example-8-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">zCMyClass</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">zCObject</span><span class="w"></span>
+</span><span id="example-8-2"><a id="example-8-2" name="example-8-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-8-3"><a id="example-8-3" name="example-8-3"></a><span class="k">public</span><span class="o">:</span><span class="w"></span>
+</span><span id="example-8-4"><a id="example-8-4" name="example-8-4"></a>
+</span><span id="example-8-5"><a id="example-8-5" name="example-8-5"></a><span class="w">    </span><span class="n">zCMyClass</span><span class="p">()</span><span class="w">             </span><span class="p">{}</span><span class="w"></span>
+</span><span id="example-8-6"><a id="example-8-6" name="example-8-6"></a><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">zCMyClass</span><span class="p">()</span><span class="w">    </span><span class="p">{}</span><span class="w"></span>
+</span><span id="example-8-7"><a id="example-8-7" name="example-8-7"></a>
+</span><span id="example-8-8"><a id="example-8-8" name="example-8-8"></a><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Archive</span><span class="p">(</span><span class="n">zCArchiver</span><span class="o">&amp;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-8-9"><a id="example-8-9" name="example-8-9"></a><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Unarchive</span><span class="p">(</span><span class="n">zCArchiver</span><span class="o">&amp;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-8-10"><a id="example-8-10" name="example-8-10"></a>
+</span><span id="example-8-11"><a id="example-8-11" name="example-8-11"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">myInt</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-8-12"><a id="example-8-12" name="example-8-12"></a><span class="w">    </span><span class="n">zCMyClass</span><span class="o">*</span><span class="w"> </span><span class="n">myObject</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-8-13"><a id="example-8-13" name="example-8-13"></a><span class="w">    </span><span class="n">zCMyClass</span><span class="o">*</span><span class="w"> </span><span class="n">secondPointerToMyObject</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-8-14"><a id="example-8-14" name="example-8-14"></a>
+</span><span id="example-8-15"><a id="example-8-15" name="example-8-15"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>The hypothetical class then implements these virtual functions:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">zCMyClass::Archive</span><span class="p">(</span><span class="n">zCArchiver</span><span class="o">&amp;</span><span class="w"> </span><span class="n">archiver</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteInt</span><span class="p">(</span><span class="s">&quot;myInt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myInt</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteObject</span><span class="p">(</span><span class="s">&quot;myObject&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myObject</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteChunkStart</span><span class="p">(</span><span class="s">&quot;myChunk&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteObject</span><span class="p">(</span><span class="s">&quot;secondPointerToMyObject&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">secondPointerToMyObject</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteChunkEnd</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">zCMyClass::Unarchive</span><span class="p">(</span><span class="n">zCArchiver</span><span class="o">&amp;</span><span class="w"> </span><span class="n">archiver</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadInt</span><span class="p">(</span><span class="s">&quot;myInt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myInt</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">myObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">zCMyClass</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">(</span><span class="s">&quot;myObject&quot;</span><span class="p">));</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadChunkStart</span><span class="p">(</span><span class="s">&quot;myChunk&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">secondPointerToMyObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">zCMyClass</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">(</span><span class="s">&quot;secondPointerToMyObject&quot;</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadChunkEnd</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1"> 1</a></span>
+<span class="normal"><a href="#example-9-2"> 2</a></span>
+<span class="normal"><a href="#example-9-3"> 3</a></span>
+<span class="normal"><a href="#example-9-4"> 4</a></span>
+<span class="normal"><a href="#example-9-5"> 5</a></span>
+<span class="normal"><a href="#example-9-6"> 6</a></span>
+<span class="normal"><a href="#example-9-7"> 7</a></span>
+<span class="normal"><a href="#example-9-8"> 8</a></span>
+<span class="normal"><a href="#example-9-9"> 9</a></span>
+<span class="normal"><a href="#example-9-10">10</a></span>
+<span class="normal"><a href="#example-9-11">11</a></span>
+<span class="normal"><a href="#example-9-12">12</a></span>
+<span class="normal"><a href="#example-9-13">13</a></span>
+<span class="normal"><a href="#example-9-14">14</a></span>
+<span class="normal"><a href="#example-9-15">15</a></span>
+<span class="normal"><a href="#example-9-16">16</a></span>
+<span class="normal"><a href="#example-9-17">17</a></span>
+<span class="normal"><a href="#example-9-18">18</a></span>
+<span class="normal"><a href="#example-9-19">19</a></span>
+<span class="normal"><a href="#example-9-20">20</a></span>
+<span class="normal"><a href="#example-9-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">zCMyClass::Archive</span><span class="p">(</span><span class="n">zCArchiver</span><span class="o">&amp;</span><span class="w"> </span><span class="n">archiver</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-9-2"><a id="example-9-2" name="example-9-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-9-3"><a id="example-9-3" name="example-9-3"></a><span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteInt</span><span class="p">(</span><span class="s">&quot;myInt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myInt</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-9-4"><a id="example-9-4" name="example-9-4"></a>
+</span><span id="example-9-5"><a id="example-9-5" name="example-9-5"></a><span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteObject</span><span class="p">(</span><span class="s">&quot;myObject&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myObject</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-9-6"><a id="example-9-6" name="example-9-6"></a>
+</span><span id="example-9-7"><a id="example-9-7" name="example-9-7"></a><span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteChunkStart</span><span class="p">(</span><span class="s">&quot;myChunk&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-9-8"><a id="example-9-8" name="example-9-8"></a><span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteObject</span><span class="p">(</span><span class="s">&quot;secondPointerToMyObject&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">secondPointerToMyObject</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-9-9"><a id="example-9-9" name="example-9-9"></a><span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">WriteChunkEnd</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-9-10"><a id="example-9-10" name="example-9-10"></a><span class="p">}</span><span class="w"></span>
+</span><span id="example-9-11"><a id="example-9-11" name="example-9-11"></a>
+</span><span id="example-9-12"><a id="example-9-12" name="example-9-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">zCMyClass::Unarchive</span><span class="p">(</span><span class="n">zCArchiver</span><span class="o">&amp;</span><span class="w"> </span><span class="n">archiver</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-9-13"><a id="example-9-13" name="example-9-13"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-9-14"><a id="example-9-14" name="example-9-14"></a><span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadInt</span><span class="p">(</span><span class="s">&quot;myInt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myInt</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-9-15"><a id="example-9-15" name="example-9-15"></a>
+</span><span id="example-9-16"><a id="example-9-16" name="example-9-16"></a><span class="w">    </span><span class="n">myObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">zCMyClass</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">(</span><span class="s">&quot;myObject&quot;</span><span class="p">));</span><span class="w"></span>
+</span><span id="example-9-17"><a id="example-9-17" name="example-9-17"></a>
+</span><span id="example-9-18"><a id="example-9-18" name="example-9-18"></a><span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadChunkStart</span><span class="p">(</span><span class="s">&quot;myChunk&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-9-19"><a id="example-9-19" name="example-9-19"></a><span class="w">    </span><span class="n">secondPointerToMyObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">zCMyClass</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">(</span><span class="s">&quot;secondPointerToMyObject&quot;</span><span class="p">));</span><span class="w"></span>
+</span><span id="example-9-20"><a id="example-9-20" name="example-9-20"></a><span class="w">    </span><span class="n">archiver</span><span class="p">.</span><span class="n">ReadChunkEnd</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-9-21"><a id="example-9-21" name="example-9-21"></a><span class="p">}</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>We then initialize the class in the following way:</p>
-<div class="highlight"><pre><span></span><code><span class="n">zCMyClass</span><span class="w"> </span><span class="n">object</span><span class="p">;</span><span class="w"></span>
-
-<span class="n">object</span><span class="p">.</span><span class="n">myInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12121212</span><span class="p">;</span><span class="w"></span>
-
-<span class="n">object</span><span class="p">.</span><span class="n">myObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">zCMyClass</span><span class="p">();</span><span class="w"></span>
-<span class="n">object</span><span class="p">.</span><span class="n">myObject</span><span class="o">-&gt;</span><span class="n">myInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34343434</span><span class="p">;</span><span class="w"></span>
-
-<span class="n">object</span><span class="p">.</span><span class="n">secondPointerToMyObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object</span><span class="p">.</span><span class="n">myObject</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span>
+<span class="normal"><a href="#example-10-2">2</a></span>
+<span class="normal"><a href="#example-10-3">3</a></span>
+<span class="normal"><a href="#example-10-4">4</a></span>
+<span class="normal"><a href="#example-10-5">5</a></span>
+<span class="normal"><a href="#example-10-6">6</a></span>
+<span class="normal"><a href="#example-10-7">7</a></span>
+<span class="normal"><a href="#example-10-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="n">zCMyClass</span><span class="w"> </span><span class="n">object</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-10-2"><a id="example-10-2" name="example-10-2"></a>
+</span><span id="example-10-3"><a id="example-10-3" name="example-10-3"></a><span class="n">object</span><span class="p">.</span><span class="n">myInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12121212</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-10-4"><a id="example-10-4" name="example-10-4"></a>
+</span><span id="example-10-5"><a id="example-10-5" name="example-10-5"></a><span class="n">object</span><span class="p">.</span><span class="n">myObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">zCMyClass</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-10-6"><a id="example-10-6" name="example-10-6"></a><span class="n">object</span><span class="p">.</span><span class="n">myObject</span><span class="o">-&gt;</span><span class="n">myInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34343434</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-10-7"><a id="example-10-7" name="example-10-7"></a>
+</span><span id="example-10-8"><a id="example-10-8" name="example-10-8"></a><span class="n">object</span><span class="p">.</span><span class="n">secondPointerToMyObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object</span><span class="p">.</span><span class="n">myObject</span><span class="p">;</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>If we now serialized, or to use the engine's term "archived", this instance into an ASCII archive, the result would look like this:</p>
-<div class="highlight"><pre><span></span><code>ZenGin Archive
-ver 1
-zCArchiverGeneric
-ASCII
-saveGame 0
-date 3.7.2022 0:0:0
-user GMC
-END
-objects 2     
-END
-
-[% zCMyClass 0 0]
-    myInt=int:12121212
-    [myObject zCMyClass 0 1]
-        myInt=int:34343434
-        [myObject % 0 0]
-        []
-        [myChunk % 0 0]
-            [secondPointerToMyObject % 0 0]
-            []
-        []
-    []
-    [myChunk % 0 0]
-        [secondPointerToMyObject § 0 1]
-        []
-    []
-[]
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1"> 1</a></span>
+<span class="normal"><a href="#example-11-2"> 2</a></span>
+<span class="normal"><a href="#example-11-3"> 3</a></span>
+<span class="normal"><a href="#example-11-4"> 4</a></span>
+<span class="normal"><a href="#example-11-5"> 5</a></span>
+<span class="normal"><a href="#example-11-6"> 6</a></span>
+<span class="normal"><a href="#example-11-7"> 7</a></span>
+<span class="normal"><a href="#example-11-8"> 8</a></span>
+<span class="normal"><a href="#example-11-9"> 9</a></span>
+<span class="normal"><a href="#example-11-10">10</a></span>
+<span class="normal"><a href="#example-11-11">11</a></span>
+<span class="normal"><a href="#example-11-12">12</a></span>
+<span class="normal"><a href="#example-11-13">13</a></span>
+<span class="normal"><a href="#example-11-14">14</a></span>
+<span class="normal"><a href="#example-11-15">15</a></span>
+<span class="normal"><a href="#example-11-16">16</a></span>
+<span class="normal"><a href="#example-11-17">17</a></span>
+<span class="normal"><a href="#example-11-18">18</a></span>
+<span class="normal"><a href="#example-11-19">19</a></span>
+<span class="normal"><a href="#example-11-20">20</a></span>
+<span class="normal"><a href="#example-11-21">21</a></span>
+<span class="normal"><a href="#example-11-22">22</a></span>
+<span class="normal"><a href="#example-11-23">23</a></span>
+<span class="normal"><a href="#example-11-24">24</a></span>
+<span class="normal"><a href="#example-11-25">25</a></span>
+<span class="normal"><a href="#example-11-26">26</a></span>
+<span class="normal"><a href="#example-11-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a>ZenGin Archive
+</span><span id="example-11-2"><a id="example-11-2" name="example-11-2"></a>ver 1
+</span><span id="example-11-3"><a id="example-11-3" name="example-11-3"></a>zCArchiverGeneric
+</span><span id="example-11-4"><a id="example-11-4" name="example-11-4"></a>ASCII
+</span><span id="example-11-5"><a id="example-11-5" name="example-11-5"></a>saveGame 0
+</span><span id="example-11-6"><a id="example-11-6" name="example-11-6"></a>date 3.7.2022 0:0:0
+</span><span id="example-11-7"><a id="example-11-7" name="example-11-7"></a>user GMC
+</span><span id="example-11-8"><a id="example-11-8" name="example-11-8"></a>END
+</span><span id="example-11-9"><a id="example-11-9" name="example-11-9"></a>objects 2     
+</span><span id="example-11-10"><a id="example-11-10" name="example-11-10"></a>END
+</span><span id="example-11-11"><a id="example-11-11" name="example-11-11"></a>
+</span><span id="example-11-12"><a id="example-11-12" name="example-11-12"></a>[% zCMyClass 0 0]
+</span><span id="example-11-13"><a id="example-11-13" name="example-11-13"></a>    myInt=int:12121212
+</span><span id="example-11-14"><a id="example-11-14" name="example-11-14"></a>    [myObject zCMyClass 0 1]
+</span><span id="example-11-15"><a id="example-11-15" name="example-11-15"></a>        myInt=int:34343434
+</span><span id="example-11-16"><a id="example-11-16" name="example-11-16"></a>        [myObject % 0 0]
+</span><span id="example-11-17"><a id="example-11-17" name="example-11-17"></a>        []
+</span><span id="example-11-18"><a id="example-11-18" name="example-11-18"></a>        [myChunk % 0 0]
+</span><span id="example-11-19"><a id="example-11-19" name="example-11-19"></a>            [secondPointerToMyObject % 0 0]
+</span><span id="example-11-20"><a id="example-11-20" name="example-11-20"></a>            []
+</span><span id="example-11-21"><a id="example-11-21" name="example-11-21"></a>        []
+</span><span id="example-11-22"><a id="example-11-22" name="example-11-22"></a>    []
+</span><span id="example-11-23"><a id="example-11-23" name="example-11-23"></a>    [myChunk % 0 0]
+</span><span id="example-11-24"><a id="example-11-24" name="example-11-24"></a>        [secondPointerToMyObject § 0 1]
+</span><span id="example-11-25"><a id="example-11-25" name="example-11-25"></a>        []
+</span><span id="example-11-26"><a id="example-11-26" name="example-11-26"></a>    []
+</span><span id="example-11-27"><a id="example-11-27" name="example-11-27"></a>[]
+</span></code></pre></div></td></tr></table></div>
 <p>Notice how <code>secondPointerToMyObject</code> doesn't have any contents. The character <code>§</code> tells the parser that this object already exists in the objectList, and that instead of creating a new instance, it should return an existing instance which is stored under index <code>1</code> in the objectList. 
 This allows an instance to be referenced from multiple places, without the need to worry about duplicity.</p>
 <p>If we used Binary or BinSafe mode, we would see a big blob of binary data instead. This would of course store the exact same data, although in a slightly less human-readable format.</p>

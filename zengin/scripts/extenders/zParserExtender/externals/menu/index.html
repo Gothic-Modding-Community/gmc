@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/menu/">
       
       <link rel="icon" href="../../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2730,34 +2730,47 @@
 <h1 id="menu-function">Menu function<a class="headerlink" href="#menu-function" title="Permanent link"></a></h1>
 <h2 id="menu_searchitems">Menu_SearchItems<a class="headerlink" href="#menu_searchitems" title="Permanent link"></a></h2>
 <p>Find all <code>C_MenuItem</code> object instances by the mask and automatically places them in the current menu instance</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Menu_SearchItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Menu_SearchItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>mask</code> - string mask used in the search for menu items</li>
 </ul>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link"></a></h3>
 <p>This function is used in the Union Menu <a href="../../injection#api-script">API script</a>.<br />
 In this script the <code>Menu_SearchItems</code> external is used to collect all Union menu scripts, that are placed into the Union &amp; Plugins menu, that will appear in the game if you use any of the plugins, that use this feature.  </p>
-<div class="highlight"><span class="filename">Usage of Menu_SearchItems external function</span><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">MENU_OPT_UNION</span><span class="p">(</span><span class="nc">C_MENU_DEF</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-ZParserExtender">Menu_SearchItems</span><span class="p">(</span><span class="s">&quot;MENUITEM_UNION_AUTO_*&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="vi">MENU_OPT_UNION_PY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1200</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">backpic</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">MENU_BACK_PIC</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UNION_MENUITEM_TITLE&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">items</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UNION_MENUITEM_BACK&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">defaultoutgame</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">defaultingame</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">Flags</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">Flags</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MENU_SHOW_INFO</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Usage of Menu_SearchItems external function</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1"> 1</a></span>
+<span class="normal"><a href="#example-1-2"> 2</a></span>
+<span class="normal"><a href="#example-1-3"> 3</a></span>
+<span class="normal"><a href="#example-1-4"> 4</a></span>
+<span class="normal"><a href="#example-1-5"> 5</a></span>
+<span class="normal"><a href="#example-1-6"> 6</a></span>
+<span class="normal"><a href="#example-1-7"> 7</a></span>
+<span class="normal"><a href="#example-1-8"> 8</a></span>
+<span class="normal"><a href="#example-1-9"> 9</a></span>
+<span class="normal"><a href="#example-1-10">10</a></span>
+<span class="normal"><a href="#example-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">instance</span><span class="w"> </span><span class="n">MENU_OPT_UNION</span><span class="p">(</span><span class="nc">C_MENU_DEF</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-1-2"><a id="example-1-2" name="example-1-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-1-3"><a id="example-1-3" name="example-1-3"></a><span class="w">    </span><span class="nb nb-ZParserExtender">Menu_SearchItems</span><span class="p">(</span><span class="s">&quot;MENUITEM_UNION_AUTO_*&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-1-4"><a id="example-1-4" name="example-1-4"></a><span class="w">    </span><span class="vi">MENU_OPT_UNION_PY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1200</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-5"><a id="example-1-5" name="example-1-5"></a><span class="w">    </span><span class="vi">backpic</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">MENU_BACK_PIC</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-6"><a id="example-1-6" name="example-1-6"></a><span class="w">    </span><span class="vi">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UNION_MENUITEM_TITLE&quot;</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-7"><a id="example-1-7" name="example-1-7"></a><span class="w">    </span><span class="vi">items</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UNION_MENUITEM_BACK&quot;</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-8"><a id="example-1-8" name="example-1-8"></a><span class="w">    </span><span class="vi">defaultoutgame</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-9"><a id="example-1-9" name="example-1-9"></a><span class="w">    </span><span class="vi">defaultingame</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-10"><a id="example-1-10" name="example-1-10"></a><span class="w">    </span><span class="vi">Flags</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">Flags</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MENU_SHOW_INFO</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-1-11"><a id="example-1-11" name="example-1-11"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p>In this case all instances of the name <code>MENUITEM_UNION_AUTO_*</code> (<code>*</code> being a wildcard, that can be substituted with anything). The plugin will search the scripts and find all instances (in the case of <a href="">zGamePad</a> it is <a href="https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zGamePad_Menu.d#L28-L33"><code>MenuItem_Union_Auto_zGamePad</code></a>)</p>
 <p>This example comes from the <code>zUnionMenu.d</code> injectable <a href="../../injection#api-script">API script</a>, that is part of the <a href="">zGamePad</a> plugin, <a href="https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zUnionMenu.d#L47-L57">GitHub link</a>.</p>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="c">/// Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance</span><span class="w"></span>
-<span class="c">/// </span><span class="w"></span>
-<span class="c">/// @param mask regex like mask for searching</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Menu_SearchItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
+<span class="normal"><a href="#example-2-2">2</a></span>
+<span class="normal"><a href="#example-2-3">3</a></span>
+<span class="normal"><a href="#example-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="c">/// Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance</span><span class="w"></span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="c">/// </span><span class="w"></span>
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="c">/// @param mask regex like mask for searching</span><span class="w"></span>
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Menu_SearchItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">

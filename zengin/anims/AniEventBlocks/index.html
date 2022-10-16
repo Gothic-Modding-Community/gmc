@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/anims/AniEventBlocks/">
       
       <link rel="icon" href="../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2680,42 +2680,59 @@
 <h2 id="animation-event-blocks">Animation event blocks<a class="headerlink" href="#animation-event-blocks" title="Permanent link"></a></h2>
 <p>With animations, we often need to perform some other actions, like playing a sound effect, inserting item into NPCs hand or changing an item instance into a different one (turning a raw steel into hot raw steel).</p>
 <p>Example:
-<div class="highlight"><pre><span></span><code><span class="n">ani</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;s_RunL&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;s_RunL&quot;</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w"> </span><span class="s">&quot;Hum_RunLoop_M01.asc&quot;</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="mi">31</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="n">eventSFXGrnd</span><span class="w">   </span><span class="p">(</span><span class="mi">12</span><span class="w"> </span><span class="s">&quot;Run&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="n">eventSFXGrnd</span><span class="w">   </span><span class="p">(</span><span class="mi">21</span><span class="w"> </span><span class="s">&quot;Run&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
+<span class="normal"><a href="#example-0-2">2</a></span>
+<span class="normal"><a href="#example-0-3">3</a></span>
+<span class="normal"><a href="#example-0-4">4</a></span>
+<span class="normal"><a href="#example-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="n">ani</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;s_RunL&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;s_RunL&quot;</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w"> </span><span class="s">&quot;Hum_RunLoop_M01.asc&quot;</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="mi">31</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a><span class="w">    </span><span class="o">*</span><span class="n">eventSFXGrnd</span><span class="w">   </span><span class="p">(</span><span class="mi">12</span><span class="w"> </span><span class="s">&quot;Run&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a><span class="w">    </span><span class="o">*</span><span class="n">eventSFXGrnd</span><span class="w">   </span><span class="p">(</span><span class="mi">21</span><span class="w"> </span><span class="s">&quot;Run&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a><span class="p">}</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <p>The example shows the animation and its event block. We place these events into a block surrounded by curly brackets.</p>
 <p>There are many events to choose from to choose from, here are some examples:
 Sound effects
-<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">eventSFXGrnd</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="w"> </span><span class="s">&quot;Run&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventSFX</span><span class="w">     </span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="s">&quot;Swim&quot;</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
+<span class="normal"><a href="#example-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="o">*</span><span class="n">eventSFXGrnd</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="w"> </span><span class="s">&quot;Run&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-1-2"><a id="example-1-2" name="example-1-2"></a><span class="o">*</span><span class="n">eventSFX</span><span class="w">     </span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="s">&quot;Swim&quot;</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 Particle effects
-<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">eventPFX</span><span class="w">     </span><span class="p">(</span><span class="mi">12</span><span class="w">       </span><span class="s">&quot;ZMODELLANDDUST&quot;</span><span class="w">   </span><span class="s">&quot;Bip01&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventPFX</span><span class="w">     </span><span class="p">(</span><span class="mi">35</span><span class="w">   </span><span class="mi">1</span><span class="w">   </span><span class="s">&quot;BUBBLES&quot;</span><span class="w">          </span><span class="s">&quot;BIP01 HEAD&quot;</span><span class="w"> </span><span class="n">ATTACH</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventPFXStop</span><span class="w"> </span><span class="p">(</span><span class="mi">45</span><span class="w">   </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
+<span class="normal"><a href="#example-2-2">2</a></span>
+<span class="normal"><a href="#example-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="o">*</span><span class="n">eventPFX</span><span class="w">     </span><span class="p">(</span><span class="mi">12</span><span class="w">       </span><span class="s">&quot;ZMODELLANDDUST&quot;</span><span class="w">   </span><span class="s">&quot;Bip01&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="o">*</span><span class="n">eventPFX</span><span class="w">     </span><span class="p">(</span><span class="mi">35</span><span class="w">   </span><span class="mi">1</span><span class="w">   </span><span class="s">&quot;BUBBLES&quot;</span><span class="w">          </span><span class="s">&quot;BIP01 HEAD&quot;</span><span class="w"> </span><span class="n">ATTACH</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="o">*</span><span class="n">eventPFXStop</span><span class="w"> </span><span class="p">(</span><span class="mi">45</span><span class="w">   </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 Morph mesh animations</p>
 <blockquote>
 <p>Heads are animated using morph meshes, this feature is not used as much in the original game, but Chronicles of Myrtana uses it quite a lot. I hope to write about morphMesh animation too in the future.</p>
 </blockquote>
-<p><div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">eventMMStartAni</span><span class="w"> </span><span class="p">(</span><span class="mi">14</span><span class="w">    </span><span class="s">&quot;T_HURT&quot;</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="o">*</span><span class="n">eventMMStartAni</span><span class="w"> </span><span class="p">(</span><span class="mi">14</span><span class="w">    </span><span class="s">&quot;T_HURT&quot;</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 Event tags
-<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="s">&quot;DEF_FIGHTMODE&quot;</span><span class="w">    </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
-
-<span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="s">&quot;DEF_HIT_LIMB&quot;</span><span class="w">  </span><span class="s">&quot;ZS_RIGHTHAND&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="s">&quot;DEF_OPT_FRAME&quot;</span><span class="w"> </span><span class="s">&quot;6&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="s">&quot;DEF_HIT_END&quot;</span><span class="w">   </span><span class="s">&quot;29&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="s">&quot;DEF_WINDOW&quot;</span><span class="w">    </span><span class="s">&quot;18 35&quot;</span><span class="p">)</span><span class="w"></span>
-
-<span class="o">*</span><span class="n">eventTa</span><span class="w">  </span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="s">&quot;DEF_INSERT_ITEM&quot;</span><span class="w">   </span><span class="s">&quot;ZS_LEFTHAND&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventTa</span><span class="w">  </span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="s">&quot;DEF_CREATE_ITEM&quot;</span><span class="w">   </span><span class="s">&quot;ZS_RIGHTHAND&quot;</span><span class="w"> </span><span class="s">&quot;ItMw_1H_Sledgehammer_01&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventTa</span><span class="w">  </span><span class="p">(</span><span class="mi">9</span><span class="w"> </span><span class="s">&quot;DEF_EXCHANGE_ITEM&quot;</span><span class="w"> </span><span class="s">&quot;ZS_LEFTHAND&quot;</span><span class="w">  </span><span class="s">&quot;ItMiSwordbladehot&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="o">*</span><span class="n">eventTa</span><span class="w">  </span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="s">&quot;DEF_REMOVE_ITEM&quot;</span><span class="p">)</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1"> 1</a></span>
+<span class="normal"><a href="#example-4-2"> 2</a></span>
+<span class="normal"><a href="#example-4-3"> 3</a></span>
+<span class="normal"><a href="#example-4-4"> 4</a></span>
+<span class="normal"><a href="#example-4-5"> 5</a></span>
+<span class="normal"><a href="#example-4-6"> 6</a></span>
+<span class="normal"><a href="#example-4-7"> 7</a></span>
+<span class="normal"><a href="#example-4-8"> 8</a></span>
+<span class="normal"><a href="#example-4-9"> 9</a></span>
+<span class="normal"><a href="#example-4-10">10</a></span>
+<span class="normal"><a href="#example-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="s">&quot;DEF_FIGHTMODE&quot;</span><span class="w">    </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-4-2"><a id="example-4-2" name="example-4-2"></a>
+</span><span id="example-4-3"><a id="example-4-3" name="example-4-3"></a><span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="s">&quot;DEF_HIT_LIMB&quot;</span><span class="w">  </span><span class="s">&quot;ZS_RIGHTHAND&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-4-4"><a id="example-4-4" name="example-4-4"></a><span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="s">&quot;DEF_OPT_FRAME&quot;</span><span class="w"> </span><span class="s">&quot;6&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-4-5"><a id="example-4-5" name="example-4-5"></a><span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="s">&quot;DEF_HIT_END&quot;</span><span class="w">   </span><span class="s">&quot;29&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-4-6"><a id="example-4-6" name="example-4-6"></a><span class="o">*</span><span class="n">eventTag</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="s">&quot;DEF_WINDOW&quot;</span><span class="w">    </span><span class="s">&quot;18 35&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-4-7"><a id="example-4-7" name="example-4-7"></a>
+</span><span id="example-4-8"><a id="example-4-8" name="example-4-8"></a><span class="o">*</span><span class="n">eventTa</span><span class="w">  </span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="s">&quot;DEF_INSERT_ITEM&quot;</span><span class="w">   </span><span class="s">&quot;ZS_LEFTHAND&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-4-9"><a id="example-4-9" name="example-4-9"></a><span class="o">*</span><span class="n">eventTa</span><span class="w">  </span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="s">&quot;DEF_CREATE_ITEM&quot;</span><span class="w">   </span><span class="s">&quot;ZS_RIGHTHAND&quot;</span><span class="w"> </span><span class="s">&quot;ItMw_1H_Sledgehammer_01&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-4-10"><a id="example-4-10" name="example-4-10"></a><span class="o">*</span><span class="n">eventTa</span><span class="w">  </span><span class="p">(</span><span class="mi">9</span><span class="w"> </span><span class="s">&quot;DEF_EXCHANGE_ITEM&quot;</span><span class="w"> </span><span class="s">&quot;ZS_LEFTHAND&quot;</span><span class="w">  </span><span class="s">&quot;ItMiSwordbladehot&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-4-11"><a id="example-4-11" name="example-4-11"></a><span class="o">*</span><span class="n">eventTa</span><span class="w">  </span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="s">&quot;DEF_REMOVE_ITEM&quot;</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 
   <hr>
 <div class="md-source-file">

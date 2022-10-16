@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/log/">
       
       <link rel="icon" href="../../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2727,8 +2727,8 @@
 <li><code>3</code> - Failure</li>
 <li><code>4</code> - Obsolete</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicStatus</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicStatus</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>topic</code> - name of the topic</li>
 <li><code>return</code> - topic status</li>
@@ -2741,35 +2741,55 @@
 <li><code>1</code> - Notes</li>
 <li><code>2</code> - All</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicSection</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicSection</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>topic</code> - name of the topic</li>
 <li><code>return</code> - topic section</li>
 </ul>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="c">/// Returns the status of diary topic</span><span class="w"></span>
-<span class="c">/// Not found   - (-1)</span><span class="w"></span>
-<span class="c">/// Free        - 0</span><span class="w"></span>
-<span class="c">/// Running     - 1</span><span class="w"></span>
-<span class="c">/// Success     - 2</span><span class="w"></span>
-<span class="c">/// Failure     - 3</span><span class="w"></span>
-<span class="c">/// Obsolete    - 4</span><span class="w"></span>
-<span class="c">///</span><span class="w"></span>
-<span class="c">/// @param topic name of the topic</span><span class="w"></span>
-<span class="c">/// @return topic status</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicStatus</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="c">/// Returns the topic the diary topic is in</span><span class="w"></span>
-<span class="c">/// Not found   - (-1)</span><span class="w"></span>
-<span class="c">/// Missions    - 0</span><span class="w"></span>
-<span class="c">/// Notes       - 1</span><span class="w"></span>
-<span class="c">/// All         - 2</span><span class="w"></span>
-<span class="c">///</span><span class="w"></span>
-<span class="c">/// @param topic name of the topic</span><span class="w"></span>
-<span class="c">/// @return topic section</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicSection</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1"> 1</a></span>
+<span class="normal"><a href="#example-2-2"> 2</a></span>
+<span class="normal"><a href="#example-2-3"> 3</a></span>
+<span class="normal"><a href="#example-2-4"> 4</a></span>
+<span class="normal"><a href="#example-2-5"> 5</a></span>
+<span class="normal"><a href="#example-2-6"> 6</a></span>
+<span class="normal"><a href="#example-2-7"> 7</a></span>
+<span class="normal"><a href="#example-2-8"> 8</a></span>
+<span class="normal"><a href="#example-2-9"> 9</a></span>
+<span class="normal"><a href="#example-2-10">10</a></span>
+<span class="normal"><a href="#example-2-11">11</a></span>
+<span class="normal"><a href="#example-2-12">12</a></span>
+<span class="normal"><a href="#example-2-13">13</a></span>
+<span class="normal"><a href="#example-2-14">14</a></span>
+<span class="normal"><a href="#example-2-15">15</a></span>
+<span class="normal"><a href="#example-2-16">16</a></span>
+<span class="normal"><a href="#example-2-17">17</a></span>
+<span class="normal"><a href="#example-2-18">18</a></span>
+<span class="normal"><a href="#example-2-19">19</a></span>
+<span class="normal"><a href="#example-2-20">20</a></span>
+<span class="normal"><a href="#example-2-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="c">/// Returns the status of diary topic</span><span class="w"></span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="c">/// Not found   - (-1)</span><span class="w"></span>
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="c">/// Free        - 0</span><span class="w"></span>
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="c">/// Running     - 1</span><span class="w"></span>
+</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a><span class="c">/// Success     - 2</span><span class="w"></span>
+</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a><span class="c">/// Failure     - 3</span><span class="w"></span>
+</span><span id="example-2-7"><a id="example-2-7" name="example-2-7"></a><span class="c">/// Obsolete    - 4</span><span class="w"></span>
+</span><span id="example-2-8"><a id="example-2-8" name="example-2-8"></a><span class="c">///</span><span class="w"></span>
+</span><span id="example-2-9"><a id="example-2-9" name="example-2-9"></a><span class="c">/// @param topic name of the topic</span><span class="w"></span>
+</span><span id="example-2-10"><a id="example-2-10" name="example-2-10"></a><span class="c">/// @return topic status</span><span class="w"></span>
+</span><span id="example-2-11"><a id="example-2-11" name="example-2-11"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicStatus</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-2-12"><a id="example-2-12" name="example-2-12"></a>
+</span><span id="example-2-13"><a id="example-2-13" name="example-2-13"></a><span class="c">/// Returns the topic the diary topic is in</span><span class="w"></span>
+</span><span id="example-2-14"><a id="example-2-14" name="example-2-14"></a><span class="c">/// Not found   - (-1)</span><span class="w"></span>
+</span><span id="example-2-15"><a id="example-2-15" name="example-2-15"></a><span class="c">/// Missions    - 0</span><span class="w"></span>
+</span><span id="example-2-16"><a id="example-2-16" name="example-2-16"></a><span class="c">/// Notes       - 1</span><span class="w"></span>
+</span><span id="example-2-17"><a id="example-2-17" name="example-2-17"></a><span class="c">/// All         - 2</span><span class="w"></span>
+</span><span id="example-2-18"><a id="example-2-18" name="example-2-18"></a><span class="c">///</span><span class="w"></span>
+</span><span id="example-2-19"><a id="example-2-19" name="example-2-19"></a><span class="c">/// @param topic name of the topic</span><span class="w"></span>
+</span><span id="example-2-20"><a id="example-2-20" name="example-2-20"></a><span class="c">/// @return topic section</span><span class="w"></span>
+</span><span id="example-2-21"><a id="example-2-21" name="example-2-21"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Log_GetTopicSection</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/AI/">
       
       <link rel="icon" href="../../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2643,54 +2643,79 @@
 
 <h1 id="ai-functions-for-working-with-ai">AI - functions for working with AI<a class="headerlink" href="#ai-functions-for-working-with-ai" title="Permanent link"></a></h1>
 <p>Functions to work with the new <code>C_Trigger</code> class and NPC's AI queue.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">AI_CallScript</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">oth</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_StartTriggerScript</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_StartTriggerScriptEx</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">oth</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">vct</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">selfID</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">otherID</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">victimID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Hlp_IsNULL</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">pointer</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_GetTriggerByID</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">AI_GetTriggersNum</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_GetTriggerNPC</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">npcID</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="nf">AI_GetTriggerFunc</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">AI_GetTriggerFuncName</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="nb nb-ZParserExtender">AI_GetNextTriggerByFunc</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">function</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="nb nb-ZParserExtender">AI_GetNextTriggerByFuncName</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">functionName</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="nb nb-ZParserExtender">AI_GetNextTriggerBySelf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="nb nb-ZParserExtender">AI_GetNextTriggerByOther</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="bp">other</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="nb nb-ZParserExtender">AI_GetNextTriggerByVictim</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="bp">victim</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-<span class="nb nb-ZParserExtender">AI_GetNextTriggerByNPCs</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="bp">victim</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-
-
-<span class="c">/// Returns the name of the current Steam user</span><span class="w"></span>
-<span class="c">/// Returns empty string when not run with Steam</span><span class="w"></span>
-<span class="c">///</span><span class="w"></span>
-<span class="c">/// @return string containing the Steam username, or empty string</span><span class="w"></span>
-<span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Hlp_GetSteamPersonalName</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
+<span class="normal"><a href="#example-0-2"> 2</a></span>
+<span class="normal"><a href="#example-0-3"> 3</a></span>
+<span class="normal"><a href="#example-0-4"> 4</a></span>
+<span class="normal"><a href="#example-0-5"> 5</a></span>
+<span class="normal"><a href="#example-0-6"> 6</a></span>
+<span class="normal"><a href="#example-0-7"> 7</a></span>
+<span class="normal"><a href="#example-0-8"> 8</a></span>
+<span class="normal"><a href="#example-0-9"> 9</a></span>
+<span class="normal"><a href="#example-0-10">10</a></span>
+<span class="normal"><a href="#example-0-11">11</a></span>
+<span class="normal"><a href="#example-0-12">12</a></span>
+<span class="normal"><a href="#example-0-13">13</a></span>
+<span class="normal"><a href="#example-0-14">14</a></span>
+<span class="normal"><a href="#example-0-15">15</a></span>
+<span class="normal"><a href="#example-0-16">16</a></span>
+<span class="normal"><a href="#example-0-17">17</a></span>
+<span class="normal"><a href="#example-0-18">18</a></span>
+<span class="normal"><a href="#example-0-19">19</a></span>
+<span class="normal"><a href="#example-0-20">20</a></span>
+<span class="normal"><a href="#example-0-21">21</a></span>
+<span class="normal"><a href="#example-0-22">22</a></span>
+<span class="normal"><a href="#example-0-23">23</a></span>
+<span class="normal"><a href="#example-0-24">24</a></span>
+<span class="normal"><a href="#example-0-25">25</a></span>
+<span class="normal"><a href="#example-0-26">26</a></span>
+<span class="normal"><a href="#example-0-27">27</a></span>
+<span class="normal"><a href="#example-0-28">28</a></span>
+<span class="normal"><a href="#example-0-29">29</a></span>
+<span class="normal"><a href="#example-0-30">30</a></span>
+<span class="normal"><a href="#example-0-31">31</a></span>
+<span class="normal"><a href="#example-0-32">32</a></span>
+<span class="normal"><a href="#example-0-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">AI_CallScript</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">oth</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a>
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_StartTriggerScript</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a>
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_StartTriggerScriptEx</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">oth</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">vct</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-6"><a id="example-0-6" name="example-0-6"></a>
+</span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">selfID</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-0-8"><a id="example-0-8" name="example-0-8"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">otherID</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-0-9"><a id="example-0-9" name="example-0-9"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">victimID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-0-10"><a id="example-0-10" name="example-0-10"></a>
+</span><span id="example-0-11"><a id="example-0-11" name="example-0-11"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Hlp_IsNULL</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">pointer</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-12"><a id="example-0-12" name="example-0-12"></a>
+</span><span id="example-0-13"><a id="example-0-13" name="example-0-13"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_GetTriggerByID</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-14"><a id="example-0-14" name="example-0-14"></a>
+</span><span id="example-0-15"><a id="example-0-15" name="example-0-15"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">AI_GetTriggersNum</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-16"><a id="example-0-16" name="example-0-16"></a>
+</span><span id="example-0-17"><a id="example-0-17" name="example-0-17"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_GetTriggerNPC</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">npcID</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-18"><a id="example-0-18" name="example-0-18"></a>
+</span><span id="example-0-19"><a id="example-0-19" name="example-0-19"></a><span class="kd">func</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="nf">AI_GetTriggerFunc</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-20"><a id="example-0-20" name="example-0-20"></a>
+</span><span id="example-0-21"><a id="example-0-21" name="example-0-21"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">AI_GetTriggerFuncName</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-22"><a id="example-0-22" name="example-0-22"></a>
+</span><span id="example-0-23"><a id="example-0-23" name="example-0-23"></a><span class="kd">func</span><span class="w"> </span><span class="kt">c_trigger</span><span class="w"> </span><span class="nf">ai_getnexttriggerbyfunc</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_trigger</span><span class="w"> </span><span class="n">starttrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">function</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-24"><a id="example-0-24" name="example-0-24"></a>
+</span><span id="example-0-25"><a id="example-0-25" name="example-0-25"></a><span class="kd">func</span><span class="w"> </span><span class="kt">c_triggetr</span><span class="w"> </span><span class="nf">ai_getnexttriggerbyfuncname</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_trigger</span><span class="w"> </span><span class="n">starttrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">functionname</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-26"><a id="example-0-26" name="example-0-26"></a>
+</span><span id="example-0-27"><a id="example-0-27" name="example-0-27"></a><span class="kd">func</span><span class="w"> </span><span class="kt">c_triggetr</span><span class="w"> </span><span class="nf">ai_getnexttriggerbyself</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_trigger</span><span class="w"> </span><span class="n">starttrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-28"><a id="example-0-28" name="example-0-28"></a>
+</span><span id="example-0-29"><a id="example-0-29" name="example-0-29"></a><span class="kd">func</span><span class="w"> </span><span class="kt">c_triggetr</span><span class="w"> </span><span class="nf">ai_getnexttriggerbyother</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_trigger</span><span class="w"> </span><span class="n">starttrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="bp">other</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-30"><a id="example-0-30" name="example-0-30"></a>
+</span><span id="example-0-31"><a id="example-0-31" name="example-0-31"></a><span class="kd">func</span><span class="w"> </span><span class="kt">c_triggetr</span><span class="w"> </span><span class="nf">ai_getnexttriggerbyvictim</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_trigger</span><span class="w"> </span><span class="n">starttrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="bp">victim</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-32"><a id="example-0-32" name="example-0-32"></a>
+</span><span id="example-0-33"><a id="example-0-33" name="example-0-33"></a><span class="kd">func</span><span class="w"> </span><span class="kt">c_triggetr</span><span class="w"> </span><span class="nf">ai_getnexttriggerbynpcs</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_trigger</span><span class="w"> </span><span class="n">starttrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="bp">victim</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-16 22:14:43</span>
       
     
   </small>

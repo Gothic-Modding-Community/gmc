@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/anims/StandaloneAni/">
       
       <link rel="icon" href="../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2727,10 +2727,12 @@
 <div class="admonition tip">
 <p class="admonition-title">What bone hierarchy is this model using?</p>
 <p>From the <code>.mds</code> file, if you open it again, there is a command <code>meshAndTree</code> that specifies, what model contains the skeleton. And there lies our answer:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Model</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;HuS&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">meshAndTree</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Hum_Body_Naked0.ASC&quot;</span><span class="w"> </span><span class="n">DONT_USE_MESH</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
+<span class="normal"><a href="#example-0-2">2</a></span>
+<span class="normal"><a href="#example-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="n">Model</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;HuS&quot;</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a><span class="w">    </span><span class="n">meshAndTree</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Hum_Body_Naked0.ASC&quot;</span><span class="w"> </span><span class="n">DONT_USE_MESH</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <p>A windows pops up, you can read some interesting information about the model you are about to import, what we are interested in is, that <strong>Completely replace current scene</strong> is ticked, we want to use <strong>Armature modifier</strong>, and we also want to <strong>Try to connect bones</strong> and <strong>Use sample meshes from folder</strong>. You should provide a path to a directory with the sample meshes - these are meshes for items, that usually go into slot bones. And lastly, the <strong>space transformation scale</strong> should be set to <strong>0.01</strong>, this is because ZenGin works with centimeter units and one unit in Blender is a meter.</p>
 <p>Click import and wait for the magic to happen.</p>
@@ -2755,8 +2757,8 @@
 </div>
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/boUwngFLA-U" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>In this video you can see, that the idle standing animation is <code>s_run</code>. Because we want to make an animation, that is going to start from this idle animation, we will import it into blender. Where do we find it? Just look into the <code>.mds</code> file, look for <code>s_run</code> name and get the name of the file.
-<div class="highlight"><pre><span></span><code><span class="n">ani</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;s_Run&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;s_Run&quot;</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="n">MI</span><span class="w"> </span><span class="s">&quot;Hum_RunAmbient_M01.asc&quot;</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="n">ani</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;s_Run&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;s_Run&quot;</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="n">MI</span><span class="w"> </span><span class="s">&quot;Hum_RunAmbient_M01.asc&quot;</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 As we can see, we have to import the <code>Hum_RunAmbient_M01.asc</code> file. </p>
 <p>Next goes the first trick. Since we want our animation to end exactly, as it started - wither because we want the hero to continue his standing animation, or we want to make a looping animation we somehow have to copy the pose. I use the DopeSheet screen, to delete all keyframes and then copy the keyframe set from keyframe number 0 and then drag it somewhere to the end of the timeline.</p>
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/2vOMrM-9aWc" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
@@ -2770,38 +2772,61 @@ There are many options here, that we will explore later, but we have tick <stron
 <p>All ani code has to be between the curly brackets, this means you have to insert it before the last two closing curly brackets <code>} }</code>.</p>
 </div>
 <p>Let's write it
-<div class="highlight"><pre><span></span><code><span class="n">ani</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;t_backpain&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w"> </span><span class="s">&quot;Hum_back.ASC&quot;</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">121</span><span class="p">)</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="n">ani</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;t_backpain&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w"> </span><span class="s">&quot;Hum_back.ASC&quot;</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">121</span><span class="p">)</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <p>Save the <code>Humans.mds</code> file and try it in game. Nothing happens! The reason is, the <code>mds</code> has been already compiled, and we have to recompile it. The easiest is to go to <code>Anims\_compiled</code> and delete <code>HUMANS.MSB</code>.
 Run the game and try to play the animation again (<code>play ani t_backpain</code> in MARVIN console) now everything should work.</p>
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/-i2un91x1UI" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 <p>Amazing, now you have your first animation in the game. And you can use it to do some fun stuff, like in dialogues using the <code>AI_PlayAni</code> function.</p>
 <h2 id="example-dialogue">Example dialogue<a class="headerlink" href="#example-dialogue" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">DIA_Xardas_Back</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="vi">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">NONE_100_Xardas</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Info</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;What&#39;s wrong?&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">DIA_Xardas_Back_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DIA_Xardas_Back_Info</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// My back hurts so much.</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// This is our animation!!!!!</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-Externals">AI_PlayAni</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;T_BACKPAIN&quot;</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_01&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// How do YOU feel?</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_02&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// My back is fine.</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-Externals">AI_StopProcessInfos</span><span class="p">(</span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1"> 1</a></span>
+<span class="normal"><a href="#example-3-2"> 2</a></span>
+<span class="normal"><a href="#example-3-3"> 3</a></span>
+<span class="normal"><a href="#example-3-4"> 4</a></span>
+<span class="normal"><a href="#example-3-5"> 5</a></span>
+<span class="normal"><a href="#example-3-6"> 6</a></span>
+<span class="normal"><a href="#example-3-7"> 7</a></span>
+<span class="normal"><a href="#example-3-8"> 8</a></span>
+<span class="normal"><a href="#example-3-9"> 9</a></span>
+<span class="normal"><a href="#example-3-10">10</a></span>
+<span class="normal"><a href="#example-3-11">11</a></span>
+<span class="normal"><a href="#example-3-12">12</a></span>
+<span class="normal"><a href="#example-3-13">13</a></span>
+<span class="normal"><a href="#example-3-14">14</a></span>
+<span class="normal"><a href="#example-3-15">15</a></span>
+<span class="normal"><a href="#example-3-16">16</a></span>
+<span class="normal"><a href="#example-3-17">17</a></span>
+<span class="normal"><a href="#example-3-18">18</a></span>
+<span class="normal"><a href="#example-3-19">19</a></span>
+<span class="normal"><a href="#example-3-20">20</a></span>
+<span class="normal"><a href="#example-3-21">21</a></span>
+<span class="normal"><a href="#example-3-22">22</a></span>
+<span class="normal"><a href="#example-3-23">23</a></span>
+<span class="normal"><a href="#example-3-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">instance</span><span class="w"> </span><span class="n">DIA_Xardas_Back</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a><span class="w">    </span><span class="vi">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">NONE_100_Xardas</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a><span class="w">    </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-3-5"><a id="example-3-5" name="example-3-5"></a><span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Condition</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-3-6"><a id="example-3-6" name="example-3-6"></a><span class="w">    </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DIA_Xardas_Back_Info</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-3-7"><a id="example-3-7" name="example-3-7"></a><span class="w">    </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-3-8"><a id="example-3-8" name="example-3-8"></a><span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;What&#39;s wrong?&quot;</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-3-9"><a id="example-3-9" name="example-3-9"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-10"><a id="example-3-10" name="example-3-10"></a>
+</span><span id="example-3-11"><a id="example-3-11" name="example-3-11"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">DIA_Xardas_Back_Condition</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-12"><a id="example-3-12" name="example-3-12"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-3-13"><a id="example-3-13" name="example-3-13"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-3-14"><a id="example-3-14" name="example-3-14"></a>
+</span><span id="example-3-15"><a id="example-3-15" name="example-3-15"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DIA_Xardas_Back_Info</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span id="example-3-16"><a id="example-3-16" name="example-3-16"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// My back hurts so much.</span><span class="w"></span>
+</span><span id="example-3-17"><a id="example-3-17" name="example-3-17"></a>
+</span><span id="example-3-18"><a id="example-3-18" name="example-3-18"></a><span class="w">    </span><span class="c">// This is our animation!!!!!</span><span class="w"></span>
+</span><span id="example-3-19"><a id="example-3-19" name="example-3-19"></a><span class="w">    </span><span class="nb nb-Externals">AI_PlayAni</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;T_BACKPAIN&quot;</span><span class="p">);</span><span class="w"> </span>
+</span><span id="example-3-20"><a id="example-3-20" name="example-3-20"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_01&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// How do YOU feel?</span><span class="w"></span>
+</span><span id="example-3-21"><a id="example-3-21" name="example-3-21"></a>
+</span><span id="example-3-22"><a id="example-3-22" name="example-3-22"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DIA_Xardas_MOB_14_02&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">// My back is fine.</span><span class="w"></span>
+</span><span id="example-3-23"><a id="example-3-23" name="example-3-23"></a><span class="w">    </span><span class="nb nb-Externals">AI_StopProcessInfos</span><span class="p">(</span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-3-24"><a id="example-3-24" name="example-3-24"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div>
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/G14lgjA49wU" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 
   <hr>

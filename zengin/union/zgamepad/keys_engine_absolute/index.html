@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/union/zgamepad/keys_engine_absolute/">
       
       <link rel="icon" href="../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2639,182 +2639,356 @@
 
 <h1 id="engine-absolute-keys">Engine absolute keys<a class="headerlink" href="#engine-absolute-keys" title="Permanent link"></a></h1>
 <p>Absolute keys are physical keys on your keyboard.
-<div class="highlight"><pre><span></span><code>MOUSE_DX
-MOUSE_DY
-MOUSE_UP
-MOUSE_DOWN
-MOUSE_LEFT
-MOUSE_RIGHT
-MOUSE_WHEELUP
-MOUSE_WHEELDOWN
-MOUSE_BUTTONLEFT
-MOUSE_BUTTONRIGHT
-MOUSE_BUTTONMID
-MOUSE_XBUTTON1
-MOUSE_XBUTTON2
-MOUSE_XBUTTON3
-MOUSE_XBUTTON4
-MOUSE_XBUTTON5
-KEY_ESCAPE
-KEY_1
-KEY_2
-KEY_3
-KEY_4
-KEY_5
-KEY_6
-KEY_7
-KEY_8
-KEY_9
-KEY_0
-KEY_MINUS
-KEY_EQUALS
-KEY_BACK
-KEY_TAB
-KEY_Q
-KEY_W
-KEY_E
-KEY_R
-KEY_T
-KEY_Y
-KEY_U
-KEY_I
-KEY_O
-KEY_P
-KEY_LBRACKET
-KEY_RBRACKET
-KEY_RETURN
-KEY_LCONTROL
-KEY_A
-KEY_S
-KEY_D
-KEY_F
-KEY_G
-KEY_H
-KEY_J
-KEY_K
-KEY_L
-KEY_SEMICOLON
-KEY_APOSTROPHE
-KEY_GRAVE
-KEY_LSHIFT
-KEY_BACKSLASH
-KEY_Z
-KEY_X
-KEY_C
-KEY_V
-KEY_B
-KEY_N
-KEY_M
-KEY_COMMA
-KEY_PERIOD
-KEY_SLASH
-KEY_RSHIFT
-KEY_MULTIPLY
-KEY_LMENU
-KEY_SPACE
-KEY_CAPITAL
-KEY_F1
-KEY_F2
-KEY_F3
-KEY_F4
-KEY_F5
-KEY_F6
-KEY_F7
-KEY_F8
-KEY_F9
-KEY_F10
-KEY_NUMLOCK
-KEY_SCROLL
-KEY_NUMPAD7
-KEY_NUMPAD8
-KEY_NUMPAD9
-KEY_SUBTRACT
-KEY_NUMPAD4
-KEY_NUMPAD5
-KEY_NUMPAD6
-KEY_ADD
-KEY_NUMPAD1
-KEY_NUMPAD2
-KEY_NUMPAD3
-KEY_NUMPAD0
-KEY_DECIMAL
-KEY_OEM_102
-KEY_F11
-KEY_F12
-KEY_F13
-KEY_F14
-KEY_F15
-KEY_KANA
-KEY_ABNT_C1
-KEY_CONVERT
-KEY_NOCONVERT
-KEY_YEN
-KEY_ABNT_C2
-KEY_NUMPADEQUALS
-KEY_PREVTRACK
-KEY_AT
-KEY_COLON
-KEY_UNDERLINE
-KEY_KANJI
-KEY_STOP
-KEY_AX
-KEY_UNLABELED
-KEY_NEXTTRACK
-KEY_NUMPADENTER
-KEY_RCONTROL
-KEY_MUTE
-KEY_CALCULATOR
-KEY_PLAYPAUSE
-KEY_MEDIASTOP
-KEY_VOLUMEDOWN
-KEY_VOLUMEUP
-KEY_WEBHOME
-KEY_NUMPADCOMMA
-KEY_DIVIDE
-KEY_SYSRQ
-KEY_RMENU
-KEY_PAUSE
-KEY_HOME
-KEY_UP
-KEY_PRIOR
-KEY_LEFT
-KEY_RIGHT
-KEY_END
-KEY_DOWN
-KEY_NEXT
-KEY_INSERT
-KEY_DELETE
-KEY_LWIN
-KEY_RWIN
-KEY_APPS
-KEY_POWER
-KEY_SLEEP
-KEY_WAKE
-KEY_WEBSEARCH
-KEY_WEBFAVORITES
-KEY_WEBREFRESH
-KEY_WEBSTOP
-KEY_WEBFORWARD
-KEY_WEBBACK
-KEY_MYCOMPUTER
-KEY_MAIL
-KEY_MEDIASELECT
-KEY_BACKSPACE
-KEY_NUMPADSTAR
-KEY_LALT
-KEY_CAPSLOCK
-KEY_NUMPADMINUS
-KEY_NUMPADPLUS
-KEY_NUMPADPERIOD
-KEY_NUMPADSLASH
-KEY_RALT
-KEY_UPARROW
-KEY_PGUP
-KEY_LEFTARROW
-KEY_RIGHTARROW
-KEY_DOWNARROW
-KEY_PGDN
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">  1</a></span>
+<span class="normal"><a href="#example-0-2">  2</a></span>
+<span class="normal"><a href="#example-0-3">  3</a></span>
+<span class="normal"><a href="#example-0-4">  4</a></span>
+<span class="normal"><a href="#example-0-5">  5</a></span>
+<span class="normal"><a href="#example-0-6">  6</a></span>
+<span class="normal"><a href="#example-0-7">  7</a></span>
+<span class="normal"><a href="#example-0-8">  8</a></span>
+<span class="normal"><a href="#example-0-9">  9</a></span>
+<span class="normal"><a href="#example-0-10"> 10</a></span>
+<span class="normal"><a href="#example-0-11"> 11</a></span>
+<span class="normal"><a href="#example-0-12"> 12</a></span>
+<span class="normal"><a href="#example-0-13"> 13</a></span>
+<span class="normal"><a href="#example-0-14"> 14</a></span>
+<span class="normal"><a href="#example-0-15"> 15</a></span>
+<span class="normal"><a href="#example-0-16"> 16</a></span>
+<span class="normal"><a href="#example-0-17"> 17</a></span>
+<span class="normal"><a href="#example-0-18"> 18</a></span>
+<span class="normal"><a href="#example-0-19"> 19</a></span>
+<span class="normal"><a href="#example-0-20"> 20</a></span>
+<span class="normal"><a href="#example-0-21"> 21</a></span>
+<span class="normal"><a href="#example-0-22"> 22</a></span>
+<span class="normal"><a href="#example-0-23"> 23</a></span>
+<span class="normal"><a href="#example-0-24"> 24</a></span>
+<span class="normal"><a href="#example-0-25"> 25</a></span>
+<span class="normal"><a href="#example-0-26"> 26</a></span>
+<span class="normal"><a href="#example-0-27"> 27</a></span>
+<span class="normal"><a href="#example-0-28"> 28</a></span>
+<span class="normal"><a href="#example-0-29"> 29</a></span>
+<span class="normal"><a href="#example-0-30"> 30</a></span>
+<span class="normal"><a href="#example-0-31"> 31</a></span>
+<span class="normal"><a href="#example-0-32"> 32</a></span>
+<span class="normal"><a href="#example-0-33"> 33</a></span>
+<span class="normal"><a href="#example-0-34"> 34</a></span>
+<span class="normal"><a href="#example-0-35"> 35</a></span>
+<span class="normal"><a href="#example-0-36"> 36</a></span>
+<span class="normal"><a href="#example-0-37"> 37</a></span>
+<span class="normal"><a href="#example-0-38"> 38</a></span>
+<span class="normal"><a href="#example-0-39"> 39</a></span>
+<span class="normal"><a href="#example-0-40"> 40</a></span>
+<span class="normal"><a href="#example-0-41"> 41</a></span>
+<span class="normal"><a href="#example-0-42"> 42</a></span>
+<span class="normal"><a href="#example-0-43"> 43</a></span>
+<span class="normal"><a href="#example-0-44"> 44</a></span>
+<span class="normal"><a href="#example-0-45"> 45</a></span>
+<span class="normal"><a href="#example-0-46"> 46</a></span>
+<span class="normal"><a href="#example-0-47"> 47</a></span>
+<span class="normal"><a href="#example-0-48"> 48</a></span>
+<span class="normal"><a href="#example-0-49"> 49</a></span>
+<span class="normal"><a href="#example-0-50"> 50</a></span>
+<span class="normal"><a href="#example-0-51"> 51</a></span>
+<span class="normal"><a href="#example-0-52"> 52</a></span>
+<span class="normal"><a href="#example-0-53"> 53</a></span>
+<span class="normal"><a href="#example-0-54"> 54</a></span>
+<span class="normal"><a href="#example-0-55"> 55</a></span>
+<span class="normal"><a href="#example-0-56"> 56</a></span>
+<span class="normal"><a href="#example-0-57"> 57</a></span>
+<span class="normal"><a href="#example-0-58"> 58</a></span>
+<span class="normal"><a href="#example-0-59"> 59</a></span>
+<span class="normal"><a href="#example-0-60"> 60</a></span>
+<span class="normal"><a href="#example-0-61"> 61</a></span>
+<span class="normal"><a href="#example-0-62"> 62</a></span>
+<span class="normal"><a href="#example-0-63"> 63</a></span>
+<span class="normal"><a href="#example-0-64"> 64</a></span>
+<span class="normal"><a href="#example-0-65"> 65</a></span>
+<span class="normal"><a href="#example-0-66"> 66</a></span>
+<span class="normal"><a href="#example-0-67"> 67</a></span>
+<span class="normal"><a href="#example-0-68"> 68</a></span>
+<span class="normal"><a href="#example-0-69"> 69</a></span>
+<span class="normal"><a href="#example-0-70"> 70</a></span>
+<span class="normal"><a href="#example-0-71"> 71</a></span>
+<span class="normal"><a href="#example-0-72"> 72</a></span>
+<span class="normal"><a href="#example-0-73"> 73</a></span>
+<span class="normal"><a href="#example-0-74"> 74</a></span>
+<span class="normal"><a href="#example-0-75"> 75</a></span>
+<span class="normal"><a href="#example-0-76"> 76</a></span>
+<span class="normal"><a href="#example-0-77"> 77</a></span>
+<span class="normal"><a href="#example-0-78"> 78</a></span>
+<span class="normal"><a href="#example-0-79"> 79</a></span>
+<span class="normal"><a href="#example-0-80"> 80</a></span>
+<span class="normal"><a href="#example-0-81"> 81</a></span>
+<span class="normal"><a href="#example-0-82"> 82</a></span>
+<span class="normal"><a href="#example-0-83"> 83</a></span>
+<span class="normal"><a href="#example-0-84"> 84</a></span>
+<span class="normal"><a href="#example-0-85"> 85</a></span>
+<span class="normal"><a href="#example-0-86"> 86</a></span>
+<span class="normal"><a href="#example-0-87"> 87</a></span>
+<span class="normal"><a href="#example-0-88"> 88</a></span>
+<span class="normal"><a href="#example-0-89"> 89</a></span>
+<span class="normal"><a href="#example-0-90"> 90</a></span>
+<span class="normal"><a href="#example-0-91"> 91</a></span>
+<span class="normal"><a href="#example-0-92"> 92</a></span>
+<span class="normal"><a href="#example-0-93"> 93</a></span>
+<span class="normal"><a href="#example-0-94"> 94</a></span>
+<span class="normal"><a href="#example-0-95"> 95</a></span>
+<span class="normal"><a href="#example-0-96"> 96</a></span>
+<span class="normal"><a href="#example-0-97"> 97</a></span>
+<span class="normal"><a href="#example-0-98"> 98</a></span>
+<span class="normal"><a href="#example-0-99"> 99</a></span>
+<span class="normal"><a href="#example-0-100">100</a></span>
+<span class="normal"><a href="#example-0-101">101</a></span>
+<span class="normal"><a href="#example-0-102">102</a></span>
+<span class="normal"><a href="#example-0-103">103</a></span>
+<span class="normal"><a href="#example-0-104">104</a></span>
+<span class="normal"><a href="#example-0-105">105</a></span>
+<span class="normal"><a href="#example-0-106">106</a></span>
+<span class="normal"><a href="#example-0-107">107</a></span>
+<span class="normal"><a href="#example-0-108">108</a></span>
+<span class="normal"><a href="#example-0-109">109</a></span>
+<span class="normal"><a href="#example-0-110">110</a></span>
+<span class="normal"><a href="#example-0-111">111</a></span>
+<span class="normal"><a href="#example-0-112">112</a></span>
+<span class="normal"><a href="#example-0-113">113</a></span>
+<span class="normal"><a href="#example-0-114">114</a></span>
+<span class="normal"><a href="#example-0-115">115</a></span>
+<span class="normal"><a href="#example-0-116">116</a></span>
+<span class="normal"><a href="#example-0-117">117</a></span>
+<span class="normal"><a href="#example-0-118">118</a></span>
+<span class="normal"><a href="#example-0-119">119</a></span>
+<span class="normal"><a href="#example-0-120">120</a></span>
+<span class="normal"><a href="#example-0-121">121</a></span>
+<span class="normal"><a href="#example-0-122">122</a></span>
+<span class="normal"><a href="#example-0-123">123</a></span>
+<span class="normal"><a href="#example-0-124">124</a></span>
+<span class="normal"><a href="#example-0-125">125</a></span>
+<span class="normal"><a href="#example-0-126">126</a></span>
+<span class="normal"><a href="#example-0-127">127</a></span>
+<span class="normal"><a href="#example-0-128">128</a></span>
+<span class="normal"><a href="#example-0-129">129</a></span>
+<span class="normal"><a href="#example-0-130">130</a></span>
+<span class="normal"><a href="#example-0-131">131</a></span>
+<span class="normal"><a href="#example-0-132">132</a></span>
+<span class="normal"><a href="#example-0-133">133</a></span>
+<span class="normal"><a href="#example-0-134">134</a></span>
+<span class="normal"><a href="#example-0-135">135</a></span>
+<span class="normal"><a href="#example-0-136">136</a></span>
+<span class="normal"><a href="#example-0-137">137</a></span>
+<span class="normal"><a href="#example-0-138">138</a></span>
+<span class="normal"><a href="#example-0-139">139</a></span>
+<span class="normal"><a href="#example-0-140">140</a></span>
+<span class="normal"><a href="#example-0-141">141</a></span>
+<span class="normal"><a href="#example-0-142">142</a></span>
+<span class="normal"><a href="#example-0-143">143</a></span>
+<span class="normal"><a href="#example-0-144">144</a></span>
+<span class="normal"><a href="#example-0-145">145</a></span>
+<span class="normal"><a href="#example-0-146">146</a></span>
+<span class="normal"><a href="#example-0-147">147</a></span>
+<span class="normal"><a href="#example-0-148">148</a></span>
+<span class="normal"><a href="#example-0-149">149</a></span>
+<span class="normal"><a href="#example-0-150">150</a></span>
+<span class="normal"><a href="#example-0-151">151</a></span>
+<span class="normal"><a href="#example-0-152">152</a></span>
+<span class="normal"><a href="#example-0-153">153</a></span>
+<span class="normal"><a href="#example-0-154">154</a></span>
+<span class="normal"><a href="#example-0-155">155</a></span>
+<span class="normal"><a href="#example-0-156">156</a></span>
+<span class="normal"><a href="#example-0-157">157</a></span>
+<span class="normal"><a href="#example-0-158">158</a></span>
+<span class="normal"><a href="#example-0-159">159</a></span>
+<span class="normal"><a href="#example-0-160">160</a></span>
+<span class="normal"><a href="#example-0-161">161</a></span>
+<span class="normal"><a href="#example-0-162">162</a></span>
+<span class="normal"><a href="#example-0-163">163</a></span>
+<span class="normal"><a href="#example-0-164">164</a></span>
+<span class="normal"><a href="#example-0-165">165</a></span>
+<span class="normal"><a href="#example-0-166">166</a></span>
+<span class="normal"><a href="#example-0-167">167</a></span>
+<span class="normal"><a href="#example-0-168">168</a></span>
+<span class="normal"><a href="#example-0-169">169</a></span>
+<span class="normal"><a href="#example-0-170">170</a></span>
+<span class="normal"><a href="#example-0-171">171</a></span>
+<span class="normal"><a href="#example-0-172">172</a></span>
+<span class="normal"><a href="#example-0-173">173</a></span>
+<span class="normal"><a href="#example-0-174">174</a></span>
+<span class="normal"><a href="#example-0-175">175</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a>MOUSE_DX
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a>MOUSE_DY
+</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a>MOUSE_UP
+</span><span id="example-0-4"><a id="example-0-4" name="example-0-4"></a>MOUSE_DOWN
+</span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a>MOUSE_LEFT
+</span><span id="example-0-6"><a id="example-0-6" name="example-0-6"></a>MOUSE_RIGHT
+</span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a>MOUSE_WHEELUP
+</span><span id="example-0-8"><a id="example-0-8" name="example-0-8"></a>MOUSE_WHEELDOWN
+</span><span id="example-0-9"><a id="example-0-9" name="example-0-9"></a>MOUSE_BUTTONLEFT
+</span><span id="example-0-10"><a id="example-0-10" name="example-0-10"></a>MOUSE_BUTTONRIGHT
+</span><span id="example-0-11"><a id="example-0-11" name="example-0-11"></a>MOUSE_BUTTONMID
+</span><span id="example-0-12"><a id="example-0-12" name="example-0-12"></a>MOUSE_XBUTTON1
+</span><span id="example-0-13"><a id="example-0-13" name="example-0-13"></a>MOUSE_XBUTTON2
+</span><span id="example-0-14"><a id="example-0-14" name="example-0-14"></a>MOUSE_XBUTTON3
+</span><span id="example-0-15"><a id="example-0-15" name="example-0-15"></a>MOUSE_XBUTTON4
+</span><span id="example-0-16"><a id="example-0-16" name="example-0-16"></a>MOUSE_XBUTTON5
+</span><span id="example-0-17"><a id="example-0-17" name="example-0-17"></a>KEY_ESCAPE
+</span><span id="example-0-18"><a id="example-0-18" name="example-0-18"></a>KEY_1
+</span><span id="example-0-19"><a id="example-0-19" name="example-0-19"></a>KEY_2
+</span><span id="example-0-20"><a id="example-0-20" name="example-0-20"></a>KEY_3
+</span><span id="example-0-21"><a id="example-0-21" name="example-0-21"></a>KEY_4
+</span><span id="example-0-22"><a id="example-0-22" name="example-0-22"></a>KEY_5
+</span><span id="example-0-23"><a id="example-0-23" name="example-0-23"></a>KEY_6
+</span><span id="example-0-24"><a id="example-0-24" name="example-0-24"></a>KEY_7
+</span><span id="example-0-25"><a id="example-0-25" name="example-0-25"></a>KEY_8
+</span><span id="example-0-26"><a id="example-0-26" name="example-0-26"></a>KEY_9
+</span><span id="example-0-27"><a id="example-0-27" name="example-0-27"></a>KEY_0
+</span><span id="example-0-28"><a id="example-0-28" name="example-0-28"></a>KEY_MINUS
+</span><span id="example-0-29"><a id="example-0-29" name="example-0-29"></a>KEY_EQUALS
+</span><span id="example-0-30"><a id="example-0-30" name="example-0-30"></a>KEY_BACK
+</span><span id="example-0-31"><a id="example-0-31" name="example-0-31"></a>KEY_TAB
+</span><span id="example-0-32"><a id="example-0-32" name="example-0-32"></a>KEY_Q
+</span><span id="example-0-33"><a id="example-0-33" name="example-0-33"></a>KEY_W
+</span><span id="example-0-34"><a id="example-0-34" name="example-0-34"></a>KEY_E
+</span><span id="example-0-35"><a id="example-0-35" name="example-0-35"></a>KEY_R
+</span><span id="example-0-36"><a id="example-0-36" name="example-0-36"></a>KEY_T
+</span><span id="example-0-37"><a id="example-0-37" name="example-0-37"></a>KEY_Y
+</span><span id="example-0-38"><a id="example-0-38" name="example-0-38"></a>KEY_U
+</span><span id="example-0-39"><a id="example-0-39" name="example-0-39"></a>KEY_I
+</span><span id="example-0-40"><a id="example-0-40" name="example-0-40"></a>KEY_O
+</span><span id="example-0-41"><a id="example-0-41" name="example-0-41"></a>KEY_P
+</span><span id="example-0-42"><a id="example-0-42" name="example-0-42"></a>KEY_LBRACKET
+</span><span id="example-0-43"><a id="example-0-43" name="example-0-43"></a>KEY_RBRACKET
+</span><span id="example-0-44"><a id="example-0-44" name="example-0-44"></a>KEY_RETURN
+</span><span id="example-0-45"><a id="example-0-45" name="example-0-45"></a>KEY_LCONTROL
+</span><span id="example-0-46"><a id="example-0-46" name="example-0-46"></a>KEY_A
+</span><span id="example-0-47"><a id="example-0-47" name="example-0-47"></a>KEY_S
+</span><span id="example-0-48"><a id="example-0-48" name="example-0-48"></a>KEY_D
+</span><span id="example-0-49"><a id="example-0-49" name="example-0-49"></a>KEY_F
+</span><span id="example-0-50"><a id="example-0-50" name="example-0-50"></a>KEY_G
+</span><span id="example-0-51"><a id="example-0-51" name="example-0-51"></a>KEY_H
+</span><span id="example-0-52"><a id="example-0-52" name="example-0-52"></a>KEY_J
+</span><span id="example-0-53"><a id="example-0-53" name="example-0-53"></a>KEY_K
+</span><span id="example-0-54"><a id="example-0-54" name="example-0-54"></a>KEY_L
+</span><span id="example-0-55"><a id="example-0-55" name="example-0-55"></a>KEY_SEMICOLON
+</span><span id="example-0-56"><a id="example-0-56" name="example-0-56"></a>KEY_APOSTROPHE
+</span><span id="example-0-57"><a id="example-0-57" name="example-0-57"></a>KEY_GRAVE
+</span><span id="example-0-58"><a id="example-0-58" name="example-0-58"></a>KEY_LSHIFT
+</span><span id="example-0-59"><a id="example-0-59" name="example-0-59"></a>KEY_BACKSLASH
+</span><span id="example-0-60"><a id="example-0-60" name="example-0-60"></a>KEY_Z
+</span><span id="example-0-61"><a id="example-0-61" name="example-0-61"></a>KEY_X
+</span><span id="example-0-62"><a id="example-0-62" name="example-0-62"></a>KEY_C
+</span><span id="example-0-63"><a id="example-0-63" name="example-0-63"></a>KEY_V
+</span><span id="example-0-64"><a id="example-0-64" name="example-0-64"></a>KEY_B
+</span><span id="example-0-65"><a id="example-0-65" name="example-0-65"></a>KEY_N
+</span><span id="example-0-66"><a id="example-0-66" name="example-0-66"></a>KEY_M
+</span><span id="example-0-67"><a id="example-0-67" name="example-0-67"></a>KEY_COMMA
+</span><span id="example-0-68"><a id="example-0-68" name="example-0-68"></a>KEY_PERIOD
+</span><span id="example-0-69"><a id="example-0-69" name="example-0-69"></a>KEY_SLASH
+</span><span id="example-0-70"><a id="example-0-70" name="example-0-70"></a>KEY_RSHIFT
+</span><span id="example-0-71"><a id="example-0-71" name="example-0-71"></a>KEY_MULTIPLY
+</span><span id="example-0-72"><a id="example-0-72" name="example-0-72"></a>KEY_LMENU
+</span><span id="example-0-73"><a id="example-0-73" name="example-0-73"></a>KEY_SPACE
+</span><span id="example-0-74"><a id="example-0-74" name="example-0-74"></a>KEY_CAPITAL
+</span><span id="example-0-75"><a id="example-0-75" name="example-0-75"></a>KEY_F1
+</span><span id="example-0-76"><a id="example-0-76" name="example-0-76"></a>KEY_F2
+</span><span id="example-0-77"><a id="example-0-77" name="example-0-77"></a>KEY_F3
+</span><span id="example-0-78"><a id="example-0-78" name="example-0-78"></a>KEY_F4
+</span><span id="example-0-79"><a id="example-0-79" name="example-0-79"></a>KEY_F5
+</span><span id="example-0-80"><a id="example-0-80" name="example-0-80"></a>KEY_F6
+</span><span id="example-0-81"><a id="example-0-81" name="example-0-81"></a>KEY_F7
+</span><span id="example-0-82"><a id="example-0-82" name="example-0-82"></a>KEY_F8
+</span><span id="example-0-83"><a id="example-0-83" name="example-0-83"></a>KEY_F9
+</span><span id="example-0-84"><a id="example-0-84" name="example-0-84"></a>KEY_F10
+</span><span id="example-0-85"><a id="example-0-85" name="example-0-85"></a>KEY_NUMLOCK
+</span><span id="example-0-86"><a id="example-0-86" name="example-0-86"></a>KEY_SCROLL
+</span><span id="example-0-87"><a id="example-0-87" name="example-0-87"></a>KEY_NUMPAD7
+</span><span id="example-0-88"><a id="example-0-88" name="example-0-88"></a>KEY_NUMPAD8
+</span><span id="example-0-89"><a id="example-0-89" name="example-0-89"></a>KEY_NUMPAD9
+</span><span id="example-0-90"><a id="example-0-90" name="example-0-90"></a>KEY_SUBTRACT
+</span><span id="example-0-91"><a id="example-0-91" name="example-0-91"></a>KEY_NUMPAD4
+</span><span id="example-0-92"><a id="example-0-92" name="example-0-92"></a>KEY_NUMPAD5
+</span><span id="example-0-93"><a id="example-0-93" name="example-0-93"></a>KEY_NUMPAD6
+</span><span id="example-0-94"><a id="example-0-94" name="example-0-94"></a>KEY_ADD
+</span><span id="example-0-95"><a id="example-0-95" name="example-0-95"></a>KEY_NUMPAD1
+</span><span id="example-0-96"><a id="example-0-96" name="example-0-96"></a>KEY_NUMPAD2
+</span><span id="example-0-97"><a id="example-0-97" name="example-0-97"></a>KEY_NUMPAD3
+</span><span id="example-0-98"><a id="example-0-98" name="example-0-98"></a>KEY_NUMPAD0
+</span><span id="example-0-99"><a id="example-0-99" name="example-0-99"></a>KEY_DECIMAL
+</span><span id="example-0-100"><a id="example-0-100" name="example-0-100"></a>KEY_OEM_102
+</span><span id="example-0-101"><a id="example-0-101" name="example-0-101"></a>KEY_F11
+</span><span id="example-0-102"><a id="example-0-102" name="example-0-102"></a>KEY_F12
+</span><span id="example-0-103"><a id="example-0-103" name="example-0-103"></a>KEY_F13
+</span><span id="example-0-104"><a id="example-0-104" name="example-0-104"></a>KEY_F14
+</span><span id="example-0-105"><a id="example-0-105" name="example-0-105"></a>KEY_F15
+</span><span id="example-0-106"><a id="example-0-106" name="example-0-106"></a>KEY_KANA
+</span><span id="example-0-107"><a id="example-0-107" name="example-0-107"></a>KEY_ABNT_C1
+</span><span id="example-0-108"><a id="example-0-108" name="example-0-108"></a>KEY_CONVERT
+</span><span id="example-0-109"><a id="example-0-109" name="example-0-109"></a>KEY_NOCONVERT
+</span><span id="example-0-110"><a id="example-0-110" name="example-0-110"></a>KEY_YEN
+</span><span id="example-0-111"><a id="example-0-111" name="example-0-111"></a>KEY_ABNT_C2
+</span><span id="example-0-112"><a id="example-0-112" name="example-0-112"></a>KEY_NUMPADEQUALS
+</span><span id="example-0-113"><a id="example-0-113" name="example-0-113"></a>KEY_PREVTRACK
+</span><span id="example-0-114"><a id="example-0-114" name="example-0-114"></a>KEY_AT
+</span><span id="example-0-115"><a id="example-0-115" name="example-0-115"></a>KEY_COLON
+</span><span id="example-0-116"><a id="example-0-116" name="example-0-116"></a>KEY_UNDERLINE
+</span><span id="example-0-117"><a id="example-0-117" name="example-0-117"></a>KEY_KANJI
+</span><span id="example-0-118"><a id="example-0-118" name="example-0-118"></a>KEY_STOP
+</span><span id="example-0-119"><a id="example-0-119" name="example-0-119"></a>KEY_AX
+</span><span id="example-0-120"><a id="example-0-120" name="example-0-120"></a>KEY_UNLABELED
+</span><span id="example-0-121"><a id="example-0-121" name="example-0-121"></a>KEY_NEXTTRACK
+</span><span id="example-0-122"><a id="example-0-122" name="example-0-122"></a>KEY_NUMPADENTER
+</span><span id="example-0-123"><a id="example-0-123" name="example-0-123"></a>KEY_RCONTROL
+</span><span id="example-0-124"><a id="example-0-124" name="example-0-124"></a>KEY_MUTE
+</span><span id="example-0-125"><a id="example-0-125" name="example-0-125"></a>KEY_CALCULATOR
+</span><span id="example-0-126"><a id="example-0-126" name="example-0-126"></a>KEY_PLAYPAUSE
+</span><span id="example-0-127"><a id="example-0-127" name="example-0-127"></a>KEY_MEDIASTOP
+</span><span id="example-0-128"><a id="example-0-128" name="example-0-128"></a>KEY_VOLUMEDOWN
+</span><span id="example-0-129"><a id="example-0-129" name="example-0-129"></a>KEY_VOLUMEUP
+</span><span id="example-0-130"><a id="example-0-130" name="example-0-130"></a>KEY_WEBHOME
+</span><span id="example-0-131"><a id="example-0-131" name="example-0-131"></a>KEY_NUMPADCOMMA
+</span><span id="example-0-132"><a id="example-0-132" name="example-0-132"></a>KEY_DIVIDE
+</span><span id="example-0-133"><a id="example-0-133" name="example-0-133"></a>KEY_SYSRQ
+</span><span id="example-0-134"><a id="example-0-134" name="example-0-134"></a>KEY_RMENU
+</span><span id="example-0-135"><a id="example-0-135" name="example-0-135"></a>KEY_PAUSE
+</span><span id="example-0-136"><a id="example-0-136" name="example-0-136"></a>KEY_HOME
+</span><span id="example-0-137"><a id="example-0-137" name="example-0-137"></a>KEY_UP
+</span><span id="example-0-138"><a id="example-0-138" name="example-0-138"></a>KEY_PRIOR
+</span><span id="example-0-139"><a id="example-0-139" name="example-0-139"></a>KEY_LEFT
+</span><span id="example-0-140"><a id="example-0-140" name="example-0-140"></a>KEY_RIGHT
+</span><span id="example-0-141"><a id="example-0-141" name="example-0-141"></a>KEY_END
+</span><span id="example-0-142"><a id="example-0-142" name="example-0-142"></a>KEY_DOWN
+</span><span id="example-0-143"><a id="example-0-143" name="example-0-143"></a>KEY_NEXT
+</span><span id="example-0-144"><a id="example-0-144" name="example-0-144"></a>KEY_INSERT
+</span><span id="example-0-145"><a id="example-0-145" name="example-0-145"></a>KEY_DELETE
+</span><span id="example-0-146"><a id="example-0-146" name="example-0-146"></a>KEY_LWIN
+</span><span id="example-0-147"><a id="example-0-147" name="example-0-147"></a>KEY_RWIN
+</span><span id="example-0-148"><a id="example-0-148" name="example-0-148"></a>KEY_APPS
+</span><span id="example-0-149"><a id="example-0-149" name="example-0-149"></a>KEY_POWER
+</span><span id="example-0-150"><a id="example-0-150" name="example-0-150"></a>KEY_SLEEP
+</span><span id="example-0-151"><a id="example-0-151" name="example-0-151"></a>KEY_WAKE
+</span><span id="example-0-152"><a id="example-0-152" name="example-0-152"></a>KEY_WEBSEARCH
+</span><span id="example-0-153"><a id="example-0-153" name="example-0-153"></a>KEY_WEBFAVORITES
+</span><span id="example-0-154"><a id="example-0-154" name="example-0-154"></a>KEY_WEBREFRESH
+</span><span id="example-0-155"><a id="example-0-155" name="example-0-155"></a>KEY_WEBSTOP
+</span><span id="example-0-156"><a id="example-0-156" name="example-0-156"></a>KEY_WEBFORWARD
+</span><span id="example-0-157"><a id="example-0-157" name="example-0-157"></a>KEY_WEBBACK
+</span><span id="example-0-158"><a id="example-0-158" name="example-0-158"></a>KEY_MYCOMPUTER
+</span><span id="example-0-159"><a id="example-0-159" name="example-0-159"></a>KEY_MAIL
+</span><span id="example-0-160"><a id="example-0-160" name="example-0-160"></a>KEY_MEDIASELECT
+</span><span id="example-0-161"><a id="example-0-161" name="example-0-161"></a>KEY_BACKSPACE
+</span><span id="example-0-162"><a id="example-0-162" name="example-0-162"></a>KEY_NUMPADSTAR
+</span><span id="example-0-163"><a id="example-0-163" name="example-0-163"></a>KEY_LALT
+</span><span id="example-0-164"><a id="example-0-164" name="example-0-164"></a>KEY_CAPSLOCK
+</span><span id="example-0-165"><a id="example-0-165" name="example-0-165"></a>KEY_NUMPADMINUS
+</span><span id="example-0-166"><a id="example-0-166" name="example-0-166"></a>KEY_NUMPADPLUS
+</span><span id="example-0-167"><a id="example-0-167" name="example-0-167"></a>KEY_NUMPADPERIOD
+</span><span id="example-0-168"><a id="example-0-168" name="example-0-168"></a>KEY_NUMPADSLASH
+</span><span id="example-0-169"><a id="example-0-169" name="example-0-169"></a>KEY_RALT
+</span><span id="example-0-170"><a id="example-0-170" name="example-0-170"></a>KEY_UPARROW
+</span><span id="example-0-171"><a id="example-0-171" name="example-0-171"></a>KEY_PGUP
+</span><span id="example-0-172"><a id="example-0-172" name="example-0-172"></a>KEY_LEFTARROW
+</span><span id="example-0-173"><a id="example-0-173" name="example-0-173"></a>KEY_RIGHTARROW
+</span><span id="example-0-174"><a id="example-0-174" name="example-0-174"></a>KEY_DOWNARROW
+</span><span id="example-0-175"><a id="example-0-175" name="example-0-175"></a>KEY_PGDN
+</span></code></pre></div></td></tr></table></div></p>
 
   <hr>
 <div class="md-source-file">

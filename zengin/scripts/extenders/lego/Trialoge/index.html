@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://auronen.github.io/gmc/zengin/scripts/extenders/lego/Trialoge/">
       
       <link rel="icon" href="../../../../../img/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -2969,84 +2969,85 @@
 </ul>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link"></a></h2>
 <p>Initialize with <code>LeGo_Trialoge</code> flag.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">LeGo_Init</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-<span class="n">LeGo_Init</span><span class="p">(</span><span class="n">LeGo_Trialoge</span><span class="p">);</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
+<span class="normal"><a href="#example-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">LeGo_Init</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="n">LeGo_Init</span><span class="p">(</span><span class="n">LeGo_Trialoge</span><span class="p">);</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link"></a></h2>
 <p><a href="https://github.com/Lehona/LeGo/blob/dev/Trialoge.d"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg></span> Trialoge.d on GitHub</a></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link"></a></h2>
 <h3 id="equipweapon">EquipWeapon<a class="headerlink" href="#equipweapon" title="Permanent link"></a></h3>
 <p>Sektenspinner's function. (Taken from the forum.) 
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">EquipWeapon</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ItemInstance</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">EquipWeapon</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">slf</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ItemInstance</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>slf</code> - NPC to have a weapon equipped</li>
 <li><code>ItemInstance</code> - weapon instance to be equipped</li>
 </ul>
 <h3 id="npc_getarmor">Npc_GetArmor<a class="headerlink" href="#npc_getarmor" title="Permanent link"></a></h3>
 <p>Returns NPC's equipped armor.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Npc_GetArmor</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">slf</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Npc_GetArmor</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">slf</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>slf</code> - NPC to get the armour from</li>
 <li><code>return</code> - armor instance</li>
 </ul>
 <h3 id="npc_getmeleeweapon">Npc_GetMeleeWeapon<a class="headerlink" href="#npc_getmeleeweapon" title="Permanent link"></a></h3>
 <p>Returns NPC's equipped melee weapon.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Npc_GetMeleeWeapon</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">slf</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Npc_GetMeleeWeapon</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">slf</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>slf</code> - NPC to get the weapon from</li>
 </ul>
 <h3 id="diacam_update">DiaCAM_Update<a class="headerlink" href="#diacam_update" title="Permanent link"></a></h3>
 <p>Sektenspinner's function. Updates the dialogue camera. (Used internally.)
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DiaCAM_Update</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DiaCAM_Update</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h3 id="diacam_disable">DiaCAM_Disable<a class="headerlink" href="#diacam_disable" title="Permanent link"></a></h3>
 <p>Completely disable the dialogue cameras.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DiaCAM_Disable</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DiaCAM_Disable</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h3 id="diacam_enable">DiaCAM_Enable<a class="headerlink" href="#diacam_enable" title="Permanent link"></a></h3>
 <p>Resets the dialogue cameras to the default settings.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DiaCAM_Enable</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DiaCAM_Enable</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h3 id="tria_wait">TRIA_Wait<a class="headerlink" href="#tria_wait" title="Permanent link"></a></h3>
 <p>Makes <code>self</code> and <code>other</code> wait for each other, e.g. for <code>AI_GotoW</code>P actions for synchronization. 
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Wait</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Wait</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h3 id="tria_invite">TRIA_Invite<a class="headerlink" href="#tria_invite" title="Permanent link"></a></h3>
 <p>Invites an NPC into a conversation. Must be called before <code>TRIA_Start</code>.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Invite</span><span class="p">(</span><span class="n">c_npc</span><span class="w"> </span><span class="n">slf</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Invite</span><span class="p">(</span><span class="n">c_npc</span><span class="w"> </span><span class="n">slf</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>slf</code> - The invited NPC</li>
 </ul>
 <h3 id="tria_start">TRIA_Start<a class="headerlink" href="#tria_start" title="Permanent link"></a></h3>
 <p>Starts trialogues. Before that, all NPC's should be invited by <code>TRI_Invite</code>.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Start</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Start</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h3 id="tria_barrier">TRIA_Barrier<a class="headerlink" href="#tria_barrier" title="Permanent link"></a></h3>
 <p>Similar to <code>TRIA_Wait</code> but applies to all participating NPCs.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Barrier</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Barrier</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h3 id="tria_next">TRIA_Next<a class="headerlink" href="#tria_next" title="Permanent link"></a></h3>
 <p>Sets the called npc to <code>self</code>.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Next</span><span class="p">(</span><span class="n">c_npc</span><span class="w"> </span><span class="n">n0</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Next</span><span class="p">(</span><span class="n">c_npc</span><span class="w"> </span><span class="n">n0</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>n0</code> - can be addressed with <code>self</code></li>
 </ul>
 <h3 id="tria_cam">TRIA_Cam<a class="headerlink" href="#tria_cam" title="Permanent link"></a></h3>
 <p>Starts a tracking shot. 
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Cam</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">evt</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Cam</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">evt</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>evt</code> - the name of the tracking shot in Spacer. If <code>""</code> is passed, the running trace shot will be aborted</li>
 </ul>
 <h3 id="tria_finish">TRIA_Finish<a class="headerlink" href="#tria_finish" title="Permanent link"></a></h3>
 <p>Ends an ongoing trialogue. Must always be called at the end, otherwise no further trialogues can be started.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Finish</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Finish</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h2>
 <h3 id="a-simple-trialogue">A Simple Trialogue<a class="headerlink" href="#a-simple-trialogue" title="Permanent link"></a></h3>
 <p>The following conversation is resolved via the trialogues:</p>
@@ -3059,95 +3060,182 @@
 <li><strong>Hero:</strong>    Sure?</li>
 <li><strong>Arto:</strong>    I have to ask you to leave now</li>
 <li><strong>Hero:</strong>    Well...
-<div class="highlight"><pre><span></span><code><span class="kd">instance</span><span class="w"> </span><span class="n">TRIA_Test</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="vi">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">PAL_100_Friend</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">TRIA_Test_condition</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TRIA_Test_info</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">important</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TRIALOGTEST&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">TRIA_Test_condition</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Test_info</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">Arto</span><span class="p">;</span><span class="w"> </span><span class="n">Arto</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">Hlp_GetNpc</span><span class="p">(</span><span class="n">PAL_100_Friend</span><span class="p">);</span><span class="w"> </span><span class="c">// He is the owner of dialogue</span><span class="w"></span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">Horka</span><span class="p">;</span><span class="w"> </span><span class="n">Horka</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">Hlp_GetNpc</span><span class="p">(</span><span class="n">PAL_101_Horka</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">Squelto</span><span class="p">;</span><span class="w"> </span><span class="n">Squelto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">Hlp_GetNpc</span><span class="p">(</span><span class="n">PAL_102_Squelto</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">TRIA_Invite</span><span class="p">(</span><span class="n">Horka</span><span class="p">);</span><span class="w">   </span><span class="c">// Invite Horka into this dialogue</span><span class="w"></span>
-<span class="w">    </span><span class="n">TRIA_Invite</span><span class="p">(</span><span class="n">Squelto</span><span class="p">);</span><span class="w"> </span><span class="c">// Invite Squelto into this dialog</span><span class="w"></span>
-<span class="w">    </span><span class="n">TRIA_Start</span><span class="p">();</span><span class="w">         </span><span class="c">// Start the conversation</span><span class="w"></span>
-<span class="w">    </span><span class="c">// The hero and Arto do not have to/may not be invited. They are in dialogue anyway.</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Hero now talks to Arto (self = Arto, other = Hero)</span><span class="w"></span>
-<span class="w">    </span><span class="n">TRIA_Next</span><span class="p">(</span><span class="n">Arto</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">DIAG_Reset</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Sorry hero, but you can&#39;t pass here</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Hero now talks to Horka (self = Horka, other = Hero)</span><span class="w"></span>
-<span class="w">    </span><span class="n">TRIA_Next</span><span class="p">(</span><span class="n">Horka</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_01&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Why not?</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_GotoNpc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-Externals">AI_TurnToNpc</span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_02&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//The city has been closed.</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Held looks around conspiratorially during the next sentence</span><span class="w"></span>
-<span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="s">&quot;Nervous&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_03&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//I have some gold with me, can we trade?</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Hero should now move normally again</span><span class="w"></span>
-<span class="w">    </span><span class="n">DIAG_Reset</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Start tracking shot</span><span class="w"></span>
-<span class="w">    </span><span class="n">TRIA_Cam</span><span class="p">(</span><span class="s">&quot;CAMERASTART&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Hero now talks to Squelto (self = Squelto, other = Hero)</span><span class="w"></span>
-<span class="w">    </span><span class="n">TRIA_Next</span><span class="p">(</span><span class="n">Squelto</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_TurnToNpc</span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="s">&quot;No&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_04&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//No. We are not open to bribery.</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Hero talks to Arto again (self = Arto, other = Hero)</span><span class="w"></span>
-<span class="w">    </span><span class="n">TRIA_Next</span><span class="p">(</span><span class="n">Arto</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Hero should now articulate questioningly</span><span class="w"></span>
-<span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="s">&quot;NotSure&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_05&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Sure?</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_TurnToNpc</span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// tracking shot end</span><span class="w"></span>
-<span class="w">    </span><span class="n">TRIA_Cam</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Arto should react angrily</span><span class="w"></span>
-<span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="s">&quot;Angry&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_06&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//I have to ask you to leave now</span><span class="w"></span>
-
-<span class="w">    </span><span class="c">// Hero should now move normally again</span><span class="w"></span>
-<span class="w">    </span><span class="n">DIAG_Reset</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_07&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Well...</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">TRIA_Finish</span><span class="p">();</span><span class="w"> </span><span class="c">// End</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div></li>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1"> 1</a></span>
+<span class="normal"><a href="#example-14-2"> 2</a></span>
+<span class="normal"><a href="#example-14-3"> 3</a></span>
+<span class="normal"><a href="#example-14-4"> 4</a></span>
+<span class="normal"><a href="#example-14-5"> 5</a></span>
+<span class="normal"><a href="#example-14-6"> 6</a></span>
+<span class="normal"><a href="#example-14-7"> 7</a></span>
+<span class="normal"><a href="#example-14-8"> 8</a></span>
+<span class="normal"><a href="#example-14-9"> 9</a></span>
+<span class="normal"><a href="#example-14-10">10</a></span>
+<span class="normal"><a href="#example-14-11">11</a></span>
+<span class="normal"><a href="#example-14-12">12</a></span>
+<span class="normal"><a href="#example-14-13">13</a></span>
+<span class="normal"><a href="#example-14-14">14</a></span>
+<span class="normal"><a href="#example-14-15">15</a></span>
+<span class="normal"><a href="#example-14-16">16</a></span>
+<span class="normal"><a href="#example-14-17">17</a></span>
+<span class="normal"><a href="#example-14-18">18</a></span>
+<span class="normal"><a href="#example-14-19">19</a></span>
+<span class="normal"><a href="#example-14-20">20</a></span>
+<span class="normal"><a href="#example-14-21">21</a></span>
+<span class="normal"><a href="#example-14-22">22</a></span>
+<span class="normal"><a href="#example-14-23">23</a></span>
+<span class="normal"><a href="#example-14-24">24</a></span>
+<span class="normal"><a href="#example-14-25">25</a></span>
+<span class="normal"><a href="#example-14-26">26</a></span>
+<span class="normal"><a href="#example-14-27">27</a></span>
+<span class="normal"><a href="#example-14-28">28</a></span>
+<span class="normal"><a href="#example-14-29">29</a></span>
+<span class="normal"><a href="#example-14-30">30</a></span>
+<span class="normal"><a href="#example-14-31">31</a></span>
+<span class="normal"><a href="#example-14-32">32</a></span>
+<span class="normal"><a href="#example-14-33">33</a></span>
+<span class="normal"><a href="#example-14-34">34</a></span>
+<span class="normal"><a href="#example-14-35">35</a></span>
+<span class="normal"><a href="#example-14-36">36</a></span>
+<span class="normal"><a href="#example-14-37">37</a></span>
+<span class="normal"><a href="#example-14-38">38</a></span>
+<span class="normal"><a href="#example-14-39">39</a></span>
+<span class="normal"><a href="#example-14-40">40</a></span>
+<span class="normal"><a href="#example-14-41">41</a></span>
+<span class="normal"><a href="#example-14-42">42</a></span>
+<span class="normal"><a href="#example-14-43">43</a></span>
+<span class="normal"><a href="#example-14-44">44</a></span>
+<span class="normal"><a href="#example-14-45">45</a></span>
+<span class="normal"><a href="#example-14-46">46</a></span>
+<span class="normal"><a href="#example-14-47">47</a></span>
+<span class="normal"><a href="#example-14-48">48</a></span>
+<span class="normal"><a href="#example-14-49">49</a></span>
+<span class="normal"><a href="#example-14-50">50</a></span>
+<span class="normal"><a href="#example-14-51">51</a></span>
+<span class="normal"><a href="#example-14-52">52</a></span>
+<span class="normal"><a href="#example-14-53">53</a></span>
+<span class="normal"><a href="#example-14-54">54</a></span>
+<span class="normal"><a href="#example-14-55">55</a></span>
+<span class="normal"><a href="#example-14-56">56</a></span>
+<span class="normal"><a href="#example-14-57">57</a></span>
+<span class="normal"><a href="#example-14-58">58</a></span>
+<span class="normal"><a href="#example-14-59">59</a></span>
+<span class="normal"><a href="#example-14-60">60</a></span>
+<span class="normal"><a href="#example-14-61">61</a></span>
+<span class="normal"><a href="#example-14-62">62</a></span>
+<span class="normal"><a href="#example-14-63">63</a></span>
+<span class="normal"><a href="#example-14-64">64</a></span>
+<span class="normal"><a href="#example-14-65">65</a></span>
+<span class="normal"><a href="#example-14-66">66</a></span>
+<span class="normal"><a href="#example-14-67">67</a></span>
+<span class="normal"><a href="#example-14-68">68</a></span>
+<span class="normal"><a href="#example-14-69">69</a></span>
+<span class="normal"><a href="#example-14-70">70</a></span>
+<span class="normal"><a href="#example-14-71">71</a></span>
+<span class="normal"><a href="#example-14-72">72</a></span>
+<span class="normal"><a href="#example-14-73">73</a></span>
+<span class="normal"><a href="#example-14-74">74</a></span>
+<span class="normal"><a href="#example-14-75">75</a></span>
+<span class="normal"><a href="#example-14-76">76</a></span>
+<span class="normal"><a href="#example-14-77">77</a></span>
+<span class="normal"><a href="#example-14-78">78</a></span>
+<span class="normal"><a href="#example-14-79">79</a></span>
+<span class="normal"><a href="#example-14-80">80</a></span>
+<span class="normal"><a href="#example-14-81">81</a></span>
+<span class="normal"><a href="#example-14-82">82</a></span>
+<span class="normal"><a href="#example-14-83">83</a></span>
+<span class="normal"><a href="#example-14-84">84</a></span>
+<span class="normal"><a href="#example-14-85">85</a></span>
+<span class="normal"><a href="#example-14-86">86</a></span>
+<span class="normal"><a href="#example-14-87">87</a></span>
+<span class="normal"><a href="#example-14-88">88</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="kd">instance</span><span class="w"> </span><span class="n">TRIA_Test</span><span class="w"> </span><span class="p">(</span><span class="nc">C_INFO</span><span class="p">)</span><span class="w"></span>
+</span><span id="example-14-2"><a id="example-14-2" name="example-14-2"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-14-3"><a id="example-14-3" name="example-14-3"></a><span class="w">    </span><span class="vi">npc</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">PAL_100_Friend</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-14-4"><a id="example-14-4" name="example-14-4"></a><span class="w">    </span><span class="vi">nr</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-14-5"><a id="example-14-5" name="example-14-5"></a><span class="w">    </span><span class="vi">condition</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">TRIA_Test_condition</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-14-6"><a id="example-14-6" name="example-14-6"></a><span class="w">    </span><span class="vi">information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TRIA_Test_info</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-14-7"><a id="example-14-7" name="example-14-7"></a><span class="w">    </span><span class="vi">important</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-14-8"><a id="example-14-8" name="example-14-8"></a><span class="w">    </span><span class="vi">permanent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-14-9"><a id="example-14-9" name="example-14-9"></a><span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TRIALOGTEST&quot;</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-14-10"><a id="example-14-10" name="example-14-10"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-14-11"><a id="example-14-11" name="example-14-11"></a>
+</span><span id="example-14-12"><a id="example-14-12" name="example-14-12"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">TRIA_Test_condition</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-14-13"><a id="example-14-13" name="example-14-13"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-14-14"><a id="example-14-14" name="example-14-14"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
+</span><span id="example-14-15"><a id="example-14-15" name="example-14-15"></a><span class="p">};</span><span class="w"></span>
+</span><span id="example-14-16"><a id="example-14-16" name="example-14-16"></a>
+</span><span id="example-14-17"><a id="example-14-17" name="example-14-17"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TRIA_Test_info</span><span class="p">()</span><span class="w"></span>
+</span><span id="example-14-18"><a id="example-14-18" name="example-14-18"></a><span class="p">{</span><span class="w"></span>
+</span><span id="example-14-19"><a id="example-14-19" name="example-14-19"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">Arto</span><span class="p">;</span><span class="w"> </span><span class="n">Arto</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">Hlp_GetNpc</span><span class="p">(</span><span class="n">PAL_100_Friend</span><span class="p">);</span><span class="w"> </span><span class="c">// He is the owner of dialogue</span><span class="w"></span>
+</span><span id="example-14-20"><a id="example-14-20" name="example-14-20"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">Horka</span><span class="p">;</span><span class="w"> </span><span class="n">Horka</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">Hlp_GetNpc</span><span class="p">(</span><span class="n">PAL_101_Horka</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-21"><a id="example-14-21" name="example-14-21"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">Squelto</span><span class="p">;</span><span class="w"> </span><span class="n">Squelto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Externals">Hlp_GetNpc</span><span class="p">(</span><span class="n">PAL_102_Squelto</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-22"><a id="example-14-22" name="example-14-22"></a>
+</span><span id="example-14-23"><a id="example-14-23" name="example-14-23"></a><span class="w">    </span><span class="n">TRIA_Invite</span><span class="p">(</span><span class="n">Horka</span><span class="p">);</span><span class="w">   </span><span class="c">// Invite Horka into this dialogue</span><span class="w"></span>
+</span><span id="example-14-24"><a id="example-14-24" name="example-14-24"></a><span class="w">    </span><span class="n">TRIA_Invite</span><span class="p">(</span><span class="n">Squelto</span><span class="p">);</span><span class="w"> </span><span class="c">// Invite Squelto into this dialog</span><span class="w"></span>
+</span><span id="example-14-25"><a id="example-14-25" name="example-14-25"></a><span class="w">    </span><span class="n">TRIA_Start</span><span class="p">();</span><span class="w">         </span><span class="c">// Start the conversation</span><span class="w"></span>
+</span><span id="example-14-26"><a id="example-14-26" name="example-14-26"></a><span class="w">    </span><span class="c">// The hero and Arto do not have to/may not be invited. They are in dialogue anyway.</span><span class="w"></span>
+</span><span id="example-14-27"><a id="example-14-27" name="example-14-27"></a>
+</span><span id="example-14-28"><a id="example-14-28" name="example-14-28"></a><span class="w">    </span><span class="c">// Hero now talks to Arto (self = Arto, other = Hero)</span><span class="w"></span>
+</span><span id="example-14-29"><a id="example-14-29" name="example-14-29"></a><span class="w">    </span><span class="n">TRIA_Next</span><span class="p">(</span><span class="n">Arto</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-30"><a id="example-14-30" name="example-14-30"></a>
+</span><span id="example-14-31"><a id="example-14-31" name="example-14-31"></a><span class="w">    </span><span class="n">DIAG_Reset</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-14-32"><a id="example-14-32" name="example-14-32"></a>
+</span><span id="example-14-33"><a id="example-14-33" name="example-14-33"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_00&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Sorry hero, but you can&#39;t pass here</span><span class="w"></span>
+</span><span id="example-14-34"><a id="example-14-34" name="example-14-34"></a>
+</span><span id="example-14-35"><a id="example-14-35" name="example-14-35"></a><span class="w">    </span><span class="c">// Hero now talks to Horka (self = Horka, other = Hero)</span><span class="w"></span>
+</span><span id="example-14-36"><a id="example-14-36" name="example-14-36"></a><span class="w">    </span><span class="n">TRIA_Next</span><span class="p">(</span><span class="n">Horka</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-37"><a id="example-14-37" name="example-14-37"></a>
+</span><span id="example-14-38"><a id="example-14-38" name="example-14-38"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_01&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Why not?</span><span class="w"></span>
+</span><span id="example-14-39"><a id="example-14-39" name="example-14-39"></a>
+</span><span id="example-14-40"><a id="example-14-40" name="example-14-40"></a><span class="w">    </span><span class="nb nb-Externals">AI_GotoNpc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-41"><a id="example-14-41" name="example-14-41"></a><span class="w">    </span><span class="nb nb-Externals">AI_TurnToNpc</span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-42"><a id="example-14-42" name="example-14-42"></a>
+</span><span id="example-14-43"><a id="example-14-43" name="example-14-43"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_02&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//The city has been closed.</span><span class="w"></span>
+</span><span id="example-14-44"><a id="example-14-44" name="example-14-44"></a>
+</span><span id="example-14-45"><a id="example-14-45" name="example-14-45"></a><span class="w">    </span><span class="c">// Held looks around conspiratorially during the next sentence</span><span class="w"></span>
+</span><span id="example-14-46"><a id="example-14-46" name="example-14-46"></a><span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="s">&quot;Nervous&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-47"><a id="example-14-47" name="example-14-47"></a>
+</span><span id="example-14-48"><a id="example-14-48" name="example-14-48"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_03&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//I have some gold with me, can we trade?</span><span class="w"></span>
+</span><span id="example-14-49"><a id="example-14-49" name="example-14-49"></a>
+</span><span id="example-14-50"><a id="example-14-50" name="example-14-50"></a><span class="w">    </span><span class="c">// Hero should now move normally again</span><span class="w"></span>
+</span><span id="example-14-51"><a id="example-14-51" name="example-14-51"></a><span class="w">    </span><span class="n">DIAG_Reset</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-14-52"><a id="example-14-52" name="example-14-52"></a>
+</span><span id="example-14-53"><a id="example-14-53" name="example-14-53"></a><span class="w">    </span><span class="c">// Start tracking shot</span><span class="w"></span>
+</span><span id="example-14-54"><a id="example-14-54" name="example-14-54"></a><span class="w">    </span><span class="n">TRIA_Cam</span><span class="p">(</span><span class="s">&quot;CAMERASTART&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-55"><a id="example-14-55" name="example-14-55"></a>
+</span><span id="example-14-56"><a id="example-14-56" name="example-14-56"></a><span class="w">    </span><span class="c">// Hero now talks to Squelto (self = Squelto, other = Hero)</span><span class="w"></span>
+</span><span id="example-14-57"><a id="example-14-57" name="example-14-57"></a><span class="w">    </span><span class="n">TRIA_Next</span><span class="p">(</span><span class="n">Squelto</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-58"><a id="example-14-58" name="example-14-58"></a>
+</span><span id="example-14-59"><a id="example-14-59" name="example-14-59"></a><span class="w">    </span><span class="nb nb-Externals">AI_TurnToNpc</span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-60"><a id="example-14-60" name="example-14-60"></a>
+</span><span id="example-14-61"><a id="example-14-61" name="example-14-61"></a><span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="s">&quot;No&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-62"><a id="example-14-62" name="example-14-62"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_04&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//No. We are not open to bribery.</span><span class="w"></span>
+</span><span id="example-14-63"><a id="example-14-63" name="example-14-63"></a>
+</span><span id="example-14-64"><a id="example-14-64" name="example-14-64"></a><span class="w">    </span><span class="c">// Hero talks to Arto again (self = Arto, other = Hero)</span><span class="w"></span>
+</span><span id="example-14-65"><a id="example-14-65" name="example-14-65"></a><span class="w">    </span><span class="n">TRIA_Next</span><span class="p">(</span><span class="n">Arto</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-66"><a id="example-14-66" name="example-14-66"></a>
+</span><span id="example-14-67"><a id="example-14-67" name="example-14-67"></a><span class="w">    </span><span class="c">// Hero should now articulate questioningly</span><span class="w"></span>
+</span><span id="example-14-68"><a id="example-14-68" name="example-14-68"></a><span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="s">&quot;NotSure&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-69"><a id="example-14-69" name="example-14-69"></a>
+</span><span id="example-14-70"><a id="example-14-70" name="example-14-70"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_05&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Sure?</span><span class="w"></span>
+</span><span id="example-14-71"><a id="example-14-71" name="example-14-71"></a>
+</span><span id="example-14-72"><a id="example-14-72" name="example-14-72"></a><span class="w">    </span><span class="nb nb-Externals">AI_TurnToNpc</span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-73"><a id="example-14-73" name="example-14-73"></a>
+</span><span id="example-14-74"><a id="example-14-74" name="example-14-74"></a><span class="w">    </span><span class="c">// tracking shot end</span><span class="w"></span>
+</span><span id="example-14-75"><a id="example-14-75" name="example-14-75"></a><span class="w">    </span><span class="n">TRIA_Cam</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-76"><a id="example-14-76" name="example-14-76"></a>
+</span><span id="example-14-77"><a id="example-14-77" name="example-14-77"></a><span class="w">    </span><span class="c">// Arto should react angrily</span><span class="w"></span>
+</span><span id="example-14-78"><a id="example-14-78" name="example-14-78"></a><span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="s">&quot;Angry&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+</span><span id="example-14-79"><a id="example-14-79" name="example-14-79"></a>
+</span><span id="example-14-80"><a id="example-14-80" name="example-14-80"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_06&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//I have to ask you to leave now</span><span class="w"></span>
+</span><span id="example-14-81"><a id="example-14-81" name="example-14-81"></a>
+</span><span id="example-14-82"><a id="example-14-82" name="example-14-82"></a><span class="w">    </span><span class="c">// Hero should now move normally again</span><span class="w"></span>
+</span><span id="example-14-83"><a id="example-14-83" name="example-14-83"></a><span class="w">    </span><span class="n">DIAG_Reset</span><span class="p">();</span><span class="w"></span>
+</span><span id="example-14-84"><a id="example-14-84" name="example-14-84"></a>
+</span><span id="example-14-85"><a id="example-14-85" name="example-14-85"></a><span class="w">    </span><span class="nb nb-Externals">AI_Output</span><span class="w"> </span><span class="p">(</span><span class="bp">other</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRIA_TEST_07&quot;</span><span class="p">);</span><span class="w"> </span><span class="c">//Well...</span><span class="w"></span>
+</span><span id="example-14-86"><a id="example-14-86" name="example-14-86"></a>
+</span><span id="example-14-87"><a id="example-14-87" name="example-14-87"></a><span class="w">    </span><span class="n">TRIA_Finish</span><span class="p">();</span><span class="w"> </span><span class="c">// End</span><span class="w"></span>
+</span><span id="example-14-88"><a id="example-14-88" name="example-14-88"></a><span class="p">};</span><span class="w"></span>
+</span></code></pre></div></td></tr></table></div></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
