@@ -39,6 +39,12 @@ function gmcExternalLinks() {
 }
 
 function gmcExpandNavigation() {
+
+    if (window.matchMedia("(max-width: 76.1875em)").matches) {
+        gmcDebug(`⏩ mobile doesn't expand`);
+        return;
+    }
+
     const activeNav = document.querySelector(".md-nav__link--active").parentElement;
     const children = activeNav.querySelector("nav > ul").children;
 
