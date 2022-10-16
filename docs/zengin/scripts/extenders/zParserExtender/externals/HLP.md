@@ -37,4 +37,11 @@ func void Hlp_WriteOptionInt(var string optName, var string section, var string 
 func void Hlp_WriteOptionFloat(var string optName, var string section, var string entry, var float value) {};
 
 func void Hlp_WriteOptionString(var string optName, var string section, var string entry, var string value) {};
+
+/// Returns the name of the current Steam user
+/// Returns empty string when not run with Steam
+///
+/// @return string containing the Steam username, or empty string
+func string Hlp_GetSteamPersonalName() {};
+
 ```

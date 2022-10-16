@@ -54,11 +54,11 @@ class C_SVM
 {
     //...
 
-    // Lehrer-Kommentare
-    var string NoLearnNoPoints;       // NSC-Lehrer verbietet Steigerung - keine Lernpunkte!
-    var string NoLearnOverMax;        // NSC-Lehrer verbietet Attribut-Steigerung über 100
-    var string NoLearnYouAlreadyKnow; // Du mußt erst Fortgeschritten sein, bevor du ein Meister werden kannst!
-    var string NoLearnYoureBetter;    // Du bist jetzt schon besser!
+    // Teacher comments
+    var string NoLearnNoPoints;       // NPC teacher doesn't teach - not enough learning points!
+    var string NoLearnOverMax;        // NPC teacher doesn't teach - cannot teach above 100 points!
+    var string NoLearnYouAlreadyKnow; // You have to know something to become a master!
+    var string NoLearnYoureBetter;    // You are better than the teacher!
 
     //...
 };

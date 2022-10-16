@@ -27,23 +27,16 @@ func func AI_GetTriggerFunc(var C_Trigger trigger) {};
 
 func string AI_GetTriggerFuncName(var C_Trigger trigger) {};
 
-AI_GetNextTriggerByFunc(var C_Trigger startTrigger, var func function) {};
+func c_trigger ai_getnexttriggerbyfunc(var c_trigger starttrigger, var func function) {};
 
-AI_GetNextTriggerByFuncName(var C_Trigger startTrigger, var string functionName) {};
+func c_triggetr ai_getnexttriggerbyfuncname(var c_trigger starttrigger, var string functionname) {};
 
-AI_GetNextTriggerBySelf(var C_Trigger startTrigger, var C_Npc self) {};
+func c_triggetr ai_getnexttriggerbyself(var c_trigger starttrigger, var c_npc self) {};
 
-AI_GetNextTriggerByOther(var C_Trigger startTrigger, var C_Npc other) {};
+func c_triggetr ai_getnexttriggerbyother(var c_trigger starttrigger, var c_npc other) {};
 
-AI_GetNextTriggerByVictim(var C_Trigger startTrigger, var C_Npc victim) {};
+func c_triggetr ai_getnexttriggerbyvictim(var c_trigger starttrigger, var c_npc victim) {};
 
-AI_GetNextTriggerByNPCs(var C_Trigger startTrigger, var C_Npc self, var C_Npc other, var C_Npc victim) {};
-
-
-/// Returns the name of the current Steam user
-/// Returns empty string when not run with Steam
-///
-/// @return string containing the Steam username, or empty string
-func string Hlp_GetSteamPersonalName() {};
+func c_triggetr ai_getnexttriggerbynpcs(var c_trigger starttrigger, var c_npc self, var c_npc other, var c_npc victim) {};
 
 ```

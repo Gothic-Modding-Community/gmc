@@ -11,72 +11,72 @@ Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https
   <summary>C_Item Daedalus class</summary>
 
 ```dae
-CLASS C_Item
+class C_Item
 {
     // For all Items
-    VAR INT    id;                         // ID of the item
-    VAR STRING name;                       // Name of the item
-    VAR STRING nameID;                     // Name ID
-    VAR INT    hp;                         // Current health of the item
-    VAR INT    hp_max;                     // Maximum healt of the item
+    var int    id;                         // ID of the item
+    var string name;                       // Name of the item
+    var string nameID;                     // Name ID
+    var int    hp;                         // Current health of the item
+    var int    hp_max;                     // Maximum healt of the item
 
-    VAR INT    mainflag;                   // Item category flag
-    VAR INT    flags;                      // Item type flag
-    VAR INT    weight;                     // Weight of the item
-    VAR INT    value;                      // Value of the item
+    var int    mainflag;                   // Item category flag
+    var int    flags;                      // Item type flag
+    var int    weight;                     // Weight of the item
+    var int    value;                      // Value of the item
 
     // For weapons
-    VAR INT    damageType;                 // Damage type
-    VAR INT    damageTotal;                // Total amount of damage
-    VAR INT    damage[DAM_INDEX_MAX];      // Array of damage types
+    var int    damageType;                 // Damage type
+    var int    damageTotal;                // Total amount of damage
+    var int    damage[DAM_INDEX_MAX];      // Array of damage types
 
     // For armours
-    VAR INT    wear;                       // Flag to specify where to wear an item
-    VAR INT    protection[PROT_INDEX_MAX]; // Protection array of different damage types
+    var int    wear;                       // Flag to specify where to wear an item
+    var int    protection[PROT_INDEX_MAX]; // Protection array of different damage types
 
     // For food
-    VAR INT    nutrition;                  // The amount of HP healed
+    var int    nutrition;                  // The amount of HP healed
 
     // Benötigte Attribute zum Benutzen des Items
-    VAR INT    cond_atr[3];                // Array of NPC attributes needed to equip the item
-    VAR INT    cond_value[3];              // Array of values corresponding to the cond_atr arry
+    var int    cond_atr[3];                // Array of NPC attributes needed to equip the item
+    var int    cond_value[3];              // Array of values corresponding to the cond_atr arry
 
     // Attributes to be changed on equip
-    VAR INT    change_atr[3];              // Array of attributes that will be changed on equip
-    VAR INT    change_value[3];            // Array of values of the attributes defined in change_atr
+    var int    change_atr[3];              // Array of attributes that will be changed on equip
+    var int    change_value[3];            // Array of values of the attributes defined in change_atr
 
     // Parser functions
-    VAR FUNC   magic;
-    VAR FUNC   on_equip;                   // Called on equpping an item
-    VAR FUNC   on_unequip;                 // Called on unequipping an item
-    VAR FUNC   on_state[4];
+    var func   magic;
+    var func   on_equip;                   // Called on equpping an item
+    var func   on_unequip;                 // Called on unequipping an item
+    var func   on_state[4];
 
-    VAR FUNC   owner;                      // Owner of the item: instance name
-    VAR INT    ownerGuild;                 // Owner of the item: guild
-    VAR INT    disguiseGuild;              // NPC guild set when equipping an item
+    var func   owner;                      // Owner of the item: instance name
+    var int    ownerGuild;                 // Owner of the item: guild
+    var int    disguiseGuild;              // NPC guild set when equipping an item
 
     // 3DS model file
-    VAR STRING visual;                     // Item model file
+    var string visual;                     // Item model file
 
     // NPC mesh change, when equipping an item
-    VAR STRING visual_change;              // .asc file
-    VAR STRING effect;                     // Effect instance
+    var string visual_change;              // .asc file
+    var string effect;                     // Effect instance
 
-    VAR INT    visual_skin;                // Texture variation
+    var int    visual_skin;                // Texture variation
 
-    VAR STRING scemeName;                  // Animation sceme name
-    VAR INT    material;                   // Material of the object
+    var string scemeName;                  // Animation sceme name
+    var int    material;                   // Material of the object
 
-    VAR INT    munition;                   // Ammo instance
+    var int    munition;                   // Ammo instance
 
     var int    spell;                      // ID if the spell that this item does
     var int    range;                      // Range of the weapon
 
     var int    mag_circle;                 // Circle of magic needed to use this item
 
-    VAR STRING description;                // The name of the item shown in the preview box
-    VAR STRING text[ITM_TEXT_MAX];         // Array of string describing the item (left side)
-    VAR INT    count[ITM_TEXT_MAX];        // Array of integers (the right side)
+    var string description;                // The name of the item shown in the preview box
+    var string text[ITM_TEXT_MAX];         // Array of string describing the item (left side)
+    var int    count[ITM_TEXT_MAX];        // Array of integers (the right side)
 
     // Parameters for displaying items in the inventory
     var int    inv_zbias                   // How far away is the item from the screen
@@ -113,7 +113,7 @@ const int ATR_REGENERATEMANA =  7;  // Mana regeneration per second
 This can be used on all eqippable items, to change the attributes. As an example, we can create a sword, that has a 10 point dexterity bonus.
 
 ```dae
-INSTANCE ItMw_testSword (C_Item)
+instance ItMw_testSword (C_Item)
 {
     // some code
     change_atr[0]   = ATR_DEXTERITY;
@@ -132,7 +132,7 @@ You can change `ATR_HITPOINTS_MAX` and `ATR_MANA_MAX` attributes in [on_equip](#
 
 The next example sword is equippable only, if the NPC has at least 5 strength. If the requirements are not met [`G_CanNotUse()`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/G_Functions/G_CanNotUse.d) is called.
 ```dae
-INSTANCE ItMw_testSword (C_Item)
+instance ItMw_testSword (C_Item)
 {
     // some code
     cond_atr[2]     = ATR_STRENGTH;
@@ -144,7 +144,7 @@ INSTANCE ItMw_testSword (C_Item)
 Try injecting the code below [zParserExtender](../../scripts/extenders/zParserExtender/injection.md) to test it in game right away. It is compatible with G2NotR.
 
 ```dae
-INSTANCE ItMw_testSword (C_Item)
+instance ItMw_testSword (C_Item)
 {
     name            = TXT_Spells[10]; // demonstrates the usage of direct constr array access
     
@@ -192,7 +192,7 @@ This example shows an item with all elements of `TEXT` and `COUNT` array filled.
 
 You can find the code below
 ```dae
-INSTANCE ItMw_testSword (C_Item)
+instance ItMw_testSword (C_Item)
 {
     name          = TXT_Spells[10];
 
@@ -233,7 +233,7 @@ INSTANCE ItMw_testSword (C_Item)
 
 In the scripts you often find that the description is asigned the value of `name`.
 ```dae
-INSTANCE ItMw_testSword (C_Item)
+instance ItMw_testSword (C_Item)
 {
     name = "New amazing sword";
     // ...
@@ -245,7 +245,7 @@ This is used in the case where you want to show the name of the item on focus to
 
 There is a second way used in the scripts though, for example with magic scrolls the focus name in the world is "Scroll" and in inventory the scroll carries the name of the spell. This is how it is done.
 ```dae
-INSTANCE ItSc_InstantFireball (C_Item)
+instance ItSc_InstantFireball (C_Item)
 {
 	name 				=	NAME_Spruchrolle; // const string = "Scroll"
     // ...
