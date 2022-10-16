@@ -178,14 +178,26 @@ markdown_extensions:
   - toc:
       permalink: ""
   - admonition
-  - codehilite
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      # This sets the same ID for the <a> and <span> tags,
+      # it's required for the <a> links to work and to allow <span> highlighting via JavaScript
+      line_anchors: example
+      line_spans: example
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: ['./docs/assets/sources/']
+      check_paths: true
+      url_download: true
+      url_max_size: 5000000
+      url_timeout: 5
   - footnotes
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.smartsymbols
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.superfences:
