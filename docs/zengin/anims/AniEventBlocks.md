@@ -1,5 +1,5 @@
 ## Animation event blocks
-With animations, we often need to perform some other actions, like playing a sound effect, inserting item into NPCs hand or changing an item instance into a different one (turning a raw steel into hot raw steel).
+We often need to perform some other actions together with our animation, such as playing a sound effect, inserting item into NPC's hand or changing an item instance into a different one, like turning a raw steel into hot raw steel.
 
 Example:
 ```dae
@@ -12,7 +12,7 @@ ani ("s_RunL" 1 "s_RunL" 0.0 0.1 M. "Hum_RunLoop_M01.asc" F 12 31)
 
 The example shows the animation and its event block. We place these events into a block surrounded by curly brackets.
 
-There are many events to choose from to choose from, here are some examples:
+There are many events to choose from to choose from. Here are some examples:
 Sound effects
 ```dae
 *eventSFXGrnd (12 "Run")
@@ -25,7 +25,7 @@ Particle effects
 *eventPFXStop (45   1)
 ```
 Morph mesh animations
-> Heads are animated using morph meshes, this feature is not used as much in the original game, but Chronicles of Myrtana uses it quite a lot. I hope to write about morphMesh animation too in the future.
+> ⚠ Heads are animated using morph meshes and whilst this feature is almost never used in the original game, Chronicles of Myrtana uses it plenty. I intend to dedicate separate section to `morphMesh` animation in the future.
 
 ```dae
 *eventMMStartAni (14	"T_HURT")
