@@ -2678,7 +2678,7 @@
   <h1>EventBlocks</h1>
 
 <h2 id="animation-event-blocks">Animation event blocks<a class="headerlink" href="#animation-event-blocks" title="Permanent link"></a></h2>
-<p>With animations, we often need to perform some other actions, like playing a sound effect, inserting item into NPCs hand or changing an item instance into a different one (turning a raw steel into hot raw steel).</p>
+<p>We often need to perform some other actions together with our animation, such as playing a sound effect, inserting item into NPC's hand or changing an item instance into a different one, like turning a raw steel into hot raw steel.</p>
 <p>Example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
 <span class="normal"><a href="#example-0-2">2</a></span>
@@ -2691,7 +2691,7 @@
 </span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a><span class="p">}</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <p>The example shows the animation and its event block. We place these events into a block surrounded by curly brackets.</p>
-<p>There are many events to choose from to choose from, here are some examples:
+<p>There are many events to choose from to choose from. Here are some examples:
 Sound effects
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
 <span class="normal"><a href="#example-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="o">*</span><span class="n">eventSFXGrnd</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="w"> </span><span class="s">&quot;Run&quot;</span><span class="p">)</span><span class="w"></span>
@@ -2706,7 +2706,7 @@ Particle effects
 </span></code></pre></div></td></tr></table></div>
 Morph mesh animations</p>
 <blockquote>
-<p>Heads are animated using morph meshes, this feature is not used as much in the original game, but Chronicles of Myrtana uses it quite a lot. I hope to write about morphMesh animation too in the future.</p>
+<p>⚠ Heads are animated using morph meshes and whilst this feature is almost never used in the original game, Chronicles of Myrtana uses it plenty. I intend to dedicate separate section to <code>morphMesh</code> animation in the future.</p>
 </blockquote>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="o">*</span><span class="n">eventMMStartAni</span><span class="w"> </span><span class="p">(</span><span class="mi">14</span><span class="w">    </span><span class="s">&quot;T_HURT&quot;</span><span class="p">)</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
@@ -2739,7 +2739,7 @@ Event tags
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-17 23:37:27</span>
       
     
   </small>

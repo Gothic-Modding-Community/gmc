@@ -2826,12 +2826,12 @@
 <h1 id="enhanced-information-manager">Enhanced Information Manager<a class="headerlink" href="#enhanced-information-manager" title="Permanent link"></a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is a quick paste-in of and old version of AFSP's documentation, the information should be taken with a grain of salt, might not be up to date, since AFSP is being developed all the time. (And this is only a demo page)</p>
+<p>This is a quick paste-in of and old version of AFSP's documentation and the information should be taken with a grain of salt. It may not be up-to-date since AFSP is being developed all the time and this is only a demo page.</p>
 </div>
 <p>Enhanced Information Manager allows you to more precisely control the Information Manager (dialogue manager). Change color, font and much more!
 This package "scans" the dialogue string for modifiers and alters the string based on the modifiers you specify.</p>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link"></a></h2>
-<p>To use this feature you have to</p>
+<p>To use this feature you have to:</p>
 <ol>
 <li>Add <code>_headers_G[1/2]_EnhancedInfoManager.src</code> or <code>_headers_G[1/2]_All.src</code> to your <code>Gothic.src</code> after Ikarus and LeGo initialization.</li>
 <li>Call <code>G12_EnhancedInfoManager_Init();</code> from your <code>INIT_GLOBAL()</code> function in <code>Startup.d</code></li>
@@ -2865,13 +2865,13 @@ Set font itself for highlighted dialogue choice.
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;f@font_old_20_white.tga fs@font_old_10_white.tga This dialogue has a different font, when selected.&quot;</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="change-text-alignment">Change text alignment<a class="headerlink" href="#change-text-alignment" title="Permanent link"></a></h2>
-<p>Align text left
+<p>Align text left.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a>al@
 </span></code></pre></div></td></tr></table></div>
-Align text center
+Align text center.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a>ac@
 </span></code></pre></div></td></tr></table></div>
-Align text right
+Align text right.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a>ar@
 </span></code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span>
@@ -2881,11 +2881,11 @@ Align text right
 </span><span id="example-9-3"><a id="example-9-3" name="example-9-3"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ar@ This dialogue has RIGHT alignment.&quot;</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="disable-dialogue">Disable dialogue<a class="headerlink" href="#disable-dialogue" title="Permanent link"></a></h2>
-<p>Player cannot highlight (and select) this dialogue
+<p>Player cannot highlight (and select) this dialogue.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a>d@
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="text-input-field">Text input field<a class="headerlink" href="#text-input-field" title="Permanent link"></a></h2>
-<p>Input field allows you to turn a dialogue choice into a input text field.
+<p>Input field allows you to turn a dialogue choice into an input text field.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a>a@
 </span></code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1"> 1</a></span>
@@ -2937,25 +2937,25 @@ Align text right
 </span><span id="example-12-24"><a id="example-12-24" name="example-12-24"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="dialogue-numbers">Dialogue numbers<a class="headerlink" href="#dialogue-numbers" title="Permanent link"></a></h2>
-<p>This feature shows a dialogue number next to the dialogue line (visual for <a href="#dialogue-keyboard-controls">Dialogue keyboard controls</a>)<br />
-To turn this on, you just set <code>InfoManagerNumKeysNumbers</code> variable to true. (in your <code>INIT_GLOBAL()</code> function)
+<p>This feature shows a dialogue number next to the dialogue line (visual for <a href="#dialogue-keyboard-controls">Dialogue keyboard controls</a>).
+To turn this on you just set <code>InfoManagerNumKeysNumbers</code> variable to true. (in your <code>INIT_GLOBAL()</code> function).
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="n">InfoManagerNumKeysNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="dialogue-keyboard-controls">Dialogue keyboard controls<a class="headerlink" href="#dialogue-keyboard-controls" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This has also been fixed int Union and we noticed a strange behavior with different keyboard layouts.</p>
+<p>This has also been fixed in Union and we noticed a strange behavior with different keyboard layouts.</p>
 </div>
-<p>This feature changes the way number keys affect dialogue selection. The first dialogue is no longer 0, by pressing appropriate number you highlight the dialogue option.
+<p>This feature changes the way number keys affect dialogue selection. The first dialogue is no longer 0 and you highlight the dialogue option by pressing appropriate number.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="n">InfoManagerNumKeysControls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="spinners">Spinners<a class="headerlink" href="#spinners" title="Permanent link"></a></h2>
-<p>This is by far the most flashy feature of EIM, it allows you to use left/right arrow keys on a dialogue option to increase/decease numerical value. This can be used in many ways.</p>
+<p>This is by far the most flashy feature of EIM as it allows you to use left/right arrow keys on a dialogue option to increase/decease numerical value. This can be used in many ways.</p>
 <p>This feature is a bit more complex:
 1. Set up a standard dialogue</p>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
-<p>Notice we are using "<em>dummy</em>" as a description, since it is going to get updated. If something goes wrong, the "<em>dummy</em>" string shows up and you can clearly tell somethings went wrong.</p>
+<p>Notice we are using "<em>dummy</em>" as a description, since it is going to get updated. If something goes wrong the "<em>dummy</em>" string shows up and you can clearly tell something went wrong.</p>
 </div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-15-1">1</a></span>
 <span class="normal"><a href="#example-15-2">2</a></span>
@@ -3081,7 +3081,7 @@ To turn this on, you just set <code>InfoManagerNumKeysNumbers</code> variable to
 </span><span id="example-16-52"><a id="example-16-52" name="example-16-52"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
 <ol>
-<li>We can use the spinner value stored in <code>selectedMeat</code> variable here in the info function, to create the meat (or do other stuff with it).</li>
+<li>We can use the spinner value stored in <code>selectedMeat</code> variable here in the info function to create the meat (or do other stuff with it).</li>
 </ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-17-1"> 1</a></span>
 <span class="normal"><a href="#example-17-2"> 2</a></span>
@@ -3348,7 +3348,7 @@ To turn this on, you just set <code>InfoManagerNumKeysNumbers</code> variable to
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 15:51:08</span>
       
     
   </small>

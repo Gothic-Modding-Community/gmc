@@ -2780,19 +2780,22 @@
 <h1 id="mds-model-animation-script">MDS - model animation script<a class="headerlink" href="#mds-model-animation-script" title="Permanent link"></a></h1>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The MDS syntax is very simple and the scripts can be edited in any text editor, but it is easier to work in an editor with the proper syntac highlighting. <a href="https://github.com/kirides/vscode-daedalus/releases">Daedalus Language Server</a>'s dev branch already merged the MDS grammar for syntax highlighting, we can expact it in the next release.</p>
 </div>
-<p>Model animation script is a file, that describes what skeleton is to be used, what body meshes work with this set of animations and how the animations should be named, how fast they run, what animation is supposed to run after the current one is finished and much more.
-These files are located in <code>Gothic\_work\DATA\Anims\</code> directory. </p>
-<p>You will see a lot of long and scary code, but it is actually very simple, lets learn what some of the most important commands mean.</p>
+<p>The MDS syntax is very simple and scripts can be edited in any text editor. It is, however, easier to work in an editor with a proper syntax highlighting. <a href="https://github.com/kirides/vscode-daedalus/releases">Daedalus Language Server</a>'s dev branch already merged the MDS grammar for syntax highlighting, we can expect it in the next release.</p>
+<p>Model animation script is a file describing what skeleton should be used, what body meshes work with this set of animations and how should the animations be named, how fast they run, what animation is supposed to start after the current one is finished and much more. These files are located in <code>Gothic\_work\DATA\Anims\</code> directory.</p>
+<p>Whilst the code seems long and terrifying, it is in fact rather simple, and this guide will try to explain it whole.</p>
 <div class="admonition hint">
 <p class="admonition-title">Don't forget to use the search</p>
-<p>If you search this file for <code>t_Yes</code>, you will get an example of the first type of animation - "standalone"</p>
-<p>To play the animation in game you use this console command <code>play ani t_yes</code>.</p>
-<p><div class="video-container"><iframe src="https://www.youtube.com/embed/aOyuGVWDefc" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
 </div>
+<p>If you search this file for <code>t_Yes</code>, you will get an example of the first type of animation - "standalone"</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>To play the animation in game you use this console command `play ani t_yes`.
+
+![type:video](https://www.youtube.com/embed/aOyuGVWDefc)
+</code></pre></div></td></tr></table></div>
 <h2 id="syntax-and-keywords">Syntax and keywords<a class="headerlink" href="#syntax-and-keywords" title="Permanent link"></a></h2>
-<p>Before we get into the keywords, lets get a quick look at the naming convention, to get a basic idea what is going on.</p>
+<p>Let us get a quick look at the naming convention to get a basic idea what is going on before we start.</p>
 <p>The first letter indicates a type of animation (transition - <code>t_</code> - or state - <code>s_</code>).
 Then depending on the animation type we have:</p>
 <p><strong>Transition animation</strong>
@@ -2820,7 +2823,7 @@ Syntax:
 <code>ani</code> - is a keyword, we are defining new animation</p>
 <p>Let's describe all the parameters</p>
 <p><code>ANI_NAME</code>    - animation name, we use it in Daedalus as animation identifier</p>
-<p>There is a naming convention, that is recommended (and sometimes required) to be used.</p>
+<p>There is a naming convention, that is recommended and sometimes required to be used.</p>
 <ul>
 <li>prefix <code>t_</code> - transition animations</li>
 <li>prefix <code>s_</code> - state animations - they usually run in a loop</li>
@@ -2837,7 +2840,7 @@ Syntax:
 <li><strong>R</strong> - the same as M but for rotation</li>
 <li><strong>E</strong> - this flag makes this animation run only, if the animation in the same layer are finished, this is used in the movement animations. The animation <code>s_walk</code> (walking loop animation) runs, when the player is walking,when he stops the transition animation to standing state is played <code>t_walk_2_stand</code>. This animation uses the E flag to wait for the walk cycle animation to finish, to smoothly transition into the standing state.</li>
 <li><strong>F</strong> - the engine ignores height coordinate - doesn't keep the model "glued" to the ground (falling/flying animation)</li>
-<li><strong>I</strong> - specifies idle animation - breathing, standing with a drawn weapon and moving the weapon...  </li>
+<li><strong>I</strong> - specifies idle animation - breathing, standing with a drawn weapon and moving the weapon</li>
 </ul>
 <p><code>ASC_NAME</code>    - name of the source file exported from Blender</p>
 <p><code>ANI_DIR</code>     - direction of the animation</p>
@@ -2848,7 +2851,7 @@ Syntax:
 <p><code>START_FRAME</code> - on what frame from the source file the animation starts</p>
 <p><code>END_FRAME</code>   - on what frame from the source file the animation ends</p>
 <h3 id="anialias">aniAlias<a class="headerlink" href="#anialias" title="Permanent link"></a></h3>
-<p>This is probably the second most useful command, it is used to do, what its name suggests it does, and that is creating an alias (similar to hard link for my fellow unix users) for already defined animations.</p>
+<p>Generally considered as one of the most useful commands, <code>aniAlias</code> is used to create an alias (hard link for UNIX users) for an already defined animation.</p>
 <p>Example:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="n">aniAlias</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;t_Sneak_2_Run&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;s_Run&quot;</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w"> </span><span class="s">&quot;t_Run_2_Sneak&quot;</span><span class="w"> </span><span class="n">R</span><span class="p">)</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
@@ -2860,15 +2863,15 @@ Syntax:
 <p><code>NEXT_ANI</code>   - name of the next animations</p>
 <p><code>BLEND_IN</code>   - time in seconds describing animation blending at the start</p>
 <p><code>BLEND_OUT</code>  - time in seconds describing animation blending at the end</p>
-<p><code>FLAGS</code>      - flags, that describe animation behaviour</p>
+<p><code>FLAGS</code>      - flags, that describe animation behavior</p>
 <p><code>ALIAS_NAME</code> - name of the animation we want to use as a source for the alias</p>
 <p><code>ANI_DIR</code>    - direction of the animation</p>
-<p>If we look for the animation in the example we can see, that there is a related one just one line above
+<p>If we look for the animation in the example we can see that there is a related one just one line above
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span>
 <span class="normal"><a href="#example-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="n">ani</span><span class="w">         </span><span class="p">(</span><span class="s">&quot;t_Run_2_Sneak&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;s_Sneak&quot;</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w"> </span><span class="s">&quot;Hum_Sneak_M01.asc&quot;</span><span class="w">  </span><span class="n">F</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
 </span><span id="example-8-2"><a id="example-8-2" name="example-8-2"></a><span class="n">aniAlias</span><span class="w">    </span><span class="p">(</span><span class="s">&quot;t_Sneak_2_Run&quot;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;s_Run&quot;</span><span class="w">   </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="w"> </span><span class="s">&quot;t_Run_2_Sneak&quot;</span><span class="w">      </span><span class="n">R</span><span class="p">)</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-In this example we are defining <code>t_Sneak_2_Run</code> animation, we specify, that the animation after this one is finished will be <code>s_Run</code> and that it is being made by reversing animation <code>t_Run_2_Sneak</code> by specifying the <code>R</code> flag.</p>
+In this example we are defining <code>t_Sneak_2_Run</code> animation and we are specifying that the animation after this one is finished will be <code>s_Run</code> and that it is being made by reversing animation <code>t_Run_2_Sneak</code> by specifying the <code>R</code> flag.</p>
 <h3 id="aniblend">aniBlend<a class="headerlink" href="#aniblend" title="Permanent link"></a></h3>
 <p>AniBlend is used to define animations that are a result of blending of two animations. This animation is not animated by hand, but it is dynamically generated by the engine during run-time.</p>
 <p>Example
@@ -2886,11 +2889,11 @@ Syntax:
 <h3 id="anibatch">aniBatch<a class="headerlink" href="#anibatch" title="Permanent link"></a></h3>
 <p>Not used in the game.</p>
 <h2 id="animation-state-machine">Animation state machine<a class="headerlink" href="#animation-state-machine" title="Permanent link"></a></h2>
-<p>More complex animations, such as MOBSI animations, form a state machine - a animation set.</p>
+<p>More complex animations such as MOBSI animations form a state machine - an animation set.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Only a diagram test</p>
 </div>
+<p>Only a diagram test</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">MDS script for the big chest</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1"> 1</a></span>
 <span class="normal"><a href="#example-11-2"> 2</a></span>
 <span class="normal"><a href="#example-11-3"> 3</a></span>
@@ -2986,7 +2989,7 @@ Syntax:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:08:52</span>
       
     
   </small>

@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gampad-controls" class="md-skip">
+        <a href="#gamepad-controls" class="md-skip">
           Skip to content
         </a>
       
@@ -2857,16 +2857,16 @@
   </a>
 
 
-<h1 id="gampad-controls">Gampad controls<a class="headerlink" href="#gampad-controls" title="Permanent link"></a></h1>
-<p>zGamePad plugin comes with a default control scheme, but it is possible to create your own. The plugin will search for any file with the <code>.gamepad.overlay</code> extension placed in <code>Gothic/System</code> directory, or in any of the loaded <code>.mod</code> and <code>.vdf</code> archives.</p>
+<h1 id="gamepad-controls">Gamepad controls<a class="headerlink" href="#gamepad-controls" title="Permanent link"></a></h1>
+<p>The zGamePad plugin comes with a default control scheme, but it is possible to create your own. The plugin will search for any file with the <code>.gamepad.overlay</code> extension placed in <code>Gothic/System</code> directory or in any of the loaded <code>.mod</code> and <code>.vdf</code> archives.</p>
 <h2 id="control-file-syntax">Control file syntax<a class="headerlink" href="#control-file-syntax" title="Permanent link"></a></h2>
 <p>Gamepad controls are set using the <code>.gamepad</code> configuration file. This file encodes the controls for different actions in the game and the hint string in multiple languages.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The <code>.gamepad</code> file must be encoded in Unicode or UTF-8 to accomodate the multilingual hint strings.</p>
+<p>The <code>.gamepad</code> file must be encoded in Unicode or UTF-8 to accommodate the multilingual hint strings.</p>
 </div>
 <h3 id="regions">Regions<a class="headerlink" href="#regions" title="Permanent link"></a></h3>
-<p>The format supports code blocks specified by the <code>#region</code> and <code>#endregion</code> keywords, these regions do not have any syntactical meaning, they offer a convenient way to collapse sections of the code in editors with the syntax highlighting capabilites (Notepad++)</p>
+<p>The format supports code blocks specified by the <code>#region</code> and <code>#endregion</code> keywords. These regions do not have any syntactical meaning, they only offer a convenient way to collapse sections of the code in editors with the syntax highlighting capabilities such as Notepad++</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Regions</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
 <span class="normal"><a href="#example-0-2">2</a></span>
 <span class="normal"><a href="#example-0-3">3</a></span>
@@ -2882,10 +2882,10 @@
 </span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a>#endregion
 </span></code></pre></div></td></tr></table></div>
 <h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link"></a></h3>
-<p>Comments are useful for quick informations, or just to disable some old code, that might come in handy later. The <code>.gamepad</code> file syntax supports C++ line comments using two forward slashes <code>//</code>.</p>
+<p>Comments are useful for quick information or just to disable some old code that might come in handy later. The <code>.gamepad</code> file syntax supports C++ line comments using two forward slashes <code>//</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Comments can be used only at the start of any given line!</p>
+<p>Comments can only be used at the start of any given line!</p>
 </div>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Comments</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
 <span class="normal"><a href="#example-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a>// this is a comment
@@ -2927,7 +2927,7 @@
 The string <code>name</code> must be unique and is used to reference the string while defining hints.
 The language tag matches the language in <code>SystemPack.ini</code>. If the file does not contain the user's language, English will be taken by default. If there is no English, then the first one.</p>
 <h3 id="control-bindings">Control bindings<a class="headerlink" href="#control-bindings" title="Permanent link"></a></h3>
-<p>A binding is a description of an event that includes emulation object and conditions. Hints are part of the binding.
+<p>A binding is a description of an event that includes emulation object and conditions. Hints are part of the binding.<br />
 The general structure of the bind starts with the keyword <code>KeyRecord</code> and has the following format:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Control binding</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
 <span class="normal"><a href="#example-4-2">2</a></span>
@@ -2942,10 +2942,9 @@ The general structure of the bind starts with the keyword <code>KeyRecord</code>
 </span><span id="example-4-6"><a id="example-4-6" name="example-4-6"></a>  Help        [name of the hint string]
 </span></code></pre></div></td></tr></table></div></p>
 <ul>
-<li><code>Id</code> - unique identifier, used by other users to override this control binding</li>
-<li><code>[modifier]</code> - can be empty or take the value of <code>Toggled</code><br />
-If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.<br />
-If the value is <code>Toggled</code>, the control binding will work only when the player toggles the button or button combination. (One press to start sneaking, another press to stop sneaking)</li>
+<li><code>Id</code> - unique identifier used by other users to override this control binding</li>
+<li><code>[modifier]</code> - can be empty or take the value of <code>Toggled</code> If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.  <br />
+  If the value is <code>Toggled</code>, the control binding will work only when the player toggles the button or button combination. (One press to start sneaking, another press to stop sneaking)</li>
 <li><code>Combination</code> - these are the gamepad buttons that the player must press or hold to activate the control binding.</li>
 <li><code>Emulation</code> - specify which buttons will be emulated. You can specify absolute buttons, or that are defined in the game settings (logical).</li>
 <li><code>Condition</code> - specify the condition under which the control binding can be activated. To invert condition, use the operator <code>!</code> before the operand (!Cond_IsOverlayTop, !JOY_B)</li>
@@ -2953,7 +2952,7 @@ If the value is <code>Toggled</code>, the control binding will work only when th
 <p><code>Help</code> - name of the text string with a hint which will be displayed when the Conditions are met.</p>
 </li>
 <li>
-<p><code>[gamepad keys]</code> - <a href="../keys_gamepad/">Gamepady key list</a></p>
+<p><code>[gamepad keys]</code> - <a href="../keys_gamepad/">Gamepad key list</a></p>
 </li>
 <li><code>[engine logical keys]</code> - <a href="../keys_engine_logical/">Engine logical key list</a></li>
 <li><code>[engine absolute keys]</code> - <a href="../keys_engine_absolute/">Engine absolute key list</a></li>
@@ -2961,7 +2960,7 @@ If the value is <code>Toggled</code>, the control binding will work only when th
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>All operators are optional! This means if a binding should only show a hint, it doesn't have to contain Combination.</p>
+<p>All operators are optional! This means that if a binding should only show a hint, it doesn't have to contain Combination.</p>
 </div>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link"></a></h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Control binding examples</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1"> 1</a></span>
@@ -3001,7 +3000,7 @@ If the value is <code>Toggled</code>, the control binding will work only when th
 </span><span id="example-5-18"><a id="example-5-18" name="example-5-18"></a>  Help        focus_item
 </span></code></pre></div></td></tr></table></div>
 <h3 id="controls-override">Controls override<a class="headerlink" href="#controls-override" title="Permanent link"></a></h3>
-<p>If you want to change or remove bindings from another controls file, use the <code>KeyDisable</code> keyword.<br />
+<p>If you want to change or remove bindings from another controls file, use the <code>KeyDisable</code> keyword.  <br />
 <a href="https://github.com/Gratt-5r2/zGamePad/blob/master/Utils/controls.gamepad">Default controls file</a></p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Controls override syntax</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a>KeyDisable [fileName].[Id]
 </span></code></pre></div></td></tr></table></div>
@@ -3034,7 +3033,7 @@ Where <code>fileName</code> is the name of the controls file without extension a
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-13 13:06:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:08:52</span>
       
     
   </small>

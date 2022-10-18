@@ -2870,7 +2870,7 @@
 </span><span id="example-0-5"><a id="example-0-5" name="example-0-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">                       </span><span class="c">// Name of the item</span><span class="w"></span>
 </span><span id="example-0-6"><a id="example-0-6" name="example-0-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nameID</span><span class="p">;</span><span class="w">                     </span><span class="c">// Name ID</span><span class="w"></span>
 </span><span id="example-0-7"><a id="example-0-7" name="example-0-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">hp</span><span class="p">;</span><span class="w">                         </span><span class="c">// Current health of the item</span><span class="w"></span>
-</span><span id="example-0-8"><a id="example-0-8" name="example-0-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">hp_max</span><span class="p">;</span><span class="w">                     </span><span class="c">// Maximum healt of the item</span><span class="w"></span>
+</span><span id="example-0-8"><a id="example-0-8" name="example-0-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">hp_max</span><span class="p">;</span><span class="w">                     </span><span class="c">// Maximum health of the item</span><span class="w"></span>
 </span><span id="example-0-9"><a id="example-0-9" name="example-0-9"></a>
 </span><span id="example-0-10"><a id="example-0-10" name="example-0-10"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">mainflag</span><span class="p">;</span><span class="w">                   </span><span class="c">// Item category flag</span><span class="w"></span>
 </span><span id="example-0-11"><a id="example-0-11" name="example-0-11"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">flags</span><span class="p">;</span><span class="w">                      </span><span class="c">// Item type flag</span><span class="w"></span>
@@ -2941,11 +2941,11 @@
 
 </details>
 
-<p>It has many member variables, but not all of them are used for every item. It is not necessary to define every one of these variables for every item, as it was discussed on <a href="https://ataulien.github.io/Inside-Gothic/objects/item/">InsideGothic</a>.</p>
+<p>It has many member variables but not all of them are used for every item. It is not necessary to define every one of these variables for every item as it was discussed on <a href="https://ataulien.github.io/Inside-Gothic/objects/item/">InsideGothic</a>.</p>
 <h2 id="class-members">Class members<a class="headerlink" href="#class-members" title="Permanent link"></a></h2>
 <p>A selection of the most important class members.</p>
 <h3 id="change_atr-change_value">change_atr &amp; change_value<a class="headerlink" href="#change_atr-change_value" title="Permanent link"></a></h3>
-<p><code>change_atr</code> stores the attributes that will be changad by the amount specified in <code>change_value</code>.</p>
+<p><code>change_atr</code> stores the attributes that will be changed by the amount specified in <code>change_value</code>.</p>
 <p>NPCs have these attributes:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
 <span class="normal"><a href="#example-1-2">2</a></span>
@@ -2965,7 +2965,7 @@
 </span><span id="example-1-8"><a id="example-1-8" name="example-1-8"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ATR_REGENERATEHP</span><span class="w">   </span><span class="o">=</span><span class="w">  </span><span class="mi">6</span><span class="p">;</span><span class="w">  </span><span class="c">// HP regeneration per second</span><span class="w"></span>
 </span><span id="example-1-9"><a id="example-1-9" name="example-1-9"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ATR_REGENERATEMANA</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mi">7</span><span class="p">;</span><span class="w">  </span><span class="c">// Mana regeneration per second</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
-<p>This can be used on all eqippable items, to change the attributes. As an example, we can create a sword, that has a 10 point dexterity bonus.</p>
+<p>This can be used on all equipable items to change the attributes. As an example we can create a sword that has a 10 point dexterity bonus.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
 <span class="normal"><a href="#example-2-2">2</a></span>
 <span class="normal"><a href="#example-2-3">3</a></span>
@@ -2982,12 +2982,12 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Do not change <code>ATR_HITPOINTS</code>, <code>ATR_MANA</code>, <code>ATR_HITPOINTS_MAX</code> or <code>ATR_MANA_MAX</code>, it will result in an unwanted behaviour with max health or max mana.</p>
+<p>Do not change <code>ATR_HITPOINTS</code>, <code>ATR_MANA</code>, <code>ATR_HITPOINTS_MAX</code> or <code>ATR_MANA_MAX</code> as it will result in unwanted behaviour with max health or max mana.</p>
 </div>
 <p>You can change <code>ATR_HITPOINTS_MAX</code> and <code>ATR_MANA_MAX</code> attributes in <a href="#class-definition">on_equip</a> and <a href="#class-definition">on_unequip</a></p>
 <h3 id="cond_atr-cond_value">cond_atr &amp; cond_value<a class="headerlink" href="#cond_atr-cond_value" title="Permanent link"></a></h3>
 <p><code>cond_atr</code> stores the attributes that will be checked as a requirement to equip an item, the amount specified in <code>cond_value</code>.</p>
-<p>The next example sword is equippable only, if the NPC has at least 5 strength. If the requirements are not met <a href="https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/G_Functions/G_CanNotUse.d"><code>G_CanNotUse()</code></a> is called.
+<p>The next example sword is equipable only if the NPC has at least 5 strength. If the requirements are not met <a href="https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/G_Functions/G_CanNotUse.d"><code>G_CanNotUse()</code></a> is called.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span>
 <span class="normal"><a href="#example-3-2">2</a></span>
 <span class="normal"><a href="#example-3-3">3</a></span>
@@ -3065,7 +3065,7 @@ To insert it into the game use <code>insert ItMw_testSword</code> in console.</p
 <h3 id="text-count-arrays">text &amp; count arrays<a class="headerlink" href="#text-count-arrays" title="Permanent link"></a></h3>
 <p>These two arrays are used to put information into the item information box. 
 <img alt="Text and Count " src="../../../../img/c_item_text_count.png" />
-The maximum number of lines is 6. This is defined in the engine, but for script side class definiton is declared in the scripts too.
+The maximum number of lines is 6. This is defined in the engine, but for script side class definition is declared in the scripts too.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ITM_TEXT_MAX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
 This example shows an item with all elements of <code>TEXT</code> and <code>COUNT</code> array filled. </p>
@@ -3140,7 +3140,7 @@ This example shows an item with all elements of <code>TEXT</code> and <code>COUN
 <h3 id="description-name">description &amp; name<a class="headerlink" href="#description-name" title="Permanent link"></a></h3>
 <p><code>description</code> - determines the name of the item in the inventory</p>
 <p><code>name</code> - determines the focus name of the item in the world</p>
-<p>In the scripts you often find that the description is asigned the value of <code>name</code>.
+<p>In the scripts you often find that the description is assigned the value of <code>name</code>.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span>
 <span class="normal"><a href="#example-7-2">2</a></span>
 <span class="normal"><a href="#example-7-3">3</a></span>
@@ -3156,7 +3156,7 @@ This example shows an item with all elements of <code>TEXT</code> and <code>COUN
 </span><span id="example-7-7"><a id="example-7-7" name="example-7-7"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
 This is used in the case where you want to show the name of the item on focus too.</p>
-<p>There is a second way used in the scripts though, for example with magic scrolls the focus name in the world is "Scroll" and in inventory the scroll carries the name of the spell. This is how it is done.
+<p>There is a second way used in the scripts though with, for example,magic scrolls - the focus name in the world is "Scroll" and in inventory the scroll carries the name of the spell. This is how it is done:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span>
 <span class="normal"><a href="#example-8-2">2</a></span>
 <span class="normal"><a href="#example-8-3">3</a></span>
@@ -3175,7 +3175,7 @@ This is used in the case where you want to show the name of the item on focus to
 <p>Both of these parameters are unused.</p>
 <div class="admonition trivia">
 <p class="admonition-title">Trivia</p>
-<p>In alpha ZenGin versions the player was able to destroy objects. This feature was abandoned in the course of the development.<br />
+<p>In alpha ZenGin versions the player was able to destroy objects. This feature was abandoned during the course of the development.<br />
 This video shows the reconstruction of this feature.<br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A3xoytKMLgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 </div>
@@ -3185,7 +3185,7 @@ This video shows the reconstruction of this feature.<br />
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-16 22:14:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 03:31:53</span>
       
     
   </small>

@@ -2642,7 +2642,7 @@
 
 
 <h1 id="event-functions">Event functions<a class="headerlink" href="#event-functions" title="Permanent link"></a></h1>
-<p>Event functions are functions sharing the same name, that can be defined multiple times, but only once per file. Such functions are useful for implementing <em>callback</em> type functions. Every time an event is called, all instances of the same name will be called. The event is <code>func</code> with a return type <code>event</code>. Events are defined globally, meaning, they ignore namespace they are in. To call an event from a script, use the external function <a href="../externals/#hlp-help-functions"><code>Hlp_DoEvent(var string funcName)</code></a>.</p>
+<p>Event functions are functions sharing the same name. It can be defined multiple times but only once per file. Such functions are useful for implementing <em>callback</em> type functions. Every time an event is called, all instances of the same name will be called. The event is <code>func</code> with a return type <code>event</code>. Events are defined globally, meaning they ignore namespace they are in. To call an event from a script, use the external function <a href="../externals/#hlp-help-functions"><code>Hlp_DoEvent(var string funcName)</code></a>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
 <span class="normal"><a href="#example-0-2"> 2</a></span>
 <span class="normal"><a href="#example-0-3"> 3</a></span>
@@ -2672,14 +2672,14 @@
 <li><code>func event GameInit()</code> - called when entering the main menu on game start</li>
 <li><code>func event GameLoop()</code> - called every frame when a world is loaded</li>
 </ul>
-<p>Define these in any file in your scripts, and they will be automatically called</p>
+<p>Define these in any file in your scripts, they will be automatically called</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:01:03</span>
       
     
   </small>

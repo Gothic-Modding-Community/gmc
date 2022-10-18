@@ -2716,12 +2716,12 @@
 
 
 <h1 id="sign-post-teleportation">Sign post teleportation<a class="headerlink" href="#sign-post-teleportation" title="Permanent link"></a></h1>
-<p>This is a short "problem solving" example, where we try to demonstrate the power of Daedalus injection using <a href="../../../">zParserExtender</a>. GaroK asked me, if there is a way to teleport to all of the sign posts in Khorinis to gather information for a Gothic wiki article.<br />
-The goal is to introduce a function, that will teleport you to every signpost in Khorinis with the press of a button.</p>
+<p>This is a short "problem-solving" example, where we try to demonstrate the power of Daedalus injection using <a href="../../../">zParserExtender</a>. GaroK asked me if there is a way to teleport to all the sign posts in Khorinis to gather information for a Gothic wiki article.<br />
+The goal is to introduce a function that will teleport you to every signpost in Khorinis with the press of a button.</p>
 <h2 id="the-problem">The problem<a class="headerlink" href="#the-problem" title="Permanent link"></a></h2>
 <p>In ZenGin you can teleport to named game objects with the <code>goto vob {vobname}</code> command. But since the signposts do not have a vobname defined, I had to figure out a different approach.</p>
 <h2 id="ascii-zen">ASCII ZEN<a class="headerlink" href="#ascii-zen" title="Permanent link"></a></h2>
-<p>We want to get all of the signposts position from Khorinis. The game world was loaded into one of the available world editor, found one of the signposts and noted the <code>visual</code> which dictates the model of the in-game object <code>nw_misc_sign_01.3DS</code>. Alternatively, you can find the standard vanilla objects from both games on this <a href="https://dziejekhorinis.org/dev/vobbilder/">website</a>.<br />
+<p>We want to get all the signposts position from Khorinis. The game world was loaded into one of the available world editor, I found one of the signposts and noted the <code>visual</code> which dictates the model of the in-game object <code>nw_misc_sign_01.3DS</code>. Alternatively, you can find the standard vanilla objects from both games on this <a href="https://dziejekhorinis.org/dev/vobbilder/">website</a>.<br />
 Next, the world was saved as a <code>ASCII ZEN</code> format. This allows us to write a macro to search for all instances of objects with a specific visual and extract the position vector.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">One signpost object</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
 <span class="normal"><a href="#example-0-2"> 2</a></span>
@@ -2802,7 +2802,7 @@ This constant is defined in the scripts and its content is used as the focus nam
 </div>
 <h2 id="the-injectable-script">The injectable script<a class="headerlink" href="#the-injectable-script" title="Permanent link"></a></h2>
 <p>As it is an injectable script, we have to specify the <code>META</code> tag.<br />
-Lets tell zParseExtender to insert the this code into the game parser.<br />
+Lets tell zParseExtender to insert this code into the game parser.<br />
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
 <span class="normal"><a href="#example-2-2">2</a></span>
 <span class="normal"><a href="#example-2-3">3</a></span>
@@ -2811,7 +2811,7 @@ Lets tell zParseExtender to insert the this code into the game parser.<br />
 </span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="w">    </span><span class="n">Parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Game</span><span class="w"></span>
 </span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-We want to teleport the player, for this we will need the <a href="../../helperclasses/#c_position"><code>C_Position</code></a> and <a href="../../helperclasses/#c_vob_data"><code>C_Vob_Data</code></a> classes.
+We want to teleport the player and for this we will need the <a href="../../helperclasses/#c_position"><code>C_Position</code></a> and <a href="../../helperclasses/#c_vob_data"><code>C_Vob_Data</code></a> classes.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1"> 1</a></span>
 <span class="normal"><a href="#example-3-2"> 2</a></span>
 <span class="normal"><a href="#example-3-3"> 3</a></span>
@@ -2860,7 +2860,7 @@ We want to teleport the player, for this we will need the <a href="../../helperc
 </span><span id="example-3-23"><a id="example-3-23" name="example-3-23"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DontWriteIntoArchive</span><span class="p">;</span><span class="w"> </span><span class="c">// turns of the serialization of this object to the save file </span><span class="w"></span>
 </span><span id="example-3-24"><a id="example-3-24" name="example-3-24"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-It turns out there is 54 instances of objects with the desired visual. Lets define <code>const int NUM_OF_SIGNS = 54</code> and a <code>const int MAX_COORDS = 3 * NUM_OF_SIGNS</code> - we will store 3 times 54 integers - for every signpost a <code>x</code>, <code>y</code> and <code>z</code> coordinate. And lastly a <code>const int</code> array containing all of the positions.
+It turns out there is 54 instances of objects with the desired visual. Let us define <code>const int NUM_OF_SIGNS = 54</code> and a <code>const int MAX_COORDS = 3 * NUM_OF_SIGNS</code> - we will store 3 times 54 integers - for every signpost a <code>x</code>, <code>y</code> and <code>z</code> coordinate. And lastly a <code>const int</code> array containing all the positions.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1"> 1</a></span>
 <span class="normal"><a href="#example-4-2"> 2</a></span>
 <span class="normal"><a href="#example-4-3"> 3</a></span>
@@ -3001,8 +3001,8 @@ Next define a built in <a href="../../events">event</a> <code>GameLoop</code> fu
 </span><span id="example-5-9"><a id="example-5-9" name="example-5-9"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <p>Let's look at the <code>jump_to_sign</code> function now.<br />
-This function is called on every <code>U</code> key press and go through all of the signposts and teleport the player to them.<br />
-At the start of the function we check if the index is not out of bounds, if it is, set it back to 0 and start over.
+This function is called on every <code>U</code> key press and goes through all the signposts and teleports the player to them.<br />
+At the start of the function we check if the index is not out of bounds and if it is, sets it back to 0 and starts over.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span>
 <span class="normal"><a href="#example-6-2">2</a></span>
 <span class="normal"><a href="#example-6-3">3</a></span>
@@ -3024,8 +3024,8 @@ Notice the use of <a href="../../externals/string/#str_format"><code>Str_Format<
 </span><span id="example-7-4"><a id="example-7-4" name="example-7-4"></a><span class="kd">var</span><span class="w"> </span><span class="kt">C_Position</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w">  </span><span class="n">pos</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">Vob_GetVobPosition</span><span class="p">(</span><span class="bp">hero</span><span class="p">);</span><span class="w"></span>
 </span><span id="example-7-5"><a id="example-7-5" name="example-7-5"></a><span class="kd">var</span><span class="w"> </span><span class="kt">C_Vob_Data</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vob_GetVobData</span><span class="p">(</span><span class="bp">hero</span><span class="p">);</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-Daedalus does not allow array access with variables (only constants and literals), to access the coordinate array we use a selection of <a href="../externals/PAR/">parser</a> functions.<br />
-First we get the game parser ID. Then we can use the <code>Par_GetSymbolValueIntArray</code> to access the the <code>sign_coordinates</code> array and assign the coordinates to the <code>pos</code> variable.
+Daedalus does not allow array access with variables (only constants and literals). To access the coordinate array we use a selection of <a href="../externals/PAR/">parser</a> functions.<br />
+Firstly we get the game parser ID. Then we can use the <code>Par_GetSymbolValueIntArray</code> to access the <code>sign_coordinates</code> array and assign the coordinates to the <code>pos</code> variable.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1"> 1</a></span>
 <span class="normal"><a href="#example-8-2"> 2</a></span>
 <span class="normal"><a href="#example-8-3"> 3</a></span>
@@ -3046,7 +3046,7 @@ First we get the game parser ID. Then we can use the <code>Par_GetSymbolValueInt
 </span><span id="example-8-9"><a id="example-8-9" name="example-8-9"></a><span class="n">pos</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-ZParserExtender">Par_GetSymbolValueIntArray</span><span class="p">(</span><span class="n">game_par_id</span><span class="w"> </span><span class="p">,</span><span class="n">arr_id</span><span class="w"> </span><span class="p">,</span><span class="n">tp_index</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 </span><span id="example-8-10"><a id="example-8-10" name="example-8-10"></a><span class="n">pos</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-ZParserExtender">Par_GetSymbolValueIntArray</span><span class="p">(</span><span class="n">game_par_id</span><span class="w"> </span><span class="p">,</span><span class="n">arr_id</span><span class="w"> </span><span class="p">,</span><span class="n">tp_index</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-And now comes the big trick. If you try to just change the position the dynamic and static collision is going to stop you at the first wall, tree or a mountain. To disable it, we can use the <code>C_Vob_Data</code> helper class, get players data, and disable both the static a dynamic collision, first we create a backup of the values, just so we can restore them back after the teleport.
+And now comes the big trick. If you try to just change the position the dynamic and static collision is going to stop you at the first wall, tree or a mountain. To disable it, we can use the <code>C_Vob_Data</code> helper class, get players data, and disable both the static a dynamic collision. First we create a backup of the values just so we can restore them back after the teleport.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span>
 <span class="normal"><a href="#example-9-2">2</a></span>
 <span class="normal"><a href="#example-9-3">3</a></span>
@@ -3061,7 +3061,7 @@ And now comes the big trick. If you try to just change the position the dynamic 
 </span><span id="example-9-6"><a id="example-9-6" name="example-9-6"></a><span class="n">data</span><span class="p">.</span><span class="n">CollDetectionDynamic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 </span><span id="example-9-7"><a id="example-9-7" name="example-9-7"></a><span class="n">data</span><span class="p">.</span><span class="n">CollDetectionStatic</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-Lets apply the changed data to the player and edit the position.
+Let us apply the changed data to the player and edit the position.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span>
 <span class="normal"><a href="#example-10-2">2</a></span>
 <span class="normal"><a href="#example-10-3">3</a></span>
@@ -3085,7 +3085,7 @@ Restore the collision detection data from the backup we made and set it.
 </span><span id="example-11-5"><a id="example-11-5" name="example-11-5"></a><span class="c">// apply the edited data to player</span><span class="w"></span>
 </span><span id="example-11-6"><a id="example-11-6" name="example-11-6"></a><span class="n">Vob_SetVobData</span><span class="p">(</span><span class="bp">hero</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-Finally we advance the index to jump to another singpost.
+Finally, we advance the index to jump to another signpost.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span>
 <span class="normal"><a href="#example-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="c">// advance the index</span><span class="w"></span>
 </span><span id="example-12-2"><a id="example-12-2" name="example-12-2"></a><span class="n">tp_index</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
@@ -3096,7 +3096,7 @@ Finally we advance the index to jump to another singpost.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:01:03</span>
       
     
   </small>

@@ -2716,7 +2716,7 @@
 <p class="admonition-title">Acknowledgment</p>
 <p>Heavily inspired by the amazing documentation site <a href="http://www.gothic-library.ru">Gothic library</a></p>
 </div>
-<p>The <code>C_SVM</code> class is used to define sound dialogues (smalltalk, reactions), that are defined for every <a href="">C_NPC.voice</a>.</p>
+<p>The <code>C_SVM</code> class is used to define sound dialogues (smalltalk, reactions) that are defined for every <a href="">C_NPC.voice</a>.</p>
 <h2 id="class-definition">Class definition<a class="headerlink" href="#class-definition" title="Permanent link"></a></h2>
 <p><code>C_SVM</code> class is the only class with variable number of members. The <code>C_SVM</code> definition in the scripts dictates the content of the class. Every Gothic game has a different number of SVM entries. As an interesting information (more than anything else) we include a table with the numbers of voice lines and voices below.</p>
 <table>
@@ -2766,7 +2766,7 @@
 </span></code></pre></div></td></tr></table></div></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The value <code>SVM_MODULES = 18</code> means 18 SVMs will be parsed by the engine and because the first one <code>SVM_0</code> is empty, the final number of voices is 18 - 1 = 17.</p>
+<p>The value <code>SVM_MODULES = 18</code> means 18 SVMs will be parsed by the engine and because the first one, <code>SVM_0</code>, is empty, the final number of voices is 18 - 1 = 17.</p>
 </div>
 <p>Instances of the <code>C_SVM</code> class <strong>must</strong> have the name <code>SVM_XXX</code>.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
@@ -2781,8 +2781,8 @@ The first instance <code>svm_0</code> is always empty, it is used internally by 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">instance</span><span class="w"> </span><span class="n">svm_0</span><span class="p">(</span><span class="nc">c_svm</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <h2 id="usage-in-the-scripts">Usage in the scripts<a class="headerlink" href="#usage-in-the-scripts" title="Permanent link"></a></h2>
-<p>While some of the defined SVMs are used automatically by the engine - the 20 smalltalk lines for example, others are used in the scripts.<br />
-To instruct the engine to run a specific SVM a <code>AI_OutputSVM</code> external function is used, in the original scripts it is wrapped in a script function <a href="https://github.com/VaanaCZ/gothic-1-classic-scripts/blob/6204f608f506f169035c58552197285bce4ffa39/_work/Data/Scripts/Content/AI/AI_Intern/B_Functions.d#L111-L120">B_Say</a>.<br />
+<p>While some defined SVMs are used automatically by the engine - the 20 smalltalk lines for example, others are used in the scripts.<br />
+To instruct the engine to run a specific SVM, external function <code>AI_OutputSVM</code> is used. In the original scripts it is wrapped in a script function <a href="https://github.com/VaanaCZ/gothic-1-classic-scripts/blob/6204f608f506f169035c58552197285bce4ffa39/_work/Data/Scripts/Content/AI/AI_Intern/B_Functions.d#L111-L120">B_Say</a>.<br />
 To reference the SVM, you use the <code>$</code> symbol followed by the name of the member variable in the <code>C_SVM</code> class definition.<br />
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span>
 <span class="normal"><a href="#example-3-2">2</a></span>
@@ -2827,7 +2827,7 @@ Here the <code>$NOLEARNNOPOINTS</code> references the <code>var string NoLearnNo
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-16 22:14:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 03:31:53</span>
       
     
   </small>

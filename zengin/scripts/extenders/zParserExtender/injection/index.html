@@ -2688,7 +2688,7 @@
 
 
 <h1 id="daedalus-injection">Daedalus Injection<a class="headerlink" href="#daedalus-injection" title="Permanent link"></a></h1>
-<p>Script injection is a process of injecting Daedalus scripts on runtime, without the need to recompile the scripts. This is essential for Union plugins that need to alter the scripts in a certain way, for hotfixes or just testing scripts without the need to recompile the whole <code>.dat</code> file.</p>
+<p>Script injection is a process of injecting Daedalus scripts on runtime without the need to recompile the scripts. This is essential for Union plugins that need to alter the scripts in a certain way, either for hotfixes or just for testing scripts without the need to recompile the whole <code>.dat</code> file.</p>
 <p>To inject a script, simply put a <code>.d</code> or <code>.src</code> file in <code>Gothic/System/Autorun</code> directory and run the game.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -2701,11 +2701,11 @@
 </ol>
 <h2 id="api-script">API script<a class="headerlink" href="#api-script" title="Permanent link"></a></h2>
 <p>API scripts are <code>.d</code> files placed in <code>Autorun</code> subdirectories and are used as a dependency.
-It is assumed, that the API script is not called on its own (or from a <code>.src</code>) file, but is called using the dependency keyword <code>After</code> in one of the injected script files' META block.</p>
+It is assumed that the API script is not called on its own (or from a <code>.src</code>) file, but is called using the dependency keyword <code>After</code> in one of the injected script files' META block.</p>
 <p>These scripts are meant to contain ready-made solution that need to be used by many other scripts as a dependency.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If the file specified in the <code>After</code> tag in the META block does not exist, the current file will not be parsed and injected, since the dependency is missing, it would fail. Due to this it is best to ship the dependency in the Autorun directory, even if it comes from a different plugin.</p>
+<p>If the file specified in the <code>After</code> tag in the META block does not exist, the current file will not be parsed and injected since the dependency is missing, and it would fail. Due to this it is best to ship the dependency in the Autorun directory even if it comes from a different plugin.</p>
 </div>
 
   <hr>
@@ -2713,7 +2713,7 @@ It is assumed, that the API script is not called on its own (or from a <code>.sr
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-08-29 23:43:28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:01:03</span>
       
     
   </small>

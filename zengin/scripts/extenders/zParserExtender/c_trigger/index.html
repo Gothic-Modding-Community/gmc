@@ -2758,7 +2758,7 @@
 
 
 <h1 id="trigger-functions-and-the-c_trigger-class">Trigger functions and the <code>C_Trigger</code> class<a class="headerlink" href="#trigger-functions-and-the-c_trigger-class" title="Permanent link"></a></h1>
-<p>zParserExtender also implements cyclical functions (called triggers - not to e confused with triggers in ZEN files) similar to a part of the functionality implemented in <a href="../../../../../notready/">LeGo AI_Functions</a>. These functions are called independently after a specified period of time. These triggers can also store a user information, up to 16 int variables can be stored in each trigger, as well as <code>self</code>, <code>other</code> and <code>victim</code> instances.</p>
+<p>zParserExtender also implements cyclical functions called triggers - not to e confused with triggers in ZEN files, similar to a part of the functionality implemented in <a href="../../../../../notready/">LeGo AI_Functions</a>. These functions are called independently after a specified period of time. These triggers can also store user information. Up to 16 int variables can be stored in each trigger as well as <code>self</code>, <code>other</code> and <code>victim</code> instances.</p>
 <h2 id="class-definition">Class definition<a class="headerlink" href="#class-definition" title="Permanent link"></a></h2>
 <p>To define a trigger, the <code>C_Trigger</code> class is used:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
@@ -2813,7 +2813,7 @@
 </span><span id="example-1-9"><a id="example-1-9" name="example-1-9"></a><span class="w">                                        </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">oth</span><span class="p">,</span><span class="w"></span>
 </span><span id="example-1-10"><a id="example-1-10" name="example-1-10"></a><span class="w">                                        </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">vct</span><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div></td></tr></table></div>
-<p>Both of these functions return an instance of <code>C_Trigger</code>. You can, of course, configure the instance after its creation (for example to fill in the <code>AIVariables</code> with relevant data). The trigger function has the required signature if 'func int f()'. It must return a value indicating the state of the loop - if the function returns <code>LOOP_END</code> the trigger will be stopped and the instance deleted, if <code>LOOP_CONTINUE</code> is returned, the function will be called again after <code>Delay</code> ms have passed.</p>
+<p>Both of these functions return an instance of <code>C_Trigger</code>. You can of course configure the instance after its creation. You can, for example, fill in the <code>AIVariables</code> with relevant data. The trigger function has the required signature if 'func int f()'. It must return a value indicating the state of the loop. If the function returns <code>LOOP_END</code> the trigger will be stopped and the instance deleted. If <code>LOOP_CONTINUE</code> is returned, the function will be called again after <code>Delay</code> ms have passed.</p>
 <h2 id="poison-example">Poison example<a class="headerlink" href="#poison-example" title="Permanent link"></a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
 <span class="normal"><a href="#example-2-2">2</a></span>
@@ -2868,14 +2868,14 @@
 <p>Triggers can be divided into two types:</p>
 <ul>
 <li>Global trigger ( AI_StartTriggerScript )</br>
-trigger creted using this function works in all worlds. A trigger is considered global by default if neither <code>self</code> nor <code>other</code> nor <code>victim</code> has been provided for it.</li>
+trigger created using this function works in all worlds. A trigger is considered global by default if neither <code>self</code> nor <code>other</code> nor <code>victim</code> has been provided for it.</li>
 <li>Local trigger ( AI_StartTriggerScriptEx)</br>
-trigger created with this function only works in the world in which it was created. A trigger is considered local if it has been presented with at least one NPC in <code>self</code>, <code>other</code> or <code>victim</code> (not null ). If you want to create a trigger, but without linking to any NPC, it is recommended to simply pass hero as <code>self</code> to the trigger.</li>
+trigger created with this function only works in the world in which it was created. A trigger is considered local if it has been presented with at least one NPC in <code>self</code>, <code>other</code> or <code>victim</code> (not null). If you want to create a trigger without linking it to any NPC, it is recommended to simply pass hero as <code>self</code> to the trigger.</li>
 </ul>
 <h2 id="saving">Saving<a class="headerlink" href="#saving" title="Permanent link"></a></h2>
-<p>The plugin creates a new save archive to save the information of the triggers, that does not conflict with any of the built-in save files.</p>
+<p>The plugin creates a new save archive to save the information of the triggers that does not conflict with any of the built-in save files.</p>
 <h2 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link"></a></h2>
-<p>To search for a specifin trigger, for example by NPC, the <a href="../externals/#ai-functions-for-working-with-ai">trigger external functions</a> can be used.</p>
+<p>To search for a specific trigger, for example by NPC, the <a href="../externals/#ai-functions-for-working-with-ai">trigger external functions</a> can be used.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
 <span class="normal"><a href="#example-4-2">2</a></span>
 <span class="normal"><a href="#example-4-3">3</a></span>
@@ -2900,7 +2900,7 @@ trigger created with this function only works in the world in which it was creat
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:01:03</span>
       
     
   </small>

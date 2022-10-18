@@ -2729,7 +2729,7 @@
 
 <h1 id="menu-function">Menu function<a class="headerlink" href="#menu-function" title="Permanent link"></a></h1>
 <h2 id="menu_searchitems">Menu_SearchItems<a class="headerlink" href="#menu_searchitems" title="Permanent link"></a></h2>
-<p>Find all <code>C_MenuItem</code> object instances by the mask and automatically places them in the current menu instance</p>
+<p>Finds all <code>C_MenuItem</code> object instances by the mask and automatically places them in the current menu instance</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Menu_SearchItems</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
@@ -2737,7 +2737,7 @@
 </ul>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link"></a></h3>
 <p>This function is used in the Union Menu <a href="../../injection#api-script">API script</a>.<br />
-In this script the <code>Menu_SearchItems</code> external is used to collect all Union menu scripts, that are placed into the Union &amp; Plugins menu, that will appear in the game if you use any of the plugins, that use this feature.  </p>
+In this script the <code>Menu_SearchItems</code> external is used to collect all Union menu scripts that are placed into the Union &amp; Plugins menu that will appear in the game if you use any of the plugins that use this feature.  </p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Usage of Menu_SearchItems external function</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1"> 1</a></span>
 <span class="normal"><a href="#example-1-2"> 2</a></span>
 <span class="normal"><a href="#example-1-3"> 3</a></span>
@@ -2760,8 +2760,8 @@ In this script the <code>Menu_SearchItems</code> external is used to collect all
 </span><span id="example-1-10"><a id="example-1-10" name="example-1-10"></a><span class="w">    </span><span class="vi">Flags</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">Flags</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MENU_SHOW_INFO</span><span class="p">;</span><span class="w"></span>
 </span><span id="example-1-11"><a id="example-1-11" name="example-1-11"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-<p>In this case all instances of the name <code>MENUITEM_UNION_AUTO_*</code> (<code>*</code> being a wildcard, that can be substituted with anything). The plugin will search the scripts and find all instances (in the case of <a href="">zGamePad</a> it is <a href="https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zGamePad_Menu.d#L28-L33"><code>MenuItem_Union_Auto_zGamePad</code></a>)</p>
-<p>This example comes from the <code>zUnionMenu.d</code> injectable <a href="../../injection#api-script">API script</a>, that is part of the <a href="">zGamePad</a> plugin, <a href="https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zUnionMenu.d#L47-L57">GitHub link</a>.</p>
+<p>In this case all instances are of the name <code>MENUITEM_UNION_AUTO_*</code> where <code>*</code> is a wildcard that can be substituted with anything. The plugin will search the scripts and find all instances (in the case of <a href="">zGamePad</a> it is <a href="https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zGamePad_Menu.d#L28-L33"><code>MenuItem_Union_Auto_zGamePad</code></a>)</p>
+<p>This example comes from the <code>zUnionMenu.d</code> injectable <a href="../../injection#api-script">API script</a> that is part of the <a href="">zGamePad</a> plugin, <a href="https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zUnionMenu.d#L47-L57">GitHub link</a>.</p>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
 <span class="normal"><a href="#example-2-2">2</a></span>
@@ -2777,7 +2777,7 @@ In this script the <code>Menu_SearchItems</code> external is used to collect all
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:01:03</span>
       
     
   </small>

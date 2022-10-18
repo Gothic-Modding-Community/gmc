@@ -2842,8 +2842,8 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CC_Register</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">cmdPrefix</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">description</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <ul>
-<li><code>f</code> - This function is executed when the command <code>cmdPrefix</code> is entered in the console. The function signature is <code>func string f(var string p0)</code>. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.</li>
-<li><code>cmdPrefix</code> - This is the command that can be entered in the console.</li>
+<li><code>f</code> - This function is executed when the <code>cmdPrefix</code> command is entered in the console. The function signature is <code>func string f(var string p0)</code>. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.</li>
+<li><code>cmdPrefix</code> - This is a command that can be entered in the console.</li>
 <li><code>description</code> - This text appears next to the command (in zSpy) when you use the <code>help</code> command in the console.</li>
 </ul>
 <h3 id="cc_remove">CC_Remove<a class="headerlink" href="#cc_remove" title="Permanent link"></a></h3>
@@ -2863,14 +2863,14 @@
 </ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h2>
 <h3 id="basic-command-example">Basic command example<a class="headerlink" href="#basic-command-example" title="Permanent link"></a></h3>
-<p>As a basic example let's create a version command that prints a version of our modification.<br />
-First we declare a constant <code>string</code> variable to hold the version string to be shown.
+<p>As a basic example - let us create a version command that prints a version of our modification.<br />
+Firstly, we declare a constant <code>string</code> variable to hold the version string to be shown.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Mod_Version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;My mod version 0.1alpha&quot;</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
 Next we create the command function.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Notice the correct function signature. If you do not adhere to the correct function signature the command will crash the game.</p>
+<p>Notice the correct function signature. If you do not adhere to the correct function signature, the command will crash the game.</p>
 </div>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span>
 <span class="normal"><a href="#example-5-2">2</a></span>
@@ -2882,7 +2882,7 @@ Next we create the command function.</p>
 </span><span id="example-5-4"><a id="example-5-4" name="example-5-4"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">Mod_Version</span><span class="p">;</span><span class="w"></span>
 </span><span id="example-5-5"><a id="example-5-5" name="example-5-5"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-Then we have to register the functions. For convenience I create a new <code>RegisterConsoleFunctions</code> function to initialize all console commands. The function is really simple.
+We then have to register the functions. For convenience, I created a new <code>RegisterConsoleFunctions</code> function to initialize all console commands. The function is really simple.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span>
 <span class="normal"><a href="#example-6-2">2</a></span>
 <span class="normal"><a href="#example-6-3">3</a></span>
@@ -2891,7 +2891,7 @@ Then we have to register the functions. For convenience I create a new <code>Reg
 </span><span id="example-6-3"><a id="example-6-3" name="example-6-3"></a><span class="w">    </span><span class="n">CC_Register</span><span class="w"> </span><span class="p">(</span><span class="n">CC_ModVersion</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mod_version&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Version of my amazing mod.&quot;</span><span class="p">);</span><span class="w"></span>
 </span><span id="example-6-4"><a id="example-6-4" name="example-6-4"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-Lastaly we have to call this function from <code>INIT_GLOBAL</code> function.
+Lastly, we have to call this function from <code>INIT_GLOBAL</code> function.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1"> 1</a></span>
 <span class="normal"><a href="#example-7-2"> 2</a></span>
 <span class="normal"><a href="#example-7-3"> 3</a></span>
@@ -2932,7 +2932,7 @@ Lastaly we have to call this function from <code>INIT_GLOBAL</code> function.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 15:51:23</span>
       
     
   </small>

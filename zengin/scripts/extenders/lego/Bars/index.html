@@ -2962,7 +2962,7 @@
 
 
 <h1 id="bars">Bars<a class="headerlink" href="#bars" title="Permanent link"></a></h1>
-<p>With this package it is very easy to add new bars for e.g. stamina.</p>
+<p>This package makes it very easy to add new bars, for e.g. stamina.</p>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link"></a></h2>
 <ul>
 <li>PermMem</li>
@@ -2997,7 +2997,7 @@
 <li><code>handle</code> - handle returned from <code>Bar_Create</code></li>
 </ul>
 <h3 id="bar_setmax">Bar_SetMax<a class="headerlink" href="#bar_setmax" title="Permanent link"></a></h3>
-<p>Changes a bar's maximum value, but does not update its bar length (only <code>Bar_SetPercent</code>, <code>Bar_SetPromille</code> and <code>Bar_SetValue</code>)
+<p>Changes a bar's maximum value but does not update its bar length (only <code>Bar_SetPercent</code>, <code>Bar_SetPromille</code> and <code>Bar_SetValue</code>)
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetMax</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <ul>
@@ -3013,7 +3013,7 @@
 <li><code>value</code> - new value of the bar</li>
 </ul>
 <h3 id="bar_setpercent">Bar_SetPercent<a class="headerlink" href="#bar_setpercent" title="Permanent link"></a></h3>
-<p>Sets the value of the bar, but as a percentage (0..100).
+<p>Sets the value of the bar but as a percentage (0..100).
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetPercent</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">percent</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <ul>
@@ -3021,7 +3021,7 @@
 <li><code>percent</code> - new value of the bar in percent</li>
 </ul>
 <h3 id="bar_setpromille">Bar_SetPromille<a class="headerlink" href="#bar_setpromille" title="Permanent link"></a></h3>
-<p>Sets the value of the bar, but in per mille (0..1000).
+<p>Sets the value of the bar but per mille (0..1000).
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Bar_SetPromille</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">promille</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <ul>
@@ -3149,10 +3149,10 @@ The <code>GothicBar</code> prototype is a bar that mimics the standard Gothic st
 </span><span id="example-15-12"><a id="example-15-12" name="example-15-12"></a><span class="w">    </span><span class="vi">valueMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
 </span><span id="example-15-13"><a id="example-15-13" name="example-15-13"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
-<p>It's much easier to set up a new instance using this prototype. Standard vanilla status bar  can be easily created using the <code>GothicBar</code> instance, as seen in the example below.<br />
+<p>It is much easier to set up a new instance using this prototype. Standard vanilla status bar  can be easily created using the <code>GothicBar</code> instance, as seen in the example below.<br />
 GothicBar is located in the middle of the screen and looks exactly like the Gothic Underwater Bar.<br />
-But lets make a bar that hangs in the top left of the picture and displays the experience points.<br />
-Derive again GothicBar and only change the position. Of course, add a loop using the FrameFunctions:
+But let us make a bar that hangs in the top left of the picture and displays the experience points.<br />
+Derive again GothicBar and only change the position. Of course add a loop using the FrameFunctions:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-16-1"> 1</a></span>
 <span class="normal"><a href="#example-16-2"> 2</a></span>
 <span class="normal"><a href="#example-16-3"> 3</a></span>
@@ -3217,7 +3217,7 @@ Derive again GothicBar and only change the position. Of course, add a loop using
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 15:51:23</span>
       
     
   </small>

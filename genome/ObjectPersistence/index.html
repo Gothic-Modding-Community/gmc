@@ -2776,13 +2776,13 @@
 
 
 <h1 id="object-persistence">Object persistence<a class="headerlink" href="#object-persistence" title="Permanent link"></a></h1>
-<div class="admonition note">
-<p class="admonition-title">Warning about Risen 2, 3 and ELEX 1 and 2</p>
-<p>The following information only applies to the games Gothic 3 (2006) and Risen (2009). While newer Genome engine games share the same overall concepts, they have very important implementation details that would make them require their own section.</p>
-</div>
-<p>Due to the nature of the program, the engine is required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, Genome implements an object persistence system using its own built-in runtime type information (RTTI) system.</p>
-<p>By using special preprocessor macros, any class derived from <code>bCObjectBase</code> may declare its own member properties in such a way that when the object is then written into a file using the <code>bCAccessorPropertyObject</code> class, its associated properties will be automatically serialized into the stream. When the object is then read back from the file, the class will be automatically initialized using the stored members.</p>
-<p>Additionally, classes may overload the <code>Read</code> and <code>Write</code> (<code>OnRead</code> and <code>OnWrite</code> in Risen 1) virtual methods, that allow the class to save additional data required during parsing (such as paths to other necessary files).</p>
+<p><strong>⚠ Please note the following warning</strong> about Risen 2, 3 and ELEX 1 and 2"</p>
+<blockquote>
+<p>The following information only applies to Gothic 3 (2006) and Risen (2009). While newer Genome engine games share the same overall concepts, they have significant implementation differences that warrant their own section.</p>
+</blockquote>
+<p>The engine is, due to the nature of the games themselves, required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, Genome implements an object persistence system using its own built-in runtime type information (RTTI) system.</p>
+<p>Any class derived from <code>bCObjectBase</code> may declare its own member properties in such a way that when the object is then written into a file using the <code>bCAccessorPropertyObject</code> class, its associated properties will be automatically serialized into the stream by using special preprocessor macros. When the object is read back from the file, the class will be automatically initialized using the stored members.</p>
+<p>Additionally, classes may overload the <code>Read</code> and <code>Write</code> (<code>OnRead</code> and <code>OnWrite</code> in Risen 1) virtual methods that allow the class to save additional data required during parsing such as paths to other necessary files.</p>
 <p>As this system is quite flexible, it is used to store most of the game's data, from meshes, animations and textures to level and quest data. This is quite different from ZenGin, as <a href="../../zengin/general_info/ObjectPersistence/">its object persistence system</a> is only used for worlds, saves, output units and parts of compiled meshes.</p>
 <h2 id="file-format">File format<a class="headerlink" href="#file-format" title="Permanent link"></a></h2>
 <h3 id="files">Files<a class="headerlink" href="#files" title="Permanent link"></a></h3>
@@ -3034,13 +3034,15 @@
 </span><span id="example-7-3"><a id="example-7-3" name="example-7-3"></a><span class="n">object</span><span class="p">.</span><span class="n">someData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
 <p>If we now serialized, or to use the engine's term "archived", this instance into an ASCII stream, the result would look like this:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a>
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-17 23:29:47</span>
       
     
   </small>

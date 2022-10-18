@@ -2702,13 +2702,13 @@
 
 
 <h1 id="hooking-daedalus">Hooking Daedalus<a class="headerlink" href="#hooking-daedalus" title="Permanent link"></a></h1>
-<p>Daedalus hooking is one of the most powerful features of this plugin. Hooking is a mechanism that allows you to replace any scripted object with new one. To do thos, you must define a new object with the same type, name and in the same <a href="../namespaces/">namespace</a>.</p>
-<p>Hook/replacement will be performed only, if the <code>MergeMode</code> setting is set to true for the current script in the META block, or in the parameter of the same name in the <code>.ini</code> file of the mod.</p>
+<p>Daedalus hooking is one of the most powerful features of this plugin. Hooking is a mechanism that allows you to replace any scripted object with a new one. To do this, you must define a new object with the same type, name and in the same <a href="../namespaces/">namespace</a>.</p>
+<p>Hook/replacement will be performed only if the <code>MergeMode</code> setting is set to true for the current script in the META block or in the parameter of the same name in the <code>.ini</code> file of the mod.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you forget to turn on the <code>MergeMode</code>, the compilation will fail with the redefinition error.</p>
 </div>
-<p>When an object (instanc, function or variable) is hooked/replaced, the original one is available under the same name with the <code>_old</code> suffix (<code>PC_Hero</code> -&gt; <code>PC_Hero_old</code>), this allows you to refer to the old object.</p>
+<p>When an object (instance, function or variable) is hooked/replaced, the original one is available under the same name with the <code>_old</code> suffix (<code>PC_Hero</code> -&gt; <code>PC_Hero_old</code>). This allows you to refer to the old object.</p>
 <h2 id="function-hook-example">Function hook example<a class="headerlink" href="#function-hook-example" title="Permanent link"></a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
 <span class="normal"><a href="#example-0-2"> 2</a></span>
@@ -2737,7 +2737,7 @@
 <p>This kind of substitution works for instances and variables too.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>While hooking instances, you have to take care not to call the prototype. Prototype should be always changed back to the original class.</p>
+<p>While hooking an instances, you have to take care not to call the prototype. Prototype should be always changed back to the original class.</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">This is wrong</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
 <span class="normal"><a href="#example-1-2">2</a></span>
 <span class="normal"><a href="#example-1-3">3</a></span>
@@ -2761,9 +2761,9 @@ This leads to a double call of <code>prototype Npc_Default</code> which is consi
 </span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="w">    </span><span class="vi">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pepe&quot;</span><span class="p">;</span><span class="w"></span>
 </span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a><span class="p">};</span><span class="w">  </span>
 </span></code></pre></div></td></tr></table></div>
-This way the prototype is called in the original function <code>pc_hero_old()</code> and not for the second time, when creating the new hooked instance.</p>
+This way the prototype is called in the original function <code>pc_hero_old()</code> and not for the second time when creating the new hooked instance.</p>
 <h2 id="dialogue-hook-example">Dialogue hook example<a class="headerlink" href="#dialogue-hook-example" title="Permanent link"></a></h2>
-<p>The hooking mechanism is designed to introduce new dialogues into the game, as well as to replace old ones with hooks. The scripter can create new merchants, quests, dialogues, as well as attach svm phrases to them.</p>
+<p>The hooking mechanism is designed to introduce new dialogues into the game as well as replacing old ones with hooks. The scripter can create new merchants, quests, dialogues, as well as attach svm phrases to them.</p>
 <p>All new or replaced dialogues will immediately become available, including from saves. In the event that new dialogs are disabled (plugin or script removed), the engine will continue to keep them in the save file, which will allow the dialogs to return at any time with the same state they were in the last time.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2785,7 +2785,7 @@ This way the prototype is called in the original function <code>pc_hero_old()</c
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:01:03</span>
       
     
   </small>

@@ -2908,7 +2908,7 @@
 </span></code></pre></div></td></tr></table></div>
 <h2 id="optional-namespace-specification">Optional namespace specification<a class="headerlink" href="#optional-namespace-specification" title="Permanent link"></a></h2>
 <p>There are three cases where the namespace prefix is optional</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Shares the same namespace</label><label for="__tabbed_2_2">If the funciton is in higher level namespace</label><label for="__tabbed_2_3">If <code>using</code> is psecified in the META block</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Shares the same namespace</label><label for="__tabbed_2_2">If the function is in higher level namespace</label><label for="__tabbed_2_3">If <code>using</code> is specified in the META block</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1"> 1</a></span>
@@ -3023,7 +3023,7 @@
 </div>
 </div>
 <h2 id="global-namespace-and-daedalus-hooking">Global namespace and Daedalus hooking<a class="headerlink" href="#global-namespace-and-daedalus-hooking" title="Permanent link"></a></h2>
-<p>Namespace can not only be defined to an existing symbol, but also to define new ones. Next code example shows how to implement a hook to a global instance.</p>
+<p>Namespace can not only be defined to an existing symbol but also to define new ones. Next code example shows how to implement a hook to a global instance.</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1"> 1</a></span>
 <span class="normal"><a href="#example-7-2"> 2</a></span>
 <span class="normal"><a href="#example-7-3"> 3</a></span>
@@ -3046,14 +3046,14 @@
 </span><span id="example-7-10"><a id="example-7-10" name="example-7-10"></a><span class="w">    </span><span class="p">};</span><span class="w"></span>
 </span><span id="example-7-11"><a id="example-7-11" name="example-7-11"></a><span class="p">};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div>
-To hook and object not only the signature, but also the namespace has to match. To hook an instance from a different space it is syntactically allowed to explicitly specify to which namespace the object will belong. This means that to hook instance <code>ItAr_Pir_L_Addon</code> from the namespace <code>zTestNamespace01</code> to a global namespace, you have to refer to the global namespace using the namespace operator <code>:</code>. Since the function will be defined globally (as every symbol in ZenGin), it will be a part of the <code>zTestNamespace01</code>, that means that all functions will be local to this namespace.</p>
+To hook an object, both signature and namespace has to match. It is syntactically allowed to hook an instance from a different space. Specify explicitly to which namespace the object will belong. This means that to hook instance <code>ItAr_Pir_L_Addon</code> from the namespace <code>zTestNamespace01</code> to a global namespace, you have to refer to the global namespace using the namespace operator <code>:</code>. Since the function will be defined globally (as every symbol in ZenGin), it will be a part of the <code>zTestNamespace01</code> which means that all functions will be local to this namespace.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:08:52</span>
       
     
   </small>

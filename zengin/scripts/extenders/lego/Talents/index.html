@@ -2824,12 +2824,12 @@
 
 
 <h1 id="talents">Talents<a class="headerlink" href="#talents" title="Permanent link"></a></h1>
-<p>The Talents package does two things</p>
+<p>The Talents package does two things:</p>
 <ol>
-<li>save any number of values for a specific NPC (effectively AIVar array extension),</li>
+<li>save any number of values for a specific NPC (effectively AIVar array extension).</li>
 <li>identify NPC by unique ID.</li>
 </ol>
-<p>Talents package uses one free AIVar variables, the default is AIVar with the index 89, but can be customized in <code>Userconst.d</code> the <a href="https://github.com/Lehona/LeGo/blob/55ae79a781f79cda649fa42d7f64250befa71212/Userconst.d#L120"><code>AIV_TALENT</code> constant</a>.</p>
+<p>Talents package uses one free AIVar variables, the default is AIVar with the index 89 that can be customized in <code>Userconst.d</code> the <a href="https://github.com/Lehona/LeGo/blob/55ae79a781f79cda649fa42d7f64250befa71212/Userconst.d#L120"><code>AIV_TALENT</code> constant</a>.</p>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link"></a></h2>
 <ul>
 <li>PermMem</li>
@@ -2868,7 +2868,7 @@
 <li><code>return</code> NPC pointer</li>
 </ul>
 <h3 id="tal_createtalent">TAL_CreateTalent<a class="headerlink" href="#tal_createtalent" title="Permanent link"></a></h3>
-<p>Creates a talent, into which you can later save a value for every NPC (just like AI_Var).
+<p>Creates a talent into which you can later save a value for every NPC (just like AI_Var).
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">TAL_CreateTalent</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <ul>
@@ -2884,7 +2884,7 @@
 <li><code>value</code> - Value to be set</li>
 </ul>
 <h3 id="tal_getvalue">TAL_GetValue<a class="headerlink" href="#tal_getvalue" title="Permanent link"></a></h3>
-<p>Returns the value of a save talent for specified NPC.
+<p>Returns the value of a saved talent for specified NPC.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">TAL_GetValue</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">talent</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </span></code></pre></div></td></tr></table></div></p>
 <ul>
@@ -2897,7 +2897,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-14 19:14:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 15:51:23</span>
       
     
   </small>
