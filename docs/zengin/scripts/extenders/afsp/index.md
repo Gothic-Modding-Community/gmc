@@ -1,5 +1,5 @@
 # AF Script Packet
-**A**uronen & **F**awkes' script packet is a script package built on top of [Ikarus](../ikarus/index.md) and [LeGo](../lego/index.md). It implements many features, there is also a Union version (that is in its infancy stage).
+**A**uronen & **F**awkes' script packet is a script package built on top of [Ikarus](../ikarus/index.md) and [LeGo](../lego/index.md). It implements many features and there is also a Union version which is in its infancy stage.
 
 !!! Note
     AFSP's documentation is lacking (@Auronen: "My fault"). The authors will host the documentation on GMC.
