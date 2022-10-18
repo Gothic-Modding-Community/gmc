@@ -1,5 +1,5 @@
 # Gamepad keys
-In order to set gamepad keys, you have to know the key codes, they are listed below.
+In order to set gamepad keys, you have to know the key codes as they are listed below.
 ```
 JOY_UP
 JOY_DOWN

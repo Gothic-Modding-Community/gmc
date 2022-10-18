@@ -1,14 +1,14 @@
-# Gampad controls
-zGamePad plugin comes with a default control scheme, but it is possible to create your own. The plugin will search for any file with the `.gamepad.overlay` extension placed in `Gothic/System` directory, or in any of the loaded `.mod` and `.vdf` archives.
+# Gamepad controls
+The zGamePad plugin comes with a default control scheme but it is possible to create your own. The plugin will search for any file with the `.gamepad.overlay` extension placed in `Gothic/System` directory or in any of the loaded `.mod` and `.vdf` archives.
 
 ## Control file syntax
 Gamepad controls are set using the `.gamepad` configuration file. This file encodes the controls for different actions in the game and the hint string in multiple languages.
 
 !!! Warning
-    The `.gamepad` file must be encoded in Unicode or UTF-8 to accomodate the multilingual hint strings.
+    The `.gamepad` file must be encoded in Unicode or UTF-8 to accommodate the multilingual hint strings.
 
 ### Regions
-The format supports code blocks specified by the `#region` and `#endregion` keywords, these regions do not have any syntactical meaning, they offer a convenient way to collapse sections of the code in editors with the syntax highlighting capabilites (Notepad++)
+The format supports code blocks specified by the `#region` and `#endregion` keywords. These regions do not have any syntactical meaning, they only offer a convenient way to collapse sections of the code in editors with the syntax highlighting capabilities such as Notepad++
 
 ```title="Regions"
 #region strings
@@ -21,10 +21,10 @@ The format supports code blocks specified by the `#region` and `#endregion` keyw
 ```
 
 ### Comments
-Comments are useful for quick informations, or just to disable some old code, that might come in handy later. The `.gamepad` file syntax supports C++ line comments using two forward slashes `//`.
+Comments are useful for quick information or just to disable some old code that might come in handy later. The `.gamepad` file syntax supports C++ line comments using two forward slashes `//`.
 
 !!! warning
-    Comments can be used only at the start of any given line!
+    Comments can only be used at the start of any given line!
 
 ```title="Comments"
 // this is a comment
@@ -57,7 +57,7 @@ The string `name` must be unique and is used to reference the string while defin
 The language tag matches the language in `SystemPack.ini`. If the file does not contain the user's language, English will be taken by default. If there is no English, then the first one.
 
 ### Control bindings
-A binding is a description of an event that includes emulation object and conditions. Hints are part of the binding.
+A binding is a description of an event that includes emulation object and conditions. Hints are part of the binding.  
 The general structure of the bind starts with the keyword `KeyRecord` and has the following format:
 ```title="Control binding"
 KeyRecord [modifier]
@@ -68,10 +68,9 @@ KeyRecord [modifier]
   Help        [name of the hint string]
 ```
 
-- `Id` - unique identifier, used by other users to override this control binding
-- `[modifier]` - can be empty or take the value of `Toggled`  
-If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.  
-If the value is `Toggled`, the control binding will work only when the player toggles the button or button combination. (One press to start sneaking, another press to stop sneaking)
+- `Id` - unique identifier used by other users to override this control binding
+- `[modifier]` - can be empty or take the value of `Toggled` If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.    
+  If the value is `Toggled`, the control binding will work only when the player toggles the button or button combination. (One press to start sneaking, another press to stop sneaking)
 - `Combination` - these are the gamepad buttons that the player must press or hold to activate the control binding.
 - `Emulation` - specify which buttons will be emulated. You can specify absolute buttons, or that are defined in the game settings (logical).
 - `Condition` - specify the condition under which the control binding can be activated. To invert condition, use the operator `!` before the operand (!Cond_IsOverlayTop, !JOY_B)
@@ -83,8 +82,8 @@ If the value is `Toggled`, the control binding will work only when the player to
 - `[engine absolute keys]` - [Engine absolute key list](keys_engine_absolute.md)
 - `[logical functions]` - [Logical function list](logical_functions.md)
 
-!!! Tip
-    All operators are optional! This means if a binding should only show a hint, it doesn't have to contain Combination.
+!!! Tip  
+    All operators are optional! This means that if a binding should only show a hint, it doesn't have to contain Combination.
 
 #### Example
 ```title="Control binding examples"
@@ -110,7 +109,7 @@ KeyRecord
 ```
 
 ### Controls override
-If you want to change or remove bindings from another controls file, use the `KeyDisable` keyword.  
+If you want to change or remove bindings from another controls file, use the `KeyDisable` keyword.    
 [Default controls file](https://github.com/Gratt-5r2/zGamePad/blob/master/Utils/controls.gamepad)
 
 ```title="Controls override syntax"
@@ -130,5 +129,5 @@ KeyRecord Toggled
   Emulation   GAME_DOWN
 ```
 ## Customization example
-!!! Info
+!!! Info  
     Real life example of gamepad controls customization for modification with different features.
