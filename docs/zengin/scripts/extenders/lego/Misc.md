@@ -1,6 +1,6 @@
 # Misc
 
-The Misc package introduces various helper functions, that did not fit into any other package.
+The Misc package introduces various helper functions that did not fit into any other package.
 
 ## Dependencies  
 No dependencies

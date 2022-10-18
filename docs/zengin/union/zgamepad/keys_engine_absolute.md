@@ -1,5 +1,5 @@
 # Engine absolute keys
-Absolute keys are physical keys on your keyboard.
+Absolute keys are the physical keys on your keyboard.
 ```
 MOUSE_DX
 MOUSE_DY

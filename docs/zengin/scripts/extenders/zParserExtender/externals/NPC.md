@@ -1,5 +1,5 @@
 # NPC - character functions
-NPC realted functions.
+NPC related functions.
 ```dae
 func void Npc_SetAsHero( var C_NPC npc ) {};
 

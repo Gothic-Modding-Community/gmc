@@ -2,7 +2,7 @@
 Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.
 
 ## Mob_Destroy
-Marks oCMOB as destroyed, changes the visual to visualDestroyed (if present).
+Marks oCMOB as destroyed, changes the visual to visualDestroyed if present.
 
 ```dae
 func void Mob_Destroy( var instance object ) {};
@@ -112,7 +112,7 @@ func void Mob_SetKeyInstance( var instance object, var int key ) {};
 - `object` - oCMobLockable object
 - `key` - the key C_ITEM instance
 
-## Externals with docu comments
+## Externals with Docu comments
 
 ```dae
 /// Marks oCMOB as destroyed, changes the visual to visualDestroyed (if present).

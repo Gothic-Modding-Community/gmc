@@ -22,6 +22,6 @@ video games Gothic and Gothic 2 Night of the Raven.
 
 **[World Editors](../worlds)**
 
- - Spacer - the original world editor for ZenGin, shipps with the MDK
+ - Spacer - the original world editor for ZenGin, ships with the MDK
  - [Union Gothic World Editor](https://worldofplayers.ru/threads/42322/) - Saturas' world editor, supports new object classes created with Union
  - [Gothic World Editor](https://worldofplayers.ru/threads/40530/) - World editor for vanilla worlds, works with G1, G2 and G2 NotR worlds

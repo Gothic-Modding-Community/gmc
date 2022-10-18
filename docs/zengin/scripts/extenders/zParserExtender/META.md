@@ -1,5 +1,5 @@
 # META block
-The META block is optional, but if it is specified, it has to be the very first thing in the file, without any indent or a comment above it.
+The META block is optional. If it is specified, it has to be the very first thing in the file without any indent or a comment above it.
 
 Syntax:
 ```dae

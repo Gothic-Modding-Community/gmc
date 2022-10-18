@@ -45,7 +45,7 @@ class C_Info
 Description of the class member variables.
 
 ### npc
-Sets what NPC will have this dialogue instance. Set a NPC instance.
+Sets what NPC will have this dialogue instance. Set an NPC instance.
 ```dae
 instance Info_Diego_Gamestart (C_INFO)
 {
@@ -69,21 +69,21 @@ instance Info_Diego_Gamestart (C_INFO)
     This is why the end dialogues usually have `nr = 999;` this is the highest number out of any dialogues therefore will always show up at the bottom. (999 is not the highest number the `nr` can store, it is just considered the highest number, as there will hardly be 998 dialogue instances for a single character)
 
 ### important
-The `important` member variable determines, whether the NPC will automatically address the player or not.
+The `important` member variable determines whether the NPC will automatically address the player or not.
 
 - `important = TRUE` - the NPC will address the player
 - `important = FALSE` - the player has to talk to the NPC
 
-When `important` is set to `TRUE` the description is not needed, since the dialogue is never shown in the dialogue box.
-!!! Info
-    If there are multiple important dialogues that satisfy their condition function, they will be played in the order specified by [`nr`](#nr).
+When `important` is set to `TRUE`, the description is not needed since the dialogue is never shown in the dialogue box.  
+!!! Info  
+If there are multiple important dialogues that satisfy their condition function, they will be played in the order specified by [`nr`](#nr).
 
-!!! Tip
-    `important` variable is of the type integer, and it is initialized by the engine to the value of `0`. If you do not want your dialogue to be important, you can omit the `important` member variable since it will be initialized to `0` by the engine.
+!!! Tip  
+`important` variable is of the type integer, and it is initialized by the engine to the value of `0`. If you do not want your dialogue to be important, you can omit the `important` member variable since it will be initialized to `0` by the engine.
 
 
 ### condition
-Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it return `FALSE` it is not displayed. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Condition`.
+Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it returns `FALSE` it is not displayed. The function name does not have to follow a particular naming convention but a naming convention is used throughout all the Gothic scripts: `{DialogueName}_Condition`.
 
 === "Conditioned dialogue"
     ```dae
@@ -122,7 +122,7 @@ Condition function with signature `func int f()`. If the function returns `TRUE`
 
 
 ### information
-The `information` function contains the function name (without double quotes `""` as `func` is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPC's will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Info`.
+The `information` function contains the function name (without double quotes `""` as `func` is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPCs will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all the Gothic scripts: `{DialogueName}_Info`.
 
 ```dae
 --8<-- "info_diego_gamestart.d"
@@ -179,5 +179,5 @@ Dialogues with `permanent = TRUE` do not disappear after the dialogue is played.
 zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../../../scripts/extenders/zParserExtender/dialogues/)
 
 ## AF Script Packet
-Enhaced Info Manager (implemented using Ikarus and LeGo) adds tun of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
+Enhanced Info Manager (implemented using Ikarus and LeGo) adds tonne of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
 
