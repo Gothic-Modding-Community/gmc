@@ -10,7 +10,7 @@ The community created variety of different modding tools for work with VDFS volu
 
 - Viewing
 - Extracting
-- Bulding `.mod` and `.vdf` archives
+- Building `.mod` and `.vdf` archives
 
 [**VDFS Tool**](../../tools/VDFSTool.md)
 

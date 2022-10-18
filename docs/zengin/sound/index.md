@@ -25,7 +25,7 @@ It can oftentimes be tricky to find the sound you are looking for, but we will l
 2. In order for the sound to work in the game, it needs to be in mono .wav format. A lot of programs let you convert a file such as Audacity, so do just that;
 3. Rename your converted file into "INV_CHANGE.WAV" and replace it in SFX folder you just extracted;
 4. Go back to Gothic VDFS, go to (Builder) tab;
-5. In "Filename" you choose how do you want your file to be called and it's location. I recommend creating separate folder and putting it there. You can also name the file however you want, as long as it has higher time stamp (more on that later) than original Sounds file. To create it as .VDF file, choose "All file" in the "Save file as" and call it "Sounds.VDF";
+5. In "Filename" you choose how do you want your file to be called and its location. I recommend creating separate folder and putting it there. You can also name the file however you want, as long as it has higher time stamp (more on that later) than original Sounds file. To create it as .VDF file, choose "All file" in the "Save file as" and call it "Sounds.VDF";
 6. In "Root path" go to and choose "_WORK" folder;
 7. In the field just below "Comment", add a * character and then click on the + next to it;
 8. Press "Build", and if you did everything right, the folder is being packed back into .VDF file;

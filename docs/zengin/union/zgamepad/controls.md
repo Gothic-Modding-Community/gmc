@@ -1,5 +1,5 @@
 # Gamepad controls
-The zGamePad plugin comes with a default control scheme but it is possible to create your own. The plugin will search for any file with the `.gamepad.overlay` extension placed in `Gothic/System` directory or in any of the loaded `.mod` and `.vdf` archives.
+The zGamePad plugin comes with a default control scheme, but it is possible to create your own. The plugin will search for any file with the `.gamepad.overlay` extension placed in `Gothic/System` directory or in any of the loaded `.mod` and `.vdf` archives.
 
 ## Control file syntax
 Gamepad controls are set using the `.gamepad` configuration file. This file encodes the controls for different actions in the game and the hint string in multiple languages.
@@ -77,7 +77,7 @@ KeyRecord [modifier]
 - `Help` - name of the text string with a hint which will be displayed when the Conditions are met.
 
 
-- `[gamepad keys]` - [Gamepady key list](keys_gamepad.md)
+- `[gamepad keys]` - [Gamepad key list](keys_gamepad.md)
 - `[engine logical keys]` - [Engine logical key list](keys_engine_logical.md)
 - `[engine absolute keys]` - [Engine absolute key list](keys_engine_absolute.md)
 - `[logical functions]` - [Logical function list](logical_functions.md)

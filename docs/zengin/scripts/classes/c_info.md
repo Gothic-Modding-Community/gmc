@@ -179,5 +179,5 @@ Dialogues with `permanent = TRUE` do not disappear after the dialogue is played.
 zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../../../scripts/extenders/zParserExtender/dialogues/)
 
 ## AF Script Packet
-Enhaced Info Manager (implemented using Ikarus and LeGo) adds tonne of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
+Enhanced Info Manager (implemented using Ikarus and LeGo) adds tonne of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
 

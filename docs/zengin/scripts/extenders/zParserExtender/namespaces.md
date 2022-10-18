@@ -119,7 +119,7 @@ There are three cases where the namespace prefix is optional
         };
     };
     ```
-=== "If the funciton is in higher level namespace"
+=== "If the function is in higher level namespace"
     ```dae
     func void func01()
     {

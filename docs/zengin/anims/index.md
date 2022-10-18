@@ -37,7 +37,7 @@ This is the basic step-by-step workflow on how to get the animation into the gam
 Sounds simple enough, except there is a lot missing. Even though the steps start with loading the actor into blender, understanding the system of animations to get high quality assets into your mod is more important.
 
 ## Animation "types"
-There are two main types of animations - `skeletal` and `morphmesh` animations. Character body animations are skeletal and we animate the skeleton and the entire model (skin) moves around it. Morph mesh animation is, on the other hand, used for facial animations such as eating, blinking or talking and for animated meshes like wave water ferns or fish in Khorinis' harbor.
+There are two main types of animations - `skeletal` and `morphmesh` animations. Character body animations are skeletal, and we animate the skeleton and the entire model (skin) moves around it. Morph mesh animation is, on the other hand, used for facial animations such as eating, blinking or talking and for animated meshes like wave water ferns or fish in Khorinis' harbor.
 
 This guide focuses on skeletal animations. There are few different ones, all of which will have their own demonstration in the future. Categories are:
 
