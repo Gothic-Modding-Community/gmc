@@ -16,7 +16,7 @@ func string Str_Format( var string format, ... ) {};
 ```
 
 - `format` - format string containing format specifiers
-- `...` - parameters to be subtituted to the format specifiers
+- `...` - parameters to be substituted to the format specifiers
 - `return` - formatted string
 
 ### Examples
@@ -42,12 +42,12 @@ func string GetLoadSlotString (var int number)
 };
 ```
 !!! Tip
-    Since the whole translatable string is saved in one constant, it is very easy for translators to change the word order. This was not possible to do without code change to the `ConcatStrings` funcion calls within the scripts.  
+    Since the whole translatable string is saved in one constant, it is very easy for translators to change the word order. This was not possible to do without code change to the `ConcatStrings` function calls within the scripts.  
     With this simple change, translators have to translate only 2 strings instead of 30 (15 + 15 slots) and only 2 strings are compiled into the compiled `Menu.dat` file.
 
 ## Str_GetLocalizedString
 Returns a string in the current language, otherwise in English.  
-Arguments MUST be encoded in **UTF-8!** The result string will be converted to apropriate ANSI string.
+Arguments MUST be encoded in **UTF-8!** The result string will be converted to appropriate ANSI string.
 
 ```dae
 func string Str_GetLocalizedString( var string russian,

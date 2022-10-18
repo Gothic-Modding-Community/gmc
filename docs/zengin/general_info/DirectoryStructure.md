@@ -1,6 +1,6 @@
 # ZenGin directory structure
 
-Modding is all about changing the game files and for that we have to know the directory (folder) structure of a Gothic game.
+Modding is all about changing the game files. To achieve that, we have to know the directory (folder) structure of a Gothic game.
 
 ```
 ├── Data
@@ -41,7 +41,7 @@ Contains saved games.
 
 The system directory contains the game executable, `GothicStarter.exe`, `GothicStarter_mod.exe`, configuration `.ini` files, mod `.ini` files and mod icons and description `.rtf` files.
 
-**`system/Autorun`** is a Union specific directory, it is default search directory for Daedalus injection scripts with zParserExtender and Union plugins.
+**`system/Autorun`** is a Union specific directory, it serves as a default search directory for Daedalus injection scripts with zParserExtender and Union plugins.
 
 ## `_work/DATA`
 
@@ -57,6 +57,6 @@ This is where the magic happens:
 	- `_compiled` - contains compiled scripts - `.dat` files.
   	- `Content` - contains scripts that make up the content of the game.
   	- `System` - contains scripts that make up the menu.
-- `Sound` - contains sound effects `.wav` or `.ogg` format (only Union).
+- `Sound` - contains sound effects `.wav` or `.ogg` format (Union only).
 - `Video` - contains videos in `.bik` format.
 

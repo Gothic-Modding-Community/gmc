@@ -1,5 +1,5 @@
 # External functions
-External functions are Daedalus functions (defined in the engine itself) used to interface with the enigne. zParseExtender adds quite a huge amount of new functions, that help scripters to interface with the engine in more ways, that was possible before (without script extenders such as Ikarus and LeGo).
+External functions are Daedalus functions (defined in the engine itself) used to interface with the engine. zParseExtender adds a rather huge amount of new functions that help scripters to interface with the engine in more ways than what was possible before without script extenders such as Ikarus and LeGo.
 
 ## CAST data type conversion functions
 External functions for data type conversion and pointer casting.
@@ -42,12 +42,8 @@ func int Cast_CheckVobClassID( var int classId, var instance object ) {};
 
 ```
 
-
-
 ## HLP help functions
-Helper functions, used for safety checks or to get specific information from the engine.
-
-
+Helper functions used for safety checks or to get specific information from the engine.
 
 ```dae
 func int Hlp_HasFocusVob( var C_NPC npc ) {};
@@ -87,13 +83,8 @@ func void Hlp_WriteOptionFloat(var string optName, var string section, var strin
 func void Hlp_WriteOptionString(var string optName, var string section, var string entry, var string value) {};
 ```
 
-
-
 ## WLD world manipulation functions
 Functions related to the world. 
-
-
-
 
 ```dae
 func void Wld_ChangeLevel( var string world, var string waypoint ) {};
@@ -121,13 +112,8 @@ func void Wld_SetWeatherType( var int type ) {};
 func int Wld_GetWeatherType() {};
 ```
 
-
-
 ## MDL model functions
 Functions to tweak animation and other model related settings.
-
-
-
 
 ```dae
 func int Mdl_GetAnimationIndex( var C_NPC npc, var string ani_name ) {};
@@ -167,13 +153,8 @@ func void Mdl_ResetNpcSpeedMultiplier( var C_Npc npc ) {};
 
 ```
 
-
-
 ## NPC character functions
-NPC realted functions.
-
-
-
+NPC related functions.
 
 ```dae
 func void Npc_SetAsHero( var C_NPC npc ) {};
@@ -219,13 +200,8 @@ func void Npc_RemoveFromSlot(var C_Npc npc, var string slotName, var int dropIt)
 
 ```
 
-
-
 ## MOB interactive object functions
 Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.
-
-
-
 
 ```dae
 func void Mob_Destroy( var instance object ) {};
@@ -251,13 +227,8 @@ func instance Mob_GetKeyInstance( var instance object ) {};
 func void Mob_SetKeyInstance( var instance object, var int key ) {};
 ```
 
-
-
 ## AI functions for working with AI
 Functions to work with the new `C_Trigger` class and NPC's AI queue.
-
-
-
 
 ```dae
 func void AI_CallScript(var string funcName, var C_Npc slf, var C_Npc oth) {};
@@ -303,13 +274,8 @@ func string Hlp_GetSteamPersonalName() {};
 
 ```
 
-
-
 ## PAR functions for parser manipulation
 Parser functions are used to manipulate the parsers. Retrieve SymbolID, access arrays and such.
-
-
-
 
 ```dae
 func int Par_GetParserID(var string parName) {};
@@ -349,6 +315,7 @@ func void Par_SetSymbolValueStringArray(var string value, var int parId, var int
 
 ## VOB functions for object manipulation
 VOB functions allow you to manipulate game world objects.
+
 ```dae
 /// Returns the current position of the object in the world
 /// 
@@ -445,9 +412,9 @@ func C_MobLockable_Data Vob_GetMobInterData( var C_Vob mobLock ) {};
 func void Vob_SetMobInterData( var C_Vob mobLock, var C_MobLockable_Data data ) {};
 ```
 
-
 ## String function
 Functions to manipulate and format strings.
+
 ```dae
 /// Returns formatted string using format specifiers
 /// 
@@ -505,6 +472,7 @@ func int Str_GetLength( var int str ) {};
 ```
 
 ## Menu function
+
 ```dae
 /// Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance
 /// 
@@ -514,6 +482,7 @@ func void Menu_SearchItems( var string mask ) {};
 
 ## Log functions
 As discussed on [Inside Gothic](), vanilla Gothic has no way of getting the status of a quest. These functions implement that functionality.
+
 ```dae
 /// Returns the status of diary topic
 /// Not found   - (-1)
@@ -540,10 +509,7 @@ func int Log_GetTopicSection(var string topic) {};
 ```
 
 ## Event functions and variables
-On top of external functions, zParserExtender also adds functi
-
-
-
+On top of external functions, zParserExtender also adds event functions and constants
 
 ```dae
 func event GameLoop() {};

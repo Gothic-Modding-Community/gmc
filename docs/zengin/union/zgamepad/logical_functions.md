@@ -1,5 +1,5 @@
 # Logical function names
-Conditions, when to show, or allow the control binding to work, are specified using these logic functions. They describe different useful states of the game or user interface, allowing the user to set, when will certain control work. 
+Conditions for when to show or allow the control binding to work are specified using these logic functions. They describe different useful states of the game or user interface, allowing the user to set when will a certain control work. 
 ```
 Cond_FightMode        - player is in the fight mode
 Cond_FightModeMelee   - player is in the melee fight mode
