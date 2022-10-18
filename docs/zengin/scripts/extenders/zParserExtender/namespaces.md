@@ -143,7 +143,7 @@ There are three cases where the namespace prefix is optional
         };
     };
     ```
-=== "If `using` is psecified in the META block"
+=== "If `using` is specified in the META block"
     ```dae
     META
     {
@@ -167,7 +167,7 @@ There are three cases where the namespace prefix is optional
 
 ## Global namespace and Daedalus hooking
 
-Namespace can not only be defined to an existing symbol, but also to define new ones. Next code example shows how to implement a hook to a global instance.
+Namespace can not only be defined to an existing symbol but also to define new ones. Next code example shows how to implement a hook to a global instance.
 
 ```dae
 namespace zTestNamespace01
@@ -182,4 +182,4 @@ namespace zTestNamespace01
     };
 };
 ```
-To hook and object not only the signature, but also the namespace has to match. To hook an instance from a different space it is syntactically allowed to explicitly specify to which namespace the object will belong. This means that to hook instance `ItAr_Pir_L_Addon` from the namespace `zTestNamespace01` to a global namespace, you have to refer to the global namespace using the namespace operator `:`. Since the function will be defined globally (as every symbol in ZenGin), it will be a part of the `zTestNamespace01`, that means that all functions will be local to this namespace.
+To hook an object, both signature and namespace has to match. It is syntactically allowed to hook an instance from a different space. Specify explicitly to which namespace the object will belong. This means that to hook instance `ItAr_Pir_L_Addon` from the namespace `zTestNamespace01` to a global namespace, you have to refer to the global namespace using the namespace operator `:`. Since the function will be defined globally (as every symbol in ZenGin), it will be a part of the `zTestNamespace01` which means that all functions will be local to this namespace.

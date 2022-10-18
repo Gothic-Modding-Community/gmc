@@ -1,12 +1,12 @@
 # Sign post teleportation
-This is a short "problem solving" example, where we try to demonstrate the power of Daedalus injection using [zParserExtender](../../index.md). GaroK asked me, if there is a way to teleport to all of the sign posts in Khorinis to gather information for a Gothic wiki article.  
-The goal is to introduce a function, that will teleport you to every signpost in Khorinis with the press of a button.
+This is a short "problem-solving" example, where we try to demonstrate the power of Daedalus injection using [zParserExtender](../../index.md). GaroK asked me if there is a way to teleport to all the sign posts in Khorinis to gather information for a Gothic wiki article.  
+The goal is to introduce a function that will teleport you to every signpost in Khorinis with the press of a button.
 
 ## The problem
 In ZenGin you can teleport to named game objects with the `goto vob {vobname}` command. But since the signposts do not have a vobname defined, I had to figure out a different approach.
 
 ## ASCII ZEN
-We want to get all of the signposts position from Khorinis. The game world was loaded into one of the available world editor, found one of the signposts and noted the `visual` which dictates the model of the in-game object `nw_misc_sign_01.3DS`. Alternatively, you can find the standard vanilla objects from both games on this [website](https://dziejekhorinis.org/dev/vobbilder/).  
+We want to get all the signposts position from Khorinis. The game world was loaded into one of the available world editor, I found one of the signposts and noted the `visual` which dictates the model of the in-game object `nw_misc_sign_01.3DS`. Alternatively, you can find the standard vanilla objects from both games on this [website](https://dziejekhorinis.org/dev/vobbilder/).  
 Next, the world was saved as a `ASCII ZEN` format. This allows us to write a macro to search for all instances of objects with a specific visual and extract the position vector.
 
 ```ini title="One signpost object" hl_lines="6 8"
@@ -56,14 +56,14 @@ Next, the world was saved as a `ASCII ZEN` format. This allows us to write a mac
 
 ## The injectable script
 As it is an injectable script, we have to specify the `META` tag.  
-Lets tell zParseExtender to insert the this code into the game parser.  
+Lets tell zParseExtender to insert this code into the game parser.  
 ```dae
 META
 {
     Parser = Game
 };
 ```
-We want to teleport the player, for this we will need the [`C_Position`](../../helperclasses/#c_position) and [`C_Vob_Data`](../../helperclasses/#c_vob_data) classes.
+We want to teleport the player and for this we will need the [`C_Position`](../../helperclasses/#c_position) and [`C_Vob_Data`](../../helperclasses/#c_vob_data) classes.
 ```dae
 class C_Position
 {
@@ -90,7 +90,7 @@ class C_VOB_DATA
     var int DontWriteIntoArchive; // turns of the serialization of this object to the save file 
 };
 ```
-It turns out there is 54 instances of objects with the desired visual. Lets define `const int NUM_OF_SIGNS = 54` and a `const int MAX_COORDS = 3 * NUM_OF_SIGNS` - we will store 3 times 54 integers - for every signpost a `x`, `y` and `z` coordinate. And lastly a `const int` array containing all of the positions.
+It turns out there is 54 instances of objects with the desired visual. Let us define `const int NUM_OF_SIGNS = 54` and a `const int MAX_COORDS = 3 * NUM_OF_SIGNS` - we will store 3 times 54 integers - for every signpost a `x`, `y` and `z` coordinate. And lastly a `const int` array containing all the positions.
 ```dae
 // Number of signs we want to jump to
 const int NUM_OF_SIGNS = 54;
@@ -168,8 +168,8 @@ func event GameLoop()
 ```
 
 Let's look at the `jump_to_sign` function now.  
-This function is called on every `U` key press and go through all of the signposts and teleport the player to them.  
-At the start of the function we check if the index is not out of bounds, if it is, set it back to 0 and start over.
+This function is called on every `U` key press and goes through all the signposts and teleports the player to them.  
+At the start of the function we check if the index is not out of bounds and if it is, sets it back to 0 and starts over.
 ```dae
     // if we reached the end, start over
     if (tp_index >= NUM_OF_SIGNS)
@@ -185,8 +185,8 @@ Print(Str_Format("Sign %i/%i", tp_index+1, NUM_OF_SIGNS));
 var C_Position pos;  pos  = Vob_GetVobPosition(hero);
 var C_Vob_Data data; data = Vob_GetVobData(hero);
 ```
-Daedalus does not allow array access with variables (only constants and literals), to access the coordinate array we use a selection of [parser](../externals/PAR/) functions.  
-First we get the game parser ID. Then we can use the `Par_GetSymbolValueIntArray` to access the the `sign_coordinates` array and assign the coordinates to the `pos` variable.
+Daedalus does not allow array access with variables (only constants and literals). To access the coordinate array we use a selection of [parser](../externals/PAR/) functions.  
+Firstly we get the game parser ID. Then we can use the `Par_GetSymbolValueIntArray` to access the `sign_coordinates` array and assign the coordinates to the `pos` variable.
 ```dae
 // get parser ID for the GAME parser
 var int game_par_id; game_par_id = Par_GetParserID("game");
@@ -199,7 +199,7 @@ pos.x = Par_GetSymbolValueIntArray(game_par_id ,arr_id ,tp_index * 3    );
 pos.y = Par_GetSymbolValueIntArray(game_par_id ,arr_id ,tp_index * 3 + 1);
 pos.z = Par_GetSymbolValueIntArray(game_par_id ,arr_id ,tp_index * 3 + 2);
 ```
-And now comes the big trick. If you try to just change the position the dynamic and static collision is going to stop you at the first wall, tree or a mountain. To disable it, we can use the `C_Vob_Data` helper class, get players data, and disable both the static a dynamic collision, first we create a backup of the values, just so we can restore them back after the teleport.
+And now comes the big trick. If you try to just change the position the dynamic and static collision is going to stop you at the first wall, tree or a mountain. To disable it, we can use the `C_Vob_Data` helper class, get players data, and disable both the static a dynamic collision. First we create a backup of the values just so we can restore them back after the teleport.
 ```dae
 // backup original collision detection
 var int dyn;   dyn = data.CollDetectionDynamic;
@@ -209,7 +209,7 @@ var int stat; stat = data.CollDetectionStatic;
 data.CollDetectionDynamic = 0;
 data.CollDetectionStatic  = 0;
 ```
-Lets apply the changed data to the player and edit the position.
+Let us apply the changed data to the player and edit the position.
 ```dae
 // apply the edited data to player
 Vob_SetVobData(hero, data);
@@ -226,7 +226,7 @@ data.CollDetectionStatic  = stat;
 // apply the edited data to player
 Vob_SetVobData(hero, data);
 ```
-Finally we advance the index to jump to another singpost.
+Finally, we advance the index to jump to another signpost.
 ```dae
 // advance the index
 tp_index += 1;

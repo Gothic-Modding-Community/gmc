@@ -1,5 +1,5 @@
 # HLP - help functions
-Helper functions, used for safety checks or to get specific information from the engine.
+Helper functions used for safety checks or to get specific information from the engine.
 
 ```dae
 func int Hlp_HasFocusVob( var C_NPC npc ) {};

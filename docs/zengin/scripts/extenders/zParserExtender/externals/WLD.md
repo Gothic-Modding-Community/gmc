@@ -12,7 +12,7 @@ func void Wld_ChangeLevel( var string world, var string waypoint ) {};
 - `waypoint` - target waypoint
 
 ## Wld_FindVob
-Return the VOB instsance based on its name.
+Return the VOB instance based on its name.
 
 ```dae
 func instance Wld_FindVob( var string vobname ) {};
@@ -33,7 +33,7 @@ func void Wld_PlayEffectVob( var string effect,
 ```
 
 - `effect` - effect name
-- `pvob` - Vob to play the effecet at
+- `pvob` - Vob to play the effect at
 - `level` - 
 - `damage` - damage amount
 - `damage_type` - damage type
@@ -51,7 +51,7 @@ func void Wld_PlayEffectAt(  var string effect,
 ```
 
 - `effect` - effect name
-- `coords` - world coordinates to play the effecet at
+- `coords` - world coordinates to play the effect at
 - `level` - 
 - `damage` - damage amount
 - `damage_type` - damage type
@@ -92,7 +92,7 @@ func int Wld_GetWeatherType() {};
 
 - `return` - weather type
 
-## Externals with docu comments
+## Externals with Docu comments
 
 ```dae
 func void Wld_ChangeLevel( var string world, var string waypoint ) {};
