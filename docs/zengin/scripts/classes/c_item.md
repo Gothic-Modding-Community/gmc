@@ -18,7 +18,7 @@ class C_Item
     var string name;                       // Name of the item
     var string nameID;                     // Name ID
     var int    hp;                         // Current health of the item
-    var int    hp_max;                     // Maximum healt of the item
+    var int    hp_max;                     // Maximum health of the item
 
     var int    mainflag;                   // Item category flag
     var int    flags;                      // Item type flag
@@ -89,13 +89,13 @@ class C_Item
 
 </details>
 
-It has many member variables, but not all of them are used for every item. It is not necessary to define every one of these variables for every item, as it was discussed on [InsideGothic](https://ataulien.github.io/Inside-Gothic/objects/item/).
+It has many member variables but not all of them are used for every item. It is not necessary to define every one of these variables for every item as it was discussed on [InsideGothic](https://ataulien.github.io/Inside-Gothic/objects/item/).
 
 ## Class members
 A selection of the most important class members.
 
 ### change_atr & change_value 
-  `change_atr` stores the attributes that will be changad by the amount specified in `change_value`.
+  `change_atr` stores the attributes that will be changed by the amount specified in `change_value`.
 
 NPCs have these attributes:
 ```dae
@@ -110,7 +110,7 @@ const int ATR_REGENERATEHP   =  6;  // HP regeneration per second
 const int ATR_REGENERATEMANA =  7;  // Mana regeneration per second
 ```
 
-This can be used on all eqippable items, to change the attributes. As an example, we can create a sword, that has a 10 point dexterity bonus.
+This can be used on all equipable items to change the attributes. As an example we can create a sword that has a 10 point dexterity bonus.
 
 ```dae
 instance ItMw_testSword (C_Item)
@@ -123,14 +123,14 @@ instance ItMw_testSword (C_Item)
 ```  
 
 !!! Warning
-    Do not change `ATR_HITPOINTS`, `ATR_MANA`, `ATR_HITPOINTS_MAX` or `ATR_MANA_MAX`, it will result in an unwanted behaviour with max health or max mana.
+    Do not change `ATR_HITPOINTS`, `ATR_MANA`, `ATR_HITPOINTS_MAX` or `ATR_MANA_MAX` as it will result in unwanted behaviour with max health or max mana.
 
 You can change `ATR_HITPOINTS_MAX` and `ATR_MANA_MAX` attributes in [on_equip](#class-definition) and [on_unequip](#class-definition)
 
 ### cond_atr & cond_value
  `cond_atr` stores the attributes that will be checked as a requirement to equip an item, the amount specified in `cond_value`.
 
-The next example sword is equippable only, if the NPC has at least 5 strength. If the requirements are not met [`G_CanNotUse()`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/G_Functions/G_CanNotUse.d) is called.
+The next example sword is equipable only if the NPC has at least 5 strength. If the requirements are not met [`G_CanNotUse()`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/G_Functions/G_CanNotUse.d) is called.
 ```dae
 instance ItMw_testSword (C_Item)
 {
@@ -179,7 +179,7 @@ To insert it into the game use `insert ItMw_testSword` in console.
 ### text & count arrays
 These two arrays are used to put information into the item information box. 
 ![Text and Count ](../../../img/c_item_text_count.png)
-The maximum number of lines is 6. This is defined in the engine, but for script side class definiton is declared in the scripts too.
+The maximum number of lines is 6. This is defined in the engine, but for script side class definition is declared in the scripts too.
 ```dae
 const int ITM_TEXT_MAX = 6;
 ```
@@ -231,7 +231,7 @@ instance ItMw_testSword (C_Item)
 
 `name` - determines the focus name of the item in the world
 
-In the scripts you often find that the description is asigned the value of `name`.
+In the scripts you often find that the description is assigned the value of `name`.
 ```dae
 instance ItMw_testSword (C_Item)
 {
@@ -243,7 +243,7 @@ instance ItMw_testSword (C_Item)
 ```
 This is used in the case where you want to show the name of the item on focus too.
 
-There is a second way used in the scripts though, for example with magic scrolls the focus name in the world is "Scroll" and in inventory the scroll carries the name of the spell. This is how it is done.
+There is a second way used in the scripts though with, for example,magic scrolls - the focus name in the world is "Scroll" and in inventory the scroll carries the name of the spell. This is how it is done:
 ```dae
 instance ItSc_InstantFireball (C_Item)
 {
@@ -267,6 +267,6 @@ instance ItSc_InstantFireball (C_Item)
 Both of these parameters are unused.
 
 !!! Trivia
-    In alpha ZenGin versions the player was able to destroy objects. This feature was abandoned in the course of the development.  
+    In alpha ZenGin versions the player was able to destroy objects. This feature was abandoned during the course of the development.  
     This video shows the reconstruction of this feature.  
     ![type:video](https://www.youtube.com/embed/A3xoytKMLgw)

@@ -1,5 +1,5 @@
 # Bars
-With this package it is very easy to add new bars for e.g. stamina.
+This package makes it very easy to add new bars, for e.g. stamina.
 
 ## Dependencies
 
@@ -38,7 +38,7 @@ func void Bar_Delete(var int handle) {};
 - `handle` - handle returned from `Bar_Create`
 
 ### Bar_SetMax
-Changes a bar's maximum value, but does not update its bar length (only `Bar_SetPercent`, `Bar_SetPromille` and `Bar_SetValue`)
+Changes a bar's maximum value but does not update its bar length (only `Bar_SetPercent`, `Bar_SetPromille` and `Bar_SetValue`)
 ```dae
 func void Bar_SetMax(var int handle, var int max) {};
 ```
@@ -56,7 +56,7 @@ func void Bar_SetValue(var int handle, var int value) {};
 - `value` - new value of the bar
 
 ### Bar_SetPercent
-Sets the value of the bar, but as a percentage (0..100).
+Sets the value of the bar but as a percentage (0..100).
 ```dae
 func void Bar_SetPercent(var int handle, var int percent) {};
 ```
@@ -65,7 +65,7 @@ func void Bar_SetPercent(var int handle, var int percent) {};
 - `percent` - new value of the bar in percent
 
 ### Bar_SetPromille
-Sets the value of the bar, but in per mille (0..1000).
+Sets the value of the bar but per mille (0..1000).
 ```dae
 func void Bar_SetPromille(var int handle, var int promille) {};
 ```
@@ -176,10 +176,10 @@ prototype GothicBar(Bar)
 };
 ```
 
-It's much easier to set up a new instance using this prototype. Standard vanilla status bar  can be easily created using the `GothicBar` instance, as seen in the example below.  
+It is much easier to set up a new instance using this prototype. Standard vanilla status bar  can be easily created using the `GothicBar` instance, as seen in the example below.  
 GothicBar is located in the middle of the screen and looks exactly like the Gothic Underwater Bar.  
-But lets make a bar that hangs in the top left of the picture and displays the experience points.  
-Derive again GothicBar and only change the position. Of course, add a loop using the FrameFunctions:
+But let us make a bar that hangs in the top left of the picture and displays the experience points.  
+Derive again GothicBar and only change the position. Of course add a loop using the FrameFunctions:
 ```dae
 // Instance created from 
 instance Bar_1(GothicBar)

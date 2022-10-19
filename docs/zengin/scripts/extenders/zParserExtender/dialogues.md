@@ -1,5 +1,5 @@
 # Dialogue constants
-To simplify dialogues, you can define up to 2 auxiliary variables (or constants) into which values corresponding to the current `C_Info` instance will be dynamically written.
+To simplify dialogues, you can define up to 2 auxiliary variables or constants. Values corresponding to the current `C_Info` instance will be dynamically written there.
 
 ## DIA_CurrentInstance
 ```dae

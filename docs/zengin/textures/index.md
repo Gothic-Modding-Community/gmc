@@ -1,3 +1,3 @@
 # Textures
 
-Textures are pictures, that get projected on 3D models and onto 2D user interface in the game. In this section we will discuss how to work with textures.
+Textures are pictures that get projected onto a 3D models and on a 2D user interface in the game. We will discuss how to work with textures in this section.
