@@ -12,7 +12,7 @@ Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https
   <summary>C_Info Daedalus class</summary>
 
 ```dae
-CLASS C_Info
+class C_Info
 {
     var int    npc;         // npc instance has the dialogue
     var int    nr;          // number of the dialogue (for sorting)
@@ -45,9 +45,9 @@ CLASS C_Info
 Description of the class member variables.
 
 ### npc
-Sets what NPC will have this dialogue instance. Set a NPC instance.
+Sets what NPC will have this dialogue instance. Set an NPC instance.
 ```dae
-INSTANCE Info_Diego_Gamestart (C_INFO)
+instance Info_Diego_Gamestart (C_INFO)
 {
 	npc	= PC_Thief; // NPC instance for Diego
     // ...
@@ -58,7 +58,7 @@ INSTANCE Info_Diego_Gamestart (C_INFO)
 The `nr` member variables determines the order of shown dialogues. Dialogues are ordered in the ascending order - instances with higher `nr` are below instances with lower `nr`.
 
 ```dae
-INSTANCE Info_Diego_Gamestart (C_INFO)
+instance Info_Diego_Gamestart (C_INFO)
 {
     // ...
     nr = 1;
@@ -69,32 +69,32 @@ INSTANCE Info_Diego_Gamestart (C_INFO)
     This is why the end dialogues usually have `nr = 999;` this is the highest number out of any dialogues therefore will always show up at the bottom. (999 is not the highest number the `nr` can store, it is just considered the highest number, as there will hardly be 998 dialogue instances for a single character)
 
 ### important
-The `important` member variable determines, whether the NPC will automatically address the player or not.
+The `important` member variable determines whether the NPC will automatically address the player or not.
 
 - `important = TRUE` - the NPC will address the player
 - `important = FALSE` - the player has to talk to the NPC
 
-When `important` is set to `TRUE` the description is not needed, since the dialogue is never shown in the dialogue box.
-!!! Info
-    If there are multiple important dialogues that satisfy their condition function, they will be played in the order specified by [`nr`](#nr).
+When `important` is set to `TRUE`, the description is not needed since the dialogue is never shown in the dialogue box.  
+!!! Info  
+If there are multiple important dialogues that satisfy their condition function, they will be played in the order specified by [`nr`](#nr).
 
-!!! Tip
-    `important` variable is of the type integer, and it is initialized by the engine to the value of `0`. If you do not want your dialogue to be important, you can omit the `important` member variable since it will be initialized to `0` by the engine.
+!!! Tip  
+`important` variable is of the type integer, and it is initialized by the engine to the value of `0`. If you do not want your dialogue to be important, you can omit the `important` member variable since it will be initialized to `0` by the engine.
 
 
 ### condition
-Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it return `FALSE` it is not displayed. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Condition`.
+Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it returns `FALSE` it is not displayed. The function name does not have to follow a particular naming convention but a naming convention is used throughout all the Gothic scripts: `{DialogueName}_Condition`.
 
 === "Conditioned dialogue"
     ```dae
-    INSTANCE Info_Diego_Gamestart (C_INFO)
+    instance Info_Diego_Gamestart (C_INFO)
     {
         // ...
-        condition   = Info_Diego_Gamestart_Condition;
+        condition = Info_Diego_Gamestart_Condition;
         // ...
     };
 
-    FUNC INT Info_Diego_Gamestart_Condition()
+    func int Info_Diego_Gamestart_Condition()
     {
         if (Kapitel < 2) // Show only when chapter is less than 2
         {
@@ -105,14 +105,14 @@ Condition function with signature `func int f()`. If the function returns `TRUE`
     ```
 === "Unconditioned dialogue"
     ```dae
-    INSTANCE Info_Diego_EXIT_Gamestart(C_INFO)
+    instance Info_Diego_EXIT_Gamestart(C_INFO)
     {
         // ...
         condition = Info_Diego_EXIT_Gamestart_Condition;
         // ...
     };
 
-    FUNC INT Info_Diego_EXIT_Gamestart_Condition()
+    func int Info_Diego_EXIT_Gamestart_Condition()
     {
         return TRUE; // or return 1;
     };
@@ -122,37 +122,10 @@ Condition function with signature `func int f()`. If the function returns `TRUE`
 
 
 ### information
-The `information` function contains the function name (without double quotes `""` as `func` is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPC's will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Info`.
+The `information` function contains the function name (without double quotes `""` as `func` is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPCs will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all the Gothic scripts: `{DialogueName}_Info`.
 
 ```dae
-INSTANCE Info_Diego_Gamestart (C_INFO)
-{
-    npc         = PC_Thief;
-    nr          = 1;
-    condition   = Info_Diego_Gamestart_Condition;
-    information = Info_Diego_Gamestart_Info;
-    permanent   = FALSE;
-    important   = TRUE;
-};
-
-FUNC INT Info_Diego_Gamestart_Condition()
-{
-    if (Kapitel < 2)
-    {
-        return TRUE;
-    };
-    return FALSE;
-};
-
-FUNC VOID Info_Diego_Gamestart_Info()
-{
-    AI_Output(self,hero,"Info_Diego_Gamestart_11_00"); //I'm Diego.
-    AI_Output(hero,self,"Info_Diego_Gamestart_15_01"); //I'm...
-    AI_Output(self,hero,"Info_Diego_Gamestart_11_02"); //I'm not interested in who you are. You've just arrived. I look after the new arrivals. That's all for now.
-    AI_Output(self,hero,"Info_Diego_Gamestart_11_03"); //If you plan to stay alive for a while, you should talk to me. But of course I won't keep you from choosing your own destruction. Well, what do you think?
-
-    B_Kapitelwechsel(1); // Show the chapter 1 screen
-};
+--8<-- "info_diego_gamestart.d"
 ```
 ### description
 Specify a string that will be shown in the dialogue window.
@@ -182,12 +155,12 @@ instance  Stt_311_Fisk_Trade (C_INFO)
     trade       = TRUE;
 };
 
-FUNC int  Stt_311_Fisk_Trade_Condition()
+func int  Stt_311_Fisk_Trade_Condition()
 {
     return TRUE;
 };
 
-FUNC VOID  Stt_311_Fisk_Trade_Info()
+func void  Stt_311_Fisk_Trade_Info()
 {
     AI_Output (other, self, "Stt_311_Fisk_Trade_15_00"); //Show me your goods.
 };
@@ -203,8 +176,8 @@ Dialogues with `permanent = TRUE` do not disappear after the dialogue is played.
     Frequently used external function `Npc_KnowsInfo` which returns true if the dialogue instance has been played has had a bug in the implementation for a long time. This bug made it impossible to use this function with dialogue instances with `permanent = TRUE` as it would always return `FALSE`. This has been fixed in `Union 1.0m`.
 
 ## zParserExtender
-zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../../../scripts/extenders/zPArserExtender/dialogues/)
+zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../../../scripts/extenders/zParserExtender/dialogues/)
 
 ## AF Script Packet
-Enhaced Info Manager (implemented using Ikarus and LeGo) adds tun of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
+Enhanced Info Manager (implemented using Ikarus and LeGo) adds tonne of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
 

@@ -1,5 +1,5 @@
 # Trialoge
-This package allows you to create conversations with any number of NPC's and control the camera during the dialog.
+This package allows you to create conversations with any number of NPCs and control the camera during the dialog.
 
 ## Dependencies
 

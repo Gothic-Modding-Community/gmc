@@ -1,5 +1,5 @@
 # Engine logical keys
-Logical keys are the keys you set in keyboard settings in the game menu. These can fill multiple roles in different situations, gamepad controls can be set to emulate these logical keys.
+Logical keys are the keys you set in keyboard settings in the game menu. These can fill multiple roles in different situations and the gamepad controls can be set to emulate these logical keys.
 ```
 GAME_LEFT
 GAME_RIGHT

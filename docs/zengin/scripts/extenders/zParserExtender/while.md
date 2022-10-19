@@ -17,7 +17,7 @@ while(value > 0)
 };
 ```
 !!! note
-    To activate `while` it is necessary to set `NetiveWhile` setting in SystemPack.ini
+    To activate `while` it is necessary to set `NativeWhile` setting in SystemPack.ini
     ```ini
     [ZPARSE_EXTENDER]
     NativeWhile = true

@@ -9,7 +9,7 @@ func C_Position Vob_GetVobPosition( var C_Vob vob ) {};
 ```
 
 - `vob` - vob to ge the position of
-- `return` - C_Position instace - position of the VOB
+- `return` - C_Position instance - position of the VOB
 
 ## Vob_SetVobPosition
 Sets the current position of the object in the world
@@ -152,7 +152,7 @@ func void Vob_SetMobInterData( var C_Vob mobLock, var C_MobLockable_Data data ) 
 - `mobLock` - oCMobLockable object
 - `data` - C_MobLockable_Data of the object
 
-## Externals with docu comments
+## Externals with Docu comments
 
 ```dae
 /// Returns the current position of the object in the world

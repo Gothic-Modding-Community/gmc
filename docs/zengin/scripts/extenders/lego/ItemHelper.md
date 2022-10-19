@@ -1,5 +1,5 @@
 # ItemHelper
-This package is very simple. Retrieve a `oCItem` pointer from a `C_Item` instance valid for the current world and session.
+This package is very simple - it retrieves a `oCItem` pointer from an `C_Item` instance valid for the current world and session.
 
 !!! Warning
     Make sure every world has waypoint with name `TOT` ("dead" in German). Ikarus & LeGo need this waypoint to spawn helper NPCs.  

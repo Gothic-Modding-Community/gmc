@@ -1,21 +1,21 @@
 # VDFS
 
-VDFS is the virtual file system used by ZenGin to distribute and store many (but not all) game assest.
+VDFS is the virtual file system used by ZenGin to distribute and store many, but not all, game assets.
 
 ## Tools
 
-During the years, the community created different tools to work with VDFS volumes.
+The community created variety of different modding tools for work with VDFS volumes over the times, such as:
 
 [**GothicVDFS**](../../tools/GothicVDFS.md)
 
-- viewing 
-- extracting
-- bulding `.mod` and `.vdf` archives
+- Viewing
+- Extracting
+- Building `.mod` and `.vdf` archives
 
 [**VDFS Tool**](../../tools/VDFSTool.md)
 
-- viewing 
-- extracting
-- bulding 
-- optimizing
-- compressing `.mod` and `.vdf` archives
+- Viewing
+- Extracting
+- Building
+- Optimizing
+- Compressing `.mod` and `.vdf` archives
