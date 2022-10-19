@@ -1,12 +1,10 @@
 !!! example "Acknowledgment"
-
-This tutorial would not be possible without the ZenGin documentation available in the mod-kit. Further credits also go to [Mark56](https://carnage-markus.blogspot.com) who helped me understand animations in the first place, [Fawkes](https://www.youtube.com/channel/UCheR2tr8u1CsUGG15Lu2mxQ) and his request for me to do some animations for his excellent mod - Replay Mod, and last but not least Flosha from the Phoenix team who was the one for whom I offered to write this tutorial to help with the development of the [Phoenix project](https://phoenixthegame.com/).
+    This tutorial would not be possible without the ZenGin documentation available in the mod-kit. Further credits also go to [Mark56](https://carnage-markus.blogspot.com) who helped me understand animations in the first place, [Fawkes](https://www.youtube.com/channel/UCheR2tr8u1CsUGG15Lu2mxQ) and his request for me to do some animations for his excellent mod - Replay Mod, and last but not least Flosha from the Phoenix team who was the one for whom I offered to write this tutorial to help with the development of the [Phoenix project](https://phoenixthegame.com/).
 # Standalone animation
 Let us start with the easiest animation - a very simple gesturing animation.
 
 !!! info
-
-You can find some of the videos that are mentioned in the text below in this [play-list](https://www.youtube.com/playlist?list=PLn8QrKx4F-EITe0yG_2n0z9p4q6EAp6rx).
+    You can find some of the videos that are mentioned in the text below in this [play-list](https://www.youtube.com/playlist?list=PLn8QrKx4F-EITe0yG_2n0z9p4q6EAp6rx).
 
 Firstly we have to have the animation source files ready. Best way to decompile them is using [Gothic Sourcer](https://worldofplayers.ru/threads/41942/). In GothicSourcer you choose **Tools > Decompiler models > Dynamic (MDS or MSB)** and choose an MDS file of your choice - `Humans.mds` in our case and then click the decompile button.
 
@@ -14,7 +12,7 @@ Firstly we have to have the animation source files ready. Best way to decompile 
 Open Blender, **File > Import > Kerrax ASCII model (.asc)**, navigate to the folder with your decompiled animation files and select `HUM_BODY_NAKED0.ASC`. This file contains the skeleton and skin model for human NPCs.
 
 !!! tip "What bone hierarchy is this model using?"  
-If you open the `.mds` file, you can see a command `meshAndTree` that specifies what model contains the skeleton. And there lies our answer:
+    If you open the `.mds` file, you can see a command `meshAndTree` that specifies what model contains the skeleton. And there lies our answer:
 
     ```dae
     Model ("HuS")
@@ -30,7 +28,7 @@ Click import and wait for the magic to happen.
 This video shows a freshly imported model with all default meshes.
 
 !!! note  
-If we now want to play (or edit) existing animation, we can now load it on top of this. Just as before **File > Import > Kerrax ASCII model (.asc)** and select different animation file (or armor file), for example `Hum_SmokeHerb_Layer_M01.asc` for an animation file.  
+    If we now want to play (or edit) existing animation, we can now load it on top of this. Just as before **File > Import > Kerrax ASCII model (.asc)** and select different animation file (or armor file), for example `Hum_SmokeHerb_Layer_M01.asc` for an animation file.  
 ![type:video](https://www.youtube.com/embed/FDicnSwhv0w)
 
 Gothic characters are modular and you can change their heads on the fly, even during gameplay as seen in this amazing video from my dear friend and colleague Fawkes - [Head changing](https://www.youtube.com/watch?v=2GBmpeyqKIA). Let's add a head so that we can see how the whole body will behave while we are animating. **File > Import > Kerrax ASCII model (.asc)**, navigate to your head model. You will have to decompile it like we did with the body itself. We will import `HUM_HEAD_PONY.ASC`. Please make sure to select the target bone for importing **Bip01 Head**, this will attach the head to the proper bone, just like the engine does it.
@@ -40,12 +38,12 @@ Gothic characters are modular and you can change their heads on the fly, even du
 Now we have everything ready to start animating. The video shows the DopeSheet a nice way to edit keyframes.
 
 !!! tip "DopeSheet"  
-Blender's dope sheet can be used to copy entire sets of keyframes. It is useful if we want to create a looping animation.
+    Blender's dope sheet can be used to copy entire sets of keyframes. It is useful if we want to create a looping animation.
 
 We can import an animation into Blender as a base.
 
 !!! tip  
-If you don't know the name of the animation, just go into the game and make your character perform the animation you want. While in MARVIN mode, you can press `G` and the animation information together with other info will be displayed right on the screen
+    If you don't know the name of the animation, just go into the game and make your character perform the animation you want. While in MARVIN mode, you can press `G` and the animation information together with other info will be displayed right on the screen
 
 ![type:video](https://www.youtube.com/embed/boUwngFLA-U)
 
@@ -69,7 +67,7 @@ Now that we have exported the animation, we now have to define it in `Humans.mds
 Open the file, scroll to the end and define a new animation.
 
 !!! attention  
-All `ani` code has to be between the curly brackets, this means you have to insert it before the last two closing curly brackets `} }`.
+    All `ani` code has to be between the curly brackets, this means you have to insert it before the last two closing curly brackets `} }`.
 
 Example:
 ```dae  

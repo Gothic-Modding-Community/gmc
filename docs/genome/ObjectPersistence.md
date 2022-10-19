@@ -2,8 +2,8 @@
 # Object persistence
 
 
-**⚠ Please note the following warning** about Risen 2, 3 and ELEX 1 and 2"
-> The following information only applies to Gothic 3 (2006) and Risen (2009). While newer Genome engine games share the same overall concepts, they have significant implementation differences that warrant their own section.
+!!! Warning "Please note the following warning about Risen 2, 3 and ELEX 1 and 2"
+    The following information only applies to Gothic 3 (2006) and Risen (2009). While newer Genome engine games share the same overall concepts, they have significant implementation differences that warrant their own section.
 
 The engine is, due to the nature of the games themselves, required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, Genome implements an object persistence system using its own built-in runtime type information (RTTI) system.
 

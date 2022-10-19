@@ -2,14 +2,14 @@
 # MDS - model animation script
 
 !!! Tip
-The MDS syntax is very simple and scripts can be edited in any text editor. It is, however, easier to work in an editor with a proper syntax highlighting. [Daedalus Language Server](https://github.com/kirides/vscode-daedalus/releases)'s dev branch already merged the MDS grammar for syntax highlighting, we can expect it in the next release.
+    The MDS syntax is very simple and scripts can be edited in any text editor. It is, however, easier to work in an editor with a proper syntax highlighting. [Daedalus Language Server](https://github.com/kirides/vscode-daedalus/releases)'s dev branch already merged the MDS grammar for syntax highlighting, we can expect it in the next release.
 
 Model animation script is a file describing what skeleton should be used, what body meshes work with this set of animations and how should the animations be named, how fast they run, what animation is supposed to start after the current one is finished and much more. These files are located in `Gothic\_work\DATA\Anims\` directory.
 
 Whilst the code seems long and terrifying, it is in fact rather simple, and this guide will try to explain it whole.
 
 !!! hint "Don't forget to use the search"
-If you search this file for `t_Yes`, you will get an example of the first type of animation - "standalone"
+    If you search this file for `t_Yes`, you will get an example of the first type of animation - "standalone"
 
     To play the animation in game you use this console command `play ani t_yes`.
 
@@ -161,7 +161,7 @@ Not used in the game.
 More complex animations such as MOBSI animations form a state machine - an animation set.
 
 !!! warning
-Only a diagram test
+    Only a diagram test
 
 ```dae title="MDS script for the big chest"
 Model ("CHESTBIG_OCCRATELARGE")
