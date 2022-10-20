@@ -76,10 +76,10 @@ The `important` member variable determines whether the NPC will automatically ad
 
 When `important` is set to `TRUE`, the description is not needed since the dialogue is never shown in the dialogue box.  
 !!! Info  
-If there are multiple important dialogues that satisfy their condition function, they will be played in the order specified by [`nr`](#nr).
+    If there are multiple important dialogues that satisfy their condition function, they will be played in the order specified by [`nr`](#nr).
 
 !!! Tip  
-`important` variable is of the type integer, and it is initialized by the engine to the value of `0`. If you do not want your dialogue to be important, you can omit the `important` member variable since it will be initialized to `0` by the engine.
+    `important` variable is of the type integer, and it is initialized by the engine to the value of `0`. If you do not want your dialogue to be important, you can omit the `important` member variable since it will be initialized to `0` by the engine.
 
 
 ### condition
