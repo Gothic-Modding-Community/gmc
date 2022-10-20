@@ -213,8 +213,19 @@ plugins:
         width: "100%"
         height: "100%"
   - git-revision-date-localized:
-      enabled: !ENV [GMC_SHOW_UPDATE_TIME, False]
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       type: iso_datetime
       timezone: Europe/Warsaw
       exclude:
         - index.md
+  - minify:
+      minify_html: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      minify_css: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      minify_js: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      cache_safe_extras: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      htmlmin_opts:
+        remove_comments: true
+      css_files:
+        - css/extra.css
+      js_files:
+        - js/extra.js

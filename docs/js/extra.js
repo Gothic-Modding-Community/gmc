@@ -13,7 +13,7 @@ class MarkCodeLineManager {
         let hash = window.location.hash;
 
         if (hash === "") {
-            gmcDebug(`⏩ hash is empty`);
+            // gmcDebug(`⏩ hash is empty`);
             return;
         }
 
@@ -70,12 +70,12 @@ window.addEventListener("hashchange", _ => {
 
 function gmcAddClassToElement(className, element, elementName) {
     if (element.classList.contains(className)) {
-        gmcDebug(`⏩ Class '${className}' already present for ${elementName}`);
+        // gmcDebug(`⏩ Class '${className}' already present for ${elementName}`);
         return;
     }
 
     element.classList.add(className);
-    gmcDebug(`✅ Added '${className}' class to ${elementName}`);
+    // gmcDebug(`✅ Added '${className}' class to ${elementName}`);
 }
 
 function gmcExternalLinks() {
@@ -93,7 +93,7 @@ function gmcExternalLinks() {
 
     anchors.forEach( a => {
         if (a.href === "" || regex.test(a.href)) {
-            gmcDebug(`⏩ Regex matched for ${a.href} or is empty`);
+            // gmcDebug(`⏩ Regex matched for ${a.href} or is empty`);
             return;
         }
 
@@ -106,7 +106,7 @@ function gmcExternalLinks() {
 function gmcExpandNavigation() {
 
     if (window.matchMedia("(max-width: 76.1875em)").matches) {
-        gmcDebug(`⏩ mobile doesn't expand`);
+        // gmcDebug(`⏩ mobile doesn't expand`);
         return;
     }
 
@@ -117,17 +117,17 @@ function gmcExpandNavigation() {
         const toggle = children[i].querySelector('input[type="checkbox"]');
 
         if (!toggle) {
-            gmcDebug(`⏩ toggle not present`);
+            // gmcDebug(`⏩ toggle not present`);
             continue;
         }
 
         if (toggle.checked) {
-            gmcDebug(`⏩ '${toggle.id}' already checked`);
+            // gmcDebug(`⏩ '${toggle.id}' already checked`);
             continue;
         }
 
         toggle.checked = true;
-        gmcDebug(`✅ Expanded '${toggle.id}'`);
+        // gmcDebug(`✅ Expanded '${toggle.id}'`);
     }
 }
 
