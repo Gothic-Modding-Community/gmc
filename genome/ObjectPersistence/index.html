@@ -2776,10 +2776,10 @@
 
 
 <h1 id="object-persistence">Object persistence<a class="headerlink" href="#object-persistence" title="Permanent link"></a></h1>
-<p><strong>⚠ Please note the following warning</strong> about Risen 2, 3 and ELEX 1 and 2"</p>
-<blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Please note the following warning about Risen 2, 3 and ELEX 1 and 2</p>
 <p>The following information only applies to Gothic 3 (2006) and Risen (2009). While newer Genome engine games share the same overall concepts, they have significant implementation differences that warrant their own section.</p>
-</blockquote>
+</div>
 <p>The engine is, due to the nature of the games themselves, required to store and load a vast amount of different types of data from the user's hard-drive. In order to streamline this parsing and/or serialization process, Genome implements an object persistence system using its own built-in runtime type information (RTTI) system.</p>
 <p>Any class derived from <code>bCObjectBase</code> may declare its own member properties in such a way that when the object is then written into a file using the <code>bCAccessorPropertyObject</code> class, its associated properties will be automatically serialized into the stream by using special preprocessor macros. When the object is read back from the file, the class will be automatically initialized using the stored members.</p>
 <p>Additionally, classes may overload the <code>Read</code> and <code>Write</code> (<code>OnRead</code> and <code>OnWrite</code> in Risen 1) virtual methods that allow the class to save additional data required during parsing such as paths to other necessary files.</p>
@@ -3042,7 +3042,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-17 23:29:47</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-19 15:29:30</span>
       
     
   </small>

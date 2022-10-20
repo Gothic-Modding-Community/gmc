@@ -2780,20 +2780,16 @@
 <h1 id="mds-model-animation-script">MDS - model animation script<a class="headerlink" href="#mds-model-animation-script" title="Permanent link"></a></h1>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-</div>
 <p>The MDS syntax is very simple and scripts can be edited in any text editor. It is, however, easier to work in an editor with a proper syntax highlighting. <a href="https://github.com/kirides/vscode-daedalus/releases">Daedalus Language Server</a>'s dev branch already merged the MDS grammar for syntax highlighting, we can expect it in the next release.</p>
+</div>
 <p>Model animation script is a file describing what skeleton should be used, what body meshes work with this set of animations and how should the animations be named, how fast they run, what animation is supposed to start after the current one is finished and much more. These files are located in <code>Gothic\_work\DATA\Anims\</code> directory.</p>
 <p>Whilst the code seems long and terrifying, it is in fact rather simple, and this guide will try to explain it whole.</p>
 <div class="admonition hint">
 <p class="admonition-title">Don't forget to use the search</p>
-</div>
 <p>If you search this file for <code>t_Yes</code>, you will get an example of the first type of animation - "standalone"</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>To play the animation in game you use this console command `play ani t_yes`.
-
-![type:video](https://www.youtube.com/embed/aOyuGVWDefc)
-</code></pre></div></td></tr></table></div>
+<p>To play the animation in game you use this console command <code>play ani t_yes</code>.</p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/aOyuGVWDefc" style="width: 100%; height: 100%" frameborder="0" allowfullscreen></iframe></div></p>
+</div>
 <h2 id="syntax-and-keywords">Syntax and keywords<a class="headerlink" href="#syntax-and-keywords" title="Permanent link"></a></h2>
 <p>Let us get a quick look at the naming convention to get a basic idea what is going on before we start.</p>
 <p>The first letter indicates a type of animation (transition - <code>t_</code> - or state - <code>s_</code>).
@@ -2892,8 +2888,8 @@ Syntax:
 <p>More complex animations such as MOBSI animations form a state machine - an animation set.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>Only a diagram test</p>
+</div>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">MDS script for the big chest</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1"> 1</a></span>
 <span class="normal"><a href="#example-11-2"> 2</a></span>
 <span class="normal"><a href="#example-11-3"> 3</a></span>
@@ -2989,7 +2985,7 @@ Syntax:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-18 18:08:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2022-10-19 15:29:30</span>
       
     
   </small>
