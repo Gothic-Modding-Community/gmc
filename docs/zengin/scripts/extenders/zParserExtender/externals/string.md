@@ -1,4 +1,4 @@
-# String function
+# String functions
 Functions to manipulate and format strings.
 
 ## Str_Format
