@@ -1,5 +1,5 @@
 # Trigger functions and the `C_Trigger` class
-zParserExtender also implements cyclical functions called triggers - not to e confused with triggers in ZEN files, similar to a part of the functionality implemented in [LeGo AI_Functions](../../../../notready.md). These functions are called independently after a specified period of time. These triggers can also store user information. Up to 16 int variables can be stored in each trigger as well as `self`, `other` and `victim` instances.
+zParserExtender also implements cyclical functions called triggers - not to be confused with triggers in ZEN files, similar to a part of the functionality implemented in [LeGo AI_Functions](../../../../notready.md). These functions are called independently after a specified period of time. These triggers can also store user information. Up to 16 int variables can be stored in each trigger as well as `self`, `other` and `victim` instances.
 
 ## Class definition
 To define a trigger, the `C_Trigger` class is used:
@@ -23,22 +23,22 @@ class C_Trigger
 ```
 
 ## Creating instances
-There are two [external functions](externals.md#ai-functions-for-working-with-ai)
+There are two external functions that are used to create `C_Trigger` instance.
 
 ```dae
 // function returns a trigger with no NPC (self, other or victim) bound to it
 func C_Trigger AI_StartTriggerScript( var string funcName,
-                                      var int delay)
+                                      var int delay) {};
 
 // function is extended, if certain participants need to be assigned to it
 func C_Trigger AI_StartTriggerScriptEx( var string funcName,
                                         var int delay,
                                         var C_Npc slf,
                                         var C_Npc oth,
-                                        var C_Npc vct) 
+                                        var C_Npc vct) {};
 ```
 
-Both of these functions return an instance of `C_Trigger`. You can of course configure the instance after its creation. You can, for example, fill in the `AIVariables` with relevant data. The trigger function has the required signature if 'func int f()'. It must return a value indicating the state of the loop. If the function returns `LOOP_END` the trigger will be stopped and the instance deleted. If `LOOP_CONTINUE` is returned, the function will be called again after `Delay` ms have passed.
+Both of these functions return an instance of `C_Trigger` instance. You can of course configure the instance after its creation. You can, for example, fill in the `AIVariables` with relevant data. The trigger function has the required signature if 'func int f()'. It must return a value indicating the state of the loop. If the function returns `LOOP_END` the trigger will be stopped and the instance deleted. If `LOOP_CONTINUE` is returned, the function will be called again after `Delay` ms have passed.
 
 ## Poison example
 
@@ -86,7 +86,7 @@ trigger created with this function only works in the world in which it was creat
 The plugin creates a new save archive to save the information of the triggers that does not conflict with any of the built-in save files.
 
 ## Searching
-To search for a specific trigger, for example by NPC, the [trigger external functions](externals.md#ai-functions-for-working-with-ai) can be used.
+To search for a specific trigger, for example by NPC, the [trigger external functions](../externals/AI) can be used.
 
 ```dae
 // This way you can disable all triggers running on the `hero` instance
