@@ -222,7 +222,7 @@ plugins:
       minify_html: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       minify_css: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       minify_js: !ENV [GMC_ENABLE_ON_PUBLISH, False]
-      cache_safe_extras: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      cache_safe: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       htmlmin_opts:
         remove_comments: true
       css_files:
