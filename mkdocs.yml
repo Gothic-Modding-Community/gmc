@@ -79,6 +79,9 @@ nav:
         - C_INFO: zengin/scripts/classes/c_info.md
         - C_ITEM: zengin/scripts/classes/c_item.md
         - C_SVM:  zengin/scripts/classes/c_svm.md
+      - Externals:
+        - zengin/scripts/externals/index.md
+        - LOG functions: zengin/scripts/externals/log.md
       - Extenders:
         - zengin/scripts/extenders/index.md
         - Ikarus:
