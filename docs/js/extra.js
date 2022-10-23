@@ -55,7 +55,7 @@ class MarkCodeLineManager {
     }
 }
 
-let gGMC_DEBUG = false;
+let gGMC_DEBUG = window.location.hostname === "127.0.0.1";
 let gMarkCodeLineManager = new MarkCodeLineManager();
 
 window.addEventListener("DOMContentLoaded", _ => {
@@ -110,8 +110,13 @@ function gmcExpandNavigation() {
         return;
     }
 
-    const activeNav = document.querySelector(".md-nav__link--active").parentElement;
-    const children = activeNav.querySelector("nav > ul").children;
+    const activeNav = document.querySelector(".md-nav__link--active");
+
+    if (activeNav === null) {
+        return;
+    }
+
+    const children = activeNav.parentElement.querySelector("nav > ul").children;
 
     for (let i = 0; i < children.length; i++) {
         const toggle = children[i].querySelector('input[type="checkbox"]');
