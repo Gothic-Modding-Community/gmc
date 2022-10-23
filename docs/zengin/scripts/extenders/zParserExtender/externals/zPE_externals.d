@@ -19,7 +19,7 @@ func void AI_CallScript(var string funcName,
                         var C_NPC slf,
                         var C_NPC oth) {};
 
-/// Creates a trigger script, that calls function `funcName` every `delay` milliseconds
+/// Creates a trigger script that calls function `funcName` every `delay` milliseconds
 ///
 /// @param funcName name of the function to be called
 /// @param delay call period in milliseconds
