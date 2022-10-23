@@ -13,19 +13,19 @@ func void AI_CallScript(var string funcName, var C_NPC slf, var C_NPC oth) {};
 - `oth` - will be inserted into global `other` instance
 
 ## AI_startTriggerScript
-Creates a trigger script, that calls function `funcName` every `delay` miliseconds
+Creates a trigger script, that calls function `funcName` every `delay` milliseconds
 
 ```dae
 func C_Trigger AI_startTriggerScript(var string funcName, var int delay) {};
 ```
 
 - `funcName` - name of the function to be called
-- `delay` - call period in miliseconds
+- `delay` - call period in milliseconds
 - `return` - created C_Trigger instance
 
 ## AI_startTriggerScriptEx
 Extended version call - Creates a trigger script, that calls function `funcName` every
-`delay` miliseconds also updates the `self`, `other` and `victim` global instances
+`delay` milliseconds also updates the `self`, `other` and `victim` global instances
 based on `slf`, `oth` and `vct` parameters respectively
 
 ```dae
@@ -37,7 +37,7 @@ func C_Trigger AI_startTriggerScriptEx(var string funcName,
 ```
 
 - `funcName` - name of the function to be called
-- `delay` - call period in miliseconds
+- `delay` - call period in milliseconds
 - `slf` - will be inserted into global `self` instance
 - `oth` - will be inserted into global `other` instance
 - `vct` - will be inserted into global `victim` instance
@@ -77,7 +77,7 @@ func C_NPC AI_GetTriggerNPC(var C_Trigger trigger, var int npcID) {};
 - `return` - active C_Trigger instance
 
 ## AI_GetTriggerFunc
-Returns the function asociated with the specified C_Trigger
+Returns the function associated with the specified C_Trigger
 
 ```dae
 func func AI_GetTriggerFunc(var C_Trigger trigger) {};
@@ -87,7 +87,7 @@ func func AI_GetTriggerFunc(var C_Trigger trigger) {};
 - `return` - trigger function
 
 ## AI_GetTriggerFuncName
-Returns the function name of a function asociated with the specified C_Trigger
+Returns the function name of a function associated with the specified C_Trigger
 
 ```dae
 func string AI_GetTriggerFuncName(var C_Trigger trigger) {};
@@ -162,7 +162,7 @@ set in the trigger script `self`, `other` and `victim`,
 starting on the `startTrigger` instance set in the trigger
 
 ```dae
-func c_triggetr Ai_GetNextTriggerByNPCs(var C_Trigger startTrigger,
+func c_trigger Ai_GetNextTriggerByNPCs(var C_Trigger startTrigger,
                                         var C_NPC self,
                                         var C_NPC other,
                                         var C_NPC victim) {};

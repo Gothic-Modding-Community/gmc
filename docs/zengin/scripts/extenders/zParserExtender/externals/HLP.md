@@ -32,7 +32,7 @@ func string Hlp_GetFocusVobName( var C_NPC npc ) {};
 - `return` - focus vob name
 
 ## Hlp_GetStringLength
-Returns the lenght of a specified string
+Returns the length of a specified string
 
 ```dae
 func int Hlp_GetStringLength( var string str ) {};
@@ -41,7 +41,7 @@ func int Hlp_GetStringLength( var string str ) {};
 - `return` - length of `str`
 
 ## IsNAN
-Checks wheter floating point number is valid
+Checks whether floating point number is valid
 
 ```dae
 func int IsNAN( var float value ) {};
@@ -50,7 +50,7 @@ func int IsNAN( var float value ) {};
 - `return` - `TRUE` if `value` is NaN, `FALSE` if `value` is a valid floating point number
 
 ## Hlp_KeyToggled
-Checks wheter `key` is toggled
+Checks whether `key` is toggled
 
 ```dae
 func int Hlp_KeyToggled( var int key ) {};
@@ -60,7 +60,7 @@ func int Hlp_KeyToggled( var int key ) {};
 - `return` - `TRUE` if key is toggled, `FALSE` if key is not toggled
 
 ## Hlp_KeyPressed
-Checks wheter `key` is pressed
+Checks whether `key` is pressed
 
 ```dae
 func int Hlp_KeyPressed( var int key ) {};
@@ -70,7 +70,7 @@ func int Hlp_KeyPressed( var int key ) {};
 - `return` - `TRUE` if key is pressed, `FALSE` if key is not pressed
 
 ## Hlp_LogicalKeyToggled
-Checks wheter logical `key` is toggled
+Checks whether logical `key` is toggled
 
 ```dae
 func int Hlp_LogicalKeyToggled( var int key ) {};
@@ -80,7 +80,7 @@ func int Hlp_LogicalKeyToggled( var int key ) {};
 - `return` - `TRUE` if key is toggled, `FALSE` if key is not toggled
 
 ## Hlp_GameOnPause()
-Checks wheter the game is paused
+Checks whether the game is paused
 
 ```dae
 func int Hlp_GameOnPause() {};
@@ -107,7 +107,7 @@ func void Hlp_PrintConsole(var string message) {};
 - `message` - message to be printed
 
 ## Hlp_OptionIsExists
-Checks wheter the `entry` in `section` in `.ini` file `optName` exists
+Checks whether the `entry` in `section` in `.ini` file `optName` exists
 
 `optName` values
 - `Gothic`
@@ -124,7 +124,7 @@ func int Hlp_OptionIsExists(var string optName, var string section, var string e
 - `return` - `TRUE` if the option exists, `FALSE` if the option does not exist
 
 ## Hlp_ReadOptionInt
-Read an integer value from spicified `.ini` file, section and entry.
+Read an integer value from specified `.ini` file, section and entry.
 
 `optName` values
 - `Gothic`
@@ -142,7 +142,7 @@ func int Hlp_ReadOptionInt(var string optName, var string section, var string en
 - `return` - the option value
 
 ## Hlp_ReadOptionFloat
-Read a floating point value from spicified `.ini` file, section and entry.
+Read a floating point value from specified `.ini` file, section and entry.
 
 `optName` values
 - `Gothic`
@@ -160,7 +160,7 @@ func float Hlp_ReadOptionFloat(var string optName, var string section, var strin
 - `return` - the option value
 
 ## Hlp_ReadOptionString
-Read a string value from spicified `.ini` file, section and entry.
+Read a string value from specified `.ini` file, section and entry.
 
 `optName` values
 - `Gothic`
@@ -178,7 +178,7 @@ func string Hlp_ReadOptionString(var string optName, var string section, var str
 - `return` - the option value
 
 ## Hlp_WriteOptionInt
-Writes an integer value to spicified `.ini` file, section and entry.
+Writes an integer value to specified `.ini` file, section and entry.
 
 `optName` values
 - `Gothic`
@@ -195,7 +195,7 @@ func void Hlp_WriteOptionInt(var string optName, var string section, var string 
 - `value` - value to be written
 
 ## Hlp_WriteOptionFloat
-Writes a floating point value to spicified `.ini` file, section and entry.
+Writes a floating point value to specified `.ini` file, section and entry.
 
 `optName` values
 - `Gothic`
@@ -212,7 +212,7 @@ func void Hlp_WriteOptionFloat(var string optName, var string section, var strin
 - `value` - value to be written
 
 ## Hlp_WriteOptionString
-Writes a string value to spicified `.ini` file, section and entry.
+Writes a string value to specified `.ini` file, section and entry.
 
 `optName` values
 - `Gothic`
