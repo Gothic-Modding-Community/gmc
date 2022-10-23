@@ -9,7 +9,7 @@ func int Mdl_GetAnimationIndex( var C_NPC npc, var string ani_name ) {};
 ```
 
 - `npc` - NPC with the animation
-- `ani_name` - name of the animation in allcaps
+- `ani_name` - name of the animation in uppercase
 - `return` - animation index
 
 ## Mdl_GetAnimationName
@@ -24,7 +24,7 @@ func string Mdl_GetAnimationName( var C_NPC npc, var int ani_index ) {};
 - `return` - animation name
 
 ## Mdl_AnimationIsExists
-Checks wheter animation exists
+Checks whether animation exists
 
 ```dae
 func int Mdl_AnimationIsExists( var C_NPC npc, var int ani_index ) {};
@@ -35,7 +35,7 @@ func int Mdl_AnimationIsExists( var C_NPC npc, var int ani_index ) {};
 - `return` - animation name
 
 ## Mdl_AnimationIsActive
-Checks wheter animation is active (wheter it is currently played)
+Checks whether animation is active (whether it is currently played)
 
 ```dae
 func int Mdl_AnimationIsActive( var C_NPC npc, var int ani_index ) {};
@@ -65,7 +65,7 @@ func void Mdl_ResetAllAnimationsFPS( var C_NPC npc ) {};
 - `npc` - NPC with the animation
 
 ## Mdl_SetAnimationFPS
-Set framerate for animtion specified by animation index
+Set framerate for animation specified by animation index
 
 ```dae
 func void Mdl_SetAnimationFPS( var C_NPC npc, var int ani_index, var float fps ) {};
@@ -76,7 +76,7 @@ func void Mdl_SetAnimationFPS( var C_NPC npc, var int ani_index, var float fps )
 - `fps` - framerate
 
 ## Mdl_ResetAnimationFPS
-Reset framerate to default for animtion specified by animation index
+Reset framerate to default for animation specified by animation index
 
 ```dae
 func void Mdl_ResetAnimationFPS( var C_NPC npc, var int ani_index ) {};
@@ -105,7 +105,7 @@ func void Mdl_ApplyOverlayMds_AtFirst( var string mdsName ) {};
 - `mdsName` - name of the overlay
 
 ## Mdl_SetNpcSpeedMultiplier
-Sets a multipler for animation speed
+Sets a multiplier for animation speed
 1.0 = 100% speed (normal speed)
 
 ```dae
