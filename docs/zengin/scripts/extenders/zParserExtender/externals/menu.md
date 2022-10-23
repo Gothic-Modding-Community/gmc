@@ -30,11 +30,3 @@ instance MENU_OPT_UNION(C_MENU_DEF)
 In this case all instances are of the name `MENUITEM_UNION_AUTO_*` where `*` is a wildcard that can be substituted with anything. The plugin will search the scripts and find all instances (in the case of [zGamePad]() it is [`MenuItem_Union_Auto_zGamePad`](https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zGamePad_Menu.d#L28-L33))
 
 This example comes from the `zUnionMenu.d` injectable [API script](../../injection#api-script) that is part of the [zGamePad]() plugin, [GitHub link](https://github.com/Gratt-5r2/zGamePad/blob/6be647685e2eee5da9aef9d141398fc69cf3a626/Utils/zUnionMenu.d#L47-L57).
-
-## Externals with docu comments
-```dae
-/// Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance
-/// 
-/// @param mask regex like mask for searching
-func void Menu_SearchItems( var string mask ) {};
-```
