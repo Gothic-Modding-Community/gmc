@@ -19,19 +19,19 @@ func void AI_CallScript(var string funcName,
                         var C_NPC slf,
                         var C_NPC oth) {};
 
-/// Creates a trigger script, that calls function `funcName` every `delay` miliseconds
+/// Creates a trigger script, that calls function `funcName` every `delay` milliseconds
 ///
 /// @param funcName name of the function to be called
-/// @param delay call period in miliseconds
+/// @param delay call period in milliseconds
 /// @return created C_Trigger instance
 func C_Trigger AI_startTriggerScript(var string funcName, var int delay) {};
 
 /// Extended version call - Creates a trigger script, that calls function `funcName` every
-/// `delay` miliseconds also updates the `self`, `other` and `victim` global instances
+/// `delay` milliseconds also updates the `self`, `other` and `victim` global instances
 /// based on `slf`, `oth` and `vct` parameters respectively
 /// 
 /// @param funcName name of the function to be called
-/// @param delay call period in miliseconds
+/// @param delay call period in milliseconds
 /// @param slf will be inserted into global `self` instance
 /// @param oth will be inserted into global `other` instance
 /// @param vct will be inserted into global `victim` instance
@@ -67,13 +67,13 @@ const int victimID = 2;
 /// @return active C_Trigger instance
 func C_NPC AI_GetTriggerNPC(var C_Trigger trigger, var int npcID) {};
 
-/// Returns the function asociated with the specified C_Trigger
+/// Returns the function associated with the specified C_Trigger
 ///
 /// @param trigger C_Trigger script
 /// @return trigger function
 func func AI_GetTriggerFunc(var C_Trigger trigger) {};
 
-/// Returns the function name of a function asociated with the specified C_Trigger
+/// Returns the function name of a function associated with the specified C_Trigger
 ///
 /// @param trigger C_Trigger script
 /// @return active C_Trigger instance
@@ -128,7 +128,7 @@ func C_Trigger Ai_GetNextTriggerByVictim(var C_Trigger startTrigger, var C_NPC v
 /// @param other other C_NPC instance
 /// @param victim victim C_NPC instance
 /// @return C_Trigger instance
-func c_triggetr Ai_GetNextTriggerByNPCs(var C_Trigger startTrigger,
+func c_trigger Ai_GetNextTriggerByNPCs(var C_Trigger startTrigger,
                                         var C_NPC self,
                                         var C_NPC other,
                                         var C_NPC victim) {};
@@ -140,7 +140,7 @@ func c_triggetr Ai_GetNextTriggerByNPCs(var C_Trigger startTrigger,
 //
 // =========================================================
 
-/// Converts memory address (pointer) to a instance
+/// Converts memory address (pointer) to an instance
 /// 
 /// @param address object pointer
 /// @return instance of the object
@@ -232,36 +232,36 @@ func instance Hlp_GetFocusVob( var C_NPC npc ) {};
 /// @return focus vob name
 func string Hlp_GetFocusVobName( var C_NPC npc ) {};
 
-/// Returns the lenght of a specified string
+/// Returns the length of a specified string
 ///
 /// @return str input string
 /// @return length of `str`
 func int Hlp_GetStringLength( var string str ) {};
 
-/// Checks wheter floating point number is valid
+/// Checks whether floating point number is valid
 ///
 /// @return `TRUE` if `value` is NaN, `FALSE` if `value` is a valid floating point number
 func int IsNAN( var float value ) {};
 
-/// Checks wheter `key` is toggled
+/// Checks whether `key` is toggled
 ///
 /// @param key key code
 /// @return `TRUE` if key is toggled, `FALSE` if key is not toggled
 func int Hlp_KeyToggled( var int key ) {};
 
-/// Checks wheter `key` is pressed
+/// Checks whether `key` is pressed
 ///
 /// @param key key code
 /// @return `TRUE` if key is pressed, `FALSE` if key is not pressed
 func int Hlp_KeyPressed( var int key ) {};
 
-/// Checks wheter logical `key` is toggled
+/// Checks whether logical `key` is toggled
 ///
 /// @param key key code
 /// @return `TRUE` if key is toggled, `FALSE` if key is not toggled
 func int Hlp_LogicalKeyToggled( var int key ) {};
 
-/// Checks wheter the game is paused
+/// Checks whether the game is paused
 ///
 /// @return `TRUE` if the game is paused, `FALSE` if the game is not paused
 func int Hlp_GameOnPause() {};
@@ -276,7 +276,7 @@ func void Hlp_MessageBox( var string message ) {};
 /// @param message message to be printed
 func void Hlp_PrintConsole(var string message) {};
 
-/// Checks wheter the `entry` in `section` in `.ini` file `optName` exists
+/// Checks whether the `entry` in `section` in `.ini` file `optName` exists
 ///
 /// `optName` values
 /// - `Gothic`
@@ -289,7 +289,7 @@ func void Hlp_PrintConsole(var string message) {};
 /// @return `TRUE` if the option exists, `FALSE` if the option does not exist
 func int Hlp_OptionIsExists(var string optName, var string section, var string entry) {};
 
-/// Read an integer value from spicified `.ini` file, section and entry.
+/// Read an integer value from specified `.ini` file, section and entry.
 ///
 /// `optName` values
 /// - `Gothic`
@@ -303,7 +303,7 @@ func int Hlp_OptionIsExists(var string optName, var string section, var string e
 /// @return the option value
 func int Hlp_ReadOptionInt(var string optName, var string section, var string entry, var int default) {};
 
-/// Read a floating point value from spicified `.ini` file, section and entry.
+/// Read a floating point value from specified `.ini` file, section and entry.
 ///
 /// `optName` values
 /// - `Gothic`
@@ -317,7 +317,7 @@ func int Hlp_ReadOptionInt(var string optName, var string section, var string en
 /// @return the option value
 func float Hlp_ReadOptionFloat(var string optName, var string section, var string entry, var float default) {};
 
-/// Read a string value from spicified `.ini` file, section and entry.
+/// Read a string value from specified `.ini` file, section and entry.
 ///
 /// `optName` values
 /// - `Gothic`
@@ -331,7 +331,7 @@ func float Hlp_ReadOptionFloat(var string optName, var string section, var strin
 /// @return the option value
 func string Hlp_ReadOptionString(var string optName, var string section, var string entry, var string default) {};
 
-/// Writes an integer value to spicified `.ini` file, section and entry.
+/// Writes an integer value to specified `.ini` file, section and entry.
 ///
 /// `optName` values
 /// - `Gothic`
@@ -344,7 +344,7 @@ func string Hlp_ReadOptionString(var string optName, var string section, var str
 /// @param value value to be written
 func void Hlp_WriteOptionInt(var string optName, var string section, var string entry, var int value) {};
 
-/// Writes a floating point value to spicified `.ini` file, section and entry.
+/// Writes a floating point value to specified `.ini` file, section and entry.
 ///
 /// `optName` values
 /// - `Gothic`
@@ -357,7 +357,7 @@ func void Hlp_WriteOptionInt(var string optName, var string section, var string 
 /// @param value value to be written
 func void Hlp_WriteOptionFloat(var string optName, var string section, var string entry, var float value) {};
 
-/// Writes a string value to spicified `.ini` file, section and entry.
+/// Writes a string value to specified `.ini` file, section and entry.
 ///
 /// `optName` values: `Gothic`, `Mod`, `SystemPack`
 ///
@@ -410,7 +410,7 @@ func int Log_GetTopicSection(var string topic) {};
 /// Returns animation's index for specified NPC based on animation's name
 ///
 /// @param npc NPC with the animation
-/// @param ani_name name of the animation in allcaps
+/// @param ani_name name of the animation in uppercase
 /// @return animation index
 func int Mdl_GetAnimationIndex( var C_NPC npc, var string ani_name ) {};
 
@@ -421,14 +421,14 @@ func int Mdl_GetAnimationIndex( var C_NPC npc, var string ani_name ) {};
 /// @return animation name
 func string Mdl_GetAnimationName( var C_NPC npc, var int ani_index ) {};
 
-/// Checks wheter animation exists
+/// Checks whether animation exists
 ///
 /// @param npc NPC with the animation
 /// @param ani_index animation index
 /// @return animation name
 func int Mdl_AnimationIsExists( var C_NPC npc, var int ani_index ) {};
 
-/// Checks wheter animation is active (wheter it is currently played)
+/// Checks whether animation is active (whether it is currently played)
 ///
 /// @param npc NPC with the animation
 /// @param ani_index animation index
@@ -446,14 +446,14 @@ func void Mdl_SetAllAnimationsFPS( var C_NPC npc, var float fps ) {};
 /// @param npc NPC with the animation
 func void Mdl_ResetAllAnimationsFPS( var C_NPC npc ) {};
 
-/// Set framerate for animtion specified by animation index
+/// Set framerate for animation specified by animation index
 ///
 /// @param npc NPC with the animation
 /// @param ani_index animation index
 /// @param fps framerate
 func void Mdl_SetAnimationFPS( var C_NPC npc, var int ani_index, var float fps ) {};
 
-/// Reset framerate to default for animtion specified by animation index
+/// Reset framerate to default for animation specified by animation index
 ///
 /// @param npc NPC with the animation
 /// @param ani_index animation index
@@ -470,7 +470,7 @@ func void Mdl_SetVisible( var C_NPC npc, var int isVisible ) {};
 /// @param mdsName name of the overlay
 func void Mdl_ApplyOverlayMds_AtFirst( var string mdsName ) {};
 
-/// Sets a multipler for animation speed
+/// Sets a multiplier for animation speed
 /// 1.0 = 100% speed (normal speed)
 ///
 /// @param npc npc to be affected
@@ -613,19 +613,19 @@ func C_Item Npc_GetRightHandItem( var C_Npc npc ) {};
 func C_Item Npc_GetSlotItem( var C_Npc npc, var string slotName ) {};
 
 /// Places an instance of the oCVom class (including items and NPCs) object into the slotName of the NPC
-/// The copyInInv parameter determines wheter a copy of the object should remian in the character's inventory
+/// The copyInInv parameter determines whether a copy of the object should remain in the character's inventory
 ///
 /// @param npc npc to remove the item from
-/// @param slotName name of the slot fro which to remove the item
+/// @param slotName name of the slot from which to remove the item
 /// @param object object to be inserted into the slot
 /// @param copyInInv should a copy of the object stay in character inventory
 func void Npc_PutInSlot(var C_Npc npc, var string slotName, var instance object, var int copyInInv) {};
 
 /// Removes an object from the slotName of the NPC.
-/// The dropIt parameter in Gothic 2 defines, wheter or not the object should drop out of the slot. In Gothic 1, this parameter is reserved and must be 0.
+/// The dropIt parameter in Gothic 2 defines, whether object should drop out of the slot. In Gothic 1, this parameter is reserved and must be 0.
 ///
 /// @param npc npc to remove the item from
-/// @param slotName name of the slot fro which to remove the item
+/// @param slotName name of the slot from which to remove the item
 /// @param dropIt should the object be dropped
 func void Npc_RemoveFromSlot(var C_Npc npc, var string slotName, var int dropIt) {};
 
@@ -778,8 +778,8 @@ func void Par_SetSymbolValueStringArray(var string value, var int parId, var int
 /// 
 /// Format specifiers:
 /// %s - inserts a string
-/// %i - inserts a integer number
-/// %x - inserts a integer in hexadecimal
+/// %i - inserts an integer number
+/// %x - inserts an integer in hexadecimal
 /// %f - inserts a floating point number
 /// %b - inserts a logical expression
 /// %p - inserts a pointer
@@ -788,7 +788,7 @@ func void Par_SetSymbolValueStringArray(var string value, var int parId, var int
 //TODO: func string Str_Format( var string format, ... ) {};
 
 /// Returns a string in the current language, otherwise in English.
-/// Arguments MUST be encoded in UTF-8! The result string will be converted to apropriate ANSI string.
+/// Arguments MUST be encoded in UTF-8! The result string will be converted to appropriate ANSI string.
 ///
 /// @param russian Russian string
 /// @param english English string
@@ -847,7 +847,7 @@ func int Str_GetLength( var int str ) {};
 /// Returns the current position of the object in the world
 /// 
 /// @param vob vob to ge the position of
-/// @return C_Position instace - position of the VOB
+/// @return C_Position instance - position of the VOB
 func C_Position Vob_GetVobPosition( var C_Vob vob ) {};
 
 /// Sets the current position of the object in the world
@@ -990,7 +990,7 @@ func void Wld_PlayEffectAt(  var string effect,
 ///
 /// @param weight the strength of the rain
 /// @param time rain duration
-func void Wld_ToggleRain( var float weight, var flaot time ) {};
+func void Wld_ToggleRain( var float weight, var float time ) {};
 
 /// Sets the weather type.  
 /// Types:
