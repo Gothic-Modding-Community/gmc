@@ -830,6 +830,8 @@ func string Str_GetLocalizedStringEx( var string russian,
 func string Str_UTF8_to_ANSI( var string utf8, var int codePage ) {};
 
 /// Return the code page corresponding to the current language set in the Union System
+///
+/// @return code page corresponding to the current language
 func int Str_GetCurrentCP() {};
 
 /// Returns the length of a string
@@ -930,6 +932,7 @@ func void Vob_SetMobInterData( var C_Vob mobInter, var C_MobInter_Data data ) {}
 ///
 /// @param mobLock oCMobLockable object
 /// @param data MobInter_Data of the object
+/// return C_MobLockable_Data of the object
 func C_MobLockable_Data Vob_GetMobInterData( var C_Vob mobLock ) {};
 
 /// Sets the data of the oCMobLockable object

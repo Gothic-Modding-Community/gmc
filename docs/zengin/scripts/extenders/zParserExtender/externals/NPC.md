@@ -83,7 +83,7 @@ func void Npc_PutInSlot(var C_Npc npc, var string slotName, var instance object,
 
 ## Npc_RemoveFromSlot
 Removes an object from the slotName of the NPC.
-The dropIt parameter in Gothic 2 defines, whether or not the object should drop out of the slot. In Gothic 1, this parameter is reserved and must be 0.
+The dropIt parameter in Gothic 2 defines, whether object should drop out of the slot. In Gothic 1, this parameter is reserved and must be 0.
 
 ```dae
 func void Npc_RemoveFromSlot(var C_Npc npc, var string slotName, var int dropIt) {};

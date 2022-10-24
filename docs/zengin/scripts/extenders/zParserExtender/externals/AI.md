@@ -1,11 +1,14 @@
 # AI - functions for working with AI
 Functions to work with the new [`C_Trigger`](../c_trigger.md) class and NPC's AI queue.
 
+
 ## AI_CallScript
 Adds a `funcName` function call to the AI queue
 
 ```dae
-func void AI_CallScript(var string funcName, var C_NPC slf, var C_NPC oth) {};
+func void AI_CallScript(var string funcName,
+                        var C_NPC slf,
+                        var C_NPC oth) {};
 ```
 
 - `funcName` - name of the function to be called
@@ -13,7 +16,7 @@ func void AI_CallScript(var string funcName, var C_NPC slf, var C_NPC oth) {};
 - `oth` - will be inserted into global `other` instance
 
 ## AI_startTriggerScript
-Creates a trigger script, that calls function `funcName` every `delay` milliseconds
+Creates a trigger script that calls function `funcName` every `delay` milliseconds
 
 ```dae
 func C_Trigger AI_startTriggerScript(var string funcName, var int delay) {};
@@ -53,7 +56,7 @@ func C_Trigger AI_GetTriggerByID(var int ID) {};
 - `ID` - array id
 - `return` - active C_Trigger instance
 
-## AI_GetTriggersNum()
+## AI_GetTriggersNum
 Returns the number of active C_Trigger scripts
 
 ```dae
@@ -73,7 +76,7 @@ func C_NPC AI_GetTriggerNPC(var C_Trigger trigger, var int npcID) {};
 ```
 
 - `trigger` - C_Trigger script
-- `npcID` - [selfID, otherID, victimID] NPC id
+- `npcID` - NPC id
 - `return` - active C_Trigger instance
 
 ## AI_GetTriggerFunc
@@ -149,7 +152,7 @@ Returns the next trigger in the active trigger array based on the `victim` trigg
 parameter, starting on the `startTrigger` instance set in the trigger
 
 ```dae
-func C_Trigger Ai_GetNextTriggerByVictim(var C_Trigger startTrigger, var C_NPC victim) {};
+func C_Trigger Ai_GetNextTriggerByVictim( var C_Trigger startTrigger, var C_NPC victim ) {};
 ```
 
 - `startTrigger` - C_Trigger script to start the search from
@@ -163,9 +166,9 @@ starting on the `startTrigger` instance set in the trigger
 
 ```dae
 func c_trigger Ai_GetNextTriggerByNPCs(var C_Trigger startTrigger,
-                                        var C_NPC self,
-                                        var C_NPC other,
-                                        var C_NPC victim) {};
+                                       var C_NPC self,
+                                       var C_NPC other,
+                                       var C_NPC victim) {};
 ```
 
 - `startTrigger` - C_Trigger script to start the search from

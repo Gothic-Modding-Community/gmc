@@ -93,7 +93,7 @@ func void Mdl_SetVisible( var C_NPC npc, var int isVisible ) {};
 ```
 
 - `npc` - specified NPC
-- `isVisible` - [TRUE, FALSE] `TRUE` - visible, `FALSE` - invisible
+- `isVisible` - `TRUE` - visible, `FALSE` - invisible
 
 ## Mdl_ApplyOverlayMds_AtFirst
 Applies or moves existing overlay to the top of the list

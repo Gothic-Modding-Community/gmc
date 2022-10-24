@@ -79,7 +79,7 @@ func int Hlp_LogicalKeyToggled( var int key ) {};
 - `key` - key code
 - `return` - `TRUE` if key is toggled, `FALSE` if key is not toggled
 
-## Hlp_GameOnPause()
+## Hlp_GameOnPause
 Checks whether the game is paused
 
 ```dae
@@ -110,9 +110,10 @@ func void Hlp_PrintConsole(var string message) {};
 Checks whether the `entry` in `section` in `.ini` file `optName` exists
 
 `optName` values
-- `Gothic`
-- `Mod`
-- `SystemPack`
+
+- `#!dae "Gothic"`
+- `#!dae "Mod"`
+- `#!dae "SystemPack"`
 
 ```dae
 func int Hlp_OptionIsExists(var string optName, var string section, var string entry) {};
@@ -127,9 +128,10 @@ func int Hlp_OptionIsExists(var string optName, var string section, var string e
 Read an integer value from specified `.ini` file, section and entry.
 
 `optName` values
-- `Gothic`
-- `Mod`
-- `SystemPack`
+
+- `#!dae "Gothic"`
+- `#!dae "Mod"`
+- `#!dae "SystemPack"`
 
 ```dae
 func int Hlp_ReadOptionInt(var string optName, var string section, var string entry, var int default) {};
@@ -145,9 +147,10 @@ func int Hlp_ReadOptionInt(var string optName, var string section, var string en
 Read a floating point value from specified `.ini` file, section and entry.
 
 `optName` values
-- `Gothic`
-- `Mod`
-- `SystemPack`
+
+- `#!dae "Gothic"`
+- `#!dae "Mod"`
+- `#!dae "SystemPack"`
 
 ```dae
 func float Hlp_ReadOptionFloat(var string optName, var string section, var string entry, var float default) {};
@@ -163,17 +166,18 @@ func float Hlp_ReadOptionFloat(var string optName, var string section, var strin
 Read a string value from specified `.ini` file, section and entry.
 
 `optName` values
-- `Gothic`
-- `Mod`
-- `SystemPack`
+
+- `#!dae "Gothic"`
+- `#!dae "Mod"`
+- `#!dae "SystemPack"`
 
 ```dae
 func string Hlp_ReadOptionString(var string optName, var string section, var string entry, var string default) {};
 ```
 
 - `optName` - the `.ini` file
-- `section` - settings section like `[GAME]`
-- `entry` - one setting entry like `invCatOrder`
+- `section` - settings section like `[INTERFACE]`
+- `entry` - one setting entry like `scale`
 - `default` - default value - if the value is empty
 - `return` - the option value
 
@@ -181,9 +185,10 @@ func string Hlp_ReadOptionString(var string optName, var string section, var str
 Writes an integer value to specified `.ini` file, section and entry.
 
 `optName` values
-- `Gothic`
-- `Mod`
-- `SystemPack`
+
+- `#!dae "Gothic"`
+- `#!dae "Mod"`
+- `#!dae "SystemPack"`
 
 ```dae
 func void Hlp_WriteOptionInt(var string optName, var string section, var string entry, var int value) {};
@@ -198,9 +203,10 @@ func void Hlp_WriteOptionInt(var string optName, var string section, var string 
 Writes a floating point value to specified `.ini` file, section and entry.
 
 `optName` values
-- `Gothic`
-- `Mod`
-- `SystemPack`
+
+- `#!dae "Gothic"`
+- `#!dae "Mod"`
+- `#!dae "SystemPack"`
 
 ```dae
 func void Hlp_WriteOptionFloat(var string optName, var string section, var string entry, var float value) {};
@@ -215,17 +221,18 @@ func void Hlp_WriteOptionFloat(var string optName, var string section, var strin
 Writes a string value to specified `.ini` file, section and entry.
 
 `optName` values
-- `Gothic`
-- `Mod`
-- `SystemPack`
+
+- `#!dae "Gothic"`
+- `#!dae "Mod"`
+- `#!dae "SystemPack"`
 
 ```dae
 func void Hlp_WriteOptionString(var string optName, var string section, var string entry, var string value) {};
 ```
 
 - `optName` - the `.ini` file
-- `section` - settings section like `[GAME]`
-- `entry` - one setting entry like `invCatOrder`
+- `section` - settings section like `[INTERFACE]`
+- `entry` - one setting entry like `scale`
 - `value` - value to be written
 
 ## Hlp_GetSteamPersonalName

@@ -4,19 +4,19 @@ Functions to manipulate and format strings.
 ## Str_Format
 Returns formatted string using format specifiers
 
-Format specifiers:  
-`%s` - inserts a string  
-`%i` - inserts an integer  
-`%x` - inserts an integer in hexadecimal format  
-`%f` - inserts a floating point number  
-`%b` - inserts a logical expression  
-`%p` - inserts a pointer  
+Format specifiers:
+
+- `%s` - inserts a string
+- `%i` - inserts an integer number
+- `%x` - inserts an integer in hexadecimal
+- `%f` - inserts a floating point number
+- `%b` - inserts a logical expression
+- `%p` - inserts a pointer
+
 ```dae
 func string Str_Format( var string format, ... ) {};
 ```
 
-- `format` - format string containing format specifiers
-- `...` - parameters to be substituted to the format specifiers
 - `return` - formatted string
 
 ### Examples
@@ -46,8 +46,9 @@ func string GetLoadSlotString (var int number)
     With this simple change, translators have to translate only 2 strings instead of 30 (15 + 15 slots) and only 2 strings are compiled into the compiled `Menu.dat` file.
 
 ## Str_GetLocalizedString
-Returns a string in the current language, otherwise in English.  
-Arguments MUST be encoded in **UTF-8!** The result string will be converted to appropriate ANSI string.
+Returns a string in the current language, otherwise in English.
+Arguments MUST be encoded in UTF-8! The result string will be converted to appropriate ANSI string.
+
 
 ```dae
 func string Str_GetLocalizedString( var string russian,
@@ -58,16 +59,17 @@ func string Str_GetLocalizedString( var string russian,
 
 - `russian` - Russian string
 - `english` - English string
-- `german` - German string
-- `polish` - Polish string
-- `return` - string in the current language, as it is set in Union
+- `german` -  German string
+- `polish` -  Polish string
+- `return` - string in the current language
 
 ## Str_GetLocalizedStringEx
 Returns a string in the current language, otherwise in English.
 Offers additional languages
 
+
 ```dae
-func string Str_GetLocalizedStringEx( var string russian, 
+func string Str_GetLocalizedStringEx( var string russian,
                                       var string english,
                                       var string german,
                                       var string polish,
@@ -77,25 +79,26 @@ func string Str_GetLocalizedStringEx( var string russian,
                                       var string spanish ) {};
 ```
 
-- `russian` - Russian string
-- `english` - English string
-- `german` - German string
-- `polish` - Polish string
+- `russian` -  Russian string
+- `english` -  English string
+- `german` -   German string
+- `polish` -   Polish string
 - `romanian` - Romanian string
-- `italian` - Italian string
-- `czech` - Czech  string
-- `spanish` - Spanish string
-- `return` - string in the current language, as it is set in Union
+- `italian` -  Italian string
+- `czech` -    Czech  string
+- `spanish` -  Spanish string
+- `return` - string in the current language
 
 ## Str_UTF8_to_ANSI
 Converts UTF-8 string into an ANSI string with codePage
+
 ```dae
 func string Str_UTF8_to_ANSI( var string utf8, var int codePage ) {};
 ```
 
 - `utf8` - string encoded in UTF8
 - `codePage` - codePage id, can be obtained from Str_GetCurrentCP
-- `return` - string encoded with the correct codepage
+- `return` -
 
 ## Str_GetCurrentCP
 Return the code page corresponding to the current language set in the Union System
@@ -107,6 +110,7 @@ func int Str_GetCurrentCP() {};
 
 ## Str_GetLength
 Returns the length of a string
+
 ```dae
 func int Str_GetLength( var int str ) {};
 ```

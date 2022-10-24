@@ -85,6 +85,9 @@ Adds a color to the colour list
 
 ```dae
 func void Vob_AddLightAniColorRGB( var C_Vob vobLight,
+                                   var int r,
+                                   var int g,
+                                   var int b ) {};
 ```
 
 - `vobLight` - object to apply the colour to
@@ -136,11 +139,12 @@ func void Vob_SetMobInterData( var C_Vob mobInter, var C_MobInter_Data data ) {}
 Returns the data of the oCMobLockable object
 
 ```dae
-func void C_MobLockable_Data Vob_GetMobInterData( var C_Vob mobLock ) {};
+func C_MobLockable_Data Vob_GetMobInterData( var C_Vob mobLock ) {};
 ```
 
 - `mobLock` - oCMobLockable object
 - `data` - MobInter_Data of the object
+- `return` - C_MobLockable_Data of the object
 
 ## Vob_SetMobInterData
 Sets the data of the oCMobLockable object
@@ -151,4 +155,3 @@ func void Vob_SetMobInterData( var C_Vob mobLock, var C_MobLockable_Data data ) 
 
 - `mobLock` - oCMobLockable object
 - `data` - C_MobLockable_Data of the object
-

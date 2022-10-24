@@ -12,7 +12,7 @@ Returns the status of diary topic
 - `4` - Obsolete
 
 ```dae
-func int Log_GetTopicStatus(var string topic)
+func int Log_GetTopicStatus(var string topic) {};
 ```
 
 - `topic` - name of the topic
@@ -27,7 +27,7 @@ Returns the topic the diary topic is in
 - `2` - All
 
 ```dae
-func int Log_GetTopicSection(var string topic)
+func int Log_GetTopicSection(var string topic) {};
 ```
 
 - `topic` - name of the topic

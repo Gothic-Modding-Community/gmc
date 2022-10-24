@@ -1,13 +1,13 @@
 # Menu function
 
 ## Menu_SearchItems
-Finds all `C_MenuItem` object instances by the mask and automatically places them in the current menu instance
+Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance
 
 ```dae
 func void Menu_SearchItems( var string mask ) {};
 ```
 
-- `mask` - string mask used in the search for menu items
+- `mask` - regex like mask for searching
 
 ### Example
 This function is used in the Union Menu [API script](../../injection#api-script).  

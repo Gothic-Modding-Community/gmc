@@ -2,7 +2,7 @@
 Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.
 
 ## Mob_Destroy
-Marks oCMOB as destroyed, changes the visual to visualDestroyed if present.
+Marks oCMOB as destroyed, changes the visual to visualDestroyed (if present).
 
 ```dae
 func void Mob_Destroy( var instance object ) {};
@@ -18,7 +18,7 @@ func void Mob_RemoveItem( var instance object, var int item ) {};
 ```
 
 - `object` - oCMobContainer object
-- `item` - {C_ITEM} item to be removed
+- `item` - item to be removed
 
 ## Mob_RemoveItems
 Removes specified number of items from a oCMobContainer
@@ -28,7 +28,7 @@ func void Mob_RemoveItems( var instance object, var int item, var int cnt ) {};
 ```
 
 - `object` - oCMobContainer object
-- `item` - {C_ITEM} item to be removed
+- `item` - item to be removed
 - `cnt` - number of items to be removed
 
 ## Mob_InsertItem
@@ -39,7 +39,7 @@ func void Mob_InsertItem( var instance object, var int item ) {};
 ```
 
 - `object` - oCMobContainer object
-- `item` - {C_ITEM} item to be inserted
+- `item` - item to be inserted
 
 ## Mob_InsertItems
 Inserts specified number of items into a oCMobContainer
@@ -49,7 +49,7 @@ func void Mob_InsertItems( var instance object, var int item, var int cnt ) {};
 ```
 
 - `object` - oCMobContainer object
-- `item` - {C_ITEM} item to be inserted
+- `item` - item to be inserted
 - `cnt` - number of items to be inserted
 
 ## Mob_GetLockCombination
@@ -90,7 +90,7 @@ func void Mob_SetLocked( var instance object, var int locked ) {};
 ```
 
 - `object` - oCMobLockable object
-- `locked` - [TRUE, FALSE] lock or unlock the object
+- `locked` - lock or unlock the object
 
 ## Mob_GetKeyInstance
 Returns the key instance, that unlocks the object
