@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://auronen.github.io/gmc/contribute/</loc>
+         <lastmod>2022-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://auronen.github.io/gmc/gettingstarted_zengin/</loc>
          <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
