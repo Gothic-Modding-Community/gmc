@@ -18,7 +18,7 @@ Modding is all about changing the game files. To achieve that, we have to know t
         ├── Meshes
         │   └── _Compiled
         ├── Music
-        ├── PRESETS
+        ├── Presets
         ├── Scripts
         │   ├── _compiled
         │   └── content

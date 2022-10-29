@@ -1,7 +1,7 @@
 // zParserExtender externals with docu comments for DLS implementation
 // documentation links lead to the Gothic Modding Community documentation github page
 //
-// zParserExtender: https://github.com/Gratt-5r2/zParserExtender
+// zParserExtender: https://github.com/Gratt-5r2/zparserextender
 // GMC: https://github.com/auronen/gmc
 
 // =========================================================
@@ -491,7 +491,7 @@ func void Mdl_ResetNpcSpeedMultiplier( var C_Npc npc ) {};
 /// Find all C_MenuItem object instances by the mask and automatically places them in the current menu instance
 /// 
 /// @param mask regex like mask for searching
-/// [Menu_SearchItems on GMC](https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/menu/)
+/// [Menu_SearchItems on GMC](https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/menu/)
 func void Menu_SearchItems( var string mask ) {};
 
 // =========================================================

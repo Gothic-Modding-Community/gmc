@@ -6,5 +6,5 @@ The `Scripts` directory is where the scripts live. You will be able to find Daed
 
 Daedalus scripts can be edited in any text editor. To get useful features like syntax highlighting you can use community developed tools like 
 
- - [Gothic Sourcer](../tools/GothicSourcer.md)
- - [Daedalus VS Code extension](../tools/DLS.md)
+ - [Gothic Sourcer](../tools/gothic_sourcer.md)
+ - [Daedalus VS Code extension](../tools/dls.md)

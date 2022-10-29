@@ -128,6 +128,8 @@ KeyRecord Toggled
   Combination JOY_DOWN
   Emulation   GAME_DOWN
 ```
-## Customization example
-!!! Info  
-    Real life example of gamepad controls customization for modification with different features.
+
+[//]: #  (## Customization example)
+[//]: #  (!!! Info  )
+[//]: #  (    Real life example of gamepad controls customization for modification with different features.)
+

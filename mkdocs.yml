@@ -36,24 +36,24 @@ theme:
 nav:
   - Home:
     - index.md
-    - Getting Started: GettingStarted_ZenGin.md
-    - ZenGin (G1/G2): zengin/general_info/DirectoryStructure.md
+    - Getting Started: gettingstarted_zengin.md
+    - ZenGin (G1/G2): zengin/general_info/directory_structure.md
     - Genome (G3/R1): genome/index.md
   - ZenGin (G1/G2):
     - General information:
-      - Directory structure: zengin/general_info/DirectoryStructure.md
+      - Directory structure: zengin/general_info/directory_structure.md
       - VDFS - virtual file system: 
         - zengin/general_info/vdfs/index.md
-        - GothicVDFS:       zengin/tools/GothicVDFS.md
-        - VDFS Tool:        zengin/tools/VDFSTool.md
-      - Object persistence: zengin/general_info/ObjectPersistence.md
+        - GothicVDFS:       zengin/tools/gothic_vdfs.md
+        - VDFS Tool:        zengin/tools/vdfs_tool.md
+      - Object persistence: zengin/general_info/object_persistence.md
 
     - Animations: 
       - zengin/anims/index.md
-      - MDS - ModelScript: zengin/anims/MDS.md
-      - EventBlocks: zengin/anims/AniEventBlocks.md
+      - MDS - ModelScript: zengin/anims/mds.md
+      - EventBlocks: zengin/anims/events.md
       - Tutorials:
-        - Standalone animation: zengin/anims/StandaloneAni.md
+        - Standalone animation: zengin/anims/standalone_ani.md
 
     - Meshes: 
       - zengin/meshes/index.md
@@ -85,50 +85,50 @@ nav:
           - zengin/scripts/extenders/ikarus/index.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
-          - Talents:         zengin/scripts/extenders/lego/Talents.md
-          - Bars:            zengin/scripts/extenders/lego/Bars.md
-          - ItemHelper:      zengin/scripts/extenders/lego/ItemHelper.md
-          - ConsoleCommands: zengin/scripts/extenders/lego/ConsoleCommands.md
-          - Trialoge:        zengin/scripts/extenders/lego/Trialoge.md
-          - Misc:            zengin/scripts/extenders/lego/Misc.md
+          - Bars:            zengin/scripts/extenders/lego/bars.md
+          - ConsoleCommands: zengin/scripts/extenders/lego/console_commands.md
+          - ItemHelper:      zengin/scripts/extenders/lego/item_helper.md
+          - Talents:         zengin/scripts/extenders/lego/talents.md
+          - Trialoge:        zengin/scripts/extenders/lego/trialoge.md
+          - Misc:            zengin/scripts/extenders/lego/misc.md
         - AFSP:
           - zengin/scripts/extenders/afsp/index.md
           - Enhanced Info Manager: zengin/scripts/extenders/afsp/afsp_eim.md
         - zParserExtender: 
-          - zengin/scripts/extenders/zParserExtender/index.md
+          - zengin/scripts/extenders/zparserextender/index.md
           - Syntax extensions:
-            - While loop:         zengin/scripts/extenders/zParserExtender/while.md
-            - Namespaces:         zengin/scripts/extenders/zParserExtender/namespaces.md
-            - Event functions:    zengin/scripts/extenders/zParserExtender/events.md
-            - Test-else binding:  zengin/scripts/extenders/zParserExtender/testelse.md
-            - Extern binding:     zengin/scripts/extenders/zParserExtender/extern.md
-            - Dialogue constants: zengin/scripts/extenders/zParserExtender/dialogues.md
+            - While loop:         zengin/scripts/extenders/zparserextender/while.md
+            - Namespaces:         zengin/scripts/extenders/zparserextender/namespaces.md
+            - Event functions:    zengin/scripts/extenders/zparserextender/events.md
+            - Test-else binding:  zengin/scripts/extenders/zparserextender/testelse.md
+            - Extern binding:     zengin/scripts/extenders/zparserextender/extern.md
+            - Dialogue constants: zengin/scripts/extenders/zparserextender/dialogues.md
           - Classes:
-            - C_Trigger class:    zengin/scripts/extenders/zParserExtender/c_trigger.md
-            - Engine classes:     zengin/scripts/extenders/zParserExtender/helperclasses.md
-#           - External functions: zengin/scripts/extenders/zPArserExtender/externals.md
+            - C_Trigger class:    zengin/scripts/extenders/zparserextender/c_trigger.md
+            - Engine classes:     zengin/scripts/extenders/zparserextender/helperclasses.md
+#           - External functions: zengin/scripts/extenders/zparserextender/externals.md
           - Daedalus Injection:
-            - zengin/scripts/extenders/zParserExtender/injection.md
-            - META block:     zengin/scripts/extenders/zParserExtender/META.md
-            - Hooking:        zengin/scripts/extenders/zParserExtender/hooks.md
-            - Other features: zengin/scripts/extenders/zParserExtender/other.md
+            - zengin/scripts/extenders/zparserextender/injection.md
+            - META block:     zengin/scripts/extenders/zparserextender/meta.md
+            - Hooking:        zengin/scripts/extenders/zparserextender/hooks.md
+            - Other features: zengin/scripts/extenders/zparserextender/other.md
           - Externals:
-            - zengin/scripts/extenders/zParserExtender/externals/index.md
-            - String functions: zengin/scripts/extenders/zParserExtender/externals/string.md
-            - Menu function:    zengin/scripts/extenders/zParserExtender/externals/menu.md
-            - Log function:     zengin/scripts/extenders/zParserExtender/externals/log.md
-            - Event function:   zengin/scripts/extenders/zParserExtender/externals/eventsandvars.md
-            - CAST functions:   zengin/scripts/extenders/zParserExtender/externals/CAST.md
-            - HLP functions:    zengin/scripts/extenders/zParserExtender/externals/HLP.md
-            - WLD functions:    zengin/scripts/extenders/zParserExtender/externals/WLD.md
-            - MDL functions:    zengin/scripts/extenders/zParserExtender/externals/MDL.md
-            - NPC functions:    zengin/scripts/extenders/zParserExtender/externals/NPC.md
-            - MOB functions:    zengin/scripts/extenders/zParserExtender/externals/MOB.md
-            - AI functions:     zengin/scripts/extenders/zParserExtender/externals/AI.md
-            - PAR functions:    zengin/scripts/extenders/zParserExtender/externals/PAR.md
-            - VOB functions:    zengin/scripts/extenders/zParserExtender/externals/VOB.md
+            - zengin/scripts/extenders/zparserextender/externals/index.md
+            - String functions: zengin/scripts/extenders/zparserextender/externals/string.md
+            - Menu function:    zengin/scripts/extenders/zparserextender/externals/menu.md
+            - Log function:     zengin/scripts/extenders/zparserextender/externals/log.md
+            - Event function:   zengin/scripts/extenders/zparserextender/externals/events_vars.md
+            - CAST functions:   zengin/scripts/extenders/zparserextender/externals/cast.md
+            - HLP functions:    zengin/scripts/extenders/zparserextender/externals/hlp.md
+            - WLD functions:    zengin/scripts/extenders/zparserextender/externals/wld.md
+            - MDL functions:    zengin/scripts/extenders/zparserextender/externals/mdl.md
+            - NPC functions:    zengin/scripts/extenders/zparserextender/externals/npc.md
+            - MOB functions:    zengin/scripts/extenders/zparserextender/externals/mob.md
+            - AI functions:     zengin/scripts/extenders/zparserextender/externals/ai.md
+            - PAR functions:    zengin/scripts/extenders/zparserextender/externals/par.md
+            - VOB functions:    zengin/scripts/extenders/zparserextender/externals/vob.md
           - Examples:
-            - Sign post example: zengin/scripts/extenders/zParserExtender/examples/signposts.md
+            - Sign post example: zengin/scripts/extenders/zparserextender/examples/signposts.md
 
 
     - Union plugins:
@@ -144,15 +144,15 @@ nav:
     - Tools:
       - zengin/tools/index.md
       - Daedalus:
-        - Daedalus Language Server: zengin/tools/DLS.md
+        - Daedalus Language Server: zengin/tools/dls.md
       - VDFS tools:
-        - GothicVDFS: zengin/tools/GothicVDFS.md
-        - VDFS Tool:  zengin/tools/VDFSTool.md
+        - GothicVDFS: zengin/tools/gothic_vdfs.md
+        - VDFS Tool:  zengin/tools/vdfs_tool.md
 
   - Genome (G3/R1):
     - General information: 
       - genome/index.md
-      - Object persistence: genome/ObjectPersistence.md
+      - Object persistence: genome/object_persistence.md
     - Tools:
       - genome/tools/index.md
 
