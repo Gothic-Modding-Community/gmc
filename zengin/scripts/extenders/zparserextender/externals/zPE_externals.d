@@ -19,25 +19,25 @@ func void AI_CallScript(var string funcName,
                         var C_NPC slf,
                         var C_NPC oth) {};
 
-/// Creates a trigger script that calls function `funcName` every `delay` milliseconds
+/// Creates a trigger script that calls function `funcName` once every `interval` in milliseconds
 ///
 /// @param funcName name of the function to be called
-/// @param delay call period in milliseconds
+/// @param interval call period in milliseconds
 /// @return created C_Trigger instance
-func C_Trigger AI_startTriggerScript(var string funcName, var int delay) {};
+func C_Trigger AI_startTriggerScript(var string funcName, var int interval) {};
 
-/// Extended version call - Creates a trigger script, that calls function `funcName` every
-/// `delay` milliseconds also updates the `self`, `other` and `victim` global instances
+/// Extended version call - Creates a trigger script, that calls function `funcName` once every
+/// `interval` in milliseconds also updates the `self`, `other` and `victim` global instances
 /// based on `slf`, `oth` and `vct` parameters respectively
 /// 
 /// @param funcName name of the function to be called
-/// @param delay call period in milliseconds
+/// @param interval call period in milliseconds
 /// @param slf will be inserted into global `self` instance
 /// @param oth will be inserted into global `other` instance
 /// @param vct will be inserted into global `victim` instance
 /// @return created C_Trigger instance
 func C_Trigger AI_startTriggerScriptEx(var string funcName,
-                                       var int delay,
+                                       var int interval,
                                        var C_NPC slf,
                                        var C_NPC oth,
                                        var C_NPC vct) {};
