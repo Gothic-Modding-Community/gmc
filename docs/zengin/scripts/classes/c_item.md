@@ -178,7 +178,7 @@ To insert it into the game use `insert ItMw_testSword` in console.
 
 ### text & count arrays
 These two arrays are used to put information into the item information box. 
-![Text and Count ](../../../img/c_item_text_count.png)
+![Text and Count ](../../../assets/images/c_item_text_count.png)
 The maximum number of lines is 6. This is defined in the engine, but for script side class definition is declared in the scripts too.
 ```dae
 const int ITM_TEXT_MAX = 6;
@@ -188,7 +188,7 @@ This example shows an item with all elements of `TEXT` and `COUNT` array filled.
 !!! note
     Please notice the last `COUNT` element. It did not take the value we entered, but shows `10` which is the `value` of the item. This behaviour can be changed with Ikarus or Union.
     
-![Item example](../../../img/c_item_example.png)
+![Item example](../../../assets/images/c_item_example.png)
 
 You can find the code below
 ```dae

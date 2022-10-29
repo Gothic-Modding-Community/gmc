@@ -138,7 +138,7 @@ instance DIA_XARDAS_GMC(C_INFO)
 };
 ```
 
-![Description](../../../img/c_info_description.png)
+![Description](../../../assets/images/c_info_description.png)
 
 
 ### trade
