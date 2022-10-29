@@ -2,377 +2,377 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://auronen.github.io/gmc/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/GettingStarted_ZenGin/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/gettingstarted_zengin/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/notready/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/genome/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/genome/ObjectPersistence/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/genome/object_persistence/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/genome/tools/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/anims/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/anims/AniEventBlocks/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/anims/events/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/anims/MDS/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/anims/mds/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/anims/StandaloneAni/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/anims/standalone_ani/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/general_info/DirectoryStructure/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/general_info/directory_structure/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/general_info/ObjectPersistence/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/general_info/object_persistence/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/general_info/vdfs/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/meshes/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/music/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/classes/c_info/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/classes/c_item/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/classes/c_svm/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/afsp/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/afsp/afsp_eim/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/ikarus/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/Bars/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/bars/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/ConsoleCommands/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/console_commands/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/ItemHelper/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/item_helper/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/Misc/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/misc/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/Talents/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/talents/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/Trialoge/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/lego/trialoge/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/META/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/c_trigger/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/c_trigger/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/dialogues/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/dialogues/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/events/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/events/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/extern/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/extern/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/helperclasses/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/helperclasses/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/hooks/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/hooks/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/injection/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/meta/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/namespaces/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/namespaces/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/other/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/other/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/testelse/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/testelse/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/while/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/while/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/examples/signposts/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/examples/signposts/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/AI/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/ai/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/CAST/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/cast/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/HLP/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/events_vars/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/MDL/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/hlp/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/MOB/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/log/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/NPC/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/mdl/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/PAR/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/menu/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/VOB/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/mob/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/WLD/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/npc/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/eventsandvars/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/par/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/log/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/string/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/menu/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/vob/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zParserExtender/externals/string/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/wld/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/sound/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/textures/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/tools/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/tools/DLS/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/tools/dls/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/tools/GothicSourcer/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/tools/gothic_sourcer/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/tools/GothicVDFS/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/tools/gothic_vdfs/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://auronen.github.io/gmc/zengin/tools/VDFSTool/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <loc>https://auronen.github.io/gmc/zengin/tools/vdfs_tool/</loc>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/union/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/union/zgamepad/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/union/zgamepad/controls/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/union/zgamepad/keys_engine_absolute/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/union/zgamepad/keys_engine_logical/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/union/zgamepad/keys_gamepad/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/union/zgamepad/logical_functions/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/video/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auronen.github.io/gmc/zengin/worlds/</loc>
-         <lastmod>2022-10-24</lastmod>
+         <lastmod>2022-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
