@@ -155,6 +155,7 @@ nav:
       - Object persistence: genome/object_persistence.md
     - Tools:
       - genome/tools/index.md
+  - How to contribute: contribute.md
 
 
 extra_css:
