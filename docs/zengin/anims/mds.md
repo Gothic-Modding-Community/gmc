@@ -160,9 +160,6 @@ Not used in the game.
 ## Animation state machine
 More complex animations such as MOBSI animations form a state machine - an animation set.
 
-!!! warning
-    Only a diagram test
-
 ```dae title="MDS script for the big chest"
 Model ("CHESTBIG_OCCRATELARGE")
 {
@@ -201,21 +198,6 @@ stateDiagram-v2
     s_S1      : Opened chest
     t_S1_2_S0 : Closing the chest
     t_S0_Try  : Pick lock broken
-    [*] --> s_S0
-    s_S0 --> s_S0
-
-    s_S0 --> t_S0_2_S1
-    t_S0_2_S1 --> s_S1
-    s_S1 --> s_S1
-
-    s_S1 --> t_S1_2_S0
-    t_S1_2_S0 --> s_S0
-
-    s_S0 --> t_S0_Try
-    t_S0_Try --> s_S0
-```
-```mermaid
-stateDiagram-v2
     [*] --> s_S0
     s_S0 --> s_S0
 
