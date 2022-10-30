@@ -7,8 +7,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  favicon: img/gmc_logo.png
-  logo: img/gmc_logo.png
+  favicon: assets/images/gmc_logo.png
+  logo: assets/images/gmc_logo.png
   icon:
     repo: fontawesome/brands/github
   palette:
@@ -159,10 +159,10 @@ nav:
 
 
 extra_css:
-  - css/extra.css
+  - assets/stylesheets/extra.css
 
 extra_javascript:
-  - js/extra.js
+  - assets/javascripts/extra.js
   
 extra:
   social:
@@ -227,6 +227,6 @@ plugins:
       htmlmin_opts:
         remove_comments: true
       css_files:
-        - css/extra.css
+        - assets/stylesheets/extra.css
       js_files:
-        - js/extra.js
+        - assets/javascripts/extra.js
