@@ -36,11 +36,12 @@ theme:
 nav:
   - Home:
     - index.md
-    - Getting Started: gettingstarted_zengin.md
-    - ZenGin (G1/G2): zengin/general_info/directory_structure.md
+    - ZenGin (G1/G2): zengin/index.md
     - Genome (G3/R1): genome/index.md
+    - How To Contribute: contribute/index.md
 
   - ZenGin (G1/G2):
+    - zengin/index.md
     - General information:
       - Directory structure: zengin/general_info/directory_structure.md
       - VDFS - virtual file system: zengin/general_info/vdfs.md
@@ -140,14 +141,15 @@ nav:
         - VDFS Tool:  zengin/tools/vdfs_tool.md
 
   - Genome (G3/R1):
-    - General information: 
-      - genome/index.md
+    - genome/index.md
+    - General information:
       - Object persistence: genome/object_persistence.md
 
     - Tools:
       - genome/tools/index.md
 
-  - How to contribute: contribute.md
+  - How To Contribute:
+    - contribute/index.md
 
 
 extra_css:
