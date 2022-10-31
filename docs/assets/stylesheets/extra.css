@@ -40,6 +40,16 @@
     min-width: 75%;
 }
 
+/* nav styling override */
+label.md-nav__link {
+    font-style: italic;
+}
+
+div.md-nav__link--index {
+    font-weight: bold;
+}
+
+
 /* endregion */
 
 /* region video container */
