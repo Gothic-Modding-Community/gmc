@@ -86,7 +86,7 @@ trigger created with this function only works in the world in which it was creat
 The plugin creates a new save archive to save the information of the triggers that does not conflict with any of the built-in save files.
 
 ## Searching
-To search for a specific trigger, for example by NPC, the [trigger external functions](../externals/AI) can be used.
+To search for a specific trigger, for example by NPC, the [trigger external functions](externals/ai.md) can be used.
 
 ```dae
 // This way you can disable all triggers running on the `hero` instance

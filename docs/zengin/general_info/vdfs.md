@@ -6,13 +6,13 @@ VDFS is the virtual file system used by ZenGin to distribute and store many, but
 
 The community created variety of different modding tools for work with VDFS volumes over the times, such as:
 
-[**GothicVDFS**](../../tools/gothic_vdfs.md)
+[**GothicVDFS**](../tools/gothic_vdfs.md)
 
 - Viewing
 - Extracting
 - Building `.mod` and `.vdf` archives
 
-[**VDFS Tool**](../../tools/vdfs_tool.md)
+[**VDFS Tool**](../tools/vdfs_tool.md)
 
 - Viewing
 - Extracting

@@ -63,7 +63,7 @@ META
     Parser = Game
 };
 ```
-We want to teleport the player and for this we will need the [`C_Position`](../../helperclasses/#c_position) and [`C_Vob_Data`](../../helperclasses/#c_vob_data) classes.
+We want to teleport the player and for this we will need the [`C_Position`](../helperclasses.md#c_position) and [`C_Vob_Data`](../helperclasses.md#c_vob_data) classes.
 ```dae
 class C_Position
 {
@@ -154,7 +154,7 @@ const int sign_coordinates[MAX_COORDS] = {
 };
 
 ```
-Next define a built in [event](../../events) `GameLoop` function, to check for a pressed key. If the key `U` is pressed, the `jump_to_sign` function is called.
+Next define a built in [event](../events.md) `GameLoop` function, to check for a pressed key. If the key `U` is pressed, the `jump_to_sign` function is called.
 ```dae
 // check for pressed U button every frame
 func event GameLoop()
@@ -185,7 +185,7 @@ Print(Str_Format("Sign %i/%i", tp_index+1, NUM_OF_SIGNS));
 var C_Position pos;  pos  = Vob_GetVobPosition(hero);
 var C_Vob_Data data; data = Vob_GetVobData(hero);
 ```
-Daedalus does not allow array access with variables (only constants and literals). To access the coordinate array we use a selection of [parser](../externals/PAR/) functions.  
+Daedalus does not allow array access with variables (only constants and literals). To access the coordinate array we use a selection of [parser](../externals/par.md) functions.  
 Firstly we get the game parser ID. Then we can use the `Par_GetSymbolValueIntArray` to access the `sign_coordinates` array and assign the coordinates to the `pos` variable.
 ```dae
 // get parser ID for the GAME parser

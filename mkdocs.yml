@@ -36,16 +36,15 @@ theme:
 nav:
   - Home:
     - index.md
-    - Getting Started: gettingstarted_zengin.md
-    - ZenGin (G1/G2): zengin/general_info/directory_structure.md
+    - ZenGin (G1/G2): zengin/index.md
     - Genome (G3/R1): genome/index.md
+    - How To Contribute: contribute/index.md
+
   - ZenGin (G1/G2):
+    - zengin/index.md
     - General information:
       - Directory structure: zengin/general_info/directory_structure.md
-      - VDFS - virtual file system: 
-        - zengin/general_info/vdfs/index.md
-        - GothicVDFS:       zengin/tools/gothic_vdfs.md
-        - VDFS Tool:        zengin/tools/vdfs_tool.md
+      - VDFS - virtual file system: zengin/general_info/vdfs.md
       - Object persistence: zengin/general_info/object_persistence.md
 
     - Animations: 
@@ -55,23 +54,17 @@ nav:
       - Tutorials:
         - Standalone animation: zengin/anims/standalone_ani.md
 
-    - Meshes: 
-      - zengin/meshes/index.md
+    - Meshes: zengin/meshes.md
 
-    - Music: 
-      - zengin/music/index.md
+    - Music: zengin/music.md
 
-    - Sound:
-      - zengin/sound/index.md
+    - Sound: zengin/sound.md
 
-    - Textures:
-      - zengin/textures/index.md
+    - Textures: zengin/textures.md
 
-    - Video:
-      - zengin/video/index.md
+    - Video: zengin/video.md
 
-    - Worlds:
-      - zengin/worlds/index.md
+    - Worlds: zengin/worlds.md
 
     - Scripts: 
       - zengin/scripts/index.md
@@ -81,8 +74,7 @@ nav:
         - C_SVM:  zengin/scripts/classes/c_svm.md
       - Extenders:
         - zengin/scripts/extenders/index.md
-        - Ikarus:
-          - zengin/scripts/extenders/ikarus/index.md
+        - Ikarus: zengin/scripts/extenders/ikarus.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
           - Bars:            zengin/scripts/extenders/lego/bars.md
@@ -130,7 +122,6 @@ nav:
           - Examples:
             - Sign post example: zengin/scripts/extenders/zparserextender/examples/signposts.md
 
-
     - Union plugins:
       - zengin/union/index.md
       - zGamePad:
@@ -150,12 +141,15 @@ nav:
         - VDFS Tool:  zengin/tools/vdfs_tool.md
 
   - Genome (G3/R1):
-    - General information: 
-      - genome/index.md
+    - genome/index.md
+    - General information:
       - Object persistence: genome/object_persistence.md
+
     - Tools:
       - genome/tools/index.md
-  - How to contribute: contribute.md
+
+  - How To Contribute:
+    - contribute/index.md
 
 
 extra_css:
