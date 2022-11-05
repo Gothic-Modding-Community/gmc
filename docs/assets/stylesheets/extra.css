@@ -49,6 +49,15 @@ div.md-nav__link--index {
     font-weight: bold;
 }
 
+/* black anchor color override */
+@media screen {
+    [data-md-color-primary="black"] {
+        --md-typeset-a-color: #2094f3;
+    }
+    [data-md-color-accent=indigo] {
+        --md-accent-fg-color: #0b65b0;
+    }
+}
 
 /* endregion */
 

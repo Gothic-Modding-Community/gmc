@@ -16,7 +16,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       primary: black
       scheme: default
-      accent: blue
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -24,7 +24,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       primary: black
-      accent: light blue
+      accent: indigo
       scheme: slate
       toggle:
         icon: material/brightness-2
