@@ -59,6 +59,12 @@ div.md-nav__link--index {
     }
 }
 
+/* admonition font size override */
+.md-typeset .admonition {
+    /* default 0.64rem */
+    font-size: 0.72rem;
+}
+
 /* endregion */
 
 /* region video container */
