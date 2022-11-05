@@ -65,6 +65,22 @@ div.md-nav__link--index {
     font-size: 0.72rem;
 }
 
+/* override header on the page */
+.md-typeset h1 {
+    font-weight: bold;
+}
+
+@media {
+    /*--md-default-fg-color--light:hsla(var(--md-hue),75%,90%,0.62);*/
+    [data-md-color-scheme=slate] {
+        --md-default-fg-color--light: hsla(var(--md-hue), 100%, 100%, 1);
+    }
+    /*--md-default-fg-color--light:hsla(0, 0%, 0%, .54);*/
+    [data-md-color-scheme=default] {
+        --md-default-fg-color--light: hsla(0, 0%, 0%, 1);
+    }
+}
+
 /* endregion */
 
 /* region video container */
