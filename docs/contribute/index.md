@@ -77,7 +77,7 @@ In order to work locally:
     If you're working on multiple Python projects it's worthwhile to create a Virtual Environment for each project to have separate library directories with installed modules/plugins.
 
     ```bash
-    python venv -m venv
+    python -m venv venv
     ```
    
     This will create a `venv` directory inside the current Terminal directory. Please keep that name as it's added to the `.gitignore` project file.  
@@ -90,9 +90,9 @@ In order to work locally:
     ```
     ```powershell title="Windows"
     # Windows Command Prompt (cmd)
-    venv\bin\activate.bat
+    venv\Scripts\activate.bat
     # Windows Powershell
-    venv\bin\activate.ps1
+    venv\Scripts\activate.ps1
     ```
 
     After activation there will be a `(venv)` indicator near the Terminal prompt.
@@ -108,10 +108,11 @@ In order to work locally:
 
     This will install all dependencies. 
 
-6. Add the remote upstream repository, using this command:
+6. Add the remote upstream repository and fetch the history, using this command:
 
     ```bash
     git remote add upstream https://github.com/auronen/gmc.git
+    git fetch upstream
     ```
    
 7. Checkout the upstream `dev` branch, using this command:
