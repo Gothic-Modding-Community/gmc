@@ -6,7 +6,7 @@ This site is built with a Static Site Generator [MkDocs](https://www.mkdocs.org/
 Prerequisites for contribution differ based on the scale and type of the contribution.
 
 ## Feedback
-You can either [open an issue](https://github.com/auronen/gmc/issues) via GitHub or [join us](https://discord.gg/mCpS5b5SUY) on Discord.
+You can either [open an issue](https://github.com/auronen/gmc/issues) via GitHub or [join us][gmc-discord] on Discord.
 
 ## Direct contribution
 Direct contribution is made via creating a copy of this repository (a fork) and [creating](https://github.com/auronen/gmc/pulls) a pull request (PR) on GitHub with changes for approval.
@@ -15,7 +15,7 @@ Direct contribution is made via creating a copy of this repository (a fork) and 
 Please make sure that the content you are contributing does not already exist on the [dev page](https://gmc.cokoliv.eu/). You can use the search tool to filter GMC for different keywords and contents.
 
 !!! question "How to edit the source files?"  
-The source files for the articles are written using the [Markdown](https://en.wikipedia.org/wiki/Markdown) `.md` file format ([Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet)). Other than that, this site also uses [Python Markdown Extensions](https://python-markdown.github.io/extensions/) which adds more syntax rules like indented [admonitions](https://python-markdown.github.io/extensions/admonition/).
+The source files for the articles are written using the [Markdown](https://en.wikipedia.org/wiki/Markdown) `.md` file format ([Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet)). Other than that, this site also uses [Python Markdown Extensions](https://python-markdown.github.io/extensions/) which add more syntax rules like indented [admonitions](https://python-markdown.github.io/extensions/admonition/).
 
 ### Minor changes
 Minor changes like fixing typos, grammatical errors or removing/adding words to paragraphs in a _single_ file can be done quickly with the pen button in the upper right corner of each article. This will open up a GitHub editing interface which will create a fork with a patch branch after modifying the file and guide the user to open up the pull request.
@@ -32,9 +32,9 @@ Some preparation is needed before working on the files as MkDocs requires an ins
 Firstly, you should install Python. You can follow this step-by-step tutorial for [Windows](https://youtu.be/YYXdXT2l-Gg?t=351) or [macOS](https://youtu.be/YYXdXT2l-Gg?t=85) on how to install Python.
 
 !!! question "This video is from 2017?!"
-The process of installing Python hasn't changed since that point. However, please install the [latest](https://www.python.org/downloads/) version of Python 3.
+The process of installing Python hasn't changed since that point. However, please install the [latest][python-download] version of Python 3.
 
-To work remotely with GitHub, you can install the [latest](https://git-scm.com/downloads) version of _git_ on your system following [this tutorial](https://www.atlassian.com/git/tutorials/install-git).
+To work remotely with GitHub, you can install the [latest][git-download] version of _git_ on your system following [this tutorial](https://www.atlassian.com/git/tutorials/install-git).
 
 If you are planning to do some elaborate Python programming, you can follow this step-by-step tutorial for [Windows](https://www.youtube.com/watch?v=-nh9rCzPJ20) or [macOS](https://www.youtube.com/watch?v=06I63_p-2A4) on how to set up an environment with Visual Studio Code.
 
@@ -89,7 +89,7 @@ In order to work locally:
 
    This will create a `venv` directory inside the current Terminal directory. Please keep that name as it's added to the `.gitignore` project file.
 
-   Depending on the system, use one of those commands to activate the virtual environment.
+   Depending on the system, use one of these commands to activate the virtual environment.
 
     ```bash title="Linux"
     # Linux / macOS
@@ -115,7 +115,7 @@ In order to work locally:
 
    This will install all dependencies.
 
-6. Add the remote upstream repository and fetch the history using this command:
+6. Add the remote upstream repository and fetch the history using these commands:
 
     ```bash
     git remote add upstream https://github.com/auronen/gmc.git
