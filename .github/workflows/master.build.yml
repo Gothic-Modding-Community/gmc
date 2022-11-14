@@ -1,0 +1,26 @@
+name: Build site
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GMC_ENABLE_ON_PUBLISH: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # Number of commits to fetch. 0 indicates all history.
+          # Default: 1
+          # 0 is needed for the update time plugin to work properly
+          fetch-depth: 0
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install -r requirements.txt
+
+      - run: mkdocs gh-deploy --force

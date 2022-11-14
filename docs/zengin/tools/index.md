@@ -17,11 +17,11 @@ video games Gothic and Gothic 2 Night of the Raven.
  
 **[VDFS tools](../general_info/vdfs)**
 
- - [GothicVDFS](GothicVDFS.md) - NiceDE's viewer, extractor and builder for `.vdf` and `.mod` volumes
- - [VDFS Tool](VDFSTool.md) - Gratt's Union VDFS viewer, extractor, builder, optimizer and ZIP compressor for `.vdf` and `.mod` volumes
+ - [GothicVDFS](gothic_vdfs.md) - NiceDE's viewer, extractor and builder for `.vdf` and `.mod` volumes
+ - [VDFS Tool](vdfs_tool.md) - Gratt's Union VDFS viewer, extractor, builder, optimizer and ZIP compressor for `.vdf` and `.mod` volumes
 
 **[World Editors](../worlds)**
 
- - Spacer - the original world editor for ZenGin, shipps with the MDK
+ - Spacer - the original world editor for ZenGin, ships with the MDK
  - [Union Gothic World Editor](https://worldofplayers.ru/threads/42322/) - Saturas' world editor, supports new object classes created with Union
  - [Gothic World Editor](https://worldofplayers.ru/threads/40530/) - World editor for vanilla worlds, works with G1, G2 and G2 NotR worlds

@@ -6,3 +6,6 @@ site/
 
 # Virtual environment
 /venv/
+
+# MacOS files
+.DS_Store
