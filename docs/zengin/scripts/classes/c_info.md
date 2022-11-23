@@ -9,7 +9,7 @@ The `C_INFO` class is used to define dialogues in the game.
 Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164) script file.
 
 <details>
-  <summary>C_Info Daedalus class</summary>
+<summary>C_Info Daedalus class</summary>
 
 ```dae
 class C_Info
@@ -49,7 +49,7 @@ Sets what NPC will have this dialogue instance. Set an NPC instance.
 ```dae
 instance Info_Diego_Gamestart (C_INFO)
 {
-	npc	= PC_Thief; // NPC instance for Diego
+    npc	= PC_Thief; // NPC instance for Diego
     // ...
 };
 ```
@@ -134,7 +134,7 @@ Specify a string that will be shown in the dialogue window.
 instance DIA_XARDAS_GMC(C_INFO)
 {
     // ...
-	description = "Hello, is this the GMC site?";
+    description = "Hello, is this the GMC site?";
 };
 ```
 

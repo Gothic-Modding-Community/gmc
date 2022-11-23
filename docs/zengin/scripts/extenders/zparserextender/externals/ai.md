@@ -30,11 +30,11 @@ func C_Trigger AI_startTriggerScript(var string funcName, var int interval) {};
 Extended version call - Creates a trigger script, that calls function `funcName` once every `interval` in milliseconds also updates the `self`, `other` and `victim` global instances based on `slf`, `oth` and `vct` parameters respectively
 
 ```dae
-func C_Trigger AI_startTriggerScriptEx(var string funcName,
-                                       var int interval,
-                                       var C_NPC slf,
-                                       var C_NPC oth,
-                                       var C_NPC vct) {};
+func C_Trigger AI_startTriggerScriptEx( var string funcName,
+                                        var int interval,
+                                        var C_NPC slf,
+                                        var C_NPC oth,
+                                        var C_NPC vct) {};
 ```
 
 - `funcName` - name of the function to be called
@@ -163,10 +163,10 @@ set in the trigger script `self`, `other` and `victim`,
 starting on the `startTrigger` instance set in the trigger
 
 ```dae
-func c_trigger Ai_GetNextTriggerByNPCs(var C_Trigger startTrigger,
-                                       var C_NPC self,
-                                       var C_NPC other,
-                                       var C_NPC victim) {};
+func c_trigger Ai_GetNextTriggerByNPCs( var C_Trigger startTrigger,
+                                        var C_NPC self,
+                                        var C_NPC other,
+                                        var C_NPC victim) {};
 ```
 
 - `startTrigger` - C_Trigger script to start the search from

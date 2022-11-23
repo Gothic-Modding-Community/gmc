@@ -80,7 +80,8 @@ If the archive is created using `zCArchiverBinSafe`, this data will be stored in
 ```cpp  
 struct BinSafeArchiveHeader  
 {  
- uint32_t version;     // Always equals 2 uint32_t objectCount;  // Serves the same function as "objects n" uint32_t chunkPos;    // Offset to chunk hash table};  
+    uint32_t version;     // Always equals 2 uint32_t objectCount;  // Serves the same function as "objects n" uint32_t chunkPos;    // Offset to chunk hash table};
+};  
 ```  
 
 ### Contents
@@ -90,28 +91,28 @@ Looking further into the archive, we see what appears to be a nested structure.
 ```
 
 [% oCWorld:zCWorld 64513 0]
-	[VobTree % 0 0]
-		childs0=int:1
-		[% zCVobLevelCompo:zCVob 12289 1]
-			pack=int:0
-			presetName=string:
-			bbox3DWS=rawFloat:-71919.9609 -13091.8232 -59900 108999.992 20014.0352 67399.9922 
-			trafoOSToWSRot=raw:0000803f0000000000000000000000000000803f0000000000000000000000000000803f
-			trafoOSToWSPos=vec3:0 0 0
-			vobName=string:LEVEL-VOB
-			visual=string:SURFACE.3DS
-			showVisual=bool:0
-			visualCamAlign=enum:0
-			cdStatic=bool:1
-			cdDyn=bool:0
-			staticVob=bool:0
-			dynShadow=enum:0
-			[visual zCMesh 0 2]
-			[]
-			[ai % 0 0]
-			[]
-		[]
-		...
+    [VobTree % 0 0]
+        childs0=int:1
+        [% zCVobLevelCompo:zCVob 12289 1]
+            pack=int:0
+            presetName=string:
+            bbox3DWS=rawFloat:-71919.9609 -13091.8232 -59900 108999.992 20014.0352 67399.9922 
+            trafoOSToWSRot=raw:0000803f0000000000000000000000000000803f0000000000000000000000000000803f
+            trafoOSToWSPos=vec3:0 0 0
+            vobName=string:LEVEL-VOB
+            visual=string:SURFACE.3DS
+            showVisual=bool:0
+            visualCamAlign=enum:0
+            cdStatic=bool:1
+            cdDyn=bool:0
+            staticVob=bool:0
+            dynShadow=enum:0
+            [visual zCMesh 0 2]
+            []
+            [ai % 0 0]
+            []
+        []
+        ...
 ```
 
 We primarily differentiate between chunks and properties within ZenGin archives:  
@@ -136,11 +137,11 @@ If this is a Binary archive, the same data will be stored in the following binar
 ```cpp
 struct BinaryObjectHeader
 {
-	uint32_t	objectSize;		// Size of the whole object in bytes
-	uint16_t	classVersion;
-	uint32_t	objectIndex;
-	char		objectName[];	// Null-terminated string
-	char		className[];	// Null-terminated string
+    uint32_t	objectSize;		// Size of the whole object in bytes
+    uint16_t	classVersion;
+    uint32_t	objectIndex;
+    char		objectName[];	// Null-terminated string
+    char		className[];	// Null-terminated string
 };
 ```
 
@@ -149,9 +150,9 @@ Oddly enough, if the archive is BinSafe, then the data will be encoded the same 
 ```cpp
 struct BinSafeObjectHeader
 {
-	uint32_t	type;	// 0x1 = TYPE_STRING
-	uint16_t	length;	// Length of the text
-	char		text[];	// [% oCWorld:zCWorld 64513 0]
+    uint32_t	type;	// 0x1 = TYPE_STRING
+    uint16_t	length;	// Length of the text
+    char		text[];	// [% oCWorld:zCWorld 64513 0]
 };
 ```
 
@@ -194,46 +195,46 @@ As you might have noticed, binary mode doesn't perform any kind of checks on if 
 ```cpp
 enum TYPE
 {
-	TYPE_STRING		= 0x1,
-	TYPE_INTEGER	= 0x2,
-	TYPE_FLOAT		= 0x3,
-	TYPE_BYTE		= 0x4,
-	TYPE_WORD		= 0x5,
-	TYPE_BOOL		= 0x6,
-	TYPE_VEC3		= 0x7,
-	TYPE_COLOR		= 0x8,
-	TYPE_RAW		= 0x9,
-	TYPE_RAWFLOAT	= 0x10,
-	TYPE_ENUM		= 0x11
-	TYPE_HASH		= 0x12,
+    TYPE_STRING		= 0x1,
+    TYPE_INTEGER	= 0x2,
+    TYPE_FLOAT		= 0x3,
+    TYPE_BYTE		= 0x4,
+    TYPE_WORD		= 0x5,
+    TYPE_BOOL		= 0x6,
+    TYPE_VEC3		= 0x7,
+    TYPE_COLOR		= 0x8,
+    TYPE_RAW		= 0x9,
+    TYPE_RAWFLOAT	= 0x10,
+    TYPE_ENUM		= 0x11
+    TYPE_HASH		= 0x12,
 };
 
 struct BinSafeProperty
 {
-	TYPE type;
-	union
-	{
-		struct
-		{
-			uint16_t	stringLength;
-			char		stringValue[];
-		}
-		uint32_t	integerOrHashOrEnumValue;
-		float		floatValue;
-		uint8_t		byteOrBoolValue;
-		zVEC3		vec3Value;
-		zCOLOR		colorValue;
-		struct
-		{
-			uint16_t	rawLength;
-			char		rawValue[];
-		}
-		struct
-		{
-			uint16_t	rawFloatLength;
-			float		rawFloatValue[];
-		}		
-	};
+    TYPE type;
+    union
+    {
+        struct
+        {
+            uint16_t	stringLength;
+            char		stringValue[];
+        }
+        uint32_t	integerOrHashOrEnumValue;
+        float		floatValue;
+        uint8_t		byteOrBoolValue;
+        zVEC3		vec3Value;
+        zCOLOR		colorValue;
+        struct
+        {
+            uint16_t	rawLength;
+            char		rawValue[];
+        }
+        struct
+        {
+            uint16_t	rawFloatLength;
+            float		rawFloatValue[];
+        }		
+    };
 };
 ```
 
@@ -242,14 +243,14 @@ Looking at the enumeration of types, you might notice that BinSafe mode has an a
 ```cpp
 struct BinSafeHashTable
 {
-	uint32_t chunkCount;
-	for (chunkCount)
-	{
-		uint16_t	stringLength;
-		uint16_t	linearValue;
-		uint32_t	hashValue;
-		char		text[stringLength];
-	}
+    uint32_t chunkCount;
+    for (chunkCount)
+    {
+        uint16_t	stringLength;
+        uint16_t	linearValue;
+        uint32_t	hashValue;
+        char		text[stringLength];
+    }
 };
 ```
 
@@ -270,15 +271,15 @@ class zCMyClass : public zCObject
 {
 public:
 
-	zCMyClass()				{}
-	virtual ~zCMyClass()	{}
-	
-	virtual void Archive(zCArchiver&);
-	virtual void Unarchive(zCArchiver&);
+    zCMyClass()				{}
+    virtual ~zCMyClass()	{}
+    
+    virtual void Archive(zCArchiver&);
+    virtual void Unarchive(zCArchiver&);
 
-	int myInt;
-	zCMyClass* myObject;
-	zCMyClass* secondPointerToMyObject;
+    int myInt;
+    zCMyClass* myObject;
+    zCMyClass* secondPointerToMyObject;
 
 };
 
@@ -289,24 +290,24 @@ The hypothetical class then implements these virtual functions:
 ```cpp
 void zCMyClass::Archive(zCArchiver& archiver)
 {
-	archiver.WriteInt("myInt", myInt);
-	
-	archiver.WriteObject("myObject", myObject);
-	
-	archiver.WriteChunkStart("myChunk", 0);
-	archiver.WriteObject("secondPointerToMyObject", secondPointerToMyObject);
-	archiver.WriteChunkEnd();
+    archiver.WriteInt("myInt", myInt);
+    
+    archiver.WriteObject("myObject", myObject);
+    
+    archiver.WriteChunkStart("myChunk", 0);
+    archiver.WriteObject("secondPointerToMyObject", secondPointerToMyObject);
+    archiver.WriteChunkEnd();
 }
 
 void zCMyClass::Unarchive(zCArchiver& archiver)
 {
-	archiver.ReadInt("myInt", myInt);
-	
-	myObject = dynamic_cast<zCMyClass*>(archiver.ReadObject("myObject"));
-	
-	archiver.ReadChunkStart("myChunk");
-	secondPointerToMyObject = dynamic_cast<zCMyClass*>(archiver.ReadObject("secondPointerToMyObject"));
-	archiver.ReadChunkEnd();
+    archiver.ReadInt("myInt", myInt);
+    
+    myObject = dynamic_cast<zCMyClass*>(archiver.ReadObject("myObject"));
+    
+    archiver.ReadChunkStart("myChunk");
+    secondPointerToMyObject = dynamic_cast<zCMyClass*>(archiver.ReadObject("secondPointerToMyObject"));
+    archiver.ReadChunkEnd();
 }
 
 ```
@@ -339,20 +340,20 @@ objects 2
 END
 
 [% zCMyClass 0 0]
-	myInt=int:12121212
-	[myObject zCMyClass 0 1]
-		myInt=int:34343434
-		[myObject % 0 0]
-		[]
-		[myChunk % 0 0]
-			[secondPointerToMyObject % 0 0]
-			[]
-		[]
-	[]
-	[myChunk % 0 0]
-		[secondPointerToMyObject § 0 1]
-		[]
-	[]
+    myInt=int:12121212
+    [myObject zCMyClass 0 1]
+        myInt=int:34343434
+        [myObject % 0 0]
+        []
+        [myChunk % 0 0]
+            [secondPointerToMyObject % 0 0]
+            []
+        []
+    []
+    [myChunk % 0 0]
+        [secondPointerToMyObject § 0 1]
+        []
+    []
 []
 ```
 

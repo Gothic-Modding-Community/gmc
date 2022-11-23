@@ -4,27 +4,27 @@ The test-else bind statement can be used to define sections of code to be compil
 
 Valid values:
 
- - instance name - `PC_HERO`, `ItMi_Gold`, ...
- - engine tag - `G1`, `G1A`, `G2`, `G2A`
- - Steam Overlay activity - `Steam`
+- instance name - `PC_HERO`, `ItMi_Gold`, ...
+- engine tag - `G1`, `G1A`, `G2`, `G2A`
+- Steam Overlay activity - `Steam`
 
 The result can be combined from several arguments. Round brackets `()` ca be used to specify priority and expressions support the logical negation operator `!`, logical AND `&&` and OR `||`.
 
 
 The operator can be used anywhere in the script file. It is syntactically similar to `if else` statement, but curly braces `{}` can be omitted for single-line operations. For example:
 ```dae title="SteamActivated constant is set only when Steam is active"
-  test Steam var const SteamActivated = 1;
+test Steam var const SteamActivated = 1;
 ```
 
 ```dae title="Example of a logical expression with an else branch"
-  test SteamActivated && G2A 
-  {
+test SteamActivated && G2A 
+{
     // TODO
-  }
-  else 
-  {
+}
+else 
+{
     // TODO
-  }
+}
 ```
 
 

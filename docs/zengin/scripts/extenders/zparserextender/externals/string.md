@@ -32,7 +32,7 @@ Then define two format functions as such:
 ```dae
 func string GetSaveSlotString (var int number)
 {
-  return Str_format(MENU_SAVE, number);
+    return Str_format(MENU_SAVE, number);
 };
 ```
 ```dae
@@ -69,14 +69,14 @@ Offers additional languages
 
 
 ```dae
-func string Str_GetLocalizedStringEx( var string russian,
-                                      var string english,
-                                      var string german,
-                                      var string polish,
-                                      var string romanian,
-                                      var string italian,
-                                      var string czech,
-                                      var string spanish ) {};
+func string Str_GetLocalizedStringEx(   var string russian,
+                                        var string english,
+                                        var string german,
+                                        var string polish,
+                                        var string romanian,
+                                        var string italian,
+                                        var string czech,
+                                        var string spanish ) {};
 ```
 
 - `russian` -  Russian string

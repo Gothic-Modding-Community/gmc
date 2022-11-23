@@ -16,8 +16,8 @@ There are tool to help with this endeavor - to get a new animation implemented i
 
 ## Prerequisites - Tools & Materials
 1. Gothic Mod Development Kit (MDK)
-	- Gothic 1 MDK - [link](https://github.com/PhoenixTales/gothic-devkit)
-	- Gothic 2 MDK - [link](https://www.worldofgothic.de/dl/download_94.htm)
+    - Gothic 1 MDK - [link](https://github.com/PhoenixTales/gothic-devkit)
+    - Gothic 2 MDK - [link](https://www.worldofgothic.de/dl/download_94.htm)
 2. [Blender](https://www.blender.org/)
 3. [Kerrax's Import Export plugin](https://gitlab.com/Patrix9999/krximpexp) - follow the installation instructions to install the plugin, make sure to set up the texture paths too
 4. Tool for decompiling animations [GothicSourcer](https://worldofplayers.ru/threads/41942/), or use [phoenix](https://github.com/lmichaelis/phoenix) or write your own using [ZenLib](https://github.com/Try/ZenLib)

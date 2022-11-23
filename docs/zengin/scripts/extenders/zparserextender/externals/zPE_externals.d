@@ -36,11 +36,11 @@ func C_Trigger AI_startTriggerScript(var string funcName, var int interval) {};
 /// @param oth will be inserted into global `other` instance
 /// @param vct will be inserted into global `victim` instance
 /// @return created C_Trigger instance
-func C_Trigger AI_startTriggerScriptEx(var string funcName,
-                                       var int interval,
-                                       var C_NPC slf,
-                                       var C_NPC oth,
-                                       var C_NPC vct) {};
+func C_Trigger AI_startTriggerScriptEx( var string funcName,
+                                        var int interval,
+                                        var C_NPC slf,
+                                        var C_NPC oth,
+                                        var C_NPC vct) {};
 
 /// Returns a C_Trigger instance from the array of active triggers by the array index `ID`
 ///
@@ -814,14 +814,14 @@ func string Str_GetLocalizedString( var string russian,
 /// @param spanish  Spanish string
 ///
 /// @return string in the current language
-func string Str_GetLocalizedStringEx( var string russian,
-                                      var string english,
-                                      var string german,
-                                      var string polish,
-                                      var string romanian,
-                                      var string italian,
-                                      var string czech,
-                                      var string spanish ) {};
+func string Str_GetLocalizedStringEx(   var string russian,
+                                        var string english,
+                                        var string german,
+                                        var string polish,
+                                        var string romanian,
+                                        var string italian,
+                                        var string czech,
+                                        var string spanish ) {};
 
 /// Converts UTF-8 string into an ANSI string with codePage
 ///
@@ -899,10 +899,10 @@ func void Vob_AddLightAniColor( var C_Vob vobLight, var C_Color col ) {};
 /// @param r red colour channel
 /// @param g green colour channel 
 /// @param b blue colour channel
-func void Vob_AddLightAniColorRGB( var C_Vob vobLight,
-                                   var int r,
-                                   var int g,
-                                   var int b ) {};
+func void Vob_AddLightAniColorRGB(  var C_Vob vobLight,
+                                    var int r,
+                                    var int g,
+                                    var int b ) {};
 
 /// Returns the data of the oCMOB object
 ///
@@ -967,12 +967,12 @@ func instance Wld_FindVob( var string vobname ) {};
 /// @param damage damage amount
 /// @param damage_type damage type
 /// @param damage_speed damage interval
-func void Wld_PlayEffectVob( var string effect,
-                             var instance pvob,
-                             var int level,
-                             var int damage,
-                             var int damage_type,
-                             var int damage_speed ) {};
+func void Wld_PlayEffectVob(    var string effect,
+                                var instance pvob,
+                                var int level,
+                                var int damage,
+                                var int damage_type,
+                                var int damage_speed ) {};
 
 /// Play a visual effect at specified world coordinates
 ///
@@ -982,12 +982,12 @@ func void Wld_PlayEffectVob( var string effect,
 /// @param damage damage amount
 /// @param damage_type damage type
 /// @param damage_speed damage interval
-func void Wld_PlayEffectAt(  var string effect,
-                             var instance coord,
-                             var int level,
-                             var int damage,
-                             var int damage_type,
-                             var int damage_speed ) {};
+func void Wld_PlayEffectAt( var string effect,
+                            var instance coord,
+                            var int level,
+                            var int damage,
+                            var int damage_type,
+                            var int damage_speed ) {};
 
 /// Turns on the rain
 ///

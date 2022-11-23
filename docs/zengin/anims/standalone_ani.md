@@ -18,7 +18,7 @@ Open Blender, **File > Import > Kerrax ASCII model (.asc)**, navigate to the fol
     Model ("HuS")
     {
         meshAndTree ("Hum_Body_Naked0.ASC" DONT_USE_MESH)
-	```
+    ```
 A windows pops up and you can read some interesting information about the model you are about to import. We are interested in the fact that **Completely replace current scene** is ticked, we want to use **Armature modifier**, and we also want to **Try to connect bones** and **Use sample meshes from folder**. You should provide a path to a directory with the sample meshes - these are meshes for items, that usually go into slot bones. Lastly, the **space transformation scale** should be set to **0.01**. This is because ZenGin works with centimeter units and one unit in Blender is a meter.
 
 Click import and wait for the magic to happen.
@@ -95,18 +95,18 @@ instance DIA_Xardas_Back (C_INFO)
 };
 
 func int DIA_Xardas_Back_Condition () {
-	return TRUE;
+    return TRUE;
 };
 
 func void DIA_Xardas_Back_Info () {
-	AI_Output (self, hero, "DIA_Xardas_MOB_14_00"); // My back hurts so much.
-	
-	// This is our animation!!!!!
-	AI_PlayAni(self, "T_BACKPAIN"); 
-	AI_Output (self, hero, "DIA_Xardas_MOB_14_01"); // How do YOU feel?
-	
-	AI_Output (hero, self, "DIA_Xardas_MOB_14_02"); // My back is fine.
-	AI_StopProcessInfos(self);
+    AI_Output (self, hero, "DIA_Xardas_MOB_14_00"); // My back hurts so much.
+    
+    // This is our animation!!!!!
+    AI_PlayAni(self, "T_BACKPAIN"); 
+    AI_Output (self, hero, "DIA_Xardas_MOB_14_01"); // How do YOU feel?
+    
+    AI_Output (hero, self, "DIA_Xardas_MOB_14_02"); // My back is fine.
+    AI_StopProcessInfos(self);
 };
 ```
 

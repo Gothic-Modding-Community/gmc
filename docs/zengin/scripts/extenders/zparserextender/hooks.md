@@ -16,7 +16,7 @@ func void ZS_Attack_Loop()
     // also sheath the weapon.
     if (Npc_IsPlayer(other) && !Npc_HasReadiedWeapon(other))
     {
-      return LOOP_END;
+        return LOOP_END;
     };
 
     // otherwise call the original function
