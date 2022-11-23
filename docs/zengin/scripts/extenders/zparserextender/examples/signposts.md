@@ -11,39 +11,39 @@ Next, the world was saved as a `ASCII ZEN` format. This allows us to write a mac
 
 ```ini title="One signpost object" hl_lines="6 8"
 [% oCMOB:zCVob 47105 317]
-	pack=int:0
-	presetName=string:
-	bbox3DWS=rawFloat:7564.8291 127.361191 -80.5309067 7611.52441 377.422913 1.67681122 
-	trafoOSToWSRot=raw:73e1673f9c4ec33b15efd8be4465d7bba0fe7f3f30ea7137e5edd83eecaa353bb7e2673f
-	trafoOSToWSPos=vec3:7588.17627 252.391052 -39.4283791
-	vobName=string:
-	visual=string:NW_MISC_SIGN_01.3DS
-	showVisual=bool:1
-	visualCamAlign=enum:0
-	visualAniMode=enum:0
-	visualAniModeStrength=float:0
-	vobFarClipZScale=float:1
-	cdStatic=bool:1
-	cdDyn=bool:1
-	staticVob=bool:1
-	dynShadow=enum:0
-	zbias=int:0
-	isAmbient=bool:0
-	[visual zCProgMeshProto 53505 318]
-	[]
-	[ai % 0 0]
-	[]
-	focusName=string:MOBNAME_INCITY02
-	hitpoints=int:10
-	damage=int:0
-	moveable=bool:0
-	takeable=bool:0
-	focusOverride=bool:0
-	soundMaterial=enum:0
-	visualDestroyed=string:
-	owner=string:
-	ownerGuild=string:
-	isDestroyed=bool:0
+    pack=int:0
+    presetName=string:
+    bbox3DWS=rawFloat:7564.8291 127.361191 -80.5309067 7611.52441 377.422913 1.67681122 
+    trafoOSToWSRot=raw:73e1673f9c4ec33b15efd8be4465d7bba0fe7f3f30ea7137e5edd83eecaa353bb7e2673f
+    trafoOSToWSPos=vec3:7588.17627 252.391052 -39.4283791
+    vobName=string:
+    visual=string:NW_MISC_SIGN_01.3DS
+    showVisual=bool:1
+    visualCamAlign=enum:0
+    visualAniMode=enum:0
+    visualAniModeStrength=float:0
+    vobFarClipZScale=float:1
+    cdStatic=bool:1
+    cdDyn=bool:1
+    staticVob=bool:1
+    dynShadow=enum:0
+    zbias=int:0
+    isAmbient=bool:0
+    [visual zCProgMeshProto 53505 318]
+    []
+    [ai % 0 0]
+    []
+    focusName=string:MOBNAME_INCITY02
+    hitpoints=int:10
+    damage=int:0
+    moveable=bool:0
+    takeable=bool:0
+    focusOverride=bool:0
+    soundMaterial=enum:0
+    visualDestroyed=string:
+    owner=string:
+    ownerGuild=string:
+    isDestroyed=bool:0
 []
 ```
 

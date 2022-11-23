@@ -29,7 +29,7 @@ Instances of the `C_SVM` class **must** have the name `SVM_XXX`.
 ```dae
 instance svm_1(c_svm)
 {
-   // ...
+    // ...
 };
 ```
 The first instance `svm_0` is always empty, it is used internally by the engine.
@@ -42,10 +42,10 @@ To instruct the engine to run a specific SVM, external function `AI_OutputSVM` i
 To reference the SVM, you use the `$` symbol followed by the name of the member variable in the `C_SVM` class definition.  
 ```dae hl_lines="4"
 // some code
-	{
-		PrintScreen	("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",1);
-		B_Say (self, other, "$NOLEARNNOPOINTS");
-	};
+    {
+        PrintScreen	("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",1);
+        B_Say (self, other, "$NOLEARNNOPOINTS");
+    };
 // some code
 ```
 Here the `$NOLEARNNOPOINTS` references the `var string NoLearnNoPoints` in [SVM.D](https://github.com/VaanaCZ/gothic-1-classic-scripts/blob/6204f608f506f169035c58552197285bce4ffa39/_work/Data/Scripts/Content/Story/SVM.d#L125). The voice is then chosen automatically by the engine.

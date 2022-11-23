@@ -45,9 +45,9 @@ class MarkCodeLineManager {
         let blockIndex;
 
         for (blockIndex = 0; blockIndex < childBlocks.length; blockIndex++) {
-          if (childBlocks[blockIndex] === tabbedBlock) {
-            break;
-          }
+            if (childBlocks[blockIndex] === tabbedBlock) {
+                break;
+            }
         }
 
         let blockInputElement = tabbedContent.parentElement.children[blockIndex];
