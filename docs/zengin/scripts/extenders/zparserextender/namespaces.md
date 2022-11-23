@@ -43,7 +43,7 @@ namespace zTestNamespace03
 {
     namespace zTestNamespace04
     {
-      func void func01() { };
+        func void func01() { };
     };
 };
 
@@ -130,15 +130,15 @@ There are three cases where the namespace prefix is optional
     {
         func void func01()
         {
-           Hlp_MessageBox("#2");
+            Hlp_MessageBox("#2");
         };
     
         namespace zTestNamespace02
         {
-          func event GameInit()
-          {
-              // Function call from the global namespace
-              func01();
+            func event GameInit()
+            {
+                // Function call from the global namespace
+                func01();
             };
         };
     };
@@ -154,7 +154,7 @@ There are three cases where the namespace prefix is optional
     {
         func void func01()
         {
-           Hlp_MessageBox("#1");
+            Hlp_MessageBox("#1");
         };
     };
  

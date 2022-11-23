@@ -14,10 +14,10 @@ class C_Trigger
 
     // Hidden variable members
     /*
-     - Func   - The function that the trigger will call.
-     - Self   - The NPC that will be placed in `self` when the function is called.
-     - Other  - An NPC that will be placed in `other` when the function is called.
-     - Victim - The NPC that will be placed in `victim` when the function is called.
+        - Func   - The function that the trigger will call.
+        - Self   - The NPC that will be placed in `self` when the function is called.
+        - Other  - An NPC that will be placed in `other` when the function is called.
+        - Victim - The NPC that will be placed in `victim` when the function is called.
     */
 };
 ```
@@ -27,8 +27,8 @@ There are two external functions that are used to create `C_Trigger` instance.
 
 ```dae
 // function returns a trigger with no NPC (self, other or victim) bound to it
-func C_Trigger AI_StartTriggerScript( var string funcName,
-                                      var int delay) {};
+func C_Trigger AI_StartTriggerScript(   var string funcName,
+                                        var int delay) {};
 
 // function is extended, if certain participants need to be assigned to it
 func C_Trigger AI_StartTriggerScriptEx( var string funcName,

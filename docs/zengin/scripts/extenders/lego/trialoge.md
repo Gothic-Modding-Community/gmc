@@ -112,14 +112,14 @@ func void TRIA_Finish() {};
 ### A Simple Trialogue
 The following conversation is resolved via the trialogues:
 
-   1. **Arto:**    Sorry hero, but you can't pass here
-   2. **Hero:**    Why not?
-   3. **Horka:**   The city has been closed.
-   4. **Hero:**    I have some gold with me, can we trade?
-   5. **Squelto:** No. We are not open to bribery.
-   6. **Hero:**    Sure?
-   7. **Arto:**    I have to ask you to leave now
-   8. **Hero:**    Well...
+1. **Arto:**    Sorry hero, but you can't pass here
+2. **Hero:**    Why not?
+3. **Horka:**   The city has been closed.
+4. **Hero:**    I have some gold with me, can we trade?
+5. **Squelto:** No. We are not open to bribery.
+6. **Hero:**    Sure?
+7. **Arto:**    I have to ask you to leave now
+8. **Hero:**    Well...
 ```dae
 instance TRIA_Test (C_INFO)
 {

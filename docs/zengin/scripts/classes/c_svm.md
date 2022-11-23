@@ -29,7 +29,7 @@ Instances of the `C_SVM` class **must** have the name `SVM_XXX`.
 ```dae
 instance svm_1(c_svm)
 {
-   // ...
+    // ...
 };
 ```
 The first instance `svm_0` is always empty, it is used internally by the engine.

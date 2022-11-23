@@ -84,10 +84,10 @@ func void Vob_AddLightAniColor( var C_Vob vobLight, var C_Color col ) {};
 Adds a color to the colour list
 
 ```dae
-func void Vob_AddLightAniColorRGB( var C_Vob vobLight,
-                                   var int r,
-                                   var int g,
-                                   var int b ) {};
+func void Vob_AddLightAniColorRGB(  var C_Vob vobLight,
+                                    var int r,
+                                    var int g,
+                                    var int b ) {};
 ```
 
 - `vobLight` - object to apply the colour to

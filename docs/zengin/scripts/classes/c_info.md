@@ -9,7 +9,7 @@ The `C_INFO` class is used to define dialogues in the game.
 Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164) script file.
 
 <details>
-  <summary>C_Info Daedalus class</summary>
+<summary>C_Info Daedalus class</summary>
 
 ```dae
 class C_Info

@@ -138,10 +138,10 @@ func void Vob_AddLightAniColor( var C_Vob vobLight, var C_Color col ) {};
 /// @param r red colour channel
 /// @param g green colour channel 
 /// @param b blue colour channel
-func void Vob_AddLightAniColorRGB( var C_Vob vobLight,
-                                   var int r,
-                                   var int g,
-                                   var int b ) {};
+func void Vob_AddLightAniColorRGB(  var C_Vob vobLight,
+                                    var int r,
+                                    var int g,
+                                    var int b ) {};
 ```
 ## C_MOB_DATA
 Represents  data for the used oCMOB object

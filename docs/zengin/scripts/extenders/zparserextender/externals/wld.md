@@ -26,12 +26,12 @@ func instance Wld_FindVob( var string vobname ) {};
 Play a visual effect at specified vob
 
 ```dae
-func void Wld_PlayEffectVob( var string effect,
-                             var instance pvob,
-                             var int level,
-                             var int damage,
-                             var int damage_type,
-                             var int damage_speed ) {};
+func void Wld_PlayEffectVob(    var string effect,
+                                var instance pvob,
+                                var int level,
+                                var int damage,
+                                var int damage_type,
+                                var int damage_speed ) {};
 ```
 
 - `effect` - effect name
@@ -45,12 +45,12 @@ func void Wld_PlayEffectVob( var string effect,
 Play a visual effect at specified world coordinates
 
 ```dae
-func void Wld_PlayEffectAt(  var string effect,
-                             var instance coord,
-                             var int level,
-                             var int damage,
-                             var int damage_type,
-                             var int damage_speed ) {};
+func void Wld_PlayEffectAt( var string effect,
+                            var instance coord,
+                            var int level,
+                            var int damage,
+                            var int damage_type,
+                            var int damage_speed ) {};
 ```
 
 - `effect` - effect name

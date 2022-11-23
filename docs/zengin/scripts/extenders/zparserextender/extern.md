@@ -3,6 +3,6 @@ The `extern` binding allows you to secure your code against overriding or undefi
 ```dae 
 extern instance PC_Hero(C_Npc) 
 {
-  // TODO
+    // TODO
 };
 ```

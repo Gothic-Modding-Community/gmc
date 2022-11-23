@@ -8,7 +8,7 @@ The `C_ITEM` class is used to define new items in the game.
 ## Class definition
 Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L79) script file. 
 <details>
-  <summary>C_Item Daedalus class</summary>
+<summary>C_Item Daedalus class</summary>
 
 ```dae
 class C_Item
@@ -95,7 +95,7 @@ It has many member variables but not all of them are used for every item. It is 
 A selection of the most important class members.
 
 ### change_atr & change_value 
-  `change_atr` stores the attributes that will be changed by the amount specified in `change_value`.
+`change_atr` stores the attributes that will be changed by the amount specified in `change_value`.
 
 NPCs have these attributes:
 ```dae
@@ -128,7 +128,7 @@ instance ItMw_testSword (C_Item)
 You can change `ATR_HITPOINTS_MAX` and `ATR_MANA_MAX` attributes in [on_equip](#class-definition) and [on_unequip](#class-definition)
 
 ### cond_atr & cond_value
- `cond_atr` stores the attributes that will be checked as a requirement to equip an item, the amount specified in `cond_value`.
+`cond_atr` stores the attributes that will be checked as a requirement to equip an item, the amount specified in `cond_value`.
 
 The next example sword is equipable only if the NPC has at least 5 strength. If the requirements are not met [`G_CanNotUse()`](https://github.com/PhoenixTales/gothic-devkit/blob/main/gothic/_work/data/Scripts/content/_Intern/G_Functions/G_CanNotUse.d) is called.
 ```dae

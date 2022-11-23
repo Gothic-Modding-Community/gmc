@@ -80,7 +80,8 @@ If the archive is created using `zCArchiverBinSafe`, this data will be stored in
 ```cpp  
 struct BinSafeArchiveHeader  
 {  
- uint32_t version;     // Always equals 2 uint32_t objectCount;  // Serves the same function as "objects n" uint32_t chunkPos;    // Offset to chunk hash table};  
+    uint32_t version;     // Always equals 2 uint32_t objectCount;  // Serves the same function as "objects n" uint32_t chunkPos;    // Offset to chunk hash table};
+};  
 ```  
 
 ### Contents
