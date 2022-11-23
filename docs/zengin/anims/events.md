@@ -5,8 +5,8 @@ Example:
 ```dae
 ani ("s_RunL" 1 "s_RunL" 0.0 0.1 M. "Hum_RunLoop_M01.asc" F 12 31)
 {
-	*eventSFXGrnd	(12	"Run")
-	*eventSFXGrnd	(21	"Run")
+    *eventSFXGrnd	(12	"Run")
+    *eventSFXGrnd	(21	"Run")
 }
 ```
 

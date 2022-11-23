@@ -20,27 +20,27 @@ As this system is quite flexible, it is used to store most of the game's data, f
 ``` cpp
 struct bCIOStream
 {
-	char data[];
+    char data[];
 };
 ```
 
 ``` cpp
 struct eCArchiveFile
 {
-	char8_t  magic[8];  // "GENOMFLE"
-	uint16_t version;   // 0001
-	uint32_t offset;
-	
-	char data[];
-	
-	uint32_t magic;	// DEADBEEF
-	uint8_t  version;  // 01
-	uint32_t count;
-	for( Count )
-	{
-		uint16_t length;
-		char8_t  string[length];  // (ASCII)
-	}
+    char8_t  magic[8];  // "GENOMFLE"
+    uint16_t version;   // 0001
+    uint32_t offset;
+    
+    char data[];
+    
+    uint32_t magic;	// DEADBEEF
+    uint8_t  version;  // 01
+    uint32_t count;
+    for( Count )
+    {
+        uint16_t length;
+        char8_t  string[length];  // (ASCII)
+    }
 };
 ```
 
@@ -50,52 +50,52 @@ struct eCArchiveFile
 ``` cpp
 bCAccessorPropertyObject::Read 
 {
-	uint16_t	version;	// 0x0001
-	bool		hasPropertyObject;
-	if (hasPropertyObject)
-	{
-		bCPropertyObjectSingleton::ReadObject
-		{
-			uint16_t	version;	// 0x0001
-			bool		isPersistable;	// 0x01 (GETrue)
-			bCString	className;
-			bCPropertyObjectFactory::ReadObject
-			{
-				uint16_t	version;		// 0x0001
-				bool		isRoot;			// 0x00 (GEFalse)
-				uint16_t	classVersion;
-				bTPropertyObject<%,%>::Read
-				{
-					bCPropertyObjectBase::Read
-					{
-						uint16_t version;	// 0x00C9 (201)
-					}
-					uint32_t size;
-				}
-				bTPropertyObject<%,%>::ReadData
-				{
-					bCPropertyObjectBase::ReadData
-					{
-						uint16_t version;	// 0x00C9 (201)
-						uint32_t count;
-						for (count)
-						{
-							bCString	name;
-							bCString	type;
-							uint16_t	version;	// 0x001E (30)
-							uint32_t	size;
-							uint8_t		value[size];
-						}
-					}
-					%::Read
-					{
-						// ClassName::OnRead/OnWrite()
-						// uint16_t ClassVersion; ...
-					}
-				}
-			}
-		}
-	}
+    uint16_t	version;	// 0x0001
+    bool		hasPropertyObject;
+    if (hasPropertyObject)
+    {
+        bCPropertyObjectSingleton::ReadObject
+        {
+            uint16_t	version;	// 0x0001
+            bool		isPersistable;	// 0x01 (GETrue)
+            bCString	className;
+            bCPropertyObjectFactory::ReadObject
+            {
+                uint16_t	version;		// 0x0001
+                bool		isRoot;			// 0x00 (GEFalse)
+                uint16_t	classVersion;
+                bTPropertyObject<%,%>::Read
+                {
+                    bCPropertyObjectBase::Read
+                    {
+                        uint16_t version;	// 0x00C9 (201)
+                    }
+                    uint32_t size;
+                }
+                bTPropertyObject<%,%>::ReadData
+                {
+                    bCPropertyObjectBase::ReadData
+                    {
+                        uint16_t version;	// 0x00C9 (201)
+                        uint32_t count;
+                        for (count)
+                        {
+                            bCString	name;
+                            bCString	type;
+                            uint16_t	version;	// 0x001E (30)
+                            uint32_t	size;
+                            uint8_t		value[size];
+                        }
+                    }
+                    %::Read
+                    {
+                        // ClassName::OnRead/OnWrite()
+                        // uint16_t ClassVersion; ...
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -104,28 +104,28 @@ bCAccessorPropertyObject::Read
 
 === "Gothic 3"
 
-	```cpp
-	eCProcessibleElement::Load
-	{
-		uint32_t magic; // 0xD0DEFADE
-		bCAccessorPropertyObject::Read
-		{
-			// Look above for bCAccessorPropertyObject definition
-		}
-	}
-	```
+    ```cpp
+    eCProcessibleElement::Load
+    {
+        uint32_t magic; // 0xD0DEFADE
+        bCAccessorPropertyObject::Read
+        {
+            // Look above for bCAccessorPropertyObject definition
+        }
+    }
+    ```
 
 === "Risen"
 
-	```cpp
-	eCProcessibleElement::Load
-	{
-		bCAccessorPropertyObject::Read
-		{
-			// Look above for bCAccessorPropertyObject definition
-		}
-	}
-	```
+    ```cpp
+    eCProcessibleElement::Load
+    {
+        bCAccessorPropertyObject::Read
+        {
+            // Look above for bCAccessorPropertyObject definition
+        }
+    }
+    ```
 
 ## Implementation
 
@@ -138,17 +138,17 @@ class gCMyClass : public bCObjectRefBase
 {
 public:
 
-	gCMyClass()				{}
-	virtual ~gCMyClass()	{}
-		
-	virtual bEResult Write(bCOStream&); // OnWrite for Risen
-	virtual bEResult Read(bCIStream&);  // OnRead for Risen
+    gCMyClass()				{}
+    virtual ~gCMyClass()	{}
+        
+    virtual bEResult Write(bCOStream&); // OnWrite for Risen
+    virtual bEResult Read(bCIStream&);  // OnRead for Risen
 
 private:
 
-	DECLARE_PROPERTY(myInt, int);
-	
-	int someData;
+    DECLARE_PROPERTY(myInt, int);
+    
+    int someData;
 
 };
 
@@ -159,14 +159,14 @@ The hypothetical class then implements these virtual functions:
 ```cpp
 bEResult gCMyClass::Write(bCOStream& file)
 {
-	file << someData;
-	return bEResult_Ok;
+    file << someData;
+    return bEResult_Ok;
 }
 
 bEResult gCMyClass::Read(bCIStream& file)
 {
-	file >> someData;
-	return bEResult_Ok;
+    file >> someData;
+    return bEResult_Ok;
 }
 
 ```

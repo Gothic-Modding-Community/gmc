@@ -61,25 +61,25 @@ Next we create the command function.
 // This function is called by our console
 func string CC_ModVersion (var string param)
 {
-	return Mod_Version;
+    return Mod_Version;
 };
 ```
 We then have to register the functions. For convenience, I created a new `RegisterConsoleFunctions` function to initialize all console commands. The function is really simple.
 ```dae
 func void RegisterConsoleFunctions()
 {
-	CC_Register (CC_ModVersion, "mod_version", "Version of my amazing mod.");
+    CC_Register (CC_ModVersion, "mod_version", "Version of my amazing mod.");
 };
 ```
 Lastly, we have to call this function from `INIT_GLOBAL` function.
 ```dae
 func void INIT_GLOBAL()
 {
-	// will be called for every world (from INIT_<LevelName>)
-	Game_InitGerman();
+    // will be called for every world (from INIT_<LevelName>)
+    Game_InitGerman();
 
     // Ikarus initialization
-	MEM_InitAll();
+    MEM_InitAll();
 
     // LeGo initialization
     LeGo_Init(LeGo_ConsoleCommands);

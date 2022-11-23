@@ -49,7 +49,7 @@ Sets what NPC will have this dialogue instance. Set an NPC instance.
 ```dae
 instance Info_Diego_Gamestart (C_INFO)
 {
-	npc	= PC_Thief; // NPC instance for Diego
+    npc	= PC_Thief; // NPC instance for Diego
     // ...
 };
 ```
@@ -134,7 +134,7 @@ Specify a string that will be shown in the dialogue window.
 instance DIA_XARDAS_GMC(C_INFO)
 {
     // ...
-	description = "Hello, is this the GMC site?";
+    description = "Hello, is this the GMC site?";
 };
 ```
 

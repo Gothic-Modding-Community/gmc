@@ -48,13 +48,13 @@ The system directory contains the game executable, `GothicStarter.exe`, `GothicS
 This is where the magic happens:
 
 - `Anims` - contains animations and animated models.
-	- `_compiled` - contains compiled animations.
+    - `_compiled` - contains compiled animations.
 - `Meshes` - contains meshes source and compiled files.
-	- `_compiled` - contains compiled meshes.
+    - `_compiled` - contains compiled meshes.
 - `Music` - contains music files.
 - `Presets` - contains basic presets.
 - `Scripts`
-	- `_compiled` - contains compiled scripts - `.dat` files.
+    - `_compiled` - contains compiled scripts - `.dat` files.
   	- `Content` - contains scripts that make up the content of the game.
   	- `System` - contains scripts that make up the menu.
 - `Sound` - contains sound effects `.wav` or `.ogg` format (Union only).
