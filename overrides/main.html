@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+<!--
+    Extend the last block in the `base.html` before the changes are applicable
+    to avoid any issues with the hacky page.meta
+-->
+{% block scripts %}
+    <!-- Include original content before the additions -->
+    {{ super() }}
+    {% if page %}
+        <!-- Set page.meta if not set to a hacky reference of the page itself -->
+        {% if not page.meta %}
+            {% set _ = page.__setattr__("meta", page) %}
+        {% endif %}
+        <!-- Let It Snow -->
+        {% set _ = page.meta.__setattr__("ᴴₒᴴₒᴴₒ", True) %}
+    {% endif %}
+{% endblock %}
