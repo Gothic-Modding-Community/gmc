@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<!--
+    Extend the last block in the `base.html` before the changes are applicable
+    to avoid any issues with the hacky page.meta
+-->
+{% block scripts %}
+    <!-- Include original content before the additions -->
+    {{ super() }}
+    {% if page %}
+        {% if not page.meta %}
+            <!-- Set page.meta to a hacky reference of the page itself -->
+            {% set _ = page.__setattr__("meta", page) %}
+            <!-- Let It Snow by setting the page object attribute -->
+            {% set _ = page.meta.__setattr__("ᴴₒᴴₒᴴₒ", True) %}
+        {% else %}
+            <!-- Let It Snow by updating the dict/mapping pair -->
+            {% set _ = page.meta.update({"ᴴₒᴴₒᴴₒ": True}) %}
+        {% endif %}
+    {% endif %}
+{% endblock %}
