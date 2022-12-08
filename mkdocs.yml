@@ -1,8 +1,8 @@
 site_name: Gothic Modding Community
-site_url: https://auronen.github.io/gmc/
+site_url: https://gothic-modding-community.github.io/gmc/
 
-repo_name: auronen/gmc
-repo_url: https://github.com/auronen/gmc/
+repo_name: Gothic-Modding-Community/gmc
+repo_url: https://github.com/Gothic-Modding-Community/gmc/
 edit_uri: edit/main/docs/
 
 theme:
@@ -25,7 +25,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       primary: black
-      accent: indigo
+      accent: light blue
       scheme: slate
       toggle:
         icon: material/brightness-2
@@ -165,7 +165,7 @@ extra:
       link: https://discord.gg/mCpS5b5SUY
       name: Gothic Modding Comunity Discord Server
     - icon: fontawesome/brands/github
-      link: https://github.com/auronen/gmc
+      link: https://github.com/Gothic-Modding-Community/gmc
       name: Gothic Modding Comunity Github repository
 
 

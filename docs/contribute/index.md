@@ -6,10 +6,10 @@ This site is built with a Static Site Generator [MkDocs](https://www.mkdocs.org/
 Prerequisites for contribution differ based on the scale and type of the contribution.
 
 ## Feedback
-You can either [open an issue](https://github.com/auronen/gmc/issues) via GitHub or [join us][gmc-discord] on Discord.
+You can either [open an issue](https://github.com/Gothic-Modding-Community/gmc/issues) via GitHub or [join us][gmc-discord] on Discord.
 
 ## Direct contribution
-Direct contribution is made via creating a copy of this repository (a fork) and [creating](https://github.com/auronen/gmc/pulls) a pull request (PR) on GitHub with changes for approval.
+Direct contribution is made via creating a copy of this repository (a fork) and [creating](https://github.com/Gothic-Modding-Community/gmc/pulls) a pull request (PR) on GitHub with changes for approval.
 
 !!! failure "Don't waste time"  
     Please make sure that the content you are contributing does not already exist on the [dev page](https://gmc.cokoliv.eu/). You can use the search tool to filter GMC for different keywords and contents.
@@ -21,7 +21,7 @@ Direct contribution is made via creating a copy of this repository (a fork) and 
 Minor changes like fixing typos, grammatical errors or removing/adding words to paragraphs in a _single_ file can be done quickly with the pen button in the upper right corner of each article. This will open up a GitHub editing interface which will create a fork with a patch branch after modifying the file and guide the user to open up the pull request.
 
 !!! warning "Select the correct branch for the pull request"  
-    Make sure that the pull request is directed towards the [`dev`](https://github.com/auronen/gmc/tree/dev) or a special `pre-merge` branch and not the `main` branch.
+    Make sure that the pull request is directed towards the [`dev`](https://github.com/Gothic-Modding-Community/gmc/tree/dev) or a special `pre-merge` branch and not the `main` branch.
 
 ### Major changes
 More elaborate changes like editing multiple files at once, adding new articles, images, other miscellaneous files or changing the configuration of the page are easier to make via external tools on your local PC. While most of these operations can be done with the GitHub interface, it is rather cumbersome, and it may be harder to spot issues during the process as changes are not immediately visible in the browser.
@@ -67,7 +67,7 @@ To prepare your system to run the project follow those instructions:
 #### Working locally
 In order to work locally:
 
-1. [Create a fork](https://github.com/auronen/gmc/fork) on GitHub.
+1. [Create a fork](https://github.com/Gothic-Modding-Community/gmc/fork) on GitHub.
 2. Navigate to a directory where you want to clone your forked repository and open a Terminal window inside.
 3. Clone the forked repository, using this command:
 
@@ -118,7 +118,7 @@ In order to work locally:
 6. Add the remote upstream repository and fetch the history using these commands:
 
     ```bash
-    git remote add upstream https://github.com/auronen/gmc.git
+    git remote add upstream https://github.com/Gothic-Modding-Community/gmc.git
     git fetch upstream
     ```
 
