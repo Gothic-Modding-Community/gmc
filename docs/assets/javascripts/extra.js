@@ -81,7 +81,7 @@ function gmcAddClassToElement(className, element, elementName) {
 function gmcExternalLinks() {
     const hostname = window.location.hostname;
     const domainParts = hostname.split('.');
-    const githubId = domainParts[1] === "github" ? domainParts[0] : "auronen";
+    const githubId = domainParts[1] === "github" ? domainParts[0] : "gothic-modding-community";
     const repoUrl = `github.com/${githubId}`;
 
     // Regex to match urls starting with
