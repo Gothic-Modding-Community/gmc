@@ -247,9 +247,9 @@ There is a second way used in the scripts though with, for example,magic scrolls
 ```dae
 instance ItSc_InstantFireball (C_Item)
 {
-    name 				=	NAME_Spruchrolle; // const string = "Scroll"
+    name                 =    NAME_Spruchrolle; // const string = "Scroll"
     // ...
-    description			= 	NAME_SPL_InstantFireball; // const string = "Fireball"
+    description            =     NAME_SPL_InstantFireball; // const string = "Fireball"
     // ...
 };
 ```

@@ -48,7 +48,7 @@ This is the main command you will be using while defining new animations.
 
 Example:
 ```dae
-ani	("t_Yes" 2 "" 0.1 0.1 M. "Hum_Yes_M01.asc" F 1 44)
+ani    ("t_Yes" 2 "" 0.1 0.1 M. "Hum_Yes_M01.asc" F 1 44)
 ```
 Syntax:
 ```dae
@@ -100,7 +100,7 @@ Generally considered as one of the most useful commands, `aniAlias` is used to c
 
 Example:
 ```dae
-aniAlias ("t_Sneak_2_Run" 1 "s_Run" 0.0	0.1	M. "t_Run_2_Sneak" R)
+aniAlias ("t_Sneak_2_Run" 1 "s_Run" 0.0    0.1    M. "t_Run_2_Sneak" R)
 ```
 Syntax:
 ```dae
@@ -125,8 +125,8 @@ aniAlias (ANI_NAME LAYER NEXT_ANI BLEND_IN BLEND_OUT FLAGS ALIAS_NAME ANI_DIR)
 
 If we look for the animation in the example we can see that there is a related one just one line above
 ```dae
-ani			("t_Run_2_Sneak" 1 "s_Sneak" 0.1 0.0 M. "Hum_Sneak_M01.asc"	 F 0 10)
-aniAlias	("t_Sneak_2_Run" 1 "s_Run" 	 0.0 0.1 M. "t_Run_2_Sneak"      R)
+ani            ("t_Run_2_Sneak" 1 "s_Sneak" 0.1 0.0 M. "Hum_Sneak_M01.asc"     F 0 10)
+aniAlias    ("t_Sneak_2_Run" 1 "s_Run"      0.0 0.1 M. "t_Run_2_Sneak"      R)
 ```
 In this example we are defining `t_Sneak_2_Run` animation and we are specifying that the animation after this one is finished will be `s_Run` and that it is being made by reversing animation `t_Run_2_Sneak` by specifying the `R` flag.
 

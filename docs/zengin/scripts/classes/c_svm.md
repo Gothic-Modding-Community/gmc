@@ -43,7 +43,7 @@ To reference the SVM, you use the `$` symbol followed by the name of the member 
 ```dae hl_lines="4"
 // some code
     {
-        PrintScreen	("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",1);
+        PrintScreen    ("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",1);
         B_Say (self, other, "$NOLEARNNOPOINTS");
     };
 // some code

@@ -49,7 +49,7 @@ Sets what NPC will have this dialogue instance. Set an NPC instance.
 ```dae
 instance Info_Diego_Gamestart (C_INFO)
 {
-    npc	= PC_Thief; // NPC instance for Diego
+    npc    = PC_Thief; // NPC instance for Diego
     // ...
 };
 ```

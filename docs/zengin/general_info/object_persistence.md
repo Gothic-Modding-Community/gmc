@@ -137,11 +137,11 @@ If this is a Binary archive, the same data will be stored in the following binar
 ```cpp
 struct BinaryObjectHeader
 {
-    uint32_t	objectSize;		// Size of the whole object in bytes
-    uint16_t	classVersion;
-    uint32_t	objectIndex;
-    char		objectName[];	// Null-terminated string
-    char		className[];	// Null-terminated string
+    uint32_t    objectSize;        // Size of the whole object in bytes
+    uint16_t    classVersion;
+    uint32_t    objectIndex;
+    char        objectName[];    // Null-terminated string
+    char        className[];    // Null-terminated string
 };
 ```
 
@@ -150,9 +150,9 @@ Oddly enough, if the archive is BinSafe, then the data will be encoded the same 
 ```cpp
 struct BinSafeObjectHeader
 {
-    uint32_t	type;	// 0x1 = TYPE_STRING
-    uint16_t	length;	// Length of the text
-    char		text[];	// [% oCWorld:zCWorld 64513 0]
+    uint32_t    type;    // 0x1 = TYPE_STRING
+    uint16_t    length;    // Length of the text
+    char        text[];    // [% oCWorld:zCWorld 64513 0]
 };
 ```
 
@@ -195,18 +195,18 @@ As you might have noticed, binary mode doesn't perform any kind of checks on if 
 ```cpp
 enum TYPE
 {
-    TYPE_STRING		= 0x1,
-    TYPE_INTEGER	= 0x2,
-    TYPE_FLOAT		= 0x3,
-    TYPE_BYTE		= 0x4,
-    TYPE_WORD		= 0x5,
-    TYPE_BOOL		= 0x6,
-    TYPE_VEC3		= 0x7,
-    TYPE_COLOR		= 0x8,
-    TYPE_RAW		= 0x9,
-    TYPE_RAWFLOAT	= 0x10,
-    TYPE_ENUM		= 0x11
-    TYPE_HASH		= 0x12,
+    TYPE_STRING        = 0x1,
+    TYPE_INTEGER    = 0x2,
+    TYPE_FLOAT        = 0x3,
+    TYPE_BYTE        = 0x4,
+    TYPE_WORD        = 0x5,
+    TYPE_BOOL        = 0x6,
+    TYPE_VEC3        = 0x7,
+    TYPE_COLOR        = 0x8,
+    TYPE_RAW        = 0x9,
+    TYPE_RAWFLOAT    = 0x10,
+    TYPE_ENUM        = 0x11
+    TYPE_HASH        = 0x12,
 };
 
 struct BinSafeProperty
@@ -216,24 +216,24 @@ struct BinSafeProperty
     {
         struct
         {
-            uint16_t	stringLength;
-            char		stringValue[];
+            uint16_t    stringLength;
+            char        stringValue[];
         }
-        uint32_t	integerOrHashOrEnumValue;
-        float		floatValue;
-        uint8_t		byteOrBoolValue;
-        zVEC3		vec3Value;
-        zCOLOR		colorValue;
+        uint32_t    integerOrHashOrEnumValue;
+        float        floatValue;
+        uint8_t        byteOrBoolValue;
+        zVEC3        vec3Value;
+        zCOLOR        colorValue;
         struct
         {
-            uint16_t	rawLength;
-            char		rawValue[];
+            uint16_t    rawLength;
+            char        rawValue[];
         }
         struct
         {
-            uint16_t	rawFloatLength;
-            float		rawFloatValue[];
-        }		
+            uint16_t    rawFloatLength;
+            float        rawFloatValue[];
+        }        
     };
 };
 ```
@@ -246,10 +246,10 @@ struct BinSafeHashTable
     uint32_t chunkCount;
     for (chunkCount)
     {
-        uint16_t	stringLength;
-        uint16_t	linearValue;
-        uint32_t	hashValue;
-        char		text[stringLength];
+        uint16_t    stringLength;
+        uint16_t    linearValue;
+        uint32_t    hashValue;
+        char        text[stringLength];
     }
 };
 ```
@@ -271,8 +271,8 @@ class zCMyClass : public zCObject
 {
 public:
 
-    zCMyClass()				{}
-    virtual ~zCMyClass()	{}
+    zCMyClass()                {}
+    virtual ~zCMyClass()    {}
     
     virtual void Archive(zCArchiver&);
     virtual void Unarchive(zCArchiver&);

@@ -33,7 +33,7 @@ struct eCArchiveFile
     
     char data[];
     
-    uint32_t magic;	// DEADBEEF
+    uint32_t magic;    // DEADBEEF
     uint8_t  version;  // 01
     uint32_t count;
     for( Count )
@@ -50,25 +50,25 @@ struct eCArchiveFile
 ``` cpp
 bCAccessorPropertyObject::Read 
 {
-    uint16_t	version;	// 0x0001
-    bool		hasPropertyObject;
+    uint16_t    version;    // 0x0001
+    bool        hasPropertyObject;
     if (hasPropertyObject)
     {
         bCPropertyObjectSingleton::ReadObject
         {
-            uint16_t	version;	// 0x0001
-            bool		isPersistable;	// 0x01 (GETrue)
-            bCString	className;
+            uint16_t    version;    // 0x0001
+            bool        isPersistable;    // 0x01 (GETrue)
+            bCString    className;
             bCPropertyObjectFactory::ReadObject
             {
-                uint16_t	version;		// 0x0001
-                bool		isRoot;			// 0x00 (GEFalse)
-                uint16_t	classVersion;
+                uint16_t    version;        // 0x0001
+                bool        isRoot;            // 0x00 (GEFalse)
+                uint16_t    classVersion;
                 bTPropertyObject<%,%>::Read
                 {
                     bCPropertyObjectBase::Read
                     {
-                        uint16_t version;	// 0x00C9 (201)
+                        uint16_t version;    // 0x00C9 (201)
                     }
                     uint32_t size;
                 }
@@ -76,15 +76,15 @@ bCAccessorPropertyObject::Read
                 {
                     bCPropertyObjectBase::ReadData
                     {
-                        uint16_t version;	// 0x00C9 (201)
+                        uint16_t version;    // 0x00C9 (201)
                         uint32_t count;
                         for (count)
                         {
-                            bCString	name;
-                            bCString	type;
-                            uint16_t	version;	// 0x001E (30)
-                            uint32_t	size;
-                            uint8_t		value[size];
+                            bCString    name;
+                            bCString    type;
+                            uint16_t    version;    // 0x001E (30)
+                            uint32_t    size;
+                            uint8_t        value[size];
                         }
                     }
                     %::Read
@@ -138,8 +138,8 @@ class gCMyClass : public bCObjectRefBase
 {
 public:
 
-    gCMyClass()				{}
-    virtual ~gCMyClass()	{}
+    gCMyClass()                {}
+    virtual ~gCMyClass()    {}
         
     virtual bEResult Write(bCOStream&); // OnWrite for Risen
     virtual bEResult Read(bCIStream&);  // OnRead for Risen
