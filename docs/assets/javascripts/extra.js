@@ -62,6 +62,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     gMarkCodeLineManager.setElement();
     gmcExpandNavigation();
     gmcExternalLinks();
+    gmc404Redirect();
 });
 
 window.addEventListener("hashchange", _ => {
@@ -133,6 +134,20 @@ function gmcExpandNavigation() {
 
         toggle.checked = true;
         // gmcDebug(`✅ Expanded '${toggle.id}'`);
+    }
+}
+
+function gmc404Redirect() {
+    const header = document.querySelector(".md-content h1");
+
+    if (header === null) {
+        return;
+    }
+
+    const href = window.location.href;
+
+    if (header.innerHTML.includes("404") && href !== href.toLowerCase()) {
+        window.location.replace(href.toLowerCase());
     }
 }
 
