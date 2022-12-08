@@ -96,6 +96,11 @@ div.md-nav__link--index {
     }
 }
 
+/* override md-content min-height */
+.md-content {
+    min-height: 100vh;
+}
+
 /* endregion */
 
 /* region video container */
