@@ -1,3 +1,8 @@
+
+[gmc-discord]: https://discord.gg/mCpS5b5SUY
+[git-download]: https://git-scm.com/downloads
+[python-download]: https://www.python.org/downloads/
+
 # How to contribute
 The Gothic Modding Community is a community-driven project. We encourage people to contribute.
 
@@ -79,7 +84,13 @@ In order to work locally:
     
     Instead of `https://github.com/user-name/forked-repository-name.git` you ought to click on the green `<> Code` button and select the `HTTPS` tab.
 
-4. (optional) Create a Virtual Environment and activate it.
+4. Add the remote upstream repository using this command:
+
+    ```bash
+    git remote add upstream https://github.com/Gothic-Modding-Community/gmc.git
+    ```
+
+5. (optional) Create a Virtual Environment and activate it.
 
     If you work on multiple Python projects, it might be worthwhile to create a Virtual Environment for each project to have separate library directories with installed modules/plugins.
     
@@ -107,7 +118,7 @@ In order to work locally:
     !!! warning "Don't close the Terminal"  
         The virtual environment must be activated each time a new Terminal window is opened.
 
-5. Install MkDocs with plugins using this command:
+6. Install MkDocs with plugins using this command:
 
     ```bash
     pip install -r requirements.txt
@@ -115,20 +126,19 @@ In order to work locally:
     
     This will install all dependencies.
 
-6. Add the remote upstream repository and fetch the history using these commands:
+7. Fetch the git history from upstream using this command:
 
     ```bash
-    git remote add upstream https://github.com/Gothic-Modding-Community/gmc.git
     git fetch upstream
     ```
 
-7. Checkout the upstream `dev` branch using this command:
+8. Checkout the upstream `dev` branch using this command:
 
     ```bash
     git checkout --track upstream/dev
     ```
 
-8. Checkout the new branch based on the upstream `dev` branch:
+9. Checkout the new branch based on the upstream `dev` branch:
 
     ```bash
     git checkout -b name-of-branch
@@ -136,7 +146,7 @@ In order to work locally:
     
     An appropriate name for a branch is either a feature name or short description of what it changes - for example `3ds-articles`, `fix-typos-for-contribution`. They do not have to be elaborate, up-to 4 words suffices.
 
-9. Start a server with MkDocs using this command:
+10. Start a server with MkDocs using this command:
 
     ```bash
     mkdocs serve
@@ -147,7 +157,7 @@ In order to work locally:
     
     The server may be closed using the `Control-C` shortcut while in the terminal/console.
 
-10. When you are satisfied with a part of work, add and commit the files using these commands:
+11. When you are satisfied with a part of work, add and commit the files using these commands:
 
     ```bash
     git add .
@@ -156,17 +166,26 @@ In order to work locally:
     
     An appropriate commit message should be a sentence describing the changes.
 
-11. When you are finished with the work, push the branch to origin and create the pull request using this command:
+12. When you are finished with the work, push the branch to origin using this command:
 
     ```bash
     git push origin name-of-branch
     ```
 
-12. Create the pull request to the appropriate branch.
+13. Create the pull request to the appropriate branch.
+
+    After pushing your local branch to the remote origin, there will be a link available in the Terminal window. Use it to create the pull request using the pushed branch.
+
+14. Another contribution:
+
+    Before contributing again, always use these commands:
+    ```bash
+    git checkout dev
+    git fetch upstream
+    git pull upstream 
+    ```
+    to make sure that all the files are up-to-date. Follow then from step 9.
+
 
 ### Submit a file
 If working with _git_ or Markdown is not viable or possible for you, you can submit files in a Google Docs format on the [GMC Discord server][gmc-discord] and we will format and upload it to the page.
-
-[gmc-discord]: https://discord.gg/mCpS5b5SUY
-[git-download]: https://git-scm.com/downloads
-[python-download]: https://www.python.org/downloads/
