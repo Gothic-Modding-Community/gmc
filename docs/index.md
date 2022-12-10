@@ -8,7 +8,7 @@ The content here is not meant to be taken as the holy word of modding. We are ju
 
 Feel free to open a pull request with your article or propose changes.
 
-You can open a pull request in [this repository](https://github.com/auronen/gmc/)
+You can open a pull request in [this repository](https://github.com/Gothic-Modding-Community/gmc/)
 
 !!! note
     This is the `dev` branch. We can use this to check stuff before it goes live on the real site. It runs on [gmc.cokoliv.eu](https://gmc.cokoliv.eu)

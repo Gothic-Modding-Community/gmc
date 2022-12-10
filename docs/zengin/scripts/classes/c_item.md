@@ -7,87 +7,84 @@
 The `C_ITEM` class is used to define new items in the game.
 ## Class definition
 Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L79) script file. 
-<details>
-<summary>C_Item Daedalus class</summary>
 
-```dae
-class C_Item
-{
-    // For all Items
-    var int    id;                         // ID of the item
-    var string name;                       // Name of the item
-    var string nameID;                     // Name ID
-    var int    hp;                         // Current health of the item
-    var int    hp_max;                     // Maximum health of the item
-
-    var int    mainflag;                   // Item category flag
-    var int    flags;                      // Item type flag
-    var int    weight;                     // Weight of the item
-    var int    value;                      // Value of the item
-
-    // For weapons
-    var int    damageType;                 // Damage type
-    var int    damageTotal;                // Total amount of damage
-    var int    damage[DAM_INDEX_MAX];      // Array of damage types
-
-    // For armours
-    var int    wear;                       // Flag to specify where to wear an item
-    var int    protection[PROT_INDEX_MAX]; // Protection array of different damage types
-
-    // For food
-    var int    nutrition;                  // The amount of HP healed
-
-    // Benötigte Attribute zum Benutzen des Items
-    var int    cond_atr[3];                // Array of NPC attributes needed to equip the item
-    var int    cond_value[3];              // Array of values corresponding to the cond_atr arry
-
-    // Attributes to be changed on equip
-    var int    change_atr[3];              // Array of attributes that will be changed on equip
-    var int    change_value[3];            // Array of values of the attributes defined in change_atr
-
-    // Parser functions
-    var func   magic;
-    var func   on_equip;                   // Called on equpping an item
-    var func   on_unequip;                 // Called on unequipping an item
-    var func   on_state[4];
-
-    var func   owner;                      // Owner of the item: instance name
-    var int    ownerGuild;                 // Owner of the item: guild
-    var int    disguiseGuild;              // NPC guild set when equipping an item
-
-    // 3DS model file
-    var string visual;                     // Item model file
-
-    // NPC mesh change, when equipping an item
-    var string visual_change;              // .asc file
-    var string effect;                     // Effect instance
-
-    var int    visual_skin;                // Texture variation
-
-    var string scemeName;                  // Animation sceme name
-    var int    material;                   // Material of the object
-
-    var int    munition;                   // Ammo instance
-
-    var int    spell;                      // ID if the spell that this item does
-    var int    range;                      // Range of the weapon
-
-    var int    mag_circle;                 // Circle of magic needed to use this item
-
-    var string description;                // The name of the item shown in the preview box
-    var string text[ITM_TEXT_MAX];         // Array of string describing the item (left side)
-    var int    count[ITM_TEXT_MAX];        // Array of integers (the right side)
-
-    // Parameters for displaying items in the inventory
-    var int    inv_zbias                   // How far away is the item from the screen
-    var int    inv_rotx                    // X-axis rotation
-    var int    inv_roty                    // Y-axis rotation
-    var int    inv_rotz                    // Z-axis rotation
-    var int    inv_animate                 // Should the item rotate in the inventory
-};
-```
-
-</details>
+??? "C_Item Daedalus class"
+    ```dae
+    class C_Item
+    {
+        // For all Items
+        var int    id;                         // ID of the item
+        var string name;                       // Name of the item
+        var string nameID;                     // Name ID
+        var int    hp;                         // Current health of the item
+        var int    hp_max;                     // Maximum health of the item
+    
+        var int    mainflag;                   // Item category flag
+        var int    flags;                      // Item type flag
+        var int    weight;                     // Weight of the item
+        var int    value;                      // Value of the item
+    
+        // For weapons
+        var int    damageType;                 // Damage type
+        var int    damageTotal;                // Total amount of damage
+        var int    damage[DAM_INDEX_MAX];      // Array of damage types
+    
+        // For armours
+        var int    wear;                       // Flag to specify where to wear an item
+        var int    protection[PROT_INDEX_MAX]; // Protection array of different damage types
+    
+        // For food
+        var int    nutrition;                  // The amount of HP healed
+    
+        // Benötigte Attribute zum Benutzen des Items
+        var int    cond_atr[3];                // Array of NPC attributes needed to equip the item
+        var int    cond_value[3];              // Array of values corresponding to the cond_atr arry
+    
+        // Attributes to be changed on equip
+        var int    change_atr[3];              // Array of attributes that will be changed on equip
+        var int    change_value[3];            // Array of values of the attributes defined in change_atr
+    
+        // Parser functions
+        var func   magic;
+        var func   on_equip;                   // Called on equpping an item
+        var func   on_unequip;                 // Called on unequipping an item
+        var func   on_state[4];
+    
+        var func   owner;                      // Owner of the item: instance name
+        var int    ownerGuild;                 // Owner of the item: guild
+        var int    disguiseGuild;              // NPC guild set when equipping an item
+    
+        // 3DS model file
+        var string visual;                     // Item model file
+    
+        // NPC mesh change, when equipping an item
+        var string visual_change;              // .asc file
+        var string effect;                     // Effect instance
+    
+        var int    visual_skin;                // Texture variation
+    
+        var string scemeName;                  // Animation sceme name
+        var int    material;                   // Material of the object
+    
+        var int    munition;                   // Ammo instance
+    
+        var int    spell;                      // ID if the spell that this item does
+        var int    range;                      // Range of the weapon
+    
+        var int    mag_circle;                 // Circle of magic needed to use this item
+    
+        var string description;                // The name of the item shown in the preview box
+        var string text[ITM_TEXT_MAX];         // Array of string describing the item (left side)
+        var int    count[ITM_TEXT_MAX];        // Array of integers (the right side)
+    
+        // Parameters for displaying items in the inventory
+        var int    inv_zbias                   // How far away is the item from the screen
+        var int    inv_rotx                    // X-axis rotation
+        var int    inv_roty                    // Y-axis rotation
+        var int    inv_rotz                    // Z-axis rotation
+        var int    inv_animate                 // Should the item rotate in the inventory
+    };
+    ```
 
 It has many member variables but not all of them are used for every item. It is not necessary to define every one of these variables for every item as it was discussed on [InsideGothic](https://ataulien.github.io/Inside-Gothic/objects/item/).
 
@@ -247,9 +244,9 @@ There is a second way used in the scripts though with, for example,magic scrolls
 ```dae
 instance ItSc_InstantFireball (C_Item)
 {
-    name 				=	NAME_Spruchrolle; // const string = "Scroll"
+    name                 =    NAME_Spruchrolle; // const string = "Scroll"
     // ...
-    description			= 	NAME_SPL_InstantFireball; // const string = "Fireball"
+    description            =     NAME_SPL_InstantFireball; // const string = "Fireball"
     // ...
 };
 ```

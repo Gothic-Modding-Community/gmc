@@ -55,8 +55,8 @@ This is where the magic happens:
 - `Presets` - contains basic presets.
 - `Scripts`
     - `_compiled` - contains compiled scripts - `.dat` files.
-  	- `Content` - contains scripts that make up the content of the game.
-  	- `System` - contains scripts that make up the menu.
+      - `Content` - contains scripts that make up the content of the game.
+      - `System` - contains scripts that make up the menu.
 - `Sound` - contains sound effects `.wav` or `.ogg` format (Union only).
 - `Video` - contains videos in `.bik` format.
 

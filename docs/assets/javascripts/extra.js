@@ -3,6 +3,7 @@
 class MarkCodeLineManager {
     constructor() {
         this.lineElement = null;
+        this.lineCodeBlock = null;
         this.className = "hll";
     }
     setElement() {
@@ -12,7 +13,7 @@ class MarkCodeLineManager {
 
         let hash = window.location.hash;
 
-        if (hash === "") {
+        if (hash === "" || !hash.includes("example")) {
             // gmcDebug(`⏩ hash is empty`);
             return;
         }
@@ -23,15 +24,20 @@ class MarkCodeLineManager {
             return;
         }
 
+        this.lineCodeBlock = this.lineElement.closest("code");
+
         gmcAddClassToElement(this.className, this.lineElement, hash);
         this.showHiddenMarkedLine();
+        this.setSpanWidth();
     }
     unsetElement() {
         if (!this.lineElement) {
             return;
         }
         this.lineElement.classList.remove(this.className);
+        this.unsetSpanWidth();
         this.lineElement = null;
+        this.lineCodeBlock = null;
     }
     showHiddenMarkedLine() {
         let tabbedBlock = this.lineElement.closest(".tabbed-block");
@@ -53,6 +59,32 @@ class MarkCodeLineManager {
         let blockInputElement = tabbedContent.parentElement.children[blockIndex];
         blockInputElement.click();
     }
+    setSpanWidth() {
+        if (!this.lineCodeBlock) {
+            return;
+        }
+        let children = this.lineCodeBlock.childNodes;
+        let max = 0;
+        for (let child of children) {
+            let current = child.innerText.length;
+            if (current > max) {
+                max = current;
+            }
+        }
+        for (let child of children) {
+            // child.setAttribute("style", `min-width: ${max * 8.5}px;`)
+            child.setAttribute("style", `min-width: ${max * 0.65}em;`)
+        }
+    }
+    unsetSpanWidth() {
+        if (!this.lineCodeBlock) {
+            return;
+        }
+        let children = this.lineCodeBlock.childNodes;
+        for (let child of children) {
+            child.removeAttribute("style");
+        }
+    }
 }
 
 let gGMC_DEBUG = window.location.hostname === "127.0.0.1";
@@ -62,6 +94,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     gMarkCodeLineManager.setElement();
     gmcExpandNavigation();
     gmcExternalLinks();
+    gmc404Redirect();
 });
 
 window.addEventListener("hashchange", _ => {
@@ -81,7 +114,7 @@ function gmcAddClassToElement(className, element, elementName) {
 function gmcExternalLinks() {
     const hostname = window.location.hostname;
     const domainParts = hostname.split('.');
-    const githubId = domainParts[1] === "github" ? domainParts[0] : "auronen";
+    const githubId = domainParts[1] === "github" ? domainParts[0] : "gothic-modding-community";
     const repoUrl = `github.com/${githubId}`;
 
     // Regex to match urls starting with
@@ -112,7 +145,7 @@ function gmcExpandNavigation() {
 
     const activeNav = document.querySelector(".md-nav__link--active");
 
-    if (activeNav === null) {
+    if (activeNav === null || activeNav.parentElement === null) {
         return;
     }
 
@@ -133,6 +166,20 @@ function gmcExpandNavigation() {
 
         toggle.checked = true;
         // gmcDebug(`✅ Expanded '${toggle.id}'`);
+    }
+}
+
+function gmc404Redirect() {
+    const header = document.querySelector(".md-content h1");
+
+    if (header === null) {
+        return;
+    }
+
+    const href = window.location.href;
+
+    if (header.innerHTML.includes("404") && href !== href.toLowerCase()) {
+        window.location.replace(href.toLowerCase());
     }
 }
 
