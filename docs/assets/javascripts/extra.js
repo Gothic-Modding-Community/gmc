@@ -3,6 +3,7 @@
 class MarkCodeLineManager {
     constructor() {
         this.lineElement = null;
+        this.lineCodeBlock = null;
         this.className = "hll";
     }
     setElement() {
@@ -12,7 +13,7 @@ class MarkCodeLineManager {
 
         let hash = window.location.hash;
 
-        if (hash === "") {
+        if (hash === "" || !hash.includes("example")) {
             // gmcDebug(`⏩ hash is empty`);
             return;
         }
@@ -23,15 +24,20 @@ class MarkCodeLineManager {
             return;
         }
 
+        this.lineCodeBlock = this.lineElement.closest("code");
+
         gmcAddClassToElement(this.className, this.lineElement, hash);
         this.showHiddenMarkedLine();
+        this.setSpanWidth();
     }
     unsetElement() {
         if (!this.lineElement) {
             return;
         }
         this.lineElement.classList.remove(this.className);
+        this.unsetSpanWidth();
         this.lineElement = null;
+        this.lineCodeBlock = null;
     }
     showHiddenMarkedLine() {
         let tabbedBlock = this.lineElement.closest(".tabbed-block");
@@ -52,6 +58,32 @@ class MarkCodeLineManager {
 
         let blockInputElement = tabbedContent.parentElement.children[blockIndex];
         blockInputElement.click();
+    }
+    setSpanWidth() {
+        if (!this.lineCodeBlock) {
+            return;
+        }
+        let children = this.lineCodeBlock.childNodes;
+        let max = 0;
+        for (let child of children) {
+            let current = child.innerText.length;
+            if (current > max) {
+                max = current;
+            }
+        }
+        for (let child of children) {
+            // child.setAttribute("style", `min-width: ${max * 8.5}px;`)
+            child.setAttribute("style", `min-width: ${max * 0.65}em;`)
+        }
+    }
+    unsetSpanWidth() {
+        if (!this.lineCodeBlock) {
+            return;
+        }
+        let children = this.lineCodeBlock.childNodes;
+        for (let child of children) {
+            child.removeAttribute("style");
+        }
     }
 }
 
@@ -113,7 +145,7 @@ function gmcExpandNavigation() {
 
     const activeNav = document.querySelector(".md-nav__link--active");
 
-    if (activeNav === null) {
+    if (activeNav === null || activeNav.parentElement === null) {
         return;
     }
 
