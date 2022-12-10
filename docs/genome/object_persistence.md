@@ -101,9 +101,7 @@ bCAccessorPropertyObject::Read
 
 ### eCProcessibleElement
 
-
 === "Gothic 3"
-
     ```cpp
     eCProcessibleElement::Load
     {
@@ -116,7 +114,6 @@ bCAccessorPropertyObject::Read
     ```
 
 === "Risen"
-
     ```cpp
     eCProcessibleElement::Load
     {
