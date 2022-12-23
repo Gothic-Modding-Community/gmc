@@ -5,8 +5,8 @@ Example:
 ```dae
 ani ("s_RunL" 1 "s_RunL" 0.0 0.1 M. "Hum_RunLoop_M01.asc" F 12 31)
 {
-    *eventSFXGrnd	(12	"Run")
-    *eventSFXGrnd	(21	"Run")
+    *eventSFXGrnd    (12    "Run")
+    *eventSFXGrnd    (21    "Run")
 }
 ```
 
@@ -21,18 +21,18 @@ Sound effects
 Particle effects
 ```dae
 *eventPFX     (12       "ZMODELLANDDUST"   "Bip01")
-*eventPFX     (35   1	"BUBBLES"          "BIP01 HEAD"	ATTACH)
+*eventPFX     (35   1    "BUBBLES"          "BIP01 HEAD"    ATTACH)
 *eventPFXStop (45   1)
 ```
 Morph mesh animations
 > ⚠ Heads are animated using morph meshes and whilst this feature is almost never used in the original game, Chronicles of Myrtana uses it plenty. I intend to dedicate separate section to `morphMesh` animation in the future.
 
 ```dae
-*eventMMStartAni (14	"T_HURT")
+*eventMMStartAni (14    "T_HURT")
 ```
 Event tags
 ```dae
-*eventTag (5 "DEF_FIGHTMODE"	"")
+*eventTag (5 "DEF_FIGHTMODE"    "")
 
 *eventTag (0 "DEF_HIT_LIMB"  "ZS_RIGHTHAND")
 *eventTag (0 "DEF_OPT_FRAME" "6")

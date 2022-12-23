@@ -8,5 +8,6 @@ The content here is not meant to be taken as the holy word of modding. We are ju
 
 Feel free to open a pull request with your article or propose changes.
 
-You can open a pull request in [this repository](https://github.com/Gothic-Modding-Community/gmc)
+You can open a pull request in [this repository](https://github.com/Gothic-Modding-Community/gmc/)
+
 

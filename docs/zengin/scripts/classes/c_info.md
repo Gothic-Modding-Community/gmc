@@ -8,24 +8,20 @@ The `C_INFO` class is used to define dialogues in the game.
 ## Class definition
 Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164) script file.
 
-<details>
-<summary>C_Info Daedalus class</summary>
-
-```dae
-class C_Info
-{
-    var int    npc;         // npc instance has the dialogue
-    var int    nr;          // number of the dialogue (for sorting)
-    var int    important;   // should the npc start the dialogue automatically
-    var func   condition;   // condition function
-    var func   information; // function called on selecting the dialogue
-    var string description; // text in the dialogue box
-    var int    trade;       // should the dialogue show the trade window
-    var int    permanent;   // should the dialogue be permanent or only one time deal
-};
-```
-
-</details>
+??? "C_Info Daedalus class"
+    ```dae
+    class C_Info
+    {
+        var int    npc;         // npc instance has the dialogue
+        var int    nr;          // number of the dialogue (for sorting)
+        var int    important;   // should the npc start the dialogue automatically
+        var func   condition;   // condition function
+        var func   information; // function called on selecting the dialogue
+        var string description; // text in the dialogue box
+        var int    trade;       // should the dialogue show the trade window
+        var int    permanent;   // should the dialogue be permanent or only one time deal
+    };
+    ```
 
 ## Class members
 
@@ -49,7 +45,7 @@ Sets what NPC will have this dialogue instance. Set an NPC instance.
 ```dae
 instance Info_Diego_Gamestart (C_INFO)
 {
-    npc	= PC_Thief; // NPC instance for Diego
+    npc    = PC_Thief; // NPC instance for Diego
     // ...
 };
 ```
