@@ -33,6 +33,10 @@ theme:
   features:
     - navigation.tabs
     - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
 
 nav:
   - Home:
