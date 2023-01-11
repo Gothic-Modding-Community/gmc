@@ -73,7 +73,8 @@ func int MEM_ModOptExists(var string sectionname, var string optionname) {};
 - `return` - `1` if option in a section exist `0` otherwise
 
 ## Write functions
-!!! Mod configuration is never saved to disk, therefore there are no separate functions for writing in it
+!!! Note
+    Mod configuration is never saved to disk, therefore there are no separate functions for writing in it
 
 ### MEM_SetGothOpt
 The option `option` in the section `section` is set to the `value`. If the section and/or option does not exist, both
@@ -86,7 +87,8 @@ func void MEM_SetGothOpt(var string section, var string option, var string value
 - `option` - option to write/overwrite
 - `value` - string to write in `option`
 
-!!! If the section or option doesn't exist the function create it
+!!! Note
+    If the section or option doesn't exist the function create it
 
 ### MEM_ApplyGothOpt
 Applies the changes and saves the ini to disk
