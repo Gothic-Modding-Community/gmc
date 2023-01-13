@@ -6,7 +6,7 @@ Modding is all about changing the game files. To achieve that, we have to know t
 ├── Data
 │   ├── $Templates$
 │   ├── modvdf
-│   └── plugins
+│   └── Plugins
 ├── Miles
 ├── Saves
 ├── System
