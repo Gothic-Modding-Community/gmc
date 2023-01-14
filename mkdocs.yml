@@ -80,7 +80,7 @@ nav:
       - Extenders:
         - zengin/scripts/extenders/index.md
         - Ikarus:
-          - zengin/scripts/extenders/ikarus.md
+          - zengin/scripts/extenders/ikarus/index.md
           - Ini File Access: zengin/scripts/extenders/ikarus/ini_access.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
