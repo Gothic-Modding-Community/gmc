@@ -79,13 +79,17 @@ nav:
         - C_SVM:  zengin/scripts/classes/c_svm.md
       - Extenders:
         - zengin/scripts/extenders/index.md
-        - Ikarus: zengin/scripts/extenders/ikarus.md
+        - Ikarus:
+          - zengin/scripts/extenders/ikarus.md
+          - Ini File Access: zengin/scripts/extenders/ikarus/ini_access.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
           - Bars:            zengin/scripts/extenders/lego/bars.md
           - ConsoleCommands: zengin/scripts/extenders/lego/console_commands.md
           - ItemHelper:      zengin/scripts/extenders/lego/item_helper.md
           - Talents:         zengin/scripts/extenders/lego/talents.md
+          - FrameFunctions:  zengin/scripts/extenders/lego/frame_functions.md
+          - GameSatate:      zengin/scripts/extenders/lego/gamestate.md
           - Trialoge:        zengin/scripts/extenders/lego/trialoge.md
           - Misc:            zengin/scripts/extenders/lego/misc.md
         - AFSP:
