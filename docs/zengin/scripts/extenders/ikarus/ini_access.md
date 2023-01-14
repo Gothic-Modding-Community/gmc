@@ -1,8 +1,10 @@
-# ini access
-This part of Ikarus gives you an access to `Gothic.ini` and `Mod.ini`
+# Confguratio file access
+This part of Ikarus gives you access to `Gothic.ini` and loaded mod configuration files.
 
 ## Initialization
-The best way to initialize all ikarus functions is to call `MEM_InitAll` in `Init_Global`
+The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
+!!! warning
+    If you want to use Ikarus in Gothic 1, it is best to define your own `Init_Global()` function and call it from every world initialization function.
 
 ```dae
 func void MEM_InitAll () {};
@@ -14,42 +16,42 @@ func void MEM_InitAll () {};
 ## Read functions
 
 ### MEM_GetGothOpt
-Searches the `Gothic.ini` for option.
+Searches the `Gothic.ini` for an option.
 ```dae
-func void MEM_GetGothOpt(var string sectionname, var string optionname) {};
+func string MEM_GetGothOpt(var string sectionname, var string optionname) {};
 ```
 
-- `sectionname` - name of the searched section
-- `optionname` - name of the searched option
-- `return` - the value of option if such a section with such an option exists, otherwise an empty string
+- `sectionname` - name of the option section
+- `optionname` - name of the option
+- `return` - the option value as a string, of it was not found, empty string is returned
 
 ### MEM_GetModOpt
-Searches the `Mod.ini` for option.
+Searches the loaded mod ini file for option.
 ```dae
 func void MEM_GetModOpt(var string sectionname, var string optionname) {};
 ```
 
-- `sectionname` - name of the searched section
-- `optionname` - name of the searched option
-- `return` - the value of option if such a section with such an option exists, otherwise an empty string
+- `sectionname` - name of the option section
+- `optionname` - name of the option
+- `return` - the option value as a string, of it was not found, empty string is returned
 
 ### MEM_GothOptSectionExists
-Gives an information if section exist in `Gothic.ini`
+Checks whether a section exists in `Gothic.ini`
 ```dae
 func int MEM_GothOptSectionExists(var string sectionname) {};
 ```
 
 - `sectionname` - name of the searched section
-- `return` - `1` if section exist `0` otherwise
+- `return` - `TRUE` if section exist `FALSE` otherwise
 
 ### MEM_ModOptSectionExists
-Gives an information if section exist in `Mod.ini`
+Checks whether a section exists in loaded mod ini file
 ```dae
 func int MEM_ModOptSectionExists(var string sectionname) {};
 ```
 
 - `sectionname` - name of the searched section
-- `return` - `1` if section exist `0` otherwise
+- `return` - `TRUE` if section exist `FALSE` otherwise
 
 ### MEM_GothOptExists
 Gives an information if option exist in `Gothic.ini`
@@ -60,7 +62,7 @@ var string optionname) {};
 
 - `sectionname` - name of the searched section
 - `optionname` - name of the searched option
-- `return` - `1` if option in a section exist `0` otherwise
+- `return` - `TRUE` if option in a section exist `FALSE` otherwise
 
 ### MEM_ModOptExists
 Gives an information if option exist in `Mod.ini`
@@ -70,25 +72,21 @@ func int MEM_ModOptExists(var string sectionname, var string optionname) {};
 
 - `sectionname` - name of the searched section
 - `optionname` - name of the searched option
-- `return` - `1` if option in a section exist `0` otherwise
+- `return` - `TRUE` if option in a section exist `FALSE` otherwise
 
 ## Write functions
-!!! Note
-    Mod configuration is never saved to disk, therefore there are no separate functions for writing in it
+!!! Warning
+    Mod configuration is never saved to disk, therefore there are no separate functions for writing to it
 
 ### MEM_SetGothOpt
-The option `option` in the section `section` is set to the `value`. If the section and/or option does not exist, both
-in case of doubt.
+The option `option` in the section `section` is set to the `value`. If the section and/or option does not exist, it will be created.
 ```dae
 func void MEM_SetGothOpt(var string section, var string option, var string value) {};
 ```
 
-- `section` - the section where is located `option`
+- `section` - the section where the option is located
 - `option` - option to write/overwrite
-- `value` - string to write in `option`
-
-!!! Note
-    If the section or option doesn't exist the function create it
+- `value` - value to set the option to
 
 ### MEM_ApplyGothOpt
 Applies the changes and saves the ini to disk
@@ -97,6 +95,6 @@ func void MEM_ApplyGothOpt() {};
 ```
 
 !!! Tip
-    If you introduce new options, the good style requires you to do this in a separate section and the options are understandable. As a norm, I suggest that a mod with name "myMod" introduces new properties only in the "myMod" or "MOD-mymod"  section (and not in the section "GAME" or "PERFORMANCE").
+    If you introduce new options, it is best to follow certain practices. It is a good practice to name your options clearly an place them in a section named the same as your mod. Do not place your mod options into the `[GAME]` or `[PERFORMANCE]` sections.
 
 
