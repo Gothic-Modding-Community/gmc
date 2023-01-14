@@ -8,24 +8,20 @@ The `C_INFO` class is used to define dialogues in the game.
 ## Class definition
 Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164) script file.
 
-<details>
-  <summary>C_Info Daedalus class</summary>
-
-```dae
-class C_Info
-{
-    var int    npc;         // npc instance has the dialogue
-    var int    nr;          // number of the dialogue (for sorting)
-    var int    important;   // should the npc start the dialogue automatically
-    var func   condition;   // condition function
-    var func   information; // function called on selecting the dialogue
-    var string description; // text in the dialogue box
-    var int    trade;       // should the dialogue show the trade window
-    var int    permanent;   // should the dialogue be permanent or only one time deal
-};
-```
-
-</details>
+??? "C_Info Daedalus class"
+    ```dae
+    class C_Info
+    {
+        var int    npc;         // npc instance has the dialogue
+        var int    nr;          // number of the dialogue (for sorting)
+        var int    important;   // should the npc start the dialogue automatically
+        var func   condition;   // condition function
+        var func   information; // function called on selecting the dialogue
+        var string description; // text in the dialogue box
+        var int    trade;       // should the dialogue show the trade window
+        var int    permanent;   // should the dialogue be permanent or only one time deal
+    };
+    ```
 
 ## Class members
 
@@ -49,7 +45,7 @@ Sets what NPC will have this dialogue instance. Set an NPC instance.
 ```dae
 instance Info_Diego_Gamestart (C_INFO)
 {
-	npc	= PC_Thief; // NPC instance for Diego
+    npc    = PC_Thief; // NPC instance for Diego
     // ...
 };
 ```
@@ -134,11 +130,11 @@ Specify a string that will be shown in the dialogue window.
 instance DIA_XARDAS_GMC(C_INFO)
 {
     // ...
-	description = "Hello, is this the GMC site?";
+    description = "Hello, is this the GMC site?";
 };
 ```
 
-![Description](../../../img/c_info_description.png)
+![Description](../../../assets/images/c_info_description.png)
 
 
 ### trade
@@ -176,8 +172,8 @@ Dialogues with `permanent = TRUE` do not disappear after the dialogue is played.
     Frequently used external function `Npc_KnowsInfo` which returns true if the dialogue instance has been played has had a bug in the implementation for a long time. This bug made it impossible to use this function with dialogue instances with `permanent = TRUE` as it would always return `FALSE`. This has been fixed in `Union 1.0m`.
 
 ## zParserExtender
-zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../../../scripts/extenders/zParserExtender/dialogues/)
+zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../extenders/zparserextender/dialogues.md)
 
 ## AF Script Packet
-Enhanced Info Manager (implemented using Ikarus and LeGo) adds tonne of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
+Enhanced Info Manager (implemented using Ikarus and LeGo) adds tonne of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../extenders/afsp/index.md)
 

@@ -124,215 +124,215 @@ InfoManagerNumKeysControls = TRUE;
 ## Spinners
 This is by far the most flashy feature of EIM as it allows you to use left/right arrow keys on a dialogue option to increase/decease numerical value. This can be used in many ways.
 
-This feature is a bit more complex:
+This feature is a bit more complex:  
+
 1. Set up a standard dialogue
 
-!!! Notice
-    Notice we are using "*dummy*" as a description, since it is going to get updated. If something goes wrong the "*dummy*" string shows up and you can clearly tell something went wrong.
-
-```dae
-INSTANCE PC_Pan_Cook_Meat (C_Info)
-{
-    nr           = 1;
-    condition    = PC_Pan_Cook_Meat_Condition;
-    information  = PC_Pan_Cook_Meat_Info;
-    permanent    = TRUE;
-    description  = "dummy"; //Description is updated in PC_Pan_Cook_Meat_Condition
-};
-```
+    !!! Notice
+        Notice we are using "*dummy*" as a description, since it is going to get updated. If something goes wrong the "*dummy*" string shows up and you can clearly tell something went wrong.
+    
+    ```dae
+    INSTANCE PC_Pan_Cook_Meat (C_Info)
+    {
+        nr           = 1;
+        condition    = PC_Pan_Cook_Meat_Condition;
+        information  = PC_Pan_Cook_Meat_Info;
+        permanent    = TRUE;
+        description  = "dummy"; //Description is updated in PC_Pan_Cook_Meat_Condition
+    };
+    ```
 
 2. Most of the magic takes place in the condition function (apart from the code behind the scenes, of course).
 
-```dae
-var int selectedMeat; // global variable for this spinner value
-
-FUNC INT PC_Pan_Cook_Meat_Condition ()
-{
-    if (PLAYER_MOBSI_PRODUCTION == MOBSI_DIALOG_PAN)
+    ```dae
+    var int selectedMeat; // global variable for this spinner value
+    
+    FUNC INT PC_Pan_Cook_Meat_Condition ()
     {
-        var string lastSpinnerID;
-
-        var int total; total = NPC_HasItems (self, ItFoMuttonRaw);
-
-        if (selectedMeat == 0) { selectedMeat = 1; }; //Default initial value
-
-        //Check currently selected spinned ID --> is it this one?
-        if (Hlp_StrCmp (InfoManagerSpinnerID, "CookMeat"))
+        if (PLAYER_MOBSI_PRODUCTION == MOBSI_DIALOG_PAN)
         {
-            //Setup spinner if spinner ID has changed
-            if (!Hlp_StrCmp (InfoManagerSpinnerID, lastSpinnerID))
+            var string lastSpinnerID;
+    
+            var int total; total = NPC_HasItems (self, ItFoMuttonRaw);
+    
+            if (selectedMeat == 0) { selectedMeat = 1; }; //Default initial value
+    
+            //Check currently selected spinned ID --> is it this one?
+            if (Hlp_StrCmp (InfoManagerSpinnerID, "CookMeat"))
             {
-                //Restore previous value
-                InfoManagerSpinnerValue = selectedMeat;
+                //Setup spinner if spinner ID has changed
+                if (!Hlp_StrCmp (InfoManagerSpinnerID, lastSpinnerID))
+                {
+                    //Restore previous value
+                    InfoManagerSpinnerValue = selectedMeat;
+                };
+    
+                //Page Up/Down quantity
+                InfoManagerSpinnerPageSize = 5;
+    
+                //Min/Max value (Home/End keys)
+                InfoManagerSpinnerValueMin = 1;
+                InfoManagerSpinnerValueMax = total;
+    
+                //Update number which is shown in description (in case it was changed by _HOOK_VIEWDIALOGCHOICE_HANDLEEVENT
+                selectedMeat = InfoManagerSpinnerValue;
+    
             };
-
-            //Page Up/Down quantity
-            InfoManagerSpinnerPageSize = 5;
-
-            //Min/Max value (Home/End keys)
-            InfoManagerSpinnerValueMin = 1;
-            InfoManagerSpinnerValueMax = total;
-
-            //Update number which is shown in description (in case it was changed by _HOOK_VIEWDIALOGCHOICE_HANDLEEVENT
-            selectedMeat = InfoManagerSpinnerValue;
-
+    
+            lastSpinnerID = InfoManagerSpinnerID; //Remember last active spinner ID
+    
+            var string newDescription;
+    
+            //Spinner ID 'CookMeat'
+            newDescription = "s@CookMeat Cook some meat: ";
+    
+            newDescription = ConcatStrings (newDescription, IntToString (selectedMeat));
+            newDescription = ConcatStrings (newDescription, " / ");
+            newDescription = ConcatStrings (newDescription, IntToString (total));
+    
+            //Update description
+            PC_Pan_Cook_Meat.description = newDescription;
+            return TRUE;
         };
-
-        lastSpinnerID = InfoManagerSpinnerID; //Remember last active spinner ID
-
-        var string newDescription;
-
-        //Spinner ID 'CookMeat'
-        newDescription = "s@CookMeat Cook some meat: ";
-
-        newDescription = ConcatStrings (newDescription, IntToString (selectedMeat));
-        newDescription = ConcatStrings (newDescription, " / ");
-        newDescription = ConcatStrings (newDescription, IntToString (total));
-
-        //Update description
-        PC_Pan_Cook_Meat.description = newDescription;
-        return TRUE;
+    
+        return FALSE;
     };
-
-    return FALSE;
-};
-```
+    ```
 
 3. We can use the spinner value stored in `selectedMeat` variable here in the info function to create the meat (or do other stuff with it).
 
-```dae
-FUNC VOID PC_Pan_Cook_Meat_Info () {
-       //If we don't have any meat ... don't cook any :)
-       if (!NPC_HasItems (self, ItFoMuttonRaw)) { return; };
-
-       //This should not happen - but you never know!
-       if (selectedMeat < 1) { return; };
-
-       //This should not happen either! but just in case
-       if (selectedMeat > (NPC_HasItems (self, ItFoMuttonRaw))) {
-              selectedMeat = NPC_HasItems (self, ItFoMuttonRaw);
-       };
-
-       NPC_RemoveInvItems (self, ItFoMuttonRaw, selectedMeat);
-       CreateInvItems (self, ItFoMutton, selectedMeat);
-
-       //Reset value for next time
-       selectedMeat = 1;
-};
-```
+    ```dae
+    FUNC VOID PC_Pan_Cook_Meat_Info () {
+        //If we don't have any meat ... don't cook any :)
+        if (!NPC_HasItems (self, ItFoMuttonRaw)) { return; };
+    
+        //This should not happen - but you never know!
+        if (selectedMeat < 1) { return; };
+    
+        //This should not happen either! but just in case
+        if (selectedMeat > (NPC_HasItems (self, ItFoMuttonRaw))) {
+            selectedMeat = NPC_HasItems (self, ItFoMuttonRaw);
+        };
+    
+        NPC_RemoveInvItems (self, ItFoMuttonRaw, selectedMeat);
+        CreateInvItems (self, ItFoMutton, selectedMeat);
+    
+        //Reset value for next time
+        selectedMeat = 1;
+    };
+    ```
+     
 ### Spinners: Full code example
-<details>
-  <summary>Spinner example</summary>
 
-```dae
-INSTANCE PC_Pan_Cook_Meat (C_Info)
-{
-       nr           = 1;
-       condition    = PC_Pan_Cook_Meat_Condition;
-       information  = PC_Pan_Cook_Meat_Info;
-       permanent    = TRUE;
-       description  = "dummy"; //Description is updated in PC_Pan_Cook_Meat_Condition
-};
-
-var int selectedMeat;
-
-FUNC INT PC_Pan_Cook_Meat_Condition ()
-{
-   if (PLAYER_MOBSI_PRODUCTION == MOBSI_DIALOG_PAN)
-   {
-       var string lastSpinnerID;
-
-       var int total; total = NPC_HasItems (self, ItFoMuttonRaw);
-
-       if (selectedMeat == 0) { selectedMeat = 1; }; //Default initial value
-
-       //Check currently selected spinned ID --> is it this one?
-       if (Hlp_StrCmp (InfoManagerSpinnerID, "CookMeat"))
-       {
-             //Setup spinner if spinner ID has changed
-             if (!Hlp_StrCmp (InfoManagerSpinnerID, lastSpinnerID))
-             {
-                 //Restore previous value
-                 InfoManagerSpinnerValue = selectedMeat;
-             };
-
-             //Page Up/Down quantity
-             InfoManagerSpinnerPageSize = 5;
-
-             //Min/Max value (Home/End keys)
-             InfoManagerSpinnerValueMin = 1;
-             InfoManagerSpinnerValueMax = total;
-
-             //Update number which is shown in description (in case it was changed by _HOOK_VIEWDIALOGCHOICE_HANDLEEVENT
-             selectedMeat = InfoManagerSpinnerValue;
-       };
-
-       lastSpinnerID = InfoManagerSpinnerID; //Remember last active spinner ID
-
-       var string newDescription;
-
-       //Spinner ID 'CookMeat'
-       newDescription = "s@CookMeat Cook some meat: ";
-
-       newDescription = ConcatStrings (newDescription, IntToString (selectedMeat));
-       newDescription = ConcatStrings (newDescription, " / ");
-       newDescription = ConcatStrings (newDescription, IntToString (total));
-
-       //Update description
-       PC_Pan_Cook_Meat.description = newDescription;
-       return TRUE;
-   };
-
-   return FALSE;
-};
-
-FUNC VOID PC_Pan_Cook_Meat_Info ()
-{
-    //If we don't have any meat ... don't cook any :)
-    if (!NPC_HasItems (self, ItFoMuttonRaw)) { return; };
-
-    //This should not happen - but you never know!
-    if (selectedMeat < 1) { return; };
-
-    //This should not happen either! but just in case
-    if (selectedMeat > (NPC_HasItems (self, ItFoMuttonRaw)))
+??? "Spinner example"
+    ```dae
+    INSTANCE PC_Pan_Cook_Meat (C_Info)
     {
-           selectedMeat = NPC_HasItems (self, ItFoMuttonRaw);
+        nr           = 1;
+        condition    = PC_Pan_Cook_Meat_Condition;
+        information  = PC_Pan_Cook_Meat_Info;
+        permanent    = TRUE;
+        description  = "dummy"; //Description is updated in PC_Pan_Cook_Meat_Condition
     };
-
-    NPC_RemoveInvItems (self, ItFoMuttonRaw, selectedMeat);
-    CreateInvItems (self, ItFoMutton, selectedMeat);
-
-    //Reset value for next time
-    InfoManagerSpinnerValue = 1;
-};
-
-INSTANCE PC_Pan_Cook_Meat_Exit (C_Info)
-{
-       nr          = 999;
-       condition   = PC_Pan_Cook_Meat_Exit_Condition;
-       information = PC_Pan_Cook_Meat_Exit_Info;
-       permanent   = TRUE;
-       description = "End";
-};
-
-FUNC INT PC_Pan_Cook_Meat_Exit_Condition ()
-{
-   if (PLAYER_MOBSI_PRODUCTION == MOBSI_DIALOG_PAN)
-   {
-       return TRUE;
-   };
-   return FALSE;
-};
-
-FUNC VOID PC_Pan_Cook_Meat_Exit_Info ()
-{
-    if (PLAYER_MOBSI_PRODUCTION != MOBSI_DIALOG_NONE)
+    
+    var int selectedMeat;
+    
+    FUNC INT PC_Pan_Cook_Meat_Condition ()
     {
-        PLAYER_MOBSI_PRODUCTION = MOBSI_DIALOG_NONE;
-        hero.aivar [AIV_INVINCIBLE] = FALSE;
-        AI_StopProcessInfos (hero);
+        if (PLAYER_MOBSI_PRODUCTION == MOBSI_DIALOG_PAN)
+        {
+            var string lastSpinnerID;
+    
+            var int total; total = NPC_HasItems (self, ItFoMuttonRaw);
+    
+            if (selectedMeat == 0) { selectedMeat = 1; }; //Default initial value
+    
+            //Check currently selected spinned ID --> is it this one?
+            if (Hlp_StrCmp (InfoManagerSpinnerID, "CookMeat"))
+            {
+                //Setup spinner if spinner ID has changed
+                if (!Hlp_StrCmp (InfoManagerSpinnerID, lastSpinnerID))
+                {
+                    //Restore previous value
+                    InfoManagerSpinnerValue = selectedMeat;
+                };
+    
+                //Page Up/Down quantity
+                InfoManagerSpinnerPageSize = 5;
+    
+                //Min/Max value (Home/End keys)
+                InfoManagerSpinnerValueMin = 1;
+                InfoManagerSpinnerValueMax = total;
+    
+                //Update number which is shown in description (in case it was changed by _HOOK_VIEWDIALOGCHOICE_HANDLEEVENT
+                selectedMeat = InfoManagerSpinnerValue;
+            };
+    
+            lastSpinnerID = InfoManagerSpinnerID; //Remember last active spinner ID
+    
+            var string newDescription;
+    
+            //Spinner ID 'CookMeat'
+            newDescription = "s@CookMeat Cook some meat: ";
+    
+            newDescription = ConcatStrings (newDescription, IntToString (selectedMeat));
+            newDescription = ConcatStrings (newDescription, " / ");
+            newDescription = ConcatStrings (newDescription, IntToString (total));
+    
+            //Update description
+            PC_Pan_Cook_Meat.description = newDescription;
+            return TRUE;
+        };
+    
+        return FALSE;
     };
-};
-```
-</details>
+    
+    FUNC VOID PC_Pan_Cook_Meat_Info ()
+    {
+        //If we don't have any meat ... don't cook any :)
+        if (!NPC_HasItems (self, ItFoMuttonRaw)) { return; };
+    
+        //This should not happen - but you never know!
+        if (selectedMeat < 1) { return; };
+    
+        //This should not happen either! but just in case
+        if (selectedMeat > (NPC_HasItems (self, ItFoMuttonRaw)))
+        {
+            selectedMeat = NPC_HasItems (self, ItFoMuttonRaw);
+        };
+    
+        NPC_RemoveInvItems (self, ItFoMuttonRaw, selectedMeat);
+        CreateInvItems (self, ItFoMutton, selectedMeat);
+    
+        //Reset value for next time
+        InfoManagerSpinnerValue = 1;
+    };
+    
+    INSTANCE PC_Pan_Cook_Meat_Exit (C_Info)
+    {
+        nr          = 999;
+        condition   = PC_Pan_Cook_Meat_Exit_Condition;
+        information = PC_Pan_Cook_Meat_Exit_Info;
+        permanent   = TRUE;
+        description = "End";
+    };
+    
+    FUNC INT PC_Pan_Cook_Meat_Exit_Condition ()
+    {
+        if (PLAYER_MOBSI_PRODUCTION == MOBSI_DIALOG_PAN)
+        {
+            return TRUE;
+        };
+        return FALSE;
+    };
+    
+    FUNC VOID PC_Pan_Cook_Meat_Exit_Info ()
+    {
+        if (PLAYER_MOBSI_PRODUCTION != MOBSI_DIALOG_NONE)
+        {
+            PLAYER_MOBSI_PRODUCTION = MOBSI_DIALOG_NONE;
+            hero.aivar[AIV_INVINCIBLE] = FALSE;
+            AI_StopProcessInfos (hero);
+        };
+    };
+    ```

@@ -12,11 +12,11 @@ The format supports code blocks specified by the `#region` and `#endregion` keyw
 
 ```title="Regions"
 #region strings
- // TODO
+    // TODO
 #endregion
 
 #region fight scheme
- // TODO
+    // TODO
 #endregion
 ```
 
@@ -35,9 +35,9 @@ KeyRecord // this is NOT a comment
 Strings are used for interactive hints. They should be defined at the top of the file. To define a string, use the keyword `String`. Strings have the following format:
 ```title="Multilang string syntax"
 String [id]
-  [langTag] [text]
-  [langTag] [text]
-  [langTag] [text]
+    [langTag] [text]
+    [langTag] [text]
+    [langTag] [text]
 ```
 #### Example
 ```
@@ -61,16 +61,16 @@ A binding is a description of an event that includes emulation object and condit
 The general structure of the bind starts with the keyword `KeyRecord` and has the following format:
 ```title="Control binding"
 KeyRecord [modifier]
-  Id          [key name]
-  Combination [gamepad keys]
-  Emulation   [engine logical and absolute keys]
-  Condition   [engine logical, absolute keys or logical functions]
-  Help        [name of the hint string]
+    Id          [key name]
+    Combination [gamepad keys]
+    Emulation   [engine logical and absolute keys]
+    Condition   [engine logical, absolute keys or logical functions]
+    Help        [name of the hint string]
 ```
 
 - `Id` - unique identifier used by other users to override this control binding
 - `[modifier]` - can be empty or take the value of `Toggled` If the value is empty, the control binding will work as long as the player holds down the specified button or button combination.    
-  If the value is `Toggled`, the control binding will work only when the player toggles the button or button combination. (One press to start sneaking, another press to stop sneaking)
+    If the value is `Toggled`, the control binding will work only when the player toggles the button or button combination. (One press to start sneaking, another press to stop sneaking)
 - `Combination` - these are the gamepad buttons that the player must press or hold to activate the control binding.
 - `Emulation` - specify which buttons will be emulated. You can specify absolute buttons, or that are defined in the game settings (logical).
 - `Condition` - specify the condition under which the control binding can be activated. To invert condition, use the operator `!` before the operand (!Cond_IsOverlayTop, !JOY_B)
@@ -88,23 +88,23 @@ KeyRecord [modifier]
 #### Example
 ```title="Control binding examples"
 KeyRecord
-  Id          StopUsingPicklock
-  Combination JOY_B
-  Emulation   KEY_DOWN
-  Condition   Cond_InterfaceIsOpen, Cond_UsesPicklock, !JOY_B
+    Id          StopUsingPicklock
+    Combination JOY_B
+    Emulation   KEY_DOWN
+    Condition   Cond_InterfaceIsOpen, Cond_UsesPicklock, !JOY_B
 
 KeyRecord Toggled
-  Id          ReturnToHumanForm
-  Combination JOY_A
-  Emulation   KEY_RETURN
-  Condition   Cond_InTransformation
-  Help        end_transform
+    Id          ReturnToHumanForm
+    Combination JOY_A
+    Emulation   KEY_RETURN
+    Condition   Cond_InTransformation
+    Help        end_transform
 
 KeyRecord
-  Id          QuickRingSelectSlot
-  Combination JOY_RSTICK_FULL
-  Condition   !Cond_InventoryIsOpen, Cond_IsOverlayTop
-  Help        focus_item
+    Id          QuickRingSelectSlot
+    Combination JOY_RSTICK_FULL
+    Condition   !Cond_InventoryIsOpen, Cond_IsOverlayTop
+    Help        focus_item
 
 ```
 
@@ -124,10 +124,12 @@ KeyDisable Controls.ArrowDown
 
 // create new key based on the same buttons
 KeyRecord Toggled
-  Id          ArrowDownNew
-  Combination JOY_DOWN
-  Emulation   GAME_DOWN
+    Id          ArrowDownNew
+    Combination JOY_DOWN
+    Emulation   GAME_DOWN
 ```
-## Customization example
-!!! Info  
-    Real life example of gamepad controls customization for modification with different features.
+
+[//]: #  (## Customization example)
+[//]: #  (!!! Info  )
+[//]: #  (    Real life example of gamepad controls customization for modification with different features.)
+
