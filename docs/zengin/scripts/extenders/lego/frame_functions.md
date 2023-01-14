@@ -104,7 +104,7 @@ func void FF_ApplyOnceExt(var func function, var int delay, var int cycles) {};
 - `cycles` - how many times should the function be called (-1 = endless)
 
 ### FF_ApplyOnceExtGT
-Alias to [FF_ApplyExtGT](#FF_ApplyExtGT), which adds the function only once after repeated calls. Loop doesn't run if the game is paused.
+Alias to [FF_ApplyExtGT](#ff_applyextgt), which adds the function only once after repeated calls. Loop doesn't run if the game is paused.
 ```dae
 func void FF_ApplyOnceExtGT(var func function, var int delay, var int cycles) {};
 ```

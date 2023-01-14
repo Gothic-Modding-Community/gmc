@@ -1,5 +1,5 @@
 # LeGo
-LeGo (**Le**hona**Go**ttfried) is a script packet built on top of [Ikarus](../ikarus.md).
+LeGo (**Le**hona**Go**ttfried) is a script packet built on top of [Ikarus](../ikarus/index.md).
 
 | Contacts |                                                                                                                            |
 |:---------|:---------------------------------------------------------------------------------------------------------------------------|
