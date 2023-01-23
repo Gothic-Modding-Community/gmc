@@ -12,6 +12,7 @@ theme:
   logo: assets/images/gmc_logo.png
   icon:
     repo: fontawesome/brands/github
+    alternate: material/earth
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
