@@ -247,6 +247,6 @@ plugins:
       type: iso_datetime
       timezone: Europe/Warsaw
       exclude:
-        - index.md
-        - genome/index.md
-        - zengin/index.md
+        - index*.md
+        - genome/index*.md
+        - zengin/index*.md
