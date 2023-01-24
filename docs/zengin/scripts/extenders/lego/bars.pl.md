@@ -1,4 +1,4 @@
-# Paski
+# Bars
 Ten pakiet bardzo u³atwia dodawanie nowych pasków, dla wyœwietlania np. wytrzyma³oœci/satminy.
 
 ## Zale¿noœci
