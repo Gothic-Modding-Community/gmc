@@ -1,5 +1,5 @@
 # Ikarus
-Ikarus jest bibliotek¹ Daedalusa - jêzyka skryptowego Gothica. Wykorzystuje interpreter, aby umo¿liwiæ dowolny dostêp do pamiêci i definiuje mnóstwo przydatnych funkcji do pracy z silnikiem.
+Ikarus jest bibliotekÂ¹ Daedalusa - jÃªzyka skryptowego Gothica. Wykorzystuje interpreter, aby umoÂ¿liwiÃ¦ dowolny dostÃªp do pamiÃªci i definiuje mnÃ³stwo przydatnych funkcji do pracy z silnikiem.
 
 | Kontakt |                                                                                                                          |
 |:---------|:-------------------------------------------------------------------------------------------------------------------------|
@@ -8,4 +8,4 @@ Ikarus jest bibliotek¹ Daedalusa - jêzyka skryptowego Gothica. Wykorzystuje inte
 | Forum    | [:material-forum: Ikarus](https://forum.worldofplayers.de/forum/threads/1299679-Skriptpaket-Ikarus-4)                    |
 
 !!! Note
-    Ikarus jest hostowany na [GitHubie](https://github.com/Lehona/Ikarus) i posiada wbudowan¹ [dokumentacje](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Doc.d). Jej t³umaczenie jest w planach.
+    Ikarus jest hostowany na [GitHubie](https://github.com/Lehona/Ikarus) i posiada wbudowanÂ¹ [dokumentacje](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Doc.d). Jej tÂ³umaczenie jest w planach.

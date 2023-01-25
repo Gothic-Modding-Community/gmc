@@ -1,11 +1,11 @@
 # ItemHelper
-Ten pakiet jest bardzo prosty - pobiera wskaŸnik `oCItem` z instancji `C_Item` wa¿nej dla bie¿¹cego œwiata i sesji.
+Ten pakiet jest bardzo prosty - pobiera wskaÅºnik `oCItem` z instancji `C_Item` waÅ¼nej dla bieÅ¼Ä…cego Å›wiata i sesji.
 
 !!! Warning
-    Upewnij siê, ¿e ka¿dy œwiat ma waypoint o nazwie `TOT` (po niemiecku „martwy”). Ikarus i LeGo potrzebuj¹ tego punktu nawigacyjnego, aby odradzaæ pomocniczych NPC.
-    Jest to szczególnie wa¿ne w Gothicu 1, poniewa¿ jego œwiaty nie maj¹ waypointu `TOT`.
+    Upewnij siÄ™, Å¼e kaÅ¼dy Å›wiat ma waypoint o nazwie `TOT` (po niemiecku â€martwyâ€). Ikarus i LeGo potrzebujÄ… tego punktu nawigacyjnego, aby odradzaÄ‡ pomocniczych NPC.
+    Jest to szczegÃ³lnie waÅ¼ne w Gothicu 1, poniewaÅ¼ jego Å›wiaty nie majÄ… waypointu `TOT`.
 
-## Zale¿noœci
+## ZaleÅ¼noÅ›ci
 Brak
 
 ## Inicjalizacja
@@ -21,5 +21,5 @@ Brak
 func int ITM_GetPtr(var int instance) {};
 ```
 
-- `instance` - instancja `C_Item`, z której ma zostaæ pobrany wskaŸnik
-- `return `- wskaŸnik `oCItem` instancji `C_Item`
+- `instance` - instancja `C_Item`, z ktÃ³rej ma zostaÄ‡ pobrany wskaÅºnik
+- `return `- wskaÅºnik `oCItem` instancji `C_Item`

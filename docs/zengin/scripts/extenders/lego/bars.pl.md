@@ -1,13 +1,13 @@
 # Bars
-Ten pakiet bardzo u³atwia dodawanie nowych pasków, dla wyœwietlania np. wytrzyma³oœci/satminy.
+Ten pakiet bardzo uÅ‚atwia dodawanie nowych paskÃ³w, dla wyÅ›wietlania np. wytrzymaÅ‚oÅ›ci/satminy.
 
-## Zale¿noœci
+## ZaleÅ¼noÅ›ci
 
 - PermMem
 - View
 
 ## inicjalizacja
-Zainicjuj za pomoc¹ flagi `LeGo_Bars`.
+Zainicjuj za pomocÄ… flagi `LeGo_Bars`.
 ```dae
 func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_Bars);
@@ -18,7 +18,7 @@ LeGo_Init(LeGo_Bars);
 ## Funkcje
 
 !!! Note
-    Jeœli prototyp `GothicBar@` jest wybrany jako typ pocz¹tkowy, paski u¿ytkownika s¹ wizualnie nie do odró¿nienia od tych u¿ywanych w Gothicu.
+    JeÅ›li prototyp `GothicBar@` jest wybrany jako typ poczÄ…tkowy, paski uÅ¼ytkownika sÄ… wizualnie nie do odrÃ³Å¼nienia od tych uÅ¼ywanych w Gothicu.
 
 ### Bar_Create
 Tworzy nowy pasek z instancji konstruktora.
@@ -30,48 +30,48 @@ func int Bar_Create(var int bar) {};
 - `return` - handler do nowego paska 
 
 ### Bar_Delete
-Usuwa pasek z ekranu i pamiêci. 
+Usuwa pasek z ekranu i pamiÄ™ci. 
 ```dae
 func void Bar_Delete(var int handle) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
 
 ### Bar_SetMax
-Zmienia maksymalna wartoœæ paksa, ale nie aktualizuje jego d³ugoœci (tylko `Bar_SetPercent`, `Bar_SetPromille` i `Bar_SetValue` to robi¹)
+Zmienia maksymalna wartoÅ›Ä‡ paksa, ale nie aktualizuje jego dÅ‚ugoÅ›ci (tylko `Bar_SetPercent`, `Bar_SetPromille` i `Bar_SetValue` to robiÄ…)
 ```dae
 func void Bar_SetMax(var int handle, var int max) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
-- `max` - nowa maksymalna wartoœæ
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
+- `max` - nowa maksymalna wartoÅ›Ä‡
 
 ### Bar_SetValue
-Ustawia wartoœæ paska.
+Ustawia wartoÅ›Ä‡ paska.
 ```dae
 func void Bar_SetValue(var int handle, var int value) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
-- `value` - nowa wartoœæ paska
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
+- `value` - nowa wartoÅ›Ä‡ paska
 
 ### Bar_SetPercent
-Ustawia wartoœæ paska, ale w procentach (0..100).
+Ustawia wartoÅ›Ä‡ paska, ale w procentach (0..100).
 ```dae
 func void Bar_SetPercent(var int handle, var int percent) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
-- `percent` - nowa wartoœæ paska w procenatch
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
+- `percent` - nowa wartoÅ›Ä‡ paska w procenatch
 
 ### Bar_SetPromille
-Ustawia wartoœæ paska, ale w promilach (0..1000).
+Ustawia wartoÅ›Ä‡ paska, ale w promilach (0..1000).
 ```dae
 func void Bar_SetPromille(var int handle, var int promille) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
-- `promille` - nowa wartoœæ paska w promilach
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
+- `promille` - nowa wartoÅ›Ä‡ paska w promilach
 
 ### Bar_Hide
 Ukrywa pasek, ale go nie usuwa.
@@ -79,15 +79,15 @@ Ukrywa pasek, ale go nie usuwa.
 func void Bar_Hide(var int handle) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
 
 ### Bar_Show
-Wyœwietla pasek ponownie po u¿yciu `Bar_Hide`. 
+WyÅ›wietla pasek ponownie po uÅ¼yciu `Bar_Hide`. 
 ```dae
 func void Bar_Show(var int handle) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
 
 ### Bar_MoveTo
 Przenosi pasek do danej pozycji wirtualnej. 
@@ -95,71 +95,71 @@ Przenosi pasek do danej pozycji wirtualnej.
 func void Bar_MoveTo(var int handle, var int x, var int y) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
 - `x` - nowa pozycja w osi x
 - `y` - nowa pozycja w osi y
 
 ### Bar_SetAlpha
-Ustawia przezroczystoœæ paska.
+Ustawia przezroczystoÅ›Ä‡ paska.
 ```dae
 func void Bar_SetAlpha(var int handle, var int alpha) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
-- `alpha` - wartoœæ przezroczystoœci (0..255) 
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
+- `alpha` - wartoÅ›Ä‡ przezroczystoÅ›ci (0..255) 
 
 ### Bar_SetBarTexture
-Ustawia texture wartoœci paska.
+Ustawia texture wartoÅ›ci paska.
 ```dae
 func void Bar_SetBarTexture(var int handle, var string texture) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
 - `texture` - nowa textura
 
 ### Bar_SetBackTexture
-Ustawia texture t³a paska.
+Ustawia texture tÅ‚a paska.
 ```dae
 func void Bar_SetBackTexture(var int handle, var string texture) {};
 ```
 
-- `handle` - handler zwrócony przez `Bar_Create`
+- `handle` - handler zwrÃ³cony przez `Bar_Create`
 - `texture` - nowa textura
 
-## Przyk³ady
+## PrzykÅ‚ady
 !!! Note
-    Ten pakiet zak³adada podstawowe zrozumienie modu³u PermMem. 
+    Ten pakiet zakÅ‚adada podstawowe zrozumienie moduÅ‚u PermMem. 
 
-### Wyœwietlenie prostego paska
-Na pocz¹tku tworzymy pasek który nie robi absolutnie nic.
-Powinien wyœwietalæ siê na dole ekranu jako zape³niony w po³owie.
+### WyÅ›wietlenie prostego paska
+Na poczÄ…tku tworzymy pasek ktÃ³ry nie robi absolutnie nic.
+Powinien wyÅ›wietalÄ‡ siÄ™ na dole ekranu jako zapeÅ‚niony w poÅ‚owie.
 ```dae
 func void Example_1()
 {
     var int bar; bar = Bar_Create(GothicBar@); // Tworzy nowy pasek
-    Bar_SetPercent(bar, 50);                   //Ustawia jego wartoœæ na 50%
+    Bar_SetPercent(bar, 50);                   //Ustawia jego wartoÅ›Ä‡ na 50%
 };
 ```
-To tyle. Bez ¿adnych ustawieñ? I czym jest ten `GothicBar`? Spójrzmy na bardziej rozbudowany przyk³ad.
+To tyle. Bez Å¼adnych ustawieÅ„? I czym jest ten `GothicBar`? SpÃ³jrzmy na bardziej rozbudowany przykÅ‚ad.
 
 ### A dedicated experience bar
-Pakiet Bars implementuje klasê `Bar`. Która wygl¹da tak:
+Pakiet Bars implementuje klasÄ™ `Bar`. KtÃ³ra wyglÄ…da tak:
 ```dae
 class Bar
 {
-    var int x;          // Pozycja na ekranie w osi X (œrodka paska)
-    var int y;          // Pozycja na ekranie w osi Y (œrodka paska)
+    var int x;          // Pozycja na ekranie w osi X (Å›rodka paska)
+    var int y;          // Pozycja na ekranie w osi Y (Å›rodka paska)
     var int barTop;     // Spacing bar - background top/bottom
     var int barLeft;    // Spacing bar - background left/right
-    var int width;      // Szerokoœæ
-    var int height;     // Wysokoœæ
-    var string backTex; // Textura t³a
-    var string barTex;  // Textura wartoœci paska
-    var int value;      // Pocz¹tkowa wartoœæ
-    var int valueMax;   // Maksymalna wartoœæ
+    var int width;      // SzerokoÅ›Ä‡
+    var int height;     // WysokoÅ›Ä‡
+    var string backTex; // Textura tÅ‚a
+    var string barTex;  // Textura wartoÅ›ci paska
+    var int value;      // PoczÄ…tkowa wartoÅ›Ä‡
+    var int valueMax;   // Maksymalna wartoÅ›Ä‡
 };
 ```
-Prototyp`GothicBar` jest paskiem który naœladuje standardowy pasek u¿ywany w grze.
+Prototyp`GothicBar` jest paskiem ktÃ³ry naÅ›laduje standardowy pasek uÅ¼ywany w grze.
 ```dae
 prototype GothicBar(Bar)
 {
@@ -175,12 +175,12 @@ prototype GothicBar(Bar)
     valueMax = 100;
 };
 ```
-O wiele ³atwiej jest skonfigurowaæ now¹ instancjê przy u¿yciu tego prototypu. Standardowy pasek mo¿na ³atwo utworzyæ za pomoc¹ `GothicBar`, jak pokazano w poni¿szym przyk³adzie.
-GothicBar znajduje siê na œrodku ekranu i wygl¹da tak samo jak pasek wyœwietlany podczas nurkowania.
-Ale zróbmy pasek, który znajduje siê w lewym górnym rogu obrazu i wyœwietla punkty doœwiadczenia.
-Stwórz now¹ instancje z pomoc¹ GothicBar i zmieñ tylko pozycjê. Oczywiœcie dodaj te¿ pêtlê za pomoc¹ pakietu FrameFunctions.
+O wiele Å‚atwiej jest skonfigurowaÄ‡ nowÄ… instancjÄ™ przy uÅ¼yciu tego prototypu. Standardowy pasek moÅ¼na Å‚atwo utworzyÄ‡ za pomocÄ… `GothicBar`, jak pokazano w poniÅ¼szym przykÅ‚adzie.
+GothicBar znajduje siÄ™ na Å›rodku ekranu i wyglÄ…da tak samo jak pasek wyÅ›wietlany podczas nurkowania.
+Ale zrÃ³bmy pasek, ktÃ³ry znajduje siÄ™ w lewym gÃ³rnym rogu obrazu i wyÅ›wietla punkty doÅ›wiadczenia.
+StwÃ³rz nowÄ… instancje z pomocÄ… GothicBar i zmieÅ„ tylko pozycjÄ™. OczywiÅ›cie dodaj teÅ¼ pÄ™tlÄ™ za pomocÄ… pakietu FrameFunctions.
 ```dae
-// Instancja stowrzona z pomoc¹ prototypu GothicBar 
+// Instancja stowrzona z pomocÄ… prototypu GothicBar 
 instance Bar_1(GothicBar)
 {
     x = 100;
@@ -189,15 +189,15 @@ instance Bar_1(GothicBar)
 
 func void Przyklad_1()
 {
-    // Przyklad_1 mo¿e byæ wywo³any np. w Init_Global
+    // Przyklad_1 moÅ¼e byÄ‡ wywoÅ‚any np. w Init_Global
     FF_ApplyOnce(Loop_1);
 };
 
 func void Loop_1()
 {
-    // Przyklad_1 uruchamia tê pêtlê.
-    // Tutaj pasek powinien byæ stowrzony raz
-    // a potem sparowany z punktami doœwiadczenia:
+    // Przyklad_1 uruchamia tÄ™ pÄ™tlÄ™.
+    // Tutaj pasek powinien byÄ‡ stowrzony raz
+    // a potem sparowany z punktami doÅ›wiadczenia:
     var int MyBar;
     if(!Hlp_IsValidHandle(MyBar))
     {
@@ -209,4 +209,4 @@ func void Loop_1()
 };
 ```
 !!! Note
-    Jest to t³umaczenie artyku³u napisanego oryginalnie przez Gottfrieda i Lehone i umieszczonego w oficjalnej [dokumentacji](https://lego.worldofplayers.de/?Beispiele_Bars) pakietu LeGo
+    Jest to tÅ‚umaczenie artykuÅ‚u napisanego oryginalnie przez Gottfrieda i Lehone i umieszczonego w oficjalnej [dokumentacji](https://lego.worldofplayers.de/?Beispiele_Bars) pakietu LeGo

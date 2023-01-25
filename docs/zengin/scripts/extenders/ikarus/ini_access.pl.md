@@ -1,10 +1,10 @@
-# Dostêp do plików konfiguracyjnych
-Ta czêœæ Ikarusa umo¿liwia dostêp do `Gothic.ini` i pliku konfiguracujnego za³adowanej modyfikacji.
+# DostÄ™p do plikÃ³w konfiguracyjnych
+Ta czÄ™Å›Ä‡ Ikarusa umoÅ¼liwia dostÄ™p do `Gothic.ini` i pliku konfiguracujnego zaÅ‚adowanej modyfikacji.
 
 ## Inicjalizacja
-Najlepszym sposobem na zainicjowanie Ikarusa jest wywo³anie `MEM_InitAll()` w funkcji `Init_Global()`. 
+Najlepszym sposobem na zainicjowanie Ikarusa jest wywoÅ‚anie `MEM_InitAll()` w funkcji `Init_Global()`. 
 !!! warning
-    Jeœli chcesz u¿ywac Ikarusa z Gothiciem 1, najlepiej bêdzie jeœli zdefiniujesz w³asna funkcje `Init_Global()` i wywo³asz j¹ przy ka¿dej funkcji inicjalizacji œwiata.
+    JeÅ›li chcesz uÅ¼ywac Ikarusa z Gothiciem 1, najlepiej bÄ™dzie jeÅ›li zdefiniujesz wÅ‚asna funkcje `Init_Global()` i wywoÅ‚asz jÄ… przy kaÅ¼dej funkcji inicjalizacji Å›wiata.
 
 ```dae
 func void MEM_InitAll () {};
@@ -23,17 +23,17 @@ func string MEM_GetGothOpt(var string sectionname, var string optionname) {};
 
 - `sectionname` - nazwa przeszukiwanej sekcji
 - `optionname` - nazwa szukanej opcji
-- `return` - wartoœæ opcji w posatci zmiennej string, albo pust¹ zmienn¹ gdy opcja nie istnieje w danej sekcji
+- `return` - wartoÅ›Ä‡ opcji w posatci zmiennej string, albo pustÄ… zmiennÄ… gdy opcja nie istnieje w danej sekcji
 
 ### MEM_GetModOpt
-Przeszukuje ini za³adowanej modyfikacji w poszukiwaniu opcji.
+Przeszukuje ini zaÅ‚adowanej modyfikacji w poszukiwaniu opcji.
 ```dae
 func void MEM_GetModOpt(var string sectionname, var string optionname) {};
 ```
 
 - `sectionname` - nazwa przeszukiwanej sekcji
 - `optionname` - nazwa szukanej opcji
-- `return` - wartoœæ opcji w posatci zmiennej string, albo pust¹ zmienn¹ gdy opcja nie istnieje w danej sekcji
+- `return` - wartoÅ›Ä‡ opcji w posatci zmiennej string, albo pustÄ… zmiennÄ… gdy opcja nie istnieje w danej sekcji
 
 ### MEM_GothOptSectionExists
 Sparwdza czy dana sekcja istnieje w `Gothic.ini`
@@ -42,16 +42,16 @@ func int MEM_GothOptSectionExists(var string sectionname) {};
 ```
 
 - `sectionname` - nazwa szukanej sekcji
-- `return` - `TRUE` jeœli skecja istnieje, `FALSE` w ka¿dym innym przypadku
+- `return` - `TRUE` jeÅ›li skecja istnieje, `FALSE` w kaÅ¼dym innym przypadku
 
 ### MEM_ModOptSectionExists
-Sparwdza czy dana sekcja istnieje w ini za³adowanej modyfikacji
+Sparwdza czy dana sekcja istnieje w ini zaÅ‚adowanej modyfikacji
 ```dae
 func int MEM_ModOptSectionExists(var string sectionname) {};
 ```
 
 - `sectionname` - nazwa szukanej sekcji
-- `return` - `TRUE` jeœli skecja istnieje, `FALSE` w ka¿dym innym przypadku
+- `return` - `TRUE` jeÅ›li skecja istnieje, `FALSE` w kaÅ¼dym innym przypadku
 
 ### MEM_GothOptExists
 Sprawdza czy dana opcja istnieje w `Gothic.ini`
@@ -62,31 +62,31 @@ var string optionname) {};
 
 - `sectionname` - nazwa przeszukiwaniej sekcji
 - `optionname` - nazwa szukanej opcji
-- `return` - `TRUE` jeœli skecja istnieje, `FALSE` w ka¿dym innym przypadku
+- `return` - `TRUE` jeÅ›li skecja istnieje, `FALSE` w kaÅ¼dym innym przypadku
 
 ### MEM_ModOptExists
-Sprawdza czy dana opcja istnieje w ini za³adowanej modyfikacji
+Sprawdza czy dana opcja istnieje w ini zaÅ‚adowanej modyfikacji
 ```dae
 func int MEM_ModOptExists(var string sectionname, var string optionname) {};
 ```
 
 - `sectionname` - nazwa przeszukiwaniej sekcji
 - `optionname` - nazwa szukanej opcji
-- `return` - `TRUE` jeœli skecja istnieje, `FALSE` w ka¿dym innym przypadku
+- `return` - `TRUE` jeÅ›li skecja istnieje, `FALSE` w kaÅ¼dym innym przypadku
 
 ## Funkcje zapisu
 !!! Warning
     Plik konfiguracyjny modyfikacji nigdy nie jest zapisywany na dysku, dlatego nie ma oddzielnej funkcji do jego zapisu
 
 ### MEM_SetGothOpt
-Opcja `option` w sekcji `section` jest ustawiana na `value`. Jeœli sekcja i/lub opcja nie istnieje, zostanie utworzona.
+Opcja `option` w sekcji `section` jest ustawiana na `value`. JeÅ›li sekcja i/lub opcja nie istnieje, zostanie utworzona.
 ```dae
 func void MEM_SetGothOpt(var string section, var string option, var string value) {};
 ```
 
-- `section` - sekcja w której zlokalizowana jest opcja
+- `section` - sekcja w ktÃ³rej zlokalizowana jest opcja
 - `option` - opcja do zapisania/nadpisania
-- `value` - wartoœæ na jak¹ ustawiana jest opcja
+- `value` - wartoÅ›Ä‡ na jakÄ… ustawiana jest opcja
 
 ### MEM_ApplyGothOpt
 Stosuje zmiany i zapisuje plik ini na dysku
@@ -95,6 +95,6 @@ func void MEM_ApplyGothOpt() {};
 ```
 
 !!! Tip
-    Jeœli wprowadzasz nowe opcje, najlepiej kierowaæ siê paroma zasadami. Dobr¹ praktyk¹ jest nazywanie swoich opcji tak aby inni mogli je zrozumieæ i umieszczanie ich w sekcji o takiej samej nazwie jak twój mod. Nie umieszczaj opcji sowjej modyfikacji w sekcji `[GAME]` lub `[PERFORMANCE]`.
+    JeÅ›li wprowadzasz nowe opcje, najlepiej kierowaÄ‡ siÄ™ paroma zasadami. DobrÄ… praktykÄ… jest nazywanie swoich opcji tak aby inni mogli je zrozumieÄ‡ i umieszczanie ich w sekcji o takiej samej nazwie jak twÃ³j mod. Nie umieszczaj opcji sowjej modyfikacji w sekcji `[GAME]` lub `[PERFORMANCE]`.
 
 
