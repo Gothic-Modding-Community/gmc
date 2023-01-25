@@ -18,7 +18,7 @@ LeGo_Init(LeGo_PermMem);
 ```
 
 ## Implementation
-[:material-github: Talents.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Talents.d)
+[:material-github: Talents.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Talents.d)
 
 ## Functions
 
