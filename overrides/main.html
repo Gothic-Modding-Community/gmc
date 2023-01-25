@@ -21,12 +21,20 @@
 {% endblock %}
 
 {% block announce %}
+    {%
+        set announcement = {
+            "pl": "Ta strona nie została jeszcze przetłumaczona na język polski, dlatego wyświetla się po angielsku.",
+        }
+    %}
+    {%
+        set call_to_action = {
+            "pl": "Udziel się i przetłumacz!",
+        }
+    %}
     {% if i18n_page_locale != "en" and i18n_page_file_locale != i18n_page_locale %}
         <div class="gmc-announce">
-        {% if i18n_page_locale == "pl" %}
-            Ta strona nie została jeszcze przetłumaczona na język polski (pl), dlatego wyświetla się po angielsku (en).
-            <a href="/gmc/{{ i18n_page_locale }}/contribute/">Udziel się i przetłumacz!</a>
-        {% endif %}
+            {{ announcement[i18n_page_locale] }}
+            <a href="/gmc/{{ i18n_page_locale }}/contribute/">{{ call_to_action[i18n_page_locale] }}</a>
         </div>
         {# Include original content after the additions #}
         {{ super() }}
