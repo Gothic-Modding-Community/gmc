@@ -87,14 +87,17 @@ class MarkCodeLineManager {
     }
 }
 
-let gGMC_DEBUG = window.location.hostname === "127.0.0.1";
-let gMarkCodeLineManager = new MarkCodeLineManager();
+const gGMC_DEBUG = window.location.hostname === "127.0.0.1";
+const gMarkCodeLineManager = new MarkCodeLineManager();
+const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 window.addEventListener("DOMContentLoaded", _ => {
     gMarkCodeLineManager.setElement();
     gmcExpandNavigation();
     gmcExternalLinks();
     gmc404Redirect();
+    new MutationObserver(gmcSearchMutationCallback)
+        .observe(document.querySelector(".md-search-result__list"), {childList: true});
 });
 
 window.addEventListener("hashchange", _ => {
@@ -183,7 +186,66 @@ function gmc404Redirect() {
     }
 }
 
-function gmcDebug(message) {
+const gmcSearchMutationCallback = (mutations, _) => {
+    const originalHrefToElementMapping = new Set();
+    const langHrefOffset = 4;
+    const nodesForRemoval = [];
+    let windowLang = window.location.href.split("/")[langHrefOffset];
+    windowLang = windowLang.length !== 2 ? "/" : windowLang;
+
+    for (const record of mutations) {
+        for (const liNode of record.addedNodes) {
+            for (const anchor of liNode.querySelectorAll("a")) {
+                originalHrefToElementMapping.add(anchor.href);
+            }
+        }
+    }
+
+    for (const record of mutations) {
+        for (const liNode of record.addedNodes) {
+            let removeNode = false;
+            for (const anchor of liNode.querySelectorAll("a")) {
+                const hrefParts = anchor.href.split("/");
+                const anchorLang = hrefParts[langHrefOffset];
+                const anchorIsBaseLength = anchorLang.length === 2 ? 6 : 5;
+                const anchorNotBase = anchor.href.split("/").length > anchorIsBaseLength;
+
+                if (anchorLang.length === 2) {
+                    if (anchorLang !== windowLang && anchorNotBase) {
+                        removeNode = true;
+                        // gmcDebug("removing localized duplicate", anchor.href);
+                        break;
+                    }
+                } else if (windowLang !== "/") {
+                    const newHref = `${hrefParts.slice(0, langHrefOffset).join("/")}/${windowLang}/${hrefParts.slice(langHrefOffset).join("/")}`;
+                    if (originalHrefToElementMapping.has(newHref)) {
+                        removeNode = true;
+                        // gmcDebug("removing redundant", anchor.href);
+                        break;
+                    } else if (anchorNotBase) {
+                        // gmcDebug("localizing href:", anchor.href);
+                        anchor.href = newHref;
+                    }
+                }
+            }
+            if (removeNode)
+                nodesForRemoval.push(liNode);
+        }
+    }
+
+    for (const node of nodesForRemoval) {
+        node.remove();
+    }
+
+    const amountDisplay = document.querySelector(".md-search-result__meta");
+    const regex = /(\d+)/i;
+    const regexResult = regex.exec(amountDisplay.textContent);
+    const value = parseInt(regexResult ? regexResult[1] : "");
+    const result = value - nodesForRemoval.length;
+    amountDisplay.textContent = amountDisplay.textContent.replace(/\d+/i, result.toString());
+};
+
+function gmcDebug(...message) {
     if (gGMC_DEBUG)
-        console.debug(message);
+        console.debug(...message);
 }
