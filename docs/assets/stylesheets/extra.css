@@ -124,8 +124,9 @@ div.md-nav__link--index {
 }
 
 .gmc-announce {
-    margin: 0.5em;
+    margin: 0.5em auto;
     font-weight: 700;
+    display: table;
 }
 
 /* endregion */
