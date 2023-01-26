@@ -1,4 +1,4 @@
-# Console Commands
+# Console Commands - polecenia konsoli
 Ten Pakiet pozwala na tworzenie nowych poleceń konsloli dostępnej po naciśnięciu klawisza F2 w trybie marvin.
 
 ## Zależności
@@ -34,7 +34,7 @@ Usuwa funkcje z konsoli komend.
 func void CC_Remove(var func f) {};
 ```
 
-- f - Ta funkcja zostanie usunięta, a powiązane z nią polecenie przestanie działać.
+- `f`- Ta funkcja zostanie usunięta, a powiązane z nią polecenie przestanie działać.
 
 ### CC_Active
 Sprawdza dana funkcja jest już częścią polecenia konsoli.
@@ -51,7 +51,7 @@ func int CC_Active(var func f) {};
 Jako prosty przykład stwórzmy polecenie version, które wyświetli nam wersję modyfikacji. 
 Po pierwsze, deklarujemy stałą zmienną `string` do przechowywania informacji o wersji.
 ```dae
-const string Wersja = "Wersja modyfikacji - 0.1alpha";
+const string Mod_Version = "Wersja modyfikacji - 0.1alpha";
 ```
 Następnie tworzymy nową funkcje.
 
@@ -62,7 +62,7 @@ Następnie tworzymy nową funkcje.
 // Ta funkcja jest wywoływana przez nasze nowe polecenie
 func string CC_ModVersion (var string param)
 {
-    return Wersja;
+    return Mod_Version;
 };
 ```
 Następnie musimy zarejestrować polecenie. Dla wygody stworzyłem nową funkcję `RegisterConsoleFunctions`, która inicjuje wszystkie polecenia konsoli. Funkcja jest naprawdę prosta.
@@ -88,6 +88,6 @@ func void INIT_GLOBAL()
     RegisterConsoleFunctions();
     
     
-    // eszta kodu
+    // Reszta kodu
 };
 ```

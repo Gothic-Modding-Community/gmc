@@ -1,4 +1,4 @@
-# Bars
+# Bars - paski
 Ten pakiet bardzo ułatwia dodawanie nowych pasków, dla wyświetlania np. wytrzymałości/satminy.
 
 ## Zależności
@@ -6,7 +6,7 @@ Ten pakiet bardzo ułatwia dodawanie nowych pasków, dla wyświetlania np. wytrz
 - PermMem
 - View
 
-## inicjalizacja
+## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Bars`.
 ```dae
 func void LeGo_Init(var int flags) {};
@@ -109,22 +109,22 @@ func void Bar_SetAlpha(var int handle, var int alpha) {};
 - `alpha` - wartość przezroczystości (0..255) 
 
 ### Bar_SetBarTexture
-Ustawia texture wartości paska.
+Ustawia teksture wartości paska.
 ```dae
 func void Bar_SetBarTexture(var int handle, var string texture) {};
 ```
 
 - `handle` - handler zwrócony przez `Bar_Create`
-- `texture` - nowa textura
+- `texture` - nowa tekstura
 
 ### Bar_SetBackTexture
-Ustawia texture tła paska.
+Ustawia teksure tła paska.
 ```dae
 func void Bar_SetBackTexture(var int handle, var string texture) {};
 ```
 
 - `handle` - handler zwrócony przez `Bar_Create`
-- `texture` - nowa textura
+- `texture` - nowa tekstura
 
 ## Przykłady
 !!! Note
@@ -142,7 +142,7 @@ func void Example_1()
 ```
 To tyle. Bez żadnych ustawień? I czym jest ten `GothicBar`? Spójrzmy na bardziej rozbudowany przykład.
 
-### A dedicated experience bar
+### Dedykowany pasek doświadczenia
 Pakiet Bars implementuje klasę `Bar`. Która wygląda tak:
 ```dae
 class Bar
@@ -153,8 +153,8 @@ class Bar
     var int barLeft;    // Spacing bar - background left/right
     var int width;      // Szerokość
     var int height;     // Wysokość
-    var string backTex; // Textura tła
-    var string barTex;  // Textura wartości paska
+    var string backTex; // Tekstura tła
+    var string barTex;  // Tekstura wartości paska
     var int value;      // Początkowa wartość
     var int valueMax;   // Maksymalna wartość
 };
@@ -178,7 +178,7 @@ prototype GothicBar(Bar)
 O wiele łatwiej jest skonfigurować nową instancję przy użyciu tego prototypu. Standardowy pasek można łatwo utworzyć za pomocą `GothicBar`, jak pokazano w poniższym przykładzie.
 GothicBar znajduje się na środku ekranu i wygląda tak samo jak pasek wyświetlany podczas nurkowania.
 Ale zróbmy pasek, który znajduje się w lewym górnym rogu obrazu i wyświetla punkty doświadczenia.
-Stwórz nową instancje z pomocą GothicBar i zmień tylko pozycję. Oczywiście dodaj też pętlę za pomocą pakietu FrameFunctions.
+Stwórz nową instancje z pomocą `GothicBar` i zmień tylko pozycję. Oczywiście dodaj też pętlę za pomocą pakietu FrameFunctions.
 ```dae
 // Instancja stowrzona z pomocą prototypu GothicBar 
 instance Bar_1(GothicBar)
@@ -209,4 +209,4 @@ func void Loop_1()
 };
 ```
 !!! Note
-    Jest to tłumaczenie artykułu napisanego oryginalnie przez Gottfrieda i Lehone i umieszczonego w oficjalnej [dokumentacji](https://lego.worldofplayers.de/?Beispiele_Bars) pakietu LeGo
+    Jest to tłumaczenie artykułu napisanego oryginalnie przez Gottfrieda i Lehone i umieszczonego w oficjalnej [dokumentacji](https://lego.worldofplayers.de/?Beispiele_Bars) pakietu LeGo.

@@ -1,7 +1,7 @@
-# Gamestate
+# Gamestate - stan gry
 Pakiet Gamestate pozwala sprawdzić stan gry (rozpoczęcie gry, ładowanie gry lub zmiana poziomu).
 
-## Zależnośći  
+## Zależności  
 - EventHandler
 - Saves
 
@@ -31,9 +31,9 @@ Usuwa listener zmiany stanu gry.
 func void Gamestate_RemoveListener(var func listener) {};
 ```
 
-- `listener` - usuwana funkcja listenera.
+- `listener` - listener do usunięcia.
 
-## Examples
+## Przykłady
 Istnieją teraz dwie możliwości: albo zrobisz wszystko bezpośrednio w Init-Global, albo użyjesz EventHandlera.
 ### Init_Global
 ```dae
@@ -93,7 +93,7 @@ func void Init_Global()
 ```
 
 ### Event Handler
-Ten przykład nie wymaga więkrzych wyjaśnień.
+Ten przykład nie wymaga większych wyjaśnień.
 ```dae
 func void Init_Global()
 {

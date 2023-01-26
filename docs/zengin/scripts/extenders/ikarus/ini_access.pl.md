@@ -23,7 +23,7 @@ func string MEM_GetGothOpt(var string sectionname, var string optionname) {};
 
 - `sectionname` - nazwa przeszukiwanej sekcji
 - `optionname` - nazwa szukanej opcji
-- `return` - wartość opcji w posatci zmiennej string, albo pustą zmienną gdy opcja nie istnieje w danej sekcji
+- `return` - wartość opcji w postaci zmiennej string, albo pustą zmienną gdy opcja nie istnieje w danej sekcji
 
 ### MEM_GetModOpt
 Przeszukuje ini załadowanej modyfikacji w poszukiwaniu opcji.
@@ -33,25 +33,25 @@ func void MEM_GetModOpt(var string sectionname, var string optionname) {};
 
 - `sectionname` - nazwa przeszukiwanej sekcji
 - `optionname` - nazwa szukanej opcji
-- `return` - wartość opcji w posatci zmiennej string, albo pustą zmienną gdy opcja nie istnieje w danej sekcji
+- `return` - wartość opcji w postaci zmiennej string, albo pustą zmienną gdy opcja nie istnieje w danej sekcji
 
 ### MEM_GothOptSectionExists
-Sparwdza czy dana sekcja istnieje w `Gothic.ini`
+Sprawdza czy dana sekcja istnieje w `Gothic.ini`
 ```dae
 func int MEM_GothOptSectionExists(var string sectionname) {};
 ```
 
 - `sectionname` - nazwa szukanej sekcji
-- `return` - `TRUE` jeśli skecja istnieje, `FALSE` w każdym innym przypadku
+- `return` - `TRUE` jeśli sekcja istnieje, `FALSE` w każdym innym przypadku
 
 ### MEM_ModOptSectionExists
-Sparwdza czy dana sekcja istnieje w ini załadowanej modyfikacji
+Sprawdza czy dana sekcja istnieje w ini załadowanej modyfikacji
 ```dae
 func int MEM_ModOptSectionExists(var string sectionname) {};
 ```
 
 - `sectionname` - nazwa szukanej sekcji
-- `return` - `TRUE` jeśli skecja istnieje, `FALSE` w każdym innym przypadku
+- `return` - `TRUE` jeśli sekcja istnieje, `FALSE` w każdym innym przypadku
 
 ### MEM_GothOptExists
 Sprawdza czy dana opcja istnieje w `Gothic.ini`
@@ -60,9 +60,9 @@ func int MEM_GothOptExists(var string sectionname,
 var string optionname) {};
 ```
 
-- `sectionname` - nazwa przeszukiwaniej sekcji
+- `sectionname` - nazwa przeszukiwanej sekcji
 - `optionname` - nazwa szukanej opcji
-- `return` - `TRUE` jeśli skecja istnieje, `FALSE` w każdym innym przypadku
+- `return` - `TRUE` jeśli sekcja istnieje, `FALSE` w każdym innym przypadku
 
 ### MEM_ModOptExists
 Sprawdza czy dana opcja istnieje w ini załadowanej modyfikacji
@@ -70,9 +70,9 @@ Sprawdza czy dana opcja istnieje w ini załadowanej modyfikacji
 func int MEM_ModOptExists(var string sectionname, var string optionname) {};
 ```
 
-- `sectionname` - nazwa przeszukiwaniej sekcji
+- `sectionname` - nazwa przeszukiwanej sekcji
 - `optionname` - nazwa szukanej opcji
-- `return` - `TRUE` jeśli skecja istnieje, `FALSE` w każdym innym przypadku
+- `return` - `TRUE` jeśli sekcja istnieje, `FALSE` w każdym innym przypadku
 
 ## Funkcje zapisu
 !!! Warning
@@ -95,6 +95,6 @@ func void MEM_ApplyGothOpt() {};
 ```
 
 !!! Tip
-    Jeśli wprowadzasz nowe opcje, najlepiej kierować się paroma zasadami. Dobrą praktyką jest nazywanie swoich opcji tak aby inni mogli je zrozumieć i umieszczanie ich w sekcji o takiej samej nazwie jak twój mod. Nie umieszczaj opcji sowjej modyfikacji w sekcji `[GAME]` lub `[PERFORMANCE]`.
+    Jeśli wprowadzasz nowe opcje, najlepiej kierować się paroma zasadami. Dobrą praktyką jest nazywanie swoich opcji tak aby inni mogli je zrozumieć i umieszczanie ich w sekcji o takiej samej nazwie jak twój mod. Nie umieszczaj opcji swojej modyfikacji w sekcji `[GAME]` lub `[PERFORMANCE]`.
 
 

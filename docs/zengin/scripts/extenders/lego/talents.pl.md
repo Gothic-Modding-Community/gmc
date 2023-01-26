@@ -1,8 +1,8 @@
-# Talents
+# Talents - talenty
 Ten pakiet robi dwie rzeczy:
 
-1. zapisuje dowolną liczbę wartości dla określonego NPC (efektywnie rozszerzenie tablicy AIVar).
-2. pozwala zidentyfikować NPC za pomocą unikalnego ID.
+1. Zapisuje dowolną liczbę wartości dla określonego NPC (efektywne rozszerzenie tablicy AIVar).
+2. Pozwala zidentyfikować NPC za pomocą unikalnego ID.
 
 Pakiet `Talents` używa jednego wolnego AIVara, domyślnie jest to AIVar z mumerem 89, który można dostosować w `Userconst.d` [`AIV_TALENT`](https://github.com/Lehona/LeGo/blob/55ae79a781f79cda649fa42d7f64250befa71212/Userconst.d#L120).
 

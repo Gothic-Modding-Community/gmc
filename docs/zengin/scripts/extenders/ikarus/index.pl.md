@@ -3,7 +3,7 @@ Ikarus jest biblioteką Daedalusa - języka skryptowego Gothica. Wykorzystuje in
 
 | Kontakt |                                                                                                                          |
 |:---------|:-------------------------------------------------------------------------------------------------------------------------|
-| Autor   | [:material-badge-account-horizontal: Sektenspinner & contributors](https://github.com/Lehona/Ikarus/graphs/contributors) |
+| Autor   | [:material-badge-account-horizontal: Sektenspinner i współtwórcy](https://github.com/Lehona/Ikarus/graphs/contributors) |
 | GitHub   | [:material-github: Ikarus](https://github.com/Lehona/Ikarus)                                                             |
 | Forum    | [:material-forum: Ikarus](https://forum.worldofplayers.de/forum/threads/1299679-Skriptpaket-Ikarus-4)                    |
 

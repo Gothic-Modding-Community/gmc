@@ -65,7 +65,7 @@ Oblicza arcus cosinus
 func float acos (var float cosine) {};
 ```
 
-- `sine` - cosinus kąta
+- `cosine` - cosinus kąta
 - `return` - arcus cosinus kąta
 
 
@@ -76,20 +76,20 @@ func int distance2D(var int x1, var int x2, var int y1, var int y2) {};
 ```
 
 - `x1` - współrzędna x pierwszego punktu
-- `x2` - współrzędna x dógiego punktu
+- `x2` - współrzędna x drugiego punktu
 - `y1` - współrzędna y pierwszego punktu
-- `y2` - współrzędna y drógiego punktu
+- `y2` - współrzędna y drugiego punktu
 - `return` - odległość między dwoma punktami
 
 ### distance2Df
-Oblicza odległość między dwoma punktami na płaszczyźnie dwuwymiarowej, jako Ikarusowy `floats`
+Oblicza odległość między dwoma punktami na płaszczyźnie dwuwymiarowej, jako Ikarusowy `float`
 ```dae
 func float distance2Df(var float x1, var float x2, var float y1, var float y2) {};
 ```
 
 - `x1` - współrzędna x pierwszego punktu
-- `x2` - współrzędna x dógiego punktu
+- `x2` - współrzędna x drugiego punktu
 - `y1` - współrzędna y pierwszego punktu
-- `y2` - współrzędna y drógiego punktu
+- `y2` - współrzędna y drugiego punktu
 - `return` - odległość między dwoma punktami, jako Ikarusowy `float`
 
