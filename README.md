@@ -1,5 +1,9 @@
 # Gothic Modding Community
-This repostiory will contain articles, tutorials and links to various tools that are useful for creating mods for Gothic games.
+
+![](https://github.com/Gothic-Modding-Community/gmc/actions/workflows/master.build.yml/badge.svg) 
+![](https://github.com/Gothic-Modding-Community/gmc/actions/workflows/dev.build.yml/badge.svg)  
+
+This repository will contain articles, tutorials and links to various tools that are useful for creating mods for Gothic games.
 
 [Gothic Modding Community page](https://gothic-modding-community.github.io/gmc/)
 
