@@ -1,9 +1,9 @@
-name: Build dev site
+name: PR CI
 
 on:
-  push:
+  pull_request:
     branches:
-      - dev
+      - '**'
 
 env:
   GMC_ENABLE_ON_PUBLISH: true
@@ -18,7 +18,7 @@ jobs:
           # Number of commits to fetch. 0 indicates all history.
           # Default: 1
           # 0 is needed for the update time plugin to work properly
-          fetch-depth: 0
+          fetch-depth: 1
       - name: Install Python
         uses: actions/setup-python@v2
         with:
@@ -27,5 +27,3 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run prebuild tests
         run: python -m unittest discover tests/ -v
-      - name: Build and deploy site
-        run: mkdocs gh-deploy --force --remote-branch gh-dev-page
