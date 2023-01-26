@@ -1,4 +1,4 @@
-name: Build dev site
+name: Dev Site
 
 on:
   push:
@@ -13,14 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           # Number of commits to fetch. 0 indicates all history.
           # Default: 1
           # 0 is needed for the update time plugin to work properly
           fetch-depth: 0
       - name: Install Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.11
       - name: Install Dependencies
