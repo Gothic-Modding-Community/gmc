@@ -1,4 +1,4 @@
-# ItemHelper 
+# ItemHelper - pomocnik do przedmiotów
 Ten pakiet jest bardzo prosty - pobiera wskaźnik `oCItem` z instancji `C_Item` ważnej dla bieżącego świata i sesji.
 
 !!! Warning
