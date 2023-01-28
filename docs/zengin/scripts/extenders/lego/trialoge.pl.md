@@ -1,7 +1,7 @@
 # Trialog
 Ten pakiet pozwala na tworzenie rozmów z dowolną liczbą NPC i sterowanie kamerą podczas dialogu.
 
-## Zależnośći
+## Zależności
 
 - AI_Function
 
@@ -95,7 +95,7 @@ func void TRIA_Next(c_npc n0) {};
 - `n0` - NPC ustawiany na `self`
 
 ### TRIA_Cam
-Rozpoczyna zdefiniowany wczesniej ruch kamery.
+Rozpoczyna zdefiniowany wcześniej ruch kamery.
 ```dae
 func void TRIA_Cam(string evt) {};
 ```
@@ -168,7 +168,7 @@ func void TRIA_Test_info()
     // Bohater rozgląda się konspiracyjnie podczas następnego zdania
     DIAG("Nervous", 1, 2);
    
-    AI_Output (other, self, "TRIA_TEST_03"); //I Mam ze sobą trochę złota, możemy się dogadać?
+    AI_Output (other, self, "TRIA_TEST_03"); //Mam ze sobą trochę złota, możemy się dogadać?
    
     // Bohater powinien poruszać się już normalnie 
     DIAG_Reset();
@@ -184,7 +184,7 @@ func void TRIA_Test_info()
     DIAG("No", 0, 1);
     AI_Output (self, other, "TRIA_TEST_04"); //Nie. Nie jesteśmy otwarci na przekupstwo.
    
-    // Bohater z owrotem rozmawia z Arto (self = Arto, other = Hero)
+    // Bohater z powrotem rozmawia z Arto (self = Arto, other = Hero)
     TRIA_Next(Arto);
    
     // Bohater powinien teraz wypowiadać się pytająco

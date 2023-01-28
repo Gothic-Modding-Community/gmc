@@ -33,13 +33,13 @@ func int NPC_GetID(var c_npc slf) {};
 - `return` - ID 
 
 ### NPC_FindByID
-Znajduje pointer NPC o podanym ID.
+Znajduje wskaźnik NPC o podanym ID.
 ```dae
 func int NPC_FindByID(var int ID) {};
 ```
 
 - `ID` - ID zwrócone przez `NPC_GetID`
-- `return` - pointer NPC
+- `return` - wskaźnik NPC
 
 ### TAL_CreateTalent
 Tworzy talent, w którym możesz później zapisać wartość dla każdego NPC (tak jak w AIVarze).
@@ -47,7 +47,7 @@ Tworzy talent, w którym możesz później zapisać wartość dla każdego NPC (
 func int TAL_CreateTalent() {};
 ```
 
-- `return` - wartość, która jest później wykorzystywana jako Id talentu
+- `return` - wartość, która jest później wykorzystywana jako ID talentu
 
 ### TAL_SetValue
 Ustawia nową wartość dla określonego talentu.
