@@ -41,6 +41,15 @@ func int NPC_FindByID(var int ID) {};
 - `ID` - NPC ID
 - `return` - NPC pointer
 
+### NPC_FindByID
+Finds the NPC pointer of an NPC with the given ID.
+```dae
+func int NPC_FindByID(var int ID) {};
+```
+
+- `ID` NPC ID
+- `return` NPC pointer
+
 ### TAL_CreateTalent
 Creates a talent into which you can later save a value for every NPC (just like AI_Var).
 ```dae

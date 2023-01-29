@@ -65,7 +65,7 @@ var string optionname) {};
 - `return` - `TRUE` if option in a section exist `FALSE` otherwise
 
 ### MEM_ModOptExists
-Gives an information if option exist in loaded mod ini file
+Gives an information if option exist in `Mod.ini`
 ```dae
 func int MEM_ModOptExists(var string sectionname, var string optionname) {};
 ```
