@@ -87,7 +87,8 @@ class MarkCodeLineManager {
     }
 }
 
-const gGMC_DEBUG = window.location.hostname === "127.0.0.1";
+const gGMC_LOCAL = window.location.hostname === "127.0.0.1";
+const gGMC_DEV = window.location.hostname.toLowerCase() !== "gothic-modding-community.github.io" && !gGMC_LOCAL;
 const gMarkCodeLineManager = new MarkCodeLineManager();
 const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
@@ -123,7 +124,7 @@ function gmcExternalLinks() {
     // Regex to match urls starting with
     // https://$hostname
     // https://$repoUrl
-    const regex = new RegExp(`^(?:https?:\/\/)?(${hostname}|${repoUrl})`);
+    const regex = new RegExp(`^(?:https?:\/\/)?(${hostname}|${repoUrl})`, "i");
     const anchors = document.querySelectorAll(".md-content a");
     const className = "external-link";
 
@@ -188,7 +189,8 @@ function gmc404Redirect() {
 
 const gmcSearchMutationCallback = (mutations, _) => {
     const originalHrefToElementMapping = new Set();
-    const langHrefOffset = 4;
+    const devPageOffset = gGMC_DEV ? -1 : 0; // The dev page doesn't contain the gmc/ part in the href, therefore the offset needs to be decreased by 1.
+    const langHrefOffset = 4 + devPageOffset;
     const nodesForRemoval = [];
     let windowLang = window.location.href.split("/")[langHrefOffset];
     windowLang = windowLang.length !== 2 ? "/" : windowLang;
@@ -207,11 +209,11 @@ const gmcSearchMutationCallback = (mutations, _) => {
             for (const anchor of liNode.querySelectorAll("a")) {
                 const hrefParts = anchor.href.split("/");
                 const anchorLang = hrefParts[langHrefOffset];
-                const anchorIsBaseLength = anchorLang.length === 2 ? 6 : 5;
-                const anchorNotBase = anchor.href.split("/").length > anchorIsBaseLength;
+                const anchorBaseLength = (anchorLang.length === 2 ? 6 : 5) + devPageOffset;
+                const anchorIsNotBase = anchor.href.split("/").length > anchorBaseLength;
 
                 if (anchorLang.length === 2) {
-                    if (anchorLang !== windowLang && anchorNotBase) {
+                    if (anchorLang !== windowLang && anchorIsNotBase) {
                         removeNode = true;
                         // gmcDebug("removing localized duplicate", anchor.href);
                         break;
@@ -222,7 +224,7 @@ const gmcSearchMutationCallback = (mutations, _) => {
                         removeNode = true;
                         // gmcDebug("removing redundant", anchor.href);
                         break;
-                    } else if (anchorNotBase) {
+                    } else if (anchorIsNotBase) {
                         // gmcDebug("localizing href:", anchor.href);
                         anchor.href = newHref;
                     }
@@ -246,6 +248,6 @@ const gmcSearchMutationCallback = (mutations, _) => {
 };
 
 function gmcDebug(...message) {
-    if (gGMC_DEBUG)
+    if (gGMC_LOCAL)
         console.debug(...message);
 }
