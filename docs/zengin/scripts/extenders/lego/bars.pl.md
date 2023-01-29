@@ -149,8 +149,8 @@ class Bar
 {
     var int x;          // Pozycja na ekranie w osi X (środka paska)
     var int y;          // Pozycja na ekranie w osi Y (środka paska)
-    var int barTop;     // Spacing bar - background top/bottom
-    var int barLeft;    // Spacing bar - background left/right
+    var int barTop;     // Pasek odstępu - góra/dół tła
+    var int barLeft;    // Pasek odstępu - prawo/lewo tła
     var int width;      // Szerokość
     var int height;     // Wysokość
     var string backTex; // Tekstura tła

@@ -117,7 +117,7 @@ Poniższa rozmowa została zrealizowana za pomocą tego pakietu:
 3. **Horka:**   Miasto zostało zamknięte.
 4. **Hero:**    Mam ze sobą trochę złota, możemy się dogadać?
 5. **Squelto:** Nie. Nie jesteśmy otwarci na przekupstwo.
-6. **Hero:**    Napewno?
+6. **Hero:**    Na pewno?
 7. **Arto:**    Muszę cię teraz poprosić o odejście.
 8. **Hero:**    Dobraa...
 ```dae
@@ -190,7 +190,7 @@ func void TRIA_Test_info()
     // Bohater powinien teraz wypowiadać się pytająco
     DIAG("NotSure", 0, 1);
    
-    AI_Output (other, self, "TRIA_TEST_05"); //Napewno?
+    AI_Output (other, self, "TRIA_TEST_05"); //Na pewno?
    
     AI_TurnToNpc(other, self);
    
