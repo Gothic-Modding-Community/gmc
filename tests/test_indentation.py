@@ -5,8 +5,7 @@ import glob
 import os
 import unittest
 
-TESTS_DIR_PATH = os.path.abspath(os.path.dirname(__file__))
-DOCS_ROOT = os.path.join(TESTS_DIR_PATH, "..", "docs")
+from tests.path_constants import DOCS_DIR
 
 
 class IndentationTest(unittest.TestCase):
@@ -21,9 +20,9 @@ class IndentationTest(unittest.TestCase):
         Test that the indentation after the admonition line is properly indented
         TODO might be reasonable to change the inside_admonition = False logic
         """
-        paths = glob.glob("**/*.md", root_dir=DOCS_ROOT, recursive=True)
+        paths = glob.glob("**/*.md", root_dir=DOCS_DIR, recursive=True)
         for path in paths:
-            file_path = os.path.join(DOCS_ROOT, path)
+            file_path = os.path.join(DOCS_DIR, path)
 
             with open(file_path, encoding="utf8") as file:
                 lines = file.readlines()

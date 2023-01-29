@@ -12,6 +12,7 @@ theme:
   logo: assets/images/gmc_logo.png
   icon:
     repo: fontawesome/brands/github
+    alternate: material/earth
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -217,14 +218,6 @@ plugins:
       css_style:
         width: "100%"
         height: "100%"
-  - git-revision-date-localized:
-      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
-      type: iso_datetime
-      timezone: Europe/Warsaw
-      exclude:
-        - index.md
-        - genome/index.md
-        - zengin/index.md
   - minify:
       minify_html: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       minify_css: !ENV [GMC_ENABLE_ON_PUBLISH, False]
@@ -236,3 +229,25 @@ plugins:
         - assets/stylesheets/extra.css
       js_files:
         - assets/javascripts/extra.js
+  - i18n: # TODO optimize local usage to build page based on environmental variables
+      default_language: en
+      languages:
+        en:
+          name: en - English
+          build: true
+        pl:
+          name: pl - Polski
+          build: true
+      material_alternate: true
+      nav_translations: # Only 1 global scope, if 2 nav elements are named the same, input translation only once
+        pl:
+          Home: Strona Główna
+          How To Contribute: Jak Się Udzielać
+  - git-revision-date-localized:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      type: iso_datetime
+      timezone: Europe/Warsaw
+      exclude:
+        - index*.md
+        - genome/index*.md
+        - zengin/index*.md
