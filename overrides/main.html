@@ -23,12 +23,14 @@
 {% block announce %}
     {%
         set announcement = {
+            "en": "This page has not yet been translated into LANGUAGE, therefore it is displayed in English.",
             "pl": "Ta strona nie została jeszcze przetłumaczona na język polski, dlatego wyświetla się po angielsku.",
         }
     %}
     {%
         set call_to_action = {
-            "pl": "Udziel się i przetłumacz!",
+            "en": "Support us and translate!",
+            "pl": "Wesprzyj nas i przetłumacz!",
         }
     %}
     {% if i18n_page_locale != "en" and i18n_page_file_locale != i18n_page_locale %}
