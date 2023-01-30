@@ -103,6 +103,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     gmcExternalLinks();
     gmc404Redirect();
     gmcAddVersionToggle();
+    gmcLinksForVersion();
     new MutationObserver(gmcSearchMutationCallback)
         .observe(document.querySelector(".md-search-result__list"), {childList: true});
 });
@@ -293,6 +294,19 @@ const gmcAddVersionToggle = () => {
     mdVersion.appendChild(mdVersionList);
 
     document.querySelector(".md-header__topic").appendChild(mdVersion);
+};
+
+const gmcLinksForVersion = () => {
+    if (gGMC_DEV) {
+        for (const anchor of document.querySelectorAll("a.md-source"))
+            anchor.href = `${anchor.href}tree/dev`;
+    }
+
+    for (const anchor of document.querySelectorAll("a.md-content__button")) {
+        if (!gGMC_DEV && anchor.href.includes("/raw/"))
+            continue;
+        anchor.href = anchor.href.replace("/main/", "/dev/");
+    }
 };
 
 function gmcDebug(...message) {
