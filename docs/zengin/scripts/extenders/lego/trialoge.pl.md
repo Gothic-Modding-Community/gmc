@@ -3,7 +3,7 @@ Ten pakiet pozwala na tworzenie rozmów z dowolną liczbą NPC i sterowanie kame
 
 ## Zależności
 
-- AI_Function
+- [AI_Function](../lego/ai_function.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Trialoge`.

@@ -3,7 +3,7 @@ This package allows you to create conversations with any number of NPCs and cont
 
 ## Dependencies
 
-- AI_Function
+- [AI_Function](../lego/ai_function.md)
 
 ## Initialization
 Initialize with `LeGo_Trialoge` flag.

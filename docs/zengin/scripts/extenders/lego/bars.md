@@ -26,7 +26,7 @@ Creates a new bar from a constructor instance.
 func int Bar_Create(var int bar) {};
 ```
 
-- `bar` - constructor instance of 'Bar' class
+- `bar` - constructor instance of `Bar` class
 - `return` - handle to the new bar 
 
 ### Bar_Delete
@@ -179,7 +179,7 @@ prototype GothicBar(Bar)
 It is much easier to set up a new instance using this prototype. Standard vanilla status bar  can be easily created using the `GothicBar` instance, as seen in the example below.  
 GothicBar is located in the middle of the screen and looks exactly like the Gothic Underwater Bar.  
 But let us make a bar that hangs in the top left of the picture and displays the experience points.  
-Derive again GothicBar and only change the position. Of course add a loop using the FrameFunctions:
+Derive again GothicBar and only change the position. Of course add a loop using the [FrameFunctions](../lego/frame_functions.md):
 ```dae
 // Instance created from 
 instance Bar_1(GothicBar)
