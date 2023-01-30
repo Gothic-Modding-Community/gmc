@@ -92,11 +92,17 @@ const gGMC_DEV = window.location.hostname.toLowerCase() !== "gothic-modding-comm
 const gMarkCodeLineManager = new MarkCodeLineManager();
 const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
+const gDevHrefOffset = gGMC_DEV ? -1 : 0; // The dev page doesn't contain the gmc/ part in the href, therefore the offset needs to be decreased by 1.
+const gLangHrefOffset = 4 + gDevHrefOffset;
+let gWindowLang = window.location.href.split("/")[gLangHrefOffset];
+    gWindowLang = gWindowLang.length !== 2 ? "/" : gWindowLang;
+
 window.addEventListener("DOMContentLoaded", _ => {
     gMarkCodeLineManager.setElement();
     gmcExpandNavigation();
     gmcExternalLinks();
     gmc404Redirect();
+    gmcAddVersionToggle();
     new MutationObserver(gmcSearchMutationCallback)
         .observe(document.querySelector(".md-search-result__list"), {childList: true});
 });
@@ -189,11 +195,7 @@ function gmc404Redirect() {
 
 const gmcSearchMutationCallback = (mutations, _) => {
     const originalHrefToElementMapping = new Set();
-    const devPageOffset = gGMC_DEV ? -1 : 0; // The dev page doesn't contain the gmc/ part in the href, therefore the offset needs to be decreased by 1.
-    const langHrefOffset = 4 + devPageOffset;
     const nodesForRemoval = [];
-    let windowLang = window.location.href.split("/")[langHrefOffset];
-    windowLang = windowLang.length !== 2 ? "/" : windowLang;
 
     for (const record of mutations) {
         for (const liNode of record.addedNodes) {
@@ -208,18 +210,18 @@ const gmcSearchMutationCallback = (mutations, _) => {
             let removeNode = false;
             for (const anchor of liNode.querySelectorAll("a")) {
                 const hrefParts = anchor.href.split("/");
-                const anchorLang = hrefParts[langHrefOffset];
-                const anchorBaseLength = (anchorLang.length === 2 ? 6 : 5) + devPageOffset;
+                const anchorLang = hrefParts[gLangHrefOffset];
+                const anchorBaseLength = (anchorLang.length === 2 ? 6 : 5) + gDevHrefOffset;
                 const anchorIsNotBase = anchor.href.split("/").length > anchorBaseLength;
 
                 if (anchorLang.length === 2) {
-                    if (anchorLang !== windowLang && anchorIsNotBase) {
+                    if (anchorLang !== gWindowLang && anchorIsNotBase) {
                         removeNode = true;
                         // gmcDebug("removing localized duplicate", anchor.href);
                         break;
                     }
-                } else if (windowLang !== "/") {
-                    const newHref = `${hrefParts.slice(0, langHrefOffset).join("/")}/${windowLang}/${hrefParts.slice(langHrefOffset).join("/")}`;
+                } else if (gWindowLang !== "/") {
+                    const newHref = `${hrefParts.slice(0, gLangHrefOffset).join("/")}/${gWindowLang}/${hrefParts.slice(gLangHrefOffset).join("/")}`;
                     if (originalHrefToElementMapping.has(newHref)) {
                         removeNode = true;
                         // gmcDebug("removing redundant", anchor.href);
@@ -245,6 +247,52 @@ const gmcSearchMutationCallback = (mutations, _) => {
     const value = parseInt(regexResult ? regexResult[1] : "");
     const result = value - nodesForRemoval.length;
     amountDisplay.textContent = amountDisplay.textContent.replace(/\d+/i, result.toString());
+};
+
+const gmcAddVersionToggle = () => {
+    const buttonAriaMapping = {
+        en: "Select version",
+        pl: "Wybierz wersję",
+    };
+
+    const currentLang = buttonAriaMapping.hasOwnProperty(gWindowLang) ? gWindowLang : "en";
+    const currentPath = window.location.pathname.replace("/gmc/", "/");
+
+    const mdVersion = document.createElement("div");
+    const mdVersionCurrent = document.createElement("button");
+    const mdVersionList = document.createElement("ul");
+    const mdVersionItemMain = document.createElement("li");
+    const mdVersionLinkMain = document.createElement("a");
+    const mdVersionItemDev = document.createElement("li");
+    const mdVersionLinkDev = document.createElement("a");
+
+    mdVersion.className = "md-version";
+    mdVersionCurrent.className = "md-version__current";
+    mdVersionList.className = "md-version__list";
+    mdVersionItemMain.className = "md-version__item";
+    mdVersionLinkMain.className = "md-version__link";
+    mdVersionItemDev.className = "md-version__item";
+    mdVersionLinkDev.className = "md-version__link";
+
+    mdVersionCurrent.setAttribute("aria-label", buttonAriaMapping[currentLang]);
+    mdVersionCurrent.textContent = gGMC_DEV ? "dev" : "main";
+
+    mdVersionLinkMain.textContent = "main";
+    mdVersionLinkMain.href = `https://gothic-modding-community.github.io/gmc${currentPath}`;
+    mdVersionLinkMain.setAttribute("title", `${buttonAriaMapping[currentLang]} ${mdVersionLinkMain.textContent}`);
+
+    mdVersionLinkDev.textContent = "dev";
+    mdVersionLinkDev.href = `https://gmc.cokoliv.eu${currentPath}`;
+    mdVersionLinkDev.setAttribute("title", `${buttonAriaMapping[currentLang]} ${mdVersionLinkDev.textContent}`);
+
+    mdVersionItemMain.appendChild(mdVersionLinkMain);
+    mdVersionItemDev.appendChild(mdVersionLinkDev);
+    mdVersionList.appendChild(mdVersionItemMain);
+    mdVersionList.appendChild(mdVersionItemDev);
+    mdVersion.appendChild(mdVersionCurrent);
+    mdVersion.appendChild(mdVersionList);
+
+    document.querySelector(".md-header__topic").appendChild(mdVersion);
 };
 
 function gmcDebug(...message) {
