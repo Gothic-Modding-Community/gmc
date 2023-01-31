@@ -211,4 +211,4 @@ func void TRIA_Test_info()
 };
 ```
 !!! Note
-    In addition, here are still dialog gestures used (the page will be added later).
+    In addition, here are still [dialog gestures](../lego/dialoggestures.md) used.

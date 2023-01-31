@@ -1,0 +1,42 @@
+# Locals
+Daedalus does not offer any local variables, which can quickly lead to problems with recursive functions. Locals allows variables to be saved temporarily on a pseudo-stack.
+Locals is a very specific package. Person who works normally with Daedalus will never really need it.
+There is also the `final` function, which can be used to emulate something similar to the final-clause in Java.
+
+## Dependencies
+
+- StringBuilder
+
+## Initialization
+No initialization
+
+## Implementation
+[:material-github: Locals.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Locals.d)
+
+## Functions
+
+### Locals
+All that has to be done to enable the `local` is to write this function at the beginning of the function that should receive "real" local variables.
+```dae
+func void locals() {};
+```
+
+### Final
+It's hard to explain how to use it, but very easy to understand once you've seen an example.
+```dae
+func int Final() {};
+```
+
+## Examples
+
+### Final
+With final() it is very easy to emulate Java's final-clause, i.e. a block of code can be specified that is executed after this function is exited, regardless of when or where the function is exited.
+```dae
+func void testFinal() {
+    if (final()) {
+        MEM_InfoBox("Final was called.");
+    };
+    MEM_InfoBox("This will appear before Final");
+};
+```
+Five lines of code say more than a thousand words.

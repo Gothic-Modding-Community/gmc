@@ -211,4 +211,4 @@ func void TRIA_Test_info()
 };
 ```
 !!! Note
-    Dodatkowo w tej rozmowie używane są gesty dialogowe (funkcje `DIAG` i `DIAG_Reset`). Dokumentacja jest w planach.
+    Dodatkowo w tej rozmowie używane są [gesty dialogowe](../lego/dialoggestures.md) (funkcje `DIAG` i `DIAG_Reset`).
