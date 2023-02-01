@@ -1,5 +1,5 @@
 # Focusnames
-When this package is enabled, colors the focus-names of the NPCs in appropriate colors according to the behavior defined below (alpha values are taken into account). Also affects monsters. (Mobs/Items get Color_Neutral)
+When this package is enabled, colors the focus names of the NPCs in appropriate colors according to the behavior defined below (alpha values are taken into account). Also affects monsters. (Mobs/Items get Color_Neutral)
 
 ## Dependencies
 
@@ -17,7 +17,7 @@ LeGo_Init(LeGo_Focusnames);
 [:material-github: Focusnames.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Focusnames.d)
 
 ## Usage
-If you want to change colors for any behavior edit fthe following functions directly in `Focusnames.d` file.
+If you want to change colors for any behavior edit the following functions directly in `Focusnames.d` file.
 
 ### Focusnames_Color_Friendly
 ```dae

@@ -1,9 +1,9 @@
 # Dialoggestures
-This package can modify the npcs' gestures during dialogue to better bring out emotions.
+This package can modify the NPCs' gestures during dialogue to better bring out emotions.
 
 ## Dependencies
 
-- [AI_Function](../lego/ai_function.md)
+- [AI_Function](ai_function.md)
 
 ## Initialization
 No initialization
@@ -14,7 +14,7 @@ No initialization
 ## Functions
 
 ### DIAG
-With this function the dialog gestures for all Npcs can be overridden. To understand the principle, I recommend taking a look at the examples. 
+With this function the dialog gestures for all NPCs can be overridden. To understand the principle, I recommend taking a look at the [examples](#examples). 
 
 The full name of the animation can be described as follows:
 ```dae
@@ -38,6 +38,6 @@ func void DIAG_Reset() {};
 
 ## Examples
 !!! Note
-    See Examples in [Trialoge article](../lego/trialoge.md/#examples).
+    See Examples in [Trialoge article](trialoge.md#examples).
 
 [//]: <> (@auronen please see if all that explanation in DIAG function is necessary)

@@ -3,7 +3,7 @@ Ten pakiet pozwala na tworzenie rozmów z dowolną liczbą NPC i sterowanie kame
 
 ## Zależności
 
-- [AI_Function](../lego/ai_function.md)
+- [AI_Function](ai_function.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Trialoge`.
@@ -108,7 +108,7 @@ Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym 
 func void TRIA_Finish() {};
 ```
 
-## Pryzkłady
+## Przykłady
 ### Prosty trialog
 Poniższa rozmowa została zrealizowana za pomocą tego pakietu:
 
@@ -211,4 +211,4 @@ func void TRIA_Test_info()
 };
 ```
 !!! Note
-    Dodatkowo w tej rozmowie używane są [gesty dialogowe](../lego/dialoggestures.md) (funkcje `DIAG` i `DIAG_Reset`).
+    Dodatkowo w tej rozmowie używane są [gesty dialogowe](dialoggestures.md) (funkcje `DIAG` i `DIAG_Reset`).

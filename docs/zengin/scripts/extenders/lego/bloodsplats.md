@@ -1,11 +1,11 @@
 # Bloodsplats
-If this package is activated, red blood splatters will appear on the screen when the hero takes damage. For this, the damage perception for the hero is redirected to _B_HeroDamage(). In order to be able to use the bloodsplats, the enclosed textures must be available. In addition, the Vfx "HERO_HURT" (also included) should be entered in the VfxInst.d to create an even better hit effect. All textures used here are from [CGTextures.com](CGTextures.com). If you use bloodsplats in your modification, this side must be noted in the credits.
+If this package is activated, red blood splatters will appear on the screen when the hero takes damage. For this, the damage perception for the hero is redirected to `_B_HeroDamage()`. To use the `Bloodsplats`, the enclosed textures must be available. Also, the VFX "HERO_HURT" (also included) should be entered in the `VfxInst.d` to create an even better hit effect. All textures used here are from [CGTextures.com](http://CGTextures.com). If you use `Bloodsplats` in your modification, this site must be noted in the credits.
 
 ## Dependencies
 
 - Floats
 - View
-- [Random](../lego/random.md)
+- [Random](random.md)
 - Anim8
 
 ## Initialization

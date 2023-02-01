@@ -1,7 +1,7 @@
 # Locals
-Daedalus does not offer any local variables, which can quickly lead to problems with recursive functions. Locals allows variables to be saved temporarily on a pseudo-stack.
+Daedalus doesn't offer any local variables, which can quickly lead to problems with recursive functions. Locals allows variables to be saved temporarily on a pseudo-stack.
 Locals is a very specific package. Person who works normally with Daedalus will never really need it.
-There is also the `final` function, which can be used to emulate something similar to the final-clause in Java.
+There is also the `final` function, which can be used to emulate something similar to the `final` clause in Java.
 
 ## Dependencies
 
@@ -16,7 +16,7 @@ No initialization
 ## Functions
 
 ### Locals
-All that has to be done to enable the `local` is to write this function at the beginning of the function that should receive "real" local variables.
+All that has to be done to enable the `Locals` is to write this function at the beginning of the function that should receive "real" local variables.
 ```dae
 func void locals() {};
 ```
@@ -30,7 +30,7 @@ func int Final() {};
 ## Examples
 
 ### Final
-With final() it is very easy to emulate Java's final-clause, i.e. a block of code can be specified that is executed after this function is exited, regardless of when or where the function is exited.
+With `final()` it is very easy to emulate Java's `final` clause, i.e. a block of code can be specified that is executed after this function is exited, regardless of when or where the function is exited.
 ```dae
 func void testFinal() {
     if (final()) {
