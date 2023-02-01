@@ -14,7 +14,7 @@ No initialization
 ## Functions
 
 ### DIAG
-With this function the dialog gestures for all NPCs can be overridden. To understand the principle, I recommend taking a look at the [examples](#examples). 
+With this function the dialog gestures for all NPCs can be overridden. To understand the principle, it is recommended to take a look at the [examples](#examples). 
 
 The full name of the animation can be described as follows:
 ```dae

@@ -1,5 +1,5 @@
 # Focusnames
-When this package is enabled, colors the focus names of the NPCs in appropriate colors according to the behavior defined below (alpha values are taken into account). Also affects monsters. (Mobs/Items get Color_Neutral)
+This package colors the focus names of the NPCs in appropriate colors according to the behavior defined below (alpha values are taken into account). Also affects monsters. (Mobs/Items get Color_Neutral)
 
 ## Dependencies
 
@@ -21,28 +21,32 @@ If you want to change colors for any behavior edit the following functions direc
 
 ### Focusnames_Color_Friendly
 ```dae
-func int Focusnames_Color_Friendly() {
+func int Focusnames_Color_Friendly()
+{
     return RGBA(0,   255, 0,   255); // Green
 };
 ```
 
 ### Focusnames_Color_Neutral
 ```dae
-func int Focusnames_Color_Neutral() {
+func int Focusnames_Color_Neutral()
+{
     return RGBA(255, 255, 255, 255); // White
 };
 ```
 
 ### Focusnames_Color_Angry
 ```dae
-func int Focusnames_Color_Angry() {
+func int Focusnames_Color_Angry()
+{
     return RGBA(255, 180, 0,   255); // Orange
 };
 ```
 
 ### Focusnames_Color_Hostile
 ```dae
-func int Focusnames_Color_Hostile() {
+func int Focusnames_Color_Hostile()
+{
     return RGBA(255, 0,   0,   255); // Red
 };
 ```

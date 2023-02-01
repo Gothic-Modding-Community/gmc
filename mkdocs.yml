@@ -122,10 +122,9 @@ nav:
             - Hooking:        zengin/scripts/extenders/zparserextender/hooks.md
             - Other features: zengin/scripts/extenders/zparserextender/other.md
           - Externals:
-            - zengin/scripts/extenders/zparserextender/externals/index.md
             - String functions: zengin/scripts/extenders/zparserextender/externals/string.md
             - Menu function:    zengin/scripts/extenders/zparserextender/externals/menu.md
-            - Log function:     zengin/scripts/extenders/zparserextender/externals/log.md
+            - Log functions:     zengin/scripts/extenders/zparserextender/externals/log.md
             - Event function:   zengin/scripts/extenders/zparserextender/externals/events_vars.md
             - CAST functions:   zengin/scripts/extenders/zparserextender/externals/cast.md
             - HLP functions:    zengin/scripts/extenders/zparserextender/externals/hlp.md
