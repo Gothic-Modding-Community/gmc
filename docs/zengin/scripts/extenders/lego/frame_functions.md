@@ -6,7 +6,7 @@ The FrameFunctions package allows to call any number of functions called on ever
 - Floats
 - PermMem
 - HookEngine
-- Timer
+- [Timer](timer.md)
 
 ## Initialization
 Initialize with `LeGo_FrameFunctions` flag.

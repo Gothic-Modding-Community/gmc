@@ -178,7 +178,7 @@ prototype GothicBar(Bar)
 O wiele łatwiej jest skonfigurować nową instancję przy użyciu tego prototypu. Standardowy pasek można łatwo utworzyć za pomocą `GothicBar`, jak pokazano w poniższym przykładzie.
 GothicBar znajduje się na środku ekranu i wygląda tak samo jak pasek wyświetlany podczas nurkowania.
 Ale zróbmy pasek, który znajduje się w lewym górnym rogu obrazu i wyświetla punkty doświadczenia.
-Stwórz nową instancje z pomocą `GothicBar` i zmień tylko pozycję. Oczywiście dodaj też pętlę za pomocą pakietu FrameFunctions.
+Stwórz nową instancje z pomocą `GothicBar` i zmień tylko pozycję. Oczywiście dodaj też pętlę za pomocą pakietu [FrameFunctions](frame_functions.md).
 ```dae
 // Instancja stowrzona z pomocą prototypu GothicBar 
 instance Bar_1(GothicBar)

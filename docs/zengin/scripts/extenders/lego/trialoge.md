@@ -3,7 +3,7 @@ This package allows you to create conversations with any number of NPCs and cont
 
 ## Dependencies
 
-- AI_Function
+- [AI_Function](ai_function.md)
 
 ## Initialization
 Initialize with `LeGo_Trialoge` flag.
@@ -211,4 +211,4 @@ func void TRIA_Test_info()
 };
 ```
 !!! Note
-    In addition, here are still dialog gestures used (the page will be added later).
+    In addition, here are still [dialog gestures](dialoggestures.md) used.
