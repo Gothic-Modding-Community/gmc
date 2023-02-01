@@ -98,6 +98,7 @@ nav:
           - Misc:            zengin/scripts/extenders/lego/misc.md
           - Random:          zengin/scripts/extenders/lego/random.md
           - Talents:         zengin/scripts/extenders/lego/talents.md
+          - Timer:           zengin/scripts/extenders/lego/timer.md
           - Trialoge:        zengin/scripts/extenders/lego/trialoge.md
         - AFSP:
           - zengin/scripts/extenders/afsp/index.md
