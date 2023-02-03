@@ -271,7 +271,7 @@ const gmcAddVersionToggle = () => {
     mdVersionLinkDev.className = "md-version__link";
 
     mdVersionCurrent.setAttribute("aria-label", gGMC_SELECT_VERSION);
-    mdVersionCurrent.textContent = gGMC_DEV ? "dev" : "main";
+    mdVersionCurrent.textContent = gGMC_LOCAL ? "LOCAL" : gGMC_DEV ? "dev" : "main";
 
     mdVersionLinkMain.textContent = "main";
     mdVersionLinkMain.href = `https://gothic-modding-community.github.io/gmc${currentPath}`;
