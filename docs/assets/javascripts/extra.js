@@ -251,12 +251,7 @@ const gmcSearchMutationCallback = (mutations, _) => {
 };
 
 const gmcAddVersionToggle = () => {
-    const buttonAriaMapping = {
-        en: "Select version",
-        pl: "Wybierz wersję",
-    };
 
-    const currentLang = buttonAriaMapping.hasOwnProperty(gWindowLang) ? gWindowLang : "en";
     const currentPath = window.location.pathname.replace("/gmc/", "/");
 
     const mdVersion = document.createElement("div");
@@ -275,16 +270,16 @@ const gmcAddVersionToggle = () => {
     mdVersionItemDev.className = "md-version__item";
     mdVersionLinkDev.className = "md-version__link";
 
-    mdVersionCurrent.setAttribute("aria-label", buttonAriaMapping[currentLang]);
+    mdVersionCurrent.setAttribute("aria-label", gGMC_SELECT_VERSION);
     mdVersionCurrent.textContent = gGMC_DEV ? "dev" : "main";
 
     mdVersionLinkMain.textContent = "main";
     mdVersionLinkMain.href = `https://gothic-modding-community.github.io/gmc${currentPath}`;
-    mdVersionLinkMain.setAttribute("title", `${buttonAriaMapping[currentLang]} ${mdVersionLinkMain.textContent}`);
+    mdVersionLinkMain.setAttribute("title", `${gGMC_SELECT_VERSION} ${mdVersionLinkMain.textContent}`);
 
     mdVersionLinkDev.textContent = "dev";
     mdVersionLinkDev.href = `https://gmc.cokoliv.eu${currentPath}`;
-    mdVersionLinkDev.setAttribute("title", `${buttonAriaMapping[currentLang]} ${mdVersionLinkDev.textContent}`);
+    mdVersionLinkDev.setAttribute("title", `${gGMC_SELECT_VERSION} ${mdVersionLinkDev.textContent}`);
 
     mdVersionItemMain.appendChild(mdVersionLinkMain);
     mdVersionItemDev.appendChild(mdVersionLinkDev);

@@ -38,7 +38,11 @@
             {{ announcement[i18n_page_locale] }}
             <a href="/gmc/{{ i18n_page_locale }}/contribute/">{{ call_to_action[i18n_page_locale] }}</a>
         </div>
-        {# Include original content after the additions #}
-        {{ super() }}
     {% endif %}
+    {# Add script with additional localization for use in extra.js #}
+    <script>
+        const gGMC_SELECT_VERSION = "{{ lang.t('select.version') }}";
+    </script>
+    {# Include original content after the additions #}
+    {{ super() }}
 {% endblock %}
