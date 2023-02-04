@@ -245,6 +245,9 @@ plugins:
         pl:
           name: pl - Polski
           build: true
+        cs:
+          name: cs - Čeština
+          build: true
       material_alternate: true
       # TODO ;0 For now abstain from translating navigation, it might be overriden with the header name later on
 #      nav_translations: # Only 1 global scope, if 2 nav elements are named the same, input translation only once
