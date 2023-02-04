@@ -235,8 +235,9 @@ plugins:
         - assets/stylesheets/extra.css
       js_files:
         - assets/javascripts/extra.js
-  - i18n: # TODO optimize local usage to build page based on environmental variables
-      default_language: en
+  - i18n:
+      default_language: !ENV [GMC_DEFAULT_LANG, en]
+      default_language_only: !ENV [GMC_ONLY_DEFAULT_LANG, False]
       languages:
         en:
           name: en - English
@@ -245,10 +246,11 @@ plugins:
           name: pl - Polski
           build: true
       material_alternate: true
-      nav_translations: # Only 1 global scope, if 2 nav elements are named the same, input translation only once
-        pl:
-          Home: Strona Główna
-          How To Contribute: Jak Się Udzielać
+      # TODO ;0 For now abstain from translating navigation, it might be overriden with the header name later on
+#      nav_translations: # Only 1 global scope, if 2 nav elements are named the same, input translation only once
+#        pl:
+#          Home: Strona Główna
+#          How To Contribute: Jak Się Udzielać
   - git-revision-date-localized:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       type: iso_datetime
