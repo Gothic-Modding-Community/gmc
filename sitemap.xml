@@ -6,6 +6,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/"/>
          
     </url>
     <url>
@@ -14,6 +15,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/notready/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/notready/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/notready/"/>
          
     </url>
     <url>
@@ -22,6 +24,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/contribute/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/contribute/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/contribute/"/>
          
     </url>
     <url>
@@ -30,6 +33,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/genome/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/genome/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/genome/"/>
          
     </url>
     <url>
@@ -38,6 +42,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/genome/object_persistence/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/genome/object_persistence/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/genome/object_persistence/"/>
          
     </url>
     <url>
@@ -46,6 +51,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/genome/tools/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/genome/tools/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/genome/tools/"/>
          
     </url>
     <url>
@@ -54,6 +60,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/"/>
          
     </url>
     <url>
@@ -62,6 +69,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/meshes/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/meshes/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/meshes/"/>
          
     </url>
     <url>
@@ -70,6 +78,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/music/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/music/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/music/"/>
          
     </url>
     <url>
@@ -78,6 +87,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/sound/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/sound/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/sound/"/>
          
     </url>
     <url>
@@ -86,6 +96,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/textures/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/textures/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/textures/"/>
          
     </url>
     <url>
@@ -94,6 +105,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/video/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/video/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/video/"/>
          
     </url>
     <url>
@@ -102,6 +114,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/worlds/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/worlds/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/worlds/"/>
          
     </url>
     <url>
@@ -110,6 +123,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/anims/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/anims/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/anims/"/>
          
     </url>
     <url>
@@ -118,6 +132,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/anims/events/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/anims/events/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/anims/events/"/>
          
     </url>
     <url>
@@ -126,6 +141,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/anims/mds/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/anims/mds/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/anims/mds/"/>
          
     </url>
     <url>
@@ -134,6 +150,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/anims/standalone_ani/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/anims/standalone_ani/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/anims/standalone_ani/"/>
          
     </url>
     <url>
@@ -142,6 +159,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/general_info/directory_structure/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/general_info/directory_structure/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/general_info/directory_structure/"/>
          
     </url>
     <url>
@@ -150,6 +168,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/general_info/object_persistence/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/general_info/object_persistence/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/general_info/object_persistence/"/>
          
     </url>
     <url>
@@ -158,6 +177,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/general_info/vdfs/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/general_info/vdfs/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/general_info/vdfs/"/>
          
     </url>
     <url>
@@ -166,6 +186,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/"/>
          
     </url>
     <url>
@@ -174,6 +195,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/classes/c_info/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/classes/c_info/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/classes/c_info/"/>
          
     </url>
     <url>
@@ -182,6 +204,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/classes/c_item/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/classes/c_item/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/classes/c_item/"/>
          
     </url>
     <url>
@@ -190,6 +213,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/classes/c_svm/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/classes/c_svm/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/classes/c_svm/"/>
          
     </url>
     <url>
@@ -198,6 +222,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/"/>
          
     </url>
     <url>
@@ -206,6 +231,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/afsp/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/afsp/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/afsp/"/>
          
     </url>
     <url>
@@ -214,6 +240,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/afsp/afsp_eim/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/afsp/afsp_eim/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/afsp/afsp_eim/"/>
          
     </url>
     <url>
@@ -222,6 +249,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/ikarus/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/ikarus/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/ikarus/"/>
          
     </url>
     <url>
@@ -230,6 +258,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/ikarus/ini_access/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/ikarus/ini_access/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/ikarus/ini_access/"/>
          
     </url>
     <url>
@@ -238,6 +267,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/"/>
          
     </url>
     <url>
@@ -246,6 +276,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/ai_function/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/ai_function/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/ai_function/"/>
          
     </url>
     <url>
@@ -254,6 +285,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/bars/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/bars/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/bars/"/>
          
     </url>
     <url>
@@ -262,6 +294,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/bloodsplats/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/bloodsplats/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/bloodsplats/"/>
          
     </url>
     <url>
@@ -270,6 +303,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/console_commands/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/console_commands/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/console_commands/"/>
          
     </url>
     <url>
@@ -278,6 +312,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/dialoggestures/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/dialoggestures/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/dialoggestures/"/>
          
     </url>
     <url>
@@ -286,6 +321,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/focusnames/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/focusnames/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/focusnames/"/>
          
     </url>
     <url>
@@ -294,6 +330,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/frame_functions/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/frame_functions/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/frame_functions/"/>
          
     </url>
     <url>
@@ -302,6 +339,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/gamestate/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/gamestate/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/gamestate/"/>
          
     </url>
     <url>
@@ -310,6 +348,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/item_helper/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/item_helper/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/item_helper/"/>
          
     </url>
     <url>
@@ -318,6 +357,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/locals/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/locals/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/locals/"/>
          
     </url>
     <url>
@@ -326,6 +366,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/misc/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/misc/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/misc/"/>
          
     </url>
     <url>
@@ -334,6 +375,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/random/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/random/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/random/"/>
          
     </url>
     <url>
@@ -342,6 +384,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/talents/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/talents/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/talents/"/>
          
     </url>
     <url>
@@ -350,6 +393,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/timer/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/timer/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/timer/"/>
          
     </url>
     <url>
@@ -358,6 +402,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/lego/trialoge/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/trialoge/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/trialoge/"/>
          
     </url>
     <url>
@@ -366,6 +411,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/"/>
          
     </url>
     <url>
@@ -374,6 +420,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/c_trigger/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/c_trigger/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/c_trigger/"/>
          
     </url>
     <url>
@@ -382,6 +429,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/dialogues/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/dialogues/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/dialogues/"/>
          
     </url>
     <url>
@@ -390,6 +438,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/events/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/events/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/events/"/>
          
     </url>
     <url>
@@ -398,6 +447,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/extern/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/extern/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/extern/"/>
          
     </url>
     <url>
@@ -406,6 +456,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/"/>
          
     </url>
     <url>
@@ -414,6 +465,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/helperclasses/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/helperclasses/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/helperclasses/"/>
          
     </url>
     <url>
@@ -422,6 +474,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/hooks/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/hooks/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/hooks/"/>
          
     </url>
     <url>
@@ -430,6 +483,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/injection/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/injection/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/injection/"/>
          
     </url>
     <url>
@@ -438,6 +492,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/meta/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/meta/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/meta/"/>
          
     </url>
     <url>
@@ -446,6 +501,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/namespaces/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/namespaces/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/namespaces/"/>
          
     </url>
     <url>
@@ -454,6 +510,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/other/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/other/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/other/"/>
          
     </url>
     <url>
@@ -462,6 +519,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/testelse/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/testelse/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/testelse/"/>
          
     </url>
     <url>
@@ -470,6 +528,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/while/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/while/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/while/"/>
          
     </url>
     <url>
@@ -478,6 +537,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/examples/signposts/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/examples/signposts/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/examples/signposts/"/>
          
     </url>
     <url>
@@ -486,6 +546,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/ai/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/ai/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/ai/"/>
          
     </url>
     <url>
@@ -494,6 +555,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/cast/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/cast/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/cast/"/>
          
     </url>
     <url>
@@ -502,6 +564,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/events_vars/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/events_vars/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/events_vars/"/>
          
     </url>
     <url>
@@ -510,6 +573,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/hlp/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/hlp/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/hlp/"/>
          
     </url>
     <url>
@@ -518,6 +582,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/log/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/log/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/log/"/>
          
     </url>
     <url>
@@ -526,6 +591,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/mdl/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/mdl/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/mdl/"/>
          
     </url>
     <url>
@@ -534,6 +600,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/menu/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/menu/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/menu/"/>
          
     </url>
     <url>
@@ -542,6 +609,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/mob/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/mob/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/mob/"/>
          
     </url>
     <url>
@@ -550,6 +618,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/npc/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/npc/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/npc/"/>
          
     </url>
     <url>
@@ -558,6 +627,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/par/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/par/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/par/"/>
          
     </url>
     <url>
@@ -566,6 +636,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/string/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/string/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/string/"/>
          
     </url>
     <url>
@@ -574,6 +645,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/vob/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/vob/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/vob/"/>
          
     </url>
     <url>
@@ -582,6 +654,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/scripts/extenders/zparserextender/externals/wld/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/wld/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/wld/"/>
          
     </url>
     <url>
@@ -590,6 +663,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/tools/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/tools/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/tools/"/>
          
     </url>
     <url>
@@ -598,6 +672,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/tools/dls/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/tools/dls/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/tools/dls/"/>
          
     </url>
     <url>
@@ -606,6 +681,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/tools/gothic_sourcer/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/tools/gothic_sourcer/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/tools/gothic_sourcer/"/>
          
     </url>
     <url>
@@ -614,6 +690,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/tools/gothic_vdfs/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/tools/gothic_vdfs/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/tools/gothic_vdfs/"/>
          
     </url>
     <url>
@@ -622,6 +699,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/tools/vdfs_tool/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/tools/vdfs_tool/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/tools/vdfs_tool/"/>
          
     </url>
     <url>
@@ -630,6 +708,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/union/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/union/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/union/"/>
          
     </url>
     <url>
@@ -638,6 +717,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/union/zgamepad/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/union/zgamepad/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/union/zgamepad/"/>
          
     </url>
     <url>
@@ -646,6 +726,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/union/zgamepad/controls/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/union/zgamepad/controls/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/union/zgamepad/controls/"/>
          
     </url>
     <url>
@@ -654,6 +735,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/union/zgamepad/keys_engine_absolute/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/union/zgamepad/keys_engine_absolute/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/union/zgamepad/keys_engine_absolute/"/>
          
     </url>
     <url>
@@ -662,6 +744,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/union/zgamepad/keys_engine_logical/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/union/zgamepad/keys_engine_logical/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/union/zgamepad/keys_engine_logical/"/>
          
     </url>
     <url>
@@ -670,6 +753,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/union/zgamepad/keys_gamepad/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/union/zgamepad/keys_gamepad/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/union/zgamepad/keys_gamepad/"/>
          
     </url>
     <url>
@@ -678,6 +762,7 @@
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/en/zengin/union/zgamepad/logical_functions/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/union/zgamepad/logical_functions/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/union/zgamepad/logical_functions/"/>
          
     </url>
 </urlset>
