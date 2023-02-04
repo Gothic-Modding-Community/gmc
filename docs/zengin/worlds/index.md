@@ -16,7 +16,7 @@ The content of worlds in Gothic can be roughly separated in the following way:
 Asides from those elements, there are also many invisible VOBs, such as:
 
 - Waypoints - used for NPC navigation
-- Freepoints - used mainly for NPC routines and roaming behavior for monsters
+- Freepoints (zCVobSpot) - used mainly for NPC routines and roaming behavior for monsters
 - Startpoints - used only to spawn the player when starting a new game. Teleporting between levels is handled with scripts and uses freepoints to determine where the player will appear.
 - Sound emitters
 - Music zones

@@ -4,8 +4,6 @@ Spacer is the original world editor used to create maps in Gothic and it's insta
 
 A good `.ZEN` file to start experimenting with Spacer is [Toten Insel](https://www.worldofgothic.de/?go=moddb&action=view&fileID=742&cat=18&page=1&order=0). It's a simple level which should load without issues for everyone. The map contains a custom texture, but it can be ignored for now.
 
-It is worth noting that one of the best ways of learning how to do something in spacer is opening one of the original maps and checking the type and configuration of the related VOBs.
-
 ## Introduction
 
 Upon launching Spacer, multiple windows will appear. They are:
@@ -83,6 +81,24 @@ The objects location can also be entered manually through the object window: ope
 
 This section covers some of the basic things done in the editor.
 
+### Creating a VOB
+
+- In the Create tab in the Objects window, select the VOB type. Choose `zcVob` to add a simple decorative model.
+- Right click anywhere on the viewport
+- Select the insert option (`Insert [zcVob]` in this case)
+- A VOB without a mesh will be created in the middle of the screen. Try to not deselect it, but if you do, it can be found in the vobtree under the appropriate folder (`zcVob` in this case); it can be identified by a green dot.
+- In the Modify tab in the Object window, select "visual". Insert the model name in the text form at the bottom of the window. You can use `pc_lob_sleeper3.3ds` for now; this mesh should be present in both Gothic 1 and 2. 
+- If you unpacked the meshes while installing the MDK or with GothicVDFS, you can also browse to the file using the file button next to the text form.
+- Make sure to click the Apply button. Do this after making any changes in the Object window or they will be lost.
+
+!!! tip
+    You can use the VOB Bilder tool to browse model images and names. An online version is currently available [here](https://dziejekhorinis.org/dev/vobbilder/), but the UI is in Polish - it's simple enough to not matter though.
+
+- To make the VOB have collission, double click on `cdDyn` ("collission detection dynamic") to set it to true. Sometimes this is unadvised, e.g. with bushes or grass. Note that this will affect your ability to move VOBs: if you want VOBs to intersect, you will need to disable this option and reenable it once the VOB is placed.
+- `staticVob` should be set to true when placing pretty much anything that isn't a pickable item. This applies to interactives such as beds or alchemy stands, but can be skipped with invisible VOBs such as waypoints, freepoints, sounds etc.
+
+!!! tip
+    One of the best ways of learning how to do things in Spacer is opening one of the original maps and checking the type and configuration of the related VOBs. Some things will need scripting, however.
 
 
 ## Issues
