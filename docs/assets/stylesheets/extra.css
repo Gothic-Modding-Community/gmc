@@ -104,7 +104,7 @@ div.md-nav__link--index {
 
 /* override md-banner*/
 .md-banner {
-    background: var(--md-accent-fg-color);
+    background: #0091eb;
     color: #fff;
 }
 
@@ -209,7 +209,7 @@ div.md-nav__link--index {
 }
 
 /* Beautiful heart beat animation I found here: https://github.com/squidfunk/mkdocs-material/discussions/3850 */
-@keyframes heart 
+@keyframes heart
 {
     0%, 40%, 80%, 100%
     {
