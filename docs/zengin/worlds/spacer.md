@@ -170,7 +170,7 @@ You can find free terrain models [here](https://www.worldofgothic.de/?go=moddb&c
 First, load the mesh from the File tab of the viewport. To compile the mesh, press `Compile World` in the World tab. From here, multiple options are available:
 - Indoor/Outdoor: determines if the world will have a sky and the way that lighting behaves.
 - Detect leaks: might be related to checking if indoor ("underground") worlds have holes in them. In some games such holes can cause performance issues, perhaps it's the same here. Doesn't hurt to enable it.
-- Quick compile: self-explanatory, but compiling is fairly fast anyway so this is usually not necessary.
+- Quick compile: self-explanatory.
 - Polycheck: presumably checks if the model doesn't exceed triangle limits.
 - Editormode:
   - On: Spacer will load the mesh in editor mode which allows you to change materials assigned to triangles and other mesh operations. It is more comfortable to do these things in an external 3D editor, but sometimes using this is recommended, e.g. for setting up portals. You can save the model as a `.3ds` in this mode.
@@ -178,6 +178,37 @@ First, load the mesh from the File tab of the viewport. To compile the mesh, pre
 
 ### Compiling a world from multiple meshes
 
+First and foremost, the models used for this must be properly positioned and separated in your 3D editor of choice. Then each section must be exported as separate `.3ds` files. After that, compile each model and save it as a compiled ZEN. Place them in their own folder. You can place VOBs in those ZEN files, the VOB trees will be merged too.
+
+Now, to join these zens together, you will need to define a macro in `Tools>Macros`. These are pretty much identical except for the ZEN list; for example, the Mining Colony ZEN in Gothic 2 (`OLDWORLD.ZEN`) is comprised of two models, and the macro looks like this:
+
+```
+reset
+set error 3
+Load world oldworld\SURFACE.ZEN
+Load world oldworld\OLDCAMP.ZEN
+compile world outdoor
+compile light high
+```
+
+Then you double click the macro name to run it and wait. The macro contains the reset directive, but it's worth doing it on a freshly opened Spacer instance just to be safe.
+
+
+### Updating world meshes in a compiled ZEN
+
+!!! warning
+    This method is quite faulty and Spacer.NET is a better tool for this operation. Furthermore, updating the world mesh should be generelly avoided altogether because it's generally risky.
+
+To update a mesh, you will need to do the following:
+- Export the ZEN in an uncompiled form.
+- Open that ZEN in a text editor
+- Search for `zCVobLevelCompo:zCVob`
+- Remove the visualName and the objectName of that object (e.g. `visual=string:somemodel.3ds` to `visual=string:` )
+- Save the file and exit.
+- Compile the updated model into a compiled ZEN.
+- Merge these all the ZENs of the level with a macro.
+
+This method is very likely to generate issues with VOBs and the mesh itself. This is because it screws with portals, and when the world is compiled, the BSP algorithm of the game adds portals to the entire map. So even if you didn't make any portals yourself, your world is likely to break when using this method. This will have the form of certain parts of the map being invisible and VOBs disappearing from them.
 
 
 
