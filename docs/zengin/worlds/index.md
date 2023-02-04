@@ -7,8 +7,6 @@ Worlds, saved as `.ZEN` files in ZenGin, are archives that contain the world mes
 
 Spacer is used to create these `.ZEN` files. There are also [other world editors](../tools/index.md). The way of doing things can vary between these editors, so the specifics will be discussed in articles for those tools.
 
-The world meshes used in ZEN files have triangle count limits (it is also advisable to keep triangle count under 50k for performance reasons). To get around this limitation and to separate work on various areas, it is possible to join multiple ZEN files together.
-
 ## World contents
 
 The content of worlds in Gothic can be roughly separated in the following way:
@@ -16,8 +14,10 @@ The content of worlds in Gothic can be roughly separated in the following way:
 - VOBs: all interactive objects, items, foliage, small rocks, huts, furniture, ramps etc.
 
 Asides from those elements, there are also many invisible VOBs, such as:
+
 - Waypoints - used for NPC navigation
 - Freepoints - used mainly for NPC routines and roaming behavior for monsters
+- Startpoints - used only to spawn the player when starting a new game. Teleporting between levels is handled with scripts and uses freepoints to determine where the player will appear.
 - Sound emitters
 - Music zones
   - oCZoneMusic - music which plays inside the bounding box of this zone
@@ -37,9 +37,16 @@ After importing a 3ds model, the world can be compiled as an outdoor or indoor w
     Creating new world meshes has many caveats which will be addressed in a separate article.
 
 
+The world meshes used in ZEN files have triangle count limits (it is also advisable to keep triangle count under 50k for performance reasons). To get around this limitation and to separate work on various areas, it is possible to join multiple ZEN files together, which is done with special macros.
+
+If you take a look at the original maps for Gothic 2, you can notice that they are in folders, where there's e.g. a file called `NEWWORLD.ZEN` and multiple `.ZEN` files with "part" in their name. The latter are the sub-zens used to create the full level.
+
+It is worth noting that reimporting the terrain mesh deletes all the VOBs added to the level (at least in vanilla Spacer). This can be circumvented by exporting the VOB tree as a separate (uncompiled) `.ZEN` and rebuilding the level from that ZEN and another ZEN with the compiled new terrain model.
+
 ## Lighting
 
 There are two light types in the game:
+
 - Static lights, which are baked onto the level. They can cast shadows (which seem to only take static VOBs into consideration) and don't leak through walls. These have to be recompiled after making changes, but this process should only take moments. Static lights have the downside of only workin in indoor worlds and in rooms which are closed with portals.
 - Dynamic lights are calculated during runtime, which allows them to move and change properties (their color, for example), but has a performance cost. Additionally, they don't look the best and will often leak through walls.
 
