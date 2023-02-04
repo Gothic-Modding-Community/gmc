@@ -1,5 +1,5 @@
 # Ikarus
-Ikarus is a daedalus library for Gothic. It exploits the interpreter to allow arbitrary memory access and defines tonne of useful functions for interfacing with the engine. 
+Ikarus is a Daedalus library for Gothic. It exploits the interpreter to allow arbitrary memory access and defines tonne of useful functions for interfacing with the engine. 
 
 | Contacts |                                                                                                                          |
 |:---------|:-------------------------------------------------------------------------------------------------------------------------|

@@ -12,6 +12,7 @@ theme:
   logo: assets/images/gmc_logo.png
   icon:
     repo: fontawesome/brands/github
+    alternate: material/earth
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -33,6 +34,10 @@ theme:
   features:
     - navigation.tabs
     - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
 
 nav:
   - Home:
@@ -48,7 +53,7 @@ nav:
       - VDFS - virtual file system: zengin/general_info/vdfs.md
       - Object persistence: zengin/general_info/object_persistence.md
 
-    - Animations: 
+    - Animations:
       - zengin/anims/index.md
       - MDS - ModelScript: zengin/anims/mds.md
       - EventBlocks: zengin/anims/events.md
@@ -67,7 +72,7 @@ nav:
 
     - Worlds: zengin/worlds.md
 
-    - Scripts: 
+    - Scripts:
       - zengin/scripts/index.md
       - Classes:
         - C_INFO: zengin/scripts/classes/c_info.md
@@ -75,19 +80,30 @@ nav:
         - C_SVM:  zengin/scripts/classes/c_svm.md
       - Extenders:
         - zengin/scripts/extenders/index.md
-        - Ikarus: zengin/scripts/extenders/ikarus.md
+        - Ikarus:
+          - zengin/scripts/extenders/ikarus/index.md
+          - Ini File Access: zengin/scripts/extenders/ikarus/ini_access.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
+          - AI_Function:     zengin/scripts/extenders/lego/ai_function.md
           - Bars:            zengin/scripts/extenders/lego/bars.md
+          - Bloodsplats:     zengin/scripts/extenders/lego/bloodsplats.md
           - ConsoleCommands: zengin/scripts/extenders/lego/console_commands.md
+          - Dialoggestures:  zengin/scripts/extenders/lego/dialoggestures.md
+          - Focusnames:      zengin/scripts/extenders/lego/focusnames.md
+          - FrameFunctions:  zengin/scripts/extenders/lego/frame_functions.md
+          - GameState:       zengin/scripts/extenders/lego/gamestate.md
           - ItemHelper:      zengin/scripts/extenders/lego/item_helper.md
-          - Talents:         zengin/scripts/extenders/lego/talents.md
-          - Trialoge:        zengin/scripts/extenders/lego/trialoge.md
+          - Locals:          zengin/scripts/extenders/lego/locals.md
           - Misc:            zengin/scripts/extenders/lego/misc.md
+          - Random:          zengin/scripts/extenders/lego/random.md
+          - Talents:         zengin/scripts/extenders/lego/talents.md
+          - Timer:           zengin/scripts/extenders/lego/timer.md
+          - Trialoge:        zengin/scripts/extenders/lego/trialoge.md
         - AFSP:
           - zengin/scripts/extenders/afsp/index.md
           - Enhanced Info Manager: zengin/scripts/extenders/afsp/afsp_eim.md
-        - zParserExtender: 
+        - zParserExtender:
           - zengin/scripts/extenders/zparserextender/index.md
           - Syntax extensions:
             - While loop:         zengin/scripts/extenders/zparserextender/while.md
@@ -106,10 +122,9 @@ nav:
             - Hooking:        zengin/scripts/extenders/zparserextender/hooks.md
             - Other features: zengin/scripts/extenders/zparserextender/other.md
           - Externals:
-            - zengin/scripts/extenders/zparserextender/externals/index.md
             - String functions: zengin/scripts/extenders/zparserextender/externals/string.md
             - Menu function:    zengin/scripts/extenders/zparserextender/externals/menu.md
-            - Log function:     zengin/scripts/extenders/zparserextender/externals/log.md
+            - Log functions:     zengin/scripts/extenders/zparserextender/externals/log.md
             - Event function:   zengin/scripts/extenders/zparserextender/externals/events_vars.md
             - CAST functions:   zengin/scripts/extenders/zparserextender/externals/cast.md
             - HLP functions:    zengin/scripts/extenders/zparserextender/externals/hlp.md
@@ -158,7 +173,7 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/extra.js
-  
+
 extra:
   social:
     - icon: fontawesome/brands/discord
@@ -209,14 +224,6 @@ plugins:
       css_style:
         width: "100%"
         height: "100%"
-  - git-revision-date-localized:
-      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
-      type: iso_datetime
-      timezone: Europe/Warsaw
-      exclude:
-        - index.md
-        - genome/index.md
-        - zengin/index.md
   - minify:
       minify_html: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       minify_css: !ENV [GMC_ENABLE_ON_PUBLISH, False]
@@ -228,3 +235,30 @@ plugins:
         - assets/stylesheets/extra.css
       js_files:
         - assets/javascripts/extra.js
+  - i18n:
+      default_language: !ENV [GMC_DEFAULT_LANG, en]
+      default_language_only: !ENV [GMC_ONLY_DEFAULT_LANG, False]
+      languages:
+        en:
+          name: en - English
+          build: true
+        pl:
+          name: pl - Polski
+          build: true
+        cs:
+          name: cs - Čeština
+          build: true
+      material_alternate: true
+      # TODO ;0 For now abstain from translating navigation, it might be overriden with the header name later on
+#      nav_translations: # Only 1 global scope, if 2 nav elements are named the same, input translation only once
+#        pl:
+#          Home: Strona Główna
+#          How To Contribute: Jak Się Udzielać
+  - git-revision-date-localized:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      type: iso_datetime
+      timezone: Europe/Warsaw
+      exclude:
+        - index*.md
+        - genome/index*.md
+        - zengin/index*.md

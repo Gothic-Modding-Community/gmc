@@ -1,5 +1,5 @@
 # Trigger functions and the `C_Trigger` class
-zParserExtender also implements cyclical functions called triggers - not to be confused with triggers in ZEN files, similar to a part of the functionality implemented in [LeGo AI_Functions](../../../../notready.md). These functions are called independently after a specified period of time. These triggers can also store user information. Up to 16 int variables can be stored in each trigger as well as `self`, `other` and `victim` instances.
+zParserExtender also implements cyclical functions called triggers - not to be confused with triggers in ZEN files, similar to a part of the functionality implemented in [LeGo AI_Functions](../lego/ai_function.md). These functions are called independently after a specified period of time. These triggers can also store user information. Up to 16 int variables can be stored in each trigger as well as `self`, `other` and `victim` instances.
 
 ## Class definition
 To define a trigger, the `C_Trigger` class is used:
