@@ -81,7 +81,7 @@ The objects location can also be entered manually through the object window: ope
 
 This section covers some of the basic things done in the editor.
 
-### Creating a VOB
+### Inserting a VOB
 
 - In the Create tab in the Objects window, select the VOB type. Choose `zcVob` to add a simple decorative model.
 - Right click anywhere on the viewport
@@ -102,6 +102,7 @@ This section covers some of the basic things done in the editor.
 ### Common VOB settings
 
 VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though:
+
 - vobName: an identifier shown in the editor and sometimes used in scripts. With some VOB types it's important to set this; for example waypoinys and freepoints.
 - visual: the mesh of the VOB
 - showVisual: as the name suggests. Unknown usage.
@@ -117,12 +118,11 @@ VOB settings vary depending on what the VOB type is. They all have common parame
 
 - staticVob: determines if the VOB is taken into consideration in static lighting calculations. Usually enabled in decorative VOBs, but some of the interactive ones have it disabled.
 - dynShadow: seems to determine if the object will cast a shadow when affected by dynamic light (e.g. torches).
-- zbias:
-- isAmbient:
+- zbias: Usage unknown.
+- isAmbient: Usage unknown.
 
 !!! tip
     One of the best ways of learning how to set up various VOBs is opening one of the original maps and checking the type and configuration of the related VOBs. Some things will require scripting to accomplish, however.
-
 
 ## Issues
 
@@ -150,11 +150,34 @@ When copy-pasting a VOB in Spacer (right click menu), the new VOB might be creat
 
 You can have issues with loading a ZEN or a world model for a multitude of reasons. Here is some of the known ones.
 
-Be aware that maps which use custom assets will cause issues or won't even load unless these assets are included in appropriate directories. The severity of this is different depending on the asset type. For example, textures will be replaced with a placeholder, but animations will cause crashes.
+- Some terrain models aren't set up or exported properly.
+- Maps which use custom assets will cause issues or won't even load unless these assets are included in appropriate directories. The severity of this is different depending on the asset type. For example, textures will be replaced with a placeholder, but animations will cause crashes.
 
 !!! note
     This section is not exhaustive.
 
 
-## Advanced usage
+## Creating ZENs
+
+Presented here are the ways of working with new terrain models.
+
+### Compiling a world mesh
+
+To create a completely new ZEN, you will first need a level mesh. These can be made from scratch or downloaded, but be aware that meshes which aren't properly prepared won't compile correctly (you won't be able to move in the viewport). As with any other mesh in Gothic, it has to be in the 3ds Kerrax format. It is recommended to place the mesh file somewhere in the `_work/Data/Meshes` (can be your own subfolder).
+
+You can find free terrain models [here](https://www.worldofgothic.de/?go=moddb&cat=10) if you want to practice this. Note that not all of them might compile properly; [this one](https://www.worldofgothic.de/?go=moddb&action=view&fileID=1266&cat=10&page=1&order=0) should be fine though.
+
+First, load the mesh from the File tab of the viewport. To compile the mesh, press `Compile World` in the World tab. From here, multiple options are available:
+- Indoor/Outdoor: determines if the world will have a sky and the way that lighting behaves.
+- Detect leaks: might be related to checking if indoor ("underground") worlds have holes in them. In some games such holes can cause performance issues, perhaps it's the same here. Doesn't hurt to enable it.
+- Quick compile: self-explanatory, but compiling is fairly fast anyway so this is usually not necessary.
+- Polycheck: presumably checks if the model doesn't exceed triangle limits.
+- Editormode:
+  - On: Spacer will load the mesh in editor mode which allows you to change materials assigned to triangles and other mesh operations. It is more comfortable to do these things in an external 3D editor, but sometimes using this is recommended, e.g. for setting up portals. You can save the model as a `.3ds` in this mode.
+  - Off: Spacer will create a ZEN where you can normally place VOBs. You can now save the world as a compiled ZEN and add VOBs to it.
+
+### Compiling a world from multiple meshes
+
+
+
 

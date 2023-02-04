@@ -3,9 +3,9 @@
 !!! example "Acknowledgment"
     This article is heavily inspired by various tutorials from the polish [TheModders forums](https://themodders.org/index.php#c13).
 
-Worlds, saved as `.ZEN` files in ZenGin, are archives that contain the world mesh (model), BSP tree and the information of all objects in the world. These objects are called VOBs ("virtual objects").
+Worlds, saved as `.ZEN` files in ZenGin, are archives that contain the world mesh (model), BSP tree and the information of all objects in the world. These objects are called VOBs ("virtual objects"). ZEN files can be saved in two ways; compiled and uncompiled. The compiled version is a full-fledged level with a terrain model. Uncompiled ZENs only save the VOB tree and are meant for specific use-cases.
 
-Spacer is used to create these `.ZEN` files. There are also [other world editors](../tools/index.md). The way of doing things can vary between these editors, so the specifics will be discussed in articles for those tools.
+Spacer is used to create these `.ZEN` files. There are also [other world editors](../tools/index.md). The way of doing things can vary between these editors, so the specifics will be discussed in separate articles for those tools.
 
 ## World contents
 
@@ -41,7 +41,13 @@ The world meshes used in ZEN files have triangle count limits (it is also advisa
 
 If you take a look at the original maps for Gothic 2, you can notice that they are in folders, where there's e.g. a file called `NEWWORLD.ZEN` and multiple `.ZEN` files with "part" in their name. The latter are the sub-zens used to create the full level.
 
-It is worth noting that reimporting the terrain mesh deletes all the VOBs added to the level (at least in vanilla Spacer). This can be circumvented by exporting the VOB tree as a separate (uncompiled) `.ZEN` and rebuilding the level from that ZEN and another ZEN with the compiled new terrain model.
+It is worth noting that reimporting the terrain mesh deletes all the VOBs added to the level (at least in vanilla Spacer). This can be circumvented with the following process:
+
+- Export the level as an uncompiled ZEN, which means it only contains the VOB tree.
+- Compile the new level mesh and save as a compiled ZEN.
+- Create and run a macro which will compile those two ZENs into a single one.
+
+The same process applies with multi-zen worlds, except instead of a single compiled ZEN file a level mesh, you will have multiple ones.
 
 ## Lighting
 
