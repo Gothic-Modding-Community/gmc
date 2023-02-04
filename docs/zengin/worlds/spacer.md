@@ -77,7 +77,7 @@ Holding down `Shift` speeds up the camera in all of the modes. The numpad can be
 
 The objects location can also be entered manually through the object window: open the Internals folder and select `trafoOSToWSPos` to input them at the bottom of the window. Don't forget to press "Apply". Unfortunately the rotation setting uses an odd format and can't be set manually.
 
-## Basic use cases
+## Basic usage
 
 This section covers some of the basic things done in the editor.
 
@@ -92,13 +92,36 @@ This section covers some of the basic things done in the editor.
 - Make sure to click the Apply button. Do this after making any changes in the Object window or they will be lost.
 
 !!! tip
-    You can use the VOB Bilder tool to browse model images and names. An online version is currently available [here](https://dziejekhorinis.org/dev/vobbilder/), but the UI is in Polish - it's simple enough to not matter though.
+    You can use the VOB Bilder tool to comfortably browse model images and names. An online version is currently available [here](https://dziejekhorinis.org/dev/vobbilder/). The UI on the website is in Polish but it's simple enough to not matter.
 
-- To make the VOB have collission, double click on `cdDyn` ("collission detection dynamic") to set it to true. Sometimes this is unadvised, e.g. with bushes or grass. Note that this will affect your ability to move VOBs: if you want VOBs to intersect, you will need to disable this option and reenable it once the VOB is placed.
-- `staticVob` should be set to true when placing pretty much anything that isn't a pickable item. This applies to interactives such as beds or alchemy stands, but can be skipped with invisible VOBs such as waypoints, freepoints, sounds etc.
+- To make the VOB have collission in-game, double click on `cdDyn` ("collission detection dynamic") to set it to true. Sometimes this is unadvised, e.g. with bushes or grass.
 
 !!! tip
-    One of the best ways of learning how to do things in Spacer is opening one of the original maps and checking the type and configuration of the related VOBs. Some things will need scripting, however.
+    When placing pickable items, you can press the "apply physics on selected VOB" button in the vertical toolbar to make the item drop on the ground. It can save you a lot of work with placing those items. This won't work with a plain cVob though.
+
+### Common VOB settings
+
+VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though:
+- vobName: an identifier shown in the editor and sometimes used in scripts. With some VOB types it's important to set this; for example waypoinys and freepoints.
+- visual: the mesh of the VOB
+- showVisual: as the name suggests. Unknown usage.
+- visualCamAlign: Unknown usage, possibly related to cutscenes.
+- visualAniMode: Wind sway animation setting.
+- visualAniModeStrength: a multiplier for the animation; small values such as `0.001` are typically used.
+- vobFarClipZScale: a multiplier for the occlussion culling distance. Almost always left as 1, but it can be used to stop models from appearing from thin air in plain sight; e.g. a VOB of a hut which can be seen from afar might benefit from increasing this distance. The effects of this are visible in the editor.
+- cdStatic: determines if the VOB will collide with the world mesh and other VOBs with `cdStatic` on. This is mostly used to help with placing objects in the editor, e.g. furniture.
+- cdDyn: determines if the VOB will collide with dynamic objects (NPCs, items, etc.). This basically determines if the object has collision during gameplay.
+
+!!! warning
+    Both collision settings affect your ability to move VOBs. This can be either useful or disruptive depending on what you want to do. For example, if you want to clip a mesh with another one, you will need to disable collision and re-enable it after putting it in place.
+
+- staticVob: determines if the VOB is taken into consideration in static lighting calculations. Usually enabled in decorative VOBs, but some of the interactive ones have it disabled.
+- dynShadow: seems to determine if the object will cast a shadow when affected by dynamic light (e.g. torches).
+- zbias:
+- isAmbient:
+
+!!! tip
+    One of the best ways of learning how to set up various VOBs is opening one of the original maps and checking the type and configuration of the related VOBs. Some things will require scripting to accomplish, however.
 
 
 ## Issues
@@ -121,13 +144,17 @@ One of the common ways the editor can freeze is when rotating the camera vertica
 
 **Copying VOBs**
 
-When copying a VOB in spacer, the new VOB might be created as a child of the original one and moving one of them will move both. This doesn't seem to be consistent, but it's worth checking before you accidentally ruin the careful placement of the original VOB.
+When copy-pasting a VOB in Spacer (right click menu), the new VOB might be created as a child of the original one and moving one of them will move both. This doesn't seem to be consistent, but it's worth checking before you accidentally ruin the careful placement of the original VOB.
 
 ## Troubleshooting
 
+You can have issues with loading a ZEN or a world model for a multitude of reasons. Here is some of the known ones.
+
 Be aware that maps which use custom assets will cause issues or won't even load unless these assets are included in appropriate directories. The severity of this is different depending on the asset type. For example, textures will be replaced with a placeholder, but animations will cause crashes.
 
+!!! note
+    This section is not exhaustive.
 
 
-
+## Advanced usage
 

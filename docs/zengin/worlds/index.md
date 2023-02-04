@@ -47,7 +47,7 @@ It is worth noting that reimporting the terrain mesh deletes all the VOBs added 
 
 There are two light types in the game:
 
-- Static lights, which are baked onto the level. They can cast shadows (which seem to only take static VOBs into consideration) and don't leak through walls. These have to be recompiled after making changes, but this process should only take moments. Static lights have the downside of only workin in indoor worlds and in rooms which are closed with portals.
+- Static lights, which are baked onto the level. They can cast shadows (these only take static VOBs into consideration) and don't leak through walls. These have to be recompiled after making changes, but this process should only take moments. Static lights have the downside of only working in indoor worlds and in rooms which are closed with portals.
 - Dynamic lights are calculated during runtime, which allows them to move and change properties (their color, for example), but has a performance cost. Additionally, they don't look the best and will often leak through walls.
 
 It is generally advised to use static lights whenever possible.
