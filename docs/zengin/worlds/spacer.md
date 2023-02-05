@@ -2,7 +2,7 @@
 
 Spacer is the original world editor used to create maps in Gothic and it's installed by the MDK installer.
 
-A good `.ZEN` file to start experimenting with Spacer is [Toten Insel](https://www.worldofgothic.de/?go=moddb&action=view&fileID=742&cat=18&page=1&order=0). It's a simple level which should load without issues for everyone. The map contains a custom texture, but it can be ignored for now.
+A good `.ZEN` file to start experimenting with Spacer is [Toten Insel](https://www.worldofgothic.de/?go=moddb&action=view&fileID=742&cat=18&page=1&order=0). It's a simple level which should load without issues for everyone. The map contains a custom texture, but it can be safely ignored.
 
 ## Introduction
 
@@ -94,7 +94,7 @@ This section covers some of the basic things done in the editor.
 !!! tip
     You can use the VOB Bilder tool to comfortably browse model images and names. An online version is currently available [here](https://dziejekhorinis.org/dev/vobbilder/). The UI on the website is in Polish but it's simple enough to not matter.
 
-- To make the VOB have collission in-game, double click on `cdDyn` ("collission detection dynamic") to set it to true. Sometimes this is unadvised, e.g. with bushes or grass.
+- To make the VOB have collission in-game, double click on `cdDyn` ("collision detection dynamic") to set it to true. Sometimes this is unadvised, e.g. with bushes or grass.
 
 !!! tip
     When placing pickable items, you can press the "apply physics on selected VOB" button in the vertical toolbar to make the item drop on the ground. It can save you a lot of work with placing those items. This won't work with a plain cVob though.

@@ -5,7 +5,7 @@
 
 Worlds, saved as `.ZEN` files in ZenGin, are archives that contain the world mesh (model), BSP tree and the information of all objects in the world. These objects are called VOBs ("virtual objects"). ZEN files can be saved in two ways; compiled and uncompiled. The compiled version is a full-fledged level with a terrain model. Uncompiled ZENs only save the VOB tree and are meant for specific use-cases.
 
-Spacer is used to create these `.ZEN` files. There are also [other world editors](../tools/index.md). The way of doing things can vary between these editors, so the specifics will be discussed in separate articles for those tools.
+Spacer is used to create these `.ZEN` files. There are also [other world editors](../tools/index.md). The way of doing things can vary between these editors, so the specifics will be discussed in separate articles for those tools; at the same time, a lot of knowledge carries over between them. Also have in mind that Spacer is the least comfortable of the editors.
 
 ## World contents
 
