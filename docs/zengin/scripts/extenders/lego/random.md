@@ -31,7 +31,7 @@ func int r_Max(int max) {};
 ```
 
 - `max` - maximum value
-- `return` - random number
+- `return` - random number in the specified range
 
 ### r_MinMax
 Returns a random number from 'min' to 'max'.
@@ -41,17 +41,17 @@ func int r_MinMax(int min, int max) {};
 
 - `min` - minimum value
 - `max` - maximum value
-- `return` - random number
+- `return` - random number in the specified range
 
 ### r_Init
-Initializes the random. Happens optionally in LeGo_Init.
+Initializes the random number generator. Happens optionally in `LeGo_Init`.
 ```dae
-func void r_Init(int initVal) {};
+func void r_Init(int seed) {};
 ```
-- `initVal` - initial value
+- `initVal` - seed value
 
 ### r_DefaultInit
-Initializes the random after the current time.
+Initializes the random number generator based on the current time.
 ```dae
 func void r_DefaultInit() {};
 ```

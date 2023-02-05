@@ -24,7 +24,7 @@ func int Timer() {};
 - `return` - Current playing time in milliseconds
 
 ### TimerGT
-Returns the current game time, but the timer is paused when a menu or similar is open and the game is paused.
+Returns the current game time, but the timer is paused when the game is paused (in the menu or status screen).
 ```dae
 func int TimerGT() {};
 ```
@@ -32,12 +32,12 @@ func int TimerGT() {};
 - `return` - Current playing time in milliseconds
 
 ### TimerF
-Alias to `Timer` function that returns a float value.
+Alias to `Timer` function that returns the time as an Ikarus float value.
 ```dae
 func int TimerF() {};
 ```
 
-- `return` - Current playing time as float value
+- `return` - Current playing time as an Ikarus float value
 
 ### Timer_SetPause
 Pauses the timer (and thus all [FrameFunctions](frame_functions.md) and running animations).
@@ -61,4 +61,4 @@ This can be used to query whether the timer is currently paused.
 func int Timer_IsPaused() {};
 ```
 
-- `return` - TRUE if the timer is paused, FALSE otherwise
+- `return` - `TRUE` if the timer is paused, `FALSE` otherwise
