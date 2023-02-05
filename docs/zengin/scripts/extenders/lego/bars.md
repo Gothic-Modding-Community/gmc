@@ -99,6 +99,16 @@ func void Bar_MoveTo(var int handle, var int x, var int y) {};
 - `x` - new horizontal position
 - `y` - new vertical position
 
+### Bar_MoveToPxl
+Move the bar to pixel position. 
+```dae
+func void Bar_MoveToPxl(var int bar, var int x, var int y) {};
+```
+
+- `handle` - handle returned from `Bar_Create`
+- `x` - new horizontal position
+- `y` - new vertical position
+
 ### Bar_SetAlpha
 Sets the opacity of the bar.
 ```dae
@@ -125,6 +135,26 @@ func void Bar_SetBackTexture(var int handle, var string texture) {};
 
 - `handle` - handle returned from `Bar_Create`
 - `texture` - The new background texture
+
+### Bar_Resize
+Resize existing bar.
+```dae
+func void Bar_Resize(var int bar, var int width, var int height) {};
+```
+
+- `bar` - handle returned from `Bar_Create`
+- `width` - new width
+- `height` - new height
+
+### Bar_ResizePxl
+Resize existing bar (in pixels).
+```dae
+func void Bar_ResizePxl(var int bar, var int x, var int y) {};
+```
+
+- `bar` - handle returned from `Bar_Create`
+- `width` - new width
+- `height` - new height
 
 ## Examples
 !!! Note

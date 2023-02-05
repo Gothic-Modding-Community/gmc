@@ -99,6 +99,17 @@ func void Bar_MoveTo(var int handle, var int x, var int y) {};
 - `x` - nowa pozycja w osi x
 - `y` - nowa pozycja w osi y
 
+### Bar_MoveToPxl
+Przenosi pasek do danej pozycji wyrażonej w pixelach
+```dae
+func void Bar_MoveToPxl(var int bar, var int x, var int y) {};
+```
+
+- `handle` - handler zwrócony przez `Bar_Create`
+- `x` - nowa pozycja w osi x
+- `y` - nowa pozycja w osi y
+
+
 ### Bar_SetAlpha
 Ustawia przezroczystość paska.
 ```dae
@@ -125,6 +136,16 @@ func void Bar_SetBackTexture(var int handle, var string texture) {};
 
 - `handle` - handler zwrócony przez `Bar_Create`
 - `texture` - nowa tekstura
+
+### Bar_Resize
+Zmień rozmiar istniejącego paska.
+```dae
+func void Bar_Resize(var int bar, var int width, var int height) {};
+```
+
+- `bar` - handler zwrócony przez `Bar_Create`
+- `width` - nowa szerokość
+- `height` - nowa wysokość
 
 ## Przykłady
 !!! Note
