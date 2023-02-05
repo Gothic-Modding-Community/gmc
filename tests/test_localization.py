@@ -26,6 +26,8 @@ class LocalizationTest(unittest.TestCase):
             lines = file.readlines()
 
         # The default safe loader doesn't handle values containing !, they're not needed for localization
+        # for the exception of !ENV which are important
+        lines = [regex.sub(r"!ENV.*,\s*?(\w+)\]", r"\g<1>", line) for line in lines]
         output = "\n".join([regex.sub(r"!.*", "false", line) for line in lines])
 
         for plugin in yaml.safe_load(output)["plugins"]:
@@ -39,7 +41,7 @@ class LocalizationTest(unittest.TestCase):
 
     def test_default(self) -> None:
         """
-        Test that default language is properly set
+        Test that the default language is properly set, and that all languages are built
         """
         default = "en"
         self.assertEqual(
@@ -47,6 +49,9 @@ class LocalizationTest(unittest.TestCase):
         )
         self.assertTrue(
             default in self.config["languages"], msg=f"Language selector must contain '{default}'"
+        )
+        self.assertFalse(
+            self.config["default_language_only"], msg=f"All languages must be deployed"
         )
 
     def test_announcement(self) -> None:
