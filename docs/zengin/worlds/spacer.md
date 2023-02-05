@@ -211,4 +211,3 @@ To update a mesh, you will need to do the following:
 This method is very likely to generate issues with VOBs and the mesh itself. This is because it screws with portals, and when the world is compiled, the BSP algorithm of the game adds portals to the entire map. So even if you didn't make any portals yourself, your world is likely to break when using this method. This will have the form of certain parts of the map being invisible and VOBs disappearing from them.
 
 
-
