@@ -82,7 +82,11 @@ nav:
         - zengin/scripts/extenders/index.md
         - Ikarus:
           - zengin/scripts/extenders/ikarus/index.md
-          - Ini File Access: zengin/scripts/extenders/ikarus/ini_access.md
+          - Functions:
+            - Ini File Access: zengin/scripts/extenders/ikarus/ini_access.md
+            - Keyboard:        zengin/scripts/extenders/ikarus/keyboard.md
+            - Memory Access:   zengin/scripts/extenders/ikarus/mem_access.md
+          - Examples:          zengin/scripts/extenders/ikarus/examples.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
           - Tools:
