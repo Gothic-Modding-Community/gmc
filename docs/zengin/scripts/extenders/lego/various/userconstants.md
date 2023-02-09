@@ -1,22 +1,22 @@
 # User constants
-All constants that the user can either use or even change freely are definied if [Userconst.d](https://github.com/Lehona/LeGo/blob/dev/Userconst.d) file.
+All constants that the user can either use or even change freely are defined in [Userconst.d](https://github.com/Lehona/LeGo/blob/dev/Userconst.d) file.
 
 ## Read only
 These constants may only be used, not changed.
 
 ### Anim8
-These constants are used by [Anim8](../anim8.md#anim8-1) and [Anim8q](../anim8.md#anim8q).
+These constants are used by [Anim8](../anim8.md#anim8_1) and [Anim8q](../anim8.md#anim8q).
 
 - `A8_Constant` - Constant motion form
 - `A8_SlowEnd` - Evenly decelerated movement
-- `A8_SlowStart` - Uniformly accelerated movement
+- `A8_SlowStart` - Evenly accelerated movement
 - `A8_Wait` - Do nothing. The target value is ignored here
 
 ### Buttons
 The following bit masks can be applied to the status of a button:
 
 - `int BUTTON_ACTIVE` - The button is active, it reacts to the mouse
-- `int BUTTON_ENTERED` - The mouse is "inside" the button
+- `int BUTTON_ENTERED` - The mouse is "within" the button
 
 ### Interface
 Dimensions:
@@ -70,12 +70,12 @@ This constant is only used in [Bloodsplats_Rage](../bloodsplats.md#bloodsplats_r
 
 These constants are used in Bloodsplat:
 
-- `Bloodsplat_Tex` - Highest Texturid ( "BLOODSPLAT" + texID + ".TGA" )
-- `Bloodsplat_Dam` - Texture size damage multiplier ( damage * 2^Bloodsplat_Dam )
+- `Bloodsplat_Tex` - Highest Texture ID (`"BLOODSPLAT" + texID + ".TGA"`)
+- `Bloodsplat_Dam` - Texture size damage multiplier (`damage * 2`^`Bloodsplat_Dam`^)
 
 ### Cursor
 
-- `Cursor_Texture` - This texture is used to display the cursor (default:"CURSOR.TGA")
+- `Cursor_Texture` - This texture is used to display the cursor (default: "CURSOR.TGA")
 
 ### Interface
 

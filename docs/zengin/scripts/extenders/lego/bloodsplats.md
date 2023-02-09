@@ -3,6 +3,7 @@ If this package is activated, red blood splatters will appear on the screen when
 
 !!! Tip
     See [user constants](various/userconstants.md#bloodsplats) to edit behaviour of this packet.
+
 ## Dependencies
 
 - Floats
@@ -34,5 +35,3 @@ Pretty pointless feature that smears the entire screen.
 ```dae
 func void Bloodsplats_Rage() {};
 ```
-
-See [user constants](various/userconstants.md)

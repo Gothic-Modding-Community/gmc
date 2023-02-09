@@ -23,12 +23,12 @@ DIAG_Prefix + aniName + DIAG_Suffix + ((rand() % (max - (min - 1))) + min).ToStr
 DIAG_Prefix and DIAG_Suffix are [user constants](various/userconstants.md).
 
 ```dae
-func void DIAG(string aniName, int min, int max) {};
+func void DIAG(string AniName, int Min, int Max) {};
 ```
 
-- `aniName` - The new dialogue gesture
-- `min` - Lowest animation number
-- `max` - Highest animation number
+- `AniName` - The new dialogue gesture
+- `Min` - Lowest animation number
+- `Max` - Highest animation number
 
 ### DIAG_Reset
 Resets the dialog gestures to the default.
@@ -42,7 +42,7 @@ Sets animation directly.
 func void DIAG_SetAni(var string AniName) {};
 ```
 
-- `aniName` - animation name
+- `AniName` - animation name
 
 ### DIAG_SetMinMax
 Sets animation numbers directly.
