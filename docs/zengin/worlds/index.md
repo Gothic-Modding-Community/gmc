@@ -10,6 +10,7 @@ Spacer is used to create these `.ZEN` files. There are also [other world editors
 ## World contents
 
 The content of worlds in Gothic can be roughly separated in the following way:
+
 - Base level mesh: terrain and buildings, sometimes also trees
 - VOBs: all interactive objects, items, foliage, small rocks, huts, furniture, ramps etc.
 
@@ -52,8 +53,8 @@ Portals are special parts of outdoor world meshes which separate interiors from 
 
 ## Optimisation
 
-The game uses occlussion culling, which means that if an object is covered by another object, it is not rendered and saves performance. This means that the performance in a level can be boosted by a lot by creating city walls and mountains and valleys which separate areas.
+The game uses occlusion culling, which means that if an object is covered by another object, it is not rendered and saves performance. This means that the performance in a level can be boosted by a lot by creating city walls and mountains and valleys which separate areas.
 
-Occlussion culling isn't a perfect process, so there's also the option of adding GHOSTOCCLUDERs, which are invisible walls which stop areas behind them from rendering. They are a part of the world mesh and are created by assigning a material called GHOSTOCCLUDER to chosen faces. The color of the material is traditionally purplish-blue or pink, but the material itself is not rendered in-game, so this is only to make them stand apart from the rest of the level during modelling. To get more technical, these occluder walls are used to help the BSP algorithm which runs during world compilation.
+Occlusion culling isn't a perfect process, so there's also the option of adding GHOSTOCCLUDERs, which are invisible walls which stop areas behind them from rendering. They are a part of the world mesh and are created by assigning a material called GHOSTOCCLUDER to chosen faces. The color of the material is traditionally purplish-blue or pink, but the material itself is not rendered in-game, so this is only to make them stand apart from the rest of the level during modelling. To get more technical, these occluder walls are used to help the BSP algorithm which runs during world compilation.
 
 As mentioned before, another ways of optimisation are portals and limiting the number of dynamic lights. It is also not advisable to make many VOBs be affected by wind.
