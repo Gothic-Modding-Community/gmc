@@ -5,6 +5,9 @@ repo_name: Gothic-Modding-Community/gmc
 repo_url: https://github.com/Gothic-Modding-Community/gmc/
 edit_uri: edit/main/docs/
 
+watch:
+  - overrides
+
 theme:
   name: material
   custom_dir: overrides
@@ -211,7 +214,7 @@ markdown_extensions:
       line_spans: example
   - pymdownx.inlinehilite
   - pymdownx.snippets:
-      base_path: ['./docs/assets/sources/']
+      base_path: ['./overrides/.snippets/']
       check_paths: true
       url_download: true
       url_max_size: 5000000
