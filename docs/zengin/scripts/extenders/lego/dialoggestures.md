@@ -20,7 +20,7 @@ The full name of the animation can be described as follows:
 ```dae
 DIAG_Prefix + aniName + DIAG_Suffix + ((rand() % (max - (min - 1))) + min).ToString("00");
 ```
-DIAG_Prefix and DIAG_Suffix are [user constants](various/userconstants.md).
+`DIAG_Prefix` and `DIAG_Suffix` are [user constants](various/userconstants.md).
 
 ```dae
 func void DIAG(string AniName, int Min, int Max) {};
@@ -55,4 +55,4 @@ func void DIAG_SetMinMax(var int min, var int max) {};
 
 ## Examples
 !!! Note
-    See Examples in [Trialoge article](trialoge.md#examples).
+    See Examples in the [Trialoge article](trialoge.md#examples).

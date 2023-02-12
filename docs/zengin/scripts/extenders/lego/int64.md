@@ -21,7 +21,7 @@ func void mk64(var int dest, var int hi, var int lo) {};
 - `dest` - A pointer to an Int64 object or just 8 bytes of free memory.
 
 ### neg64
-Negates the integer: ^`*`^`dest <- -(`^`*`^`dest)`
+Negates the integer: `*dest <- -(*dest)`
 ```dae
 func void neg64(var int dest) {};
 ```
@@ -29,7 +29,7 @@ func void neg64(var int dest) {};
 - `dest` - A pointer to an Int64 object or just 8 bytes of free memory.
 
 ### add64
-Adds `src` to `dest`: ^`*`^`dest <- `^`*`^`dest + `^`*`^`src`
+Adds `src` to `dest`: `*dest <- *dest + *src`
 ```dae
 func void add64(var int dest, var int src) {};
 ```
@@ -38,7 +38,7 @@ func void add64(var int dest, var int src) {};
 - `src` - A pointer to an Int64 object. Will not change.
 
 ### sub64
-Subtracts `src` from `dest`: ^`*`^`dest <- `^`*`^`dest - `^`*`^`src`
+Subtracts `src` from `dest`: `*dest <- *dest - *src`
 ```dae
 func void sub64(var int dest, var int src) {};
 ```
@@ -47,7 +47,7 @@ func void sub64(var int dest, var int src) {};
 - `src` - A pointer to an Int64 object. Will not change.
 
 ### mul64
-Multiplies `dest` by `src`: ^`*`^`dest <- `^`*`^`dest * `^`*`^`src`
+Multiplies `dest` by `src`: `*dest <- (*dest) * (*src)`
 ```dae
 func void mul64(var int dest, var int src) {};
 ```
@@ -56,7 +56,7 @@ func void mul64(var int dest, var int src) {};
 - `src` - A pointer to an Int64 object. Will not change.
 
 ### div64
-Divides `dest` by `src`: ^`*`^`dest <- `^`*`^`dest / `^`*`^`src`
+Divides `dest` by `src`: `*dest <- *dest / *src`
 ```dae
 func void mul64(var int dest, var int src) {};
 ```

@@ -33,16 +33,18 @@ func void ShowName(c_npc npc) {};
 
 ### Show the name of an NPC later
 ```dae
-instance PAL_100_Friend(c_npc) {
+instance PAL_100_Friend(c_npc)
+{
     name = "Paladin";
 
     // [...]
 };
 
-func void Init_Global() {
+func void Init_Global()
+{
     SetName(PAL_100_Friend, "Arto");
 };
 ```
-At the start of the game, the name "Paladin" is displayed above PAL_100_Friend.
+At the start of the game, the name "Paladin" is displayed above `PAL_100_Friend`.
 
 If `ShowName(PAL_100_Friend);` is used during a dialogue, the name "Arto" is permanently visible above the npc.

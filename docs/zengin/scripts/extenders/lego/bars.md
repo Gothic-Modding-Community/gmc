@@ -96,8 +96,8 @@ func void Bar_MoveTo(var int bar, var int x, var int y) {};
 ```
 
 - `bar` - handle returned from `Bar_Create`
-- `x` - new horizontal position
-- `y` - new vertical position
+- `x` - new horizontal position in virtual coordinates
+- `y` - new vertical position in virtual coordinates
 
 ### Bar_MoveToPxl
 Move the bar to pixel position. 
@@ -106,11 +106,11 @@ func void Bar_MoveToPxl(var int bar, var int x, var int y) {};
 ```
 
 - `bar` - handle returned from `Bar_Create`
-- `x` - new horizontal position
-- `y` - new vertical position
+- `x` - new horizontal position in pixels
+- `y` - new vertical position in pixels
 
 ### Bar_SetAlpha
-Sets the opacity of the bar.
+Sets the transparency of the bar.
 ```dae
 func void Bar_SetAlpha(var int bar, var int alpha) {};
 ```
@@ -137,14 +137,14 @@ func void Bar_SetBackTexture(var int bar, var string backTex) {};
 - `backTex` - The new background texture
 
 ### Bar_Resize
-Resize existing bar.
+Resize an existing bar.
 ```dae
 func void Bar_Resize(var int bar, var int width, var int height) {};
 ```
 
 - `bar` - handle returned from `Bar_Create`
-- `width` - new width
-- `height` - new height
+- `width` - new width in virtual coordinates
+- `height` - new height in virtual coordinates
 
 ### Bar_ResizePxl
 Resize existing bar (in pixels).
@@ -153,16 +153,16 @@ func void Bar_ResizePxl(var int bar, var int x, var int y) {};
 ```
 
 - `bar` - handle returned from `Bar_Create`
-- `x` - new width
-- `y` - new height
+- `x` - new width in pixels
+- `y` - new height in pixels
 
 ## Examples
 !!! Note
     The bars assume a certain basic understanding of the PermMem module. 
 
 ### Display a simple bar
-First we just create a bar that does nothing.
-It should only be half full (or empty?) on the screen.
+As a first example, let's just create a bar that does nothing.
+It should only be half full (or half empty?).
 ```dae
 func void Example_1()
 {
@@ -177,15 +177,15 @@ Bars implement the `Bar` class. It looks like this:
 ```dae
 class Bar
 {
-    var int x;          // X position on screen (middle of bar)
-    var int y;          // Y position on screen (middle of bar)
-    var int barTop;     // Spacing bar - background top/bottom
-    var int barLeft;    // Spacing bar - background left/right
-    var int width;      // Width
-    var int height;     // Height
-    var string backTex; // background texture
+    var int x;          // X position on the screen (middle of the bar)
+    var int y;          // Y position on the screen (middle of the bar)
+    var int barTop;     // Top/bottom margin
+    var int barLeft;    // Left/right margin
+    var int width;      // Bar width
+    var int height;     // Bar height
+    var string backTex; // Background texture
     var string barTex;  // Actual bar texture
-    var int value;      // Start value
+    var int value;      // Current value
     var int valueMax;   // Maximum value
 };
 ```
@@ -207,8 +207,8 @@ prototype GothicBar(Bar)
 ```
 
 It is much easier to set up a new instance using this prototype. `GothicBar` without modifications can be found as the `GothicBar@` instance, which we used to create the bar in the example above.
-`GothicBar` is located in the middle of the screen and looks exactly like the Gothic Underwater Bar.  
-But let us make a bar that hangs in the top left of the picture and displays the experience points.  
+`GothicBar` is located in the middle of the screen and looks exactly like the Gothic underwater bar.  
+But let us make a bar that is located in the top left of the screen and displays players experience points.  
 Derive `GothicBar` again and only change the position. Of course add a loop using the [FrameFunctions](frame_functions.md):
 ```dae
 // Instance created from 
