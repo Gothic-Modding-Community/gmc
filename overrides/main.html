@@ -38,12 +38,16 @@
     {% if i18n_page_locale != "en" and i18n_page_file_locale != i18n_page_locale %}
         <div class="gmc-announce">
             {{ announcement[i18n_page_locale] }}
-            <a href="/gmc/{{ i18n_page_locale }}/contribute/">{{ call_to_action[i18n_page_locale] }}</a>
+            <a href="/gmc/{{ i18n_page_locale }}/contribute/#translations">{{ call_to_action[i18n_page_locale] }}</a>
         </div>
     {% endif %}
     {# Add script with additional localization for use in extra.js #}
     <script>
         const gGMC_SELECT_VERSION = "{{ lang.t('select.version') }}";
+        const gGMC_TRANSLATE_CTA = "{{ call_to_action[i18n_page_locale] }}";
+        const gGMC_PAGE_LOCALE = "{{ i18n_page_locale }}";
+        const gGMC_PAGE_FILE_LOCALE = "{{ i18n_page_file_locale }}";
+        const gGMC_TRANSLATE_SVG = '{% include ".icons/material/web-plus.svg" %}';
     </script>
     {# Include original content after the additions #}
     {{ super() }}

@@ -262,4 +262,7 @@ To support a new language it needs to be added:
 
 #### Add translated pages
 Each `.md` file in the `docs` directory can have a translated version.  
-To add a translation for a given language create a copy with an added language suffix. For example `index.md` will become `index.xx.md` for the `xx` language based on the settings in the `mkdocs.yml` file.
+To add a translation for a given language create a copy with an added language suffix.  
+For example `index.md` will become `index.xx.md` for the `xx` language based on the settings in the `mkdocs.yml` file.
+
+Each untranslated article has the :material-web-plus: button in the upper right corner next to the title. It allows to quickly add the translation via the GitHub interface without the need for local file configuration.

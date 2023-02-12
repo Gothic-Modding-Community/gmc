@@ -216,7 +216,7 @@ Jeżeli praca z _git_ albo Markdown jest nieprzystępna lub niemożliwa to może
 !!! warning "Tylko nowa zawartość po angielsku"
     Ta opcja jest ograniczona tylko dla nowej treści w języku angielskim. Nie możemy wykorzystać tego sposobu dla tłumaczeń. Dla tłumaczeń wyślij [przetłumaczony plik `.md`](#dodaj-przetlumaczone-strony) poprzez [zgłoszenie](#zgloszenia), jeżeli nie chcesz pracować bezpośrednio z _git_, ani dodać pliku poprzez interfejs GitHub.
 
-### Tłumaczenia
+### Tłumaczenia { #translations }
 Żeby dostarczyć wsparcie dla wielu języków, nasza strona korzysta ze wtyczki [MkDocs i18n](https://github.com/ultrabug/mkdocs-static-i18n/).
 
 #### Dodaj wsparcie dla nowego języka
@@ -262,4 +262,7 @@ Jeżeli praca z _git_ albo Markdown jest nieprzystępna lub niemożliwa to może
 
 #### Dodaj przetłumaczone strony { #dodaj-przetlumaczone-strony }
 Każdy plik `.md` w folderze `docs` może mieć przetłumaczoną wersję.  
-Żeby dodać tłumaczenie strony dla danego języka, stwórz kopię strony z dodaną końcówką tego języka. Na przykład `index.md` będzie `index.xx.md` dla języka `xx` bazując na ustawieniach z pliku `mkdocs.yml`.
+Żeby dodać tłumaczenie strony dla danego języka, stwórz kopię strony z dodaną końcówką tego języka. 
+Na przykład `index.md` będzie `index.xx.md` dla języka `xx` bazując na ustawieniach z pliku `mkdocs.yml`.
+
+Każdy nieprzetłumaczony artykuł posiada przycisk :material-web-plus: w górnym prawym rogu obok tytułu. Pozwala na szybkie dodanie tłumaczenia poprzez interfejs serwisu GitHub bez potrzeby konfiguracji plików lokalnie.
