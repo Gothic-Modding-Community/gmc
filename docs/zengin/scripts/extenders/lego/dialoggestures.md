@@ -20,15 +20,15 @@ The full name of the animation can be described as follows:
 ```dae
 DIAG_Prefix + aniName + DIAG_Suffix + ((rand() % (max - (min - 1))) + min).ToString("00");
 ```
-DIAG_Prefix and DIAG_Suffix are user constants.
+`DIAG_Prefix` and `DIAG_Suffix` are [user constants](various/userconstants.md).
 
 ```dae
-func void DIAG(string aniName, int min, int max) {};
+func void DIAG(string AniName, int Min, int Max) {};
 ```
 
-- `aniName` - The new dialogue gesture
-- `min` - Lowest animation number
-- `max` - Highest animation number
+- `AniName` - The new dialogue gesture
+- `Min` - Lowest animation number
+- `Max` - Highest animation number
 
 ### DIAG_Reset
 Resets the dialog gestures to the default.
@@ -36,8 +36,23 @@ Resets the dialog gestures to the default.
 func void DIAG_Reset() {};
 ```
 
+### DIAG_SetAni
+Sets animation directly.
+```dae
+func void DIAG_SetAni(var string AniName) {};
+```
+
+- `AniName` - animation name
+
+### DIAG_SetMinMax
+Sets animation numbers directly.
+```dae
+func void DIAG_SetMinMax(var int min, var int max) {};
+```
+
+- `min` - Lowest animation number
+- `max` - Highest animation number
+
 ## Examples
 !!! Note
-    See Examples in [Trialoge article](trialoge.md#examples).
-
-[//]: <> (@auronen please see if all that explanation in DIAG function is necessary)
+    See Examples in the [Trialoge article](trialoge.md#examples).
