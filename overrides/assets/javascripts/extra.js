@@ -154,13 +154,19 @@ function gmcExpandNavigation() {
         return;
     }
 
-    const activeNav = document.querySelector(".md-nav__link--active");
+    const activeLink = document.querySelector(".md-nav__link--active");
 
-    if (activeNav === null || activeNav.parentElement === null) {
+    if (!activeLink) {
         return;
     }
 
-    const children = activeNav.parentElement.querySelector("nav > ul").children;
+    let activeNav = activeLink.parentElement.querySelector("nav");
+
+    if (!activeNav) {
+        activeNav = activeLink.closest("nav");
+    }
+
+    const children = activeNav.querySelector("ul").children;
 
     for (let i = 0; i < children.length; i++) {
         const toggle = children[i].querySelector('input[type="checkbox"]');
