@@ -198,6 +198,9 @@ extra:
 markdown_extensions:
   - toc:
       permalink: ""
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - admonition
   - pymdownx.caret
   - pymdownx.details
