@@ -9,7 +9,7 @@ To inject a script, simply put a `.d` or `.src` file in `Gothic/System/Autorun` 
 Scripts in subdirectories can be accessed in two ways
 
 1. They are specified in a `.src` file
-2. The script file is an [API script](#API-script)
+2. The script file is an [API script](#api-script)
 
 ## API script
 API scripts are `.d` files placed in `Autorun` subdirectories and are used as a dependency.
