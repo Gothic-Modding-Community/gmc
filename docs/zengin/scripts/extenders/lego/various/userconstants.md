@@ -1,30 +1,30 @@
 # User constants
-All constants that the user can either use or even change freely are definied if [Userconst.d](https://github.com/Lehona/LeGo/blob/dev/Userconst.d) file.
+All constants that the user can either use or even change freely are defined in [Userconst.d](https://github.com/Lehona/LeGo/blob/dev/Userconst.d) file.
 
 ## Read only
 These constants may only be used, not changed.
 
 ### Anim8
-These constants are used by [Anim8](../anim8.md#anim8-1) and [Anim8q](../anim8.md#anim8q).
+These constants are used by [Anim8](../anim8.md#anim8_1) and [Anim8q](../anim8.md#anim8q).
 
-- `A8_Constant` - Constant motion form
+- `A8_Constant` - Constant movement speed
 - `A8_SlowEnd` - Evenly decelerated movement
-- `A8_SlowStart` - Uniformly accelerated movement
+- `A8_SlowStart` - Evenly accelerated movement
 - `A8_Wait` - Do nothing. The target value is ignored here
 
 ### Buttons
 The following bit masks can be applied to the status of a button:
 
 - `int BUTTON_ACTIVE` - The button is active, it reacts to the mouse
-- `int BUTTON_ENTERED` - The mouse is "inside" the button
+- `int BUTTON_ENTERED` - The mouse is "within" the button
 
 ### Interface
 Dimensions:
 
-- `PS_X`, `PS_Y` - Use with Print_Screen or Print_ToVirtual
+- `PS_X`, `PS_Y` - Use with `Print_Screen` or `Print_ToVirtual` functions
 - `PS_VMax` - Highest possible value of a virtual coordinate
 
-16 basic colors that can be used as zColor parameters:
+16 basic colors that can be used as `zColor` parameters:
 
 - `COL_Aqua`
 - `COL_Black`
@@ -60,7 +60,7 @@ These constants are sent with Cursor_Event:
 - `CUR_WheelUp` - Mouse wheel up
 - `CUR_WheelDown` - Mouse wheel down
 
-## Modify
+## Modifiable
 These constants are often used by packages and may be changed freely.
 
 ### Bloodsplats
@@ -68,14 +68,12 @@ This constant is only used in [Bloodsplats_Rage](../bloodsplats.md#bloodsplats_r
 
 - `Bloodsplat_Num` - Maximum number on screen
 
-These constants are used in Bloodsplat:
-
-- `Bloodsplat_Tex` - Highest Texturid ( "BLOODSPLAT" + texID + ".TGA" )
-- `Bloodsplat_Dam` - Texture size damage multiplier ( damage * 2^Bloodsplat_Dam )
+- `Bloodsplat_Tex` - Highest Texture ID (`"BLOODSPLAT" + texID + ".TGA"`)
+- `Bloodsplat_Dam` - Texture size damage multiplier (`damage * 2`^`Bloodsplat_Dam`^)
 
 ### Cursor
 
-- `Cursor_Texture` - This texture is used to display the cursor (default:"CURSOR.TGA")
+- `Cursor_Texture` - This texture is used to display the cursor (default: "CURSOR.TGA")
 
 ### Interface
 
