@@ -200,6 +200,7 @@ markdown_extensions:
   - toc:
       permalink: ""
   - admonition
+  - pymdownx.caret
   - pymdownx.details
   - pymdownx.highlight:
       linenums: true

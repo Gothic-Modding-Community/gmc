@@ -18,86 +18,86 @@ LeGo_Init(LeGo_Bars);
 ## Functions
 
 !!! Note
-    If the `GothicBar@` prototype is selected as the initial type, the user's own bars are visually indistinguishable from those used in Gothic.
+    If the `GothicBar` prototype is selected as the initial type (`GothicBar@` as the constructor), the user's own bars are visually indistinguishable from those used in Gothic.
 
 ### Bar_Create
 Creates a new bar from a constructor instance.
 ```dae
-func int Bar_Create(var int bar) {};
+func int Bar_Create(var int inst) {};
 ```
 
-- `bar` - constructor instance of `Bar` class
+- `inst` - constructor instance of `Bar` class
 - `return` - handle to the new bar 
 
 ### Bar_Delete
 Deletes a bar from the screen and from memory. 
 ```dae
-func void Bar_Delete(var int handle) {};
+func void Bar_Delete(var int bar) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
+- `bar` - handle returned from `Bar_Create`
 
 ### Bar_SetMax
 Changes a bar's maximum value but does not update its bar length (only `Bar_SetPercent`, `Bar_SetPromille` and `Bar_SetValue`)
 ```dae
-func void Bar_SetMax(var int handle, var int max) {};
+func void Bar_SetMax(var int bar, var int max) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
+- `bar` - handle returned from `Bar_Create`
 - `max` - the new maximum value
 
 ### Bar_SetValue
 Sets the value of the bar.
 ```dae
-func void Bar_SetValue(var int handle, var int value) {};
+func void Bar_SetValue(var int bar, var int val) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
-- `value` - new value of the bar
+- `bar` - handle returned from `Bar_Create`
+- `val` - new value of the bar
 
 ### Bar_SetPercent
 Sets the value of the bar but as a percentage (0..100).
 ```dae
-func void Bar_SetPercent(var int handle, var int percent) {};
+func void Bar_SetPercent(var int bar, var int perc) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
-- `percent` - new value of the bar in percent
+- `bar` - handle returned from `Bar_Create`
+- `perc` - new value of the bar in percent
 
 ### Bar_SetPromille
 Sets the value of the bar but per mille (0..1000).
 ```dae
-func void Bar_SetPromille(var int handle, var int promille) {};
+func void Bar_SetPromille(var int bar, var int pro) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
-- `promille` - new value of the bar in per mille
+- `bar` - handle returned from `Bar_Create`
+- `pro` - new value of the bar in per mille
 
 ### Bar_Hide
 Hides a bar. It will not be deleted. 
 ```dae
-func void Bar_Hide(var int handle) {};
+func void Bar_Hide(var int bar) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
+- `bar` - handle returned from `Bar_Create`
 
 ### Bar_Show
 Displays a bar again after using `Bar_Hide`. 
 ```dae
-func void Bar_Show(var int handle) {};
+func void Bar_Show(var int bar) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
+- `bar` - handle returned from `Bar_Create`
 
 ### Bar_MoveTo
 Move the bar to virtual position. 
 ```dae
-func void Bar_MoveTo(var int handle, var int x, var int y) {};
+func void Bar_MoveTo(var int bar, var int x, var int y) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
-- `x` - new horizontal position
-- `y` - new vertical position
+- `bar` - handle returned from `Bar_Create`
+- `x` - new horizontal position in virtual coordinates
+- `y` - new vertical position in virtual coordinates
 
 ### Bar_MoveToPxl
 Move the bar to pixel position. 
@@ -105,46 +105,46 @@ Move the bar to pixel position.
 func void Bar_MoveToPxl(var int bar, var int x, var int y) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
-- `x` - new horizontal position
-- `y` - new vertical position
+- `bar` - handle returned from `Bar_Create`
+- `x` - new horizontal position in pixels
+- `y` - new vertical position in pixels
 
 ### Bar_SetAlpha
-Sets the opacity of the bar.
+Sets the transparency of the bar.
 ```dae
-func void Bar_SetAlpha(var int handle, var int alpha) {};
+func void Bar_SetAlpha(var int bar, var int alpha) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
+- `bar` - handle returned from `Bar_Create`
 - `alpha` - transparency value (0..255) 
 
 ### Bar_SetBarTexture
 Sets the foreground texture of the bar.
 ```dae
-func void Bar_SetBarTexture(var int handle, var string texture) {};
+func void Bar_SetBarTexture(var int bar, var string barTex) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
-- `texture` - the new foreground texture
+- `bar` - handle returned from `Bar_Create`
+- `barTex` - the new foreground texture
 
 ### Bar_SetBackTexture
 Sets the background texture of the bar.
 ```dae
-func void Bar_SetBackTexture(var int handle, var string texture) {};
+func void Bar_SetBackTexture(var int bar, var string backTex) {};
 ```
 
-- `handle` - handle returned from `Bar_Create`
-- `texture` - The new background texture
+- `bar` - handle returned from `Bar_Create`
+- `backTex` - The new background texture
 
 ### Bar_Resize
-Resize existing bar.
+Resize an existing bar.
 ```dae
 func void Bar_Resize(var int bar, var int width, var int height) {};
 ```
 
 - `bar` - handle returned from `Bar_Create`
-- `width` - new width
-- `height` - new height
+- `width` - new width in virtual coordinates
+- `height` - new height in virtual coordinates
 
 ### Bar_ResizePxl
 Resize existing bar (in pixels).
@@ -153,16 +153,16 @@ func void Bar_ResizePxl(var int bar, var int x, var int y) {};
 ```
 
 - `bar` - handle returned from `Bar_Create`
-- `width` - new width
-- `height` - new height
+- `x` - new width in pixels
+- `y` - new height in pixels
 
 ## Examples
 !!! Note
     The bars assume a certain basic understanding of the PermMem module. 
 
 ### Display a simple bar
-First we just create a bar that does nothing.
-It should only be half full (or empty?) on the screen.
+As a first example, let's just create a bar that does nothing.
+It should only be half full (or half empty?).
 ```dae
 func void Example_1()
 {
@@ -170,22 +170,22 @@ func void Example_1()
     Bar_SetPercent(bar, 50);                   // And set the value to 50%
 };
 ```
-Finished. Without any settings? And what is `GothicBar`? Let's take a look at a more elaborate example.
+Finished. Without any settings? And what is `GothicBar@`? Let's take a look at a more elaborate example.
 
 ### A dedicated experience bar
 Bars implement the `Bar` class. It looks like this:
 ```dae
 class Bar
 {
-    var int x;          // X position on screen (middle of bar)
-    var int y;          // Y position on screen (middle of bar)
-    var int barTop;     // Spacing bar - background top/bottom
-    var int barLeft;    // Spacing bar - background left/right
-    var int width;      // Width
-    var int height;     // Height
-    var string backTex; // background texture
+    var int x;          // X position on the screen (middle of the bar)
+    var int y;          // Y position on the screen (middle of the bar)
+    var int barTop;     // Top/bottom margin
+    var int barLeft;    // Left/right margin
+    var int width;      // Bar width
+    var int height;     // Bar height
+    var string backTex; // Background texture
     var string barTex;  // Actual bar texture
-    var int value;      // Start value
+    var int value;      // Current value
     var int valueMax;   // Maximum value
 };
 ```
@@ -206,10 +206,10 @@ prototype GothicBar(Bar)
 };
 ```
 
-It is much easier to set up a new instance using this prototype. Standard vanilla status bar  can be easily created using the `GothicBar` instance, as seen in the example below.  
-GothicBar is located in the middle of the screen and looks exactly like the Gothic Underwater Bar.  
-But let us make a bar that hangs in the top left of the picture and displays the experience points.  
-Derive again GothicBar and only change the position. Of course add a loop using the [FrameFunctions](frame_functions.md):
+It is much easier to set up a new instance using this prototype. `GothicBar` without modifications can be found as the `GothicBar@` instance, which we used to create the bar in the example above.
+`GothicBar` is located in the middle of the screen and looks exactly like the Gothic underwater bar.  
+But let us make a bar that is located in the top left of the screen and displays players experience points.  
+Derive `GothicBar` again and only change the position. Of course add a loop using the [FrameFunctions](frame_functions.md):
 ```dae
 // Instance created from 
 instance Bar_1(GothicBar)
@@ -240,4 +240,4 @@ func void Loop_1()
 };
 ```
 !!! Note
-    This is translation of article originally written by Gottfried and Lehona and hosted on LeGo's official documentation [website](https://lego.worldofplayers.de/?Beispiele_Bars)
+    This is translation of article originally written by Gottfried and Lehona and hosted on LeGo's official documentation [website](https://lego.worldofplayers.de/?Beispiele_Bars).
