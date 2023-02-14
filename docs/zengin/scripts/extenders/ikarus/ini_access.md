@@ -98,3 +98,51 @@ func void MEM_ApplyGothOpt() {};
     If you introduce new options, it is best to follow certain practices. It is a good practice to name your options clearly an place them in a section named the same as your mod. Do not place your mod options into the `[GAME]` or `[PERFORMANCE]` sections.
 
 
+## Key functions
+The `Gothic.ini` contains the assignment of physical keys (e.g. "W") to logical keys (e.g. "keyUp").
+
+### MEM_GetKey
+Returns a first key assigned to logical key.
+```dae
+func int MEM_GetKey (var string name) {};
+```
+
+- `name` - name of the logical key
+- `return` - key assigned to logical key
+
+### MEM_GetSecondaryKey
+Returns a secondary key assigned to logical key.
+```dae
+func int MEM_GetSecondaryKey(var string name) {};
+```
+
+- `name` - name of the logical key
+- `return` - key assigned to logical key
+
+### MEM_SetKeys
+Sets a logical key to the keys on keyboard.
+```dae
+func void MEM_SetKeys(var string name, var int primary, var int secondary) {};
+```
+
+- `name` - name of the logical key
+- `primary` - primary key to be assigned, can be taken from Ikarus_Const_G1/G2 file.
+- `secondary` - secondary key to be assigned, can be taken from Ikarus_Const_G1/G2 file.
+
+### MEM_SetKey
+Sets a logical key to the key on keyboard.
+```dae
+func void MEM_SetKey(var string name, var int key) {};
+```
+
+- `name` - name of the logical key
+- `key` - primary key to be assigned, can be taken from Ikarus_Const_G1/G2 file.
+
+### MEM_SetSecondaryKey
+Sets a logical key to the keys on keyboard.
+```dae
+func void MEM_SetSecondaryKey(var string name, var int key) {};
+```
+
+- `name` - name of the logical key
+- `key` - secondary key to be assigned, can be taken from Ikarus_Const_G1/G2 file.

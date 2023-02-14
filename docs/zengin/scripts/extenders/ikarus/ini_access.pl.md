@@ -97,4 +97,51 @@ func void MEM_ApplyGothOpt() {};
 !!! Tip
     Jeśli wprowadzasz nowe opcje, najlepiej kierować się paroma zasadami. Dobrą praktyką jest nazywanie swoich opcji tak aby inni mogli je zrozumieć i umieszczanie ich w sekcji o takiej samej nazwie jak twój mod. Nie umieszczaj opcji swojej modyfikacji w sekcji `[GAME]` lub `[PERFORMANCE]`.
 
+## Funkcje klawiszy
+`Gothic.ini` zawiera przypisanie klawiszy fizycznych (np. "W") do klawiszy logicznych (np. "keyUp").
 
+### MEM_GetKey
+Zwraca pierwszy klawisz przypisany do klawisza logicznego.
+```dae
+func int MEM_GetKey (var string name) {};
+```
+
+- `name` - nazwa klawisza logicznego
+- `return` - klawisz przypisany do klawisza logicznego
+
+### MEM_GetSecondaryKey
+Zwraca drugi klawisz przypisany do klawisza logicznego.
+```dae
+func int MEM_GetSecondaryKey(var string name) {};
+```
+
+- `name` - nazwa klawisza logicznego
+- `return` - klawisz przypisany do klawisza logicznego
+
+### MEM_SetKeys
+Przypisuje klawisze logiczne do klawiszy na klawiaturze.
+```dae
+func void MEM_SetKeys(var string name, var int primary, var int secondary) {};
+```
+
+- `name` - nazwa klawisza logicznego
+- `primary` - pierwszy klawisz do przypisania, można go pobrać z pliku Ikarus_Const_G1/G2.
+- `secondary` - drugi klawisz do przypisania, można go pobrać z pliku Ikarus_Const_G1/G2.
+
+### MEM_SetKey
+Przypisuje podstawowy klawisz logiczny do klawisza na klawiaturze.
+```dae
+func void MEM_SetKey(var string name, var int key) {};
+```
+
+- `name` - nazwa klawisza logicznego
+- `key` - podstawowy klawisz do przypisania, można go pobrać z pliku Ikarus_Const_G1/G2.
+
+### MEM_SetSecondaryKey
+Przypisuje drugi klawisz logiczny do klawisza na klawiaturze.
+```dae
+func void MEM_SetSecondaryKey(var string name, var int key) {};
+```
+
+- `name` - name of the logical key
+- `key` - drugi klawisz do przypisania, można go pobrać z pliku Ikarus_Const_G1/G2.
