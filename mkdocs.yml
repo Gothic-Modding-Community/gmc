@@ -8,6 +8,9 @@ edit_uri: edit/main/docs/
 watch:
   - overrides
 
+hooks:
+  - overrides/.hooks/language_flags.py
+
 theme:
   name: material
   custom_dir: overrides
