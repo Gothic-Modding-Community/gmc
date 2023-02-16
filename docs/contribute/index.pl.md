@@ -3,14 +3,14 @@
 [git-download]: https://git-scm.com/downloads
 [python-download]: https://www.python.org/downloads/
 
-# Jak Się Udzielić
+# Jak się udzielić
 Gothic Modding Community jest projektem napędzanym przed społeczność. Zachęcamy osoby do wnoszenia swojego wkładu.
 
 Ta strona jest budowana przy pomocy statycznego generatora stron [MkDocs](https://www.mkdocs.org/) oraz skórki [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), wraz z wieloma innymi wtyczkami do MkDocs.
 
 Zależnie od skali i typu kontrybucji, trzeba spełnić inne wymagania wstępne.
 
-## Zgłoszenia { #zgloszenia }
+## Zgłoszenia
 Po angielsku można zgłosić problem lub inny komentarz o funkcjonowaniu strony poprzez [otworzenie problemu (ang. issue)](https://github.com/Gothic-Modding-Community/gmc/issues) na serwisie GitHub albo [dołącz do nas][gmc-discord] na platformie Discord.
 
 ## Wkład bezpośredni
@@ -23,7 +23,7 @@ Wkład bezpośredni wykonuje się poprzez stworzenie kopii tego repozytorium (an
     Pliki źródłowe artykułów są pisane wykorzystując format plików [Markdown](https://pl.wikipedia.org/wiki/Markdown) `.md` ([Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet)). Poza tym ta strona wykorzystuje wtyczkę [Python Markdown Extensions](https://python-markdown.github.io/extensions/), która rozszerza składnię o dodatkowe zasady pozwalające na wstawienie [wzmianek](https://python-markdown.github.io/extensions/admonition/) jak ta, którą właśnie czytasz.
 
 ### Mniejsze zmiany
-Mniejsze zmiany, jak poprawianie błędów ortograficzny, gramatycznych, czy usuwanie/dodawanie słów do akapitów w _jednym_ pliku, mogą być zrobione szybko poprzez kliknięcie ikony z długopisem w prawym górnym rogu artykułu. Otworzy to interfejs edytowania pliku w serwisie GitHub, które po zapisaniu zmian, automatycznie utworzy kopię (ang. fork) oraz gałąź (ang. brach) z łatką, a następnie otworzy prośbę o połączenie (ang. pull request) względem gałęzi `dev`.
+Mniejsze zmiany, jak poprawianie błędów ortograficzny, gramatycznych, czy usuwanie/dodawanie słów do akapitów w _jednym_ pliku, mogą być zrobione szybko poprzez kliknięcie przycisku :material-file-edit-outline: w prawym górnym rogu artykułu. Otworzy to interfejs edytowania pliku w serwisie GitHub, które po zapisaniu zmian, automatycznie utworzy kopię (ang. fork) oraz gałąź (ang. brach) z łatką, a następnie otworzy prośbę o połączenie (ang. pull request) względem gałęzi `dev`.
 
 !!! warning "Poprawna gałąź dla prośby o połączenie"  
     Upewnij się, że prośba o połączenie (ang. pull request) jest skierowana do gałęzi [`dev`](https://github.com/Gothic-Modding-Community/gmc/tree/dev) albo specjalnej gałęzi `pre-merge`, a nie do gałęzi `main`.
@@ -210,13 +210,22 @@ set GMC_ONLY_DEFAULT_LANG=True
 mkdocs serve
 ```
 
+#### Wydajność budowy strony
+Aby przyśpieszyć proces budowy strony podczas pracy, upewnij się, że tylko 1 język jest budowany i rozważ użycie opcji `--dirtyreload`:
+
+```bash
+mkdocs serve --dirtyreload
+```
+
+To sprawi, że tylko zmienione pliki `.md` będą na nowo budowane. Jednakże, zmiany plików szablonowych (ang. template) w folderze `overrides` nie będą widoczne, ponieważ takie zmiany wymagają pełnej przebudowy.
+
 ### Prześlij plik
 Jeżeli praca z _git_ albo Markdown jest nieprzystępna lub niemożliwa to możesz przesłać plik w formacie [Google Docs](https://docs.google.com/document/create) na [serwer Discord GMC][gmc-discord], sformatujemy go i dodamy treść do strony.
 
 !!! warning "Tylko nowa zawartość po angielsku"
-    Ta opcja jest ograniczona tylko dla nowej treści w języku angielskim. Nie możemy wykorzystać tego sposobu dla tłumaczeń. Dla tłumaczeń wyślij [przetłumaczony plik `.md`](#dodaj-przetlumaczone-strony) poprzez [zgłoszenie](#zgloszenia), jeżeli nie chcesz pracować bezpośrednio z _git_, ani dodać pliku poprzez interfejs GitHub.
+    Ta opcja jest ograniczona tylko dla nowej treści w języku angielskim. Nie możemy wykorzystać tego sposobu dla tłumaczeń. Dla tłumaczeń wyślij [przetłumaczony plik `.md`](#dodaj-przetłumaczone-strony) poprzez [zgłoszenie](#zgłoszenia), jeżeli nie chcesz pracować bezpośrednio z _git_, ani dodać pliku poprzez interfejs GitHub.
 
-### Tłumaczenia
+### Tłumaczenia { #translations }
 Żeby dostarczyć wsparcie dla wielu języków, nasza strona korzysta ze wtyczki [MkDocs i18n](https://github.com/ultrabug/mkdocs-static-i18n/).
 
 #### Dodaj wsparcie dla nowego języka
@@ -260,6 +269,9 @@ Jeżeli praca z _git_ albo Markdown jest nieprzystępna lub niemożliwa to może
 3. Odwiedź [oficjalną stronę skórki](https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/).
     Upewnij się, że tłumaczenie skórki jest tam kompletne. Jeżeli nie jest, podążaj według poradnika kontrybucji skórki i wróć tutaj, nie trzeba czekać na zmiany w skórce.
 
-#### Dodaj przetłumaczone strony { #dodaj-przetlumaczone-strony }
+#### Dodaj przetłumaczone strony
 Każdy plik `.md` w folderze `docs` może mieć przetłumaczoną wersję.  
-Żeby dodać tłumaczenie strony dla danego języka, stwórz kopię strony z dodaną końcówką tego języka. Na przykład `index.md` będzie `index.xx.md` dla języka `xx` bazując na ustawieniach z pliku `mkdocs.yml`.
+Żeby dodać tłumaczenie strony dla danego języka, stwórz kopię strony z dodaną końcówką tego języka. 
+Na przykład `index.md` będzie `index.xx.md` dla języka `xx` bazując na ustawieniach z pliku `mkdocs.yml`.
+
+Każdy nieprzetłumaczony artykuł posiada przycisk :material-web-plus: w górnym prawym rogu obok tytułu. Pozwala na szybkie dodanie tłumaczenia poprzez interfejs serwisu GitHub bez potrzeby konfiguracji plików lokalnie.

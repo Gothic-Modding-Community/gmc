@@ -48,6 +48,7 @@ Initializes the random number generator. Happens optionally in `LeGo_Init`.
 ```dae
 func void r_Init(int seed) {};
 ```
+
 - `initVal` - seed value
 
 ### r_DefaultInit

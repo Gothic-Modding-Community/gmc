@@ -23,7 +23,7 @@ Direct contribution is made via creating a copy of this repository (a fork) and 
     The source files for the articles are written using the [Markdown](https://en.wikipedia.org/wiki/Markdown) `.md` file format ([Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet)). Other than that, this site also uses [Python Markdown Extensions](https://python-markdown.github.io/extensions/) which add more syntax rules like indented [admonitions](https://python-markdown.github.io/extensions/admonition/).
 
 ### Minor changes
-Minor changes like fixing typos, grammatical errors or removing/adding words to paragraphs in a _single_ file can be done quickly with the pen button in the upper right corner of each article. This will open up a GitHub editing interface which will create a fork with a patch branch after modifying the file and guide the user to open up the pull request.
+Minor changes like fixing typos, grammatical errors or removing/adding words to paragraphs in a _single_ file can be done quickly with the :material-file-edit-outline: button in the upper right corner of each article. This will open up a GitHub editing interface which will create a fork with a patch branch after modifying the file and guide the user to open up the pull request.
 
 !!! warning "Select the correct branch for the pull request"  
     Make sure that the pull request is directed towards the [`dev`](https://github.com/Gothic-Modding-Community/gmc/tree/dev) or a special `pre-merge` branch and not the `main` branch.
@@ -185,7 +185,7 @@ In order to work locally:
     
     This command allows to check, if there are any changes in the project compared to the `upstream` repository.
 
-#### Build Preferences
+#### Build preferences
 While working with the project, it's possible to set various environmental variables to configure it to your own preferences:
 
 - `GMC_DEFAULT_LANG` - is a 2-character language identifier (it must be present in the `mkdocs.yml` file), it sets the default language of the site
@@ -209,6 +209,15 @@ set GMC_DEFAULT_LANG=en
 set GMC_ONLY_DEFAULT_LANG=True
 mkdocs serve
 ```
+
+#### Build performance
+To speed up the build process during development make sure that only 1 language is built, and consider using the `--dirtyreload` option:
+
+```bash
+mkdocs serve --dirtyreload
+```
+
+This will cause only changed `.md` files to rebuild. However, if you make changes to a template in the `overrides` directory, no changes will be visible after the rebuild, because template modification requires a full rebuild.
 
 ### Submit a file
 If working with _git_ or Markdown is not viable or possible for you, you can submit files in a [Google Docs](https://docs.google.com/document/create) format on the [GMC Discord server][gmc-discord] and we will format and upload it to the page.
@@ -262,4 +271,7 @@ To support a new language it needs to be added:
 
 #### Add translated pages
 Each `.md` file in the `docs` directory can have a translated version.  
-To add a translation for a given language create a copy with an added language suffix. For example `index.md` will become `index.xx.md` for the `xx` language based on the settings in the `mkdocs.yml` file.
+To add a translation for a given language create a copy with an added language suffix.  
+For example `index.md` will become `index.xx.md` for the `xx` language based on the settings in the `mkdocs.yml` file.
+
+Each untranslated article has the :material-web-plus: button in the upper right corner next to the title. It allows to quickly add the translation via the GitHub interface without the need for local file configuration.

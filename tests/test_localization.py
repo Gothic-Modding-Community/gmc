@@ -28,7 +28,7 @@ class LocalizationTest(unittest.TestCase):
         # The default safe loader doesn't handle values containing !, they're not needed for localization
         # for the exception of !ENV which are important
         lines = [regex.sub(r"!ENV.*,\s*?(\w+)\]", r"\g<1>", line) for line in lines]
-        output = "\n".join([regex.sub(r"!.*", "false", line) for line in lines])
+        output = "\n".join([regex.sub(r"!.*", "", line) for line in lines])
 
         for plugin in yaml.safe_load(output)["plugins"]:
             if isinstance(plugin, dict):

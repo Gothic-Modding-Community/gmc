@@ -5,6 +5,12 @@ repo_name: Gothic-Modding-Community/gmc
 repo_url: https://github.com/Gothic-Modding-Community/gmc/
 edit_uri: edit/main/docs/
 
+watch:
+  - overrides
+
+hooks:
+  - overrides/.hooks/language_flags.py
+
 theme:
   name: material
   custom_dir: overrides
@@ -195,6 +201,9 @@ extra:
 markdown_extensions:
   - toc:
       permalink: ""
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - admonition
   - pymdownx.caret
   - pymdownx.details
@@ -207,7 +216,7 @@ markdown_extensions:
       line_spans: example
   - pymdownx.inlinehilite
   - pymdownx.snippets:
-      base_path: ['./docs/assets/sources/']
+      base_path: ['./overrides/.snippets/']
       check_paths: true
       url_download: true
       url_max_size: 5000000

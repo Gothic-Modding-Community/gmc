@@ -99,11 +99,14 @@ let gWindowLang = window.location.href.split("/")[gLangHrefOffset];
 
 window.addEventListener("DOMContentLoaded", _ => {
     gMarkCodeLineManager.setElement();
-    gmcExpandNavigation();
-    gmcExternalLinks();
     gmc404Redirect();
+    gmcExpandNavigation();
     gmcAddVersionToggle();
     gmcLinksForVersion();
+    if (gGMC_PAGE_LOCALE !== "en" && gGMC_PAGE_LOCALE !== gGMC_PAGE_FILE_LOCALE) {
+        gmcTranslateButton();
+    }
+    gmcExternalLinks();
     new MutationObserver(gmcSearchMutationCallback)
         .observe(document.querySelector(".md-search-result__list"), {childList: true});
 });
@@ -154,13 +157,19 @@ function gmcExpandNavigation() {
         return;
     }
 
-    const activeNav = document.querySelector(".md-nav__link--active");
+    const activeLink = document.querySelector(".md-nav__link--active");
 
-    if (activeNav === null || activeNav.parentElement === null) {
+    if (!activeLink) {
         return;
     }
 
-    const children = activeNav.parentElement.querySelector("nav > ul").children;
+    let activeNav = activeLink.parentElement.querySelector("nav");
+
+    if (!activeNav) {
+        activeNav = activeLink.closest("nav");
+    }
+
+    const children = activeNav.querySelector("ul").children;
 
     for (let i = 0; i < children.length; i++) {
         const toggle = children[i].querySelector('input[type="checkbox"]');
@@ -307,6 +316,49 @@ const gmcLinksForVersion = () => {
         anchor.href = anchor.href.replace("/main/", "/dev/");
     }
 };
+
+const gmcTranslateButton = () => {
+    const anchor = document.querySelectorAll("a.md-content__button")[0];
+    const hrefParts = anchor.href.split("/");
+    const oldFileName = hrefParts.pop();
+    const newFileName = oldFileName.replace(".md", `.${gGMC_PAGE_LOCALE}.md`);
+    const topDirectory = hrefParts.pop();
+    const newURLBase = hrefParts.join("/").replace("/edit/", "/new/");
+    const fileNameParam = encodeURIComponent(`${topDirectory}/${newFileName}`);
+    const messageFileName = oldFileName === "index.md" ? `${topDirectory}/index.md` : oldFileName;
+    const messageParam = encodeURIComponent(`Add \`${gGMC_PAGE_LOCALE}\` translation for \`${messageFileName}\``);
+    const valueParam = encodeURIComponent([
+        "Open the `Preview` tab to display with better formatting",
+        "## Overview",
+        "This method of translation is for those that don't want to setup the project files.",
+        "The file name and commit message are already set, best not to change them.",
+        "Due to technical limitations you need to copy the English base contents yourself.",
+        "Before you do that please make sure that:",
+        "",
+        "- there are no open [Issues](https://github.com/Gothic-Modding-Community/gmc/issues) concerning the same files,",
+        "- there are no open [Pull Requests](https://github.com/Gothic-Modding-Community/gmc/pulls) concerning the same files,",
+        "- `Spaces` and `4` are selected in the upper right corner of the editor in the `Edit new file` tab,",
+        "- you've read our [contribution guidelines](https://gothic-modding-community.github.io/gmc/contribute/).",
+        "",
+        "---",
+        "",
+        "### English File",
+        "Here is the link to the English file:",
+        anchor.href.replace("/edit/", "/raw/"),
+        "Copy the contents and in the `Edit new file` tab, replace these instructions with them.",
+        "",
+        "#### *Note*",
+        "*Please note that this page **won't** preserve your changes in real time like Google Docs.*",
+        "*Until you press the green button below nothing will be saved, so be sure not to lose progress.*",
+    ].join("  \n"));
+    const newAnchor = document.createElement("a");
+    newAnchor.classList = anchor.classList;
+    // Weird quirk. The topDirectory needs to be in both, the link and in the filename param to put the file in the correct directory.
+    newAnchor.href = `${newURLBase}/${topDirectory}?filename=${fileNameParam}&message=${messageParam}&value=${valueParam}`;
+    newAnchor.innerHTML = gGMC_TRANSLATE_SVG;
+    newAnchor.title = gGMC_TRANSLATE_CTA;
+    anchor.parentElement.prepend(newAnchor);
+}
 
 function gmcDebug(...message) {
     if (gGMC_LOCAL)
