@@ -129,6 +129,18 @@ div.md-nav__link--index {
     display: table;
 }
 
+/* override language selector */
+.md-select button img.twemoji {
+    height: 1.2rem;
+    vertical-align: middle;
+}
+
+.md-select__link img.twemoji {
+    height: 1rem;
+    vertical-align: text-bottom;
+    margin-right: 1%;
+}
+
 /* endregion */
 
 /* region video container */
