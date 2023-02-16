@@ -1,7 +1,7 @@
 # Elementary memory access
 This part of Ikarus make possible Reading and writing Integers, Strings, Arrays and Bytes.
 
-If address <= 0, an error is thrown. Otherwise, an attempt is made to read or write at this address.
+If `address <= 0`, an error is thrown. Otherwise, an attempt is made to read or write at this address.
 If the address is in an invalid range, for example in a
 code segment, there is an access violation (Gothic crashes).
 In the case of string operations, it is also necessary that at the specified position
@@ -94,7 +94,7 @@ func void MEM_WriteString (var int address, var string val) {};
 
 ### MEM_WriteByte
 Only the byte at address `adr` is changed here, not a whole four-byte word. That is, the three subsequent bytes remain untouched.
-If 0 <= val < 256 does not apply in MEM_WriteByte, a warning is issued and val is trimmed accordingly. In particular, shouldn't be negative numbers are passed.
+If `0 <= val < 256` does not apply in `MEM_WriteByte`, a warning is issued and val is trimmed accordingly. In particular, shouldn't be negative numbers are passed.
 ```dae
 func void MEM_WriteByte (var int adr, var int val) {};
 ```

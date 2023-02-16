@@ -1,4 +1,4 @@
-# Confguratio file access
+# Configuration file access
 This part of Ikarus gives you access to `Gothic.ini` and loaded mod configuration files.
 
 ## Initialization
@@ -95,14 +95,14 @@ func void MEM_ApplyGothOpt() {};
 ```
 
 !!! Tip
-    If you introduce new options, it is best to follow certain practices. It is a good practice to name your options clearly an place them in a section named the same as your mod. Do not place your mod options into the `[GAME]` or `[PERFORMANCE]` sections.
+    If you introduce new options, it is best to follow certain practices. It is a good practice to name your options in a clear manner and place them in a section named the same as your mod. Do not place your mod options into the `[GAME]` or `[PERFORMANCE]` sections.
 
 
 ## Key functions
 The `Gothic.ini` contains the assignment of physical keys (e.g. "W") to logical keys (e.g. "keyUp").
 
 ### MEM_GetKey
-Returns a first key assigned to logical key.
+Returns the primary key assigned to logical key.
 ```dae
 func int MEM_GetKey (var string name) {};
 ```
@@ -120,7 +120,7 @@ func int MEM_GetSecondaryKey(var string name) {};
 - `return` - key assigned to logical key
 
 ### MEM_SetKeys
-Sets a logical key to the keys on keyboard.
+Sets keyboard keys of the logical key.
 ```dae
 func void MEM_SetKeys(var string name, var int primary, var int secondary) {};
 ```
@@ -130,7 +130,7 @@ func void MEM_SetKeys(var string name, var int primary, var int secondary) {};
 - `secondary` - secondary key to be assigned, can be taken from Ikarus_Const_G1/G2 file.
 
 ### MEM_SetKey
-Sets a logical key to the key on keyboard.
+Sets the primary keyboard key of the logical key.
 ```dae
 func void MEM_SetKey(var string name, var int key) {};
 ```
@@ -139,7 +139,7 @@ func void MEM_SetKey(var string name, var int key) {};
 - `key` - primary key to be assigned, can be taken from Ikarus_Const_G1/G2 file.
 
 ### MEM_SetSecondaryKey
-Sets a logical key to the keys on keyboard.
+Sets the secondary keyboard key of the logical key.
 ```dae
 func void MEM_SetSecondaryKey(var string name, var int key) {};
 ```

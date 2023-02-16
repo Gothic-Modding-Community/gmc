@@ -15,7 +15,7 @@ func void MEM_InitAll () {};
 
 ## Functions
 !!! Tip
-    Different players use different keys for specific actions! But it is possible to get key assigned to the action from Gothic.ini. See [Ini access](ini_access.md#key-functions)
+    Different players use different keys for specific actions! However, it is possible to get key assigned to the action from Gothic.ini. See [Ini access](ini_access.md#key-functions)
 ### MEM_KeyState
 Returns the state of the `key`.
 ```dae
@@ -34,7 +34,7 @@ func int MEM_KeyState(var int key) {};
 
 KEY_PRESSED or KEY_RELEASED will be returned if the state of the key has changed since the last query.
 
-KEY_UP or KEY_HOLD are returned if the state does not has changed.
+KEY_UP or KEY_HOLD are returned if the state has not changed.
 
 ### MEM_InsertKeyEvent
 Makes the game think that the key was pressed.

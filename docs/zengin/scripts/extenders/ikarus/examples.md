@@ -1,5 +1,5 @@
 # Ikarus examples
-Here is a collection of examples potred from original Ikarus documentation.
+A collection of examples ported from original Ikarus documentation.
 
 ## Open focussed chest or door
 ```dae
