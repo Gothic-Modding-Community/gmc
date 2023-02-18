@@ -1,11 +1,9 @@
 # Elementary memory access
-This part of Ikarus make possible Reading and writing Integers, Strings, Arrays and Bytes.
+This part of Ikarus makes it possible to read and write memory as different data types - integers, strings, arrays of integers and strings and bytes.
 
 If `address <= 0`, an error is thrown. Otherwise, an attempt is made to read or write at this address.
-If the address is in an invalid range, for example in a
-code segment, there is an access violation (Gothic crashes).
-In the case of string operations, it is also necessary that at the specified position
-a valid zString already exists.
+If the address falls into invalid range, for example in a code segment,access violation will occur (Gothic crashes).
+In the case of string operations, it is also necessary that at the specified position a valid zString already exists.
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
@@ -27,8 +25,8 @@ Reads int from the `address`.
 func int MEM_ReadInt (var int address) {};
 ```
 
-- `address` - memory address to read
-- `return` - integer if the address is correct
+- `address` - memory address to read from
+- `return` - integer value if the address is correct
 
 ### MEM_ReadString
 Reads string from the `address`.
@@ -36,7 +34,7 @@ Reads string from the `address`.
 func string MEM_ReadString (var int address) {};
 ```
 
-- `address` - memory address to read
+- `address` - memory address to read from
 - `return` - string if the address is correct
 
 ### MEM_ReadByte
@@ -45,8 +43,8 @@ Reads byte from the `adr`.
 func int MEM_ReadByte (var int adr) {};
 ```
 
-- `adr` - memory address to read
-- `return` - byte if the address is correct
+- `adr` - memory address to read from
+- `return` - byte value if the address is correct
 
 ### MEM_ReadIntArray
 Reads int from the array at the `arrayAddress`.
@@ -55,7 +53,7 @@ func int MEM_ReadIntArray (var int arrayAddress, var int offset) {};
 ```
 
 - `arrayAddress` - memory address of array
-- `offset` - array offset
+- `offset` - array offset (array index)
 - `return` - string from array if the address is correct
 
 ### MEM_ReadStringArray
@@ -69,7 +67,7 @@ func int MEM_ReadByteArray (var int arrayAddress, var int offset) {};
 ```
 
 - `arrayAddress` - memory address of array
-- `offset` - array offset
+- `offset` - array offset (array index)
 - `return` - byte from array if the address is correct
 
 ## Write functions
@@ -80,7 +78,7 @@ Writes int value in the `address`.
 func void MEM_WriteInt (var int address, var int val) {};
 ```
 
-- `address` - memory address to write on
+- `address` - memory address to write into
 - `val` - int value to write
 
 ### MEM_WriteString
@@ -89,7 +87,7 @@ Writes string in the `address`.
 func void MEM_WriteString (var int address, var string val) {};
 ```
 
-- `address` - memory address to write on
+- `address` - memory address to write into
 - `val` - string to write
 
 ### MEM_WriteByte
@@ -99,7 +97,7 @@ If `0 <= val < 256` does not apply in `MEM_WriteByte`, a warning is issued and v
 func void MEM_WriteByte (var int adr, var int val) {};
 ```
 
-- `address` - memory address to write on
+- `address` - memory address to write into
 - `val` - byte to write
 
 ### MEM_WriteIntArray
@@ -109,7 +107,7 @@ func void MEM_WriteIntArray (var int arrayAddress, var int offset, var int value
 ```
 
 - `arrayAddress` - memory address of array
-- `offset` - array offset
+- `offset` - array offset (array index)
 - `val` - int value to write
 
 ### MEM_WriteStringArray
@@ -119,7 +117,7 @@ func void MEM_WriteStringArray (var int arrayAddress, var int offset, var string
 ```
 
 - `arrayAddress` - memory address of array
-- `offset` - array offset
+- `offset` - array offset (array index)
 - `val` - string to write
 
 ### MEM_WriteByteArray
@@ -129,13 +127,13 @@ func void MEM_WriteByteArray (var int arrayAddress, var int offset, var int valu
 ```
 
 - `arrayAddress` - memory address of array
-- `offset` - array offset
+- `offset` - array offset (array index)
 - `val` - byte to write
 
 ## Examples
 
 ### Usage of MEM_WriteInt
-An example of using MEM_WriteInt is the following Ikarus function, which turns debugging messages on and off:
+An example of using [MEM_WriteInt](#mem_writeint) is the following Ikarus function, which turns debugging messages on and off:
 ```dae
 func void MEM_SetShowDebug (var int on)
 {

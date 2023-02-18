@@ -1,20 +1,23 @@
 # Ikarus examples
-A collection of examples ported from original Ikarus documentation.
+A collection of examples ported from the original Ikarus documentation.
 
-## Open focussed chest or door
+!!! note
+    The original Ikaurs documentation is a part of the code. You can find it in the [github repository](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Doc.d)
+
+## Open focused chest or door
 ```dae
 func void OpenFocussedChestOrDoor() 
 {
     var oCNpc her; her = Hlp_GetNpc(hero);
 
-    //No focus vob at all?
+    // No focus vob at all?
     if (!her.focus_vob) 
     {
         Print ("No focus!");
         return;
     };
 
-    //Focus vob not a lockable vob?
+    // Focus vob not a lockable vob?
     if (!Hlp_Is_oCMobLockable(her.focus_vob))
     {
         Print ("No chest or door in focus!");
@@ -53,8 +56,8 @@ func void PrintCameraPos()
     /* Here you have to know how the transformation matrix is structured:
 
     It consists of three vectors, the x, y and z directions of the local coordinate system of the camera vob
-    in world coordinates (where z would have to specify the
-    be line of sight). I have these vectors here
+    in world coordinates (where z specifies the
+    line of sight). These vectors are
     denoted by v1, v2, v3.
     In addition, in the 4th column there is the translation,
     that is, the position of the camera.
@@ -78,11 +81,9 @@ func void PrintCameraPos()
 ```dae
 func void StartRain()
 {
-    //Initialize global instances
-    //This also includes the Skycontroller
+    // Initialize global instances
+    // This also includes Skycontroller
     MEM_InitGlobalInst(); 
-
-    // you could now think of something better here, but I'll do it like this:
 
     // start at the beginning of the day (12:00 noon)
     MEM_SkyController.rainFX_timeStartRain = 0; //FLOATNULL;
@@ -91,8 +92,8 @@ func void StartRain()
 
     /* Note: The start and end times are floating point numbers.
     * 0 stands for the beginning of the day 1 for the end of the day.
-    * A "Skytag" begins at 12:00 p.m.
-    * For the structure of the floating point format, google for IEEE 745.*/
+    * a day in the game begins at 12:00 p.m.
+    * For the structure of the floating point format, google for IEEE-745.*/
 
     /* Result: rain all day! (unless you are in a zone
     * in which it snows, then snow all day) */
@@ -105,7 +106,7 @@ func void StartRain()
 
 func void printpairs(var int max_x, var int max_y)
 {
-    //Initialize labels
+    // Initialize labels
     MEM_InitLabels();
     // PrintDebug should be used, i.e. activate debug output
     MEM_SetShowDebug (1);
@@ -170,7 +171,7 @@ func void foo()
     // The code between A and B is in this case equivalent to:
     // result = MyFunction(42, "Hello", 23, "World!");
 
-/* A */
+    // Lay the call arguments on the call stack
     MEM_PushIntParam (42);
     MEM_PushStringParam ("Hello ");
     MEM_PushIntParam (23);
@@ -178,10 +179,12 @@ func void foo()
 
     MEM_CallByString ("MYFUNCTION");
 
+    // the function puts the result (of type int in this case) on the stack
+    // we pop the int result and save it to a variable
     result = MEM_PopIntResult();
-/* B */
 
-    Print (IntToString (result)); //(**)
+    // print the result
+    Print (IntToString (result));
 };
 
 /*

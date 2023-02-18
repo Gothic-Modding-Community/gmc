@@ -1,5 +1,5 @@
 # Keyboard interaction
-This part of Ikarus implement function that make interaction with keyboard possible.
+This part of Ikarus implements function that make interaction with keyboard possible.
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
@@ -32,9 +32,9 @@ func int MEM_KeyState(var int key) {};
 - `KEY_HOLD` - The key is pressed and was also pressed before. ("still pressed")
 - `KEY_RELEASED` - The key is not pressed and was previously pressed. ("let go")
 
-KEY_PRESSED or KEY_RELEASED will be returned if the state of the key has changed since the last query.
+`KEY_PRESSED` or `KEY_RELEASED` will be returned if the state of the key has changed since the last query.
 
-KEY_UP or KEY_HOLD are returned if the state has not changed.
+`KEY_UP` or `KEY_HOLD` are returned if the state has not changed.
 
 ### MEM_InsertKeyEvent
 Makes the game think that the key was pressed.
