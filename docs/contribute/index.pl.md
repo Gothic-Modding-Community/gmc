@@ -17,7 +17,7 @@ Po angielsku można zgłosić problem lub inny komentarz o funkcjonowaniu strony
 Wkład bezpośredni wykonuje się poprzez stworzenie kopii tego repozytorium (ang. fork) oraz [stworzenie](https://github.com/Gothic-Modding-Community/gmc/pulls) prośby o połączenie (ang. pull request PR) na serwisie GitHub wraz ze zmianami do zatwierdzenia.
 
 !!! danger "Nie zmarnuj czasu"
-    Proszę się upewnić, że treść, jaka zostanie dodana, nie występuje już na [wersji dev](https://gmc.cokoliv.eu/) strony. Można skorzystać z funkcjonalności wyszukiwania, żeby przefiltrować GMC różnymi słowami kluczowymi i treściami.
+    Proszę się upewnić, że treść, jaka zostanie dodana, nie występuje już na [wersji dev](https://auronen.cokoliv.eu/) strony. Można skorzystać z funkcjonalności wyszukiwania, żeby przefiltrować GMC różnymi słowami kluczowymi i treściami.
 
 !!! question "Jak edytować pliki źródłowe?"
     Pliki źródłowe artykułów są pisane wykorzystując format plików [Markdown](https://pl.wikipedia.org/wiki/Markdown) `.md` ([Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet)). Poza tym ta strona wykorzystuje wtyczkę [Python Markdown Extensions](https://python-markdown.github.io/extensions/), która rozszerza składnię o dodatkowe zasady pozwalające na wstawienie [wzmianek](https://python-markdown.github.io/extensions/admonition/) jak ta, którą właśnie czytasz.
