@@ -7,6 +7,7 @@ A good `.ZEN` file to start experimenting with Spacer is [Toten Insel](https://w
 ## Introduction
 
 Upon launching Spacer, multiple windows will appear. They are:
+
 - The main viewport (black with text on launch)
 - The vobtree - allows to browse and select the objects already placed in a level
 - The object window - it has 3 tabs: Create, Modify and "...".
@@ -20,15 +21,15 @@ When importing a mesh instead of a `.ZEN` file, some things will change. In this
 
 ### Configuration
 
-Before doing anything else, you will probably want to change a few settings first. Select `Settings: View` in the Settings tab in the main viewport to increase the viewport resolution. After doing that, press `Allign Toolwindows at Screen` or `Allign Toolwindows at Spacer` in the Window tab to clean up the window placement. You might still need to move some of the tool windows around after this, as they can overlap.
+Before doing anything else, you will probably want to change a few settings first. Select `Settings: View` in the Settings tab in the main viewport to increase the viewport resolution. After doing that, press `Align Toolwindows at Screen` or `Align Toolwindows at Spacer` in the Window tab to clean up the window placement. You might still need to move some of the tool windows around after this, as they can overlap.
 
-The most comfortable option we found was to set the resolution to something slightly smaller than the screen resolution (e.g. 1600:900 on a 1920:1080 screen) and then alligning the tool windows to screen.
+The most comfortable option we found was to set the resolution to something slightly smaller than the screen resolution (e.g. 1600:900 on a 1920:1080 screen) and then aligning the tool windows to screen.
 
 To help with the control sensitivity issues, change the camera movement speed in the `Settings: General`.
 
 ### Viewport controls
 
-The camera has mutliple modes of operation. Some of the controls may sound confusing, but will make sense once you try them.
+The camera has multiple modes of operation. Some of the controls may sound confusing, but will make sense once you try them.
 
 **Default selection mode**
 
@@ -55,6 +56,7 @@ When a VOB is selected, press `M` to enter and exit this mode.
 The arrows now move the VOB horizontally. Moving it up and down is done with `A` and `Y`.
 
 The keys above the arrows now rotate the VOB:
+
 - Axis 1: `Delete` and `PageDown`
 - Axis 2: `Insert` and `PageUp`
 - Axis 3: `Home` and `End`
@@ -94,7 +96,7 @@ This section covers some of the basic things done in the editor.
 !!! tip
     You can use the VOB Bilder tool to comfortably browse model images and names. An online version is currently available [here](https://dziejekhorinis.org/dev/vobbilder/). The UI on the website is in Polish but it's simple enough to not matter.
 
-- To make the VOB have collission in-game, double click on `cdDyn` ("collision detection dynamic") to set it to true. Sometimes this is unadvised, e.g. with bushes or grass.
+- To make the VOB have collision in-game, double click on `cdDyn` ("collision detection dynamic") to set it to true. Sometimes this is unadvised, e.g. with bushes or grass.
 
 !!! tip
     When placing pickable items, you can press the "apply physics on selected VOB" button in the vertical toolbar to make the item drop on the ground. It can save you a lot of work with placing those items. This won't work with a plain cVob though.
@@ -103,13 +105,13 @@ This section covers some of the basic things done in the editor.
 
 VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though:
 
-- vobName: an identifier shown in the editor and sometimes used in scripts. With some VOB types it's important to set this; for example waypoinys and freepoints.
+- vobName: an identifier shown in the editor and sometimes used in scripts. With some VOB types it's important to set this; for example waypoints and freepoints.
 - visual: the mesh of the VOB
 - showVisual: as the name suggests. Unknown usage.
 - visualCamAlign: Unknown usage, possibly related to cutscenes.
 - visualAniMode: Wind sway animation setting.
 - visualAniModeStrength: a multiplier for the animation; small values such as `0.001` are typically used.
-- vobFarClipZScale: a multiplier for the occlussion culling distance. Almost always left as 1, but it can be used to stop models from appearing from thin air in plain sight; e.g. a VOB of a hut which can be seen from afar might benefit from increasing this distance. The effects of this are visible in the editor.
+- vobFarClipZScale: a multiplier for the occlusion culling distance. Almost always left as 1, but it can be used to stop models from appearing from thin air in plain sight; e.g. a VOB of a hut which can be seen from afar might benefit from increasing this distance. The effects of this are visible in the editor.
 - cdStatic: determines if the VOB will collide with the world mesh and other VOBs with `cdStatic` on. This is mostly used to help with placing objects in the editor, e.g. furniture.
 - cdDyn: determines if the VOB will collide with dynamic objects (NPCs, items, etc.). This basically determines if the object has collision during gameplay.
 
@@ -165,16 +167,20 @@ Presented here are the ways of working with new terrain models.
 
 To create a completely new ZEN, you will first need a level mesh. These can be made from scratch or downloaded, but be aware that meshes which aren't properly prepared won't compile correctly (you won't be able to move in the viewport). As with any other mesh in Gothic, it has to be in the 3ds Kerrax format. It is recommended to place the mesh file somewhere in the `_work/Data/Meshes` (can be your own subfolder).
 
+
 You can find free terrain models [here](https://www.worldofgothic.de/?go=moddb&cat=10) if you want to practice this. Note that not all of them might compile properly; [this one](https://www.worldofgothic.de/?go=moddb&action=view&fileID=1266&cat=10&page=1&order=0) should be fine though.
 
 First, load the mesh from the File tab of the viewport. To compile the mesh, press `Compile World` in the World tab. From here, multiple options are available:
+
 - Indoor/Outdoor: determines if the world will have a sky and the way that lighting behaves.
 - Detect leaks: might be related to checking if indoor ("underground") worlds have holes in them. In some games such holes can cause performance issues, perhaps it's the same here. Doesn't hurt to enable it.
 - Quick compile: self-explanatory, but the exact effects of this are unknown.
 - Polycheck: presumably checks if the model doesn't exceed triangle limits.
 - Editormode:
-  - On: Spacer will load the mesh in editor mode which allows you to change materials assigned to triangles and other mesh operations. It is more comfortable to do these things in an external 3D editor, but sometimes using this is recommended, e.g. for setting up portals. You can save the model as a `.3ds` in this mode.
-  - Off: Spacer will create a ZEN where you can normally place VOBs. You can now save the world as a compiled ZEN and add VOBs to it.
+
+    * On: Spacer will load the mesh in editor mode, which allows you to change materials assigned to triangles and other mesh operations. It is more comfortable to do these things in an external 3D editor, but sometimes using this is recommended, e.g. for setting up portals. You can save the model as a `.3ds` in this mode.
+
+    * Off: Spacer will create a ZEN where you can normally place VOBs. You can now save the world as a compiled ZEN and add VOBs to it.
 
 ### Compiling a world from multiple meshes
 
@@ -191,7 +197,7 @@ compile world outdoor
 compile light high
 ```
 
-Then you double click the macro name to run it and wait. The macro contains the reset directive, but it's worth doing it on a freshly opened Spacer instance just to be safe.
+Then you double-click the macro name to run it and wait. The macro contains the reset directive, but it's worth doing it on a freshly opened Spacer instance just to be safe.
 
 Keep in mind that compiling a world from multiple ZENs is meant as a final step in level production. This is because doing it will cause issues with culling and stop interiors from rendering (and thus stop you from editing it). Instead, the part ZENs are filled with VOBs separately and the world is compiled as a final step before testing the map.
 
