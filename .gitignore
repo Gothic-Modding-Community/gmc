@@ -5,7 +5,25 @@ site/
 .idea
 
 # Virtual environment
-/venv/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # MacOS files
 .DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Drafts and logs
+/*.log
+/drafts/
+
+# Social Plugin image cache
+.cache/

@@ -87,15 +87,10 @@ class MarkCodeLineManager {
     }
 }
 
-const gGMC_LOCAL = window.location.hostname === "127.0.0.1";
+const gGMC_LOCAL = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
 const gGMC_DEV = window.location.hostname.toLowerCase() !== "gothic-modding-community.github.io" && !gGMC_LOCAL;
 const gMarkCodeLineManager = new MarkCodeLineManager();
 const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-
-const gDevHrefOffset = gGMC_DEV ? -1 : 0; // The dev page doesn't contain the gmc/ part in the href, therefore the offset needs to be decreased by 1.
-const gLangHrefOffset = 4 + gDevHrefOffset;
-let gWindowLang = window.location.href.split("/")[gLangHrefOffset];
-    gWindowLang = gWindowLang.length !== 2 ? "/" : gWindowLang;
 
 window.addEventListener("DOMContentLoaded", _ => {
     gMarkCodeLineManager.setElement();
@@ -207,6 +202,8 @@ const gmcSearchMutationCallback = (mutations, _) => {
     const originalHrefToElementMapping = new Set();
     const nodesForRemoval = [];
 
+    // gmcDebug("Running mutations")
+
     for (const record of mutations) {
         for (const liNode of record.addedNodes) {
             for (const anchor of liNode.querySelectorAll("a")) {
@@ -220,27 +217,32 @@ const gmcSearchMutationCallback = (mutations, _) => {
             let removeNode = false;
             for (const anchor of liNode.querySelectorAll("a")) {
                 const hrefParts = anchor.href.split("/");
-                const anchorLang = hrefParts[gLangHrefOffset];
-                const anchorBaseLength = (anchorLang.length === 2 ? 6 : 5) + gDevHrefOffset;
-                const anchorIsNotBase = anchor.href.split("/").length > anchorBaseLength;
+                const langHrefOffset = 4;
+                const anchorLocale = hrefParts[langHrefOffset];
+                const anchorBaseLength = (anchorLocale.length === 2 ? 6 : 5);
+                const anchorIsBase = anchor.href.split("/").length <= anchorBaseLength;
 
-                if (anchorLang.length === 2) {
-                    if (anchorLang !== gWindowLang && anchorIsNotBase) {
-                        removeNode = true;
-                        // gmcDebug("removing localized duplicate", anchor.href);
-                        break;
-                    }
-                } else if (gWindowLang !== "/") {
-                    const newHref = `${hrefParts.slice(0, gLangHrefOffset).join("/")}/${gWindowLang}/${hrefParts.slice(gLangHrefOffset).join("/")}`;
-                    if (originalHrefToElementMapping.has(newHref)) {
+                if (anchorLocale.length === 2 && anchorLocale !== gGMC_PAGE_LOCALE && !anchorIsBase) {
+                    removeNode = true;
+                    // gmcDebug("removing localized duplicate", anchor.href);
+                    break;
+                } else if (gGMC_PAGE_LOCALE !== "en") {
+                    const newHref = `${hrefParts.slice(0, langHrefOffset).join("/")}/${gGMC_PAGE_LOCALE}/${hrefParts.slice(langHrefOffset).join("/")}`;
+                    // gmcDebug(`Generated href: ${newHref}`)
+                    if (anchorIsBase) {
+                        // gmcDebug("keeping base anchor: ", anchor.href);
+                    } else if (originalHrefToElementMapping.has(newHref)) {
                         removeNode = true;
                         // gmcDebug("removing redundant", anchor.href);
                         break;
-                    } else if (anchorIsNotBase) {
+                    } else {
                         // gmcDebug("localizing href:", anchor.href);
                         anchor.href = newHref;
                     }
                 }
+                // else {
+                //     gmcDebug("keeping normal anchor: ", anchor.href);
+                // }
             }
             if (removeNode)
                 nodesForRemoval.push(liNode);
@@ -261,7 +263,7 @@ const gmcSearchMutationCallback = (mutations, _) => {
 
 const gmcAddVersionToggle = () => {
 
-    const currentPath = window.location.pathname.replace("/gmc/", "/");
+    const currentPath = window.location.pathname;
 
     const mdVersion = document.createElement("div");
     const mdVersionCurrent = document.createElement("button");
@@ -283,11 +285,11 @@ const gmcAddVersionToggle = () => {
     mdVersionCurrent.textContent = gGMC_LOCAL ? "LOCAL" : gGMC_DEV ? "dev" : "main";
 
     mdVersionLinkMain.textContent = "main";
-    mdVersionLinkMain.href = `https://gothic-modding-community.github.io/gmc${currentPath}`;
+    mdVersionLinkMain.href = `https://gothic-modding-community.github.io${currentPath}`;
     mdVersionLinkMain.setAttribute("title", `${gGMC_SELECT_VERSION} ${mdVersionLinkMain.textContent}`);
 
     mdVersionLinkDev.textContent = "dev";
-    mdVersionLinkDev.href = `https://gmc.cokoliv.eu${currentPath}`;
+    mdVersionLinkDev.href = `https://auronen.cokoliv.eu${currentPath}`;
     mdVersionLinkDev.setAttribute("title", `${gGMC_SELECT_VERSION} ${mdVersionLinkDev.textContent}`);
 
     mdVersionItemMain.appendChild(mdVersionLinkMain);
@@ -328,9 +330,9 @@ const gmcTranslateButton = () => {
     const messageFileName = oldFileName === "index.md" ? `${topDirectory}/index.md` : oldFileName;
     const messageParam = encodeURIComponent(`Add \`${gGMC_PAGE_LOCALE}\` translation for \`${messageFileName}\``);
     const valueParam = encodeURIComponent([
-        "Open the `Preview` tab to display with better formatting",
+        "Open the `Preview` tab to display with better formatting.",
         "## Overview",
-        "This method of translation is for those that don't want to setup the project files.",
+        "This method of translation is for those that don't want to set up the project files.",
         "The file name and commit message are already set, best not to change them.",
         "Due to technical limitations you need to copy the English base contents yourself.",
         "Before you do that please make sure that:",
