@@ -26,28 +26,16 @@ Asides from those elements, there are also many invisible VOBs, such as:
 - PFX - particle effects (fire, smoke, fireflies, falling leaves etc.)
 
 !!! note
-    This list is a work in progress and isn't exhaustive.
+    This list isn't exhaustive.
 
 ## Creating a ZEN file
 
 Before VOBs can be added to a world model, the world needs to be compiled.
 After importing a 3ds model, the world can be compiled as an outdoor or indoor world and saved as a ZEN.
 
-!!! note
-    Creating new world meshes has many caveats which will be addressed in a separate article.
-
-
-The world meshes used in ZEN files have triangle count limits (it is also advisable to keep triangle count under 50k for performance reasons). To get around this limitation and to separate work on various areas, it is possible to join multiple ZEN files together, which is done with special macros.
+The world meshes used in ZEN files have triangle count limits (it is also advisable to keep triangle count under 50k for performance reasons). To get around this limitation and to parallelize work on various areas, it is possible to join multiple ZEN files together, which is done with special macros.
 
 If you take a look at the original maps for Gothic 2, you can notice that they are in folders, where there's e.g. a file called `NEWWORLD.ZEN` and multiple `.ZEN` files with "part" in their name. The latter are the sub-zens used to create the full level.
-
-It is worth noting that reimporting the terrain mesh deletes all the VOBs added to the level (at least in vanilla Spacer). This can be circumvented with the following process:
-
-- Export the level as an uncompiled ZEN, which means it only contains the VOB tree.
-- Compile the new level mesh and save as a compiled ZEN.
-- Create and run a macro which will compile those two ZENs into a single one.
-
-The same process applies with multi-zen worlds, except instead of a single compiled ZEN file a level mesh, you will have multiple ones.
 
 ## Lighting
 
@@ -60,7 +48,7 @@ It is generally advised to use static lights whenever possible.
 
 ## Portals
 
-Portals are special parts of outdoor world meshes which separate interiors from exteriors. This allows the level to have dark areas: otherwise interiors are lit the same way as any outside area. Additionally, portals help with performance (interiors aren't rendered unless the player is nearby). Creation of portals has many caveats and will be discussed in a separate article.
+Portals are special parts of outdoor world meshes which separate interiors from exteriors. This allows the level to have dark areas: otherwise interiors are lit the same way as any outside area. Additionally, portals help with performance (interiors aren't rendered unless the player is nearby). Creation of portals has many caveats and will be discussed in a separate article. Portals are also related to NPC behavior (e.g. setting ownership of a room).
 
 ## Optimisation
 
@@ -69,7 +57,3 @@ The game uses occlussion culling, which means that if an object is covered by an
 Occlussion culling isn't a perfect process, so there's also the option of adding GHOSTOCCLUDERs, which are invisible walls which stop areas behind them from rendering. They are a part of the world mesh and are created by assigning a material called GHOSTOCCLUDER to chosen faces. The color of the material is traditionally purplish-blue or pink, but the material itself is not rendered in-game, so this is only to make them stand apart from the rest of the level during modelling. To get more technical, these occluder walls are used to help the BSP algorithm which runs during world compilation.
 
 As mentioned before, another ways of optimisation are portals and limiting the number of dynamic lights. It is also not advisable to make many VOBs be affected by wind.
-
-
-
-
