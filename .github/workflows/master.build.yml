@@ -24,9 +24,23 @@ jobs:
         with:
           python-version: 3.11
           cache: pip
-      - name: Install Dependencies
-        run: pip install -r requirements.txt
+      - name: Cache `requirements.txt`
+        id: cache-requirements
+        uses: actions/cache@v3
+        with:
+          path: '**/venv/*'
+          key: requirements-${{ hashFiles('**/requirements*.txt') }}
+      - name: Install Dependencies into `venv`
+        if: steps.cache-requirements.outputs.cache-hit != 'true'
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
       - name: Run prebuild tests
-        run: python -m unittest discover tests/ -v
+        run: |
+          source venv/bin/activate
+          python -m unittest discover tests/ -v
       - name: Build and deploy site
-        run: mkdocs gh-deploy --force
+        run: |
+          source venv/bin/activate
+          mkdocs gh-deploy --force
