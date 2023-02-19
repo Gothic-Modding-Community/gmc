@@ -258,7 +258,8 @@ plugins:
       languages:
         en:
           name: en - English
-          build: true
+          # Disable the /en/ path, a duplicate of the `default_language` build.
+          build: false
         pl:
           name: pl - Polski
           build: true
