@@ -9,4 +9,4 @@ LeGo (**Le**hona**Go**ttfried) to pakiet skryptowy zbudowany na bazie [Ikarusa](
 
 
 !!! Note
-    Kod LeGo jest hostowany na [GitHubie](https://github.com/Lehona/LeGo), a sam pakiet skryptowy ma własną [strone z dokumentacją](https://lego.worldofplayers.de/). 
+    Kod LeGo jest hostowany na [GitHubie](https://github.com/Lehona/LeGo), a sam pakiet skryptowy ma własną [stronę z dokumentacją](https://lego.worldofplayers.de/). 
