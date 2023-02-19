@@ -253,12 +253,39 @@
          
     </url>
     <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/examples/</loc>
+         <lastmod>2023-02-19</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/examples/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/ikarus/examples/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/ikarus/examples/"/>
+         
+    </url>
+    <url>
          <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/ini_access/</loc>
          <lastmod>2023-02-19</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/ini_access/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/ikarus/ini_access/"/>
          <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/ikarus/ini_access/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/keyboard/</loc>
+         <lastmod>2023-02-19</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/keyboard/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/ikarus/keyboard/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/ikarus/keyboard/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/mem_access/</loc>
+         <lastmod>2023-02-19</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/mem_access/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/ikarus/mem_access/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/ikarus/mem_access/"/>
          
     </url>
     <url>
