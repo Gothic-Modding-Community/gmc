@@ -17,7 +17,7 @@ Using English, you can either [open an issue](https://github.com/Gothic-Modding-
 Direct contribution is made via creating a copy of this repository (a fork) and [creating](https://github.com/Gothic-Modding-Community/gmc/pulls) a pull request (PR) on GitHub with changes for approval.
 
 !!! failure "Don't waste time"  
-    Please make sure that the content you are contributing does not already exist on the [dev page](https://gmc.cokoliv.eu/). You can use the search tool to filter GMC for different keywords and contents.
+    Please make sure that the content you are contributing does not already exist on the [dev page](https://auronen.cokoliv.eu/). You can use the search tool to filter GMC for different keywords and contents.
 
 !!! question "How to edit the source files?"  
     The source files for the articles are written using the [Markdown](https://en.wikipedia.org/wiki/Markdown) `.md` file format ([Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet)). Other than that, this site also uses [Python Markdown Extensions](https://python-markdown.github.io/extensions/) which add more syntax rules like indented [admonitions](https://python-markdown.github.io/extensions/admonition/).
