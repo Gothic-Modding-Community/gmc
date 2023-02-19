@@ -33,9 +33,11 @@ Asides from those elements, there are also many invisible VOBs, such as:
 Before VOBs can be added to a world model, the world needs to be compiled.
 After importing a 3ds model, the world can be compiled as an outdoor or indoor world and saved as a ZEN.
 
-The world meshes used in ZEN files have triangle count limits (it is also advisable to keep triangle count under 50k for performance reasons). To get around this limitation and to parallelize work on various areas, it is possible to join multiple ZEN files together, which is done with special macros.
+The submeshes used in ZEN files have triangle count limits (it is also advisable to keep triangle count for each submesh under 50k for performance reasons). To get around this limitation and to parallelize work on various areas, it is possible to join multiple ZEN files together, which is done with special macros.
 
 If you take a look at the original maps for Gothic 2, you can notice that they are in folders, where there's e.g. a file called `NEWWORLD.ZEN` and multiple `.ZEN` files with "part" in their name. The latter are the sub-zens used to create the full level.
+
+However, a possibly more comfortable workflow is to have a single world mesh which is internally separated into multiple submeshes. This way triangle count limits won't be exceeded and the world won't need compiling from parts. As a trade-off, it is likely that it won't be possible for multiple people to work on the ZEN world at the same time.
 
 ## Lighting
 
