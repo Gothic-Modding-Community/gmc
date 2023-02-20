@@ -24,13 +24,13 @@ jobs:
         with:
           python-version: 3.11
           cache: pip
-      - name: Cache `requirements.txt`
+      - name: Process Python Cache
         id: cache-requirements
         uses: actions/cache@v3
         with:
-          path: '**/venv/*'
-          key: requirements-${{ hashFiles('**/requirements*.txt') }}
-      - name: Install Dependencies into `venv`
+          path: venv
+          key: requirements-${{ hashFiles('requirements*.txt') }}
+      - name: Install Uncached Requirements
         if: steps.cache-requirements.outputs.cache-hit != 'true'
         run: |
           python -m venv venv

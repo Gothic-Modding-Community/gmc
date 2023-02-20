@@ -1,5 +1,6 @@
 site_name: Gothic Modding Community
 site_url: https://gothic-modding-community.github.io/gmc/
+site_description: 'Gothic Modding Community is a collection of helpful resources for modding Gothic and Risen games.'
 
 repo_name: Gothic-Modding-Community/gmc
 repo_url: https://github.com/Gothic-Modding-Community/gmc/
@@ -58,10 +59,10 @@ extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/mCpS5b5SUY
-      name: Gothic Modding Comunity Discord Server
+      name: Gothic Modding Community Discord Server
     - icon: fontawesome/brands/github
       link: https://github.com/Gothic-Modding-Community/gmc
-      name: Gothic Modding Comunity Github repository
+      name: Gothic Modding Community GitHub repository
 
 
 
@@ -135,9 +136,11 @@ plugins:
         pl:
           name: pl - Polski
           build: true
+          site_description: 'Gothic Modding Community to zbiór pomocnych materiałów do modowania gier Gothic i Risen.'
         cs:
           name: cs - Čeština
           build: true
+          site_description: 'Dokumentace, návody a články zaměřené na modování her Gothic a Risen.'
       material_alternate: true
       # Only 1 global scope, if 2 nav elements are named the same, input translation only once.
       # Translate only the section/directory titles, page titles should be in the meta header of the `.md` file.
@@ -181,3 +184,5 @@ plugins:
   - redirects:
       # Empty dict to fill with the `meta_redirects.py` hook.
       redirect_maps: {}
+  - social:
+      cards: !ENV [GMC_ENABLE_ON_PUBLISH, False]
