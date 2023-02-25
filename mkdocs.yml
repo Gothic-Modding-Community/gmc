@@ -10,6 +10,7 @@ watch:
 
 hooks:
   - overrides/.hooks/language_flags.py
+  - overrides/.hooks/git_redirects.py
 
 theme:
   name: material
@@ -283,3 +284,6 @@ plugins:
         - index*.md
         - genome/index*.md
         - zengin/index*.md
+  - redirects:
+      # Empty dict to fill with the `meta_redirects.py` hook.
+      redirect_maps: {}
