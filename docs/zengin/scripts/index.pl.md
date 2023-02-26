@@ -6,5 +6,5 @@ Katalog `Scripts` to miejsce, w którym znajdują się skrypty. Znajdziesz tam p
 
 Skrypty Daedalusa można edytować w dowolnym edytorze tekstu. Aby uzyskać przydatne funkcjonalności typu podświetlanie składni, możesz użyć narzędzi stworzonych przez społeczność, takich jak 
 
-- [Gothic Sourcer](../tools/gothic_sourcer.md)
-- [Daedalus VS Code extension](../tools/dls.md)
+- [Gothic Sourcer](../tools/.TODO.gothic_sourcer.md)
+- [Daedalus VS Code extension](../tools/daedalus/dls.md)

@@ -5,7 +5,7 @@ All constants that the user can either use or even change freely are defined in 
 These constants may only be used, not changed.
 
 ### Anim8
-These constants are used by [Anim8](../anim8.md#anim8_1) and [Anim8q](../anim8.md#anim8q).
+These constants are used by [Anim8](../applications/anim8.md#anim8_1) and [Anim8q](../applications/anim8.md#anim8q).
 
 - `A8_Constant` - Constant movement speed
 - `A8_SlowEnd` - Evenly decelerated movement
@@ -44,7 +44,7 @@ Dimensions:
 - `COL_Yellow`
 
 ### Gamestate
-[Gamestate](../gamestate.md) can assume these values:
+[Gamestate](../applications/gamestate.md) can assume these values:
 
 - `Gamestate_NewGame` - New game started
 - `Gamestate_Loaded` - A game has been loaded
@@ -64,7 +64,7 @@ These constants are sent with Cursor_Event:
 These constants are often used by packages and may be changed freely.
 
 ### Bloodsplats
-This constant is only used in [Bloodsplats_Rage](../bloodsplats.md#bloodsplats_rage):
+This constant is only used in [Bloodsplats_Rage](../applications/bloodsplats.md#bloodsplats_rage):
 
 - `Bloodsplat_Num` - Maximum number on screen
 
