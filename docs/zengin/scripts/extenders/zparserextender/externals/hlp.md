@@ -244,3 +244,12 @@ func string Hlp_GetSteamPersonalName() {};
 ```
 
 - `return` - string containing the Steam username, or an empty string
+
+## Hlp_DoEvent
+Calls every event function with the name `funcName`.
+
+```dae
+func void Hlp_DoEvent(var string funcName) {};
+```
+
+- `funcName` - name of the [event](../events.md) function to be called (all of them).
