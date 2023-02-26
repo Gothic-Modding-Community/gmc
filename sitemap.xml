@@ -514,15 +514,6 @@
          
     </url>
     <url>
-         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/</loc>
-         <lastmod>2023-02-26</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/"/>
-         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/"/>
-         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/"/>
-         
-    </url>
-    <url>
          <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/helperclasses/</loc>
          <lastmod>2023-02-26</lastmod>
          <changefreq>daily</changefreq>
@@ -532,48 +523,12 @@
          
     </url>
     <url>
-         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/hooks/</loc>
-         <lastmod>2023-02-26</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/hooks/"/>
-         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/hooks/"/>
-         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/hooks/"/>
-         
-    </url>
-    <url>
-         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/</loc>
-         <lastmod>2023-02-26</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/"/>
-         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/injection/"/>
-         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/injection/"/>
-         
-    </url>
-    <url>
-         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/meta/</loc>
-         <lastmod>2023-02-26</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/meta/"/>
-         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/meta/"/>
-         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/meta/"/>
-         
-    </url>
-    <url>
          <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/namespaces/</loc>
          <lastmod>2023-02-26</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/namespaces/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/namespaces/"/>
          <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/namespaces/"/>
-         
-    </url>
-    <url>
-         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/other/</loc>
-         <lastmod>2023-02-26</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/other/"/>
-         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/other/"/>
-         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/other/"/>
          
     </url>
     <url>
@@ -718,6 +673,42 @@
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/externals/wld/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/externals/wld/"/>
          <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/externals/wld/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/injection/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/injection/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/hooks/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/hooks/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/injection/hooks/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/injection/hooks/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/meta/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/meta/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/injection/meta/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/injection/meta/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/other/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/injection/other/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/injection/other/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/injection/other/"/>
          
     </url>
     <url>
