@@ -3,7 +3,7 @@ This package can modify the NPCs' gestures during dialogue to better bring out e
 
 ## Dependencies
 
-- [AI_Function](ai_function.md)
+- [AI_Function](../tools/ai_function.md)
 
 ## Initialization
 No initialization
@@ -20,7 +20,7 @@ The full name of the animation can be described as follows:
 ```dae
 DIAG_Prefix + aniName + DIAG_Suffix + ((rand() % (max - (min - 1))) + min).ToString("00");
 ```
-`DIAG_Prefix` and `DIAG_Suffix` are [user constants](various/userconstants.md).
+`DIAG_Prefix` and `DIAG_Suffix` are [user constants](../various/userconstants.md).
 
 ```dae
 func void DIAG(string AniName, int Min, int Max) {};

@@ -2,13 +2,13 @@
 If this package is activated, red blood splatters will appear on the screen when the hero takes damage. For this, the damage perception for the hero is redirected to `_B_HeroDamage()`. To use the `Bloodsplats`, the enclosed textures must be available. Also, the VFX "HERO_HURT" (also included) should be entered in the `VfxInst.d` to create an even better hit effect. All textures used here are from [CGTextures.com](http://CGTextures.com). If you use `Bloodsplats` in your modification, this site must be noted in the credits.
 
 !!! Tip
-    See [user constants](various/userconstants.md#bloodsplats) to edit behavior of this packet.
+    See [user constants](../various/userconstants.md#bloodsplats) to edit behavior of this packet.
 
 ## Dependencies
 
 - Floats
 - View
-- [Random](random.md)
+- [Random](../tools/random.md)
 - [Anim8](anim8.md)
 
 ## Initialization

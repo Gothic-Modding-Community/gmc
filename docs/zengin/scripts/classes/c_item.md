@@ -138,7 +138,7 @@ instance ItMw_testSword (C_Item)
 };
 ```
   
-Try injecting the code below [zParserExtender](../../scripts/extenders/zparserextender/injection/index.md) to test it in game right away. It is compatible with G2NotR.
+Try injecting the code below [zParserExtender](../extenders/zparserextender/daedalus_injection/index.md) to test it in game right away. It is compatible with G2NotR.
 
 ```dae
 instance ItMw_testSword (C_Item)

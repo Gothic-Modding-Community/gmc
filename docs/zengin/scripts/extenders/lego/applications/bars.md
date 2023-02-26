@@ -209,7 +209,7 @@ prototype GothicBar(Bar)
 It is much easier to set up a new instance using this prototype. `GothicBar` without modifications can be found as the `GothicBar@` instance, which we used to create the bar in the example above.
 `GothicBar` is located in the middle of the screen and looks exactly like the Gothic underwater bar.  
 But let us make a bar that is located in the top left of the screen and displays players experience points.  
-Derive `GothicBar` again and only change the position. Of course add a loop using the [FrameFunctions](frame_functions.md):
+Derive `GothicBar` again and only change the position. Of course add a loop using the [FrameFunctions](../tools/frame_functions.md):
 ```dae
 // Instance created from 
 instance Bar_1(GothicBar)
