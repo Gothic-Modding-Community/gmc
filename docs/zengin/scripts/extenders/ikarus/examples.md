@@ -168,7 +168,7 @@ func void foo()
 { 
     var int result;
 
-    // The code between A and B is in this case equivalent to:
+    // The following code is in this case equivalent to:
     // result = MyFunction(42, "Hello", 23, "World!");
 
     // Lay the call arguments on the call stack

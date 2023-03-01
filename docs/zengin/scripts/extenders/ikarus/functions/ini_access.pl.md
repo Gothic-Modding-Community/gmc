@@ -11,7 +11,7 @@ func void MEM_InitAll () {};
 ```
 
 ## Implementacja
-[:material-github: Ikarus.d na GitHubie](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d)
+[:material-github: Ikarus.d na GitHubie](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L4293)
 
 ## Funkcje odczytu
 

@@ -11,7 +11,7 @@ func void MEM_InitAll () {};
 ```
 
 ## Implementation
-[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d)
+[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L4198)
 
 ## Functions
 !!! Tip
