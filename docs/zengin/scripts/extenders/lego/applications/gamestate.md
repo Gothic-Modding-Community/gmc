@@ -2,8 +2,8 @@
 Gamestate package allows to check for different game states (game start, game load or level change).
 
 ## Dependencies  
-- EventHandler
-- Saves
+- [EventHandler](../tools/event_handler.md)
+- [Saves](../applications/saves.md)
 
 ## Initialization
 Initialize with `LeGo_Gamestate` flag.

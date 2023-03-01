@@ -2,8 +2,8 @@
 Pakiet Gamestate pozwala sprawdzić stan gry (rozpoczęcie gry, ładowanie gry lub zmiana poziomu).
 
 ## Zależności  
-- EventHandler
-- Saves
+- [EventHandler](../tools/event_handler.md)
+- [Saves](../applications/saves.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Gamestate`.
