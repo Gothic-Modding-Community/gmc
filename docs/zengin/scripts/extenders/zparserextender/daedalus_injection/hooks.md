@@ -1,5 +1,5 @@
 # Hooking Daedalus
-Daedalus hooking is one of the most powerful features of this plugin. Hooking is a mechanism that allows you to replace any scripted object with a new one. To do this, you must define a new object with the same type, name and in the same [namespace](../namespaces.md).
+Daedalus hooking is one of the most powerful features of this plugin. Hooking is a mechanism that allows you to replace any scripted object with a new one. To do this, you must define a new object with the same type, name and in the same [namespace](../syntax_extensions/namespaces.md).
 
 Hook/replacement will be performed only if the `MergeMode` setting is set to true for the current script in the META block or in the parameter of the same name in the `.ini` file of the mod.
 

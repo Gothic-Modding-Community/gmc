@@ -172,7 +172,7 @@ Dialogues with `permanent = TRUE` do not disappear after the dialogue is played.
     Frequently used external function `Npc_KnowsInfo` which returns true if the dialogue instance has been played has had a bug in the implementation for a long time. This bug made it impossible to use this function with dialogue instances with `permanent = TRUE` as it would always return `FALSE`. This has been fixed in `Union 1.0m`.
 
 ## zParserExtender
-zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../extenders/zparserextender/dialogues.md)
+zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../extenders/zparserextender/syntax_extensions/dialogues.md)
 
 ## AF Script Packet
 Enhanced Info Manager (implemented using Ikarus and LeGo) adds tonne of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../extenders/afsp/index.md)

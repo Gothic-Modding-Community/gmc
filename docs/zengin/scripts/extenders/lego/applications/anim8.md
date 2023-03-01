@@ -103,7 +103,7 @@ func void Anim8(var int hndl, var int target, var int span, var int interpol) {}
 - `hndl` - Handle returned from `Anim8_New`
 - `target` - Target value of this command. When the object's value has reached this value, the command is considered completed and deleted
 - `span` - How many milliseconds should the command last?
-- `interpol` - What form of movement to use? (See [constants](various/userconstants.md#anim8) for this)
+- `interpol` - What form of movement to use? (See [constants](../various/userconstants.md#anim8) for this)
 
 ### Anim8q
 As already mentioned above, Anim8 can also process several commands one after the other. While Anim8 completely resets the object and deletes all commands, Anim8q just appends a new command to the list. This will be processed as soon as the previous one is completed.
@@ -114,7 +114,7 @@ func void Anim8q(var int hndl, var int target, var int span, var int interpol) {
 - `hndl` - Handle returned from `Anim8_New`
 - `target` - Target value of this command. When the object's value has reached this value, the command is considered completed and another one in the queue will start
 - `span` - Action duration in milliseconds
-- `interpol` - What form of movement to use? (See [constants](various/userconstants.md#anim8) for this)
+- `interpol` - What form of movement to use? (See [constants](../various/userconstants.md#anim8) for this)
 
 ### Anim8_CallOnRemove
 Registers a function to be called when the object is deleted (e.g. by `Anim8_RemoveIfEmpty`)
@@ -162,7 +162,7 @@ func void MyLoop1(var int MyText, var int Number)
 A similar example can be found in the Interface examples.
 
 ### Moving zCVob in loop
-And now a bit more Gothic-specific application: I want a vob to constantly move back and forth (without a mover!). [FrameFunctions](frame_functions.md) are used for the loop:
+And now a bit more Gothic-specific application: I want a vob to constantly move back and forth (without a mover!). [FrameFunctions](../tools/frame_functions.md) are used for the loop:
 ```dae hl_lines="32"
 var zCVob MyVob;
 var int MyVobAni;

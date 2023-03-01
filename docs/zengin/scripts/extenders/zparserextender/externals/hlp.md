@@ -252,4 +252,4 @@ Calls every event function with the name `funcName`.
 func void Hlp_DoEvent(var string funcName) {};
 ```
 
-- `funcName` - name of the [event](../events.md) function to be called (all of them).
+- `funcName` - name of the [event](../syntax_extensions/events.md) function to be called (all of them).

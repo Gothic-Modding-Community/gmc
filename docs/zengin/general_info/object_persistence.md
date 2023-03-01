@@ -364,4 +364,4 @@ If we used Binary or BinSafe mode, we would see a big blob of binary data instea
 
 ## Final thoughts
 
-We hope this helps you better understand the inner workings of ZenGin. If you want to see how Piranha Bytes went about implementing a much more advanced version of this system for their next engine, check out [Genome's object persistence system](../../genome/object_persistence.md).
+We hope this helps you better understand the inner workings of ZenGin. If you want to see how Piranha Bytes went about implementing a much more advanced version of this system for their next engine, check out [Genome's object persistence system](../../genome/general_info/object_persistence.md).

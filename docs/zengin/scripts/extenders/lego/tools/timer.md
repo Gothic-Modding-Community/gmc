@@ -1,5 +1,5 @@
 # Timer
-Timer is a better alternative to the timers that Gothic offers. The [FrameFunctions](frame_functions.md) and [Anim8](anim8.md) packages are already based on it. It isn't possible to modify the current time, as this would only cause difficulties.
+Timer is a better alternative to the timers that Gothic offers. The [FrameFunctions](frame_functions.md) and [Anim8](../applications/anim8.md) packages are already based on it. It isn't possible to modify the current time, as this would only cause difficulties.
 
 ## Dependencies
 No dependencies
