@@ -9,7 +9,7 @@ MIT Licence 2023 Kamil Krzyśków
 import datetime
 import logging
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, Set
 
 try:
     from git import Repo
@@ -47,6 +47,7 @@ def _add_redirects_based_on_git_history(*, config: MkDocsConfig) -> None:
     """Process the Git history looking for rename actions."""
 
     docs_dir: Path = Path(config.get("docs_dir"))
+    file_paths: Set[str] = {str(path) for path in docs_dir.glob("**/*.md")}
     docs_prefix: str = docs_dir.name + "/"
     project_root: Path = docs_dir.parent
 
@@ -65,8 +66,8 @@ def _add_redirects_based_on_git_history(*, config: MkDocsConfig) -> None:
 
             old_parts_len: int = len(old.split("/")[-1].split("."))
             new_parts_len: int = len(new.split("/")[-1].split("."))
-            old_exists: bool = (project_root / old).exists()
-            old_index_exists: bool = (project_root / old.replace(".md", "/index.md")).exists()
+            old_exists: bool = str(project_root / old) in file_paths
+            old_index_exists: bool = str(project_root / old.replace(".md", "/index.md")) in file_paths
 
             type_md: bool = old.endswith(".md") and new.endswith(".md")
             inside_docs: bool = old.startswith(docs_prefix) and new.startswith(docs_prefix)
@@ -78,17 +79,19 @@ def _add_redirects_based_on_git_history(*, config: MkDocsConfig) -> None:
             if not type_md or not inside_docs or not name_ext or old_conflicts:
                 continue
 
-            old = old.replace(docs_prefix, "", 1)
-            new = new.replace(docs_prefix, "", 1)
+            old_inner = old.replace(docs_prefix, "", 1)
+            new_inner = new.replace(docs_prefix, "", 1)
 
             # Avoid creating redirection chains
-            if new in redirects:
-                new = redirects[new]
+            if new_inner in redirects:
+                new_inner = redirects[new_inner]
+            elif str(project_root / new) not in file_paths:
+                continue
 
-            if old not in redirects:
-                redirects[old] = new
+            if old_inner not in redirects:
+                redirects[old_inner] = new_inner
             else:
-                LOG.info(f"{HOOK_NAME}: '{old}' already in redirects, keeping more recent one")
+                LOG.info(f"{HOOK_NAME}: '{old_inner}' already in redirects, keeping more recent one")
 
         if commit.hexsha == MAX_HASH:
             break
@@ -110,10 +113,10 @@ LOG: logging.Logger = logging.getLogger(f"mkdocs.hooks.{HOOK_NAME}")
 """Logger instance for this hook."""
 
 # MAX_DATE: datetime.datetime = datetime.datetime.now() - datetime.timedelta(days=99)
-MAX_DATE: datetime.datetime = datetime.datetime.fromisoformat("2023-02-25")
+MAX_DATE: Optional[datetime.datetime] = datetime.datetime.fromisoformat("2023-02-25")
 """The oldest included commit date in the history lookup."""
 
-MAX_HASH: str = "08f09465b85f17e327759278fe09582fcdaeda7a"
+MAX_HASH: Optional[str] = "08f09465b85f17e327759278fe09582fcdaeda7a"
 """The oldest included commit hash in the history lookup."""
 
 # endregion
