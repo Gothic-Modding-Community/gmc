@@ -7,7 +7,7 @@ Najlepszym sposobem na zainicjowanie Ikarusa jest wywołanie `MEM_InitAll()` w f
     Jeżeli chcesz używać Ikarusa z Gothiciem 1, najlepiej będzie, jeśli zdefiniujesz własną funkcję `Init_Global()` i wywołasz ją w każdej funkcji inicjującej świat.
 
 ```dae
-func void MEM_InitAll () {};
+func void MEM_InitAll()
 ```
 
 ## Implementacja
@@ -15,83 +15,120 @@ func void MEM_InitAll () {};
 
 ## Funkcje odczytu
 
-### MEM_GetGothOpt
+### `MEM_GetGothOpt`
 Przeszukuje `Gothic.ini` w poszukiwaniu opcji
 ```dae
-func string MEM_GetGothOpt(var string sectionname, var string optionname) {};
+func string MEM_GetGothOpt(var string sectionname, var string optionname)
 ```
+**Parametry**
 
-- `sectionname` - nazwa przeszukiwanej sekcji
-- `optionname` - nazwa szukanej opcji
-- `return` - wartość opcji w postaci łańcucha znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji
+- `#!dae var string sectionname`  
+    Nazwa sekcji np. `[GAME]`
+- `#!dae var string optionname`  
+    Szukana opcja np. `playLogoVideos`
 
-### MEM_GetModOpt
+**Zwracana wartość**
+
+Funkcja zwraca wartość opcji w postaci łańcucha znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
+
+### `MEM_GetModOpt`
 Przeszukuje ini załadowanej modyfikacji w poszukiwaniu opcji.
 ```dae
-func void MEM_GetModOpt(var string sectionname, var string optionname) {};
+func void MEM_GetModOpt(var string sectionname, var string optionname)
 ```
+**Parametry**
 
-- `sectionname` - nazwa przeszukiwanej sekcji
-- `optionname` - nazwa szukanej opcji
-- `return` - wartość opcji w postaci łańcucha znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji
+- `#!dae var string sectionname`  
+    Nazwa sekcji np. `[INFO]`
+- `#!dae var string optionname`  
+    Szukana opcja np. `Title`
 
-### MEM_GothOptSectionExists
+**Zwracana wartość**
+
+Funkcja zwraca wartość opcji w postaci łańcucha znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
+
+### `MEM_GothOptSectionExists`
 Sprawdza, czy dana sekcja istnieje w `Gothic.ini`
 ```dae
-func int MEM_GothOptSectionExists(var string sectionname) {};
+func int MEM_GothOptSectionExists(var string sectionname)
 ```
+**Parametry**
 
-- `sectionname` - nazwa szukanej sekcji
-- `return` - `TRUE` jeśli sekcja istnieje, inaczej `FALSE`
+- `#!dae var string sectionname`  
+    Nazwa sekcji np. `[GAME]`
 
-### MEM_ModOptSectionExists
+**Zwracana wartość**
+
+Funkcja zwraca wartość `TRUE` jeśli sekcja istnieje, inaczej `FALSE`.
+
+### `MEM_ModOptSectionExists`
 Sprawdza, czy dana sekcja istnieje w ini załadowanej modyfikacji.
 ```dae
-func int MEM_ModOptSectionExists(var string sectionname) {};
+func int MEM_ModOptSectionExists(var string sectionname)
 ```
+**Parametry**
 
-- `sectionname` - nazwa szukanej sekcji
-- `return` - `TRUE` jeśli sekcja istnieje, inaczej `FALSE`
+- `#!dae var string sectionname`  
+    Nazwa sekcji np. `[INFO]`
 
-### MEM_GothOptExists
+**Zwracana wartość**
+
+Funkcja zwraca wartość `TRUE` jeśli sekcja istnieje, inaczej `FALSE`.
+
+### `MEM_GothOptExists`
 Sprawdza, czy dana opcja istnieje w `Gothic.ini`
 ```dae
-func int MEM_GothOptExists(var string sectionname,
-var string optionname) {};
+func int MEM_GothOptExists(var string sectionname, var string optionname)
 ```
+**Parametry**
 
-- `sectionname` - nazwa przeszukiwanej sekcji
-- `optionname` - nazwa szukanej opcji
-- `return` - `TRUE` jeśli sekcja istnieje, inaczej `FALSE`
+- `#!dae var string sectionname`  
+    Nazwa sekcji np. `[GAME]`
+- `#!dae var string optionname`  
+    Szukana opcja np. `playLogoVideos`
 
-### MEM_ModOptExists
+**Zwracana wartość**
+
+Funkcja zwraca wartość `TRUE` jeśli opcja w danej sekcji istnieje, inaczej `FALSE`.
+
+### `MEM_ModOptExists`
 Sprawdza, czy dana opcja istnieje w ini załadowanej modyfikacji.
 ```dae
-func int MEM_ModOptExists(var string sectionname, var string optionname) {};
+func int MEM_ModOptExists(var string sectionname, var string optionname)
 ```
+**Parametry**
 
-- `sectionname` - nazwa przeszukiwanej sekcji
-- `optionname` - nazwa szukanej opcji
-- `return` - `TRUE` jeśli sekcja istnieje, inaczej `FALSE`
+- `#!dae var string sectionname`  
+    Nazwa sekcji np. `[INFO]`
+- `#!dae var string optionname`  
+    Szukana opcja np. `Title`
+
+**Zwracana wartość**
+
+Funkcja zwraca wartość `TRUE` jeśli opcja w danej sekcji istnieje, inaczej `FALSE`.
 
 ## Funkcje zapisu
 !!! Warning
     Plik konfiguracyjny modyfikacji nigdy nie jest zapisywany na dysku, dlatego nie ma oddzielnej funkcji do jego zapisu.
 
-### MEM_SetGothOpt
+### `MEM_SetGothOpt`
 Opcja `option` w sekcji `section` jest ustawiana na `value`. Jeśli sekcja i/lub opcja nie istnieje, zostanie utworzona.
 ```dae
-func void MEM_SetGothOpt(var string section, var string option, var string value) {};
+func void MEM_SetGothOpt(var string section, var string option, var string value)
 ```
+**Parametry**
 
-- `section` - sekcja, w której znajduje się opcja
-- `option` - opcja do zapisania/nadpisania
-- `value` - wartość, na jaką ustawiana jest opcja
+- `#!dae var string section`  
+    Sekcja, w której znajduje się opcja
+- `#!dae var string option`  
+    Opcja do zapisania/nadpisania
+- `#!dae var string value`  
+    Wartość, na jaką ustawiana jest opcja
 
-### MEM_ApplyGothOpt
+### `MEM_ApplyGothOpt`
 Stosuje zmiany i zapisuje plik ini na dysku.
 ```dae
-func void MEM_ApplyGothOpt() {};
+func void MEM_ApplyGothOpt()
 ```
 
 !!! Tip
@@ -101,48 +138,68 @@ func void MEM_ApplyGothOpt() {};
 ## Funkcje klawiszy
 `Gothic.ini` zawiera przypisanie klawiszy fizycznych (np. "W") do klawiszy logicznych (np. "keyUp").
 
-### MEM_GetKey
+### `MEM_GetKey`
 Zwraca podstawowy klawisz przypisany do klawisza logicznego.
 ```dae
-func int MEM_GetKey (var string name) {};
+func int MEM_GetKey (var string name)
 ```
+**Parametry**
 
-- `name` - nazwa klawisza logicznego
-- `return` - klawisz przypisany do klawisza logicznego
+- `#!dae var string name`  
+    Nazwa klawisza logicznego
 
-### MEM_GetSecondaryKey
+**Zwracana wartość**
+
+Funkcja zwraca klawisz przypisany do klawisza logicznego
+
+### `MEM_GetSecondaryKey`
 Zwraca zapasowy klawisz przypisany do klawisza logicznego.
 ```dae
-func int MEM_GetSecondaryKey(var string name) {};
+func int MEM_GetSecondaryKey(var string name)
 ```
+**Parametry**
 
-- `name` - nazwa klawisza logicznego
-- `return` - klawisz przypisany do klawisza logicznego
+- `#!dae var string name`  
+    Nazwa klawisza logicznego
 
-### MEM_SetKeys
-Ustawia klawisze klawiatury dla klawisza logicznego.
+**Zwracana wartość**
+
+Funkcja zwraca klawisz przypisany do klawisza logicznego
+
+### `MEM_SetKeys`
+Ustawia klawisze klawiatury dla podanego klawisza logicznego.
 ```dae
-func void MEM_SetKeys(var string name, var int primary, var int secondary) {};
+func void MEM_SetKeys(var string name, var int primary, var int secondary)
 ```
+**Parametry**
 
-- `name` - nazwa klawisza logicznego
-- `primary` - podstawowy klawisz do przypisania, można go pobrać z pliku Ikarus_Const_G1/G2.
-- `secondary` - zapasowy klawisz do przypisania, można go pobrać z pliku Ikarus_Const_G1/G2.
+- `#!dae var string name`  
+    Nazwa klawisza logicznego
+- `#!dae var int primary`  
+    Podstawowy klawisz do przypisania, można go pobrać z pliku [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
+- `#!dae var int secondary`  
+    Zapasowy klawisz do przypisania, można go pobrać z pliku[Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
 
-### MEM_SetKey
+### `MEM_SetKey`
 Ustawia podstawowy klawisz klawiatury dla klawisza logicznego.
 ```dae
-func void MEM_SetKey(var string name, var int key) {};
+func void MEM_SetKey(var string name, var int key)
 ```
+**Parametry**
 
-- `name` - nazwa klawisza logicznego
-- `key` - podstawowy klawisz do przypisania, można go pobrać z pliku Ikarus_Const_G1/G2.
+- `#!dae var string name`  
+    Nazwa klawisza logicznego
+- `#!dae var int key`  
+    Podstawowy klawisz do przypisania, można go pobrać z pliku [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
 
-### MEM_SetSecondaryKey
+### `MEM_SetSecondaryKey`
 Ustawia zapasowy klawisz klawiatury dla klawisza logicznego.
 ```dae
-func void MEM_SetSecondaryKey(var string name, var int key) {};
+func void MEM_SetSecondaryKey(var string name, var int key)
 ```
+**Parametry**
 
-- `name` - name of the logical key
-- `key` - zapasowy klawisz do przypisania, można go pobrać z pliku Ikarus_Const_G1/G2.
+- `#!dae var string name`  
+    Nazwa klawisza logicznego
+- `#!dae var int key`  
+    Zapasowy klawisz do przypisania, można go pobrać z pliku [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
