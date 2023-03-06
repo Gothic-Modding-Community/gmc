@@ -1,0 +1,42 @@
+name: PR CI
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+env:
+  GMC_ENABLE_ON_PUBLISH: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Checkout
+        uses: actions/checkout@v3
+        with:
+          # Number of commits to fetch. 0 indicates all history.
+          # Default: 1
+          # 0 is needed for the update time plugin to work properly
+          fetch-depth: 1
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: pip
+      - name: Cache `requirements.txt`
+        id: cache-requirements
+        uses: actions/cache@v3
+        with:
+          path: '**/venv/*'
+          key: requirements-${{ hashFiles('**/requirements*.txt') }}
+      - name: Install Dependencies into `venv`
+        if: steps.cache-requirements.outputs.cache-hit != 'true'
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+      - name: Run prebuild tests
+        run: |
+          source venv/bin/activate
+          python -m unittest discover tests/ -v

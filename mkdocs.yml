@@ -5,6 +5,13 @@ repo_name: Gothic-Modding-Community/gmc
 repo_url: https://github.com/Gothic-Modding-Community/gmc/
 edit_uri: edit/main/docs/
 
+watch:
+  - overrides
+
+hooks:
+  - overrides/.hooks/language_flags.py
+  - overrides/.hooks/git_redirects.py
+
 theme:
   name: material
   custom_dir: overrides
@@ -12,6 +19,7 @@ theme:
   logo: assets/images/gmc_logo.png
   icon:
     repo: fontawesome/brands/github
+    alternate: material/earth
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -52,12 +60,12 @@ nav:
       - VDFS - virtual file system: zengin/general_info/vdfs.md
       - Object persistence: zengin/general_info/object_persistence.md
 
-    - Animations: 
+    - Animations:
       - zengin/anims/index.md
       - MDS - ModelScript: zengin/anims/mds.md
       - EventBlocks: zengin/anims/events.md
       - Tutorials:
-        - Standalone animation: zengin/anims/standalone_ani.md
+        - Standalone animation: zengin/anims/tutorials/standalone_animation.md
 
     - Meshes: zengin/meshes.md
 
@@ -71,7 +79,7 @@ nav:
 
     - Worlds: zengin/worlds.md
 
-    - Scripts: 
+    - Scripts:
       - zengin/scripts/index.md
       - Classes:
         - C_INFO: zengin/scripts/classes/c_info.md
@@ -84,43 +92,59 @@ nav:
         - zengin/scripts/extenders/index.md
         - Ikarus:
           - zengin/scripts/extenders/ikarus/index.md
-          - Ini File Access: zengin/scripts/extenders/ikarus/ini_access.md
+          - Functions:
+            - Ini File Access: zengin/scripts/extenders/ikarus/functions/ini_access.md
+            - Keyboard:        zengin/scripts/extenders/ikarus/functions/keyboard.md
+            - Memory Access:   zengin/scripts/extenders/ikarus/functions/mem_access.md
+          - Examples:          zengin/scripts/extenders/ikarus/examples.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
-          - Bars:            zengin/scripts/extenders/lego/bars.md
-          - ConsoleCommands: zengin/scripts/extenders/lego/console_commands.md
-          - ItemHelper:      zengin/scripts/extenders/lego/item_helper.md
-          - Talents:         zengin/scripts/extenders/lego/talents.md
-          - FrameFunctions:  zengin/scripts/extenders/lego/frame_functions.md
-          - GameSatate:      zengin/scripts/extenders/lego/gamestate.md
-          - Trialoge:        zengin/scripts/extenders/lego/trialoge.md
-          - Misc:            zengin/scripts/extenders/lego/misc.md
+          - Tools:
+            - AI_Function:     zengin/scripts/extenders/lego/tools/ai_function.md
+            - FrameFunctions:  zengin/scripts/extenders/lego/tools/frame_functions.md
+            - Int64:           zengin/scripts/extenders/lego/tools/int64.md
+            - ItemHelper:      zengin/scripts/extenders/lego/tools/item_helper.md
+            - Locals:          zengin/scripts/extenders/lego/tools/locals.md
+            - Misc:            zengin/scripts/extenders/lego/tools/misc.md
+            - Random:          zengin/scripts/extenders/lego/tools/random.md
+            - Talents:         zengin/scripts/extenders/lego/tools/talents.md
+            - Timer:           zengin/scripts/extenders/lego/tools/timer.md
+          - Applications:
+            - Anim8:           zengin/scripts/extenders/lego/applications/anim8.md
+            - Bars:            zengin/scripts/extenders/lego/applications/bars.md
+            - Bloodsplats:     zengin/scripts/extenders/lego/applications/bloodsplats.md
+            - ConsoleCommands: zengin/scripts/extenders/lego/applications/console_commands.md
+            - Dialoggestures:  zengin/scripts/extenders/lego/applications/dialoggestures.md
+            - Focusnames:      zengin/scripts/extenders/lego/applications/focusnames.md
+            - GameState:       zengin/scripts/extenders/lego/applications/gamestate.md
+            - Names:           zengin/scripts/extenders/lego/applications/names.md
+            - Trialoge:        zengin/scripts/extenders/lego/applications/trialoge.md
+          - Various:
+            - User constants:  zengin/scripts/extenders/lego/various/userconstants.md
         - AFSP:
           - zengin/scripts/extenders/afsp/index.md
           - Enhanced Info Manager: zengin/scripts/extenders/afsp/afsp_eim.md
-        - zParserExtender: 
+        - zParserExtender:
           - zengin/scripts/extenders/zparserextender/index.md
           - Syntax extensions:
-            - While loop:         zengin/scripts/extenders/zparserextender/while.md
-            - Namespaces:         zengin/scripts/extenders/zparserextender/namespaces.md
-            - Event functions:    zengin/scripts/extenders/zparserextender/events.md
-            - Test-else binding:  zengin/scripts/extenders/zparserextender/testelse.md
-            - Extern binding:     zengin/scripts/extenders/zparserextender/extern.md
-            - Dialogue constants: zengin/scripts/extenders/zparserextender/dialogues.md
+            - While loop:         zengin/scripts/extenders/zparserextender/syntax_extensions/while.md
+            - Namespaces:         zengin/scripts/extenders/zparserextender/syntax_extensions/namespaces.md
+            - Event functions:    zengin/scripts/extenders/zparserextender/syntax_extensions/events.md
+            - Test-else binding:  zengin/scripts/extenders/zparserextender/syntax_extensions/testelse.md
+            - Extern binding:     zengin/scripts/extenders/zparserextender/syntax_extensions/extern.md
+            - Dialogue constants: zengin/scripts/extenders/zparserextender/syntax_extensions/dialogues.md
           - Classes:
-            - C_Trigger class:    zengin/scripts/extenders/zparserextender/c_trigger.md
-            - Engine classes:     zengin/scripts/extenders/zparserextender/helperclasses.md
-#           - External functions: zengin/scripts/extenders/zparserextender/externals.md
+            - C_Trigger class:    zengin/scripts/extenders/zparserextender/classes/c_trigger.md
+            - Engine classes:     zengin/scripts/extenders/zparserextender/classes/helperclasses.md
           - Daedalus Injection:
-            - zengin/scripts/extenders/zparserextender/injection.md
-            - META block:     zengin/scripts/extenders/zparserextender/meta.md
-            - Hooking:        zengin/scripts/extenders/zparserextender/hooks.md
-            - Other features: zengin/scripts/extenders/zparserextender/other.md
+            - zengin/scripts/extenders/zparserextender/daedalus_injection/index.md
+            - META block:     zengin/scripts/extenders/zparserextender/daedalus_injection/meta.md
+            - Hooking:        zengin/scripts/extenders/zparserextender/daedalus_injection/hooks.md
+            - Other features: zengin/scripts/extenders/zparserextender/daedalus_injection/other.md
           - Externals:
-            - zengin/scripts/extenders/zparserextender/externals/index.md
             - String functions: zengin/scripts/extenders/zparserextender/externals/string.md
             - Menu function:    zengin/scripts/extenders/zparserextender/externals/menu.md
-            - Log function:     zengin/scripts/extenders/zparserextender/externals/log.md
+            - Log functions:    zengin/scripts/extenders/zparserextender/externals/log.md
             - Event function:   zengin/scripts/extenders/zparserextender/externals/events_vars.md
             - CAST functions:   zengin/scripts/extenders/zparserextender/externals/cast.md
             - HLP functions:    zengin/scripts/extenders/zparserextender/externals/hlp.md
@@ -134,28 +158,30 @@ nav:
           - Examples:
             - Sign post example: zengin/scripts/extenders/zparserextender/examples/signposts.md
 
-    - Union plugins:
+    - Union:
       - zengin/union/index.md
-      - zGamePad:
-        - zengin/union/zgamepad/index.md
-        - Controls customization: zengin/union/zgamepad/controls.md
-        - Gamepad key list: zengin/union/zgamepad/keys_gamepad.md
-        - Engine logical key list: zengin/union/zgamepad/keys_engine_logical.md
-        - Engine absolute key list: zengin/union/zgamepad/keys_engine_absolute.md
-        - Logical function list: zengin/union/zgamepad/logical_functions.md
+      - Plugins:
+        - zGamePad:
+          - zengin/union/plugins/zgamepad/index.md
+          - Controls customization: zengin/union/plugins/zgamepad/controls.md
+          - Gamepad key list: zengin/union/plugins/zgamepad/keys_gamepad.md
+          - Engine logical key list: zengin/union/plugins/zgamepad/keys_engine_logical.md
+          - Engine absolute key list: zengin/union/plugins/zgamepad/keys_engine_absolute.md
+          - Logical function list: zengin/union/plugins/zgamepad/logical_functions.md
 
     - Tools:
       - zengin/tools/index.md
       - Daedalus:
-        - Daedalus Language Server: zengin/tools/dls.md
+        - Daedalus Language Server: zengin/tools/daedalus_tools/daedalus_language_server.md
       - VDFS tools:
-        - GothicVDFS: zengin/tools/gothic_vdfs.md
-        - VDFS Tool:  zengin/tools/vdfs_tool.md
+        - GothicVDFS: zengin/tools/vdfs_tools/gothic_vdfs.md
+        - VDFS Tool:  zengin/tools/vdfs_tools/vdfs_tool.md
+      - Gothic Sourcer: zengin/tools/gothic_sourcer.md
 
   - Genome (G3/R1):
     - genome/index.md
     - General information:
-      - Object persistence: genome/object_persistence.md
+      - Object persistence: genome/general_info/object_persistence.md
 
     - Tools:
       - genome/tools/index.md
@@ -169,7 +195,7 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/extra.js
-  
+
 extra:
   social:
     - icon: fontawesome/brands/discord
@@ -184,7 +210,11 @@ extra:
 markdown_extensions:
   - toc:
       permalink: ""
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - admonition
+  - pymdownx.caret
   - pymdownx.details
   - pymdownx.highlight:
       linenums: true
@@ -195,7 +225,7 @@ markdown_extensions:
       line_spans: example
   - pymdownx.inlinehilite
   - pymdownx.snippets:
-      base_path: ['./docs/assets/sources/']
+      base_path: ['./overrides/.snippets/']
       check_paths: true
       url_download: true
       url_max_size: 5000000
@@ -220,14 +250,6 @@ plugins:
       css_style:
         width: "100%"
         height: "100%"
-  - git-revision-date-localized:
-      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
-      type: iso_datetime
-      timezone: Europe/Warsaw
-      exclude:
-        - index.md
-        - genome/index.md
-        - zengin/index.md
   - minify:
       minify_html: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       minify_css: !ENV [GMC_ENABLE_ON_PUBLISH, False]
@@ -239,3 +261,34 @@ plugins:
         - assets/stylesheets/extra.css
       js_files:
         - assets/javascripts/extra.js
+  - i18n:
+      default_language: !ENV [GMC_DEFAULT_LANG, en]
+      default_language_only: !ENV [GMC_ONLY_DEFAULT_LANG, False]
+      languages:
+        en:
+          name: en - English
+          # Disable the /en/ path, a duplicate of the `default_language` build.
+          build: false
+        pl:
+          name: pl - Polski
+          build: true
+        cs:
+          name: cs - Čeština
+          build: true
+      material_alternate: true
+      # TODO ;0 For now abstain from translating navigation, it might be overriden with the header name later on
+#      nav_translations: # Only 1 global scope, if 2 nav elements are named the same, input translation only once
+#        pl:
+#          Home: Strona Główna
+#          How To Contribute: Jak Się Udzielać
+  - git-revision-date-localized:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      type: iso_datetime
+      timezone: Europe/Warsaw
+      exclude:
+        - index*.md
+        - genome/index*.md
+        - zengin/index*.md
+  - redirects:
+      # Empty dict to fill with the `meta_redirects.py` hook.
+      redirect_maps: {}

@@ -1,0 +1,299 @@
+@import url("constants.css");
+
+/* region mkDocs override */
+
+/* Stretch content area */
+.md-main__inner.md-grid {
+    /* Default 61rem */
+    max-width: 75rem;
+}
+
+/* Shrink header and footer to the content size*/
+.md-grid {
+    /* Default 61rem */
+    max-width: 50rem;
+}
+
+@media screen and (min-width: 60em) {
+    /* Decrease the width of the repository link button */
+    .md-header__source {
+        max-width: 7rem;
+        width: 7rem;
+    }
+    /* Increase width of the repository link text */
+        .md-source__repository {
+        max-width: 100%;
+    }
+}
+
+/* Fix for the left footer button on mobile */
+@media screen and (max-width: 44.9375em) {
+    .md-footer__link--prev .md-footer__title {
+        display: block;
+    }
+}
+
+/* center the images */
+.md-content img {
+    display: block;
+    margin: 1em auto;
+    min-width: 75%;
+}
+
+/* nav styling override */
+label.md-nav__link {
+    font-style: italic;
+}
+
+div.md-nav__link--index {
+    font-weight: bold;
+}
+
+/* black anchor color override */
+@media screen {
+    [data-md-color-primary="black"] {
+        --md-typeset-a-color: #2094f3;
+    }
+    [data-md-color-accent=indigo] {
+        --md-accent-fg-color: #0b65b0;
+    }
+}
+
+/* admonition font size override */
+.md-typeset .admonition,
+.md-typeset details {
+    /* default 0.64rem */
+    font-size: 0.72rem;
+}
+
+/* override header on the page */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+    font-weight: 700;
+}
+
+@media {
+    /*--md-default-fg-color--light:hsla(var(--md-hue),75%,90%,0.62);*/
+    [data-md-color-scheme=slate] h1,
+    [data-md-color-scheme=slate] h2,
+    [data-md-color-scheme=slate] h3,
+    [data-md-color-scheme=slate] h4,
+    [data-md-color-scheme=slate] h5,
+    [data-md-color-scheme=slate] h6 {
+        --md-default-fg-color--light: hsla(var(--md-hue), 100%, 100%, 1);
+    }
+    /*--md-default-fg-color--light:hsla(0, 0%, 0%, .54);*/
+    [data-md-color-scheme=default] h1,
+    [data-md-color-scheme=default] h2,
+    [data-md-color-scheme=default] h3,
+    [data-md-color-scheme=default] h4,
+    [data-md-color-scheme=default] h5,
+    [data-md-color-scheme=default] h6 {
+        --md-default-fg-color--light: hsla(0, 0%, 0%, 1);
+    }
+}
+
+/* override md-content min-height */
+.md-content {
+    min-height: 100vh;
+}
+
+/* override md-banner*/
+.md-banner {
+    background: #0091eb;
+    color: #fff;
+}
+
+.md-banner a {
+    color: inherit;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.md-banner a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.md-banner__inner {
+    margin: 0 auto;
+}
+
+.gmc-announce {
+    margin: 0.5em auto;
+    font-weight: 700;
+    display: table;
+}
+
+/* override language selector */
+.md-select button img.twemoji {
+    font-size: 1.2rem;
+    height: 1.2rem;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.md-select__link img.twemoji {
+    font-size: 1rem;
+    height: 1rem;
+    line-height: 1;
+    margin-right: 1%;
+    vertical-align: text-bottom;
+}
+
+/* endregion */
+
+/* region video container */
+
+/* 16:9 aspect ratio and centering */
+/* Works on top of mkdocs-video */
+.video-container {
+    width: 32rem;
+    height: 18rem;
+    margin: 1em auto;
+}
+
+@media screen and (max-width: 44.9375em) {
+    .video-container {
+        width: 100%;
+        height: 52vmin;
+    }
+}
+
+/* endregion */
+
+/* region anchor link and header SVG icons */
+
+/* SVG icon base settings */
+/* Based on a generated CSS file at https://facelessuser.github.io/ */
+.md-content a.external-link::after,
+.md-typeset .headerlink
+{
+    width: 0.8em;
+    height: 0.8em;
+    background-color: currentColor;
+    background-size: 0.8em;
+    -webkit-mask-size: 0.8em;
+    mask-size: 0.8em;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    visibility: visible;
+}
+
+/* Override settings for header links SVG */
+.md-typeset .headerlink {
+    vertical-align: middle;
+    -webkit-mask-image: var(--gmc-header-svg);
+    mask-image: var(--gmc-header-svg);
+}
+
+/* Override settings for external links SVG */
+.md-content a.external-link::after {
+    display: inline-block;
+    content: "";
+    margin-left: 0.2em;
+    -webkit-mask-image: var(--gmc-external-svg);
+    mask-image: var(--gmc-external-svg);
+}
+
+/* endregion */
+
+/* region Extra admonitions SVG */
+
+.md-typeset .admonition.trivia,
+.md-typeset details.trivia
+{
+    border-color: rgb(180, 189, 26);
+}
+
+.md-typeset .trivia > .admonition-title,
+.md-typeset .trivia > summary
+{
+    background-color: rgba(229, 188, 26, 0.16);
+}
+.md-typeset .trivia > .admonition-title::before,
+.md-typeset .trivia > summary::before
+{
+    background-color: rgb(229, 189, 26);
+    -webkit-mask-image: var(--md-admonition-icon--trivia);
+    mask-image: var(--md-admonition-icon--trivia);
+    animation: heart 1000ms infinite;
+}
+
+/* Beautiful heart beat animation I found here: https://github.com/squidfunk/mkdocs-material/discussions/3850 */
+@keyframes heart
+{
+    0%, 40%, 80%, 100%
+    {
+        transform: scale(1);
+    }
+    20%, 60%
+    {
+        transform: scale(1.1);
+    }
+}
+.heart
+{
+    animation: heart 1000ms infinite;
+}
+
+/* endregion */
+
+/* region pygments highlight override */
+
+:root {
+    --gmc-code-hl-externals-color: #2e7700;
+    --gmc-code-hl-zparserextender-color: #b00048;
+    --gmc-code-hl-variable-color: #716e00;
+    --gmc-code-hl-string-color: #694e37;
+    --gmc-code-hl-type-color: #197277;
+}
+
+@media screen
+{
+    [data-md-color-scheme=slate]
+    {
+        --gmc-code-hl-externals-color: #50c000;
+        --gmc-code-hl-zparserextender-color: #ff2e8c;
+        --gmc-code-hl-variable-color: #b7b400;
+        --gmc-code-hl-string-color: #ce9172;
+        --gmc-code-hl-type-color: #2bbac5;
+    }
+}
+
+.highlight .nb-Externals
+{
+    color: var(--gmc-code-hl-externals-color);
+}
+
+.highlight .nb-ZParserExtender
+{
+    color: var(--gmc-code-hl-zparserextender-color);
+}
+
+.highlight .vi
+{
+    color: var(--gmc-code-hl-variable-color);
+}
+
+.highlight .s
+{
+    color: var(--gmc-code-hl-string-color);
+}
+
+.highlight .kt
+{
+    color: var(--gmc-code-hl-type-color);
+}
+
+.highlight .kc
+{
+    color: var(--md-code-hl-keyword-color);
+    font-style: italic;
+}
+
+/* endregion */

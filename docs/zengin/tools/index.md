@@ -17,8 +17,8 @@ video games Gothic and Gothic 2 Night of the Raven.
  
 **[VDFS tools](../general_info/vdfs)**
 
-- [GothicVDFS](gothic_vdfs.md) - NiceDE's viewer, extractor and builder for `.vdf` and `.mod` volumes
-- [VDFS Tool](vdfs_tool.md) - Gratt's Union VDFS viewer, extractor, builder, optimizer and ZIP compressor for `.vdf` and `.mod` volumes
+- [GothicVDFS](vdfs_tools/gothic_vdfs.md) - NiceDE's viewer, extractor and builder for `.vdf` and `.mod` volumes
+- [VDFS Tool](vdfs_tools/vdfs_tool.md) - Gratt's Union VDFS viewer, extractor, builder, optimizer and ZIP compressor for `.vdf` and `.mod` volumes
 
 **[World Editors](../worlds)**
 

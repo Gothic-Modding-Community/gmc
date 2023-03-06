@@ -1,5 +1,5 @@
 # AI - functions for working with AI
-Functions to work with the new [`C_Trigger`](../c_trigger.md) class and NPC's AI queue.
+Functions to work with the new [`C_Trigger`](../classes/c_trigger.md) class and NPC's AI queue.
 
 
 ## AI_CallScript

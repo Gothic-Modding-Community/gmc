@@ -63,7 +63,7 @@ META
     Parser = Game
 };
 ```
-We want to teleport the player and for this we will need the [`C_Position`](../helperclasses.md#c_position) and [`C_Vob_Data`](../helperclasses.md#c_vob_data) classes.
+We want to teleport the player and for this we will need the [`C_Position`](../classes/helperclasses.md#c_position) and [`C_Vob_Data`](../classes/helperclasses.md#c_vob_data) classes.
 ```dae
 class C_Position
 {
@@ -154,7 +154,7 @@ const int sign_coordinates[MAX_COORDS] = {
 };
 
 ```
-Next define a built in [event](../events.md) `GameLoop` function, to check for a pressed key. If the key `U` is pressed, the `jump_to_sign` function is called.
+Next define a built in [event](../syntax_extensions/events.md) `GameLoop` function, to check for a pressed key. If the key `U` is pressed, the `jump_to_sign` function is called.
 ```dae
 // check for pressed U button every frame
 func event GameLoop()
