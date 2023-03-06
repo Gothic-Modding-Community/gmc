@@ -11,7 +11,7 @@ The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in th
     If you want to use Ikarus in Gothic 1, it is best to define your own `Init_Global()` function and call it from every world initialization function.
 
 ```dae
-func void MEM_InitAll () {};
+func void MEM_InitAll()
 ```
 
 ## Implementation
@@ -19,125 +19,170 @@ func void MEM_InitAll () {};
 
 ## Read functions
 
-### MEM_ReadInt
+### `MEM_ReadInt`
 Reads int from the `address`.
 ```dae
-func int MEM_ReadInt (var int address) {};
+func int MEM_ReadInt (var int address)
 ```
+**Parameters**
 
-- `address` - memory address to read from
-- `return` - integer value if the address is correct
+- `#!dae var int address`  
+    Memory address to read from
 
-### MEM_ReadString
+**Return value**
+
+The function returns an integer value if the address is correct.
+
+### `MEM_ReadString`
 Reads string from the `address`.
 ```dae
-func string MEM_ReadString (var int address) {};
+func string MEM_ReadString (var int address)
 ```
+**Parameters**
 
-- `address` - memory address to read from
-- `return` - string if the address is correct
+- `#!dae var int address`  
+    Memory address to read from
 
-### MEM_ReadByte
-Reads byte from the `adr`.
+**Return value**
+
+The function returns string if the address is correct.
+
+### `MEM_ReadByte`
+Reads byte from the `address`.
 ```dae
-func int MEM_ReadByte (var int adr) {};
+func int MEM_ReadByte (var int address)
 ```
+**Parameters**
 
-- `adr` - memory address to read from
-- `return` - byte value if the address is correct
+- `#!dae var int address`  
+    Memory address to read from
 
-### MEM_ReadIntArray
+**Return value**
+
+The function returns byte value if the address is correct.
+
+### `MEM_ReadIntArray`
 Reads int from the array at the `arrayAddress`.
 ```dae
-func int MEM_ReadIntArray (var int arrayAddress, var int offset) {};
+func int MEM_ReadIntArray (var int arrayAddress, var int offset)
 ```
+**Parameters**
 
-- `arrayAddress` - memory address of array
-- `offset` - array offset (array index)
-- `return` - string from array if the address is correct
+- `#!dae var int arrayAddres`  
+    Memory address of array
+- `#!dae var int offset`  
+    Array offset (array index)
 
-### MEM_ReadStringArray
+**Return value**
+
+The function returns integer value from array if the address is correct
+
+### `MEM_ReadStringArray`
 !!! Info
     `MEM_ReadStringArray` has been already moved to the LeGo PermMem package.
 
-### MEM_ReadByteArray
+### `MEM_ReadByteArray`
 Reads byte from the array at the `arrayAddress`.
 ```dae
-func int MEM_ReadByteArray (var int arrayAddress, var int offset) {};
+func int MEM_ReadByteArray (var int arrayAddress, var int offset)
 ```
+**Parameters**
 
-- `arrayAddress` - memory address of array
-- `offset` - array offset (array index)
-- `return` - byte from array if the address is correct
+- `#!dae var int arrayAddres`  
+    Memory address of array
+- `#!dae var int offset`  
+    Array offset (array index)
+
+**Return value**
+
+The function returns byte from array if the address is correct
 
 ## Write functions
 
-### MEM_WriteInt
+### `MEM_WriteInt`
 Writes int value in the `address`.
 ```dae
-func void MEM_WriteInt (var int address, var int val) {};
+func void MEM_WriteInt (var int address, var int value)
 ```
+**Parameters**
 
-- `address` - memory address to write into
-- `val` - int value to write
+- `#!dae var int address`  
+    Memory address to write into
+- `#!dae var int value`  
+    Integer value to write
 
-### MEM_WriteString
+??? abstract "Examples"
+    An example of using this function is the following Ikarus function, which turns debugging messages on and off:
+    ```dae
+    func void MEM_SetShowDebug (var int on)
+    {
+        MEM_WriteInt(showDebugAddress, on);
+    };
+    ```
+
+### `MEM_WriteString`
 Writes string in the `address`.
 ```dae
-func void MEM_WriteString (var int address, var string val) {};
+func void MEM_WriteString (var int address, var string value)
 ```
+**Parameters**
 
-- `address` - memory address to write into
-- `val` - string to write
+- `#!dae var int address`  
+    Memory address to write into
+- `#!dae var int value`  
+    String to write
 
-### MEM_WriteByte
-Only the byte at address `adr` is changed here, not a whole four-byte word. That is, the three subsequent bytes remain untouched.
+### `MEM_WriteByte`
+Only the byte at address `address` is changed here, not a whole four-byte word. That is, the three subsequent bytes remain untouched.
 If `0 <= val < 256` does not apply in `MEM_WriteByte`, a warning is issued and val is trimmed accordingly. In particular, shouldn't be negative numbers are passed.
 ```dae
-func void MEM_WriteByte (var int adr, var int val) {};
+func void MEM_WriteByte (var int adress, var int value)
 ```
+**Parameters**
 
-- `address` - memory address to write into
-- `val` - byte to write
+- `#!dae var int address`  
+    Memory address to write into
+- `#!dae var int value`  
+    Byte to write
 
-### MEM_WriteIntArray
+### `MEM_WriteIntArray`
 Writes int value in the array at `arrayAddress`.
 ```dae
-func void MEM_WriteIntArray (var int arrayAddress, var int offset, var int value) {};
+func void MEM_WriteIntArray (var int arrayAddress, var int offset, var int value)
 ```
+**Parameters**
 
-- `arrayAddress` - memory address of array
-- `offset` - array offset (array index)
-- `val` - int value to write
+- `#!dae var int arrayAddres`  
+    Memory address of array
+- `#!dae var int offset`  
+    Array offset (array index)
+- `#!dae var int value`  
+    Integer value to write
 
-### MEM_WriteStringArray
+### `MEM_WriteStringArray`
 Writes string value in the array at `arrayAddress`.
 ```dae
-func void MEM_WriteStringArray (var int arrayAddress, var int offset, var string value) {};
+func void MEM_WriteStringArray (var int arrayAddress, var int offset, var string value)
 ```
+**Parameters**
 
-- `arrayAddress` - memory address of array
-- `offset` - array offset (array index)
-- `val` - string to write
+- `#!dae var int arrayAddres`  
+    Memory address of array
+- `#!dae var int offset`  
+    Array offset (array index)
+- `#!dae var string value`  
+    String to write
 
-### MEM_WriteByteArray
+### `MEM_WriteByteArray`
 Writes byte value in the array at `arrayAddress`.
 ```dae
-func void MEM_WriteByteArray (var int arrayAddress, var int offset, var int value) {};
+func void MEM_WriteByteArray (var int arrayAddress, var int offset, var int value)
 ```
+- `#!dae var int arrayAddres`  
+    Memory address of array
+- `#!dae var int offset`  
+    Array offset (array index)
+- `#!dae var int value`  
+    Byte to write
 
-- `arrayAddress` - memory address of array
-- `offset` - array offset (array index)
-- `val` - byte to write
-
-## Examples
-
-### Usage of MEM_WriteInt
-An example of using [MEM_WriteInt](#mem_writeint) is the following Ikarus function, which turns debugging messages on and off:
-```dae
-func void MEM_SetShowDebug (var int on)
-{
-    MEM_WriteInt(showDebugAddress, on);
-};
-```
 
