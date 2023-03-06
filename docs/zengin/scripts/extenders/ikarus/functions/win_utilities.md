@@ -15,73 +15,105 @@ func void MEM_InitAll () {};
 
 ## Functions
 
-### LoadLibrary
+### `LoadLibrary`
 Loads the specified module into the address space of the calling process. Full documentation [here](https://learn.microsoft.com/pl-pl/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya?redirectedfrom=MSDN)
 ```dae
-func int LoadLibrary (var string lpFileName) {};
+func int LoadLibrary (var string lpFileName)
 ```
-- `lpFileName` - name of loaded module
-- `return` - a handle to the module
+**Parameters**
 
-### GetProcAddress
+- `#!dae var string lpFileName`  
+    Name of loaded module
+
+**Return value**
+
+The function returns a handle of the module.
+
+### `GetProcAddress`
 Retrieves the address from the specified dynamic-link library. Full documentation [here](https://learn.microsoft.com/pl-pl/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress?redirectedfrom=MSDN)
 ```dae
-func int GetProcAddress (var int hModule, var string lpProcName) {};
+func int GetProcAddress (var int hModule, var string lpProcName)
 ```
+**Parameters**
 
-- `hModule` - A handle to the DLL module that contains the function or variable. Can be obtained using the LoadLibrary function
-- `lpProcName` - The function or variable name.
-- `return` - Address of the function or variable.
+- `#!dae var int hModule`  
+    A handle to the DLL module that contains the function or variable. Can be obtained using the LoadLibrary function
+- `#!ade var string lpProcName`  
+    The function or variable name.
 
-### FindKernelDllFunction
-Uses functions above to find function into `KERNEL32.DLL` file.
+**Return value**
+The function returns address of the function or variable.
+
+### `FindKernelDllFunction`
+Uses `GetProcAddress` to find function into `KERNEL32.DLL` file.
 ```dae
-func int FindKernelDllFunction (var string name) {};
+func int FindKernelDllFunction (var string name)
 ```
+**Parameters**
 
-- `name` - Name of the looked function.
-- `return` - Address of the function.
+- `#!dae var string name`  
+    Name of the looked function.
 
-### VirtualProtect
+**Return value**
+
+The function returns address of the function.
+
+### `VirtualProtect`
 Changes the protection on a region of committed pages in the virtual address space of the calling process. Full documentation [here](https://learn.microsoft.com/pl-pl/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect?redirectedfrom=MSDN)
 ```dae
 func int VirtualProtect (var int lpAddress, var int dwSize, var int flNewProtect) {};
 ```
+**Parameters**
 
-- `lpAddress` - The address of the starting page of the region of pages whose access protection attributes are to be changed.
-- `dwSize` - The size of the region whose access protection attributes are to be changed, in bytes.
-- `flNewProtect` - The memory protection option. All options can be found [here](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L1908).
-- `return` - `lpflOldProtectPtr` - A pointer to a variable that receives the previous access protection value.
+- `#!dae var int lpAddress`  
+    The address of the starting page of the region of pages whose access protection attributes are to be changed.
+- `#!dae var int dwSize`  
+    The size of the region whose access protection attributes are to be changed, in bytes.
+- `#!dae var int flNewProtect`  
+    The memory protection option. All options can be found [here](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L1908).
+
+**Return value**
+
+The function returns `lpflOldProtectPtr` - a pointer to a variable that receives the previous access protection value.
 
 Author's comment:
 > I made `lpflOldProtectPtr` the return value and ignored the return Value of VirtualProtect.
 
-### MemoryProtectionOverride
+### `MemoryProtectionOverride`
 Alais to `VirtualProtect` but with predefinied `PAGE_EXECUTE_READWRITE` protection option
 ```dae
-func void MemoryProtectionOverride (var int address, var int size) {};
+func void MemoryProtectionOverride (var int address, var int size)
 ```
+**Parameters**
 
-- `address` - The address of the starting page of the region of pages whose access protection attributes are to be changed.
-- `size` - The size of the region whose access protection attributes are to be changed, in bytes.
+- `#!dae var int address`  
+    The address of the starting page of the region of pages whose access protection attributes are to be changed.
+- `#!dae var int size`  
+    The size of the region whose access protection attributes are to be changed, in bytes.
 
-### MEM_MessageBox
-Displays a Windows MessageBox.
+### `MEM_MessageBox`
+Calls the WinAPI MessageBox function.
 ```dae
-func int MEM_MessageBox (var string txt, var string caption, var int type) {};
+func int MEM_MessageBox (var string txt, var string caption, var int type)
 ```
+**Parameters**
 
-- `txt` - Conntent of the MessageBox.
-- `caption` - Header of MessageBox
-- `type` - Type of MessageBox. All types listed [here](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L1957)
+- `#!dae var string txt`  
+    Conntent of the MessageBox.
+- `#!dae var string caption`  
+    Header of MessageBox.
+- `#!dae var int type`  
+    Type of MessageBox. All types listed [here](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L1957).
 
-### MEM_InfoBox
+### `MEM_InfoBox`
 Alias to `MEM_MessageBox` with "Information:" header and `MB_OK | MB_ICONINFORMATION` type.
 ```dae
-func void MEM_InfoBox (var string txt) {};
+func void MEM_InfoBox (var string txt)
 ```
+**Parameters**
 
-- `txt` - Conntent of the InfoBox.
+- `#!dae var string txt`  
+    Conntent of the InfoBox.
 
 ## Examples
 
