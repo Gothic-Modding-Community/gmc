@@ -7,7 +7,7 @@ The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in th
     If you want to use Ikarus in Gothic 1, it is best to define your own `Init_Global()` function and call it from every world initialization function.
 
 ```dae
-func void MEM_InitAll () {};
+func void MEM_InitAll()
 ```
 
 ## Implementation
@@ -15,83 +15,120 @@ func void MEM_InitAll () {};
 
 ## Read functions
 
-### MEM_GetGothOpt
+### `MEM_GetGothOpt`
 Searches the `Gothic.ini` for an option.
 ```dae
-func string MEM_GetGothOpt(var string sectionname, var string optionname) {};
+func string MEM_GetGothOpt(var string sectionname, var string optionname)
 ```
+**Parameters**
 
-- `sectionname` - settings section like `[GAME]`
-- `optionname` - one setting entry like `playLogoVideos`
-- `return` - the option value as a string, returns empty string if it was not found
+- `#!dae var string sectionname`  
+    Settings section like `[GAME]`
+- `#!dae var string optionname`  
+    One setting entry like `playLogoVideos`
 
-### MEM_GetModOpt
+**Return value**
+
+The function retrurns an option value as a string or empty string if option was not found.
+
+### `MEM_GetModOpt`
 Searches the loaded mod ini file for option.
 ```dae
-func void MEM_GetModOpt(var string sectionname, var string optionname) {};
+func void MEM_GetModOpt(var string sectionname, var string optionname)
 ```
+**Parameters**
 
-- `sectionname` - settings section like `[INFO]`
-- `optionname` - one setting entry like `Title`
-- `return` - the option value as a string, of it was not found, empty string is returned
+- `#!dae var string sectionname`  
+    Settings section like `[INFO]`
+- `#!dae var string optionname`  
+    One setting entry like `Title`
 
-### MEM_GothOptSectionExists
+**Return value**
+
+The function retrurns an option value as a string or empty string if option was not found.
+
+### `MEM_GothOptSectionExists`
 Checks whether a section exists in `Gothic.ini`
 ```dae
-func int MEM_GothOptSectionExists(var string sectionname) {};
+func int MEM_GothOptSectionExists(var string sectionname)
 ```
+**Parameters**
 
-- `sectionname` - settings section like `[GAME]`
-- `return` - `TRUE` if section exist `FALSE` otherwise
+- `#!dae var string sectionname`  
+    Settings section like `[GAME]`
 
-### MEM_ModOptSectionExists
+**Return value**
+
+The function retrurns `TRUE` if section exists `FALSE` is returned otherwise.
+
+### `MEM_ModOptSectionExists`
 Checks whether a section exists in loaded mod ini file
 ```dae
-func int MEM_ModOptSectionExists(var string sectionname) {};
+func int MEM_ModOptSectionExists(var string sectionname)
 ```
+**Parameters**
 
-- `sectionname` - settings section like `[INFO]`
-- `return` - `TRUE` if section exist `FALSE` otherwise
+- `#!dae var string sectionname`  
+    Settings section like `[INFO]`
 
-### MEM_GothOptExists
+**Return value**
+
+The function retrurns `TRUE` if section exists `FALSE` is returned otherwise.
+
+### `MEM_GothOptExists`
 Checks whether an option exists in `Gothic.ini`
 ```dae
-func int MEM_GothOptExists(var string sectionname,
-                           var string optionname) {};
+func int MEM_GothOptExists(var string sectionname, var string optionname)
 ```
+**Parameters**
 
-- `sectionname` - settings section like `[GAME]`
-- `optionname` - one setting entry like `playLogoVideos`
-- `return` - `TRUE` if option in a section exist `FALSE` otherwise
+- `#!dae var string sectionname`  
+    Settings section like `[GAME]`
+- `#!dae var string optionname`  
+    One setting entry like `playLogoVideos`
 
-### MEM_ModOptExists
+**Return value**
+
+The function retrurns `TRUE` if option in a section exist `FALSE` is returned otherwise.
+
+### `MEM_ModOptExists`
 Checks whether an option exists in loaded mod ini file
 ```dae
-func int MEM_ModOptExists(var string sectionname, var string optionname) {};
+func int MEM_ModOptExists(var string sectionname, var string optionname)
 ```
+**Parameters**
 
-- `sectionname` - settings section like `[INFO]`
-- `optionname` - one setting entry like `Title`
-- `return` - `TRUE` if option in a section exist `FALSE` otherwise
+- `#!dae var string sectionname`  
+    Settings section like `[INFO]`
+- `#!dae var string optionname`  
+    One setting entry like `Title`
+
+**Return value**
+
+The function retrurns `TRUE` if option in a section exist `FALSE` is returned otherwise.
 
 ## Write functions
 !!! Warning
     Mod configuration is never saved to disk, therefore there are no separate functions for writing to it
 
-### MEM_SetGothOpt
+### `MEM_SetGothOpt`
 The option `option` in the section `section` is set to the `value`. If the section and/or option does not exist, it will be created.
 ```dae
-func void MEM_SetGothOpt(var string section, var string option, var string value) {};
+func void MEM_SetGothOpt(var string section, var string option, var string value)
 ```
+**Parameters**
 
-- `section` - the section where the option should located
-- `option` - option to write/overwrite
-- `value` - value to set the option to
+- `#!dae var string section`  
+    The section where the option should located
+- `#!dae var string option`  
+    Option to write/overwrite
+- `#!dae var string value`  
+    Value to set the option to
 
-### MEM_ApplyGothOpt
+### `MEM_ApplyGothOpt`
 Applies the changes and saves the ini to disk
 ```dae
-func void MEM_ApplyGothOpt() {};
+func void MEM_ApplyGothOpt()
 ```
 
 !!! Tip
@@ -101,46 +138,68 @@ func void MEM_ApplyGothOpt() {};
 ## Key functions
 The `Gothic.ini` contains the assignment of physical keys (e.g. "W") to logical keys (e.g. "keyUp").
 
-### MEM_GetKey
+### `MEM_GetKey`
 Returns the primary key assigned to logical key.
 ```dae
-func int MEM_GetKey (var string name) {};
+func int MEM_GetKey (var string name)
 ```
+**Parameters**
 
-- `name` - name of the logical key
-- `return` - key assigned to logical key
+- `#!dae var string name`  
+    Name of the logical key
 
-### MEM_GetSecondaryKey
+**Return value**
+
+The function retrurns key assigned to logical key
+
+### `MEM_GetSecondaryKey`
 Returns a secondary key assigned to logical key.
 ```dae
-func int MEM_GetSecondaryKey(var string name) {};
+func int MEM_GetSecondaryKey(var string name)
 ```
+**Parameters**
 
-- `name` - name of the logical key
-- `return` - key assigned to logical key
+- `#!dae var string name`  
+    Name of the logical key
 
-### MEM_SetKeys
+**Return value**
+
+The function retrurns key assigned to logical key
+
+### `MEM_SetKeys`
 Sets keyboard keys of the logical key.
 ```dae
-func void MEM_SetKeys(var string name, var int primary, var int secondary) {};
+func void MEM_SetKeys(var string name, var int primary, var int secondary)
 ```
+**Parameters**
 
-- `name` - name of the logical key
-- `primary` - primary key to be assigned, can be taken from [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d)/[Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d) file.
-- `secondary` - secondary key to be assigned, can be taken from [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d)/[Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d) file.
-### MEM_SetKey
+- `#!dae var string name`  
+    Name of the logical key
+- `#!dae var int primary`  
+    Primary key to be assigned, can be taken from [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d) file.
+- `#!dae var int secondary`  
+    Secondary key to be assigned, can be taken from [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d) file.
+
+### `MEM_SetKey`
 Sets the primary keyboard key of the logical key.
 ```dae
-func void MEM_SetKey(var string name, var int key) {};
+func void MEM_SetKey(var string name, var int key)
 ```
+**Parameters**
 
-- `name` - name of the logical key
-- `key` - primary key to be assigned, can be taken from [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d)/[Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d) file.
-### MEM_SetSecondaryKey
+- `#!dae var string name`  
+    Name of the logical key
+- `#!dae var int key`  
+    Primary key to be assigned, can be taken from [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d) file.
+
+### `MEM_SetSecondaryKey`
 Sets the secondary keyboard key of the logical key.
 ```dae
-func void MEM_SetSecondaryKey(var string name, var int key) {};
+func void MEM_SetSecondaryKey(var string name, var int key)
 ```
+**Parameters**
 
-- `name` - name of the logical key
-- `key` - secondary key to be assigned, can be taken from [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d)/[Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d) file.
+- `#!dae var string name`  
+    Name of the logical key
+- `#!dae var int key`  
+    Secondary key to be assigned, can be taken from [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d) file.
