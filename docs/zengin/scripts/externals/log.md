@@ -23,6 +23,20 @@ func void Log_AddEntry(var string topicName, var string entry) {};
 - `topicName` - unique string used to identifiy and name the topic
 - `entry` - content of the new entry
 
+!!! Info
+    In the engine the `#!dae Log_AddEntry()` is wrapped in a `#!dae B_LogEntry()` function. This function also handles printing the "New Journal Entry" message to the screen and playing the sound effect.
+    ```dae
+    func void B_LogEntry(var string topic, var string entry)
+    {
+        PrintDebugNpc(PD_ZS_DETAIL, "B_LogEntry"); // Logging
+
+        Log_AddEntry(topic, entry);
+
+        PrintScreen(NAME_NewLogEntry, -1, _YPOS_MESSAGE_LOGENTRY, "font_old_10_white.tga", _TIME_MESSAGE_LOGENTRY);
+        Snd_Play("LogEntry");
+    };
+    ```
+
 ## Log_SetTopicStatus
 Changes the status of the topic with the name `topicName`
 
@@ -30,9 +44,10 @@ Changes the status of the topic with the name `topicName`
 func void Log_SetTopicStatus(var string topicName, var int status) {};
 ```
 
-- `topicName` - unique string used to identifiy and name the topic
+- `topicName` - unique string used to identify and name the topic
 - `status` - the status to be set  
 Takes constants `LOG_RUNNING`, `LOG_SUCCESS`, `LOG_FAILED`, `LOG_OBSOLETE` as values
+
 ## Externals with docu comments
 
 ```dae
@@ -55,6 +70,8 @@ func void Log_AddEntry(var string topicName, var string entry) {};
 func void Log_SetTopicStatus(var string topicName, var int status) {};
 ```
 
+
+
 ## zParserExtender
-If you look at the log external selection, you may notice that there are only functions to create a log entry and set its status, but there are no functions to read the log status from the log (as discussed on [Inside Gothic](https://ataulien.github.io/Inside-Gothic/QuestLog/)). As a result of this the original scriptwriters had to define additional variable, that was tracking the log status on the side of the scripts, even though the value was already tracked in the engine, there was just no way to get it back to Daedalus.  
+The log external function selection is missing functions to retrieve the status of a log entry. There are only functions to read the log status (as discussed on [Inside Gothic](https://ataulien.github.io/Inside-Gothic/QuestLog/)). As a result of this the original scriptwriters had to define additional variable to track the log status in the scripts, even though the value is being already tracked by the engine.  
 zParserExtender fixes this by introducing new [log external functions](/extenders/zparserextender/log.md).
