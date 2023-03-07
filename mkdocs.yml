@@ -87,7 +87,8 @@ nav:
         - C_SVM:  zengin/scripts/classes/c_svm.md
       - Externals:
         - zengin/scripts/externals/index.md
-        - LOG functions: zengin/scripts/externals/log.md
+        - Log functions: zengin/scripts/externals/log.md
+        - Doc functions: zengin/scripts/externals/doc.md
       - Extenders:
         - zengin/scripts/extenders/index.md
         - Ikarus:
@@ -146,15 +147,15 @@ nav:
             - Menu function:    zengin/scripts/extenders/zparserextender/externals/menu.md
             - Log functions:    zengin/scripts/extenders/zparserextender/externals/log.md
             - Event function:   zengin/scripts/extenders/zparserextender/externals/events_vars.md
-            - CAST functions:   zengin/scripts/extenders/zparserextender/externals/cast.md
-            - HLP functions:    zengin/scripts/extenders/zparserextender/externals/hlp.md
-            - WLD functions:    zengin/scripts/extenders/zparserextender/externals/wld.md
-            - MDL functions:    zengin/scripts/extenders/zparserextender/externals/mdl.md
-            - NPC functions:    zengin/scripts/extenders/zparserextender/externals/npc.md
-            - MOB functions:    zengin/scripts/extenders/zparserextender/externals/mob.md
-            - AI functions:     zengin/scripts/extenders/zparserextender/externals/ai.md
-            - PAR functions:    zengin/scripts/extenders/zparserextender/externals/par.md
-            - VOB functions:    zengin/scripts/extenders/zparserextender/externals/vob.md
+            - Cast functions:   zengin/scripts/extenders/zparserextender/externals/cast.md
+            - Hlp functions:    zengin/scripts/extenders/zparserextender/externals/hlp.md
+            - Wld functions:    zengin/scripts/extenders/zparserextender/externals/wld.md
+            - Mdl functions:    zengin/scripts/extenders/zparserextender/externals/mdl.md
+            - Npc functions:    zengin/scripts/extenders/zparserextender/externals/npc.md
+            - Mob functions:    zengin/scripts/extenders/zparserextender/externals/mob.md
+            - Ai functions:     zengin/scripts/extenders/zparserextender/externals/ai.md
+            - Par functions:    zengin/scripts/extenders/zparserextender/externals/par.md
+            - Vob functions:    zengin/scripts/extenders/zparserextender/externals/vob.md
           - Examples:
             - Sign post example: zengin/scripts/extenders/zparserextender/examples/signposts.md
 
