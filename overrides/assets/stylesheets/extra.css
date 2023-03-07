@@ -337,6 +337,11 @@ div.md-nav__link--index {
     color: var(--gmc-code-hl-zparserextender-color);
 }
 
+.highlight .nb-Other
+{
+    color: var(--md-code-hl-function-color);
+}
+
 .highlight .vi
 {
     color: var(--gmc-code-hl-variable-color);

@@ -6,4 +6,4 @@ mkdocs-redirects==1.2.0
 git+https://github.com/kamilkrzyskow/mkdocs-minify-plugin.git@7cae5550ecedf90458d53859dd8a4c92c9d0d5b2#egg=mkdocs_minify_plugin
 # mkdocs-static-i18n==0.53
 git+https://github.com/kamilkrzyskow/i18n.git@ab056dec558466c23543015369e9abbf38be0393#egg=mkdocs_static_i18n
-git+https://github.com/kamilkrzyskow/gothic-lexer.git@397a8be46d5720d593c62c7f71f21257346fa4b4#egg=gothic_lexer
+git+https://github.com/kamilkrzyskow/gothic-lexer.git@b5ee7868a7e7397cd129ff1f847daa7d39c0e416#egg=gothic_lexer
