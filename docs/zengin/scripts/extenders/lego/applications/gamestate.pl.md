@@ -8,7 +8,6 @@ Pakiet Gamestate pozwala sprawdzić stan gry (rozpoczęcie gry, ładowanie gry l
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Gamestate`.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_Gamestate);
 ```
 ## Implementacja
@@ -16,25 +15,29 @@ LeGo_Init(LeGo_Gamestate);
 
 ## Funkcje
 
-### Gamestate_AddListener
+### `Gamestate_AddListener`
 Dodaje listener/handler zmiany stanu gry.
 ```dae
-func void Gamestate_AddListener(var func listener) {};
+func void Gamestate_AddListener(var func listener)
 ```
+**Parametry**
 
-- `listener` - Ta funkcja zostanie wywołana przy zmianie stanu gry. Bieżący stan gry jest przekazywany jako parametr.
+- `#!dae var func listener`  
+    Ta funkcja zostanie wywołana przy zmianie stanu gry. Bieżący stan gry jest przekazywany jako parametr.
 
 
-### Gamestate_RemoveListener
+### `Gamestate_RemoveListener`
 Usuwa listener zmiany stanu gry.
 ```dae
-func void Gamestate_RemoveListener(var func listener) {};
+func void Gamestate_RemoveListener(var func listener)
 ```
+**Parametry**
 
-- `listener` - listener do usunięcia.
+- `#!dae var func listener`  
+    Listener do usunięcia.
 
 ## Przykłady
-Istnieją teraz dwie możliwości: albo zrobisz wszystko bezpośrednio w Init-Global, albo użyjesz EventHandlera.
+Istnieją teraz dwie możliwości. Wszystko można zrobić bezpośrednio w Init-Global lub za pomocą EventHandler.
 ### Init_Global
 ```dae
 func void Init_Global()
@@ -64,7 +67,7 @@ func void Init_Global()
 
 Może to być przydatne podczas pracy z PermMem, gdzie obiekty PermMem nie muszą być odtwarzane po załadowaniu gry.
 
-Możesz też wymyślić coś takiego:
+Można to również zrobić tak:
 ```dae
 func void Init_Global()
 {
@@ -93,7 +96,6 @@ func void Init_Global()
 ```
 
 ### Event Handler
-Ten przykład nie wymaga większych wyjaśnień.
 ```dae
 func void Init_Global()
 {

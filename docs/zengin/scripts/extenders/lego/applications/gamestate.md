@@ -8,7 +8,6 @@ Gamestate package allows to check for different game states (game start, game lo
 ## Initialization
 Initialize with `LeGo_Gamestate` flag.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_Gamestate);
 ```
 ## Implementation
@@ -16,25 +15,29 @@ LeGo_Init(LeGo_Gamestate);
 
 ## Functions
 
-### Gamestate_AddListener
+### `Gamestate_AddListener`
 Adds a listener/handler to the game-state event.
 ```dae
-func void Gamestate_AddListener(var func listener) {};
+func void Gamestate_AddListener(var func listener)
 ```
+**Parameters**
 
-- `listener` - This function will be called on a game-state change. The current game-state is passed as a parameter.
+- `#!dae var func listener`  
+    This function will be called on a game-state change. The current game-state is passed as a parameter.
 
 
-### Gamestate_RemoveListener
+### `Gamestate_RemoveListener`
 Removes game-state listener.
 ```dae
-func void Gamestate_RemoveListener(var func listener) {};
+func void Gamestate_RemoveListener(var func listener)
 ```
+**Parameters**
 
-- `listener` - listener function to be removed.
+- `#!dae var func listener`  
+    Listener function to be removed.
 
 ## Examples
-There are now two possibilities: either you do it directly into the Init-Global, or you use the EventHandler.
+There are now two possibilities. Everything can be done directly into the Init-Global, or with EventHandler.
 ### Init_Global
 ```dae
 func void Init_Global()
@@ -64,7 +67,7 @@ func void Init_Global()
 
 This might be useful when working with PermMem, where PermMem objects do not need to be recreated after the game loads.
 
-You can also think up something like this:
+It can also be done like that:
 ```dae
 func void Init_Global()
 {
@@ -93,7 +96,6 @@ func void Init_Global()
 ```
 
 ### Event Handler
-It is quickly explained:
 ```dae
 func void Init_Global()
 {
