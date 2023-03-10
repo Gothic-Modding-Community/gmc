@@ -12,54 +12,91 @@ No Initialization
 
 ## Functions
 
-### mk64
+### `mk64`
 Writes `lo` and `hi` in one place (dest). Makes Int64, `hi` has to be `-1` for negative 32bit `lo`.
 ```dae
-func void mk64(var int dest, var int hi, var int lo) {};
+func void mk64(var int dest, var int hi, var int lo)
 ```
+**Parameters**
 
-- `dest` - A pointer to an Int64 object or just 8 bytes of free memory.
+- `#!dae var int dest`  
+    A pointer to an Int64 object or just 8 bytes of free memory.
+- `#!dae var int hi`  
+    High part of integer.
+- `#!dae var int lo`  
+    Low part of integer.
 
-### neg64
+??? abstract "Examples"
+    
+    Function looks like that:
+    ```dae
+        func void mk64(var int dest, var int lo, var int hi) {
+        MEM_WriteInt(dest, lo);
+        MEM_WriteInt(dest+4, hi);
+        };
+    ```
+    So if you want to get `9 876 543 210` low part should be set to `617 283 950` and the high part to `10`
+
+    ```dae
+    var int low; low = 617 283 950;
+    var int high; high = 10;
+    mk64(<memory address>, low, high);
+    ```
+
+### `neg64`
 Negates the integer: `*dest <- -(*dest)`
 ```dae
-func void neg64(var int dest) {};
+func void neg64(var int dest)
 ```
+**Parameters**
 
-- `dest` - A pointer to an Int64 object or just 8 bytes of free memory.
+- `#!dae var int dest`  
+    A pointer to an Int64 object or just 8 bytes of free memory.
 
-### add64
+### `add64`
 Adds `src` to `dest`: `*dest <- *dest + *src`
 ```dae
-func void add64(var int dest, var int src) {};
+func void add64(var int dest, var int src)
 ```
+**Parameters**
 
-- `dest` - A pointer to an Int64 object or just 8 bytes of free memory. Will be changed.
-- `src` - A pointer to an Int64 object. Will not change.
+- `#!dae var int dest`  
+    A pointer to an Int64 object or just 8 bytes of free memory. Will be changed.
+- `#!dae var int src`  
+    A pointer to an Int64 object. Will not change.
 
-### sub64
+### `sub64`
 Subtracts `src` from `dest`: `*dest <- *dest - *src`
 ```dae
-func void sub64(var int dest, var int src) {};
+func void sub64(var int dest, var int src)
 ```
+**Parameters**
 
-- `dest` - A pointer to an Int64 object or just 8 bytes of free memory. Will be changed.
-- `src` - A pointer to an Int64 object. Will not change.
+- `#!dae var int dest`  
+    A pointer to an Int64 object or just 8 bytes of free memory. Will be changed.
+- `#!dae var int src`  
+    A pointer to an Int64 object. Will not change.
 
-### mul64
+### `mul64`
 Multiplies `dest` by `src`: `*dest <- (*dest) * (*src)`
 ```dae
-func void mul64(var int dest, var int src) {};
+func void mul64(var int dest, var int src)
 ```
+**Parameters**
 
-- `dest` - A pointer to an Int64 object or just 8 bytes of free memory. Will be changed.
-- `src` - A pointer to an Int64 object. Will not change.
+- `#!dae var int dest`  
+    A pointer to an Int64 object or just 8 bytes of free memory. Will be changed.
+- `#!dae var int src`  
+    A pointer to an Int64 object. Will not change.
 
-### div64
+### `div64`
 Divides `dest` by `src`: `*dest <- *dest / *src`
 ```dae
-func void mul64(var int dest, var int src) {};
+func void mul64(var int dest, var int src)
 ```
+**Parameters**
 
-- `dest` - A pointer to an Int64 object or just 8 bytes of free memory. Will be changed.
-- `src` - A pointer to an Int64 object. Will not change.
+- `#!dae var int dest`  
+    A pointer to an Int64 object or just 8 bytes of free memory. Will be changed.
+- `#!dae var int src`  
+    A pointer to an Int64 object. Will not change.
