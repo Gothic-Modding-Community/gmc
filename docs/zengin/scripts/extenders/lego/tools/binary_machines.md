@@ -12,165 +12,206 @@ No initialization
 
 ## BinaryWriter
 
-### BW_NewFile
+### `BW_NewFile`
 Creates the file `file` and opens a stream. Doesn't work if a stream is already open.
 ```dae
-func int BW_NewFile(var string file) {};
+func int BW_NewFile(var string file)
 ```
+**Parameters**
 
-- `file` - name of created file
+- `#!dae var string file`  
+    Name of created file
 
-### BW_Close
+### `BW_Close`
 Closes the current stream.
 ```dae
-func void BW_Close() {};
+func void BW_Close()
 ```
 
-### BW
+### `BW`
 Writes `length` bytes of `data` to the stream, maximum 4 bytes.
 ```dae
-func void BW(var int data, var int length) {};
+func void BW(var int data, var int length)
 ```
+**Parameters**
 
-- `data` - value of bytes
-- `length` - number of bytes
+- `#!dae var int data`  
+    Value of bytes
+- `#!dae var int length`  
+    Number of bytes
 
-### BW_Int
+### `BW_Int`
 Writes `data` to the stream.
 ```dae
-func void BW_Int(var int data) {};
+func void BW_Int(var int data)
 ```
+**Parameters**
 
-- `data` - int value to wirte
+- `#!dae var int data`  
+    Int value to wirte
 
-### BW_Char
+### `BW_Char`
 Writes the first letter of 'data' to the stream.
 ```dae
-func void BW_Char(var string data) {};
+func void BW_Char(var string data)
 ```
+**Parameters**
 
-- `data` - char to write
+- `#!dae var string data`  
+    Char to write
 
-### BW_String
+### `BW_String`
 Writes `data` terminated with `\0` to the stream.
 ```dae
-func void BW_String(var string data) {};
+func void BW_String(var string data)
 ```
+**Parameters**
 
-- `data` - string to write
+- `#!dae var string data`  
+    String to write
 
-### BW_Byte
+### `BW_Byte`
 Writes a byte to the stream.
 ```dae
-func void BW_Byte(var int data) {};
+func void BW_Byte(var int data)
 ```
+**Parameters**
 
-- `data` - byte value to write
+- `#!dae var int data`  
+    Byte value to write
 
-### BW_Bytes
+### `BW_Bytes`
 Writes `length` of bytes from the pointer `dataPtr` to the stream.
 ```dae
-func void BW_Bytes(var int dataPtr, var int length) {};
+func void BW_Bytes(var int dataPtr, var int length)
 ```
+**Parameters**
 
-- `length` - number of bytes
-- `dataPtr` - pointer of data to write
+- `#!dae var int dataPtr`  
+    Pointer of data to write
+- `#!dae var int length`  
+    Number of bytes
 
-### BW_Text
+### `BW_Text`
 Writes the string to the stream without terminating it. So it can no longer be read.
 ```dae
-func void BW_Text(var string data) {};
+func void BW_Text(var string data)
 ```
+**Parameters**
 
-- `data` - text to write
+- `#!dae var string data`  
+    Text to write
 
-### BW_NextLine
+### `BW_NextLine`
 Writes a paragraph to the stream.
 ```dae
-func void BW_NextLine() {};
+func void BW_NextLine()
 ```
 
 ## BinaryReader
 
-### BR_OpenFile
+### `BR_OpenFile`
 Opens the stream from the file.
 ```dae
-func int BR_OpenFile(var string file) {};
+func int BR_OpenFile(var string file)
 ```
+**Parameters**
 
-- `file` - file to be opened
+- `#!dae var string file`  
+    File to be opened
 
-### BR_Close
+### `BR_Close`
 Closes the current stream.
 ```dae
-func void BR_Close() {};
+func void BR_Close()
 ```
 
-### BR
-Reads `length` (maximum 4) bytes from the stream.
+### `BR`
+Reads bytes from the stream.
 ```dae
-func int BR(var int length) {};
+func int BR(var int length)
 ```
+**Parameters**
 
-- `length` - number of bytes
-- `return` - value of bytes
+- `#!dae var int length`  
+    Number of bytes to read (maximum 4)
 
-### BR_Int
+**Return value**
+
+The function returns the value of read bytes.
+
+### `BR_Int`
 Reads 4 bytes from the stream.
 ```dae
-func int BR_Int() {};
+func int BR_Int()
 ```
+**Return value**
 
-- `return` - int value
+The function returns value of read integer.
 
-### BR_Char
+### `BR_Char`
 Reads a letter from the stream.
 ```dae
-func string BR_Char() {};
+func string BR_Char()
 ```
+**Return value**
 
-- `return` - letter (character)
+The function returns a read letter (character).
 
-### BR_String
+### `BR_String`
 Reads a string terminated by `\0` from the stream.
 ```dae
-func string BR_String() {};
+func string BR_String()
 ```
+**Return value**
 
-- `return` - read string
+The function returns a read string.
 
-### BR_Byte
+### `BR_Byte`
 Reads a byte from the stream.
 ```dae
-func int BR_Byte() {};
+func int BR_Byte()
 ```
+**Return value**
 
-- `return` - a value of byte
+The function returns a value of read byte.
 
-### BR_Bytes
-Reads `length` bytes from the stream and returns a pointer.
+### `BR_Bytes`
+Reads bytes from the stream.
 ```dae
-func int BR_Bytes(var int length) {};
+func int BR_Bytes(var int length)
 ```
+**Parameters**
 
-- `length` - number of bytes
-- `return` - pointer
+- `#!dae var int length`  
+    Number of bytes to read
 
-### BR_TextLine
+**Return value**
+
+The function returns a pointer to the data of read bytes.
+
+### `BR_TextLine`
 Reads a line from the stream.
 ```dae
-func string BR_TextLine() {};
+func string BR_TextLine()
 ```
+**Return value**
 
-- `return` - text line
+The function returns a read text line.
 
-### BR_Text
+### `BR_Text`
 Reads a string of the given length from a stream.
 ```dae
-func string BR_Text(var int lenghth) {};
+func string BR_Text(var int lenght)
 ```
+**Parameters**
 
-- `lenght` - number of characters in string
+- `#!dae var int lenght`  
+    Number of characters to read
+
+**Return value**
+
+The function returns a read text of given number of characters.
 
 ## Examples
 
