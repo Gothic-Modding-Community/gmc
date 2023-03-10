@@ -7,7 +7,7 @@ Najlepszym sposobem na zainicjowanie Ikarusa jest wywołanie `MEM_InitAll()` w f
     Jeżeli chcesz używać Ikarusa z Gothiciem 1, najlepiej będzie, jeśli zdefiniujesz własną funkcję `Init_Global()` i wywołasz ją w każdej funkcji inicjującej świat.
 
 ```dae
-func void MEM_InitAll()
+MEM_InitAll();
 ```
 
 ## Implementacja

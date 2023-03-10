@@ -86,9 +86,9 @@ func void StartRain()
     MEM_InitGlobalInst(); 
 
     // start at the beginning of the day (12:00 noon)
-    MEM_SkyController.rainFX_timeStartRain = 0; //FLOATNULL;
+    MEM_SkyController.rainFX_timeStartRain = 0; //Float zero;
     // end at the end of the day (12:00 noon of the next day)
-    MEM_SkyController.rainFX_timeStopRain = 1065353216; //FLOATEINS;
+    MEM_SkyController.rainFX_timeStopRain = 1065353216; //Float one;
 
     /* Note: The start and end times are floating point numbers.
     * 0 stands for the beginning of the day 1 for the end of the day.
@@ -194,5 +194,5 @@ func void foo()
     also be replaced here by 
     MEM_CallByID(someObject + 1);
 */
-}
+
 ```

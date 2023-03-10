@@ -11,7 +11,7 @@ The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in th
     If you want to use Ikarus in Gothic 1, it is best to define your own `Init_Global()` function and call it from every world initialization function.
 
 ```dae
-func void MEM_InitAll()
+MEM_InitAll();
 ```
 
 ## Implementation
