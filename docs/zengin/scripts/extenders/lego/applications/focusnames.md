@@ -9,7 +9,6 @@ This package colors the focus names of the NPCs in appropriate colors according 
 ## Initialization
 Initialize with `LeGo_Focusnames` flag.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_Focusnames);
 ```
 
@@ -19,7 +18,7 @@ LeGo_Init(LeGo_Focusnames);
 ## Usage
 If you want to change colors for any behavior edit the following functions directly in `Focusnames.d` file.
 
-### Focusnames_Color_Friendly
+### `Focusnames_Color_Friendly`
 ```dae
 func int Focusnames_Color_Friendly()
 {
@@ -27,7 +26,7 @@ func int Focusnames_Color_Friendly()
 };
 ```
 
-### Focusnames_Color_Neutral
+### `Focusnames_Color_Neutral`
 ```dae
 func int Focusnames_Color_Neutral()
 {
@@ -35,7 +34,7 @@ func int Focusnames_Color_Neutral()
 };
 ```
 
-### Focusnames_Color_Angry
+### `Focusnames_Color_Angry`
 ```dae
 func int Focusnames_Color_Angry()
 {
@@ -43,7 +42,7 @@ func int Focusnames_Color_Angry()
 };
 ```
 
-### Focusnames_Color_Hostile
+### `Focusnames_Color_Hostile`
 ```dae
 func int Focusnames_Color_Hostile()
 {
