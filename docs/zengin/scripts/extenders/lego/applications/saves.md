@@ -8,7 +8,6 @@ Offers an open file stream that can read/write variables on save/load. It's used
 ## Initialization
 Initialize with `LeGo_Saves` flag.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_Saves);
 ```
 
@@ -17,16 +16,16 @@ LeGo_Init(LeGo_Saves);
 
 ## Functions
 
-### BW_Savegame
-Custom Function. When it is called there is a stream to its own memory file, this can be filled with the BW_* functions from the [BinaryMachines](../tools/binary_machines.md).
+### `BW_Savegame`
+Custom Function. When it is called there is a stream to its own memory file, this can be filled with the `BW_*` functions from the [BinaryMachines](../tools/binary_machines.md).
 ```dae
-func void BW_Savegame() {};
+func void BW_Savegame()
 ```
 
-### BR_Savegame
-Custom Function. When it is called, there is a stream to a previously saved custom memory file, which can be read from the [BinaryMachines](../tools/binary_machines.md) using the BR_* functions.
+### `BR_Savegame`
+Custom Function. When it is called, there is a stream to a previously saved custom memory file, which can be read from the [BinaryMachines](../tools/binary_machines.md) using the `BR_*` functions.
 ```dae
-func void BR_Savegame() {};
+func void BR_Savegame()
 ```
 
 ## Examples
