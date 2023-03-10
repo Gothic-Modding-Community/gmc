@@ -60,6 +60,7 @@ Adds a function called after executing the event (`Event_Execute`).
 ```dae
 func void Event_Add(var int event, var func function) {};
 ```
+
 - `event` - handle returned from `Event_Create`
 - `function` - function to be added
 
@@ -68,6 +69,7 @@ func void Event_Add(var int event, var func function) {};
 ```dae
 func void Event_AddOnce(var int event, var func function) {};
 ```
+
 - `event` - handle returned from `Event_Create`
 - `function` - function to be added
 
@@ -76,6 +78,7 @@ Removes a function from the event's call list.
 ```dae
 func void Event_Remove(var int event, var func function) {};
 ```
+
 - `event` - handle returned from `Event_Create`
 - `function` - function to be removed
 
@@ -142,6 +145,7 @@ Adds a function called after executing the event (`EventPtr_Execute`).
 ```dae
 func void EventPtr_Add(var int eventPtr, var func function) {};
 ```
+
 - `eventPtr` - pointer returned from `EventPtr_Create`
 - `function` - function to be added
 
@@ -150,6 +154,7 @@ func void EventPtr_Add(var int eventPtr, var func function) {};
 ```dae
 func void EventPtr_AddI(var int eventPtr, var int id) {};
 ```
+
 - `eventPtr` - pointer returned from `EventPtr_Create`
 - `id` - ID of function to be added
 
@@ -158,6 +163,7 @@ func void EventPtr_AddI(var int eventPtr, var int id) {};
 ```dae
 func void EventPtr_AddOnce(var int eventPtr, var func function) {};
 ```
+
 - `eventPtr` - pointer returned from `EventPtr_Create`
 - `function` - function to be added
 
@@ -166,6 +172,7 @@ func void EventPtr_AddOnce(var int eventPtr, var func function) {};
 ```dae
 func void EventPtr_AddOnceI(var int eventPtr, var int id) {};
 ```
+
 - `eventPtr` - pointer returned from `EventPtr_Create`
 - `id` - ID of function to be added
 
@@ -174,6 +181,7 @@ Removes a function from the event's call list.
 ```dae
 func void EventPtr_Remove(var int eventPtr, var func function) {};
 ```
+
 - `eventPtr` - pointer returned from `EventPtr_Create`
 - `function` - function to be removed
 
@@ -182,6 +190,7 @@ func void EventPtr_Remove(var int eventPtr, var func function) {};
 ```dae
 func void EventPtr_RemoveI(var int eventPtr, var int id) {};
 ```
+
 - `eventPtr` - pointer returned from `EventPtr_Create`
 - `id` - ID of function to be removed
 

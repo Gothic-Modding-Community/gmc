@@ -27,7 +27,6 @@ func void mk64(var int dest, var int hi, var int lo)
     Low part of integer.
 
 ??? abstract "Examples"
-    
     Function looks like that:
     ```dae
         func void mk64(var int dest, var int lo, var int hi) {

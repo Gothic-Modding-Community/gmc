@@ -1,7 +1,7 @@
 # Access Menu Objects
 These Ikarus functions are intended to provide and simplify access to menu items (e.g. in the character menu).
 !!! Tip
-     Some menus are generated every time they are uesed, while others are generated once and then keep. For example, a character menu is only available after it was opened the first time, after that it is keeped in memory. Depending on what you actually want to do, it can make sense to introduce changes in the menu scripts.
+    Some menus are generated every time they are uesed, while others are generated once and then keep. For example, a character menu is only available after it was opened the first time, after that it is keeped in memory. Depending on what you actually want to do, it can make sense to introduce changes in the menu scripts.
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
