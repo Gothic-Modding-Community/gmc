@@ -90,14 +90,18 @@ nav:
         - Ikarus:
           - zengin/scripts/extenders/ikarus/index.md
           - Functions:
-            - Ini File Access: zengin/scripts/extenders/ikarus/functions/ini_access.md
-            - Keyboard:        zengin/scripts/extenders/ikarus/functions/keyboard.md
-            - Memory Access:   zengin/scripts/extenders/ikarus/functions/mem_access.md
-          - Examples:          zengin/scripts/extenders/ikarus/examples.md
+            - Memory Access:       zengin/scripts/extenders/ikarus/functions/mem_access.md
+            - Windows Utilities:   zengin/scripts/extenders/ikarus/functions/win_utilities.md
+            - Menu Access:         zengin/scripts/extenders/ikarus/functions/menu_access.md
+            - Keyboard:            zengin/scripts/extenders/ikarus/functions/keyboard.md
+            - Ini File Access:     zengin/scripts/extenders/ikarus/functions/ini_access.md
+          - Examples:              zengin/scripts/extenders/ikarus/examples.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
           - Tools:
             - AI_Function:     zengin/scripts/extenders/lego/tools/ai_function.md
+            - BinaryMachines:  zengin/scripts/extenders/lego/tools/binary_machines.md
+            - EventHandler:    zengin/scripts/extenders/lego/tools/event_handler.md
             - FrameFunctions:  zengin/scripts/extenders/lego/tools/frame_functions.md
             - Int64:           zengin/scripts/extenders/lego/tools/int64.md
             - ItemHelper:      zengin/scripts/extenders/lego/tools/item_helper.md
@@ -110,11 +114,13 @@ nav:
             - Anim8:           zengin/scripts/extenders/lego/applications/anim8.md
             - Bars:            zengin/scripts/extenders/lego/applications/bars.md
             - Bloodsplats:     zengin/scripts/extenders/lego/applications/bloodsplats.md
+            - Buffs:           zengin/scripts/extenders/lego/applications/buffs.md
             - ConsoleCommands: zengin/scripts/extenders/lego/applications/console_commands.md
             - Dialoggestures:  zengin/scripts/extenders/lego/applications/dialoggestures.md
             - Focusnames:      zengin/scripts/extenders/lego/applications/focusnames.md
             - GameState:       zengin/scripts/extenders/lego/applications/gamestate.md
             - Names:           zengin/scripts/extenders/lego/applications/names.md
+            - Saves:           zengin/scripts/extenders/lego/applications/saves.md
             - Trialoge:        zengin/scripts/extenders/lego/applications/trialoge.md
           - Various:
             - User constants:  zengin/scripts/extenders/lego/various/userconstants.md
