@@ -12,22 +12,27 @@ No Initialization
 
 ## Functions
 
-### SetName
+### `SetName`
 Should be set in InitGlobal().
 ```dae
-func void SetName(c_npc npc, string name) {};
+func void SetName(var c_npc npc, var string name) {};
 ```
+**Parameters**
 
-- `npc` - The NPC to be named
-- `name` - The name of the NPC
+- `#!dae var c_npc npc`  
+    The NPC to be named
+- `#!dae var string name`  
+    The name of the NPC
 
-### ShowName
+### `ShowName`
 Permanently displays the name set by `SetName` function above the npc.
 ```dae
-func void ShowName(c_npc npc) {};
+func void ShowName(var c_npc npc) {};
 ```
+**Parameters**
 
-- `npc` - The NPC whose name should be shown
+- `#!dae var c_npc npc`  
+    The NPC whose name should be shown
 
 ## Examples
 
