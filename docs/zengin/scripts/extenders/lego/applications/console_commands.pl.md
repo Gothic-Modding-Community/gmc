@@ -9,7 +9,6 @@ Ten Pakiet pozwala na tworzenie nowych poleceń konsloli dostępnej po naciśni�
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_ConsoleCommands`.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_ConsoleCommands);
 ```
 
@@ -18,32 +17,43 @@ LeGo_Init(LeGo_ConsoleCommands);
 
 ## Funkcje
 
-### CC_Register
+### `CC_Register`
 Rejestruje nowe polecenie konsoli.
 ```dae
-func void CC_Register(var func f, var string cmdPrefix, var string description) {};
+func void CC_Register(var func f, var string cmdPrefix, var string description)
 ```
+**Parametry**
 
-- `f` - Ta funkcja jest wykonywana po wprowadzeniu polecenia `cmdPrefix` w konsoli. Sygnatura funkcji to `func string f(var string p0)`. Przekazany string to wszystko, co zostało określone w konsoli po faktycznym poleceniu. Zwracana wartość jest następnie wyświetlana w konsoli.
-- `cmdPrefix` - Jest to polecenie, które można wprowadzić w konsoli.
-- `description` - Ten tekst pojawia się obok polecenia (w zSpy), gdy używasz polecenia `help` w konsoli.
+- `#!dae var func f`  
+    Ta funkcja jest wykonywana po wprowadzeniu polecenia `cmdPrefix` w konsoli. Sygnatura funkcji to `func string f(var string p0)`. Przekazany string to wszystko, co zostało określone w konsoli po faktycznym poleceniu. Zwracana wartość jest następnie wyświetlana w konsoli.
+- `#!dae var string cmdPrefix`  
+    Jest to polecenie, które można wprowadzić w konsoli.
+- `#!dae var string description`  
+    Ten tekst pojawia się obok polecenia (w zSpy), gdy używasz polecenia `help` w konsoli.
 
-### CC_Remove
+### `CC_Remove`
 Usuwa funkcje z konsoli komend.
 ```dae
-func void CC_Remove(var func f) {};
+func void CC_Remove(var func f)
 ```
+**Parametry**
 
-- `f`- Ta funkcja zostanie usunięta, a powiązane z nią polecenie przestanie działać.
+- `#!dae var func f`  
+    Ta funkcja zostanie usunięta, a powiązane z nią polecenie przestanie działać.
 
-### CC_Active
+### `CC_Active`
 Sprawdza dana funkcja jest już częścią polecenia konsoli.
 ```dae
-func int CC_Active(var func f) {};
+func int CC_Active(var func f)
 ```
+**Parametry**
 
-- `f` - sprawdzana funkcja
-- `return` - `TRUE` jeśli istnieje odpowiednia funkcja, `FALSE` w każdym innym przypadku.
+- `#!dae var func f`  
+    Sprawdzana funkcja
+
+**Zwracana wartość**
+
+Funkcja zwraca `TRUE` jeśli istnieje odpowiednia funkcja, `FALSE` w każdym innym przypadku.
 
 ## Przykłady
 
