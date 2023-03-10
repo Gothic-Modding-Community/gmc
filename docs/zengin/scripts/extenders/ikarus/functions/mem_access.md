@@ -178,7 +178,9 @@ Writes byte value in the array at `arrayAddress`.
 ```dae
 func void MEM_WriteByteArray (var int arrayAddress, var int offset, var int value)
 ```
-- `#!dae var int arrayAddres`  
+**Parameters**
+
+- `#!dae var int arrayAddress`  
     Memory address of array
 - `#!dae var int offset`  
     Array offset (array index)
