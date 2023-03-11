@@ -34,11 +34,11 @@ func void mk64(var int dest, var int hi, var int lo)
         MEM_WriteInt(dest+4, hi);
         };
     ```
-    So if you want to get `9 876 543 210` low part should be set to `617 283 950` and the high part to `10`
+    So if you want to get `9 876 543 210` low part should be set to `1286608618` and the high part to `2`
 
     ```dae
-    var int low; low = 617 283 950;
-    var int high; high = 10;
+    var int low; low = 1286608618;
+    var int high; high = 2;
     mk64(<memory address>, low, high);
     ```
 
