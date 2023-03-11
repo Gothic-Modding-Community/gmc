@@ -1,3 +1,6 @@
+---
+title: EventBlocks
+---
 ## Animation event blocks
 We often need to perform some other actions together with our animation, such as playing a sound effect, inserting item into NPC's hand or changing an item instance into a different one, like turning a raw steel into hot raw steel.
 

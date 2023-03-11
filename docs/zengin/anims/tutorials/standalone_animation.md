@@ -1,6 +1,7 @@
+# Standalone animation
 !!! example "Acknowledgment"
     This tutorial would not be possible without the ZenGin documentation available in the mod-kit. Further credits also go to [Mark56](https://carnage-markus.blogspot.com) who helped me understand animations in the first place, [Fawkes](https://www.youtube.com/channel/UCheR2tr8u1CsUGG15Lu2mxQ) and his request for me to do some animations for his excellent mod - Replay Mod, and last but not least Flosha from the Phoenix team who was the one for whom I offered to write this tutorial to help with the development of the [Phoenix project](https://phoenixthegame.com/).
-# Standalone animation
+
 Let us start with the easiest animation - a very simple gesturing animation.
 
 !!! info

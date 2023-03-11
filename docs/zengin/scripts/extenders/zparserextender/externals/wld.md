@@ -1,3 +1,6 @@
+---
+title: WLD functions
+---
 # WLD - world manipulation functions
 Functions related to the world. 
 

@@ -1,3 +1,6 @@
+---
+title: Talenty
+---
 # Talents - talenty
 Ten pakiet robi dwie rzeczy:
 

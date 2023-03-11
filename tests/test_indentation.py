@@ -5,6 +5,8 @@ import glob
 import os
 import unittest
 
+import mkdocs.utils.meta
+
 from tests.path_constants import DOCS_DIR
 
 
@@ -25,8 +27,10 @@ class IndentationTest(unittest.TestCase):
         for path in paths:
             file_path = os.path.join(DOCS_DIR, path)
 
-            with open(file_path, encoding="utf8") as file:
-                lines = file.readlines()
+            with open(file_path, encoding="utf-8-sig") as file:
+                source = file.read()
+
+            contents, meta = mkdocs.utils.meta.get_data(source)
 
             last_line = ""
             inside_admonition = False
@@ -34,7 +38,7 @@ class IndentationTest(unittest.TestCase):
             inside_codeblock = False
             inside_list = False
 
-            for n, line in enumerate(lines, start=1):
+            for n, line in enumerate(contents.split("\n"), start=1):
                 if inside_admonition and admonition_valid:
                     if line.lstrip(" ") == line:
                         inside_admonition = False

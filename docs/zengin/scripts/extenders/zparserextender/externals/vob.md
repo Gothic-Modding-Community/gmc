@@ -1,3 +1,6 @@
+---
+title: VOB functions
+---
 # VOB - functions for object manipulation
 VOB functions allow you to manipulate game world objects.
 

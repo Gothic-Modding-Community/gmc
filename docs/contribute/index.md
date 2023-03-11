@@ -1,9 +1,9 @@
+# How to contribute
 
 [gmc-discord]: https://discord.gg/mCpS5b5SUY
 [git-download]: https://git-scm.com/downloads
 [python-download]: https://www.python.org/downloads/
 
-# How to contribute
 The Gothic Modding Community is a community-driven project. We encourage people to contribute.
 
 This site is built with a Static Site Generator [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme together with multiple other MkDocs plugins.

@@ -1,3 +1,6 @@
+---
+title: While loop
+---
 # Native WHILE loop
 Just like [Ikarus](../../../../../notready.md) zParserExtender implements a while loop.
 

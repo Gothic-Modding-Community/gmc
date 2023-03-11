@@ -1,3 +1,6 @@
+---
+title: Other features
+---
 # Other functions of the extender
 ## ini parameters
 The choice of ini file depends on how the game was launched. If it was launched from Gothic.exe, then the parameters will be read from `SystemPack.ini`. If it was launched through GothicStarter.exe, then they will be read from the ini of the mod.

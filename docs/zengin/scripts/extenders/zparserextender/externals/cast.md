@@ -1,3 +1,6 @@
+---
+title: CAST functions
+---
 # CAST - data type conversion functions
 External functions for data type conversion and pointer casting.
 

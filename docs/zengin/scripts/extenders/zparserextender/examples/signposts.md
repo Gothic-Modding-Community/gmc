@@ -1,3 +1,6 @@
+---
+title: Sign post example
+---
 # Sign post teleportation
 This is a short "problem-solving" example, where we try to demonstrate the power of Daedalus injection using [zParserExtender](../../index.md). GaroK asked me if there is a way to teleport to all the sign posts in Khorinis to gather information for a Gothic wiki article.  
 The goal is to introduce a function that will teleport you to every signpost in Khorinis with the press of a button.

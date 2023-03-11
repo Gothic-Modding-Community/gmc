@@ -1,3 +1,6 @@
+---
+title: MOB functions
+---
 # MOB - interactive object functions
 Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.
 

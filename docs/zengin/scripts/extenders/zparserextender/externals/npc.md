@@ -1,3 +1,6 @@
+---
+title: NPC functions
+---
 # NPC - character functions
 NPC related functions.
 

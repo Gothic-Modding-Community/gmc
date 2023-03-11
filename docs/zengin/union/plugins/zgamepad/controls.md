@@ -1,3 +1,6 @@
+---
+title: Controls customization
+---
 # Gamepad controls
 The zGamePad plugin comes with a default control scheme, but it is possible to create your own. The plugin will search for any file with the `.gamepad.overlay` extension placed in `Gothic/System` directory or in any of the loaded `.mod` and `.vdf` archives.
 

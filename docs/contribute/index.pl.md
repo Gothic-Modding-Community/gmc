@@ -1,9 +1,9 @@
+# Jak się udzielić
 
 [gmc-discord]: https://discord.gg/mCpS5b5SUY
 [git-download]: https://git-scm.com/downloads
 [python-download]: https://www.python.org/downloads/
 
-# Jak się udzielić
 Gothic Modding Community jest projektem napędzanym przed społeczność. Zachęcamy osoby do wnoszenia swojego wkładu.
 
 Ta strona jest budowana przy pomocy statycznego generatora stron [MkDocs](https://www.mkdocs.org/) oraz skórki [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), wraz z wieloma innymi wtyczkami do MkDocs.
