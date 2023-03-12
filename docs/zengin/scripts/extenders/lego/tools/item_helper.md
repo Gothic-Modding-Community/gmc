@@ -16,10 +16,14 @@ No initialization
 
 ## Functions
 
-### ITM_GetPtr
+### `ITM_GetPtr`
 ```dae
-func int ITM_GetPtr(var int instance) {};
+func int ITM_GetPtr(var int instance)
 ```
+**Parameters**
 
-- `instance`- `C_Item` instance to get the pointer of
-- `return`- `oCItem` pointer of the `C_Item` instance
+- `#!dae var int instance`  
+    `C_Item` instance to get the pointer of
+
+**Return value**
+The function returns `oCItem` pointer of the `C_Item` instance.

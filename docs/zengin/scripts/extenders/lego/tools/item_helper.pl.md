@@ -16,10 +16,15 @@ Brak
 
 ## Funkcje
 
-### ITM_GetPtr
+### `ITM_GetPtr`
 ```dae
-func int ITM_GetPtr(var int instance) {};
+func int ITM_GetPtr(var int instance)
 ```
+**Parametry**
 
-- `instance` - instancja `C_Item`, z której ma zostać pobrany wskaźnik
-- `return `- wskaźnik `oCItem` instancji `C_Item`
+- `#!dae var int instance`  
+    Instancja `C_Item`, z której ma zostać pobrany wskaźnik
+
+**Zwracana wartość**
+
+Funkcja zwraca wskaźnik `oCItem` instancji `C_Item`.
