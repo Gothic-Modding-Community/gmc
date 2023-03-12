@@ -13,7 +13,6 @@ Talents package uses one free AIVar variables, the default is AIVar with the ind
 ## Initialization
 Initialize with `LeGo_PermMem` flag.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_PermMem);
 ```
 
@@ -22,48 +21,66 @@ LeGo_Init(LeGo_PermMem);
 
 ## Functions
 
-### NPC_GetID
+### `NPC_GetID`
 Returns unique ID specific for provided NPC.
 
 ```dae
-func int NPC_GetID(var c_npc slf) {};
+func int NPC_GetID(var c_npc slf)
 ```
+**Parameters**
 
-- `slf` NPC
-- `return` NPCs unique ID
+- `#!dae var c_npc slf`  
+    NPC to get ID
 
-### NPC_FindByID
+**Return value**
+
+The function returns NPCs unique ID.
+
+### `NPC_FindByID`
 Finds the NPC pointer of an NPC with the given ID.
 ```dae
-func int NPC_FindByID(var int ID) {};
+func int NPC_FindByID(var int ID)
 ```
+**Parameters**
 
-- `ID` - NPC ID
-- `return` - NPC pointer
+- `#!dae var int ID`  
+    NPC ID
 
-### TAL_CreateTalent
+**Return value**
+
+The function returns NPC pointer.
+
+### `TAL_CreateTalent`
 Creates a talent into which you can later save a value for every NPC (just like AI_Var).
 ```dae
-func int TAL_CreateTalent() {};
+func int TAL_CreateTalent()
 ```
+**Return value**
 
-- `return` - Value that can be later used as a talent index
+The function returns value that can be later used as a talent ID.
 
-### TAL_SetValue
+### `TAL_SetValue`
 Sets a new value to the specified talent.
 ```dae
-func void TAL_SetValue(var c_npc npc, var int talent, var int value) {};
+func void TAL_SetValue(var c_npc npc, var int talent, var int value)
 ```
+**Parameters**
 
-- `npc` - Set the talent value for this NPC
-- `talent` - Talent ID
-- `value` - Value to be set
+- `#!dae var c_npc npc`  
+    Set the talent value for this NPC
+- `#!dae var int talent`  
+    Talent ID
+- `#!dae var int value`  
+    Value to be set
 
 ### TAL_GetValue
 Returns the value of a saved talent for specified NPC.
 ```dae
-func int TAL_GetValue(var c_npc npc, var int talent) {};
+func int TAL_GetValue(var c_npc npc, var int talent)
 ```
+**Parameters**
 
-- `npc` - Get the talent value from this NPC
-- `talent` - Talent ID
+- `#!dae var c_npc npc`  
+    Get the talent value from this NPC
+- `#!dae var int talent`  
+    Talent ID

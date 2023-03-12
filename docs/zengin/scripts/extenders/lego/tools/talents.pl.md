@@ -13,7 +13,6 @@ Pakiet `Talents` używa jednego wolnego AIVara, domyślnie jest to AIVar z mumer
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_PermMem`.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_PermMem);
 ```
 
@@ -22,48 +21,66 @@ LeGo_Init(LeGo_PermMem);
 
 ## Funkcje
 
-### NPC_GetID
+### `NPC_GetID`
 Zwraca unikalne ID dla podanego NPC.
 
 ```dae
-func int NPC_GetID(var c_npc slf) {};
+func int NPC_GetID(var c_npc slf)
 ```
+**Parametry**
 
-- `slf` - NPC
-- `return` - ID 
+- `#!dae var c_npc slf`  
+    NPC
 
-### NPC_FindByID
+**Zwracana wartość**
+
+Funkcja zwraca unikalne ID dla podanego NPC.
+
+### `NPC_FindByID`
 Znajduje wskaźnik NPC o podanym ID.
 ```dae
-func int NPC_FindByID(var int ID) {};
+func int NPC_FindByID(var int ID)
 ```
+**Parametry**
 
-- `ID` - ID zwrócone przez `NPC_GetID`
-- `return` - wskaźnik NPC
+- `#!dae var int ID`  
+    ID postaci
 
-### TAL_CreateTalent
+**Zwracana wartość**
+
+Funkcja zwraca wskaźnik podanej postaci (NPC).
+
+### `TAL_CreateTalent`
 Tworzy talent, w którym możesz później zapisać wartość dla każdego NPC (tak jak w AIVarze).
 ```dae
-func int TAL_CreateTalent() {};
+func int TAL_CreateTalent()
 ```
+**Zwracana wartość**
 
-- `return` - wartość, która jest później wykorzystywana jako ID talentu
+Funkcja zwraca wartość, która jest później wykorzystywana jako ID talentu.
 
-### TAL_SetValue
+### `TAL_SetValue`
 Ustawia nową wartość dla określonego talentu.
 ```dae
-func void TAL_SetValue(var c_npc npc, var int talent, var int value) {};
+func void TAL_SetValue(var c_npc npc, var int talent, var int value)
 ```
+**Parametry**
 
-- `npc` - NPC dla którego ustawiana jest wartość
-- `talent` - ID talentu
-- `value` - ustawiana wartość
+- `#!dae var c_npc npc`  
+    NPC dla którego ustawiana jest wartość
+- `#!dae var int talent`  
+    ID talentu
+- `#!dae var int value`  
+    Ustawiana wartość
 
 ### TAL_GetValue
 Zwraca wartość talentu dla określonego NPC.
 ```dae
-func int TAL_GetValue(var c_npc npc, var int talent) {};
+func int TAL_GetValue(var c_npc npc, var int talent)
 ```
+**Parametry**
 
-- `npc` - NPC, którego wartość talentu jest zwracana
-- `talent` - ID talentu
+- `#!dae var c_npc npc`  
+    NPC, którego wartość talentu jest zwracana
+- `#!dae var int talent`  
+    ID talentu
