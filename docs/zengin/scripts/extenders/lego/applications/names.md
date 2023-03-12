@@ -2,10 +2,10 @@
 Allows the user to change NPC name e.g. after he shows up.
 
 ## Dependencies
-No dependencies
+N/A
 
 ## Initialization
-No Initialization
+N/A
 
 ## Implementation
 [:material-github: Names.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Names.d)

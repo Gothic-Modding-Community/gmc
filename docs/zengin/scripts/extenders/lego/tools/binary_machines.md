@@ -2,10 +2,10 @@
 This package allows you to create and write your own files anywhere in the file system.
 
 ## Dependencies  
-No dependencies
+N/A
 
 ## Initialization  
-No initialization
+N/A
 
 ## Implementation
 [:material-github: BinaryMachines.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/BinaryMachines.d)

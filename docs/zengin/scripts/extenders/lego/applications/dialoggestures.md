@@ -6,7 +6,7 @@ This package can modify the NPCs' gestures during dialogue to better bring out e
 - [AI_Function](../tools/ai_function.md)
 
 ## Initialization
-No initialization
+N/A
 
 ## Implementation
 [:material-github: Dialoggestures.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Dialoggestures.d)

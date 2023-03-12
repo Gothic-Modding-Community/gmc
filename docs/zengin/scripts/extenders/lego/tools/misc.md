@@ -3,10 +3,10 @@
 The Misc package introduces various helper functions that did not fit into any other package.
 
 ## Dependencies  
-No dependencies
+N/A
 
 ## Initialization  
-No initialization
+N/A
 
 ## Implementation
 [:material-github: Misc.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Misc.d)

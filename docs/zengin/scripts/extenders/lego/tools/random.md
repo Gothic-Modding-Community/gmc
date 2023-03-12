@@ -2,7 +2,7 @@
 Provides more random randomization than `Hlp_Random()` function.
 
 ## Dependencies
-No dependencies
+N/A
 
 ## Initialization
 Initialize with `LeGo_Random` flag.

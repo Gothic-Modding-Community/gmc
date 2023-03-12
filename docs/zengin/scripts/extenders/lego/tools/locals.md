@@ -8,7 +8,7 @@ There is also the `final` function, which can be used to emulate something simil
 - StringBuilder
 
 ## Initialization
-No initialization
+N/A
 
 ## Implementation
 [:material-github: Locals.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Locals.d)

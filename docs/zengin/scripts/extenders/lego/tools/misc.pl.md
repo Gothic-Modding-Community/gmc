@@ -2,10 +2,10 @@
 Pakiet Misc wprowadza różne funkcje pomocnicze, które nie pasowały do żadnego innego pakietu.
 
 ## Zależności  
-Brak
+Nie dotyczy
 
 ## Inicjalizacja
-Brak
+Nie dotyczy
 
 ## Implementacja
 [:material-github: Misc.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Misc.d)

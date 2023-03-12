@@ -6,10 +6,10 @@ Ten pakiet jest bardzo prosty - pobiera wskaźnik `oCItem` z instancji `C_Item` 
     Jest to szczególnie ważne w Gothicu 1, ponieważ jego światy nie mają waypointu `TOT`.
 
 ## Zależności
-Brak
+Nie dotyczy
 
 ## Inicjalizacja
-Brak
+Nie dotyczy
 
 ## Implementacja
 [:material-github: ItemHelper.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/ItemHelper.d)

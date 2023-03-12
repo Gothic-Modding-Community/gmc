@@ -2,10 +2,10 @@
 Int64 implements basic arithmetic for 64-bit integers based on machine code (hence the function signatures are also in machine code style). Furthermore, Int64 offers the constructor int64@ for Int64 objects, but mk64 expects a pointer, not a handle.
 
 ## Dependencies
-No dependencies
+N/A
 
 ## Initialization
-No Initialization
+N/A
 
 ## Implementation
 [:material-github: Int64.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Int64.d)

@@ -6,10 +6,10 @@ This package is very simple - it retrieves a `oCItem` pointer from an `C_Item` i
     This is especially important in Gothic 1 since G1 vanilla worlds do not have the `TOT` waypoint.
 
 ## Dependencies
-No dependencies
+N/A
 
 ## Initialization
-No initialization
+N/A
 
 ## Implementation
 [:material-github: ItemHelper.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/ItemHelper.d)
