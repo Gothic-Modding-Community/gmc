@@ -8,7 +8,6 @@ This package allows you to create conversations with any number of NPCs and cont
 ## Initialization
 Initialize with `LeGo_Trialoge` flag.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_Trialoge);
 ```
 ## Implementation
@@ -16,95 +15,115 @@ LeGo_Init(LeGo_Trialoge);
 
 ## Functions
 
-### EquipWeapon
+### `EquipWeapon`
 Sektenspinner's function. (Taken from the forum.) 
 ```dae
-func void EquipWeapon(var c_npc slf, var int ItemInstance) {};
+func void EquipWeapon(var c_npc slf, var int ItemInstance)
 ```
+**Parameters**
 
-- `slf` - NPC to have a weapon equipped
-- `ItemInstance` - weapon instance to be equipped
+- `#!dae var c_npc slf`  
+    NPC to have a weapon equipped
+- `#!dae var int ItemInstance`  
+    Weapon instance to be equipped
 
-### Npc_GetArmor
+### `Npc_GetArmor`
 Returns NPC's equipped armor.
 ```dae
-func int Npc_GetArmor(var c_npc slf) {};
+func int Npc_GetArmor(var c_npc slf)
 ```
+**Parameters**
 
-- `slf` - NPC to get the armour from
-- `return` - armor instance
+- `#!dae var c_npc slf`  
+    NPC to get the armor from
 
-### Npc_GetMeleeWeapon
+**Return value**
+
+The function returns instance of armor weared by the NPC.
+
+### `Npc_GetMeleeWeapon`
 Returns NPC's equipped melee weapon.
 ```dae
-func int Npc_GetMeleeWeapon(var c_npc slf) {};
+func int Npc_GetMeleeWeapon(var c_npc slf)
 ```
+**Parameters**
 
-- `slf` - NPC to get the weapon from
+- `#!dae var c_npc slf`  
+    NPC to get the weapon from
 
-### DiaCAM_Update
-Sektenspinner's function. Updates the dialogue camera. (Used internally.)
+**Return value**
+
+The function returns instance of melee weapon equiped by the NPC.
+
+### `DiaCAM_Update`
+Sektenspinner's function that updates the dialogue camera. (Used internally.)
 ```dae
-func void DiaCAM_Update() {};
+func void DiaCAM_Update()
 ```
 
-### DiaCAM_Disable
+### `DiaCAM_Disable`
 Completely disable the dialogue cameras.
 ```dae
-func void DiaCAM_Disable() {};
+func void DiaCAM_Disable()
 ```
 
-### DiaCAM_Enable
+### `DiaCAM_Enable`
 Resets the dialogue cameras to the default settings.
 ```dae
-func void DiaCAM_Enable() {};
+func void DiaCAM_Enable()
 ```
-### TRIA_Wait
-Makes `self` and `other` wait for each other, e.g. for `AI_GotoW`P actions for synchronization. 
+### `TRIA_Wait`
+Makes `self` and `other` wait for each other, e.g. for `AI_GotoWP` actions for synchronization. 
 ```dae
-func void TRIA_Wait() {};
+func void TRIA_Wait()
 ```
 
-### TRIA_Invite
+### `TRIA_Invite`
 Invites an NPC into a conversation. Must be called before `TRIA_Start`.
 ```dae
-func void TRIA_Invite(c_npc slf) {};
+func void TRIA_Invite(var c_npc slf)
 ```
+**Parameters**
 
-- `slf` - The invited NPC
+- `#!dae var c_npc slf`  
+    The invited NPC
 
-### TRIA_Start
-Starts trialogues. Before that, all NPC's should be invited by `TRI_Invite`.
+### `TRIA_Start`
+Starts trialogues. Before that, all NPC's should be invited by `TRIA_Invite`.
 ```dae
-func void TRIA_Start() {};
+func void TRIA_Start()
 ```
 
-### TRIA_Barrier
+### `TRIA_Barrier`
 Similar to `TRIA_Wait` but applies to all participating NPCs.
 ```dae
-func void TRIA_Barrier() {};
+func void TRIA_Barrier()
 ```
 
-### TRIA_Next
+### `TRIA_Next`
 Sets the called npc to `self`.
 ```dae
-func void TRIA_Next(c_npc n0) {};
+func void TRIA_Next(var c_npc n0)
 ```
+**Parameters**
 
-- `n0` - can be addressed with `self`
+- `#!dae var c_npc n0`  
+    NPC to set to `self`
 
-### TRIA_Cam
+### `TRIA_Cam`
 Starts a tracking shot. 
 ```dae
-func void TRIA_Cam(string evt) {};
+func void TRIA_Cam(var string evt)
 ```
+**Parameters**
 
-- `evt` - the name of the tracking shot in Spacer. If `""` is passed, the running trace shot will be aborted
+- `#!dae var string evt`  
+    The name of the tracking shot in Spacer. If `""` is passed, the running trace shot will be aborted.
 
-### TRIA_Finish
+### `TRIA_Finish`
 Ends an ongoing trialogue. Must always be called at the end, otherwise no further trialogues can be started.
 ```dae
-func void TRIA_Finish() {};
+func void TRIA_Finish()
 ```
 
 ## Examples
@@ -211,4 +230,4 @@ func void TRIA_Test_info()
 };
 ```
 !!! Note
-    In addition, here are still [dialog gestures](dialoggestures.md) used.
+    In addition, here are still [Dialoggestures](dialoggestures.md) used.

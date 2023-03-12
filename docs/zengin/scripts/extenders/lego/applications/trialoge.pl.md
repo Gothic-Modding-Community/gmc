@@ -1,4 +1,4 @@
-# Trialog
+# Trialogi
 Ten pakiet pozwala na tworzenie rozmów z dowolną liczbą NPC i sterowanie kamerą podczas dialogu.
 
 ## Zależności
@@ -8,7 +8,6 @@ Ten pakiet pozwala na tworzenie rozmów z dowolną liczbą NPC i sterowanie kame
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Trialoge`.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_Trialoge);
 ```
 ## Implementacja
@@ -16,110 +15,130 @@ LeGo_Init(LeGo_Trialoge);
 
 ## Funkcje
 
-### EquipWeapon
+### `EquipWeapon`
 Funkcja Sektenspinnera. (wzięta z forum)
 ```dae
-func void EquipWeapon(var c_npc slf, var int ItemInstance) {};
+func void EquipWeapon(var c_npc slf, var int ItemInstance)
 ```
+**Parametry**
 
-- `slf` - NPC który wyposaża broń
-- `ItemInstance` - instancja broni do wyposażenia
+- `#!dae var c_npc slf`  
+    NPC który wyposaża broń
+- `#!dae var int ItemInstance`  
+    Instancja broni do wyposażenia
 
-### Npc_GetArmor
-Zwraca wyposażony NPC pancerz.
+### `Npc_GetArmor`
+Pobiera pancerz wyposażony przez NPC.
 ```dae
-func int Npc_GetArmor(var c_npc slf) {};
+func int Npc_GetArmor(var c_npc slf)
 ```
+**Parametry**
 
-- `slf` - NPC którego pancerz jest zwracany
-- `return` - instanacja pancerza
+- `#!dae var c_npc slf`  
+    NPC którego pancerz jest pobierany
 
-### Npc_GetMeleeWeapon
-Zwraca wyposażoną przez NPC broń ręczną/białą.
+**Zwracana wartość**
+
+Funkcja zwaraca instancje pancerza założonego przez NPC.
+
+### `Npc_GetMeleeWeapon`
+Pobiera wyposażoną przez NPC broń białą.
 ```dae
-func int Npc_GetMeleeWeapon(var c_npc slf) {};
+func int Npc_GetMeleeWeapon(var c_npc slf)
 ```
+**Parametry**
 
-- `slf` - NPC którego broń jest zwracana
-- `return` - instanacja broni
+- `#!dae var c_npc slf`  
+    NPC którego broń jest pobierana
 
-### DiaCAM_Update
+**Zwracana wartość**
+
+Funkcja zwaraca instancje broni białej wyposarzonej przez NPC.
+
+### `DiaCAM_Update`
 Funkcja Sektenspinnera. Aktualizuje kamerę dialogową. (Używana wewnętrznie)
 ```dae
-func void DiaCAM_Update() {};
+func void DiaCAM_Update()
 ```
 
-### DiaCAM_Disable
+### `DiaCAM_Disable`
 Całkowicie wyłącza kamery dialogowe.
 ```dae
-func void DiaCAM_Disable() {};
+func void DiaCAM_Disable()
 ```
 
-### DiaCAM_Enable
+### `DiaCAM_Enable`
 Resetuje kamery dialogowe do ustawień domyślnych.
 ```dae
-func void DiaCAM_Enable() {};
+func void DiaCAM_Enable()
 ```
-### TRIA_Wait
-Sprawia, że `self` i `other` czekają na siebie, np. dla synchronizacji po użyciu `AI_GotoWP`.
+### `TRIA_Wait`
+Makes `self` and `other` wait for each other, e.g. for `AI_GotoWP` actions for synchronization. 
 ```dae
-func void TRIA_Wait() {};
+func void TRIA_Wait()
 ```
 
-### TRIA_Invite
-Zaprasza NPC do rozmowy. Należy wywołać przed `TRIA_Start`.
+### `TRIA_Invite`
+Zaprasza NPC do rozmowy. Należy wywołać przed `TRIA_Start`.`TRIA_Start`.
 ```dae
-func void TRIA_Invite(c_npc slf) {};
+func void TRIA_Invite(var c_npc slf)
 ```
+**Parametry**
 
-- `slf` - Zapraszany NPC
+- `#!dae var c_npc slf`  
+    Zapraszany NPC
 
-### TRIA_Start
-Rozpoczyna trialog. Wcześniej wszyscy NPC powinni zostać zaproszeni przez `TRI_Invite`.
+### `TRIA_Start`
+Rozpoczyna trialog. Wcześniej wszyscy NPC powinni zostać zaproszeni przez `TRIA_Invite`.
 ```dae
-func void TRIA_Start() {};
+func void TRIA_Start()
 ```
 
-### TRIA_Barrier
+### `TRIA_Barrier`
 Robi to samo co `TRIA_Wait`, ale dotyczy wszystkich uczestniczących NPC.
 ```dae
-func void TRIA_Barrier() {};
+func void TRIA_Barrier()
 ```
 
-### TRIA_Next
+### `TRIA_Next`
 Ustawia podanego npc na `self`.
 ```dae
-func void TRIA_Next(c_npc n0) {};
+func void TRIA_Next(var c_npc n0)
 ```
+**Parametry**
 
-- `n0` - NPC ustawiany na `self`
+- `#!dae var c_npc n0`  
+    NPC ustawiany na `self`
 
-### TRIA_Cam
+### `TRIA_Cam`
 Rozpoczyna zdefiniowany wcześniej ruch kamery.
 ```dae
-func void TRIA_Cam(string evt) {};
+func void TRIA_Cam(var string evt)
 ```
+**Parametry**
 
-- `evt` - nazwa ruchu kamery w Spacerze. Jeśli `""` zostanie przekazane, ruch kamery zostanie przerwany
+- `#!dae var string evt`  
+    Nazwa ruchu kamery w Spacerze. Jeśli `""` zostanie przekazane, ruch kamery zostanie przerwany
 
-### TRIA_Finish
+### `TRIA_Finish`
 Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym razie dalsze trialogi nie będą mogły zostać rozpoczęte.
 ```dae
-func void TRIA_Finish() {};
+func void TRIA_Finish()
 ```
 
-## Przykłady
-### Prosty trialog
-Poniższa rozmowa została zrealizowana za pomocą tego pakietu:
+## Examples
 
-1. **Arto:**    Przykro mi, bohaterze, ale nie możesz tędy przejść
-2. **Hero:**    Czemu nie?
-3. **Horka:**   Miasto zostało zamknięte.
-4. **Hero:**    Mam ze sobą trochę złota, możemy się dogadać?
-5. **Squelto:** Nie. Nie jesteśmy otwarci na przekupstwo.
-6. **Hero:**    Na pewno?
-7. **Arto:**    Muszę cię teraz poprosić o odejście.
-8. **Hero:**    Dobraa...
+### A Simple Trialogue
+The following conversation is resolved via the trialogues:
+
+1. **Arto:**    Sorry hero, but you can't pass here
+2. **Hero:**    Why not?
+3. **Horka:**   The city has been closed.
+4. **Hero:**    I have some gold with me, can we trade?
+5. **Squelto:** No. We are not open to bribery.
+6. **Hero:**    Sure?
+7. **Arto:**    I have to ask you to leave now
+8. **Hero:**    Well...
 ```dae
 instance TRIA_Test (C_INFO)
 {
@@ -139,76 +158,76 @@ func int TRIA_Test_condition()
 
 func void TRIA_Test_info()
 {
-    var c_npc Arto; Arto       = Hlp_GetNpc(PAL_100_Friend); // Jest właścicielem dialogu
+    var c_npc Arto; Arto       = Hlp_GetNpc(PAL_100_Friend); // He is the owner of dialogue
     var c_npc Horka; Horka     = Hlp_GetNpc(PAL_101_Horka);
     var c_npc Squelto; Squelto = Hlp_GetNpc(PAL_102_Squelto);
    
-    TRIA_Invite(Horka);   // Zaprasza Horkę do tego dialogu
-    TRIA_Invite(Squelto); // Zaprasza Squelto do tego dialogu
-    TRIA_Start();         // Rozpoczyna rozmowe
-    // Bohater i Arto(właściciel) nie muszą/nie mogą być zaproszeni.
+    TRIA_Invite(Horka);   // Invite Horka into this dialogue
+    TRIA_Invite(Squelto); // Invite Squelto into this dialog
+    TRIA_Start();         // Start the conversation
+    // The hero and Arto do not have to/may not be invited. They are in dialogue anyway.
    
-    // Bohater rozmawia teraz z Arto (self = Arto, other = Bohater)
+    // Hero now talks to Arto (self = Arto, other = Hero)
     TRIA_Next(Arto);
    
     DIAG_Reset();
    
-    AI_Output (self, other, "TRIA_TEST_00"); //Przykro mi, bohaterze, ale nie możesz tędy przejść
+    AI_Output (self, other, "TRIA_TEST_00"); //Sorry hero, but you can't pass here
    
-    // Bohater rozmawia teraz z Horką (self = Horka, other = Bohater)
+    // Hero now talks to Horka (self = Horka, other = Hero)
     TRIA_Next(Horka);
    
-    AI_Output (other, self, "TRIA_TEST_01"); //Czemu nie?
+    AI_Output (other, self, "TRIA_TEST_01"); //Why not?
    
     AI_GotoNpc(self, other);
     AI_TurnToNpc(other, self);
    
-    AI_Output (self, other, "TRIA_TEST_02"); //Miasto zostało zamknięte.
+    AI_Output (self, other, "TRIA_TEST_02"); //The city has been closed.
    
-    // Bohater rozgląda się konspiracyjnie podczas następnego zdania
+    // Held looks around conspiratorially during the next sentence
     DIAG("Nervous", 1, 2);
    
-    AI_Output (other, self, "TRIA_TEST_03"); //Mam ze sobą trochę złota, możemy się dogadać?
+    AI_Output (other, self, "TRIA_TEST_03"); //I have some gold with me, can we trade?
    
-    // Bohater powinien poruszać się już normalnie 
+    // Hero should now move normally again
     DIAG_Reset();
    
-    // Rozpoczyna ruch kamery
+    // Start tracking shot
     TRIA_Cam("CAMERASTART");
    
-    // Bohater rozmawia teraz z Squelto (self = Squelto, other = Bohater)
+    // Hero now talks to Squelto (self = Squelto, other = Hero)
     TRIA_Next(Squelto);
    
     AI_TurnToNpc(other, self);
    
     DIAG("No", 0, 1);
-    AI_Output (self, other, "TRIA_TEST_04"); //Nie. Nie jesteśmy otwarci na przekupstwo.
+    AI_Output (self, other, "TRIA_TEST_04"); //No. We are not open to bribery.
    
-    // Bohater z powrotem rozmawia z Arto (self = Arto, other = Hero)
+    // Hero talks to Arto again (self = Arto, other = Hero)
     TRIA_Next(Arto);
    
-    // Bohater powinien teraz wypowiadać się pytająco
+    // Hero should now articulate questioningly
     DIAG("NotSure", 0, 1);
    
-    AI_Output (other, self, "TRIA_TEST_05"); //Na pewno?
+    AI_Output (other, self, "TRIA_TEST_05"); //Sure?
    
     AI_TurnToNpc(other, self);
    
-    // Koniec ruchu kamery
+    // tracking shot end
     TRIA_Cam("");
    
-    // Arto powinien agresywnie zareagować
+    // Arto should react angrily
     DIAG("Angry", 0, 4);
    
-    AI_Output (self, other, "TRIA_TEST_06"); //Muszę cię teraz poprosić o odejście.
+    AI_Output (self, other, "TRIA_TEST_06"); //I have to ask you to leave now
    
-    // Bohater powinien znowu poruszać się normalnie 
+    // Hero should now move normally again
     DIAG_Reset();
    
-    AI_Output (other, self, "TRIA_TEST_07"); //Dobraa...
+    AI_Output (other, self, "TRIA_TEST_07"); //Well...
    
-    TRIA_Finish(); // Koniec
+    TRIA_Finish(); // End
 };
 ```
 !!! Note
-    Dodatkowo w tej rozmowie używane są [gesty dialogowe](dialoggestures.md) (funkcje `DIAG` i `DIAG_Reset`).
+    In addition, here are still [Dialoggestures](dialoggestures.md) used.
