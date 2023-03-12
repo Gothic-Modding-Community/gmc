@@ -7,7 +7,6 @@ No dependencies
 ## Initialization
 Initialize with `LeGo_Random` flag.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_Random);
 ```
 
@@ -16,43 +15,57 @@ LeGo_Init(LeGo_Random);
 
 ## Functions
 
-### r_Next
+### `r_Next`
 Returns a random number.
 ```dae
-func int r_Next() {};
+func int r_Next()
 ```
+**Return value**
 
-- `return` - random number
+The function returns a random number.
 
-### r_Max
-Returns a random number from 0 to 'max'.
+### `r_Max`
+Returns a random number from 0 to `max`.
 ```dae
-func int r_Max(int max) {};
+func int r_Max(var int max)
 ```
+**Parameters**
 
-- `max` - maximum value
-- `return` - random number in the specified range
+- `#!dae var int max`  
+    Maximum value of number
 
-### r_MinMax
+**Return value**
+
+The function returns a random number from 0 to 'max'.
+
+### `r_MinMax`
 Returns a random number from 'min' to 'max'.
 ```dae
-func int r_MinMax(int min, int max) {};
+func int r_MinMax(var int min, var int max)
 ```
+**Parameters**
 
-- `min` - minimum value
-- `max` - maximum value
-- `return` - random number in the specified range
+- `#!dae var int max`  
+    Maximum value of number
+- `#!dae var int min`  
+    Minimum value of number
 
-### r_Init
+**Return value**
+
+The function returns a random number from `min` to `max`.
+
+### `r_Init`
 Initializes the random number generator. Happens optionally in `LeGo_Init`.
 ```dae
-func void r_Init(int seed) {};
+func void r_Init(var int initVal)
 ```
+**Parameters**
 
-- `initVal` - seed value
+- `#!dae var int initVal`  
+    Seed value
 
-### r_DefaultInit
+### `r_DefaultInit`
 Initializes the random number generator based on the current time.
 ```dae
-func void r_DefaultInit() {};
+func void r_DefaultInit()
 ```
