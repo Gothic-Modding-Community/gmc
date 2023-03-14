@@ -1,5 +1,5 @@
 # Console Commands - polecenia konsoli
-Ten Pakiet pozwala na tworzenie nowych poleceń konsloli dostępnej po naciśnięciu klawisza F2 w trybie marvin.
+Ten Pakiet pozwala na tworzenie nowych poleceń konsoli dostępnej po naciśnięciu klawisza F2 w trybie marvin.
 
 ## Zależności
 
@@ -42,7 +42,7 @@ func void CC_Remove(var func f)
     Ta funkcja zostanie usunięta, a powiązane z nią polecenie przestanie działać.
 
 ### `CC_Active`
-Sprawdza dana funkcja jest już częścią polecenia konsoli.
+Sprawdza, czy dana funkcja jest już częścią polecenia konsoli.
 ```dae
 func int CC_Active(var func f)
 ```
@@ -53,7 +53,7 @@ func int CC_Active(var func f)
 
 **Zwracana wartość**
 
-Funkcja zwraca `TRUE` jeśli istnieje odpowiednia funkcja, `FALSE` w każdym innym przypadku.
+Funkcja zwraca `TRUE` jeśli znajdzie odpowiednią funkcję, inaczej `FALSE`.
 
 ## Przykłady
 
@@ -63,14 +63,14 @@ Po pierwsze, deklarujemy stałą zmienną `string` do przechowywania informacji 
 ```dae
 const string Mod_Version = "Wersja modyfikacji - 0.1alpha";
 ```
-Następnie tworzymy nową funkcje.
+Następnie tworzymy nową funkcję.
 
 !!! Note
     Zwróć uwagę na poprawną sygnaturę funkcji. Jeśli nie będzie błędna, polecenie spowoduje awarię gry.
 
 ```dae
 // Ta funkcja jest wywoływana przez nasze nowe polecenie
-func string CC_ModVersion (var string param)
+func string CC_ModVersion(var string param)
 {
     return Mod_Version;
 };
@@ -82,11 +82,11 @@ func void RegisterConsoleFunctions()
     CC_Register (CC_ModVersion, "wersja_moda", "Wersja mojej modyfikacji.");
 };
 ```
-Na koniec musimy wywołać tą funkcje w `INIT_GLOBAL`.
+Na koniec musimy wywołać tę funkcję w `INIT_GLOBAL`.
 ```dae
 func void INIT_GLOBAL()
 {
-    Game_InitGerman(); //tylko w G2
+    Game_InitGerman(); // tylko w G2
 
     // Inicjalizacja Ikarusa
     MEM_InitAll();
@@ -96,7 +96,6 @@ func void INIT_GLOBAL()
 
     // Tutaj rejstrujemy nasze polecenia
     RegisterConsoleFunctions();
-    
     
     // Reszta kodu
 };

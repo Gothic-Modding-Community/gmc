@@ -2,7 +2,7 @@
 This package allows you to hook anywhere in an engine function to run your own Daedalus code.
 
 !!! Tip
-    Zerxes has provided a list of all engine functions for G2, including the number of bytes to fill in for oldInstr. This list can be found [here](https://forum.worldofplayers.de/forum/threads/1023720-Skriptpaket-LeGo/page14?p=17631567#post17631567). This should make it possible for everyone to use the HookEngine effectively without IDA. 
+    Zerxes has provided a list of all engine functions for G2, including the number of bytes to fill in for `oldInstr`. This list can be found [here](https://forum.worldofplayers.de/forum/threads/1023720-Skriptpaket-LeGo/page14?p=17631567#post17631567). This should make it possible for everyone to use the HookEngine effectively without IDA. 
 
 ## Dependencies
 N/A
@@ -25,7 +25,7 @@ func void HookEngine(var int address, var int oldInstr, var string function)
 - `#!dae var int address`  
     Address of an engine function to which the function should be attached.
 - `#!dae var int oldInstr`  
-    The length in bytes of the instruction to be found at 'address', at least 5 bytes. Can be seen in IDA.
+    The length in bytes of the instruction to be found at `address`, at least 5 bytes. Can be seen in IDA.
 - `#!dae var string function`  
     Name of Daedalus function to be called.
 
@@ -39,7 +39,7 @@ func void HookEngineI(var int address, var int oldInstr, var int funcID)
 - `#!dae var int address`  
     Address of an engine function to which the function should be attached.
 - `#!dae var int oldInstr`  
-    The length in bytes of the instruction to be found at 'address', at least 5 bytes. Can be seen in IDA.
+    The length in bytes of the instruction to be found at `address`, at least 5 bytes. Can be seen in IDA.
 - `#!dae var int funcID`  
     ID of Daedalus function to be called.
 
@@ -53,7 +53,7 @@ func void HookEngineF(var int address, var int oldInstr, var func function)
 - `#!dae var int address`  
     Address of an engine function to which the function should be attached.
 - `#!dae var int oldInstr`  
-    The length in bytes of the instruction to be found at 'address', at least 5 bytes. Can be seen in IDA.
+    The length in bytes of the instruction to be found at `address`, at least 5 bytes. Can be seen in IDA.
 - `#!dae var func function`  
     Daedalus function to be called.
 
@@ -122,42 +122,42 @@ The function returns `TRUE` if the hook already exists at the address, `FALSE` i
 ### `RemoveHook`
 Removes a function from a hook so that it is no longer called.
 ```dae
-func void RemoveHook (var int address, var int oldInstr, var string function)
+func void RemoveHook(var int address, var int oldInstr, var string function)
 ```
 **Parameters**
 
 - `#!dae var int address`  
     Address of an engine function to which the function should be attached.
 - `#!dae var int oldInstr`  
-    The length in bytes of the instruction to be found at 'address', at least 5 bytes. Can be seen in IDA.
+    The length in bytes of the instruction to be found at `address`, at least 5 bytes. Can be seen in IDA.
 - `#!dae var string function`  
     Name of Daedalus function that should no longer be called.
 
 ### `RemoveHookI`
 Alias to `RemoveHook` with funcID.
 ```dae
-func void RemoveHook (var int address, var int oldInstr, var int funcID)
+func void RemoveHook(var int address, var int oldInstr, var int funcID)
 ```
 **Parameters**
 
 - `#!dae var int address`  
     Address of an engine function to which the function should be attached.
 - `#!dae var int oldInstr`  
-    The length in bytes of the instruction to be found at 'address', at least 5 bytes. Can be seen in IDA.
+    The length in bytes of the instruction to be found at `address`, at least 5 bytes. Can be seen in IDA.
 - `#!dae var int funcID`  
     ID of Daedalus function that should no longer be called.
 
 ### `RemoveHookF`
 Alias for `RemoveHook` with `func` parameter.
 ```dae
-func void RemoveHook (var int address, var int oldInstr, var func function)
+func void RemoveHook(var int address, var int oldInstr, var func function)
 ```
 **Parameters**
 
 - `#!dae var int address`  
     Address of an engine function to which the function should be attached.
 - `#!dae var int oldInstr`  
-    The length in bytes of the instruction to be found at 'address', at least 5 bytes. Can be seen in IDA.
+    The length in bytes of the instruction to be found at `address`, at least 5 bytes. Can be seen in IDA.
 - `#!dae var func function`  
     Daedalus function that should no longer be called.
 
@@ -216,13 +216,13 @@ func void DisableEngineFunc(var int address, var int thiscall_numparams)
     Number of parameters passed to the engine function, if it is a stdcall or thiscall (otherwise 0).
 
 ### `Hook_ReturnFalse`
-Simple function that replace `return FALSE` in hook.
+Simple function to replace `return FALSE` in hook.
 ```dae
 func void Hook_ReturnFalse()
 ```
 
 ### `Hook_ReturnTrue()`
-Simple function that replace `return TRUE` in hook.
+Simple function to replace `return TRUE` in hook.
 ```dae
 func void Hook_ReturnTrue()
 ```

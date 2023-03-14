@@ -141,7 +141,7 @@ func void MEM_ApplyGothOpt()
 ### `MEM_GetKey`
 Zwraca podstawowy klawisz przypisany do klawisza logicznego.
 ```dae
-func int MEM_GetKey (var string name)
+func int MEM_GetKey(var string name)
 ```
 **Parametry**
 
@@ -150,7 +150,7 @@ func int MEM_GetKey (var string name)
 
 **Zwracana wartość**
 
-Funkcja zwraca klawisz przypisany do klawisza logicznego
+Funkcja zwraca klawisz przypisany do klawisza logicznego.
 
 ### `MEM_GetSecondaryKey`
 Zwraca zapasowy klawisz przypisany do klawisza logicznego.
@@ -164,7 +164,7 @@ func int MEM_GetSecondaryKey(var string name)
 
 **Zwracana wartość**
 
-Funkcja zwraca klawisz przypisany do klawisza logicznego
+Funkcja zwraca klawisz przypisany do klawisza logicznego.
 
 ### `MEM_SetKeys`
 Ustawia klawisze klawiatury dla podanego klawisza logicznego.

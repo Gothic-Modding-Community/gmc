@@ -1,5 +1,5 @@
 # Cursor
-This package implements Gothic ingame mouse cursor support. To visually display the cursor there is a `Cursor.tga`  file in the resources, but the texture can be changed in [user constants](../various/userconstants.md#cursor-1).
+This package implements Gothic in-game mouse cursor support. To visually display the cursor there is a `Cursor.tga` file in the resources, but the texture can be changed in [user constants](../various/userconstants.md#cursor-1).
 
 !!! Warning
     The cursor only works if the mouse is activated in the Gothic settings. It can be done directly form the scripts. See the [Ini file access](../../ikarus/functions/ini_access.md).
@@ -27,9 +27,9 @@ LeGo_Init(LeGo_Cursor);
 - `#!dae var int Cursor_Y`  
     Always contains the Y coordinate of the mouse.
 - `#!dae var float Cursor_RelX`  
-    Always contains the relative X coordinate of the mouse as a Ikarus float.
+    Always contains the relative X coordinate of the mouse as an Ikarus float.
 - `#!dae var float Cursor_RelY`  
-    Always contains the relative Y coordinate of the mouse as a Ikarus float.
+    Always contains the relative Y coordinate of the mouse as an Ikarus float.
 - `#!dae var int Cursor_Wheel`  
     Variable containing the value of the mouse wheel.
 - `#!dae var int Cursor_Left`  
@@ -66,7 +66,7 @@ func void SetMouseEnabled(var int enabled)
 **Parameters**
 
 - `#!dae var int enabled`  
-    TRUE == Muse activated
+    TRUE == Mouse activated
 
 ## Examples
 
@@ -112,7 +112,7 @@ func void Button_Click() {
 };
 ```
 
-This also can be done by the Buttons package istead of View.
+This also can be done by the Buttons package instead of View.
 
 ### Event handler
 Since LeGo 2.2 there is also an event handler (`#!dae var int Cursor_Event`) in the cursor package. This example briefly explains how it works:

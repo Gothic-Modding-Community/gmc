@@ -1,5 +1,5 @@
 # ItemHelper
-This package is very simple - it retrieves a `oCItem` pointer from an `C_Item` instance valid for the current world and session.
+This package is very simple - it retrieves a `oCItem` pointer from an `C_ITEM` instance valid for the current world and session.
 
 !!! Warning
     Make sure every world has waypoint with name `TOT` ("dead" in German). Ikarus & LeGo need this waypoint to spawn helper NPCs.  
@@ -23,7 +23,7 @@ func int ITM_GetPtr(var int instance)
 **Parameters**
 
 - `#!dae var int instance`  
-    `C_Item` instance to get the pointer of
+    `C_ITEM` instance to get the pointer of
 
 **Return value**
-The function returns `oCItem` pointer of the `C_Item` instance.
+The function returns `oCItem` pointer of the `C_ITEM` instance.

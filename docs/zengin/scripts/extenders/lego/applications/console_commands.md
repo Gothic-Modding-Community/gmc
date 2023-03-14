@@ -27,7 +27,7 @@ func void CC_Register(var func f, var string cmdPrefix, var string description)
 - `#!dae var func f`  
     This function is executed when the `cmdPrefix` command is entered in the console. The function signature is `func string f(var string p0)`. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.
 - `#!dae var string cmdPrefix`  
-    This is a command that can be entered in the console.
+    This is a command, which can be entered in the console.
 - `#!dae var string description`  
     This text appears next to the command (in zSpy) when you use the `help` command in the console.
 
@@ -53,12 +53,12 @@ func int CC_Active(var func f)
 
 **Return value**
 
-The function returns `TRUE` if there is a corresponding function, `FALSE` otherwise.
+The function returns `TRUE` if there is a corresponding function, `FALSE` is returned otherwise.
 
 ## Examples
 
 ### Basic command example
-As a basic example - let us create a version command that prints a version of our modification.  
+As a basic example - let us create a version command, which prints a version of our modification.  
 Firstly, we declare a constant `string` variable to hold the version string to be shown.
 ```dae
 const string Mod_Version = "My mod version 0.1alpha";
@@ -69,7 +69,7 @@ Next we create the command function.
 
 ```dae
 // This function is called by our console
-func string CC_ModVersion (var string param)
+func string CC_ModVersion(var string param)
 {
     return Mod_Version;
 };
@@ -96,7 +96,6 @@ func void INIT_GLOBAL()
 
     // Here we register all of our commands
     RegisterConsoleFunctions();
-    
     
     // the rest of the code 
 };

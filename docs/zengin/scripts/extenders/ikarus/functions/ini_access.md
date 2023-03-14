@@ -29,7 +29,7 @@ func string MEM_GetGothOpt(var string sectionname, var string optionname)
 
 **Return value**
 
-The function retrurns an option value as a string or empty string if option was not found.
+The function returns an option value as a string or empty string if option was not found.
 
 ### `MEM_GetModOpt`
 Searches the loaded mod ini file for option.
@@ -45,7 +45,7 @@ func void MEM_GetModOpt(var string sectionname, var string optionname)
 
 **Return value**
 
-The function retrurns an option value as a string or empty string if option was not found.
+The function returns an option value as a string or empty string if option was not found.
 
 ### `MEM_GothOptSectionExists`
 Checks whether a section exists in `Gothic.ini`
@@ -59,7 +59,7 @@ func int MEM_GothOptSectionExists(var string sectionname)
 
 **Return value**
 
-The function retrurns `TRUE` if section exists `FALSE` is returned otherwise.
+The function returns `TRUE` if section exists `FALSE` is returned otherwise.
 
 ### `MEM_ModOptSectionExists`
 Checks whether a section exists in loaded mod ini file
@@ -73,7 +73,7 @@ func int MEM_ModOptSectionExists(var string sectionname)
 
 **Return value**
 
-The function retrurns `TRUE` if section exists `FALSE` is returned otherwise.
+The function returns `TRUE` if section exists `FALSE` is returned otherwise.
 
 ### `MEM_GothOptExists`
 Checks whether an option exists in `Gothic.ini`
@@ -89,7 +89,7 @@ func int MEM_GothOptExists(var string sectionname, var string optionname)
 
 **Return value**
 
-The function retrurns `TRUE` if option in a section exist `FALSE` is returned otherwise.
+The function returns `TRUE` if option in a section exist `FALSE` is returned otherwise.
 
 ### `MEM_ModOptExists`
 Checks whether an option exists in loaded mod ini file
@@ -105,11 +105,11 @@ func int MEM_ModOptExists(var string sectionname, var string optionname)
 
 **Return value**
 
-The function retrurns `TRUE` if option in a section exist `FALSE` is returned otherwise.
+The function returns `TRUE` if option in a section exist `FALSE` is returned otherwise.
 
 ## Write functions
 !!! Warning
-    Mod configuration is never saved to disk, therefore there are no separate functions for writing to it
+    Mod configuration is never saved to disk, therefore no separate functions exist for writing to it.
 
 ### `MEM_SetGothOpt`
 The option `option` in the section `section` is set to the `value`. If the section and/or option does not exist, it will be created.
@@ -119,7 +119,7 @@ func void MEM_SetGothOpt(var string section, var string option, var string value
 **Parameters**
 
 - `#!dae var string section`  
-    The section where the option should located
+    The section where the option should be located
 - `#!dae var string option`  
     Option to write/overwrite
 - `#!dae var string value`  
@@ -141,7 +141,7 @@ The `Gothic.ini` contains the assignment of physical keys (e.g. "W") to logical 
 ### `MEM_GetKey`
 Returns the primary key assigned to logical key.
 ```dae
-func int MEM_GetKey (var string name)
+func int MEM_GetKey(var string name)
 ```
 **Parameters**
 
@@ -150,7 +150,7 @@ func int MEM_GetKey (var string name)
 
 **Return value**
 
-The function retrurns key assigned to logical key
+The function returns key assigned to logical key
 
 ### `MEM_GetSecondaryKey`
 Returns a secondary key assigned to logical key.
@@ -164,7 +164,7 @@ func int MEM_GetSecondaryKey(var string name)
 
 **Return value**
 
-The function retrurns key assigned to logical key
+The function returns key assigned to logical key
 
 ### `MEM_SetKeys`
 Sets keyboard keys of the logical key.

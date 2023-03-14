@@ -135,7 +135,7 @@ func void CQ_EnqueueData(var int queue, var func function, var int data)
 - `#!dae var int queue`  
     Handle of a callback queue
 - `#!dae var func function`  
-    A function with no return value, expecting an integer as a parameter
+    A function with no return value, expecting an integer as a parameter.
 - `#!dae var int data`  
     When calling 'function', this value is passed as a parameter
 
@@ -150,9 +150,9 @@ func void CQ_Enqueue(var int queue, var int funcID, var int data, var int hasDat
 - `#!dae var int queue`  
     Handle of a callback queue
 - `#!dae var int funcID`  
-    The function ID of a function to be appended to the callback queue
+    The function ID of a function to be appended to the callback queue.
 - `#!dae var int data`  
-    If hasData is not 0, this value is passed to the associated function
+    If hasData is not 0, this value is passed to the associated function.
 - `#!dae var int hasData`  
     Must be 0 if the function does not expect an integer as a parameter, otherwise not 0.
 
@@ -190,4 +190,4 @@ func void CQ_Exhaust(var int queue)
 - `#!dae var int queue`  
     Handle of a callback queue
 
-//TODO sprawdzic czy są barkujące funkcje
+[//]: # (//TODO check if there are missing functions by Emu)

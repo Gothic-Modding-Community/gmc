@@ -15,7 +15,7 @@ MEM_InitAll();
 
 ## Functions
 !!! Tip
-    Different players use different keys for specific actions! However, it is possible to get key assigned to the action from Gothic.ini. See [Ini access](ini_access.md#key-functions)
+    Different players use different keys for specific actions! However, it is possible to get key assigned to the action from Gothic.ini. See [Ini access](ini_access.md#key-functions).
 ### `MEM_KeyState`
 Returns the state of the `key`.
 ```dae

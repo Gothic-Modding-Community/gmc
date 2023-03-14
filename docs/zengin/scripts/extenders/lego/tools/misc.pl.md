@@ -2,10 +2,10 @@
 Pakiet Misc wprowadza różne funkcje pomocnicze, które nie pasowały do żadnego innego pakietu.
 
 ## Zależności  
-Nie dotyczy
+Nie dotyczy.
 
 ## Inicjalizacja
-Nie dotyczy
+Nie dotyczy.
 
 ## Implementacja
 [:material-github: Misc.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Misc.d)
@@ -26,17 +26,17 @@ func float atan2f(var int x, var int y)
 
 **Zwracana wartość**
 
-Funkcja zwraca arcus tangens w radianach jako Ikarusowy `float`
+Funkcja zwraca arcus tangens w radianach jako ikarusowy `float`
 
 ### `sin`
 Oblicza sinus kąta podanego w radianach.
 ```dae
-func float sin (var float angle)
+func float sin(var float angle)
 ```
 **Parametry**
 
 - `#!dae var float angle`  
-    Kąt w radianach jako Ikarusowy `float`
+    Kąt w radianach jako ikarusowy `float`
 
 **Zwracana wartość**
 
@@ -45,12 +45,12 @@ Funkcja zwraca sinus kąta.
 ### `cos`
 Oblicza cosinus kąta podanego w radianach.
 ```dae
-func float cos (var float angle)
+func float cos(var float angle)
 ```
 **Parametry**
 
 - `#!dae var float angle`  
-    Kąt w radianach jako Ikarusowy `float`
+    Kąt w radianach jako ikarusowy `float`
 
 **Zwracana wartość**
 
@@ -60,12 +60,12 @@ Funkcja zwraca cosinus kąta.
 ### `tan`
 Oblicza tangens kąta podanego w radianach.
 ```dae
-func float tan (var float angle)
+func float tan(var float angle)
 ```
 **Parametry**
 
 - `#!dae var float angle`  
-    Kąt w radianach jako Ikarusowy `float`
+    Kąt w radianach jako ikarusowy `float`
 
 **Zwracana wartość**
 
@@ -74,12 +74,12 @@ Funkcja zwraca tangens kąta.
 ### `asin`
 Oblicza arcus sinus
 ```dae
-func float asin (var float sine)
+func float asin(var float sine)
 ```
 **Parametry**
 
 - `#!dae var float sine`  
-    Sinus kąta jako Ikarusowy `float`
+    Sinus kąta jako ikarusowy `float`
 
 **Zwracana wartość**
 
@@ -88,12 +88,12 @@ Funkcja zwraca arcus sinus kąta.
 ### `acos`
 Oblicza arcus cosinus
 ```dae
-func float acos (var float cosine)
+func float acos(var float cosine)
 ```
 **Parametry**
 
 - `#!dae var float cosine`  
-    Cosinus kąta jako Ikarusowy `float`
+    Cosinus kąta jako ikarusowy `float`
 
 **Zwracana wartość**
 
@@ -139,5 +139,5 @@ func float distance2Df(var float x1, var float x2, var float y1, var float y2)
 
 **Zwracana wartość**
 
-Funkcja zwraca odległość między dwoma punktami, jako Ikarusowy `float`.
+Funkcja zwraca odległość między dwoma punktami, jako ikarusowy `float`.
 

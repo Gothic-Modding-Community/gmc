@@ -37,8 +37,8 @@ func void Gamestate_RemoveListener(var func listener)
     Listener do usunięcia.
 
 ## Przykłady
-Istnieją teraz dwie możliwości. Wszystko można zrobić bezpośrednio w Init-Global lub za pomocą EventHandler.
-### Init_Global
+Istnieją teraz dwie możliwości. Wszystko można zrobić bezpośrednio w `Init_Global` lub za pomocą [EventHandler](../tools/event_handler.md).
+### `Init_Global`
 ```dae
 func void Init_Global()
 {
@@ -95,7 +95,7 @@ func void Init_Global()
 };
 ```
 
-### Event Handler
+### EventHandler - obsługa zdarzeń
 ```dae
 func void Init_Global()
 {

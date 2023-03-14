@@ -1,7 +1,7 @@
 # Access Menu Objects
 These Ikarus functions are intended to provide and simplify access to menu items (e.g. in the character menu).
 !!! Tip
-    Some menus are generated every time they are uesed, while others are generated once and then keep. For example, a character menu is only available after it was opened the first time, after that it is keeped in memory. Depending on what you actually want to do, it can make sense to introduce changes in the menu scripts.
+    Some menus are generated every time they are used, while others are generated once and then kept. For example, a character menu is only available after it was opened for the first time, after that it is kept in memory. Depending on what you actually want to do, it can make sense to introduce changes in the menu scripts.
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
@@ -20,13 +20,13 @@ MEM_InitAll();
 ### `MEM_GetMenuByString`
 
 ```dae
-func int MEM_GetMenuByString (var string menuName)
+func int MEM_GetMenuByString(var string menuName)
 ```
 
 **Parameters**
 
 - `#!dae var string menuName`  
-    Name of the Gothic menu e.g. `#!dae "MENU_STATUS"`
+    Name of the Gothic menu e.g. `MENU_STATUS`
 
 **Return value**
 
@@ -35,13 +35,13 @@ The function returns the address of the menu if a menu with this name exists, nu
 ### `MEM_GetMenuItemByString`
 
 ```dae
-func int MEM_GetMenuItemByString (var string menuItemName)
+func int MEM_GetMenuItemByString(var string menuItemName)
 ```
 
 **Parameters**
 
 - `#!dae var string menuItemName`  
-    Name of the Gothic menu item e.g. `#!dae "MENU_ITEM_PLAYERGUILD_TITLE"`
+    Name of the Gothic menu item e.g. `MENU_ITEM_PLAYERGUILD_TITLE`
 
 **Return value**
 

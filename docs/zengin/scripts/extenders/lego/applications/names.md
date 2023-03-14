@@ -15,11 +15,11 @@ N/A
 ### `SetName`
 Should be set in InitGlobal().
 ```dae
-func void SetName(var c_npc npc, var string name) {};
+func void SetName(var C_NPC npc, var string name)
 ```
 **Parameters**
 
-- `#!dae var c_npc npc`  
+- `#!dae var C_NPC npc`  
     The NPC to be named
 - `#!dae var string name`  
     The name of the NPC
@@ -27,18 +27,18 @@ func void SetName(var c_npc npc, var string name) {};
 ### `ShowName`
 Permanently displays the name set by `SetName` function above the npc.
 ```dae
-func void ShowName(var c_npc npc) {};
+func void ShowName(var C_NPC npc)
 ```
 **Parameters**
 
-- `#!dae var c_npc npc`  
+- `#!dae var C_NPC npc`  
     The NPC whose name should be shown
 
 ## Examples
 
 ### Show the name of an NPC later
 ```dae
-instance PAL_100_Friend(c_npc)
+instance PAL_100_Friend(C_NPC)
 {
     name = "Paladin";
 

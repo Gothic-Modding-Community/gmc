@@ -66,7 +66,7 @@ The following bit masks can be applied to the status of a button:
     The game is saved
 
 ### Cursor
-These constants are sent with Cursor_Event:
+These constants are sent with `Cursor_Event`:
 
 - `#!dae const int CUR_LeftClick`  
     The left mouse button was pressed
@@ -125,7 +125,7 @@ The times are given in ms:
 The font can be modified:
 
 - `#!dae const string PF_Font`  
-    Default: "FONT_OLD_10_WHITE.TGA"
+    Default: `FONT_OLD_10_WHITE.TGA`
 
 ### Talents
 

@@ -57,12 +57,12 @@ The function returns a random number from `min` to `max`.
 ### `r_Init`
 Initializes the random number generator. Happens optionally in `LeGo_Init`.
 ```dae
-func void r_Init(var int initVal)
+func void r_Init(var int seed)
 ```
 **Parameters**
 
-- `#!dae var int initVal`  
-    Seed value
+- `#!dae var int seed`  
+    The initializing value
 
 ### `r_DefaultInit`
 Initializes the random number generator based on the current time.

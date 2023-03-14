@@ -18,11 +18,11 @@ LeGo_Init(LeGo_Trialoge);
 ### `EquipWeapon`
 Funkcja Sektenspinnera. (wzięta z forum)
 ```dae
-func void EquipWeapon(var c_npc slf, var int ItemInstance)
+func void EquipWeapon(var C_NPC slf, var int ItemInstance)
 ```
 **Parametry**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC który wyposaża broń
 - `#!dae var int ItemInstance`  
     Instancja broni do wyposażenia
@@ -30,30 +30,30 @@ func void EquipWeapon(var c_npc slf, var int ItemInstance)
 ### `Npc_GetArmor`
 Pobiera pancerz wyposażony przez NPC.
 ```dae
-func int Npc_GetArmor(var c_npc slf)
+func int Npc_GetArmor(var C_NPC slf)
 ```
 **Parametry**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC którego pancerz jest pobierany
 
 **Zwracana wartość**
 
-Funkcja zwaraca instancje pancerza założonego przez NPC.
+Funkcja zwraca instancje pancerza założonego przez NPC.
 
 ### `Npc_GetMeleeWeapon`
 Pobiera wyposażoną przez NPC broń białą.
 ```dae
-func int Npc_GetMeleeWeapon(var c_npc slf)
+func int Npc_GetMeleeWeapon(var C_NPC slf)
 ```
 **Parametry**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC którego broń jest pobierana
 
 **Zwracana wartość**
 
-Funkcja zwaraca instancje broni białej wyposarzonej przez NPC.
+Funkcja zwraca instancje broni białej wyposażonej przez NPC.
 
 ### `DiaCAM_Update`
 Funkcja Sektenspinnera. Aktualizuje kamerę dialogową. (Używana wewnętrznie)
@@ -81,11 +81,11 @@ func void TRIA_Wait()
 ### `TRIA_Invite`
 Zaprasza NPC do rozmowy. Należy wywołać przed `TRIA_Start`.`TRIA_Start`.
 ```dae
-func void TRIA_Invite(var c_npc slf)
+func void TRIA_Invite(var C_NPC slf)
 ```
 **Parametry**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     Zapraszany NPC
 
 ### `TRIA_Start`
@@ -103,11 +103,11 @@ func void TRIA_Barrier()
 ### `TRIA_Next`
 Ustawia podanego npc na `self`.
 ```dae
-func void TRIA_Next(var c_npc n0)
+func void TRIA_Next(var C_NPC n0)
 ```
 **Parametry**
 
-- `#!dae var c_npc n0`  
+- `#!dae var C_NPC n0`  
     NPC ustawiany na `self`
 
 ### `TRIA_Cam`
@@ -118,7 +118,7 @@ func void TRIA_Cam(var string evt)
 **Parametry**
 
 - `#!dae var string evt`  
-    Nazwa ruchu kamery w Spacerze. Jeśli `""` zostanie przekazane, ruch kamery zostanie przerwany
+    Nazwa ruchu kamery w Spacerze. Jeśli zostanie przekazany pusty łańcuch znaków, nastąpi przerwanie ruchu kamery.
 
 ### `TRIA_Finish`
 Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym razie dalsze trialogi nie będą mogły zostać rozpoczęte.
@@ -131,14 +131,14 @@ func void TRIA_Finish()
 ### A Simple Trialogue
 The following conversation is resolved via the trialogues:
 
-1. **Arto:**    Sorry hero, but you can't pass here
-2. **Hero:**    Why not?
-3. **Horka:**   The city has been closed.
-4. **Hero:**    I have some gold with me, can we trade?
-5. **Squelto:** No. We are not open to bribery.
-6. **Hero:**    Sure?
-7. **Arto:**    I have to ask you to leave now
-8. **Hero:**    Well...
+1. **Arto:** Wybacz bohaterze, ale nie możesz tędy przejść.
+2. **Bohater:** Dlaczego nie?
+3. **Horka:** Miasto zostało zamknięte.
+4. **Bohater:** Mam trochę złota przy sobie, możemy pohandlować?
+5. **Squelto:** Nie. Nie jesteśmy otwarci na przekupstwo.
+6. **Bohater:** Na pewno?
+7. **Arto:** Muszę prosić, abyś teraz odszedł.
+8. **Bohater:** Niech będzie...
 ```dae
 instance TRIA_Test (C_INFO)
 {
@@ -158,75 +158,75 @@ func int TRIA_Test_condition()
 
 func void TRIA_Test_info()
 {
-    var c_npc Arto; Arto       = Hlp_GetNpc(PAL_100_Friend); // He is the owner of dialogue
-    var c_npc Horka; Horka     = Hlp_GetNpc(PAL_101_Horka);
-    var c_npc Squelto; Squelto = Hlp_GetNpc(PAL_102_Squelto);
+    var C_NPC Arto;       Arto = Hlp_GetNpc(PAL_100_Friend); // On jest właścicielem dialogu
+    var C_NPC Horka;     Horka = Hlp_GetNpc(PAL_101_Horka);
+    var C_NPC Squelto; Squelto = Hlp_GetNpc(PAL_102_Squelto);
    
-    TRIA_Invite(Horka);   // Invite Horka into this dialogue
-    TRIA_Invite(Squelto); // Invite Squelto into this dialog
-    TRIA_Start();         // Start the conversation
-    // The hero and Arto do not have to/may not be invited. They are in dialogue anyway.
+    TRIA_Invite(Horka);   // Zaproś Horka do dialogu
+    TRIA_Invite(Squelto); // Zaproś Squelto do dialogu
+    TRIA_Start();         // Rozpocznij rozmowę
+    // Bohater i Arto nie muszą być zaproszeni. Domyślnie należą do dialogu.
    
-    // Hero now talks to Arto (self = Arto, other = Hero)
+    // Bohater mówi do Arto (self = Arto, other = Hero)
     TRIA_Next(Arto);
    
     DIAG_Reset();
    
-    AI_Output (self, other, "TRIA_TEST_00"); //Sorry hero, but you can't pass here
+    AI_Output (self, other, "TRIA_TEST_00"); //Wybacz bohaterze, ale nie możesz tędy przejść.
    
-    // Hero now talks to Horka (self = Horka, other = Hero)
+    // Bohater mówi teraz do Horka (self = Horka, other = Hero)
     TRIA_Next(Horka);
    
-    AI_Output (other, self, "TRIA_TEST_01"); //Why not?
+    AI_Output (other, self, "TRIA_TEST_01"); //Dlaczego nie?
    
     AI_GotoNpc(self, other);
     AI_TurnToNpc(other, self);
    
-    AI_Output (self, other, "TRIA_TEST_02"); //The city has been closed.
+    AI_Output (self, other, "TRIA_TEST_02"); //Miasto zostało zamknięte.
    
-    // Held looks around conspiratorially during the next sentence
+    // Bohater rozgląda się wokoło w trakcie następnej sceny
     DIAG("Nervous", 1, 2);
    
-    AI_Output (other, self, "TRIA_TEST_03"); //I have some gold with me, can we trade?
+    AI_Output (other, self, "TRIA_TEST_03"); //Mam trochę złota przy sobie, możemy pohandlować?
    
-    // Hero should now move normally again
+    // Bohater powinien ruszać się teraz znowu normalnie
     DIAG_Reset();
    
-    // Start tracking shot
+    // Rozpocznij ruch kamery
     TRIA_Cam("CAMERASTART");
    
-    // Hero now talks to Squelto (self = Squelto, other = Hero)
+    // Bohater mówi teraz do Squelto (self = Squelto, other = Hero)
     TRIA_Next(Squelto);
    
     AI_TurnToNpc(other, self);
    
     DIAG("No", 0, 1);
-    AI_Output (self, other, "TRIA_TEST_04"); //No. We are not open to bribery.
+    AI_Output (self, other, "TRIA_TEST_04"); //Nie. Nie jesteśmy otwarci na przekupstwo.
    
-    // Hero talks to Arto again (self = Arto, other = Hero)
+    // Bohater mówi ponowni do Arto (self = Arto, other = Hero)
     TRIA_Next(Arto);
    
-    // Hero should now articulate questioningly
+    // Bohater powinien teraz pytająco gestykulować
     DIAG("NotSure", 0, 1);
    
-    AI_Output (other, self, "TRIA_TEST_05"); //Sure?
+    AI_Output(other, self, "TRIA_TEST_05"); //Na pewno?
    
     AI_TurnToNpc(other, self);
    
-    // tracking shot end
+    // Zakończ ruch kamery
     TRIA_Cam("");
    
-    // Arto should react angrily
+    // Arto powinien zareagować wściekle
     DIAG("Angry", 0, 4);
    
-    AI_Output (self, other, "TRIA_TEST_06"); //I have to ask you to leave now
+    AI_Output (self, other, "TRIA_TEST_06"); //Muszę prosić, abyś teraz odszedł.
    
-    // Hero should now move normally again
+    // Bohater powinien ponownie poruszać się normalnie
     DIAG_Reset();
    
-    AI_Output (other, self, "TRIA_TEST_07"); //Well...
+    AI_Output (other, self, "TRIA_TEST_07"); //Niech będzie...
    
-    TRIA_Finish(); // End
+    TRIA_Finish(); // Koniec
 };
 ```
 !!! Note

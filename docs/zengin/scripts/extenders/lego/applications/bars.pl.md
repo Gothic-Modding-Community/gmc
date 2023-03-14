@@ -226,7 +226,7 @@ func void Bar_ResizePxl(var int bar, var int x, var int y)
 !!! Note
     Ten pakiet zakłada podstawowe zrozumienie modułu PermMem. 
 
-### A dedicated experience bar
+### Dedykowany pasek doświadczenia
 Pakiet Bars implementuje klasę `Bar`. Która wygląda tak:
 ```dae
 class Bar
@@ -260,7 +260,7 @@ prototype GothicBar(Bar)
 };
 ```
 
-O wiele łatwiej jest skonfigurować nową instancję przy użyciu tego prototypu. `GothicBar` bez zmian można znaleźć jako instancję `GothicBar@`, którą użyliśmy do stworzenia paska w powyższym przykładzie. GothicBar znajduje się na środku ekranu i wygląda tak samo, jak pasek wyświetlany podczas nurkowania.
+O wiele łatwiej jest skonfigurować nową instancję przy użyciu tego prototypu. `GothicBar` bez zmian można znaleźć jako instancję `GothicBar@`, którą użyliśmy do stworzenia paska w powyższym przykładzie. `GothicBar` znajduje się na środku ekranu i wygląda tak samo, jak pasek wyświetlany podczas nurkowania.
 ```dae
 // Instancja stworzona z pomocą prototypu GothicBar 
 instance Bar_1(GothicBar)

@@ -32,7 +32,7 @@ The function returns arcus tangent in radians as Ikarus `float`.
 ### `sin`
 Calculates the sine of an angle given in radians.
 ```dae
-func float sin (var float angle)
+func float sin(var float angle)
 ```
 **Parameters**
 
@@ -46,7 +46,7 @@ The function returns sine of the angle.
 ### `cos`
 Calculates the cosine of an angle given in radians.
 ```dae
-func float cos (var float angle)
+func float cos(var float angle)
 ```
 **Parameters**
 
@@ -61,7 +61,7 @@ The function returns cosine of the angle.
 ### `tan`
 Calculates the tangent of an angle given in radians.
 ```dae
-func float tan (var float angle)
+func float tan(var float angle)
 ```
 **Parameters**
 
@@ -75,7 +75,7 @@ The function returns tangent of the angle.
 ### `asin`
 Calculates the arcus sine
 ```dae
-func float asin (var float sine)
+func float asin(var float sine)
 ```
 **Parameters**
 
@@ -89,7 +89,7 @@ The function returns arcus sine of the angle.
 ### `acos`
 Calculates the arcus cosine
 ```dae
-func float acos (var float cosine)
+func float acos(var float cosine)
 ```
 **Parameters**
 

@@ -110,7 +110,7 @@ func void Bar_SetPromille(var int bar, var int pro)
 - `#!dae var int pro`  
     New value of the bar in per mille
 
-### Bar_Hide
+### `Bar_Hide`
 Hides a bar. It will not be deleted. 
 ```dae
 func void Bar_Hide(var int bar)
@@ -243,7 +243,7 @@ class Bar
     var int valueMax;   // Maximum value
 };
 ```
-The `GothicBar` prototype is a bar that mimics the standard Gothic status bar.
+The `GothicBar` prototype is a bar, which mimics the standard Gothic status bar.
 ```dae
 prototype GothicBar(Bar)
 {

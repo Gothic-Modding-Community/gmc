@@ -1,8 +1,8 @@
 # EventHandler
-This package is able to create new events and fire them at desired times. The [Gamestate](../applications/gamestate.md) package already makes use of it.
+This package allows to create new events and fire them at desired times. The [Gamestate](../applications/gamestate.md) package already uses it.
 
-!!! Warning
-    The Event Handler requires some basic understanding of the PermMem. The documentation can be found [here](https://lego.worldofplayers.de/?PermMem).
+!!! Warning  
+    The EventHandler requires some basic understanding of the PermMem. The documentation can be found [here](https://lego.worldofplayers.de/?PermMem).
 
 ## Dependencies
 
@@ -26,7 +26,7 @@ func int Event_Create()
 ```
 **Return value**
 
-The function returns new PermMem handle to an event.
+The function returns a new PermMem handle to an event.
 
 ### `Event_Delete`
 Alias to PermMem `delete`. Cleans up the handle.
@@ -53,7 +53,7 @@ func int Event_Empty(var int event)
 The function returns `TRUE` if event is empty, `FALSE` is returned otherwise.
 
 ### `Event_Has`
-Checks if `function` is added to event - will execute after calling `Event_Execute`.
+Checks if `function` is added to the event.
 ```dae
 func int Event_Has(var int event, var func function)
 ```
@@ -69,7 +69,7 @@ func int Event_Has(var int event, var func function)
 The function returns `TRUE` if function is added, `FALSE` is returned otherwise.
 
 ### `Event_Add`
-Adds a function called after executing the event (`Event_Execute`).
+Adds an event handler function. The handler is called after running `Event_Execute`.
 ```dae
 func void Event_Add(var int event, var func function)
 ```
@@ -81,7 +81,7 @@ func void Event_Add(var int event, var func function)
     Function to be added
 
 ### `Event_AddOnce`
-`Event_Add` but checks if function is already added, to prevent duplicates.
+`Event_Add` but checks if the handler function is already added, to prevent duplicates.
 ```dae
 func void Event_AddOnce(var int event, var func function)
 ```
@@ -93,7 +93,7 @@ func void Event_AddOnce(var int event, var func function)
     Function to be added
 
 ### `Event_Remove`
-Removes a function from the event's call list.
+Removes the event handler `function` from the event.
 ```dae
 func void Event_Remove(var int event, var func function)
 ```
@@ -118,7 +118,7 @@ func void Event_Execute(var int event, var int data)
 
 ## Ptr functions
 !!! Tip
-    The function division may be a bit confuseing, but there is a simple rule. If you created event with `Event_Create` use functions without `Ptr` in name, but if you created event with `EventPtr_Create` use only `Ptr` functions. Choice what functions will you use is yours, but the normal user probably will never need the pointer versions.
+    The pointer functions are used internally by the previous functions. If you created an event with `Event_Create` use functions without `Ptr` in name, but if you created event with `EventPtr_Create` use only `Ptr` functions. The normal user will probably never need the pointer versions, however the choice, which one to use is yours. 
 
 ### `EventPtr_Create`
 Creates a new event and returns a pointer to it.
@@ -127,7 +127,7 @@ func int EventPtr_Create()
 ```
 **Return value**
 
-The function returns new PermMem pointer to an event.
+The function returns a new PermMem pointer to an event.
 
 ### `EventPtr_Delete`
 Alias to PermMem `free`. Cleans up the pointer.
@@ -154,7 +154,7 @@ func int EventPtr_Empty(var int eventPtr)
 The function returns `TRUE` if empty, `FALSE` is returned otherwise.
 
 ### `EventPtr_Has`
-Checks if `function` is added to event - will execute after calling `Event_Execute`.
+Checks if `function` is added to an event.
 ```dae
 func int EventPtr_Has(var int eventPtr, var func function)
 ```
@@ -186,7 +186,7 @@ func int EventPtr_HasI(var int eventPtr, var int id)
 The function returns `TRUE` if function is added, `FALSE` is returned otherwise.
 
 ### `EventPtr_Add`
-Adds a function called after executing the event (`EventPtr_Execute`).
+Adds an event handler function. The handler is called after running `EventPtr_Execute`. 
 ```dae
 func void EventPtr_Add(var int eventPtr, var func function)
 ```
@@ -271,4 +271,4 @@ func void EventPtr_Execute(var int eventPtr, var int data)
 ## Examples
 
 !!! Note
-    This article has no built-in examples but the best way to understand how EventHandler works is reading [source code](https://github.com/Lehona/LeGo/blob/dev/Gamestate.d) of [Gamestate](../applications/gamestate.md) package.
+    This article has no built-in examples, but the best way to understand how EventHandler works is reading [source code](https://github.com/Lehona/LeGo/blob/dev/Gamestate.d) of the [Gamestate](../applications/gamestate.md) package.

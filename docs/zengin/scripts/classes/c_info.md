@@ -1,7 +1,7 @@
 # C_INFO Daedalus class
 
 !!! example "Acknowledgment"
-    Heavily inspired by the amazing documentation site [Gothic library](http://www.gothic-library.ru)
+    Heavily inspired by the amazing documentation site [Gothic library](http://www.gothic-library.ru).
 
 
 The `C_INFO` class is used to define dialogues in the game.
@@ -79,7 +79,7 @@ When `important` is set to `TRUE`, the description is not needed since the dialo
 
 
 ### condition
-Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it returns `FALSE` it is not displayed. The function name does not have to follow a particular naming convention but a naming convention is used throughout all the Gothic scripts: `{DialogueName}_Condition`.
+Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it returns `FALSE` it is not displayed. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all the Gothic scripts: `{DialogueName}_Condition`.
 
 === "Conditioned dialogue"
     ```dae
@@ -114,7 +114,7 @@ Condition function with signature `func int f()`. If the function returns `TRUE`
     };
     ```
 !!! Tip
-    It is not necessary to return `FALSE` from dialogue conditions, but in other cases it can very rarely cause subtle bugs. It is thus good practice to always return some value, even if that is `FALSE`.
+    It is unnecessary to return `FALSE` from dialogue conditions, but in other cases it can very rarely cause subtle bugs. It is thus good practice to always return some value, even if that is `FALSE`.
 
 
 ### information
@@ -172,11 +172,11 @@ Dialogues with `permanent = TRUE` do not disappear after the dialogue is played.
     Frequently used external function `Npc_KnowsInfo` which returns true if the dialogue instance has been played has had a bug in the implementation for a long time. This bug made it impossible to use this function with dialogue instances with `permanent = TRUE` as it would always return `FALSE`. This has been fixed in `Union 1.0m`.
 
 ## LeGo
-LeGo implements a lot of useful functions for dialogues. It makes possible to create [Trialogues](../extenders/lego/applications/trialoge.md) and change NPCs behaviour by [Dialoggestures](../extenders/lego/applications/dialoggestures.md). Moreover any Daedalus function can be added to NPCs AI queue by [AI_Function](../extenders/lego/tools/ai_function.md) package.
+LeGo implements a lot of useful functions for dialogues. It makes it possible to create [Trialogues](../extenders/lego/applications/trialoge.md) and change NPCs behaviour by [Dialoggestures](../extenders/lego/applications/dialoggestures.md). Moreover, any Daedalus function can be added to NPCs AI queue via the [AI_Function](../extenders/lego/tools/ai_function.md) package.
 
 ## zParserExtender
-zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../extenders/zparserextender/syntax_extensions/dialogues.md)
+zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../extenders/zparserextender/syntax_extensions/dialogues.md).
 
 ## AF Script Packet
-Enhanced Info Manager (implemented using Ikarus and LeGo) adds tonne of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../extenders/afsp/index.md)
+Enhanced Info Manager (implemented using Ikarus and LeGo) adds tons of customizations and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../extenders/afsp/index.md).
 

@@ -62,10 +62,10 @@ func void Timer_SetPauseInMenu(var int on)
     Automatic pause on/off
 
 ### `Timer_IsPaused`
-This can be used to query whether the timer is currently paused.
+This can be used to query whether the timer is paused.
 ```dae
 func int Timer_IsPaused()
 ```
 **Return value**
 
-The function returns `TRUE` if the timer is paused, `FALSE` otherwise.
+The function returns `TRUE` if the timer is paused, `FALSE` is returned otherwise.

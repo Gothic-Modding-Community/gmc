@@ -25,11 +25,11 @@ LeGo_Init(LeGo_PermMem);
 Returns unique ID specific for provided NPC.
 
 ```dae
-func int NPC_GetID(var c_npc slf)
+func int NPC_GetID(var C_NPC slf)
 ```
 **Parameters**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC to get ID
 
 **Return value**
@@ -51,7 +51,7 @@ func int NPC_FindByID(var int ID)
 The function returns NPC pointer.
 
 ### `TAL_CreateTalent`
-Creates a talent into which you can later save a value for every NPC (just like AI_Var).
+Creates a talent into which you can later save a value for every NPC (just like `AI_Var`).
 ```dae
 func int TAL_CreateTalent()
 ```
@@ -62,11 +62,11 @@ The function returns value that can be later used as a talent ID.
 ### `TAL_SetValue`
 Sets a new value to the specified talent.
 ```dae
-func void TAL_SetValue(var c_npc npc, var int talent, var int value)
+func void TAL_SetValue(var C_NPC npc, var int talent, var int value)
 ```
 **Parameters**
 
-- `#!dae var c_npc npc`  
+- `#!dae var C_NPC npc`  
     Set the talent value for this NPC
 - `#!dae var int talent`  
     Talent ID
@@ -76,11 +76,11 @@ func void TAL_SetValue(var c_npc npc, var int talent, var int value)
 ### TAL_GetValue
 Returns the value of a saved talent for specified NPC.
 ```dae
-func int TAL_GetValue(var c_npc npc, var int talent)
+func int TAL_GetValue(var C_NPC npc, var int talent)
 ```
 **Parameters**
 
-- `#!dae var c_npc npc`  
+- `#!dae var C_NPC npc`  
     Get the talent value from this NPC
 - `#!dae var int talent`  
     Talent ID

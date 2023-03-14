@@ -1,5 +1,5 @@
 # Int64
-Int64 implements basic arithmetic for 64-bit integers based on machine code (hence the function signatures are also in machine code style). Furthermore, Int64 offers the constructor int64@ for Int64 objects, but mk64 expects a pointer, not a handle.
+Int64 implements basic arithmetic for 64-bit integers based on machine code (hence the function signatures are also in machine code style). Furthermore, Int64 offers the constructor `int64@` for Int64 objects, but mk64 expects a pointer, not a handle.
 
 ## Dependencies
 N/A
@@ -34,12 +34,15 @@ func void mk64(var int dest, var int hi, var int lo)
         MEM_WriteInt(dest+4, hi);
         };
     ```
-    So if you want to get `9 876 543 210` low part should be set to `1286608618` and the high part to `2`
+    So if you want to get `9876543210` low part should be set to `1286608618` and the high part to `2`
 
     ```dae
+    var int ptr; ptr = MEM_Alloc(8);
     var int low; low = 1286608618;
     var int high; high = 2;
-    mk64(<memory address>, low, high);
+    mk64(ptr, low, high);
+    // ...
+    MEM_Free(ptr);
     ```
 
 ### `neg64`

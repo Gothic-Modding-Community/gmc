@@ -37,7 +37,7 @@ func void Gamestate_RemoveListener(var func listener)
     Listener function to be removed.
 
 ## Examples
-There are now two possibilities. Everything can be done directly into the Init-Global, or with EventHandler.
+There are now two possibilities. Everything can be done directly into the `Init_Global`, or with [EventHandler](../tools/event_handler.md).
 ### Init_Global
 ```dae
 func void Init_Global()
@@ -95,7 +95,7 @@ func void Init_Global()
 };
 ```
 
-### Event Handler
+### EventHandler
 ```dae
 func void Init_Global()
 {
@@ -129,4 +129,4 @@ func void MyGamestateListener(var int state)
 This is the same as the [`Init_Global`](#init_global) example, but it may look more elegant to some.
 
 !!! Note
-    This is translation of article originally written by Gottfried and Lehona and hosted on LeGo's official documentation [website](https://lego.worldofplayers.de/?Beispiele_Gamestate)
+    This is translation of article originally written by Gottfried and Lehona and hosted on LeGo's official documentation [website](https://lego.worldofplayers.de/?Beispiele_Gamestate).

@@ -1,5 +1,5 @@
 # Hashtables
-Hashtables package is an implementation of hashtables in Gothic. Currently only integers are supported as keys. The Hashtables grow automatically.
+Hashtables package is an implementation of hashtables in Gothic. Currently (2.8.0) only integers are supported as keys. The Hashtables grow automatically.
 
     
 ## Dependencies
@@ -44,11 +44,11 @@ The function returns a handle to the created hashtable.
 ### `HT_Insert`
 Inserts a value into the Hashtable.
 ```dae
-func void HT_Insert(var int hndl, var int val, var int key)
+func void HT_Insert(var int handle, var int val, var int key)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 - `#!dae var int val`  
     The value to be inserted
@@ -58,11 +58,11 @@ func void HT_Insert(var int hndl, var int val, var int key)
 ### `HT_Resize`
 Changes the size of the hashtable (usually not necessary as it happens automatically).
 ```dae
-func void HT_Resize(var int hndl, var int size)
+func void HT_Resize(var int handle, var int size)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 - `#!dae var int size`  
     The new size of the hashtable
@@ -70,11 +70,11 @@ func void HT_Resize(var int hndl, var int size)
 ### `HT_Get`
 Reads a value from the hashtable.
 ```dae
-func int HT_Get(var int hndl, var int key)
+func int HT_Get(var int handle, var int key)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 - `#!dae var int key`  
     The key whose value is to be read
@@ -84,28 +84,28 @@ func int HT_Get(var int hndl, var int key)
 The function returns the value associated with the key.
 
 ### `HT_Has`
-Checks if the key already exist in hasktable.
+Checks if the key already exist in hashtable.
 ```dae
-func int HT_Has(var int hndl, var int key)
+func int HT_Has(var int handle, var int key)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 - `#!dae var int key`  
     The key to be checked 
 **Return value**
 
-The function returns `TRUE` if the key exist, `FALSE` is retured otherwise.
+The function returns `TRUE` if the key exist, `FALSE` is returned otherwise.
 
 ### `HT_Remove`
 Removes a key from the hashtable.
 ```dae
-func void HT_Remove(var int hndl, var int key)
+func void HT_Remove(var int handle, var int key)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 - `#!dae var int key`  
     The key to be removed
@@ -113,11 +113,11 @@ func void HT_Remove(var int hndl, var int key)
 ### `HT_Change`
 Changes the value of a key already existing in the hashtable.
 ```dae
-func void HT_Change(var int hndl, var int val, var int key)
+func void HT_Change(var int handle, var int val, var int key)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 - `#!dae var int val`  
     The new value
@@ -128,24 +128,24 @@ func void HT_Change(var int hndl, var int val, var int key)
 ### `HT_InsertOrChange`
 Inserts a value into the Hashtable, or changes the value if the key already exist into hashtable.
 ```dae
-func void HT_InsertOrChange(var int hndl, var int val, var int key)
+func void HT_InsertOrChange(var int handle, var int val, var int key)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 - `#!dae var int val`  
     The new value
 - `#!dae var int key`  
-    The key whose value is to be changed or associated with the value 
+    The key whose value is to be changed or associated with the value.
 ### `HT_GetNumber`
 Returns the number of entries in a hashtable.
 ```dae
-func int HT_GetNumber(var int hndl)
+func int HT_GetNumber(var int handle)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 
 **Return value**
@@ -155,21 +155,21 @@ The function returns the number of entries in the hashtable.
 ### `HT_ForEach`
 Performs a function for each value pair in the hashtable.
 ```dae
-func void HT_ForEach(var int hndl, var func fnc)
+func void HT_ForEach(var int handle, var func fnc)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     Handle of a hashtable
 - `#!dae var func fnc`  
-    A function with signature void (int key, int val)
+    A function with signature void `(int key, int val)`
 
 ### `HT_Destroy`
 Deletes the hashtable.
 ```dae
-func void HT_Destroy(var int hndl)
+func void HT_Destroy(var int handle)
 ```
 **Parameters**
 
-- `#!dae var int hndl`  
+- `#!dae var int handle`  
     The handle of the hashtable to be deleted

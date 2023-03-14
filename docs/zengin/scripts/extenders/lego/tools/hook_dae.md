@@ -28,7 +28,7 @@ func void HookDaedalusFunc(var func hooked, var func hook)
     Hook function
 
 ### `HookDaedalusFuncI`
-`HookDaedalusFunc` but with functoin ID.
+`HookDaedalusFunc` but with function ID.
 ```dae
 func void HookDaedalusFuncI(var int hookedID, var int hookID)
 ```
@@ -52,7 +52,7 @@ func void HookDaedalusFuncS(var string hookedName, var string hookName)
     Name of hook function
 
 ### `IsHookD`
-Checks whether a function is already hooked. Each function can be hooked any number of times, but each function can only hook one other.
+Checks whether a function is already hooking another. Each function can be hooked any number of times, but each function can only hook one other.
 ```dae
 func int IsHookD(var int funcID)
 ```
@@ -61,7 +61,7 @@ func int IsHookD(var int funcID)
 - `#!dae var int funcID`
     Symbol index of a hook function
 
-**Return vlaue**
+**Return value**
 The function returns `TRUE` if the function is already hooking another, `FALSE` is returned otherwise.
 
 ### `ContinueCall`
@@ -78,17 +78,17 @@ func void PassArgumentI(var int i)
 **Parameters**
 
 - `#!dae var int i`
-    Argument to forward
+    Integer argument to forward
 
 ### `PassArgumentS`
-Passes a sting as an argument to the original function. Must be called before `ContinueCall`.
+Passes a string as an argument to the original function. Must be called before `ContinueCall`.
 ```dae
 func void PassArgumentS(var string s)
 ```
 **Parameters**
 
 - `#!dae var string s`
-    Argument to forward
+    String argument to forward
 
 ### `PassArgumentN`
 Passes an instance as an argument to the original function. Must be called before `ContinueCall`.
@@ -98,7 +98,7 @@ func void PassArgumentN(var instance n)
 **Parameters**
 
 - `#!dae var instance n`
-    Argument to forward
+    Instance argument to forward
 
 ## Examples
 
@@ -160,7 +160,7 @@ func int hook(var int i) {
      ContinueCall();
 };
 ```
-In this case, we may not return the value at the end of the hook because the returned value will just stay on the stack. However, we shouldn't give up on calling PassArgumentI(i) to ensure that i is still on top of the stack when the program continues with hooked.
+In this case, we may not return the value at the end of the hook because the returned value will just stay on the stack. However, we shouldn't give up on calling `PassArgumentI(i)` to ensure that it is still on top of the stack when the program continues with hooked.
 
 ### Manipulation of arguments and return values
 We can also manipulate arguments and return values with our hook.

@@ -18,11 +18,11 @@ LeGo_Init(LeGo_Trialoge);
 ### `EquipWeapon`
 Sektenspinner's function. (Taken from the forum.) 
 ```dae
-func void EquipWeapon(var c_npc slf, var int ItemInstance)
+func void EquipWeapon(var C_NPC slf, var int ItemInstance)
 ```
 **Parameters**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC to have a weapon equipped
 - `#!dae var int ItemInstance`  
     Weapon instance to be equipped
@@ -30,30 +30,30 @@ func void EquipWeapon(var c_npc slf, var int ItemInstance)
 ### `Npc_GetArmor`
 Returns NPC's equipped armor.
 ```dae
-func int Npc_GetArmor(var c_npc slf)
+func int Npc_GetArmor(var C_NPC slf)
 ```
 **Parameters**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC to get the armor from
 
 **Return value**
 
-The function returns instance of armor weared by the NPC.
+The function returns instance of armor worn by the NPC.
 
 ### `Npc_GetMeleeWeapon`
 Returns NPC's equipped melee weapon.
 ```dae
-func int Npc_GetMeleeWeapon(var c_npc slf)
+func int Npc_GetMeleeWeapon(var C_NPC slf)
 ```
 **Parameters**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC to get the weapon from
 
 **Return value**
 
-The function returns instance of melee weapon equiped by the NPC.
+The function returns instance of melee weapon equipped by the NPC.
 
 ### `DiaCAM_Update`
 Sektenspinner's function that updates the dialogue camera. (Used internally.)
@@ -81,15 +81,15 @@ func void TRIA_Wait()
 ### `TRIA_Invite`
 Invites an NPC into a conversation. Must be called before `TRIA_Start`.
 ```dae
-func void TRIA_Invite(var c_npc slf)
+func void TRIA_Invite(var C_NPC slf)
 ```
 **Parameters**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     The invited NPC
 
 ### `TRIA_Start`
-Starts trialogues. Before that, all NPC's should be invited by `TRIA_Invite`.
+Starts trialogues. Before that, all NPCs should be invited by `TRIA_Invite`.
 ```dae
 func void TRIA_Start()
 ```
@@ -103,11 +103,11 @@ func void TRIA_Barrier()
 ### `TRIA_Next`
 Sets the called npc to `self`.
 ```dae
-func void TRIA_Next(var c_npc n0)
+func void TRIA_Next(var C_NPC n0)
 ```
 **Parameters**
 
-- `#!dae var c_npc n0`  
+- `#!dae var C_NPC n0`  
     NPC to set to `self`
 
 ### `TRIA_Cam`
@@ -131,14 +131,14 @@ func void TRIA_Finish()
 ### A Simple Trialogue
 The following conversation is resolved via the trialogues:
 
-1. **Arto:**    Sorry hero, but you can't pass here
-2. **Hero:**    Why not?
-3. **Horka:**   The city has been closed.
-4. **Hero:**    I have some gold with me, can we trade?
+1. **Arto:** I'm sorry Hero, but you can't pass here.
+2. **Hero:** Why not?
+3. **Horka:** The city has been closed.
+4. **Hero:** I have some gold with me, can we trade?
 5. **Squelto:** No. We are not open to bribery.
-6. **Hero:**    Sure?
-7. **Arto:**    I have to ask you to leave now
-8. **Hero:**    Well...
+6. **Hero:** Sure?
+7. **Arto:** I have to ask you to leave now.
+8. **Hero:** Well...
 ```dae
 instance TRIA_Test (C_INFO)
 {
@@ -158,9 +158,9 @@ func int TRIA_Test_condition()
 
 func void TRIA_Test_info()
 {
-    var c_npc Arto; Arto       = Hlp_GetNpc(PAL_100_Friend); // He is the owner of dialogue
-    var c_npc Horka; Horka     = Hlp_GetNpc(PAL_101_Horka);
-    var c_npc Squelto; Squelto = Hlp_GetNpc(PAL_102_Squelto);
+    var C_NPC Arto; Arto       = Hlp_GetNpc(PAL_100_Friend); // He is the owner of dialogue
+    var C_NPC Horka; Horka     = Hlp_GetNpc(PAL_101_Horka);
+    var C_NPC Squelto; Squelto = Hlp_GetNpc(PAL_102_Squelto);
    
     TRIA_Invite(Horka);   // Invite Horka into this dialogue
     TRIA_Invite(Squelto); // Invite Squelto into this dialog
@@ -172,7 +172,7 @@ func void TRIA_Test_info()
    
     DIAG_Reset();
    
-    AI_Output (self, other, "TRIA_TEST_00"); //Sorry hero, but you can't pass here
+    AI_Output (self, other, "TRIA_TEST_00"); //Sorry hero, but you can't pass here.
    
     // Hero now talks to Horka (self = Horka, other = Hero)
     TRIA_Next(Horka);
@@ -184,7 +184,7 @@ func void TRIA_Test_info()
    
     AI_Output (self, other, "TRIA_TEST_02"); //The city has been closed.
    
-    // Held looks around conspiratorially during the next sentence
+    // Hero looks around conspiratorially during the next sentence
     DIAG("Nervous", 1, 2);
    
     AI_Output (other, self, "TRIA_TEST_03"); //I have some gold with me, can we trade?

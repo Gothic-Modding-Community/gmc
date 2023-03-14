@@ -1,5 +1,5 @@
 # AI Function
-This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful for e.g. cutscenes.
+This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful e.g. cutscenes.
 
 ## Dependencies
 
@@ -16,29 +16,29 @@ LeGo_Init(LeGo_AI_Function);
 ## Functions
 The script function `function` is called with a delay: it joins the AI queue of `slf`.
 ```dae
-func void AI_Function(var c_npc slf, var func function)
+func void AI_Function(var C_NPC slf, var func function)
 ```
 **Parameters**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC in whose AI queue the function is queued
 - `#!dae var func function`  
     Name of function to be queued
 
-Additionally there are some overloads of `AI_Function`, which allow to call functions with parameters.
+Additionally, there are some overloads of `AI_Function`, which allow to call functions with parameters.
 ```dae
-func void AI_Function_I  (var c_npc slf, var func function, var int    param) {}; //Int
-func void AI_Function_N  (var c_npc slf, var func function, var int    param) {}; //Instance (e.g. NPC)
-func void AI_Function_S  (var c_npc slf, var func function, var string param) {}; //String
-func void AI_Function_II (var c_npc slf, var func function, var int    param1, var int    param2) {}; // Int, Int
-func void AI_Function_NN (var c_npc slf, var func function, var int    param1, var int    param2) {}; // Instance, Instance
-func void AI_Function_SS (var c_npc slf, var func function, var string param1, var string param2) {}; //String, String
-func void AI_Function_IS (var c_npc slf, var func function, var int    param1, var string param2) {}; //Int, String
-func void AI_Function_SI (var c_npc slf, var func function, var string param1, var int    param2) {}; //String, Int
-func void AI_Function_NS (var c_npc slf, var func function, var int    param1, var string param2) {}; //Instance, String
-func void AI_Function_SN (var c_npc slf, var func function, var string param1, var int    param2) {}; //String, Istance
-func void AI_Function_IN (var c_npc slf, var func function, var int    param1, var int    param2) {}; //Int, Instance
-func void AI_Function_NI (var c_npc slf, var func function, var int    param1, var int    param2) {}; //Instance, Int
+func void AI_Function_I  (var C_NPC slf, var func function, var int    param) {}; // Int
+func void AI_Function_N  (var C_NPC slf, var func function, var int    param) {}; // Instance (e.g. NPC)
+func void AI_Function_S  (var C_NPC slf, var func function, var string param) {}; // String
+func void AI_Function_II (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Int
+func void AI_Function_NN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Instance
+func void AI_Function_SS (var C_NPC slf, var func function, var string param1, var string param2) {}; // String, String
+func void AI_Function_IS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Int, String
+func void AI_Function_SI (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Int
+func void AI_Function_NS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Instance, String
+func void AI_Function_SN (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Istance
+func void AI_Function_IN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Instance
+func void AI_Function_NI (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Int
 ```
 Functions with more than two parameters cannot be called, but parameters can be passed indirectly via global variables.
 
@@ -63,4 +63,4 @@ func void Example1() {
     AI_Function_S(hero, Wld_SendTrigger, "CAMERASTART");
 };
 ```
-As soon as the hero has reached the waypoint, `Wld-SendTrigger("CAMERASTART");` is called.
+As soon as the hero has reached the waypoint, `Wld_SendTrigger("CAMERASTART");` is called.

@@ -1,5 +1,5 @@
 # Windows Utilities
-This part of Ikarus implement some WinAPI functions that can be used directly from Gothic scripts.
+This part of Ikarus implements some WinAPI functions that can be used directly from Gothic scripts.
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
@@ -16,9 +16,9 @@ MEM_InitAll();
 ## Functions
 
 ### `LoadLibrary`
-Loads the specified module into the address space of the calling process. Full documentation [here](https://learn.microsoft.com/pl-pl/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya?redirectedfrom=MSDN)
+Loads the specified module into the address space of the calling process. Full documentation [here](https://learn.microsoft.com/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya).
 ```dae
-func int LoadLibrary (var string lpFileName)
+func int LoadLibrary(var string lpFileName)
 ```
 **Parameters**
 
@@ -27,27 +27,27 @@ func int LoadLibrary (var string lpFileName)
 
 **Return value**
 
-The function returns a handle of the module.
+The function returns a handle to the module.
 
 ### `GetProcAddress`
-Retrieves the address from the specified dynamic-link library. Full documentation [here](https://learn.microsoft.com/pl-pl/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress?redirectedfrom=MSDN)
+Retrieves the address from the specified dynamic-link library. Full documentation [here](https://learn.microsoft.com/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress).
 ```dae
-func int GetProcAddress (var int hModule, var string lpProcName)
+func int GetProcAddress(var int hModule, var string lpProcName)
 ```
 **Parameters**
 
 - `#!dae var int hModule`  
-    A handle to the DLL module that contains the function or variable. Can be obtained using the LoadLibrary function
-- `#!ade var string lpProcName`  
+    A handle to the DLL module that contains the function or variable. Can be obtained using the `LoadLibrary` function.
+- `#!dae var string lpProcName`  
     The function or variable name.
 
 **Return value**
 The function returns address of the function or variable.
 
 ### `FindKernelDllFunction`
-Uses `GetProcAddress` to find function into `KERNEL32.DLL` file.
+Uses `GetProcAddress` to find function inside the `KERNEL32.DLL` file.
 ```dae
-func int FindKernelDllFunction (var string name)
+func int FindKernelDllFunction(var string name)
 ```
 **Parameters**
 
@@ -59,9 +59,9 @@ func int FindKernelDllFunction (var string name)
 The function returns address of the function.
 
 ### `VirtualProtect`
-Changes the protection on a region of committed pages in the virtual address space of the calling process. Full documentation [here](https://learn.microsoft.com/pl-pl/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect?redirectedfrom=MSDN)
+Changes the protection on a region of committed pages in the virtual address space of the calling process. Full documentation [here](https://learn.microsoft.com/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect).
 ```dae
-func int VirtualProtect (var int lpAddress, var int dwSize, var int flNewProtect) {};
+func int VirtualProtect(var int lpAddress, var int dwSize, var int flNewProtect)
 ```
 **Parameters**
 
@@ -80,9 +80,9 @@ Author's comment:
 > I made `lpflOldProtectPtr` the return value and ignored the return Value of VirtualProtect.
 
 ### `MemoryProtectionOverride`
-Alais to `VirtualProtect` but with predefinied `PAGE_EXECUTE_READWRITE` protection option
+Alias to `VirtualProtect` but with predefined `PAGE_EXECUTE_READWRITE` protection option
 ```dae
-func void MemoryProtectionOverride (var int address, var int size)
+func void MemoryProtectionOverride(var int address, var int size)
 ```
 **Parameters**
 
@@ -94,12 +94,12 @@ func void MemoryProtectionOverride (var int address, var int size)
 ### `MEM_MessageBox`
 Calls the WinAPI MessageBox function.
 ```dae
-func int MEM_MessageBox (var string txt, var string caption, var int type)
+func int MEM_MessageBox(var string txt, var string caption, var int type)
 ```
 **Parameters**
 
 - `#!dae var string txt`  
-    Conntent of the MessageBox.
+    Content of the MessageBox.
 - `#!dae var string caption`  
     Header of MessageBox.
 - `#!dae var int type`  
@@ -108,24 +108,24 @@ func int MEM_MessageBox (var string txt, var string caption, var int type)
 ### `MEM_InfoBox`
 Alias to `MEM_MessageBox` with "Information:" header and `MB_OK | MB_ICONINFORMATION` type.
 ```dae
-func void MEM_InfoBox (var string txt)
+func void MEM_InfoBox(var string txt)
 ```
 **Parameters**
 
 - `#!dae var string txt`  
-    Conntent of the InfoBox.
+    Content of the InfoBox.
 
 ## Examples
 
-### Sleep
-Following function calls a `Sleep` function form `KERNEL32.DLL`.
-A documentation of this function can be found [here](http://msdn.microsoft.com/en-us/library/ms686298%28v=vs.85%29.aspx).
+### `Sleep`
+Following function calls the `Sleep` function from the `KERNEL32.DLL`.
+A documentation of this function can be found [here](https://learn.microsoft.com/windows/win32/api/synchapi/nf-synchapi-sleep).
 ```dae
 func void Sleep(var int ms) {
     var int adr;
-    adr = GetProcAddress (LoadLibrary ("KERNEL32.DLL"), "Sleep");
+    adr = GetProcAddress(LoadLibrary("KERNEL32.DLL"), "Sleep");
     
     CALL_IntParam(ms);
-    CALL__stdcall(adr); //0x007B47E6
+    CALL__stdcall(adr); // 0x007B47E6
 };
 ```

@@ -4,7 +4,7 @@ Ten pakiet robi dwie rzeczy:
 1. Zapisuje dowolną liczbę wartości dla określonego NPC (efektywne rozszerzenie tablicy AIVar).
 2. Pozwala zidentyfikować NPC za pomocą unikalnego ID.
 
-Pakiet `Talents` używa jednego wolnego AIVara, domyślnie jest to AIVar z mumerem 89, który można dostosować w `Userconst.d` [`AIV_TALENT`](../various/userconstants.md#talents).
+Pakiet `Talents` używa jednego wolnego AIVara, domyślnie jest to AIVar z numerem 89, który można dostosować w `Userconst.d` [`AIV_TALENT`](../various/userconstants.md#talents).
 
 ## Zależności
 
@@ -25,11 +25,11 @@ LeGo_Init(LeGo_PermMem);
 Zwraca unikalne ID dla podanego NPC.
 
 ```dae
-func int NPC_GetID(var c_npc slf)
+func int NPC_GetID(var C_NPC slf)
 ```
 **Parametry**
 
-- `#!dae var c_npc slf`  
+- `#!dae var C_NPC slf`  
     NPC
 
 **Zwracana wartość**
@@ -62,11 +62,11 @@ Funkcja zwraca wartość, która jest później wykorzystywana jako ID talentu.
 ### `TAL_SetValue`
 Ustawia nową wartość dla określonego talentu.
 ```dae
-func void TAL_SetValue(var c_npc npc, var int talent, var int value)
+func void TAL_SetValue(var C_NPC npc, var int talent, var int value)
 ```
 **Parametry**
 
-- `#!dae var c_npc npc`  
+- `#!dae var C_NPC npc`  
     NPC dla którego ustawiana jest wartość
 - `#!dae var int talent`  
     ID talentu
@@ -76,11 +76,11 @@ func void TAL_SetValue(var c_npc npc, var int talent, var int value)
 ### TAL_GetValue
 Zwraca wartość talentu dla określonego NPC.
 ```dae
-func int TAL_GetValue(var c_npc npc, var int talent)
+func int TAL_GetValue(var C_NPC npc, var int talent)
 ```
 **Parametry**
 
-- `#!dae var c_npc npc`  
+- `#!dae var C_NPC npc`  
     NPC, którego wartość talentu jest zwracana
 - `#!dae var int talent`  
     ID talentu

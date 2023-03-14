@@ -1,5 +1,5 @@
 # Render
-With this package items can be rendered on the screen. Since items are rendered independently of the normal views, textures that are 'below' the items must also be managed by this package, and there is a priority system for this. The view with the highest priority is always rendered first, so it's at the bottom. In theory, any .3DS model can be rendered if you just create a suitable item script.
+With this package items can be rendered on the screen. Since items are rendered independently of the normal views, textures that are 'below' the items must also be managed by this package, and there is a priority system for this. The view with the highest priority is always rendered first, so it is at the bottom. In theory, any .3DS model can be rendered if you just create a suitable item script.
 ## Dependencies
 
 - List
@@ -13,7 +13,7 @@ LeGo_Init(LeGo_Render);
 ```
 
 !!! Warning
-    This package is still experimental and not icluded in `LeGo_All` initialization flag.
+    This package is still experimental and not included in `LeGo_All` initialization flag.
 
 ## Implementation
 [:material-github: Render.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Render.d)
@@ -38,7 +38,7 @@ func int Render_AddItemPrio(var int itemInst, var int x1, var int y1, var int x2
 
 **Return value**
 
-The function returns a hanlde of the rednder object.
+The function returns a handle of the render object.
 
 ### `Render_AddItem`
 Generates the render of an item, with priority set to `0`.
@@ -56,7 +56,7 @@ func int Render_AddItem(var int itemInst, var int x1, var int y1, var int x2, va
 
 **Return value**
 
-The function returns a hanlde of the rednder object.
+The function returns a handle of the render object.
 
 ### `Render_AddViewPrio`
 Generates the render of a View, with a manually specified priority.
@@ -72,7 +72,7 @@ func int Render_AddViewPrio(var int view, var int priority)
 
 **Return value**
 
-The function returns a hanlde of the rednder object.
+The function returns a handle of the render object.
 
 ### `Render_AddView`
 Generates the render of a View, with priority set to `0`.
@@ -86,7 +86,7 @@ func int Render_AddView(var int view)
 
 **Return value**
 
-The function returns a hanlde of the rednder object.
+The function returns a handle of the render object.
 
 ### `Render_OpenView`
 Opens a render object. Only open render objects are displayed.
