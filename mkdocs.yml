@@ -103,10 +103,14 @@ nav:
             - BinaryMachines:  zengin/scripts/extenders/lego/tools/binary_machines.md
             - EventHandler:    zengin/scripts/extenders/lego/tools/event_handler.md
             - FrameFunctions:  zengin/scripts/extenders/lego/tools/frame_functions.md
+            - Hashtables:      zengin/scripts/extenders/lego/tools/hashtables.md
+            - HookDaedalus:    zengin/scripts/extenders/lego/tools/hook_dae.md
+            - HookEngine:      zengin/scripts/extenders/lego/tools/hook_engine.md
             - Int64:           zengin/scripts/extenders/lego/tools/int64.md
             - ItemHelper:      zengin/scripts/extenders/lego/tools/item_helper.md
             - Locals:          zengin/scripts/extenders/lego/tools/locals.md
             - Misc:            zengin/scripts/extenders/lego/tools/misc.md
+            - Queue:           zengin/scripts/extenders/lego/tools/queue.md
             - Random:          zengin/scripts/extenders/lego/tools/random.md
             - Talents:         zengin/scripts/extenders/lego/tools/talents.md
             - Timer:           zengin/scripts/extenders/lego/tools/timer.md
@@ -116,10 +120,12 @@ nav:
             - Bloodsplats:     zengin/scripts/extenders/lego/applications/bloodsplats.md
             - Buffs:           zengin/scripts/extenders/lego/applications/buffs.md
             - ConsoleCommands: zengin/scripts/extenders/lego/applications/console_commands.md
+            - Cursor:          zengin/scripts/extenders/lego/applications/cursor.md
             - Dialoggestures:  zengin/scripts/extenders/lego/applications/dialoggestures.md
             - Focusnames:      zengin/scripts/extenders/lego/applications/focusnames.md
             - GameState:       zengin/scripts/extenders/lego/applications/gamestate.md
             - Names:           zengin/scripts/extenders/lego/applications/names.md
+            - Render:          zengin/scripts/extenders/lego/applications/render.md
             - Saves:           zengin/scripts/extenders/lego/applications/saves.md
             - Trialoge:        zengin/scripts/extenders/lego/applications/trialoge.md
           - Various:
