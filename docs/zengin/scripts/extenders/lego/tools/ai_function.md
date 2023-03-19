@@ -3,7 +3,7 @@ This package allows time-delayed functions to be called by enqueuing the functio
 
 ## Dependencies
 
-- HookEngine
+- [HookEngine](hook_engine.md)
 
 ## Initialization
 Initialize with `LeGo_AI_Function` flag.

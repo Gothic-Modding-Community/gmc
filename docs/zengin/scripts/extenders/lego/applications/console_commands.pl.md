@@ -4,7 +4,7 @@ Ten Pakiet pozwala na tworzenie nowych poleceń konsloli dostępnej po naciśni�
 ## Zależności
 
 - PermMem
-- HookEngine
+- [HookEngine](../tools/hook_engine.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_ConsoleCommands`.

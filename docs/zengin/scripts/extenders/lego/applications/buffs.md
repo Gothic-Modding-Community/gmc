@@ -13,6 +13,9 @@ Initialize with `LeGo_Buffs` flag.
 LeGo_Init(LeGo_Buffs);
 ```
 
+!!! Warning
+    This package is still experimental and not icluded in `LeGo_All` initialization flag.
+
 ## Implementation
 [:material-github: Buffs.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Buffs.d)
 

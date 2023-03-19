@@ -4,7 +4,7 @@ This package colors the focus names of the NPCs in appropriate colors according 
 ## Dependencies
 
 - Interface
-- HookEngine
+- [HookEngine](../tools/hook_engine.md)
 
 ## Initialization
 Initialize with `LeGo_Focusnames` flag.

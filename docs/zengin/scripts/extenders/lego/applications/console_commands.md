@@ -4,7 +4,7 @@ This package allows you to create new console commands.
 ## Dependencies
 
 - PermMem
-- HookEngine
+- [HookEngine](../tools/hook_engine.md)
 
 ## Initialization
 Initialize with `LeGo_ConsoleCommands` flag.
