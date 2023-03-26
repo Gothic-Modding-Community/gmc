@@ -102,6 +102,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     if (gGMC_PAGE_LOCALE !== gGMC_DEFAULT_LOCALE && gGMC_PAGE_LOCALE !== gGMC_PAGE_FILE_LOCALE) {
         gmcTranslateButton();
     }
+    gmcRemoveCodeLines();
     gmcExternalLinks();
     new gMutationObserver(gmcSearchMutationCallback)
         .observe(document.querySelector(".md-search-result__list"), {childList: true});
@@ -390,6 +391,20 @@ const gmcTranslateButton = () => {
     newAnchor.title = gGMC_TRANSLATE_CTA;
     anchor.parentElement.prepend(newAnchor);
 }
+
+const gmcRemoveCodeLines = () => {
+    const nodesForRemoval = [];
+    const lineContainers = document.querySelectorAll(".highlighttable .linenos");
+    for (const container of lineContainers) {
+      let lines = container.querySelectorAll("span.normal")
+      if (lines.length < 3) {
+        nodesForRemoval.push(container);
+      }
+    }
+    for (const container of nodesForRemoval) {
+      container.remove();
+    }
+};
 
 function gmcDebug(...message) {
     if (gGMC_LOCAL)
