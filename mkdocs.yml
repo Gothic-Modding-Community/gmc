@@ -70,7 +70,10 @@ nav:
 
     - Music: zengin/music.md
 
-    - Sound: zengin/sound.md
+    - Sound: 
+      - zengin/sound/index.md
+      - Tutorials:
+        - zengin/sound/tutorials/change_sfx.md
 
     - Textures: zengin/textures.md
 
