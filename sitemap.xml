@@ -280,6 +280,24 @@
          
     </url>
     <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/functions/menu_access/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/functions/win_utilities/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/functions/win_utilities/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/ikarus/functions/win_utilities/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/ikarus/functions/win_utilities/"/>
+         
+    </url>
+    <url>
          <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/</loc>
          <lastmod>2023-03-30</lastmod>
          <changefreq>daily</changefreq>
@@ -316,12 +334,30 @@
          
     </url>
     <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/buffs/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/buffs/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/applications/buffs/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/applications/buffs/"/>
+         
+    </url>
+    <url>
          <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/console_commands/</loc>
          <lastmod>2023-03-30</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/console_commands/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/applications/console_commands/"/>
          <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/applications/console_commands/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/cursor/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/cursor/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/applications/cursor/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/applications/cursor/"/>
          
     </url>
     <url>
@@ -361,6 +397,24 @@
          
     </url>
     <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/render/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/render/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/applications/render/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/applications/render/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/saves/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/saves/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/applications/saves/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/applications/saves/"/>
+         
+    </url>
+    <url>
          <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/applications/trialoge/</loc>
          <lastmod>2023-03-30</lastmod>
          <changefreq>daily</changefreq>
@@ -379,12 +433,57 @@
          
     </url>
     <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/binary_machines/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/binary_machines/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/tools/binary_machines/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/tools/binary_machines/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/event_handler/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/event_handler/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/tools/event_handler/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/tools/event_handler/"/>
+         
+    </url>
+    <url>
          <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/frame_functions/</loc>
          <lastmod>2023-03-30</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/frame_functions/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/tools/frame_functions/"/>
          <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/tools/frame_functions/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/hashtables/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/hashtables/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/tools/hashtables/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/tools/hashtables/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/hook_dae/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/hook_dae/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/tools/hook_dae/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/tools/hook_dae/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/hook_engine/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/hook_engine/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/tools/hook_engine/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/tools/hook_engine/"/>
          
     </url>
     <url>
@@ -421,6 +520,15 @@
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/misc/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/tools/misc/"/>
          <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/tools/misc/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/queue/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/lego/tools/queue/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/lego/tools/queue/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/lego/tools/queue/"/>
          
     </url>
     <url>
