@@ -1,5 +1,5 @@
 # Hashtables
-Hashtables package is an implementation of hashtables in Gothic. Currently (2.8.0) only integers are supported as keys. The Hashtables grow automatically.
+Hashtables package is an implementation of hashtables in Gothic. Currently (version 2.8.0) only integers are supported as keys. The Hashtables grow automatically.
 
     
 ## Dependencies

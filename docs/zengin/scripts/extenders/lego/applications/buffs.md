@@ -117,6 +117,7 @@ func int Buff_GetNpc(var int buffHandle)
     Handle of the buff
 
 **Return value**
+
 The function returns a pointer to the NPC, which is affected by the buff.
 
 ### `Buff_Has`
@@ -215,3 +216,4 @@ instance deadly_poison(lCBuff) {
 ```
 
 For example, if this buff is now applied to the hero, by calling `Buff_Apply(hero, deadly_poison)`, he loses a total of 30 HP over 10 seconds.
+

@@ -77,9 +77,8 @@ func int Q_Peek(var int queue)
 The function returns the oldest value in the queue.
 
 ### `Q_For`
-Performs a function in turn for all values in the queue.
-The function is passed a zCList* as a parameter, to which the rest
-of the queue is attached.
+Function with the `funcID` is called with every element of the list as parameter.  
+The list element is passed to the function as a `zCList` pointer.
 ```dae
 func void Q_For(var int queue, var int funcID)
 ```
@@ -88,10 +87,10 @@ func void Q_For(var int queue, var int funcID)
 - `#!dae var int queue`  
     Handle of a queue
 - `#!dae var int funcID`  
-    ID of function that is executed for all values in the queue (signature: void (zCList*))
+    ID of function that is executed for all values in the queue (signature: `void (zCList*)`)
 
 ### `Q_ForF`
-Like `Q_For`, but with func as a parameter instead of an ID.
+Like `Q_For`, but with function as a parameter instead of a function ID.
 ```dae
 func void Q_ForF(var int queue, var func f)
 ```
@@ -137,7 +136,7 @@ func void CQ_EnqueueData(var int queue, var func function, var int data)
 - `#!dae var func function`  
     A function with no return value, expecting an integer as a parameter.
 - `#!dae var int data`  
-    When calling 'function', this value is passed as a parameter
+    When calling `function`, this value is passed as a parameter
 
 ### `CQ_Enqueue`
 Appends a function together with an optional value to the callback queue.
@@ -181,7 +180,7 @@ func void CQ_Advance(var int queue)
     Handle of a callback queue
 
 ### `CQ_Exhaust`
-Executes all functions contained in the callback queue in turn.
+Executes all functions contained in the callback queue.
 ```dae
 func void CQ_Exhaust(var int queue)
 ```

@@ -2,7 +2,7 @@
 This package implements Gothic in-game mouse cursor support. To visually display the cursor there is a `Cursor.tga` file in the resources, but the texture can be changed in [user constants](../various/userconstants.md#cursor-1).
 
 !!! Warning
-    The cursor only works if the mouse is activated in the Gothic settings. It can be done directly form the scripts. See the [Ini file access](../../ikarus/functions/ini_access.md).
+    The cursor only works if the mouse is activated in the Gothic settings. It can be done directly from the scripts. See the [Ini file access](../../ikarus/functions/ini_access.md).
 
     
 ## Dependencies
@@ -23,13 +23,13 @@ LeGo_Init(LeGo_Cursor);
 ## Variables
 
 - `#!dae var int Cursor_X`  
-    Always contains the X coordinate of the mouse.
+    Always contains the X coordinate of the mouse cursor.
 - `#!dae var int Cursor_Y`  
-    Always contains the Y coordinate of the mouse.
+    Always contains the Y coordinate of the mouse cursor.
 - `#!dae var float Cursor_RelX`  
-    Always contains the relative X coordinate of the mouse as an Ikarus float.
+    Always contains the relative X coordinate of the mouse cursor as an Ikarus float.
 - `#!dae var float Cursor_RelY`  
-    Always contains the relative Y coordinate of the mouse as an Ikarus float.
+    Always contains the relative Y coordinate of the mouse cursor as an Ikarus float.
 - `#!dae var int Cursor_Wheel`  
     Variable containing the value of the mouse wheel.
 - `#!dae var int Cursor_Left`  
@@ -39,7 +39,7 @@ LeGo_Init(LeGo_Cursor);
 - `#!dae var int Cursor_Right`  
     Variable that always contains the KeyState of the right mouse button.
 - `#!dae var int Cursor_Event`  
-    An event handler that can send information about the cursor. It can be used with all functions of the [EventHandler](../tools/event_handler.md) package.
+    An event handler that can send information about the mouse cursor. It can be used with all functions of the [EventHandler](../tools/event_handler.md) package.
 - `#!dae var int Cursor_NoEngine`  
     Variable that can prevent the engine from working. If is set to `TRUE` the engine no longer reacts to mouse movements.
 
@@ -47,13 +47,13 @@ LeGo_Init(LeGo_Cursor);
 ## Functions
 
 ### `Cursor_Hide`
-Hides the displayed cursor.
+Hides the displayed mouse cursor.
 ```dae
 func void Cursor_Hide()
 ```
 
 ### `Cursor_Show`
-Shows the cursor.
+Shows the mouse cursor.
 ```dae
 func void Cursor_Show()
 ```
@@ -66,7 +66,7 @@ func void SetMouseEnabled(var int enabled)
 **Parameters**
 
 - `#!dae var int enabled`  
-    TRUE == Mouse activated
+    `TRUE` - Mouse activated
 
 ## Examples
 

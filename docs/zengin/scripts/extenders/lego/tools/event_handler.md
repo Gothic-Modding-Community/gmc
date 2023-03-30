@@ -1,5 +1,5 @@
 # EventHandler
-This package allows to create new events and fire them at desired times. The [Gamestate](../applications/gamestate.md) package already uses it.
+This package allows to create new events and trigger them at desired times. The [Gamestate](../applications/gamestate.md) package already uses it.
 
 !!! Warning  
     The EventHandler requires some basic understanding of the PermMem. The documentation can be found [here](https://lego.worldofplayers.de/?PermMem).
@@ -118,7 +118,7 @@ func void Event_Execute(var int event, var int data)
 
 ## Ptr functions
 !!! Tip
-    The pointer functions are used internally by the previous functions. If you created an event with `Event_Create` use functions without `Ptr` in name, but if you created event with `EventPtr_Create` use only `Ptr` functions. The normal user will probably never need the pointer versions, however the choice, which one to use is yours. 
+    The pointer functions are used internally by the previous functions. If you created an event with `Event_Create` use functions without `Ptr` in the name, but if you created event with `EventPtr_Create` use only `Ptr` functions. The normal user will probably never need the pointer versions, however the choice, which one to use is yours. 
 
 ### `EventPtr_Create`
 Creates a new event and returns a pointer to it.
