@@ -155,24 +155,25 @@ The function returns the ID of given function.
 The buffs package implements an `lCBuff` class, which looks like this:
 
 ```dae
-class lCBuff {
-        var string name;    // Name of the buff
-        var int buffType;   // GOOD / NEUTRAL / BAD | 1 / 0 / -1
-        var int targetID;   // NPC that is currently affected by this buff
-        var int durationMS; // full duration until the buff runs out 
-        var int tickMS;     // ms between each tick, first tick at tickMS milliseconds.
-        var int nextTickNr; // e.g. before the first tick this will be 0; OBSOLETE, remove when possible
+class lCBuff
+{
+    var string name;    // buff name 
+    var int buffType;   // GOOD / NEUTRAL / BAD | 1 / 0 / -1
+    var int targetID;   // NPC that is currently affected by this buff
+    var int durationMS; // buff duration in milliseconds
+    var int tickMS;     // tick duration in milliseconds, first tick occurs at tickMS milliseconds
+    var int nextTickNr; // e.g. before the first tick this will be 0; OBSOLETE, remove when possible
 
-        var int OnApply; 
-        var int OnTick;
-        var int OnRemoved;
+    var int OnApply; 
+    var int OnTick;
+    var int OnRemoved;
 
-        var string buffTex;  // Currently only used for buffs applied on the hero
-        // var int originID; // Who casted/created this buff?
+    var string buffTex;  // associated texture - currently only used for buffs applied on the hero
+    // var int originID; // Who casted/created this buff?
 
-        // Internal,  no need to set during instance construction
-        var int _startedTime;
-        var int _endTime; // Not rendundant with durationMS because buffs can be refreshed
+    // Internal, no need to set during instance construction
+    var int _startedTime;
+    var int _endTime;    // Not rendundant with durationMS because buffs can be refreshed
 };
 ```
 
@@ -180,12 +181,13 @@ class lCBuff {
 
 ## Delayed poison
 ```dae
-instance deadly_poison(lCBuff) {
+instance deadly_poison(lCBuff)
+{
     name = "Deadly poison";
     bufftype = BUFF_BAD;
     
     durationMS = 10*1000; // 10 seconds long
-    tickMS = 1000; // Every second
+    tickMS = 1000;        // Every second
 
     buffTex = "POISON.TGA";
 };
@@ -193,7 +195,8 @@ instance deadly_poison(lCBuff) {
 
 Damage should also be added:
 ```dae
-func void deadly_poison_damage(var int buffHandle) {
+func void deadly_poison_damage(var int buffHandle)
+{
     var int ptr; ptr = Buff_GetNpc(buffHandle);
     if (!ptr) { return; }; // Can happen if e.g. the world was changed
 
@@ -203,7 +206,8 @@ func void deadly_poison_damage(var int buffHandle) {
 ```
 For complicated technical reasons we use the function `SAVE_GetFuncID` instead of `MEM_GetFuncID`.
 ```dae
-instance deadly_poison(lCBuff) {
+instance deadly_poison(lCBuff)
+{
     name = "Deadly poison";
     bufftype = BUFF_BAD;
     

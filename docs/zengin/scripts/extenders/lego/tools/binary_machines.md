@@ -224,33 +224,38 @@ var int    i1; // int
 var int    b2; // byte
 var string c3; // char
 
-func void SaveMyData() {
-    if(BW_NewFile(filename)) { // Create a new file:
+func void SaveMyData() 
+{
+    if(BW_NewFile(filename))  // Create a new file:
+    { 
         BW_String(s0);
         BW_Int(i1);
         BW_Byte(b2);
-        BW_Char(c3);           // Save stuff..
-        BW_Close();            // ..and close.
+        BW_Char(c3);          // Save stuff..
+        BW_Close();           // ..and close.
     };
 };
 
 func void LoadMyData() {
-    if(BR_OpenFile(filename)) { // Try to open file:
+    if(BR_OpenFile(filename)) // Try to open file:
+    { 
         s0 = BR_String();
         i1 = BR_Int();
         b2 = BR_Byte();
-        c3 = BR_Char();         // Read in values..
-        BR_Close();             // ..and close.
+        c3 = BR_Char();       // Read in values..
+        BR_Close();           // ..and close.
     }
-    else {
-        SaveMyData();           // Otherwise create a save file.
+    else 
+    {
+        SaveMyData();         // Otherwise create a save file.
     };
 };
 ```
 
 ### Congratulate the player
 ```dae
-func void Certificate(var string Username, var int Score) {
+func void Certificate(var string Username, var int Score) 
+{
     var string filename; filename = ConcatStrings(Username, "'s Certificate.txt");
     BW_NewFile(filename); // Username + "s Certificate.txt". The file is then in the Gothic directory.
     BW_Text("Congratulations "); BW_Text(Username);
@@ -279,14 +284,16 @@ func void Certificate(var string Username, var int Score) {
 
 ### The location of an NPCs
 ```dae
-func void BW_NpcPosition(var C_NPC slf) {
+func void BW_NpcPosition(var C_NPC slf) 
+{
     var int ptr; ptr = MEM_Alloc(60);                // 16 * 4
     MEM_CopyBytes(MEM_InstToPtr(slf) + 60, ptr, 60); // Copy slf.trafoObjToWorld
     BW_Bytes(ptr, 60);                               // Writes the 60 copied bytes
     MEM_Free(ptr);                                   // And clean up..
 };
 
-func void BR_NpcPosition(var C_NPC slf) {
+func void BR_NpcPosition(var C_NPC slf) 
+{
     var int ptr; ptr = BR_Bytes(60);                 // Read 60 bytes
     MEM_CopyBytes(ptr, MEM_InstToPtr(slf) + 60, 60); // Paste back into slf
     MEM_Free(ptr);                                   // And clean up again..

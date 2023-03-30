@@ -38,7 +38,8 @@ var string MyScoreList[10];
 Since strings are not saved by the game by default, we use the functions from `Saves.d` to create an additional memory file that only belongs to us. At the top the [Saves.d](https://github.com/Lehona/LeGo/blob/dev/Saves.d) file has two functions: `BW_Savegame` and `BR_Savegame`. [BinaryMachines](../tools/binary_machines.md) functions are used to save or read the file, we don't need to do anything else than to use them here, the rest is done by `Saves.d` completely by itself. Therefore, we only modify these two functions.
 
 ```dae
-func void BW_Savegame() {
+func void BW_Savegame() 
+{
     // Save high score list
     BW_String(MyScoreList[0]);
     BW_String(MyScoreList[1]);
@@ -52,7 +53,8 @@ func void BW_Savegame() {
     BW_String(MyScoreList[9]);
 };
 
-func void BR_Savegame() {
+func void BR_Savegame() 
+{
     // Load high score list
     MyScoreList[0] = BR_String();
     MyScoreList[1] = BR_String();

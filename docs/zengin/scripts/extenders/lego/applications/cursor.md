@@ -74,7 +74,8 @@ func void SetMouseEnabled(var int enabled)
 We use a View to display a button to be clicked. The [FrameFunctions](../tools/frame_functions.md) take care of the loop to check whether a click was made.
 ```dae
 var int Button;
-func void Example1() {
+func void Example1()
+{
     // We show the cursor and at the same time a button to be clicked:
     Cursor_Show();
 
@@ -90,11 +91,13 @@ func void Example1() {
     FF_ApplyOnce(Button_Click);
 };
 
-func void Button_Click() {
+func void Button_Click()
+{
     if(Cursor_Left != KEY_PRESSED) { return; }; // Exit the function if the left mouse button was not pressed
 
     if(Cursor_X >= 5 && Cursor_X <= 125
-    && Cursor_Y >= 5 && Cursor_Y <= 50) { // Simply take over the coordinates of the view
+    && Cursor_Y >= 5 && Cursor_Y <= 50) // Simply take over the coordinates of the view
+    { 
         // Here the button was clicked.
         // Remove button and end loop:
         View_Close(Button);
@@ -117,29 +120,36 @@ This also can be done by the Buttons package instead of View.
 ### Event handler
 Since LeGo 2.2 there is also an event handler (`#!dae var int Cursor_Event`) in the cursor package. This example briefly explains how it works:
 ```dae
-func void Example2() {
+func void Example2()
+{
     // We register MyCursorListener as the handler/listener of the Cursor_Event:
     Event_Add(Cursor_Event, MyCursorListener);
 
     // From now on, MyCursorListener will be called whenever the cursor has something to report.
 };
 
-func void MyCursorListener(var int state) {
+func void MyCursorListener(var int state)
+{
     // The rest is self-explanatory:
 
-    if(state == CUR_WheelUp) {
+    if(state == CUR_WheelUp)
+    {
         PrintS("Wheel up!");
     };
-    if(state == CUR_WheelDown) {
+    if(state == CUR_WheelDown)
+    {
         PrintS("Wheel down!");
     };
-    if(state == CUR_LeftClick) {
+    if(state == CUR_LeftClick)
+    {
         PrintS("Leftclick!");
     };
-    if(state == CUR_RightClick) {
+    if(state == CUR_RightClick)
+    {
         PrintS("Rightclick!");
     };
-    if(state == CUR_MidClick) {
+    if(state == CUR_MidClick)
+    {
         PrintS("Wheelclick!");
     };
 };

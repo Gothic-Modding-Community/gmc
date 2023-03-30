@@ -221,8 +221,8 @@ Simple function to replace `return FALSE` in hook.
 func void Hook_ReturnFalse()
 ```
 
-### `Hook_ReturnTrue()`
+### `Hook_ReturnTrue`
 Simple function to replace `return TRUE` in hook.
 ```dae
-func void Hook_ReturnTrue()
+func void Hook_ReturnTrue
 ```

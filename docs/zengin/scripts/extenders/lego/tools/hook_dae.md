@@ -109,11 +109,13 @@ HookDaedalusFunc(hooked, hook);
 ```
 The functions can look like that:
 ```dae
-func void hooked() {
+func void hooked() 
+{
     Print("Orginal function");
 };
 
-func void hook() {
+func void hook() 
+{
     Print("Our hook");
     ContinueCall();
 };
@@ -131,11 +133,13 @@ HookDaedalusFunc(hooked, hook);
 ```
 The functions are also similar, but the `ContinueCall();` is called first:
 ```dae
-func void hooked() {
+func void hooked() 
+{
     Print("Orginal function");
 };
 
-func void hook() {
+func void hook() 
+{
     ContinueCall();
     Print("Our hook");
 };
@@ -149,12 +153,14 @@ Our hook
 ### Arguments and return values
 If a function to be hooked expects parameters or returns a value, our hooking function should conform to that.
 ```dae
-func int hooked(var int i) {
+func int hooked(var int i) 
+{
      Print("Orginal function");
      return i+1;
 };
 
-func int hook(var int i) {
+func int hook(var int i) 
+{
      Print("Our hook");
      PassArgumentI(i);
      ContinueCall();
@@ -165,7 +171,8 @@ In this case, we may not return the value at the end of the hook because the ret
 ### Manipulation of arguments and return values
 We can also manipulate arguments and return values with our hook.
 ```dae
-func int hook(var int i) {
+func int hook(var int i) 
+{
     Print("Our hook");
     PassArgumentI(i+1);     // add 1
     ContinueCall();
@@ -188,21 +195,24 @@ var int i; i = a(1);
 
 
 // Hooked function
-func int a(var int i) {
+func int a(var int i) 
+{
     MEM_Info(ConcatStrings("---  A: ", IntToString(i)));
     return i+1;
 };
 
 // First hook function:
 // Replaces `a` because the program run is not continued with ContinueCall
-func int b(var int i) {
+func int b(var int i) 
+{
     MEM_Info(ConcatStrings("  -- B: ", IntToString(i)));
     return i;
 };
 
 // Second hook function:
 // Increments the argument before ContinueCall and then decrements the return value
-func int c(var int i) {
+func int c(var int i) 
+{
     MEM_Info(ConcatStrings(" -> C: ", IntToString(i)));
     passArgumentI(i+1);
     ContinueCall();
@@ -215,7 +225,8 @@ func int c(var int i) {
 
 // Third hook function:
 // Increments the argument before ContinueCall and then decrements the return value
-func int d(var int i) {
+func int d(var int i) 
+{
     MEM_Info(ConcatStrings("-> D: ", IntToString(i)));
     passArgumentI(i+1);
     ContinueCall();
