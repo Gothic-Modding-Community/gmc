@@ -1,6 +1,4 @@
-# Sound
-
-Sound effects and dialogues are sound files playing during the game.
+# Changing Sound Effect
 
 This is Gothic VDFS. It is a tool that allows you to pack and unpack files in .VDF and .MOD format.
 
