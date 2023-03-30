@@ -82,15 +82,6 @@
          
     </url>
     <url>
-         <loc>https://gothic-modding-community.github.io/gmc/zengin/sound/</loc>
-         <lastmod>2023-03-30</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/sound/"/>
-         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/sound/"/>
-         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/sound/"/>
-         
-    </url>
-    <url>
          <loc>https://gothic-modding-community.github.io/gmc/zengin/textures/</loc>
          <lastmod>2023-03-30</lastmod>
          <changefreq>daily</changefreq>
@@ -808,6 +799,24 @@
          <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/zparserextender/syntax_extensions/while/"/>
          <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/scripts/extenders/zparserextender/syntax_extensions/while/"/>
          <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/scripts/extenders/zparserextender/syntax_extensions/while/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/sound/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/sound/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/sound/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/sound/"/>
+         
+    </url>
+    <url>
+         <loc>https://gothic-modding-community.github.io/gmc/zengin/sound/tutorials/change_sfx/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://gothic-modding-community.github.io/gmc/zengin/sound/tutorials/change_sfx/"/>
+         <xhtml:link rel="alternate" hreflang="pl" href="https://gothic-modding-community.github.io/gmc/pl/zengin/sound/tutorials/change_sfx/"/>
+         <xhtml:link rel="alternate" hreflang="cs" href="https://gothic-modding-community.github.io/gmc/cs/zengin/sound/tutorials/change_sfx/"/>
          
     </url>
     <url>
