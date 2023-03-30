@@ -2,6 +2,20 @@
 
 /* region mkDocs override */
 
+/* Add opacity to the less important parts of the page */
+/* Adapted from https://github.com/AhmedThahir/Uni_Notes/blob/f3a59864f77d7a52d3e21e1007f9cd5c50ab5c66/docs/stylesheets/custom.css#L28-L44 */
+@media screen and (min-width: 76.1875em) and (orientation: landscape) {
+    .md-nav--primary :is(a, label) {
+        will-change: opacity;
+        transition: opacity 0.4s !important;
+    }
+
+    .gmc-fade-nav li:not(li:has(.md-nav__link--active), .md-nav--primary:hover li) :is(a, label)
+    {
+        opacity: 0.2;
+    }
+}
+
 /* Stretch content area */
 .md-main__inner.md-grid {
     /* Default 61rem */

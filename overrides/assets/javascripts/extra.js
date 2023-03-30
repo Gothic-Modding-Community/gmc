@@ -96,6 +96,7 @@ const gMutationObserver = window.MutationObserver || window.WebKitMutationObserv
 window.addEventListener("DOMContentLoaded", _ => {
     gMarkCodeLineManager.setElement();
     gmc404Redirect();
+    gmcFadingNavigation();
     gmcExpandNavigation();
     gmcAddVersionToggle();
     gmcLinksForVersion();
@@ -405,6 +406,15 @@ const gmcRemoveCodeLines = () => {
       container.remove();
     }
 };
+
+const gmcFadingNavigation = () => {
+    const activeNavItems = document.querySelectorAll(".md-nav__item--active");
+
+    if (activeNavItems.length <= 1)
+        return;
+
+    activeNavItems[0].classList.add("gmc-fade-nav");
+}
 
 function gmcDebug(...message) {
     if (gGMC_LOCAL)
