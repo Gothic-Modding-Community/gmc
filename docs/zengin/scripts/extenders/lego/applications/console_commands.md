@@ -4,12 +4,11 @@ This package allows you to create new console commands.
 ## Dependencies
 
 - PermMem
-- HookEngine
+- [HookEngine](../tools/hook_engine.md)
 
 ## Initialization
 Initialize with `LeGo_ConsoleCommands` flag.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_ConsoleCommands);
 ```
 
@@ -18,37 +17,48 @@ LeGo_Init(LeGo_ConsoleCommands);
 
 ## Functions
 
-### CC_Register
+### `CC_Register`
 Registers a new console command.
 ```dae
-func void CC_Register(var func f, var string cmdPrefix, var string description) {};
+func void CC_Register(var func f, var string cmdPrefix, var string description)
 ```
+**Parameters**
 
-- `f` - This function is executed when the `cmdPrefix` command is entered in the console. The function signature is `func string f(var string p0)`. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.
-- `cmdPrefix` - This is a command that can be entered in the console.
-- `description` - This text appears next to the command (in zSpy) when you use the `help` command in the console.
+- `#!dae var func f`  
+    This function is executed when the `cmdPrefix` command is entered in the console. The function signature is `func string f(var string p0)`. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.
+- `#!dae var string cmdPrefix`  
+    This is a command, which can be entered in the console.
+- `#!dae var string description`  
+    This text appears next to the command (in zSpy) when you use the `help` command in the console.
 
-### CC_Remove
+### `CC_Remove`
 Removes a function from the console commands.
 ```dae
-func void CC_Remove(var func f) {};
+func void CC_Remove(var func f)
 ```
+**Parameters**
 
-- f - This function will be removed, i.e. the associated command will no longer work.
+- `#!dae var func f`  
+    This function will be removed, i.e. the associated command will no longer work.
 
-### CC_Active
+### `CC_Active`
 Checks whether the function passed is already part of a console command.
 ```dae
-func int CC_Active(var func f) {};
+func int CC_Active(var func f)
 ```
+**Parameters**
 
-- `f` - function being checked
-- `return` - `TRUE` if there is a corresponding function, `FALSE` otherwise.
+- `#!dae var func f`  
+    Function being checked
+
+**Return value**
+
+The function returns `TRUE` if there is a corresponding function, `FALSE` is returned otherwise.
 
 ## Examples
 
 ### Basic command example
-As a basic example - let us create a version command that prints a version of our modification.  
+As a basic example - let us create a version command, which prints a version of our modification.  
 Firstly, we declare a constant `string` variable to hold the version string to be shown.
 ```dae
 const string Mod_Version = "My mod version 0.1alpha";
@@ -59,7 +69,7 @@ Next we create the command function.
 
 ```dae
 // This function is called by our console
-func string CC_ModVersion (var string param)
+func string CC_ModVersion(var string param)
 {
     return Mod_Version;
 };
@@ -86,7 +96,6 @@ func void INIT_GLOBAL()
 
     // Here we register all of our commands
     RegisterConsoleFunctions();
-    
     
     // the rest of the code 
 };

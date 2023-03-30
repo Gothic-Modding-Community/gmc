@@ -7,23 +7,28 @@ The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in th
     If you want to use Ikarus in Gothic 1, it is best to define your own `Init_Global()` function and call it from every world initialization function.
 
 ```dae
-func void MEM_InitAll () {};
+MEM_InitAll();
 ```
 
 ## Implementation
-[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d)
+[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L4198)
 
 ## Functions
 !!! Tip
-    Different players use different keys for specific actions! However, it is possible to get key assigned to the action from Gothic.ini. See [Ini access](ini_access.md#key-functions)
-### MEM_KeyState
+    Different players use different keys for specific actions! However, it is possible to get key assigned to the action from Gothic.ini. See [Ini access](ini_access.md#key-functions).
+### `MEM_KeyState`
 Returns the state of the `key`.
 ```dae
-func int MEM_KeyState(var int key) {};
+func int MEM_KeyState(var int key)
 ```
+**Parameters**
 
-- `key` - checked key
-- `return` - key state
+- `#!dae var int key`  
+    Checked key
+
+**Return value**
+
+The function returns actual key state.
 
 **Key states**
 
@@ -36,10 +41,12 @@ func int MEM_KeyState(var int key) {};
 
 `KEY_UP` or `KEY_HOLD` are returned if the state has not changed.
 
-### MEM_InsertKeyEvent
+### `MEM_InsertKeyEvent`
 Makes the game think that the key was pressed.
 ```dae
-func void MEM_InsertKeyEvent(var int key) {};
+func void MEM_InsertKeyEvent(var int key)
 ```
+**Parameters**
 
-- `key` - key to be "pressed"
+- `#!dae var int key`  
+    Key to be "pressed"
