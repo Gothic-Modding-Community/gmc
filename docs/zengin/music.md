@@ -1,6 +1,6 @@
 # Music
 
-Zengin uses [DirectMusic](https://en.m.wikipedia.org/wiki/DirectMusic) for playing in-game soundtrack. To edit Gothic music files you need the [Direct Music Producer](https://en.wikipedia.org/wiki/DirectMusic), a program released by Microsoft and provided with older DirectX SDK.  
+Zengin uses [DirectMusic](https://en.m.wikipedia.org/wiki/DirectMusic) for playing in-game soundtrack. To edit Gothic music files you need the [Direct Music Producer](https://en.m.wikipedia.org/wiki/DirectMusic), a program released by Microsoft and provided with older DirectX SDK.  
 
 !!! Warning
     Music files can't be packed in the `.vdf` or `.mod` archives, all music files must be located in `/_work/Data/Music` directory.

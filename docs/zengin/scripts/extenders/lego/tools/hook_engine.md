@@ -224,5 +224,5 @@ func void Hook_ReturnFalse()
 ### `Hook_ReturnTrue`
 Simple function to replace `return TRUE` in hook.
 ```dae
-func void Hook_ReturnTrue
+func void Hook_ReturnTrue()
 ```
