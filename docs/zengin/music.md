@@ -17,4 +17,4 @@ The music directory contains these file types:
     - Bands - settings for virtual instruments from `.dls`.
     - Patterns - fragments of tracks, that can be later merged, looped and superimposed on each other
 
-- `.sgt` - File with properly connected bands - the final track
+- `.sgt` - File with properly connected patterns - the final track
