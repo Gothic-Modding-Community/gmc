@@ -71,13 +71,18 @@ nav:
 
     - Music: zengin/music.md
 
-    - Sound: zengin/sound.md
+    - Sound: 
+      - zengin/sound/index.md
+      - Tutorials:
+        - zengin/sound/tutorials/change_sfx.md
 
     - Textures: zengin/textures.md
 
     - Video: zengin/video.md
 
-    - Worlds: zengin/worlds.md
+    - Worlds:
+      - zengin/worlds/index.md
+      - Spacer: zengin/worlds/spacer.md
 
     - Scripts:
       - zengin/scripts/index.md
@@ -94,19 +99,27 @@ nav:
         - Ikarus:
           - zengin/scripts/extenders/ikarus/index.md
           - Functions:
-            - Ini File Access: zengin/scripts/extenders/ikarus/functions/ini_access.md
-            - Keyboard:        zengin/scripts/extenders/ikarus/functions/keyboard.md
-            - Memory Access:   zengin/scripts/extenders/ikarus/functions/mem_access.md
-          - Examples:          zengin/scripts/extenders/ikarus/examples.md
+            - Memory Access:       zengin/scripts/extenders/ikarus/functions/mem_access.md
+            - Windows Utilities:   zengin/scripts/extenders/ikarus/functions/win_utilities.md
+            - Menu Access:         zengin/scripts/extenders/ikarus/functions/menu_access.md
+            - Keyboard:            zengin/scripts/extenders/ikarus/functions/keyboard.md
+            - Ini File Access:     zengin/scripts/extenders/ikarus/functions/ini_access.md
+          - Examples:              zengin/scripts/extenders/ikarus/examples.md
         - LeGo:
           - zengin/scripts/extenders/lego/index.md
           - Tools:
             - AI_Function:     zengin/scripts/extenders/lego/tools/ai_function.md
+            - BinaryMachines:  zengin/scripts/extenders/lego/tools/binary_machines.md
+            - EventHandler:    zengin/scripts/extenders/lego/tools/event_handler.md
             - FrameFunctions:  zengin/scripts/extenders/lego/tools/frame_functions.md
+            - Hashtables:      zengin/scripts/extenders/lego/tools/hashtables.md
+            - HookDaedalus:    zengin/scripts/extenders/lego/tools/hook_dae.md
+            - HookEngine:      zengin/scripts/extenders/lego/tools/hook_engine.md
             - Int64:           zengin/scripts/extenders/lego/tools/int64.md
             - ItemHelper:      zengin/scripts/extenders/lego/tools/item_helper.md
             - Locals:          zengin/scripts/extenders/lego/tools/locals.md
             - Misc:            zengin/scripts/extenders/lego/tools/misc.md
+            - Queue:           zengin/scripts/extenders/lego/tools/queue.md
             - Random:          zengin/scripts/extenders/lego/tools/random.md
             - Talents:         zengin/scripts/extenders/lego/tools/talents.md
             - Timer:           zengin/scripts/extenders/lego/tools/timer.md
@@ -114,11 +127,15 @@ nav:
             - Anim8:           zengin/scripts/extenders/lego/applications/anim8.md
             - Bars:            zengin/scripts/extenders/lego/applications/bars.md
             - Bloodsplats:     zengin/scripts/extenders/lego/applications/bloodsplats.md
+            - Buffs:           zengin/scripts/extenders/lego/applications/buffs.md
             - ConsoleCommands: zengin/scripts/extenders/lego/applications/console_commands.md
+            - Cursor:          zengin/scripts/extenders/lego/applications/cursor.md
             - Dialoggestures:  zengin/scripts/extenders/lego/applications/dialoggestures.md
             - Focusnames:      zengin/scripts/extenders/lego/applications/focusnames.md
             - GameState:       zengin/scripts/extenders/lego/applications/gamestate.md
             - Names:           zengin/scripts/extenders/lego/applications/names.md
+            - Render:          zengin/scripts/extenders/lego/applications/render.md
+            - Saves:           zengin/scripts/extenders/lego/applications/saves.md
             - Trialoge:        zengin/scripts/extenders/lego/applications/trialoge.md
           - Various:
             - User constants:  zengin/scripts/extenders/lego/various/userconstants.md

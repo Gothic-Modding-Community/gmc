@@ -2,94 +2,142 @@
 Pakiet Misc wprowadza różne funkcje pomocnicze, które nie pasowały do żadnego innego pakietu.
 
 ## Zależności  
-Brak
+Nie dotyczy.
 
 ## Inicjalizacja
-Brak
+Nie dotyczy.
 
-## Implementation
+## Implementacja
 [:material-github: Misc.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Misc.d)
 
 ## Funkcje
 
-### atan2f
+### `atan2f`
 Oblicza arcus tangens kąta między początkiem a punktem (x, y).
 ```dae
-func float atan2f(var int x, var int y) {};
+func float atan2f(var int x, var int y)
 ```
+**Parametry**
 
-- `x` -  współrzędna x
-- `y` -  współrzędna y
-- `return` - arcus tangens w radianach jako Ikarusowy `float`
+- `#!dae var int x`  
+    Współrzędna x
+- `#!dae var int y`  
+    Współrzędna y
 
-### sin
+**Zwracana wartość**
+
+Funkcja zwraca arcus tangens w radianach jako ikarusowy `float`
+
+### `sin`
 Oblicza sinus kąta podanego w radianach.
 ```dae
-func float sin (var float angle) {};
+func float sin(var float angle)
 ```
+**Parametry**
 
-- `angle` - kąt w radianach jak Ikarusowy `float`
-- `return` - sinus kąta
+- `#!dae var float angle`  
+    Kąt w radianach jako ikarusowy `float`
 
-### cos
+**Zwracana wartość**
+
+Funkcja zwraca sinus kąta.
+
+### `cos`
 Oblicza cosinus kąta podanego w radianach.
 ```dae
-func float cos (var float angle) {};
+func float cos(var float angle)
 ```
+**Parametry**
 
-- `angle` - kąt w radianach jak Ikarusowy `float`
-- `return` - cosinus kąta
+- `#!dae var float angle`  
+    Kąt w radianach jako ikarusowy `float`
+
+**Zwracana wartość**
+
+Funkcja zwraca cosinus kąta.
 
 
-### tan
+### `tan`
 Oblicza tangens kąta podanego w radianach.
 ```dae
-func float tan (var float angle) {};
+func float tan(var float angle)
 ```
+**Parametry**
 
-- `angle` - kąt w radianach jak Ikarusowy `float`
-- `return` - tangens kąta
+- `#!dae var float angle`  
+    Kąt w radianach jako ikarusowy `float`
 
-### asin
+**Zwracana wartość**
+
+Funkcja zwraca tangens kąta.
+
+### `asin`
 Oblicza arcus sinus
 ```dae
-func float asin (var float sine) {};
+func float asin(var float sine)
 ```
+**Parametry**
 
-- `sine` - sinus kąta
-- `return` - arcus sinus kąta
+- `#!dae var float sine`  
+    Sinus kąta jako ikarusowy `float`
 
-### acos
+**Zwracana wartość**
+
+Funkcja zwraca arcus sinus kąta.
+
+### `acos`
 Oblicza arcus cosinus
 ```dae
-func float acos (var float cosine) {};
+func float acos(var float cosine)
 ```
+**Parametry**
 
-- `cosine` - cosinus kąta
-- `return` - arcus cosinus kąta
+- `#!dae var float cosine`  
+    Cosinus kąta jako ikarusowy `float`
+
+**Zwracana wartość**
+
+Funkcja zwraca arcus cosinus kąta.
 
 
-### distance2D
-Oblicza odległość między dwoma punktami na płaszczyźnie dwuwymiarowej
+### `distance2D`
+Oblicza odległość między dwoma punktami na płaszczyźnie dwuwymiarowej.
 ```dae
-func int distance2D(var int x1, var int x2, var int y1, var int y2) {};
+func int distance2D(var int x1, var int x2, var int y1, var int y2)
 ```
+**Parametry**
 
-- `x1` - współrzędna x pierwszego punktu
-- `x2` - współrzędna x drugiego punktu
-- `y1` - współrzędna y pierwszego punktu
-- `y2` - współrzędna y drugiego punktu
-- `return` - odległość między dwoma punktami
+- `#!dae var int x1`  
+    współrzędna x pierwszego punktu
+- `#!dae var int x2`  
+    współrzędna x drugiego punktu
+- `#!dae var int y1`  
+    współrzędna y pierwszego punktu
+- `#!dae var int y2`  
+    współrzędna y drugiego punktu
 
-### distance2Df
-Oblicza odległość między dwoma punktami na płaszczyźnie dwuwymiarowej, jako Ikarusowy `float`
+**Zwracana wartość**
+
+Funkcja zwraca odległość między dwoma punktami.
+
+
+### `distance2Df`
+Oblicza odległość między dwoma punktami na płaszczyźnie dwuwymiarowej, ale na liczbach zmiennoprzecinkowych (float).
 ```dae
-func float distance2Df(var float x1, var float x2, var float y1, var float y2) {};
+func float distance2Df(var float x1, var float x2, var float y1, var float y2)
 ```
+**Parametry**
 
-- `x1` - współrzędna x pierwszego punktu
-- `x2` - współrzędna x drugiego punktu
-- `y1` - współrzędna y pierwszego punktu
-- `y2` - współrzędna y drugiego punktu
-- `return` - odległość między dwoma punktami, jako Ikarusowy `float`
+- `#!dae var float x1`  
+    współrzędna x pierwszego punktu
+- `#!dae var float x2`  
+    współrzędna x drugiego punktu
+- `#!dae var float y1`  
+    współrzędna y pierwszego punktu
+- `#!dae var float y2`  
+    współrzędna y drugiego punktu
+
+**Zwracana wartość**
+
+Funkcja zwraca odległość między dwoma punktami, jako ikarusowy `float`.
 

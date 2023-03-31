@@ -2,7 +2,7 @@
 A collection of examples ported from the original Ikarus documentation.
 
 !!! note
-    The original Ikaurs documentation is a part of the code. You can find it in the [github repository](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Doc.d)
+    The original Ikarus documentation is a part of the code. You can find it in the [GitHub repository](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Doc.d).
 
 ## Open focused chest or door
 ```dae
@@ -86,9 +86,9 @@ func void StartRain()
     MEM_InitGlobalInst(); 
 
     // start at the beginning of the day (12:00 noon)
-    MEM_SkyController.rainFX_timeStartRain = 0; //FLOATNULL;
+    MEM_SkyController.rainFX_timeStartRain = 0; // FLOATNULL constant
     // end at the end of the day (12:00 noon of the next day)
-    MEM_SkyController.rainFX_timeStopRain = 1065353216; //FLOATEINS;
+    MEM_SkyController.rainFX_timeStopRain = 1065353216; // FLOATONE constant
 
     /* Note: The start and end times are floating point numbers.
     * 0 stands for the beginning of the day 1 for the end of the day.
@@ -130,7 +130,7 @@ func void printpairs(var int max_x, var int max_y)
             PrintDebug (out);
             y += 1;
 
-            //continue y_loop 
+            // continue y_loop 
             MEM_StackPos.position = y_loop;
         };
         x += 1;
@@ -168,7 +168,7 @@ func void foo()
 { 
     var int result;
 
-    // The code between A and B is in this case equivalent to:
+    // The following code is in this case equivalent to:
     // result = MyFunction(42, "Hello", 23, "World!");
 
     // Lay the call arguments on the call stack
@@ -194,5 +194,5 @@ func void foo()
     also be replaced here by 
     MEM_CallByID(someObject + 1);
 */
-}
+
 ```

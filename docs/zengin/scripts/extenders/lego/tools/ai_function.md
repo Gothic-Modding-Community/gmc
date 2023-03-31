@@ -1,14 +1,13 @@
 # AI Function
-This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful for e.g. cutscenes.
+This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful e.g. cutscenes.
 
 ## Dependencies
 
-- HookEngine
+- [HookEngine](hook_engine.md)
 
 ## Initialization
 Initialize with `LeGo_AI_Function` flag.
 ```dae
-func void LeGo_Init(var int flags) {};
 LeGo_Init(LeGo_AI_Function);
 ```
 ## Implementation
@@ -17,28 +16,31 @@ LeGo_Init(LeGo_AI_Function);
 ## Functions
 The script function `function` is called with a delay: it joins the AI queue of `slf`.
 ```dae
-func void AI_Function(c_npc slf, func function) {};
+func void AI_Function(var C_NPC slf, var func function)
 ```
+**Parameters**
 
-- `slf` - NPC in whose AI queue the function is queued
-- `function` - name of function to be queued
+- `#!dae var C_NPC slf`  
+    NPC in whose AI queue the function is queued
+- `#!dae var func function`  
+    Name of function to be queued
 
-Additionally there are some overloads of `AI_Function`, which allow to call functions with parameters.
+Additionally, there are some overloads of `AI_Function`, which allow to call functions with parameters.
 ```dae
-func void AI_Function_I  (c_npc slf, func function, int    param)                 {}; //Int
-func void AI_Function_N  (c_npc slf, func function, int    param)                 {}; //Instance (e.g. NPC)
-func void AI_Function_S  (c_npc slf, func function, string param)                 {}; //String
-func void AI_Function_II (c_npc slf, func function, int    param1, int    param2) {}; // Int, Int
-func void AI_Function_NN (c_npc slf, func function, int    param1, int    param2) {}; // Instance, Instance
-func void AI_Function_SS (c_npc slf, func function, string param1, string param2) {}; //String, String
-func void AI_Function_IS (c_npc slf, func function, int    param1, string param2) {}; //Int, String
-func void AI_Function_SI (c_npc slf, func function, string param1, int    param2) {}; //String, Int
-func void AI_Function_NS (c_npc slf, func function, int    param1, string param2) {}; //Instance, String
-func void AI_Function_SN (c_npc slf, func function, string param1, int    param2) {}; //String, Istance
-func void AI_Function_IN (c_npc slf, func function, int    param1, int    param2) {}; //Int, Instance
-func void AI_Function_NI (c_npc slf, func function, int    param1, int    param2) {}; //Instance, Int
+func void AI_Function_I  (var C_NPC slf, var func function, var int    param) {}; // Int
+func void AI_Function_N  (var C_NPC slf, var func function, var int    param) {}; // Instance (e.g. NPC)
+func void AI_Function_S  (var C_NPC slf, var func function, var string param) {}; // String
+func void AI_Function_II (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Int
+func void AI_Function_NN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Instance
+func void AI_Function_SS (var C_NPC slf, var func function, var string param1, var string param2) {}; // String, String
+func void AI_Function_IS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Int, String
+func void AI_Function_SI (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Int
+func void AI_Function_NS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Instance, String
+func void AI_Function_SN (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Istance
+func void AI_Function_IN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Instance
+func void AI_Function_NI (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Int
 ```
-Unfortunately, functions with more than two parameters cannot be called, but parameters can be passed indirectly via global variables.
+Functions with more than two parameters cannot be called, but parameters can be passed indirectly via global variables.
 
 In the called function, `slf` can be accessed as follows:
 ```dae
@@ -61,4 +63,4 @@ func void Example1() {
     AI_Function_S(hero, Wld_SendTrigger, "CAMERASTART");
 };
 ```
-As soon as the hero has reached the waypoint, `Wld-SendTrigger("CAMERASTART");` is called.
+As soon as the hero has reached the waypoint, `Wld_SendTrigger("CAMERASTART");` is called.
