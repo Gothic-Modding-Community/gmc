@@ -176,6 +176,8 @@ Right margin
 Bottom margin
 - `#!dae var int pixels`  
 `TRUE` to use pixels, `FALSE` to use virtual coordinates
+!!! Warning
+    After a thorough examination of this external function in the decompiler, it looks like the function works in pixels only regardless of this parameter.
 
 !!! Example
     ```dae
