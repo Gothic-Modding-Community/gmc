@@ -74,4 +74,4 @@ func void Log_SetTopicStatus(var string topicName, var int status) {};
 
 ## zParserExtender
 The log external function selection is missing functions to retrieve the status of a log entry. There are only functions to read the log status (as discussed on [Inside Gothic](https://ataulien.github.io/Inside-Gothic/QuestLog/)). As a result of this the original scriptwriters had to define additional variable to track the log status in the scripts, even though the value is being already tracked by the engine.  
-zParserExtender fixes this by introducing new [log external functions](/extenders/zparserextender/log.md).
+zParserExtender fixes this by introducing new [log external functions](../../extenders/zparserextender/externals/log/).
