@@ -2,11 +2,12 @@
 
 Doc functions are used to control the document manager. They allow you to fine tune the display of maps and documents.
 
-## Doc_Create
+## `Doc_Create`
+
+Creates a new instance of the document manager and returns its ID.
 ```dae
 func int Doc_Create() {};
 ```
-Creates a new instance of the document manager and returns its ID.
 
 **Return value**  
 Returns the ID of the document manager instance.
@@ -17,11 +18,12 @@ Returns the ID of the document manager instance.
     nDocID = Doc_Create();
     ```
 
-## Doc_CreateMap
+## `Doc_CreateMap`
+
+Creates a new instance of the document manager with the arrow showing players position on the map and returns its ID.
 ```dae
 func int Doc_CreateMap() {};
 ```
-Create a new instance of the document manager with the arrow showing players position on the map and returns its ID.
 
 **Return value**  
 Returns the ID of the document manager instance.
@@ -32,11 +34,12 @@ Returns the ID of the document manager instance.
     nDocID = Doc_CreateMap();
     ```
 
-## Doc_SetLevel
+## `Doc_SetLevel`
+
+Set a world level to a map. This maps the texture of the document to the bounding box of the provided level.
 ```dae
 func void Doc_SetLevel(var int docID, var string level) {};
 ```
-Set a world level to a map. This maps the texture of the document to the bounding box of the provided level.
 
 **Parameters**
 
@@ -51,38 +54,40 @@ Name of the ZEN file
     Doc_SetLevel(nDocID, "WORLD.ZEN");
     ```
 
-## Doc_SetLevelCoords
+## `Doc_SetLevelCoords`
 
 !!! Warning
     This function is only available in Gothic 2
+
+Sets the map coordinates. This is used to map smaller portions of the world map to the document map to correctly show players position on the map.
 ```dae
 func void Doc_SetLevelCoords(var int docID, var int left, var int top, var int right, var int bottom) {};
 ```
-Sets the map coordinates. This is used to map smaller portions of the world map to the document map to correctly show players position on the map.
 
 **Parameters**
 
 - `#!dae var int docID`  
 Document manager ID
 - `#!dae var int left`  
-Left
+Left coordinate
 - `#!dae var int top`  
-Top
+Top coordinate
 - `#!dae var int right`  
-Right
+Right coordinate
 - `#!dae var int bottom`  
-Bottom
+Bottom coordinate
 
 !!! Example
     ```dae
     Doc_SetLevelCoords(nDocID, -28000, 50500, 95500, -42500);
     ```
 
-## Doc_SetFont
+## `Doc_SetFont`
+Sets a `font` to be used on a `page` in a document with `docID`. Can be called multiple times to diplay different lines with different fonts.
+
 ```dae
 func void Doc_SetFont(var int docID, var int page, var string font) {};
 ```
-Sets a `font` to be used on a `page` in a document with `docID`. Can be called multiple times to diplay different lines with different fonts.
 
 **Parameters**
 
@@ -98,11 +103,12 @@ Font to be used
     Doc_SetFont(nDocID, -1, "FONT_10_BOOK.TGA");
     ```
 
-## Doc_SetPages
+## `Doc_SetPages`
+
+Sets the number of pages `numOfPages` of the document.
 ```dae
 func void Doc_SetPages(var int docID, var int numOfPages) {};
 ```
-Sets the number of pages `numOfPages` of the document.
 
 **Parameters**
 
@@ -117,11 +123,12 @@ Number of pages
     Doc_SetPages(nDocID, 2);
     ```
 
-## Doc_SetPage
+## `Doc_SetPage`
+
+Set `page` to have `texture` as a background with `scale`.
 ```dae
 func void Doc_SetPage(var int docID, var int page, var string texture, var int scale) {};
 ```
-Set `page` to have `texture` as a background with `scale`.
 
 **Parameters**
 
@@ -140,7 +147,9 @@ Scale of the texture, `TRUE` to scale the page, `FALSE` to not scale
     Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", FALSE);
     ```
 
-## Doc_SetMargins
+## `Doc_SetMargins`
+
+Sets text margins of the page
 ```dae
 func void Doc_SetMargins(var int docID,
                          var int page,
@@ -150,7 +159,6 @@ func void Doc_SetMargins(var int docID,
                          var int bottom,
                          var int pixels) {};
 ```
-Sets text margins of the page
 
 **Parameters**
 
@@ -174,11 +182,12 @@ Bottom margin
     Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, TRUE);
     ```
 
-## Doc_PrintLine
+## `Doc_PrintLine`
+
+Prints a line of `text` (font is set using [Doc_SetFont](#doc_setfont)) onto the document with `docID`, onto the `page`. Does not split the text into multiple lines if they do not fit onto the page.
 ```dae
 func void Doc_PrintLine(var int docID, var int page, var string text) {};
 ```
-Prints a line of `text` (font is set using [Doc_SetFont](#doc_setfont)) onto the document with `docID`, onto the `page`. Does not split the text into multiple lines if they do not fit onto the page.
 
 **Parameters**
 
@@ -195,11 +204,12 @@ Text to be printed
     Doc_PrintLine(nDocID, 0, "The Book");
     ```
 
-## Doc_PrintLines
+## `Doc_PrintLines`
+
+Prints a line of `text` (font is set using [Doc_SetFont](#doc_setfont)) onto the document with `docID`, onto the `page`. Splits the text into multiple lines if they do not fit onto the page.
 ```dae
 func void Doc_PrintLines(var int docID, var int page, var string text) {};
 ```
-Prints a line of `text` (font is set using [Doc_SetFont](#doc_setfont)) onto the document with `docID`, onto the `page`. Splits the text into multiple lines if they do not fit onto the page.
 
 **Parameters**
 
@@ -216,11 +226,12 @@ Text to be printed
     Doc_PrintLines(nDocID, 0, "But now his army was trapped. The situation was hopeless, even though his army greatly outnumbered the enemy. Lee, a war hero from Myrtana, had lured him into this trap. The heavy cavalry had been unable to fight on the thick, swamped ground of the narrow valley. Lee's soldiers had occupied the range of hills surrounding the swamp, and they had struck repeatedly, decimating the army. The desperate sallies his troops had launched had been cut short in pools of blood. He was beaten.");
     ```
 
-## Doc_Show
+## `Doc_Show`
+
+Display the document using the document manager ID
 ```dae
 func void Doc_Show(var int docID) {};
 ```
-Display the document using the document manager ID
 
 **Parameters**
 

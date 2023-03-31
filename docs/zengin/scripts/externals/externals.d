@@ -84,6 +84,7 @@ func void Apply_Options_Video() {};
 func string ConcatStrings(var string str1, var string str2) {};
 func void CreateInvItems(var c_npc n0, var int n1, var int n2) {};
 func void CreateInvItem(var c_npc n0, var int n1) {};
+
 func int Doc_Create() {};
 func int Doc_CreateMap() {};
 func void Doc_Font (var string Font) {};
@@ -103,6 +104,7 @@ func void Doc_SetMargins(var int document, var int page, var int left, var int t
 func void Doc_SetPages(var int document, var int count) {};
 func void Doc_SetPage(var int document, var int page, var string texture, var int scale) {};
 func void Doc_Show(var int document) {};
+
 func void EquipItem(var c_npc n0, var int n1) {};
 func void ExitGame() {};
 func void ExitSession() {};
@@ -154,6 +156,7 @@ func void Mdl_SetModelScale(var c_npc self, var float x, var float y, var float 
 func void Mdl_SetVisualBody(var instance n0, var string s1, var int i2, var int i3, var string s4, var int i5, var int i6, var int i7) {};
 func void Mdl_SetVisual(var instance n0, var string s1) {};
 func void Mdl_StartFaceAni(var c_npc self, var string name, var float intensity, var float holdtime) {};
+
 func void Mis_AddMissionEntry(var instance n0, var string s1) {};
 func int Mis_GetStatus(var int missionname) {};
 func int Mis_OnTime(var int missionname) {};
