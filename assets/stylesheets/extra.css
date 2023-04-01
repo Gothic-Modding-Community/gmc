@@ -2,6 +2,20 @@
 
 /* region mkDocs override */
 
+/* Add opacity to the less important parts of the page */
+/* Adapted from https://github.com/AhmedThahir/Uni_Notes/blob/f3a59864f77d7a52d3e21e1007f9cd5c50ab5c66/docs/stylesheets/custom.css#L28-L44 */
+@media screen and (min-width: 76.1875em) and (orientation: landscape) {
+    .md-nav--primary :is(a, label) {
+        will-change: opacity;
+        transition: opacity 0.4s !important;
+    }
+
+    .gmc-fade-nav li:not(li:has(.md-nav__link--active), .md-nav--primary:hover li) :is(a, label)
+    {
+        opacity: 0.2;
+    }
+}
+
 /* Stretch content area */
 .md-main__inner.md-grid {
     /* Default 61rem */
@@ -26,11 +40,14 @@
     }
 }
 
-/* Fix for the left footer button on mobile */
-@media screen and (max-width: 44.9375em) {
-    .md-footer__link--prev .md-footer__title {
-        display: block;
-    }
+/* Fix for the left footer button on mobile and footer arrows */
+.md-footer__title {
+    display: flex !important;
+    flex-direction: column;
+}
+.md-footer__link {
+    align-items: flex-start;
+    margin-bottom: 0;
 }
 
 /* center the images */
@@ -38,6 +55,17 @@
     display: block;
     margin: 1em auto;
     min-width: 75%;
+}
+
+/* Code in a list */
+.md-content li > code:first-of-type,
+.md-content li > code + code {
+    padding: 0 0.15em;
+}
+
+/* New line after code in a list */
+.md-content li > code + br {
+    margin-bottom: 0.6em;
 }
 
 /* nav styling override */
@@ -49,6 +77,15 @@ div.md-nav__link--index {
     font-weight: bold;
 }
 
+/* TOC side border */
+.md-nav--secondary {
+    border-left: 2px solid var(--md-accent-fg-color);
+}
+
+.md-nav--secondary .md-nav__title {
+    box-shadow: none;
+}
+
 /* black anchor color override */
 @media screen {
     [data-md-color-primary="black"] {
@@ -57,43 +94,52 @@ div.md-nav__link--index {
     [data-md-color-accent=indigo] {
         --md-accent-fg-color: #0b65b0;
     }
+    [data-md-color-scheme=slate] {
+        --md-accent-fg-color: #00aafc;
+    }
 }
 
-/* admonition font size override */
-.md-typeset .admonition,
-.md-typeset details {
+/* admonition / details override */
+.md-typeset :is(.admonition, details) {
     /* default 0.64rem */
     font-size: 0.72rem;
 }
 
 /* override header on the page */
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4,
-.md-typeset h5,
-.md-typeset h6 {
+.md-typeset :is(h1, h2, h3, h4, h5, h6) {
     font-weight: 700;
+    color: var(--md-default-fg-color--light);
+}
+
+.md-typeset :is(h3, h4, h5, h6) {
+    padding-top: 0.5em;
+    margin-top: 0.5em;
+}
+
+.md-typeset :is(h1, h2, h3, h4, h5, h6) code {
+    color: var(--md-default-fg-color--light);
+    font-size: inherit;
+    font-weight: 700;
+    padding: 0 0.15em;
 }
 
 @media {
+    [data-md-color-scheme=slate] :is(.dummy-for-compressor) {
+        display: none;
+    }
     /*--md-default-fg-color--light:hsla(var(--md-hue),75%,90%,0.62);*/
-    [data-md-color-scheme=slate] h1,
-    [data-md-color-scheme=slate] h2,
-    [data-md-color-scheme=slate] h3,
-    [data-md-color-scheme=slate] h4,
-    [data-md-color-scheme=slate] h5,
-    [data-md-color-scheme=slate] h6 {
+    [data-md-color-scheme=slate] :is(h1, h2, h3, h4, h5, h6) {
         --md-default-fg-color--light: hsla(var(--md-hue), 100%, 100%, 1);
     }
     /*--md-default-fg-color--light:hsla(0, 0%, 0%, .54);*/
-    [data-md-color-scheme=default] h1,
-    [data-md-color-scheme=default] h2,
-    [data-md-color-scheme=default] h3,
-    [data-md-color-scheme=default] h4,
-    [data-md-color-scheme=default] h5,
-    [data-md-color-scheme=default] h6 {
-        --md-default-fg-color--light: hsla(0, 0%, 0%, 1);
+    [data-md-color-scheme=default] :is(h1, h2, h3, h4, h5, h6) {
+        --md-default-fg-color--light: #000;
+    }
+    [data-md-color-scheme=slate] :is(h3, h4, h5, h6) {
+        border-top: 1px solid hsla(var(--md-hue), 100%, 100%, 0.15);
+    }
+    [data-md-color-scheme=default] :is(h3, h4, h5, h6) {
+        border-top: 1px solid hsla(0, 0%, 0%, 0.15);
     }
 }
 
@@ -106,6 +152,36 @@ div.md-nav__link--index {
 .md-banner {
     background: #0091eb;
     color: #fff;
+}
+
+/* override site background and code background color */
+@media {
+    [data-md-color-scheme="slate"] {
+        --md-default-bg-color: hsla(var(--md-hue), 15%, 15%, 1);
+        --md-code-bg-color: hsla(var(--md-hue), 15%, 7%, 1);
+    }
+}
+
+/* override code block */
+.highlight span.filename {
+    border-bottom: 0.05rem solid var(--md-accent-fg-color);
+}
+
+/* override main header */
+/* override tabs navigation */
+@media {
+    [data-md-color-scheme="slate"] .md-header {
+        border-bottom: 0.10rem solid var(--md-accent-fg-color);
+    }
+    [data-md-color-scheme="slate"] .md-tabs__link--active {
+        color: var(--md-accent-fg-color);
+    }
+    [data-md-color-scheme="default"] .md-header {
+        border-bottom: 0.10rem solid #000;
+    }
+    [data-md-color-scheme="slate"] .md-tabs {
+        background-color: hsla(210, 100%, 20%, 1) !important;
+    }
 }
 
 .md-banner a {
@@ -273,6 +349,11 @@ div.md-nav__link--index {
 .highlight .nb-ZParserExtender
 {
     color: var(--gmc-code-hl-zparserextender-color);
+}
+
+.highlight .nb-Other
+{
+    color: var(--md-code-hl-function-color);
 }
 
 .highlight .vi
