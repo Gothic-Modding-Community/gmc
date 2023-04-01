@@ -17,27 +17,29 @@ theme:
   custom_dir: overrides
   favicon: assets/images/gmc_logo.png
   logo: assets/images/gmc_logo.png
+  font:
+    code: JetBrains Mono
   icon:
     repo: fontawesome/brands/github
     alternate: material/earth
   palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      primary: black
-      scheme: default
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       primary: black
       accent: light blue
       scheme: slate
       toggle:
-        icon: material/brightness-2
+        icon: material/lightbulb-outline
         name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: black
+      scheme: default
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
   features:
     - navigation.tabs
     - navigation.indexes
@@ -231,6 +233,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.highlight:
+      use_pygments: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       linenums: true
       anchor_linenums: true
       # This sets the same ID for the <a> and <span> tags,

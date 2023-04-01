@@ -56,11 +56,11 @@ def _add_redirects_based_on_git_history(*, config: MkDocsConfig) -> None:
 
     LOG.info(f"{HOOK_NAME}: Processing Git history...")
 
-    for commit in Repo(project_root).iter_commits(since=MAX_DATE):
+    for commit in Repo(project_root).iter_commits(since=MAX_DATE, max_parents=1):
         if not commit.parents:
             break
 
-        for diff in commit.parents[-1].diff(commit).iter_change_type(change_type="R"):
+        for diff in commit.parents[0].diff(commit).iter_change_type(change_type="R"):
             old: str = diff.rename_from
             new: str = diff.rename_to
 

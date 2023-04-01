@@ -20,7 +20,6 @@ class IndentationTest(unittest.TestCase):
     def test_admonitions_and_lists(self) -> None:
         """
         Test that the indentation of admonitions and lists is correct
-        TODO might be reasonable to change the inside_admonition = False logic
         """
         paths = glob.glob("**/*.md", root_dir=DOCS_DIR, recursive=True)
         for path in paths:
@@ -31,31 +30,27 @@ class IndentationTest(unittest.TestCase):
 
             last_line = ""
             inside_admonition = False
+            admonition_valid = False
             inside_codeblock = False
             inside_list = False
 
             for n, line in enumerate(lines, start=1):
-                if inside_admonition:
-                    if last_line.startswith(self.admonition_prefixes):
-                        self.assertTrue(
-                            line.strip(),
-                            "The starting line of the admonition shouldn't be empty\n"
-                            f"File: {file_path}\n"
-                            f"Admonition line:{n-1}: {last_line}",
-                        )
-                        self.assertTrue(
-                            len(line) - len(line.lstrip(" ")) == 4,
-                            f"The admonition content has to start with 4 spaces\n"
-                            f"File: {file_path}\n"
-                            f"Admonition line:{n-1}: {last_line}",
-                        )
-                    elif (
-                        len(last_line) - len(last_line.lstrip(" ")) == 4 or not last_line.strip()
-                    ) and line.lstrip(" ") == line:
+                if inside_admonition and admonition_valid:
+                    if line.lstrip(" ") == line:
                         inside_admonition = False
+
+                if inside_admonition and line.strip():
+                    self.assertTrue(
+                        len(line) - len(line.lstrip(" ")) >= 4,
+                        f"The admonition content has to start with 4 or more spaces\n"
+                        f"File: {file_path}\n"
+                        f"Line:{n}: {line}",
+                    )
+                    admonition_valid = True
 
                 if line.startswith(self.admonition_prefixes):
                     inside_admonition = True
+                    admonition_valid = False
 
                 if line.startswith(self.codeblock_prefix):
                     inside_codeblock = not inside_codeblock
