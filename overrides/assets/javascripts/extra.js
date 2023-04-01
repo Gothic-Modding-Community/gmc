@@ -358,35 +358,53 @@ const gmcTranslateButton = () => {
     const topDirectory = hrefParts.pop();
     const newURLBase = hrefParts.join("/").replace("/edit/", "/new/");
     const fileNameParam = encodeURIComponent(`${topDirectory}/${newFileName}`);
+    const indexFileHint = oldFileName === "index.md" ? `In case of \`index.md\`, yes, keep the \`${topDirectory}/\` part in the commit message.\n` : "";
     const messageFileName = oldFileName === "index.md" ? `${topDirectory}/index.md` : oldFileName;
-    const messageParam = encodeURIComponent(`Add \`${gGMC_PAGE_LOCALE}\` translation for \`${messageFileName}\``);
+    const messageRaw = `Add \`${gGMC_PAGE_LOCALE}\` translation for \`${messageFileName}\``;
+    const messageRawEscaped = messageRaw.replaceAll("`", "\\`");
+    const messageParam = encodeURIComponent(messageRaw);
     const valueParam = encodeURIComponent([
         "Open the `Preview` tab to display with better formatting.",
         "## Overview",
         "This method of translation is for those that don't want to set up the project files.",
-        "The file name and commit message are already set, best not to change them.",
         "Due to technical limitations you need to copy the English base contents yourself.",
         "Before you do that please make sure that:",
         "",
         "- there are no open [Issues](https://github.com/Gothic-Modding-Community/gmc/issues) concerning the same files,",
         "- there are no open [Pull Requests](https://github.com/Gothic-Modding-Community/gmc/pulls) concerning the same files,",
-        "- `Spaces` and `4` are selected in the upper right corner of the editor in the `Edit new file` tab,",
+        "- `Spaces` and `4` are selected in the upper right corner of the editor in the `Edit` tab,",
         "- you've read our [contribution guidelines](https://gothic-modding-community.github.io/gmc/contribute/).",
+        "",
+        "---",
+        "",
+        ":exclamation: :warning: :exclamation:",
+        "",
+        "The file name and commit message should be already set, however due to the new GitHub UI the behavior has changed.",
+        "Assure that:",
+        `- the file name above is set to \`${newFileName}\` without the \`${topDirectory}/\` part in the \`Edit\` tab,`,
+        `- before committing changes, the message is set to: **${messageRawEscaped}**`,
+        `It will later look like this: ${messageRaw}`,
+        indexFileHint,
+        ":exclamation: :warning: :exclamation:",
         "",
         "---",
         "",
         "### English File",
         "Here is the link to the English file:",
         anchor.href.replace("/edit/", "/raw/"),
-        "Copy the contents and in the `Edit new file` tab, replace these instructions with them.",
+        "Copy the contents and in the `Edit` tab, replace these instructions with them.",
         "",
-        "#### *Note*",
+        "#### Hint",
         "*Please note that this page **won't** preserve your changes in real time like Google Docs.*",
-        "*Until you press the green button below nothing will be saved, so be sure not to lose progress.*",
+        "*Until you `Commit` the changes using the green button nothing will be saved, so be sure not to lose progress.*",
+        "",
+        "#### Hint",
+        "*GitHub's file editor doesn't provide `.md` formatting options, if you want those, consider using https://stackedit.io/*",
     ].join("  \n"));
     const newAnchor = document.createElement("a");
     newAnchor.classList = anchor.classList;
     // Weird quirk. The topDirectory needs to be in both, the link and in the filename param to put the file in the correct directory.
+    // -- This quirk stopped quirking with the introduction of the new GitHub UI, sadge.
     newAnchor.href = `${newURLBase}/${topDirectory}?filename=${fileNameParam}&message=${messageParam}&value=${valueParam}`;
     newAnchor.innerHTML = gGMC_TRANSLATE_SVG;
     newAnchor.title = gGMC_TRANSLATE_CTA;
