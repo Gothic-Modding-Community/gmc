@@ -1,3 +1,6 @@
+---
+title: Examples
+---
 # Ikarus examples
 A collection of examples ported from the original Ikarus documentation.
 

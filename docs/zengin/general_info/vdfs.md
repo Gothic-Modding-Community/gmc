@@ -1,3 +1,6 @@
+---
+title: VDFS virtual file system
+---
 # VDFS
 
 VDFS is the virtual file system used by ZenGin to distribute and store many, but not all, game assets.

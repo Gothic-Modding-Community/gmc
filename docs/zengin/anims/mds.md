@@ -1,3 +1,6 @@
+---
+title: MDS ModelScript
+---
 
 # MDS - model animation script
 

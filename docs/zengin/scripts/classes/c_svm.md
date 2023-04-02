@@ -1,3 +1,6 @@
+---
+title: C_SVM
+---
 # C_SVM Daedalus class
 
 !!! example "Acknowledgment"

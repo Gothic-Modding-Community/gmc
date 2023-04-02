@@ -1,3 +1,6 @@
+---
+title: Keyboard
+---
 # Keyboard interaction
 This part of Ikarus implements function that make interaction with keyboard possible.
 

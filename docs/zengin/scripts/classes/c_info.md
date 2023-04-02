@@ -1,3 +1,6 @@
+---
+title: C_INFO
+---
 # C_INFO Daedalus class
 
 !!! example "Acknowledgment"

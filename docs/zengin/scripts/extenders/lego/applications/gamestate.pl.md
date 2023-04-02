@@ -1,3 +1,6 @@
+---
+title: Stan gry
+---
 # Gamestate - stan gry
 Pakiet Gamestate pozwala sprawdzić stan gry (rozpoczęcie gry, ładowanie gry lub zmiana poziomu).
 

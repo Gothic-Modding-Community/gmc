@@ -1,3 +1,6 @@
+---
+title: Memory Access
+---
 # Elementary memory access
 This part of Ikarus makes it possible to read and write memory as different data types - integers, strings, arrays of integers or strings and bytes.
 

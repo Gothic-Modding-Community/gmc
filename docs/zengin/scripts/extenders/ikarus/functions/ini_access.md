@@ -1,3 +1,6 @@
+---
+title: Ini File Access
+---
 # Configuration file access
 This part of Ikarus gives you access to `Gothic.ini` and loaded mod configuration files.
 

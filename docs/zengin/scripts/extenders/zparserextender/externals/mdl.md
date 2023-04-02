@@ -1,3 +1,6 @@
+---
+title: MDL functions
+---
 # MDL - model functions
 Functions to tweak animation and other model related settings.
 

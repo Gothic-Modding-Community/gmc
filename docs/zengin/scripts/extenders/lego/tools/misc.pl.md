@@ -1,3 +1,6 @@
+---
+title: Różne
+---
 # Misc - różne
 Pakiet Misc wprowadza różne funkcje pomocnicze, które nie pasowały do żadnego innego pakietu.
 

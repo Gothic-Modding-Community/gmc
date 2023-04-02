@@ -1,3 +1,6 @@
+---
+title: C_ITEM
+---
 # C_ITEM Daedalus class
 
 !!! example "Acknowledgment"

@@ -1,3 +1,6 @@
+---
+title: Pętla while
+---
 # Natywna pętla WHILE
 Podobnie jak [Ikarus](../../../../../notready.md) zParserExtender implementuje pętlę while.
 

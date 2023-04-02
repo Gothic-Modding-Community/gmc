@@ -1,3 +1,6 @@
+---
+title: Enhanced Info Manager
+---
 # Enhanced Information Manager
 
 !!! Warning

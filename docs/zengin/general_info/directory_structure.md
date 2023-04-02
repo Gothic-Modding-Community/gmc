@@ -1,3 +1,6 @@
+---
+title: Directory structure
+---
 # ZenGin directory structure
 
 Modding is all about changing the game files. To achieve that, we have to know the directory (folder) structure of a Gothic game.
