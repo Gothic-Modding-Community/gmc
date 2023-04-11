@@ -426,12 +426,13 @@ const gmcRemoveCodeLines = () => {
 };
 
 const gmcFadingNavigation = () => {
-    const activeNavItems = document.querySelectorAll(".md-nav__item--active");
+    const activeNavItems = document.querySelectorAll(".md-nav__item--active.md-nav__item--nested");
 
     if (activeNavItems.length <= 1)
         return;
 
     activeNavItems[0].classList.add("gmc-fade-nav");
+    activeNavItems[activeNavItems.length - 1].classList.add("gmc-fade-nav-off");
 }
 
 function gmcDebug(...message) {
