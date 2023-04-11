@@ -4,6 +4,9 @@ title: Keyboard
 # Keyboard interaction
 This part of Ikarus implements function that make interaction with keyboard possible.
 
+!!! Info 
+    Keyboard interaction is also implemented with [gameKeyEvents.d](../../standalone/gameKeyEvents.md)
+
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
 !!! warning
