@@ -1,11 +1,11 @@
 # Standalone Scripts
 Over the years Gothic modders have created many useful features to use with Zengin scripts. This section contains documentation for some scripts that are "standalone", meaning they are not part of larger packages, but are often small features to make modders lives easier.
 
-## Script bins
+## Script Bins
 A few people came up with the idea of collecting scripts scattered on the forums, which resulted in the so-called Script Bins.
 
 !!! Warning
-    Script bins aren't updated frequently, so for the latest updates and also new scripts check [ScriptBin WoG thread]().
+    Script bins aren't updated frequently, so for the latest updates and new scripts also check the [ScriptBin WoG thread](https://forum.worldofplayers.de/forum/threads/1495001-Scriptsammlung-ScriptBin).
 
 ### WoG Script Bin
 Script bin made by Kirides containing scripts from German WoG forum.

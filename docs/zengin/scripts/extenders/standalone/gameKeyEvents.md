@@ -5,12 +5,12 @@
     **Platform:** G1, G2NotR  
     **Category:** Engine, Keys
 
-**gameKeyEvents.d** is a script that handle key events with `oCGame::HandleEvent` hook. Better alternative for [FrameFunction](../lego/tools/frame_functions.md) with [MEM_KeyState](../ikarus/functions/keyboard.md#mem_keystate) with which you don't have to check whether any menu is opened or player is in dialogue or can move etc.
+**gameKeyEvents.d** is a script, which handles key events with the `oCGame::HandleEvent` hook. Better alternative for [`FrameFunction`](../lego/tools/frame_functions.md) with [`MEM_KeyState`](../ikarus/functions/keyboard.md#mem_keystate) with which you don't have to check whether any menu is opened or player is in dialogue or can move etc.
 
 ??? trivia "Author's description"
-    >I looked up the address within oCGame::HandleEvent. I made into a universally usable script for Gothic 1 and Gothic 2.
+    >I looked up the address within `oCGame::HandleEvent`. I made it into a universally usable script for Gothic 1 and Gothic 2.
 
-    >One could argue now that this is not much different from a FrameFunction with MEM_KeyState. The difference is that this approach saves the extra work of checking if any menu is open, whether the player is in a dialog, whether the player may move, etc. Also this function is "event driven", meaning it is really only called when a key is pressed/held instead of every frame in vain. So it's arguably more performant.
+    >One could argue now that this is not much different from a `FrameFunction` with `MEM_KeyState`. The difference is that this approach saves the extra work of checking if any menu is open, whether the player is in a dialog, whether the player may move, etc. Also this function is "event driven", meaning it is really only called when a key is pressed/held instead of every frame in vain. So it's arguably more performant.
 
 ## Dependencies
 - [Ikarus](../ikarus/index.md)

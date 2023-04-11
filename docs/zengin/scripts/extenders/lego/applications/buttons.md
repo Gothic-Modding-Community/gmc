@@ -1,5 +1,5 @@
 # Buttons
-This package extends the handling of the mouse and allows creating rectangular buttons that react to mouse entry and exit as well as a mouse click.
+This package extends the handling of the mouse and allows creating rectangular buttons, which react to mouse (hover) entry and exit as well as a mouse click.
 
 ## Dependencies
 
@@ -94,7 +94,7 @@ func void Button_Show(var int hndl)
     Handle returned from `Button_Create`
 
 ### `Button_Hide`
-Hides the button and disabled it, so it's no longer responding to the mouse.
+Hides the button and disables it, so it is no longer responding to the mouse.
 ```dae
 func void Button_Hide(var int hndl)
 ```
@@ -241,19 +241,19 @@ func void Button_Move(var int hndl, var int nposx, var int nposy)
 ### `Button_MoveTo`
 Moves a button to the given position in pixels. `posx = nposx`
 ```dae
-func void Button_MoveVrt(var int hndl, var int nvposx, var int nvposy)
+func void Button_MoveVrt(var int hndl, var int nposx, var int nposy)
 ```
 **Parameters**
 
 - `#!dae var int hndl`  
     Handle returned from `Button_Create`
-- `#!dae var int nvposx`  
+- `#!dae var int nposx`  
     New horizontal position in pixels
-- `#!dae var int nvposy`  
+- `#!dae var int nposy`  
     New vertical position in pixels
 
 ### `Button_MoveToVrt`
-Moves a button to the given position in virtual coordinates. `posx = nposx`
+Moves a button to the given position in virtual coordinates. `posx = nvposx`
 ```dae
 func void Button_MoveVrt(var int hndl, var int nvposx, var int nvposy)
 ```
