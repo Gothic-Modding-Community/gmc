@@ -1,5 +1,5 @@
 # Anim8
-This package allows int or float values to be "animated" over a period of time. It is possible to string several commands together and to set the type of movement. The new version of PrintS from Interface uses Anim8.
+This package allows int or float values to be "animated" over a period of time. It is possible to string several commands together and to set the type of movement. The new version of PrintS from [Interface](../tools/interface.md) uses Anim8.
 
 ## Dependencies
 
@@ -175,7 +175,7 @@ func void Anim8_CallOnRemove(var int handle, var func dfnc)
 ## Examples
 
 ### Count up to a number
-Count from 0 to 10 in 10 seconds. We use the `Print_Ext` function from Interface to display the text.
+Count from 0 to 10 in 10 seconds. We use the `Print_Ext` function from [Interface](../tools/interface.md) to display the text.
 ```dae
 func void Example1()
 {
@@ -206,7 +206,7 @@ func void MyLoop1(var int MyText, var int Number)
     // As I said, everything is deleted fully automatically
 };
 ```
-A similar example can be found in the Interface examples.
+A similar example can be found in the [Interface examples](../tools/interface.md#examples).
 
 ### Moving zCVob in loop
 Now we make a vob constantly move back and forth, but without a mover. [FrameFunctions](../tools/frame_functions.md) are used for the loop:

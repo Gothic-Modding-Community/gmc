@@ -3,7 +3,7 @@ This package colors the focus names of the NPCs in appropriate colors according 
 
 ## Dependencies
 
-- Interface
+- [Interface](../tools/interface.md)
 - [HookEngine](../tools/hook_engine.md)
 
 ## Initialization
