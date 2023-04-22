@@ -16,7 +16,7 @@ LeGo_Init(LeGo_Interface | LeGo_PrintS);
 ```
 
 ## Implementation
-[:material-github: Int64.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Interface.d)
+[:material-github: Interface.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Interface.d)
 
 ## Functions
 
