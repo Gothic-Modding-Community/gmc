@@ -7,7 +7,9 @@ and processes the diff items marked with the "R" (moved/renamed) status.
 MIT Licence 2023 Kamil Krzyśków
 """
 import datetime
+import json
 import logging
+import os
 from pathlib import Path
 from typing import Dict, Optional, Set
 
@@ -26,6 +28,10 @@ from mkdocs.config.defaults import MkDocsConfig
 def on_config(config: MkDocsConfig) -> Optional[Config]:
     """Main function. Check the `redirects` plugin is present and fill the redirects mapping."""
 
+    if not os.getenv(HOOK_VAR, False):
+        LOG.info(f"{HOOK_NAME}: {HOOK_VAR} is not set to True in the environment")
+        return None
+
     if not GIT_MODULE:
         LOG.warning(f"{HOOK_NAME}: The `GitPython` module is not installed")
         return None
@@ -38,25 +44,47 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
         LOG.warning(f"{HOOK_NAME}: The `redirects` plugin is not configured correctly")
         return None
 
-    _add_redirects_based_on_git_history(config=config)
+    if os.getenv(CACHE_VAR, False):
+        CacheHelper.setup(config=config)
+        commit_hash = _add_redirects_based_on_git_history(config=config, cache_enabled=True)
+        if commit_hash is not None and commit_hash != CacheHelper.cache_obj["commit_hash"]:
+            CacheHelper.cache_obj["commit_hash"] = commit_hash
+            CacheHelper.save(config=config)
+    else:
+        _add_redirects_based_on_git_history(config=config)
 
     return None
 
 
-def _add_redirects_based_on_git_history(*, config: MkDocsConfig) -> None:
+def _add_redirects_based_on_git_history(
+    *, config: MkDocsConfig, cache_enabled: bool = False
+) -> Optional[str]:
     """Process the Git history looking for rename actions."""
 
     docs_dir: Path = Path(config.get("docs_dir"))
-    file_paths: Set[str] = {str(path) for path in docs_dir.glob("**/*.md")}
     docs_prefix: str = docs_dir.name + "/"
     project_root: Path = docs_dir.parent
+    repo = Repo(project_root)
 
+    if MAX_HASH and len(repo.commit(MAX_HASH).parents) > 1:
+        LOG.warning(f"{HOOK_NAME}: Using a Merge commit revision for 'MAX_HASH' is not supported")
+        return None
+
+    if cache_enabled and repo.head.commit.hexsha == CacheHelper.cache_obj["commit_hash"]:
+        LOG.info(f"{HOOK_NAME}: HEAD commit already cached")
+        return None
+
+    file_paths: Set[str] = {str(path) for path in docs_dir.glob("**/*.md")}
     redirects: Dict[str, str] = config["plugins"]["redirects"].config["redirect_maps"]
+
+    if cache_enabled:
+        redirects.update(CacheHelper.cache_obj["redirects"])
+
     initial_len: int = len(redirects)
 
-    LOG.info(f"{HOOK_NAME}: Processing Git history...")
+    LOG.info(f"{HOOK_NAME}: Processing Git history with{'' if cache_enabled else 'out'} cache...")
 
-    for commit in Repo(project_root).iter_commits(since=MAX_DATE, max_parents=1):
+    for commit in repo.iter_commits(since=MAX_DATE, max_parents=1):
         if not commit.parents:
             break
 
@@ -67,7 +95,9 @@ def _add_redirects_based_on_git_history(*, config: MkDocsConfig) -> None:
             old_parts_len: int = len(old.split("/")[-1].split("."))
             new_parts_len: int = len(new.split("/")[-1].split("."))
             old_exists: bool = str(project_root / old) in file_paths
-            old_index_exists: bool = str(project_root / old.replace(".md", "/index.md")) in file_paths
+            old_index_exists: bool = (
+                str(project_root / old.replace(".md", "/index.md")) in file_paths
+            )
 
             type_md: bool = old.endswith(".md") and new.endswith(".md")
             inside_docs: bool = old.startswith(docs_prefix) and new.startswith(docs_prefix)
@@ -91,9 +121,15 @@ def _add_redirects_based_on_git_history(*, config: MkDocsConfig) -> None:
             if old_inner not in redirects:
                 redirects[old_inner] = new_inner
             else:
-                LOG.info(f"{HOOK_NAME}: '{old_inner}' already in redirects, keeping more recent one")
+                LOG.info(
+                    f"{HOOK_NAME}: '{old_inner}' already in redirects, keeping more recent one"
+                )
 
         if commit.hexsha == MAX_HASH:
+            break
+
+        if cache_enabled and commit.parents[0].hexsha == CacheHelper.cache_obj["commit_hash"]:
+            LOG.info(f"{HOOK_NAME}: Reached cached commits")
             break
 
     len_diff: int = len(redirects) - initial_len
@@ -101,13 +137,57 @@ def _add_redirects_based_on_git_history(*, config: MkDocsConfig) -> None:
     if len_diff > 0:
         LOG.info(f"{HOOK_NAME}: Created {len_diff} redirects")
 
+    if cache_enabled:
+        return repo.head.commit.hexsha
+
+
+class CacheHelper:
+    """Class contains variables related to caching"""
+
+    cache_dir: Optional[Path] = None
+    """Directory path to the plugin cache directory"""
+
+    cache_file: Optional[Path] = None
+    """File path where the cached redirects will be saved"""
+
+    cache_obj: Optional[Dict] = None
+    """Object, which will be saved to cache"""
+
+    @classmethod
+    def setup(cls, *, config: MkDocsConfig) -> None:
+        cls.cache_dir = Path(config.get("docs_dir")).parent / CACHE_PATH
+        formatted_date: str = (
+            MAX_DATE.isoformat().replace(":", "") if isinstance(MAX_DATE, datetime.datetime) else ""
+        )
+        cls.cache_file = cls.cache_dir / f"{formatted_date}-{MAX_HASH}.json"
+
+        if cls.cache_file.exists():
+            cls.cache_obj = json.loads(cls.cache_file.read_text(encoding="utf8"))
+        else:
+            cls.cache_obj: Dict = {"commit_hash": "", "redirects": {}}
+            cls.cache_dir.mkdir(parents=True, exist_ok=True)
+            cls.cache_file.write_text(json.dumps(cls.cache_obj), encoding="utf8")
+
+    @classmethod
+    def save(cls, *, config: MkDocsConfig) -> None:
+        cls.cache_obj["redirects"] = config["plugins"]["redirects"].config["redirect_maps"]
+        cls.cache_file.write_text(json.dumps(cls.cache_obj, indent=2), encoding="utf8")
+
 
 # endregion
 
 # region Constants
+CACHE_VAR: str = "GMC_ENABLE_ON_PUBLISH"
+"""Name of the environmental variable to enable caching."""
 
 HOOK_NAME: str = "git_redirects"
 """Name of this hook. Used in logging."""
+
+CACHE_PATH: str = f".cache/hooks/{HOOK_NAME}"
+"""A relative path to the cache directory, based from the `config.docs_dir` parent directory."""
+
+HOOK_VAR: str = "GMC_ENABLE_ON_PUBLISH"
+"""Name of the environmental variable to enable the hook."""
 
 LOG: logging.Logger = logging.getLogger(f"mkdocs.hooks.{HOOK_NAME}")
 """Logger instance for this hook."""

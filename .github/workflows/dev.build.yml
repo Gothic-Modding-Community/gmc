@@ -7,6 +7,7 @@ on:
 
 env:
   GMC_ENABLE_ON_PUBLISH: true
+  GMC_DEV_URL: 'https://auronen.cokoliv.eu/gmc/'
 
 jobs:
   deploy:
@@ -24,22 +25,30 @@ jobs:
         with:
           python-version: 3.11
           cache: pip
-      - name: Cache `requirements.txt`
+      - name: Process Python Cache
         id: cache-requirements
         uses: actions/cache@v3
         with:
-          path: '**/venv/*'
-          key: requirements-${{ hashFiles('**/requirements*.txt') }}
-      - name: Install Dependencies into `venv`
+          path: venv
+          key: requirements-${{ hashFiles('requirements*.txt') }}
+      - name: Install Uncached Requirements
         if: steps.cache-requirements.outputs.cache-hit != 'true'
         run: |
           python -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
+          pip install -r requirements-deploy.txt
       - name: Run prebuild tests
         run: |
           source venv/bin/activate
           python -m unittest discover tests/ -v
+      - name: Process MkDocs Plugins & Hooks Cache
+        uses: actions/cache@v3
+        with:
+          path: .cache
+          key: mkdocs-${{ github.sha }}
+          restore-keys: |
+            mkdocs-
       - name: Build and deploy site
         run: |
           source venv/bin/activate
