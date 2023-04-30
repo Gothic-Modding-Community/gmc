@@ -1,5 +1,5 @@
 site_name: Gothic Modding Community
-site_url: https://gothic-modding-community.github.io/gmc/
+site_url: !ENV [GMC_DEV_URL, 'https://gothic-modding-community.github.io/gmc/']
 site_description: 'Gothic Modding Community is a collection of helpful resources for modding Gothic and Risen games.'
 
 repo_name: Gothic-Modding-Community/gmc

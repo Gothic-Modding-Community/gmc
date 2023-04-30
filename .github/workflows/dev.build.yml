@@ -7,6 +7,7 @@ on:
 
 env:
   GMC_ENABLE_ON_PUBLISH: true
+  GMC_DEV_URL: 'https://auronen.cokoliv.eu/gmc/'
 
 jobs:
   deploy:
