@@ -12,6 +12,7 @@ watch:
 hooks:
   - overrides/.hooks/language_flags.py
   - overrides/.hooks/git_redirects.py
+  - overrides/.hooks/social_patch.py
 
 theme:
   name: material
