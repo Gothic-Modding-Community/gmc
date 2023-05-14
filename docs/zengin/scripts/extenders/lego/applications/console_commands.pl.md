@@ -32,7 +32,7 @@ func void CC_Register(var func f, var string cmdPrefix, var string description)
 - `#!dae var string cmdPrefix`  
     Jest to polecenie, które można wprowadzić w konsoli.
 - `#!dae var string description`  
-    Ten tekst pojawia się obok polecenia (w zSpy), gdy używasz polecenia `help` w konsoli.
+    Ten tekst pojawia się obok polecenia (w [zSpy](../../../../tools/zSpy.md)), gdy używasz polecenia `help` w konsoli.
 
 ### `CC_Remove`
 Usuwa funkcje z konsoli komend.
