@@ -174,6 +174,10 @@ plugins:
           Tools: Narzędzia
           Tutorials: Poradniki
           Various: Różne
+          Extenders: Extendery
+          Standalone: Samodzielne
+          Sound: Dźwięk
+          Worlds: Światy
   - git-revision-date-localized:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       type: iso_datetime

@@ -27,3 +27,6 @@ __pycache__/
 
 # Social Plugin image cache
 .cache/
+
+# VS Code config files
+.vscode/
