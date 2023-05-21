@@ -94,6 +94,7 @@ nav:
         - zengin/scripts/externals/index.md
         - Log functions: zengin/scripts/externals/log.md
         - Doc functions: zengin/scripts/externals/doc.md
+        - Mdl functions: zengin/scripts/externals/mdl.md
       - Extenders:
         - zengin/scripts/extenders/index.md
         - Ikarus:

@@ -43,10 +43,8 @@ func void Doc_SetLevel(var int docID, var string level) {};
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
-- `#!dae var string level`  
-Name of the ZEN file
+- `#!dae var int docID` - document manager ID
+- `#!dae var string level` - name of the ZEN file
 
 !!! Example
     ```dae
@@ -66,16 +64,11 @@ func void Doc_SetLevelCoords(var int docID, var int left, var int top, var int r
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
-- `#!dae var int left`  
-Left coordinate
-- `#!dae var int top`  
-Top coordinate
-- `#!dae var int right`  
-Right coordinate
-- `#!dae var int bottom`  
-Bottom coordinate
+- `#!dae var int docID` - document manager ID
+- `#!dae var int left` - left coordinate
+- `#!dae var int top` - top coordinate
+- `#!dae var int right` - right coordinate
+- `#!dae var int bottom` - bottom coordinate
 
 !!! Example
     ```dae
@@ -91,12 +84,9 @@ func void Doc_SetFont(var int docID, var int page, var string font) {};
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
-- `#!dae var int page`  
-Page index, if set to `-1`, fonts will be applied to all pages 
-- `#!dae var string font`  
-Font to be used
+- `#!dae var int docID` - document manager ID
+- `#!dae var int page` - page index, if set to `-1`, fonts will be applied to all pages 
+- `#!dae var string font` - font to be used
 
 !!! Example
     ```dae
@@ -112,10 +102,8 @@ func void Doc_SetPages(var int docID, var int numOfPages) {};
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
-- `#!dae var int numOfPages`  
-Number of pages
+- `#!dae var int docID` - document manager ID
+- `#!dae var int numOfPages` - number of pages
 
 !!! Example
     ```dae
@@ -132,14 +120,10 @@ func void Doc_SetPage(var int docID, var int page, var string texture, var int s
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
-- `#!dae var int page`  
-Page index, if set to `-1`, settings are applied to all pages
-- `#!dae var string texture`  
-Texture of the background
-- `#!dae var int scale`  
-Scale of the texture, `TRUE` to scale the page, `FALSE` to not scale 
+- `#!dae var int docID` - document manager ID
+- `#!dae var int page` - page index, if set to `-1`, settings are applied to all pages
+- `#!dae var string texture` - texture of the background
+- `#!dae var int scale` - scale of the texture, `TRUE` to scale the page, `FALSE` to not scale 
 
 !!! Example
     ```dae
@@ -162,20 +146,13 @@ func void Doc_SetMargins(var int docID,
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
-- `#!dae var int page`  
-Page index, if set to `-1`, settings are applied to all pages
-- `#!dae var int left`  
-Left margin
-- `#!dae var int top`  
-Top margin
-- `#!dae var int right`  
-Right margin
-- `#!dae var int bottom`  
-Bottom margin
-- `#!dae var int pixels`  
-`TRUE` to use pixels, `FALSE` to use virtual coordinates
+- `#!dae var int docID` - document manager ID
+- `#!dae var int page` - page index, if set to `-1`, settings are applied to all pages
+- `#!dae var int left` - left margin
+- `#!dae var int top` - top margin
+- `#!dae var int right` - right margin
+- `#!dae var int bottom` - bottom margin
+- `#!dae var int pixels` - `TRUE` to use pixels, `FALSE` to use virtual coordinates
 !!! Warning
     After a thorough examination of this external function in the decompiler, it looks like the function works in pixels only regardless of this parameter.
 
@@ -193,12 +170,9 @@ func void Doc_PrintLine(var int docID, var int page, var string text) {};
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
-- `#!dae var int page`  
-Page index
-- `#!dae var string text`  
-Text to be printed
+- `#!dae var int docID` - document manager ID
+- `#!dae var int page` - page index
+- `#!dae var string text` - text to be printed
 
 !!! Example
     ```dae
@@ -215,12 +189,9 @@ func void Doc_PrintLines(var int docID, var int page, var string text) {};
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
-- `#!dae var int page`  
-Page index
-- `#!dae var string text`  
-Text to be printed
+- `#!dae var int docID` - document manager ID
+- `#!dae var int page` - page index
+- `#!dae var string text` - text to be printed
 
 !!! Example
     ```dae
@@ -237,8 +208,7 @@ func void Doc_Show(var int docID) {};
 
 **Parameters**
 
-- `#!dae var int docID`  
-Document manager ID
+- `#!dae var int docID` - document manager ID
 
 !!! Example
     ```dae
