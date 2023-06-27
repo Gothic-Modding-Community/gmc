@@ -82,7 +82,7 @@ The function returns integer value from the array if the address is correct.
 
 ### `MEM_ReadStringArray`
 !!! Info
-    `MEM_ReadStringArray` has been already moved to the LeGo PermMem package.
+    `MEM_ReadStringArray` has been already moved to the LeGo [PermMem](../../lego/tools/permmem.md#mem_readstringarray) package.
 
 ### `MEM_ReadByteArray`
 Reads byte from the array at the `arrayAddress`.
