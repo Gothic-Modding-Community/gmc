@@ -3,7 +3,7 @@ This package extends the handling of the mouse and allows creating rectangular b
 
 ## Dependencies
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - View
 
 ## Initialization

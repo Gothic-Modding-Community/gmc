@@ -3,7 +3,7 @@ This package allows you to create new console commands.
 
 ## Dependencies
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - [HookEngine](../tools/hook_engine.md)
 
 ## Initialization

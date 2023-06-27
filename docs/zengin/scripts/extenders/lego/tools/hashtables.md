@@ -4,7 +4,7 @@ Hashtables package is an implementation of hashtables in Gothic. Currently (vers
     
 ## Dependencies
 
-- PermMem
+- [PermMem](permmem.md)
 
 ## Initialization
 Initialize with `LeGo_PermMem` flag.

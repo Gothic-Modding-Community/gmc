@@ -6,7 +6,7 @@ Ten pakiet bardzo ułatwia dodawanie nowych pasków, dla wyświetlania np. wytrz
 
 ## Zależności
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - View
 
 ## Inicjalizacja

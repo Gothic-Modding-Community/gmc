@@ -1,5 +1,5 @@
 # Saves
-Offers an open file stream that can read/write variables on save/load. It is used by PermMem, so you don't need to address it manually anymore.
+Offers an open file stream that can read/write variables on save/load. It is used by [PermMem](../tools/permmem.md), so you don't need to address it manually anymore.
 
 ## Dependencies
 

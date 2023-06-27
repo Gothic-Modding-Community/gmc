@@ -6,7 +6,7 @@ This package offers a lot of useful functions to work with the 2D interface.
 - [AI_Function](ai_function.md)
 - [Anim8](../applications/anim8.md)
 - [HookEngine](hook_engine.md)
-- PermMem
+- [PermMem](permmem.md)
 
 
 ## Initialization

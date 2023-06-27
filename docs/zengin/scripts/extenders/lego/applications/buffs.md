@@ -4,7 +4,7 @@ Status effects on the hero are displayed graphically in a bar.
 
 ## Dependencies
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - [FrameFunctions](../tools/frame_functions.md)
 
 ## Initialization
