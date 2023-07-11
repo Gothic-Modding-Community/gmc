@@ -2,7 +2,7 @@
 title: AI_Function
 ---
 # AI Function
-This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful e.g. cutscenes.
+This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful in writing cutscenes on engine or implementing new routines.
 
 ## Dependencies
 
