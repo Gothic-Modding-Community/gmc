@@ -2,7 +2,7 @@
 **zSpy** is a debugging tool that displays most of the operations performed by the engine during the Gothic or Spacer running.
 
 ??? example "Example image of running zSpy"
-    ![zSpy](../../../overrides/assets/images/zSpy.png)
+    ![zSpy](../../../assets/images/zSpy.png)
 
 !!! Warning
     zSpy must be started before Gothic or the Spacer is started so that the program can find it. Sometimes in Gothic I this has to be done manually, in Gothic II This is done by the GothicStarter_mod. 
