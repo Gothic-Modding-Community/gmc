@@ -1,10 +1,10 @@
 # Core Requirements
-mkdocs-material==9.1.8
+mkdocs-material==9.1.21
 mkdocs-git-revision-date-localized-plugin==1.2.0
 mkdocs-video==1.5.0
-mkdocs-redirects==1.2.0
-mkdocs-minify-plugin==0.6.4
-# mkdocs-static-i18n==0.53
+mkdocs-redirects==1.2.1
+mkdocs-minify-plugin==0.7.1
+# mkdocs-static-i18n==0.56
 git+https://github.com/kamilkrzyskow/i18n.git@5e286be68ad6fafed7affd44cd57d3625c0a02cc#egg=mkdocs_static_i18n
 git+https://github.com/kamilkrzyskow/gothic-lexer.git@b5ee7868a7e7397cd129ff1f847daa7d39c0e416#egg=gothic_lexer
-mkdocs-awesome-pages-plugin==2.9.0
+mkdocs-awesome-pages-plugin==2.9.1
