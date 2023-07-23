@@ -128,7 +128,7 @@ plugins:
         - assets/javascripts/extra.js
   - i18n:
       default_language: !ENV [GMC_DEFAULT_LANG, en]
-      default_language_only: !ENV [GMC_ONLY_DEFAULT_LANG, False]
+      default_language_only: !ENV [GMC_ONLY_DEFAULT_LANG, True]
       languages:
         en:
           name: en - English
