@@ -83,7 +83,8 @@ void Game_Init() {
 }
 ```
 
-Now we can Build (F7) the project to create the DLL. If we have set up **Output Directory** before, the plugin will deploy directly to the game. Otherwise, we can copy it manually from `Bin` to `<GOTHIC_DIR>/System/Autorun/MyPlugin.dll`. When we launch the game, a MessageBox should appear right before the main menu: [https://i.imgur.com/JsAn8iR.png](https://i.imgur.com/JsAn8iR.png)
+Now we can Build (F7) the project to create the DLL. If we have set up **Output Directory** before, the plugin will deploy directly to the game. Otherwise, we can copy it manually from `Bin` to `<GOTHIC_DIR>/System/Autorun/MyPlugin.dll`. When we launch the game, a MessageBox should appear right before the main menu: 
+![Union SDK MessageBox](../../../../assets/images/union_sdk_getting_started_messagebox.png){ style='min-width: 0;' }
 
 #### Couldn't build the plugin?
 If you could not build the plugin or it crashed the game, you have to do some debugging and find the root cause of that. For compilation errors look at the Visual Studio **Output** tab and read the errors. 
