@@ -5,12 +5,12 @@ import glob
 import json
 import os
 import unittest
+
 import regex
 
 # noinspection PyPackageRequirements
-import yaml
-
-from tests.path_constants import DOCS_DIR, OVERRIDES_DIR, ROOT_DIR
+from mkdocs.utils import yaml_load
+from path_constants import DOCS_DIR, OVERRIDES_DIR, ROOT_DIR
 
 
 class LocalizationTest(unittest.TestCase):
@@ -19,18 +19,26 @@ class LocalizationTest(unittest.TestCase):
     """
 
     config: dict = None
+    current_settings: list[tuple] = None
+    expected_settings: dict = None
 
     @classmethod
     def setUpClass(cls) -> None:
         with open(os.path.join(ROOT_DIR, "mkdocs.yml"), encoding="utf8") as file:
-            lines = file.readlines()
+            content = file.read()
 
-        # The default safe loader doesn't handle values containing !, they're not needed for localization
-        # for the exception of !ENV which are important
-        lines = [regex.sub(r"!ENV.*,\s*?(\w+)\]", r"\g<1>", line) for line in lines]
-        output = "\n".join([regex.sub(r"!.*", "", line) for line in lines])
+        # Extract the ENV options, and assert that the selected boolean variables
+        # are set to the correct boolean values (aka weren't changed by mistake)
+        cls.current_settings = regex.findall(
+            r"\s*(.*?):\s*!ENV\s*\[(.*?)\s*,\s*(.*?)\s*\]", content
+        )
 
-        for plugin in yaml.safe_load(output)["plugins"]:
+        cls.expected_settings = {
+            "GMC_ENABLE_ON_PUBLISH": False,
+            "GMC_ONLY_DEFAULT_LANG": True,
+        }
+
+        for plugin in yaml_load(content)["plugins"]:
             if isinstance(plugin, dict):
                 cls.config = plugin.get("i18n")
             if cls.config is not None:
@@ -38,6 +46,16 @@ class LocalizationTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.assertIsNot(self.config, None, msg="Localization config is None")
+        for setting_name, envar_name, raw_value in self.current_settings:
+            if envar_name not in self.expected_settings:
+                continue
+            actual = eval(raw_value)
+            expected = self.expected_settings[envar_name]
+            self.assertEqual(
+                actual,
+                expected,
+                msg=f"Setting '{setting_name}'->{envar_name} is set to {actual} instead of {expected}",
+            )
 
     def test_default(self) -> None:
         """
