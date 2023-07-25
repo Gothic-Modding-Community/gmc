@@ -1,4 +1,4 @@
 # Extendery Daedalusa
 Extendery to pakiety skryptowe rozszerzające składnię Daedalusa, która może być dosyć ograniczająca. Przez lata społeczność stworzyła całkiem sporo takich extenderów. Zanim pojawił się Union, standardową metodą na interfejs z silnikiem było wykorzystanie [Ikarusa](ikarus/index.md) i zbudowanej na jego bazie kolekcji pakietów [LeGo](lego/index.md). Nie tak niedawno powstał dodatkowy pakiet skryptowy (a prace nad nim wciąż trwają) [AF Script Packet](afsp/index.md), który oferuje jeszcze więcej funkcji i jest zbudowany na bazie Ikarusa i LeGo. 
-Wraz z pojawieniem się Uniona i jego systemu pluginów powstał nowy extender o nazwie [zParserExtender](../../scripts/extenders/zparserextender). Oczywiście również inne pluginy mogą implementować własne funkcje zewnętrzne.
+Wraz z pojawieniem się Uniona i jego systemu pluginów powstał nowy extender o nazwie [zParserExtender](zparserextender/index.md). Oczywiście również inne pluginy mogą implementować własne funkcje zewnętrzne.
 Wiele skryptów jest również rozsianych po forach Gothicowych, a dokumentacje niektórych z nich można znaleźć w sekcji [Samodzielne](standalone/index.md).
