@@ -6,9 +6,9 @@ Working with Union SDK requires at least basic knowledge of C++ programming. Kno
 ## Requirements
 Union SDK requires Visual Studio IDE, NET Framework 4.7.2, and Visual C++ 2010 libraries. They are available on Microsoft websites:
 
-* Visual Studio - [https://visualstudio.microsoft.com/pl/vs/](https://visualstudio.microsoft.com/pl/vs/)
-* NET Framework 4.7.2 - [https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472)
-* Visual C++ 2010 - [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
+* Visual Studio - [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
+* NET Framework 4.7.2 - [https://dotnet.microsoft.com/download/dotnet-framework/net472](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+* Visual C++ 2010 - [https://www.microsoft.com/download/details.aspx?id=26999](https://www.microsoft.com/download/details.aspx?id=26999)
 
 ## Resource Manager
 The official installation of Union SDK is provided through [Resource Manager](https://worldofplayers.ru/threads/41415/). After the installation, Visual Studio will have a new project template "Union Plugin 1.0" that creates a basic Union plugin project.

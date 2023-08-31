@@ -15,12 +15,12 @@ The community has developed many tools to help with the creation of Gothic mods.
 - [Ninja](https://github.com/szapp/Ninja) - Ninja introduces the possibility of true modular modifications for the
 video games Gothic and Gothic 2 Night of the Raven.
  
-**[VDFS tools](../general_info/vdfs)**
+**[VDFS tools](../general_info/vdfs.md)**
 
 - [GothicVDFS](vdfs_tools/gothic_vdfs.md) - NiceDE's viewer, extractor and builder for `.vdf` and `.mod` volumes
 - [VDFS Tool](vdfs_tools/vdfs_tool.md) - Gratt's Union VDFS viewer, extractor, builder, optimizer and ZIP compressor for `.vdf` and `.mod` volumes
 
-**[World Editors](../worlds)**
+**[World Editors](../worlds/index.md)**
 
 - Spacer - the original world editor for ZenGin, ships with the MDK
 - [Union Gothic World Editor](https://worldofplayers.ru/threads/42322/) - Saturas' world editor, supports new object classes created with Union
