@@ -10,6 +10,7 @@ watch:
   - overrides
 
 hooks:
+  - overrides/.hooks/theme_overrides_manager.py
   - overrides/.hooks/language_flags.py
   - overrides/.hooks/git_redirects.py
   - overrides/.hooks/social_patch.py
