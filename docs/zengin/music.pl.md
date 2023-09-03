@@ -21,3 +21,7 @@ Katalog `Music` zawiera następujące typy plików:
     - Wzory (Patterns) - fragmenty utworów, które można później łączyć, zapętlać i nakładać na siebie.
 
 - `.sgt` - Plik z odpowiednio połączonymi wzorami (patternami) - końcowy utwór
+
+## Alternatywny System Muzyczny
+
+Plugin [zBassMusic](./union/plugins/zbassmusic.md) zastępuje domyślną bibliotekę muzyczną Zengina, dużo nowszą biblioteką BASS. Umożliwia to między innymi odtwarzanie muzyki w takich formatach jak `.mp3` lub `.ogg`, oraz pakownie utworów do archiwów `.vdf` i `.mod`.
