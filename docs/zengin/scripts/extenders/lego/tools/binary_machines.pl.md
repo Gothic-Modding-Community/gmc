@@ -22,6 +22,10 @@ func int BW_NewFile(var string file)
 - `#!dae var string file`  
     Nazwa tworzonego pliku
 
+**Zwracana wartość**
+
+Funkcja zwraca `TRUE` jeśli plik został pomyślnie utworzony i zainicjalizowany, w przeciwnym razie zwracane jest `FALSE`.
+
 ### `BW_Close`
 Zamyka aktualny strumień zapisu.
 ```dae
@@ -110,9 +114,7 @@ func void BW_NextLine()
 
 ## BinaryReader
 
-### `BR_OpenFile
-
-`
+### `BR_OpenFile`
 Otwiera plik o nazwie `file` i otwiera strumień. Nie działa, jeśli strumień jest już otwarty.
 ```dae
 func int BR_OpenFile(var string file)
@@ -121,6 +123,11 @@ func int BR_OpenFile(var string file)
 
 - `#!dae var string file`  
     Plik, który ma być otwarty
+
+**Zwracana wartość**
+
+Funkcja zwraca `TRUE` jeśli plik został pomyślnie otworzony i zainicjalizowany, w przeciwnym razie zwracane jest `FALSE`.
+
 
 ### `BR_Close`
 Zamyka aktualny strumień odczytu.
@@ -158,7 +165,7 @@ func string BR_Char()
 ```
 **Zwracana wartość**
 
-Funkcja zwraca odczytany znak.
+Funkcja zwraca odczytany znak jako `string`.
 
 ### `BR_String`
 Odczytuje ciąg znaków zakończony znakiem `\0` ze strumienia.
@@ -214,6 +221,89 @@ func string BR_Text(var int length)
 **Zwracana wartość**
 
 Funkcja zwraca odczytany ciąg znaków.
+
+### `BR_NextLine`
+Zmienia pozycję odczytu na następny akapit, utworzony za pomocą [`BW_NextLine`](#bw_nextline).
+```dae
+func void BR_NextLine()
+```
+
+## Wywołania funkcji silnika
+
+### `WIN_GetLastError`
+Wywołanie [funkcji `GetLastError`](https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) z Win32 API.
+```dae
+func int WIN_GetLastError()
+```
+**Zwracana wartość**
+
+Funkcja zwraca kod ostatniego błędu wątku wywołującego.
+
+### `WIN_CreateFile`
+Wywołanie [funkcji `CreateFileA`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea) z Win32 API.
+```dae
+func int WIN_CreateFile(var string lpFileName,var int dwDesiredAccess,var int dwShareMode,var int lpSecurityAttributes,var int dwCreationDisposition,var int dwFlagsAndAttributes,var int hTemplateFile)
+```
+**Parametry**
+
+Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea#parameters)
+
+**Zwracana wartość**
+
+Informacje o zwracanej wartości znajdziesz [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea#return-value)
+
+### `WIN_WriteFile`
+Wywołanie [funkcji `WriteFile`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile) z Win32 API.
+```dae
+func void WIN_WriteFile(var int hFile,var int lpBuffer,var int nNumberOfBytesToWrite,var int lpNumberOfBytesWritten,var int lpOverlapped)
+```
+**Parametry**
+
+Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile#parameters)
+
+### `WIN_ReadFile`
+Wywołanie [funkcji `ReadFile`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile) z Win32 API.
+```dae
+func void WIN_ReadFile(var int hFile,var int lpBuffer,var int nNumberOfBytesToRead,var int lpNumberOfBytesRead,var int lpOverlapped)
+```
+**Parametry**
+
+Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile#parameters)
+
+### `WIN_CloseHandle`
+Wywołanie [funkcji `CloseHandle`](https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle) z Win32 API.
+```dae
+func void WIN_CloseHandle(var int hObject)
+```
+**Parametry**
+
+Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle#parameters)
+
+### `WIN_GetFileSize`
+Wywołanie [funkcji `GetFileSize`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize) z Win32 API.
+```dae
+func int WIN_GetFileSize(var int hFile,var int lpFileSizeHigh)
+```
+**Parametry**
+
+Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize#parameters)
+
+**Zwracana wartość**
+
+Informacje o zwracanej wartości znajdziesz [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize#return-value)
+
+### Constants
+Dodatkowo istnieją pewne stałe zdefiniowane do użycia z określonymi wywołaniami funkcji silnika.
+```dae
+const int CREATE_ALWAYS = 2;
+const int OPEN_EXISTING = 3;
+const int GENERIC_ALL = 1073741824;
+const int GENERIC_READ = -2147483648;
+const int FILE_SHARE_READ = 1;
+const int FILE_SHARE_WRITE = 2;
+const int FILE_SHARE_DELETE = 4;
+const int FILE_ATTRIBUTE_NORMAL = 128;
+```
 
 ## Przykłady
 
