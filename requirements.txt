@@ -8,4 +8,4 @@ mkdocs-minify-plugin==0.7.1
 git+https://github.com/kamilkrzyskow/i18n.git@510fa2e219cb54241d5d0a497ed72cf969ab8cfd#egg=mkdocs_static_i18n
 git+https://github.com/kamilkrzyskow/gothic-lexer.git@b5ee7868a7e7397cd129ff1f847daa7d39c0e416#egg=gothic_lexer
 mkdocs-awesome-pages-plugin==2.9.2
-git+https://github.com/kamilkrzyskow/pymdownx-fork.git@47b9281e910ad225279c8a2397c6b89399463897#egg=pymdown-extensions
+

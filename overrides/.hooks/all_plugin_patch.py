@@ -1,10 +1,14 @@
-"""MkDocs hook, which patches the Social plugin of the Material theme.
+"""MkDocs hook, which patches different plugins and modules used within Gothic Modding Community.
 
-The hook fixes a crash when using theme.font.code without theme.font.text.
-The hook overrides the `theme.logo` file lookup to use the custom_dir instead of the docs_dir.
-The hook does not override `theme.logo.icon` file lookup.
+Social Plugin (from the Material theme)
+- The hook fixes a crash when using theme.font.code without theme.font.text.
+- The hook overrides the `theme.logo` file lookup to use the custom_dir instead of the docs_dir.
+- The hook does not override `theme.logo.icon` file lookup.
 
-MIT Licence 2023 Kamil Krzyśków
+Pygments Lexers (used to highlight code)
+- The hooks decorates the pygments.lexers.get_lexer_by_name function adding cache to it
+
+MIT Licence 2023 Kamil "HRY" Krzyśków
 """
 from copy import deepcopy
 from pathlib import Path
@@ -14,19 +18,23 @@ from mkdocs import plugins
 from mkdocs.config import Config
 from mkdocs.config.defaults import MkDocsConfig
 
+from pymdownx import highlight
+from pygments import lexers
+
 
 @plugins.event_priority(100)
 def on_config(config: MkDocsConfig) -> Optional[Config]:
     for name in {"social", "material/social"}:
-        plugin = config.plugins.get(name)
-        if plugin:
+        social_plugin = config.plugins.get(name)
+        if social_plugin:
+            social_plugin._load_font = patch_font_crash(social_plugin._load_font)
+            social_plugin._load_logo = patch_custom_dir(social_plugin._load_logo)
             break
     else:
         print("Social-Plugin-Patch: Did not find plugin!?!?!")
-        return None
 
-    plugin._load_font = patch_font_crash(plugin._load_font)
-    plugin._load_logo = patch_custom_dir(plugin._load_logo)
+    highlight.get_lexer_by_name = patch_lexers_cache(lexers.get_lexer_by_name)
+    lexers.get_lexer_by_name = patch_lexers_cache(lexers.get_lexer_by_name)
 
     return None
 
@@ -62,5 +70,24 @@ def patch_custom_dir(func):
     return wrap_load_logo
 
 
+def patch_lexers_cache(func):
+    """Patch cache into the get_lexer_by_name function"""
+
+    def wrap_get_lexer_by_name(alias, **options):
+        cached_class = LEXER_CLASS_CACHE.get(alias)
+
+        if cached_class:
+            return cached_class(**options)
+
+        lexer = func(alias, **options)
+        LEXER_CLASS_CACHE[alias] = lexer.__class__
+        return lexer
+
+    return wrap_get_lexer_by_name
+
+
 CUSTOM_DIR_PATH = "overrides"
 """A relative path to the custom directory based from the `docs_dir` parent directory."""
+
+LEXER_CLASS_CACHE = {}
+"""Lexer class cache directory for patch_lexers_cache"""
