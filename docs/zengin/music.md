@@ -18,3 +18,7 @@ The music directory contains these file types:
     - Patterns - fragments of tracks, that can be later merged, looped and superimposed on each other
 
 - `.sgt` - File with properly connected patterns - the final track
+
+## Alternative Music System
+
+The [zBassMusic](./union/plugins/zbassmusic.md) plugin replaces Zengin's default music library with the much newer BASS library. This allows, among other things, to play music in such formats as `.mp3` or `.ogg`, and to pack songs into `.vdf` and `.mod` archives.
