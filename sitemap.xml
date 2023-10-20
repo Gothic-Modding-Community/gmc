@@ -777,6 +777,38 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/zparserextender/syntax_extensions/while/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/doc/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/doc/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/doc/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/doc/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/log/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/log/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/log/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/log/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/mdl/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/mdl/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/mdl/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/mdl/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/sound/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -1729,6 +1761,38 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/zparserextender/syntax_extensions/while/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/doc/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/doc/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/doc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/doc/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/log/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/log/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/log/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/log/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/mdl/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/mdl/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/mdl/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/mdl/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/sound/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -2679,6 +2743,38 @@
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/zparserextender/syntax_extensions/while/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/zparserextender/syntax_extensions/while/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/zparserextender/syntax_extensions/while/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/doc/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/doc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/doc/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/doc/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/log/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/log/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/log/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/log/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/mdl/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/externals/mdl/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/externals/mdl/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/externals/mdl/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/sound/</loc>
