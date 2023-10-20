@@ -32,8 +32,8 @@ def on_env(*_, config: MkDocsConfig, **__) -> Optional[Environment]:
 
     import material
 
-    partials: Path = Path(material.__file__).parent / "partials"
-    header: Path = partials / "header.html"
+    partials: Path = Path(material.__file__).parent / "templates" / "partials"
+    header: Path = partials / "alternate.html"
 
     config.extra[HOOK_MANAGER].paths_with_processors.append((header, _add_flags))
 
@@ -69,11 +69,11 @@ def _add_flags(*, partial: Path, config: MkDocsConfig, **__) -> None:
 
     # Configure the tokens
     tokens: Dict[str, str] = {
-        "START": "{% if config.extra.alternate %}",
+        "START": '<div class="md-select">',
         "CONFIG": '{% set icon = config.theme.icon.alternate or "material/translate" %}',
         "SELECTOR": '{% include ".icons/" ~ icon ~ ".svg" %}',
         "LINK": "{{ alt.name }}",
-        "END": "{% endif %}",
+        "END": '</div>',
     }
 
     # A negative number means the same level as the START token.
