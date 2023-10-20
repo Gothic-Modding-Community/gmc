@@ -929,6 +929,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/union/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/union/plugins/zbassmusic/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/union/plugins/zbassmusic/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/union/plugins/zbassmusic/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/union/plugins/zbassmusic/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/union/plugins/zgamepad/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -1961,6 +1969,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/union/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/union/plugins/zbassmusic/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/union/plugins/zbassmusic/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/union/plugins/zbassmusic/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/union/plugins/zbassmusic/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/union/plugins/zgamepad/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -2991,6 +3007,14 @@
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/union/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/union/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/union/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/union/plugins/zbassmusic/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/union/plugins/zbassmusic/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/union/plugins/zbassmusic/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/union/plugins/zbassmusic/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/union/plugins/zgamepad/</loc>
