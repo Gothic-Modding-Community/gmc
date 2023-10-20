@@ -241,6 +241,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/examples/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/floats/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/floats/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/floats/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/floats/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/ini_access/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -271,6 +279,22 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/preamble/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/string/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/string/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/string/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/string/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/win_utilities/</loc>
@@ -481,6 +505,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/item_helper/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/list/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/list/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/list/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/list/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/locals/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -497,6 +529,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/misc/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/permmem/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/permmem/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/permmem/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/permmem/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/queue/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -511,6 +551,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/random/"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/random/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/random/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/string_builder/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/string_builder/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/string_builder/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/string_builder/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/talents/</loc>
@@ -1225,6 +1273,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/examples/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/floats/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/floats/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/floats/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/floats/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/ini_access/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -1255,6 +1311,22 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/preamble/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/string/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/string/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/string/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/string/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/win_utilities/</loc>
@@ -1465,6 +1537,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/item_helper/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/list/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/list/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/list/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/list/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/locals/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -1481,6 +1561,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/misc/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/permmem/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/permmem/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/permmem/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/permmem/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/queue/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -1495,6 +1583,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/random/"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/random/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/random/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/string_builder/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/string_builder/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/string_builder/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/string_builder/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/talents/</loc>
@@ -2209,6 +2305,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/examples/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/floats/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/floats/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/floats/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/floats/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/ini_access/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -2239,6 +2343,22 @@
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/menu_access/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/preamble/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/preamble/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/string/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/string/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/string/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/string/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/win_utilities/</loc>
@@ -2449,6 +2569,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/item_helper/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/list/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/list/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/list/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/list/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/locals/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -2465,6 +2593,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/misc/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/permmem/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/permmem/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/permmem/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/permmem/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/queue/</loc>
         <lastmod>2023-10-20</lastmod>
         <changefreq>daily</changefreq>
@@ -2479,6 +2615,14 @@
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/random/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/random/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/random/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/string_builder/</loc>
+        <lastmod>2023-10-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/string_builder/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/lego/tools/string_builder/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/lego/tools/string_builder/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/lego/tools/talents/</loc>
