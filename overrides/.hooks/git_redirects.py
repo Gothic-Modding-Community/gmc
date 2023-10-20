@@ -28,7 +28,13 @@ from mkdocs.config.defaults import MkDocsConfig
 def on_config(config: MkDocsConfig) -> Optional[Config]:
     """Main function. Check the `redirects` plugin is present and fill the redirects mapping."""
 
-    if not os.getenv(HOOK_VAR, False):
+    try:
+        hook_enabled = custom_getenv(HOOK_VAR, False)
+    except ValueError as err:
+        LOG.error(f"{HOOK_NAME}: {err}")
+        return None
+
+    if not hook_enabled:
         LOG.info(f"{HOOK_NAME}: {HOOK_VAR} is not set to True in the environment")
         return None
 
@@ -44,7 +50,17 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
         LOG.warning(f"{HOOK_NAME}: The `redirects` plugin is not configured correctly")
         return None
 
-    if os.getenv(CACHE_VAR, False):
+    if config.extra.get("git_redirects_finished", False):
+        LOG.info(f"{HOOK_NAME}: MkDocsConfig wasn't reset since last run, skipping run...")
+        return None
+
+    try:
+        cache_enabled = custom_getenv(CACHE_VAR, False)
+    except ValueError as err:
+        LOG.error(f"{HOOK_NAME}: {err}")
+        return None
+
+    if cache_enabled:
         CacheHelper.setup(config=config)
         commit_hash = _add_redirects_based_on_git_history(config=config, cache_enabled=True)
         if commit_hash is not None and commit_hash != CacheHelper.cache_obj["commit_hash"]:
@@ -53,7 +69,27 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
     else:
         _add_redirects_based_on_git_history(config=config)
 
+    config.extra["git_redirects_finished"] = True
+
     return None
+
+
+# Credit to https://stackoverflow.com/a/65407083
+def custom_getenv(name: str, default_value: bool = None):
+    positive: tuple[str] = ("true", "1")
+    negative: tuple[str] = ("false", "0")
+    value: str = os.getenv(name, None)
+
+    if value is None:
+        if default_value is None:
+            raise ValueError(f"Variable '{name}' is not set and no default provided!")
+        else:
+            value = str(default_value)
+
+    if value.lower() not in positive + negative:
+        raise ValueError(f"Invalid value '{value}' for variable '{name}'")
+
+    return value.lower() in positive
 
 
 def _add_redirects_based_on_git_history(

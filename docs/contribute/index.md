@@ -188,25 +188,25 @@ In order to work locally:
 #### Build preferences
 While working with the project, it's possible to set various environmental variables to configure it to your own preferences:
 
-- `GMC_DEFAULT_LANG` - is a 2-character language identifier (it must be present in the `mkdocs.yml` file), it sets the default language of the site
-- `GMC_ONLY_DEFAULT_LANG` - `True` or `False` value, activates the site build to be only in the default language
+- `GMC_DEV_LOCALE` - is a 2-character language identifier (ex. `en`, `pl`), it sets the development language of the site. This will enforce that language to be the default and only built language. Helps to decrease build time and allows to easily change the language without modyfying the config file. **Because of changes in the `mkdocs-static-i18n` plugin, this is the only way to temporarily change the default language**
+- `GMC_BUILD_ALTERNATES` - `True` or `False` value, activates the site build to also include alternate languages apart of the default language. Default behaviour is to omit alternates to decrease build time.
 - `GMC_ENABLE_ON_PUBLISH` - `True` or `False` value, activates all of the final build procedures, like adding of the last modified date, minifying of the resources etc. 
 
 Environmental variables can be set temporarily for the currently open Terminal window:
 
 ```bash title="Linux"
-export GMC_DEFAULT_LANG=en export GMC_ONLY_DEFAULT_LANG=True; mkdocs serve
+export GMC_DEV_LOCALE=en export GMC_BUILD_ALTERNATES=False; mkdocs serve
 ```
 
 ```powershell title="Windows Powershell"
-$env:GMC_DEFAULT_LANG="en"
-$env:GMC_ONLY_DEFAULT_LANG="True"
+$env:GMC_DEV_LOCALE="en"
+$env:GMC_BUILD_ALTERNATES="False"
 mkdocs serve
 ```
 
 ```batch title="Windows Command Prompt (cmd)"
-set GMC_DEFAULT_LANG=en
-set GMC_ONLY_DEFAULT_LANG=True
+set GMC_DEV_LOCALE=en
+set GMC_BUILD_ALTERNATES=False
 mkdocs serve
 ```
 

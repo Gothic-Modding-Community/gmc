@@ -7,7 +7,6 @@ on:
 
 env:
   GMC_ENABLE_ON_PUBLISH: true
-  GMC_ONLY_DEFAULT_LANG: false
   GMC_DEV_URL: 'https://auronen.cokoliv.eu/gmc/'
 
 jobs:

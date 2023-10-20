@@ -100,7 +100,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     gmcExpandNavigation();
     gmcAddVersionToggle();
     gmcLinksForVersion();
-    if (gGMC_PAGE_LOCALE !== gGMC_DEFAULT_LOCALE && gGMC_PAGE_LOCALE !== gGMC_PAGE_FILE_LOCALE) {
+    if (gGMC_PAGE_LOCALE !== gGMC_DEFAULT_LOCALE && gGMC_PAGE_LOCALE !== gGMC_FILE_LOCALE) {
         gmcTranslateButton();
     }
     gmcRemoveCodeLines();
