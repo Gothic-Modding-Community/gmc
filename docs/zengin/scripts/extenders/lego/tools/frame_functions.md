@@ -4,7 +4,7 @@ The FrameFunctions package allows to call any number of functions called on ever
 ## Dependencies
 
 - Floats
-- PermMem
+- [PermMem](permmem.md)
 - [HookEngine](../tools/hook_engine.md)
 - [Timer](timer.md)
 

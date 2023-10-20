@@ -3,7 +3,7 @@ This package is an implementation of the Queue data structure and a queue for fu
 
 ## Dependencies
 
-- PermMem
+- [PermMem](permmem.md)
 
 ## Initialization
 N/A

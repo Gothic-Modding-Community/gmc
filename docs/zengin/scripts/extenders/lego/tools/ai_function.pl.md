@@ -1,8 +1,8 @@
 ---
 title: Funkcje AI
 ---
-# AI Function - Funkcje AI
-Ten pakiet umożliwia wywoływanie funkcji opóźnionych w czasie poprzez kolejkowanie ich w kolejce AI danego NPC. Może to być bardzo przydatne np. do cutscenek.
+# AI_Function - Funkcje AI
+Ten pakiet umożliwia wywoływanie funkcji opóźnionych w czasie poprzez kolejkowanie ich w kolejce AI danego NPC. Może to być bardzo przydatne przy pisaniu przerywników filmowych na silniku lub implementacji nowych rutyn.
 
 ## Zależności
 

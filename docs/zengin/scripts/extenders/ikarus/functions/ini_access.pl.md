@@ -29,7 +29,7 @@ func string MEM_GetGothOpt(var string sectionname, var string optionname)
 
 **Zwracana wartość**
 
-Funkcja zwraca wartość opcji w postaci łańcucha znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
+Funkcja zwraca wartość opcji w postaci ciągu znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
 
 ### `MEM_GetModOpt`
 Przeszukuje ini załadowanej modyfikacji w poszukiwaniu opcji.
@@ -45,7 +45,7 @@ func void MEM_GetModOpt(var string sectionname, var string optionname)
 
 **Zwracana wartość**
 
-Funkcja zwraca wartość opcji w postaci łańcucha znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
+Funkcja zwraca wartość opcji w postaci ciągu znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
 
 ### `MEM_GothOptSectionExists`
 Sprawdza, czy dana sekcja istnieje w `Gothic.ini`

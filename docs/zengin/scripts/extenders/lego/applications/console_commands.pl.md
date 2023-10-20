@@ -6,7 +6,7 @@ Ten Pakiet pozwala na tworzenie nowych poleceń konsoli dostępnej po naciśnię
 
 ## Zależności
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - [HookEngine](../tools/hook_engine.md)
 
 ## Inicjalizacja

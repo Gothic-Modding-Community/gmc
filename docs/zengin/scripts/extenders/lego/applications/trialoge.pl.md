@@ -118,7 +118,7 @@ func void TRIA_Cam(var string evt)
 **Parametry**
 
 - `#!dae var string evt`  
-    Nazwa ruchu kamery w Spacerze. Jeśli zostanie przekazany pusty łańcuch znaków, nastąpi przerwanie ruchu kamery.
+    Nazwa ruchu kamery w Spacerze. Jeśli zostanie przekazany pusty ciąg znaków, nastąpi przerwanie ruchu kamery.
 
 ### `TRIA_Finish`
 Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym razie dalsze trialogi nie będą mogły zostać rozpoczęte.

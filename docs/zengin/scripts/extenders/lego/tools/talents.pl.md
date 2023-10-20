@@ -11,7 +11,7 @@ Pakiet `Talents` używa jednego wolnego AIVara, domyślnie jest to AIVar z numer
 
 ## Zależności
 
-- PermMem
+- [PermMem](permmem.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_PermMem`.

@@ -8,7 +8,7 @@ Talents package uses one free AIVar variables, the default is AIVar with the ind
 
 ## Dependencies
 
-- PermMem
+- [PermMem](permmem.md)
 
 ## Initialization
 Initialize with `LeGo_PermMem` flag.

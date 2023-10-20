@@ -4,7 +4,7 @@ With this package items can be rendered on the screen. Since items are rendered 
 
 - List
 - View
-- PermMem
+- [PermMem](../tools/permmem.md)
 
 ## Initialization
 Initialize with `LeGo_Render` flag.

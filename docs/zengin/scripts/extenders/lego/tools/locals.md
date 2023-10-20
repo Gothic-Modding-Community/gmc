@@ -5,7 +5,7 @@ There is also the `final` function, which can be used to emulate something simil
 
 ## Dependencies
 
-- StringBuilder
+- [StringBuilder](string_builder.md)
 
 ## Initialization
 N/A

@@ -3,7 +3,7 @@ This package makes it very easy to add new bars, for e.g. stamina.
 
 ## Dependencies
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - View
 
 ## Initialization

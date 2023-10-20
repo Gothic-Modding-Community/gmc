@@ -6,7 +6,7 @@ This package allows to create new events and trigger them at desired times. The 
 
 ## Dependencies
 
-- PermMem
+- [PermMem](permmem.md)
 
 ## Initialization
 Initialize with `LeGo_EventHandler` flag.
