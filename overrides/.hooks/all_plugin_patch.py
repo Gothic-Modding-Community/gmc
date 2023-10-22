@@ -14,7 +14,7 @@ i18n Plugin (mkdocs-static-i18n)
 - The hook creates redirects for all built alternate languages using the mkdocs-redirects plugin
 - The hook merges nav_translations of alternate languages with the default language
 
-MIT Licence 2023 Kamil "HRY" Krzyśków
+MIT Licence 2023 Kamil Krzyśków (HRY)
 """
 import logging
 from copy import deepcopy

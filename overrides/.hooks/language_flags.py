@@ -5,7 +5,7 @@ The hook dynamically on the fly modifies the "header.html" template of the Mater
 It uses the theme_overrides_manager hook to assure original file preservation.
 Works both with and without the "i18n" MkDocs plugin.
 
-MIT Licence 2023 Kamil Krzyśków
+MIT Licence 2023 Kamil Krzyśków (HRY)
 Parts adapted from the translations.py hook
 https://github.com/squidfunk/mkdocs-material/blob/master/src/.overrides/hooks/translations.py
 and from the materialx.emoji and pymdownx.emoji modules.
@@ -16,6 +16,7 @@ from typing import Dict, Optional, Union
 
 from jinja2 import Environment
 from mkdocs.config.defaults import MkDocsConfig
+from mkdocs.plugins import PrefixedLogger
 from pymdownx import twemoji_db, util
 from pymdownx.emoji import TWEMOJI_SVG_CDN
 
@@ -25,7 +26,7 @@ from pymdownx.emoji import TWEMOJI_SVG_CDN
 def on_env(*_, config: MkDocsConfig, **__) -> Optional[Environment]:
     """Main function. Triggers just before the build begins."""
 
-    LOG.debug(f'{HOOK_NAME}: Running "on_env"')
+    LOG.debug('Running "on_env"')
 
     if not _is_runnable(config=config):
         return None
@@ -37,7 +38,7 @@ def on_env(*_, config: MkDocsConfig, **__) -> Optional[Environment]:
 
     config.extra[HOOK_MANAGER].paths_with_processors.append((header, _add_flags))
 
-    LOG.info(f"{HOOK_NAME}: Registered processors")
+    LOG.info(f"Registered processors")
 
     return None
 
@@ -46,19 +47,19 @@ def _is_runnable(*, config: MkDocsConfig) -> bool:
     """Make sure the hook should run."""
 
     if HOOK_MANAGER not in config["extra"]:
-        LOG.info(f'{HOOK_NAME}: "{HOOK_MANAGER}" not detected')
+        LOG.info(f'"{HOOK_MANAGER}" not detected')
         return False
 
     if config.theme["name"] != "material":
-        LOG.info(f'{HOOK_NAME}: Only the "material" theme is supported')
+        LOG.info('Only the "material" theme is supported')
         return False
 
     if "alternate" not in config["extra"]:
-        LOG.info(f'{HOOK_NAME}: "extra.alternate" not detected')
+        LOG.info('"extra.alternate" not detected')
         return False
 
     if len(config["extra"]["alternate"]) < 2:
-        LOG.info(f"{HOOK_NAME}: Not enough languages")
+        LOG.info(f"Not enough languages")
         return False
 
     return True
@@ -73,7 +74,7 @@ def _add_flags(*, partial: Path, config: MkDocsConfig, **__) -> None:
         "CONFIG": '{% set icon = config.theme.icon.alternate or "material/translate" %}',
         "SELECTOR": '{% include ".icons/" ~ icon ~ ".svg" %}',
         "LINK": "{{ alt.name }}",
-        "END": '</div>',
+        "END": "</div>",
     }
 
     # A negative number means the same level as the START token.
@@ -117,7 +118,7 @@ def _add_flags(*, partial: Path, config: MkDocsConfig, **__) -> None:
         partial=partial, original_section=loaded_section, modified_section=modified_section
     )
 
-    LOG.debug(f'{HOOK_NAME}: Processed "{partial.name}".')
+    LOG.debug(f'Processed "{partial.name}".')
 
 
 def _flag_svg(alternate_lang: str) -> str:
@@ -227,7 +228,9 @@ INDEX: Dict[str, Union[str, Dict]] = {
 # Adapted from
 # materialx.emoji
 
-LOG: logging.Logger = logging.getLogger(f"mkdocs.hooks.theme_overrides.{HOOK_NAME}")
+LOG: PrefixedLogger = PrefixedLogger(
+    HOOK_NAME, logging.getLogger(f"mkdocs.hooks.theme_overrides.{HOOK_NAME}")
+)
 """Logger instance for this hook."""
 
 # endregion
