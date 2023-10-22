@@ -102,6 +102,10 @@ def _add_redirects_based_on_git_history(
     project_root: Path = docs_dir.parent
     repo = Repo(project_root)
 
+    redirects: Dict[str, str] = config["plugins"]["redirects"].config["redirect_maps"]
+    if cache_enabled:
+        redirects.update(CacheHelper.cache_obj["redirects"])
+
     if MAX_HASH and len(repo.commit(MAX_HASH).parents) > 1:
         LOG.warning(f"{HOOK_NAME}: Using a Merge commit revision for 'MAX_HASH' is not supported")
         return None
@@ -111,10 +115,6 @@ def _add_redirects_based_on_git_history(
         return None
 
     file_paths: Set[str] = {str(path) for path in docs_dir.glob("**/*.md")}
-    redirects: Dict[str, str] = config["plugins"]["redirects"].config["redirect_maps"]
-
-    if cache_enabled:
-        redirects.update(CacheHelper.cache_obj["redirects"])
 
     initial_len: int = len(redirects)
 
