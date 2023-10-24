@@ -4,7 +4,7 @@ Social Plugin (from the Material theme)
 - The hook fixes a crash when using theme.font.code without theme.font.text.
 - The hook overrides the `theme.logo` file lookup to use the custom_dir instead of the docs_dir.
 - The hook does not override `theme.logo.icon` file lookup.
-- The hook overrides the `on_page_markdown` function to make it compatible with the i18n plugin 
+- The hook overrides the `on_page_markdown` function to make it compatible with the i18n plugin
 
 Pygments Lexers (used to highlight code)
 - The hook decorates the pygments.lexers.get_lexer_by_name function,
@@ -13,6 +13,10 @@ Pygments Lexers (used to highlight code)
 i18n Plugin (mkdocs-static-i18n)
 - The hook creates redirects for all built alternate languages using the mkdocs-redirects plugin
 - The hook merges nav_translations of alternate languages with the default language
+
+Search Plugin (from the Material theme)
+- The hook separates page.meta.title from page.markdown.title.
+  In turn the result heading should use the page.markdown.title.
 
 MIT Licence 2023 Kamil Krzyśków (HRY)
 """
@@ -25,6 +29,7 @@ from mkdocs import plugins
 from mkdocs.config import Config
 from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.plugins import PrefixedLogger
+from mkdocs.utils import get_markdown_title
 from pygments import lexers
 from pymdownx import highlight
 
@@ -61,6 +66,17 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
         process_i18n_nav_translations(i18n_plugin)
 
     return None
+
+
+@plugins.event_priority(100)
+def on_pre_build(config):
+    search_plugin = config.plugins.get("material/search") or config.plugins.get("search")
+
+    if search_plugin and hasattr(search_plugin, "search_index"):
+        LOG.info("Separating page.title from page.meta.title in SearchIndex")
+        search_plugin.search_index.create_entry_for_section = patch_search_entry_title(
+            search_plugin.search_index.create_entry_for_section
+        )
 
 
 @plugins.event_priority(100)
@@ -226,6 +242,32 @@ def process_social_cards_i18n(config, social_plugin, i18n_plugin):
         if event.__self__.__class__ is social_plugin.__class__:
             config.plugins.events["page_markdown"][i] = on_page_markdown_decorator(event)
             break
+
+
+def patch_search_entry_title(func):
+    """
+    Navigation / social card titles should be controlled separately in the page front matter.
+    Search result titles should be like the first h1 heading in the markdown content.
+    The search plugin implementation in the Material theme doesn't work like that, so
+    we patch it.
+    """
+
+    def wrap_create_entry_for_section(section, toc, url, page):
+        old_meta_title = page.meta.get("title")
+        old_page_title = page.title
+        page_markdown_title = get_markdown_title(page.markdown)
+
+        page.meta["title"] = page_markdown_title
+        page.title = page_markdown_title
+
+        result = func(section, toc, url, page)
+
+        page.meta["title"] = old_meta_title
+        page.title = old_page_title
+
+        return result
+
+    return wrap_create_entry_for_section
 
 
 CUSTOM_DIR_PATH = "overrides"
