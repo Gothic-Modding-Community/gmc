@@ -1,5 +1,5 @@
-# Preamble
-The preamble is a bunch of functions related with debug and some stuff, that doesn't fit to other sections.
+# Debug
+A set of debugging and error-handling functions for mod development with Ikarus.
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
@@ -11,7 +11,7 @@ MEM_InitAll();
 ```
 
 ## Implementation
-[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L137)
+[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L135-L327)
 
 ## Functions
 
@@ -102,7 +102,7 @@ func void MEM_AssertFail(var string assertFailText)
     The assertion failure message.
 
 ### `MEM_Debug`
-Sends a debug message to the zSpy or on screen or displays an error box basing on `zERR_DEBUG_TOSPY`, `zERR_DEBUG_TOSCREEN` and `zERR_DEBUG_ERRORBOX` constants (`TRUE` - display).
+Freely conigurable debug chanell. See how to setup it in the [Constants](../constants.md#mem_debug) article.
 ```dae
 func void MEM_Debug(var string message)
 ```
