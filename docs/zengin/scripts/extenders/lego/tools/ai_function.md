@@ -1,5 +1,6 @@
 ---
 title: AI_Function
+description: LeGo package for enqueuing functions to NPC's AI queue
 ---
 # AI_Function
 This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful in writing cutscenes on engine or implementing new routines.
@@ -45,7 +46,7 @@ func void AI_Function_NI (var C_NPC slf, var func function, var int    param1, v
 ```
 Functions with more than two parameters cannot be called, but parameters can be passed indirectly via global variables.
 
-In the called function, `slf` can be accessed as follows:
+In the called function, `self` can be accessed as follows:
 ```dae
 var oCNpc slf; slf = _^(ECX);
 ```

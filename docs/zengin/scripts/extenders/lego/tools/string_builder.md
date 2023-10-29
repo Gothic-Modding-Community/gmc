@@ -1,7 +1,11 @@
+---
+title: StringBuilder
+description: LeGo package for working with the 2D interface
+---
 # StringBuilder
 The StringBuilder is a package, designed to easily concatenate multiple elements into a string (without `ConcatStrings` and `IntToString`).
 
-All created StringBuilders are transient. All functions starting from `SB_InitBuffer`, including it, use the active StringBuilder set with `SB_New` or `SB_Use`, so there is no `#!dae var int stringBuilder` parameter in functions. A look at the example explains what I mean.
+All created StringBuilders are transient. All functions starting from [`SB_InitBuffer`](#sb_initbuffer), including it, use the active StringBuilder set with [`SB_New`](#sb_new) or [`SB_Use`](#sb_use), so there is no `#!dae var int stringBuilder` parameter in functions. A look at the example explains what I mean.
 
 !!! Warning
     The StringBuilder works with pointers, not handles like many other LeGo packages.
@@ -18,7 +22,7 @@ N/A
 ## Functions
 
 ### `SB_New`
-Creates and returns a new `StringBuilder`. At the same time, this new `StringBuilder` is set as active. (See `SB_Use`.) 
+Creates and returns a new `StringBuilder`. At the same time, this new `StringBuilder` is set as active. (See [`SB_Use`](#sb_use).) 
 ```dae
 func int SB_New()
 ```
@@ -34,7 +38,7 @@ func void SB_Use(var int sb)
 **Parameters**
 
 - `#!dae var int sb`  
-    Pointer to a `StringBuilder`, returned from `SB_New`
+    Pointer to a `StringBuilder`, returned from [`SB_New`](#sb_new)
 
 ### `SB_Get`
 Returns the active `StringBuilder`. 
@@ -43,7 +47,7 @@ func int SB_Get()
 ```
 **Return value**
 
-The function returns the active `StringBuilder` object - last set with `SB_Use` or just created with `SB_New`.
+The function returns the active `StringBuilder` object - last set with [`SB_Use`](#sb_use) or just created with [`SB_New`](#sb_new).
 
 ### `SB_InitBuffer`
 If the size of the resulting string is already known, the buffer can be set manually. This is usually not necessary.
@@ -98,10 +102,10 @@ func int SB_GetStream()
 ```
 **Return value**
 
-The function returns the stream as it is. `SB_Destroy` or `SB_Clear` destroy the returned pointer.
+The function returns the stream as it is. [`SB_Destroy`](#sb_destroy) or [`SB_Clear`](#sb_clear) destroy the returned pointer.
 
 ### `SB_Length`
-Returns the current length of the stream. Similar to `STR_Len` from [Ikarus](../../ikarus/index.md) .
+Returns the current length of the stream. Similar to [`STR_Len`](../../ikarus/functions/string.md#str_len) from [Ikarus](../../ikarus/index.md) .
 ```dae
 func int SB_Length()
 ```
@@ -171,7 +175,7 @@ func void SBflt(var float x)
     The appended Daedalus float value
 
 ### `SBf`
-Appends an Ikarus float in text form, to the active `StringBuilder`.
+Appends an [Ikarus float](../../ikarus/floats.md) in text form, to the active `StringBuilder`.
 ```dae
 func void SBf(var int x)
 ```

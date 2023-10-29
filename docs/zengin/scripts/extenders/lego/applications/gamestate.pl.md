@@ -1,5 +1,6 @@
 ---
-title: Stan gry
+title: Gamestate
+description: Pakiet LeGo do wywoływania funkcji podczas różnych stanów gry
 ---
 # Gamestate - stan gry
 Pakiet Gamestate pozwala sprawdzić stan gry (rozpoczęcie gry, ładowanie gry lub zmiana poziomu).

@@ -1,5 +1,5 @@
 ---
-title: Paski
+title: Bars
 ---
 # Bars - paski
 Ten pakiet bardzo ułatwia dodawanie nowych pasków, dla wyświetlania np. wytrzymałości.

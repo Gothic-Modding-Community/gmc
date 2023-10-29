@@ -1,5 +1,6 @@
 ---
-title: Różne
+title: Misc
+description: Pakiet LeGo implementujący różne funkcje pomocnicze
 ---
 # Misc - różne
 Pakiet Misc wprowadza różne funkcje pomocnicze, które nie pasowały do żadnego innego pakietu.
@@ -12,6 +13,16 @@ Nie dotyczy.
 
 ## Implementacja
 [:material-github: Misc.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Misc.d)
+
+## Stałe
+Pakiet Misc implementuje satłą `phi`
+```dae
+const int phi = 1070141312; // PI/2
+```
+która w rzeczywistości jest liczbą `pi` podzieloną przez 2 zapisaną jako ikarusowy float.
+
+Decymalnie: `1.5707...`
+
 
 ## Funkcje
 

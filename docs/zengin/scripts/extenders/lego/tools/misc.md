@@ -1,15 +1,28 @@
+---
+title: Misc
+description: LeGo package implementing various helper functions
+---
 # Misc
-
 The Misc package introduces various helper functions that did not fit into any other package.
 
 ## Dependencies  
-N/A
+
+- [Floats](../../ikarus/floats.md)
 
 ## Initialization  
 N/A
 
 ## Implementation
 [:material-github: Misc.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Misc.d)
+
+## Constants
+Misc package implements the `phi` constant
+```dae
+const int phi = 1070141312; // PI/2
+```
+whitch is actualy `pi` divided by 2 saved as an ikarus float. 
+
+Decimal: `1.5707...`
 
 ## Functions
 

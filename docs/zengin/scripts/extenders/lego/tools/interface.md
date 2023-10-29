@@ -1,3 +1,7 @@
+---
+title: Interface
+description: LeGo package for working with the 2D interface
+---
 # Interface
 This package offers a lot of useful functions to work with the 2D interface.
 
@@ -153,7 +157,7 @@ func void Print_DeleteText(var int hndl)
 **Parameters**
 
 - `#!dae var int hndl`  
-    Handle to `zCViewText` (form `Print_CreateText` or `Print_Ext`)
+    Handle to `zCViewText` (form [`Print_CreateText`](#print_createtext) or [`Print_Ext`](#print_ext))
 
 ### `Print_SetAlpha`
 Changes the alpha value of a given `zCViewText`.
@@ -217,7 +221,7 @@ func int Print_ToVirtual(var int pxl, var int dim)
 - `#!dae var int pxl`  
     Pixel position to convert
 - `#!dae var int dim`  
-    PS_X or PS_Y (see `Print_Screen`)
+    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
 **Return value**
 
@@ -233,7 +237,7 @@ func int Print_ToVirtualF(var int pxl, var int dim)
 - `#!dae var int pxl`  
     Pixel position to convert
 - `#!dae var int dim`  
-    PS_X or PS_Y (see `Print_Screen`)
+    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
 **Return value**
 
@@ -249,7 +253,7 @@ func int Print_ToPixel(var int vrt, var int dim)
 - `#!dae var int vrt`  
     Virtual position to convert
 - `#!dae var int dim`  
-    PS_X or PS_Y (see `Print_Screen`)
+    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
 **Return value**
 
@@ -265,7 +269,7 @@ func int Print_ToPixelF(var int vrt, var int dim)
 - `#!dae var int vrt`  
     Virtual position to convert
 - `#!dae var int dim`  
-    PS_X or PS_Y (see `Print_Screen`)
+    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
 **Return value**
 
@@ -281,7 +285,7 @@ func int Print_ToRatio(var int size, var int dim)
 - `#!dae var int size`  
     Size to convert
 - `#!dae var int dim`  
-    PS_X or PS_Y (see `Print_Screen`)
+    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
 **Return value**
 

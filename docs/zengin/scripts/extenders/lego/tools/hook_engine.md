@@ -29,6 +29,20 @@ func void HookEngine(var int address, var int oldInstr, var string function)
 - `#!dae var string function`  
     Name of Daedalus function to be called.
 
+### `HookEngineS`
+Alias to the `HookEngine` function.
+```dae
+func void HookEngineS(var int address, var int oldInstr, var string function)
+```
+**Parameters**
+
+- `#!dae var int address`  
+    Address of an engine function to which the function should be attached.
+- `#!dae var int oldInstr`  
+    The length in bytes of the instruction to be found at `address`, at least 5 bytes. Can be seen in IDA.
+- `#!dae var string function`  
+    Name of Daedalus function to be called.
+
 ### `HookEngineI`
 Alias to `HookEngine` with funcID.
 ```dae
@@ -225,4 +239,18 @@ func void Hook_ReturnFalse()
 Simple function to replace `return TRUE` in hook.
 ```dae
 func void Hook_ReturnTrue()
+```
+
+## Registers 
+In addition the HookEngine package implement x86 32-bit registers that can be used to access hooked function parameters.
+
+```dae
+var int EAX;
+var int ECX;
+var int EDX;
+var int EBX;
+var int ESP;
+var int EBP;
+var int ESI;
+var int EDI;    
 ```

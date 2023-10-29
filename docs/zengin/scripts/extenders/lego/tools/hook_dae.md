@@ -1,3 +1,7 @@
+---
+title: HookDaedalus
+description: LeGo package for hooking daedalus script functions
+---
 # HookDaedalus
 This package allows hooking daedalus functions. The principle is similar [HookEngine](hook_engine.md). We have a function (hooked function) into which we would like to hook another function (hook function).
 
@@ -19,6 +23,18 @@ N/A
 Hooks the function.
 ```dae
 func void HookDaedalusFunc(var func hooked, var func hook)
+```
+**Parameters**
+
+- `#!dae var func hooked`  
+    Hooked function
+- `#!dae var func hook`  
+    Hook function
+
+### `HookDaedalusFuncF`
+Alias to the `HookDaedalusFunc` function.
+```dae
+func void HookDaedalusFuncF(var func hooked, var func hook)
 ```
 **Parameters**
 

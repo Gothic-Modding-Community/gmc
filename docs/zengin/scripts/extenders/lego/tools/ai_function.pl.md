@@ -1,5 +1,6 @@
 ---
-title: Funkcje AI
+title: AI_Function
+description: Pakiet LeGo do kolejkowania funkcji w kolejce AI dowolnego NPC
 ---
 # AI_Function - Funkcje AI
 Ten pakiet umożliwia wywoływanie funkcji opóźnionych w czasie poprzez kolejkowanie ich w kolejce AI danego NPC. Może to być bardzo przydatne przy pisaniu przerywników filmowych na silniku lub implementacji nowych rutyn.
@@ -45,7 +46,7 @@ func void AI_Function_NI (var C_NPC slf, var func function, var int    param1, v
 ```
 Nie można wywoływać funkcji z więcej niż dwoma parametrami, ale parametry można przekazywać pośrednio przez zmienne globalne.
 
-W wywołanej funkcji dostęp do `slf` można uzyskać w następujący sposób:
+W wywołanej funkcji dostęp do `self` można uzyskać w następujący sposób:
 ```dae
 var oCNpc slf; slf = _^(ECX);
 ```

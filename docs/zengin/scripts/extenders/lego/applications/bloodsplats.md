@@ -1,3 +1,7 @@
+---
+title: Bloodsplats
+description: LeGo package for displaying bloodsplats on a screen when player is hit
+---
 # Bloodsplats
 If this package is activated, red blood splatters will appear on the screen when the hero takes damage. For this, the damage perception for the hero is redirected to `_B_HeroDamage()`. To use the Bloodsplats, the enclosed textures must be available. Also, the VFX "HERO_HURT" (also included) should be entered in the `VfxInst.d` to create an even better hit effect. All textures used here are from [CGTextures.com](http://CGTextures.com). If you use Bloodsplats in your modification, this site must be noted in the credits.
 
@@ -6,7 +10,7 @@ If this package is activated, red blood splatters will appear on the screen when
 
 ## Dependencies
 
-- Floats
+- [Floats](../../ikarus/floats.md)
 - View
 - [Random](../tools/random.md)
 - [Anim8](anim8.md)
@@ -36,3 +40,19 @@ Pretty pointless feature that smears the entire screen.
 ```dae
 func void Bloodsplats_Rage()
 ```
+
+### `Npc_GetPercFunc`
+`oCNpc::GetPerceptionFunc` engine function wraper
+```dae
+func int Npc_GetPercFunc(var C_Npc npc, var int type)
+```
+**Parameters**
+
+- `#!dae var C_NPC npc`  
+    NPC whose percepcion is checked
+- `#!dae var int type`  
+    Checked perception type (form [`Constant.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L213-L258))
+
+**Return value**
+
+The function returns the state of NPCs selected perception.

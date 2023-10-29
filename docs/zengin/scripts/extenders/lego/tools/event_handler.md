@@ -1,3 +1,7 @@
+---
+title: EventHandler
+description: LeGo package for creating new script events and triggering them
+---
 # EventHandler
 This package allows to create new events and trigger them at desired times. The [Gamestate](../applications/gamestate.md) package already uses it.
 

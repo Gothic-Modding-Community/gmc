@@ -32,7 +32,7 @@ func int new(var int inst)
 The function returns a new, valid PermMem handle.
 
 ### `create`
-Similar to `new`, but here a pointer is returned directly and not a handle. Caution! Not managed by PermMem!
+Similar to [`new`](#new), but here a pointer is returned directly and not a handle. Caution! Not managed by PermMem!
 ```dae
 func int create(var int inst)
 ```
@@ -83,7 +83,7 @@ func void release(var int hndl)
     Valid PermMem handle
 
 ### `delete`
-Cleans the handle just like `clear`, only the destructor is also called. 
+Cleans the handle just like [`clear`](#clear), only the destructor is also called. 
 ```dae
 func void delete(var int hndl)
 ```
@@ -93,7 +93,7 @@ func void delete(var int hndl)
     Valid PermMem handle
 
 ### `free`
-Similar to `delete`, only here a pointer is destroyed and not a handle. Caution! Not managed by PermMem!
+Similar to [`delete`](#delete), only here a pointer is destroyed and not a handle. Caution! Not managed by PermMem!
 ```dae
 func void free(var int ptr, var int inst)
 ```
@@ -333,7 +333,7 @@ func void PM_SaveClassPtr(var string name, var int ptr, var string className)
     Name of the class of stored pointer
 
 ### `PM_SaveClass`
-Saves a class like `PM_SaveClassPtr`.
+Saves a class like [`PM_SaveClassPtr`](#pm_saveclassptr).
 ```dae
 func void PM_SaveClass(var string name, var int ptr, var string className)
 ```
