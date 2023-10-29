@@ -28,9 +28,9 @@ The [`MEM_Debug`](functions/preamble.md#mem_debug) function allows you to set up
 - `#!dae const string zERR_DEBUG_PREFIX`  
     Specifies a prefix to be added to each debug message (default: `"Debug: "`).
 - `#!dae const int zERR_DEBUG_TOSPY`  
-    Controls whether `MEM_Debug` messages should be sent to zSpy (default: `1`).
+    Controls whether `MEM_Debug` messages should be sent to [zSpy](../../../tools/zSpy.md) (default: `1`).
 - `#!dae const int zERR_DEBUG_TYPE`  
-    Specifies the [message type](#error-message-types) for `MEM_Debug` messages when sent to zSpy (default: `zERR_TYPE_INFO`).
+    Specifies the [message type](#error-message-types) for `MEM_Debug` messages when sent to [zSpy](../../../tools/zSpy.md) (default: `zERR_TYPE_INFO`).
 - `#!dae const int zERR_DEBUG_TOSCREEN`  
     Determines whether `MEM_Debug` messages should be printed to the screen (default: `0`).
 - `#!dae const int zERR_DEBUG_ERRORBOX`  
