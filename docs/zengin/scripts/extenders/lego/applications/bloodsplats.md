@@ -11,7 +11,7 @@ If this package is activated, red blood splatters will appear on the screen when
 ## Dependencies
 
 - [Floats](../../ikarus/floats.md)
-- View
+- [View](../tools/view.md)
 - [Random](../tools/random.md)
 - [Anim8](anim8.md)
 

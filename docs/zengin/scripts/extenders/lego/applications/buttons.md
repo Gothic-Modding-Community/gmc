@@ -4,7 +4,7 @@ This package extends the handling of the mouse and allows creating rectangular b
 ## Dependencies
 
 - [PermMem](../tools/permmem.md)
-- View
+- [View](../tools/view.md)
 
 ## Initialization
 Initialize with `LeGo_Buttons` flag.

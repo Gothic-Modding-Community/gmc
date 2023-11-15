@@ -20,7 +20,7 @@ Returns the ASCII value of a character at a specific position in a string.
 ```dae
 func int STR_GetCharAt (var string str, var int pos)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var string str`  
     The input string
@@ -36,7 +36,7 @@ Returns the length of a string.
 ```dae
 func int STR_Len (var string str)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var string str`  
     The input string
@@ -50,7 +50,7 @@ Converts a string to a pointer to its character array.
 ```dae
 func int STR_toChar (var string str)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var string str`  
     The input string
@@ -64,7 +64,7 @@ Converts a character array to a string.
 ```dae
 func string STR_FromChar(var int char)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var int char`  
     Pointer to the character array
@@ -78,7 +78,7 @@ Extracts a substring from a given string.
 ```dae
 func string STR_SubStr (var string str, var int start, var int count)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var string str`  
     The input string
@@ -97,7 +97,7 @@ Extracts a prefix of a given string, similar to [`STR_SubStr`](#str_substr), but
 ```dae
 func string STR_Prefix (var string str, var int len)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var string str`  
     The input string
@@ -156,7 +156,7 @@ Converts a string to an integer.
 ```dae
 func int STR_ToInt (var string str)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var string str`  
     The input string
@@ -267,7 +267,7 @@ Converts a string to uppercase.
 ```dae
 func string STR_Upper(var string str)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var string str`  
     The input string
@@ -281,7 +281,7 @@ Converts a string to lowercase.
 ```dae
 func string STR_Lower(var string str)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var string str`  
     The input string

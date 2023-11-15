@@ -3,7 +3,7 @@ With this package items can be rendered on the screen. Since items are rendered 
 ## Dependencies
 
 - [List](../tools/list.md)
-- View
+- [View](../tools/view.md)
 - [PermMem](../tools/permmem.md)
 
 ## Initialization

@@ -23,7 +23,7 @@ In the Constants file, you'll find user variables that control various aspects, 
 
 ### MEM_Debug
 
-The [`MEM_Debug`](functions/preamble.md#mem_debug) function allows you to set up a custom message channel for debugging purposes. You can adjust the following variables to configure this channel:
+The [`MEM_Debug`](functions/debug.md#mem_debug) function allows you to set up a custom message channel for debugging purposes. You can adjust the following variables to configure this channel:
 
 - `#!dae const string zERR_DEBUG_PREFIX`  
     Specifies a prefix to be added to each debug message (default: `"Debug: "`).

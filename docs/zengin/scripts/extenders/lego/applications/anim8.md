@@ -3,7 +3,7 @@ title: Anim8
 description: LeGo package for "animating" float values over a period of time
 ---
 # Anim8
-This package allows int or float values to be "animated" over a period of time. It is possible to string several commands together and to set the type of movement. The new version of PrintS from [Interface](../tools/interface.md) uses Anim8.
+This package allows int or float values to be "animated" over a period of time. It is possible to string several commands together and to set the type of movement. The new version of [`PrintS`](../tools/interface.md#prints) from [Interface](../tools/interface.md) uses Anim8.
 
 ## Dependencies
 

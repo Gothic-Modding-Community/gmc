@@ -4,7 +4,7 @@ This package makes it very easy to add new bars, for e.g. stamina.
 ## Dependencies
 
 - [PermMem](../tools/permmem.md)
-- View
+- [View](../tools/view.md)
 
 ## Initialization
 Initialize with `LeGo_Bars` flag.

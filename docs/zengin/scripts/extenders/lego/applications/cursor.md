@@ -9,7 +9,7 @@ This package implements Gothic in-game mouse cursor support. To visually display
 
 - [Floats](../../ikarus/floats.md)
 - [FrameFunctions](../tools/frame_functions.md)
-- View
+- [View](../tools/view.md)
 
 ## Initialization
 Initialize with `LeGo_Cursor` flag.

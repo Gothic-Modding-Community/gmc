@@ -70,7 +70,7 @@ func int VirtualProtect(var int lpAddress, var int dwSize, var int flNewProtect)
 - `#!dae var int dwSize`  
     The size of the region whose access protection attributes are to be changed, in bytes.
 - `#!dae var int flNewProtect`  
-    The memory protection option. All options can be found [here](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L1908).
+    The memory protection option. All options can be found [here](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L1907-L1919).
 
 **Return value**
 
@@ -103,7 +103,7 @@ func int MEM_MessageBox(var string txt, var string caption, var int type)
 - `#!dae var string caption`  
     Header of MessageBox.
 - `#!dae var int type`  
-    Type of MessageBox. All types listed [here](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L1957).
+    Type of MessageBox. All types listed [here](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L1956-L1992).
 
 ### `MEM_InfoBox`
 Alias to `MEM_MessageBox` with "Information:" header and `MB_OK | MB_ICONINFORMATION` type.

@@ -78,6 +78,7 @@ func int IsHookD(var int funcID)
     Symbol index of a hook function
 
 **Return value**
+
 The function returns `TRUE` if the function is already hooking another, `FALSE` is returned otherwise.
 
 ### `ContinueCall`
@@ -93,7 +94,7 @@ func void PassArgumentI(var int i)
 ```
 **Parameters**
 
-- `#!dae var int i`
+- `#!dae var int i`   
     Integer argument to forward
 
 ### `PassArgumentS`
@@ -103,7 +104,7 @@ func void PassArgumentS(var string s)
 ```
 **Parameters**
 
-- `#!dae var string s`
+- `#!dae var string s`   
     String argument to forward
 
 ### `PassArgumentN`
@@ -113,7 +114,7 @@ func void PassArgumentN(var instance n)
 ```
 **Parameters**
 
-- `#!dae var instance n`
+- `#!dae var instance n`   
     Instance argument to forward
 
 ## Examples
