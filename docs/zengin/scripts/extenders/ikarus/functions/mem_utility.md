@@ -18,8 +18,8 @@ MEM_InitAll();
 ### `MEM_Alloc`
 Allocates a specified amount of memory and returns a pointer to the allocated memory area. 
 
-!!! Danger
-	Gothic does not and cannot retain a reference to this memory area or release it, even when destroying the session. Therefore, memory should only be reserved under certain conditions:
+!!! Danger 
+    Gothic does not and cannot retain a reference to this memory area or release it, even when destroying the session. Therefore, memory should only be reserved under certain conditions:
 
 	- It is guaranteed to exist and can be released again with [`MEM_Free`](#mem_free) after loading a save game.
 	- Gothic is aware of this memory area and independently releases it. 
@@ -66,8 +66,8 @@ The function returns a pointer to the modified memory area.
 ### `MEM_Free`
 Releases an allocated memory area. 
 
-!!! Danger
-	Great caution is advised, especially when attempting to destroy engine objects, as no destructors are called!
+!!! Danger 
+    Great caution is advised, especially when attempting to destroy engine objects, as no destructors are called!
 
 Releasing small things such as list elements can be done easily.
 ```dae
