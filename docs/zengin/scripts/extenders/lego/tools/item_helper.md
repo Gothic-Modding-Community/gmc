@@ -16,9 +16,9 @@ N/A
 
 ## Functions
 
-### `ITM_GetPtr`
+### `Itm_GetPtr`
 ```dae
-func int ITM_GetPtr(var int instance)
+func int Itm_GetPtr(var int instance)
 ```
 **Parameters**
 

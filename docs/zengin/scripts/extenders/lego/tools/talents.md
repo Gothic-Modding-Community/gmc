@@ -21,11 +21,11 @@ LeGo_Init(LeGo_PermMem);
 
 ## Functions
 
-### `NPC_GetID`
+### `Npc_GetID`
 Returns unique ID specific for provided NPC.
 
 ```dae
-func int NPC_GetID(var C_NPC slf)
+func int Npc_GetID(var C_NPC slf)
 ```
 **Parameters**
 
@@ -36,10 +36,10 @@ func int NPC_GetID(var C_NPC slf)
 
 The function returns NPCs unique ID.
 
-### `NPC_FindByID`
+### `Npc_FindByID`
 Finds the NPC pointer of an NPC with the given ID.
 ```dae
-func int NPC_FindByID(var int ID)
+func int Npc_FindByID(var int ID)
 ```
 **Parameters**
 
@@ -73,7 +73,7 @@ func void TAL_SetValue(var C_NPC npc, var int talent, var int value)
 - `#!dae var int value`  
     Value to be set
 
-### TAL_GetValue
+### `TAL_GetValue`
 Returns the value of a saved talent for specified NPC.
 ```dae
 func int TAL_GetValue(var C_NPC npc, var int talent)

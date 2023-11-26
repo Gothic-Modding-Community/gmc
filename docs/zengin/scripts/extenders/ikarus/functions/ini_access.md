@@ -18,6 +18,17 @@ MEM_InitAll();
 
 ## Read functions
 
+### `MEM_GetCommandLine`
+Returns the contents of the command line passed to Gothic.
+```dae
+func string MEM_GetCommandLine()
+```
+**Return value**
+
+The function returns contents of the command line passed to Gothic. This could, for example, look like this:
+
+`"-TIME:7:35 -GAME:TEST_IKARUS.INI -ZREPARSE -ZWINDOW -ZLOG:5,S -DEVMODE -ZMAXFRAMERATE:30"`
+
 ### `MEM_GetGothOpt`
 Searches the `Gothic.ini` for an option.
 ```dae

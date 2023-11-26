@@ -1,5 +1,5 @@
 ---
-title: Polecenia konsoli
+title: Console Commands
 ---
 # Console Commands - polecenia konsoli
 Ten Pakiet pozwala na tworzenie nowych poleceń konsoli dostępnej po naciśnięciu klawisza F2 w trybie marvin.
@@ -61,7 +61,7 @@ Funkcja zwraca `TRUE` jeśli znajdzie odpowiednią funkcję, inaczej `FALSE`.
 ## Przykłady
 
 ### Proste polecenie konsoli
-Jako prosty przykład stwórzmy polecenie version, które wyświetli nam wersję modyfikacji. 
+Jako prosty przykład stwórzmy polecenie **version**, które wyświetli nam wersję modyfikacji. 
 Po pierwsze, deklarujemy stałą zmienną `string` do przechowywania informacji o wersji.
 ```dae
 const string Mod_Version = "Wersja modyfikacji - 0.1alpha";
@@ -69,7 +69,7 @@ const string Mod_Version = "Wersja modyfikacji - 0.1alpha";
 Następnie tworzymy nową funkcję.
 
 !!! Note
-    Zwróć uwagę na poprawną sygnaturę funkcji. Jeśli nie będzie błędna, polecenie spowoduje awarię gry.
+    Zwróć uwagę na poprawną sygnaturę funkcji. Jeśli będzie ona błędna, polecenie spowoduje awarię gry.
 
 ```dae
 // Ta funkcja jest wywoływana przez nasze nowe polecenie
@@ -82,7 +82,7 @@ Następnie musimy zarejestrować polecenie. Dla wygody stworzyłem nową funkcj�
 ```dae
 func void RegisterConsoleFunctions()
 {
-    CC_Register (CC_ModVersion, "wersja_moda", "Wersja mojej modyfikacji.");
+    CC_Register (CC_ModVersion, "version", "Wersja mojej modyfikacji.");
 };
 ```
 Na koniec musimy wywołać tę funkcję w `INIT_GLOBAL`.

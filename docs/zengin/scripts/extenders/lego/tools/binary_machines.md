@@ -1,3 +1,7 @@
+---
+title: BinaryMachines
+description: LeGo package for creating, writing and reading your own files
+---
 # BinaryMachines
 This package allows you to create and write your own files anywhere in the file system.
 

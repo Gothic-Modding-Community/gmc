@@ -1,3 +1,7 @@
+---
+title: Gamestate
+description: LeGo package for calling functions during different game states
+---
 # Gamestate
 Gamestate package allows to check for different game states (game start, game load or level change).
 

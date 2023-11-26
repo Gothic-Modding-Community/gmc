@@ -1,3 +1,7 @@
+---
+title: BinaryMachines
+description: Pakiet LeGo do tworzenia, zapisywania i odczytywania własnych plików
+---
 # BinaryMachines
 Ten pakiet pozwala tworzyć i zapisywać własne pliki w dowolnym miejscu w systemie plików.
 

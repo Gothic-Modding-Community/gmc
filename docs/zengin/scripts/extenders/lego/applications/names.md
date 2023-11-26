@@ -2,7 +2,7 @@
 Allows the user to change NPC name e.g. after he shows up.
 
 ## Dependencies
-N/A
+- [Talents](../tools/talents.md)
 
 ## Initialization
 N/A

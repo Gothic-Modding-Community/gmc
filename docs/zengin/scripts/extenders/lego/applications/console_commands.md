@@ -58,7 +58,7 @@ The function returns `TRUE` if there is a corresponding function, `FALSE` is ret
 ## Examples
 
 ### Basic command example
-As a basic example - let us create a version command, which prints a version of our modification.  
+As a basic example - let us create a **version** command, which prints a version of our modification.  
 Firstly, we declare a constant `string` variable to hold the version string to be shown.
 ```dae
 const string Mod_Version = "My mod version 0.1alpha";
@@ -78,7 +78,7 @@ We then have to register the functions. For convenience, I created a new `Regist
 ```dae
 func void RegisterConsoleFunctions()
 {
-    CC_Register (CC_ModVersion, "mod_version", "Version of my amazing mod.");
+    CC_Register (CC_ModVersion, "version", "Version of my amazing mod.");
 };
 ```
 Lastly, we have to call this function from `INIT_GLOBAL` function.

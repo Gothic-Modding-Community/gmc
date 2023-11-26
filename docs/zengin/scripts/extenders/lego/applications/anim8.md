@@ -1,9 +1,13 @@
+---
+title: Anim8
+description: LeGo package for "animating" float values over a period of time
+---
 # Anim8
-This package allows int or float values to be "animated" over a period of time. It is possible to string several commands together and to set the type of movement. The new version of PrintS from [Interface](../tools/interface.md) uses Anim8.
+This package allows int or float values to be "animated" over a period of time. It is possible to string several commands together and to set the type of movement. The new version of [`PrintS`](../tools/interface.md#prints) from [Interface](../tools/interface.md) uses Anim8.
 
 ## Dependencies
 
-- Floats
+- [Floats](../../ikarus/floats.md)
 
 ## Initialization
 Initialize with `LeGo_Anim8` flag.
@@ -32,7 +36,7 @@ func int Anim8_New(var int initialValue, var int IsFloat)
 The function returns handle of the Anim8 object.
 
 ### `Anim8_NewExt`
-Creates a new Anim8 object with advanced options. Extends the `Anim8_New` function.
+Creates a new Anim8 object with advanced options. Extends the [`Anim8_New`](#anim8_new) function.
 ```dae
 func int Anim8_NewExt(var int value, var func handler, var int data, var int IsFloat)
 ```
@@ -55,14 +59,14 @@ func int Anim8_NewExt(var int value, var func handler, var int data, var int IsF
 The function returns handle of the Anim8 object.
 
 ### `Anim8_Delete`
-Deletes an Anim8 object created with `Anim8_New`.
+Deletes an Anim8 object created with [`Anim8_New`](#anim8_new).
 ```dae
 func void Anim8_Delete(var int handle)
 ```
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 
 ### `Anim8_Get`
 Get current value of the object.
@@ -72,7 +76,7 @@ func int Anim8_Get(var int handle)
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 
 **Return value**
 
@@ -86,7 +90,7 @@ func void Anim8_Set(var int handle, var int value)
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 - `#!dae var int value`  
     New value of the object
 
@@ -98,7 +102,7 @@ func int Anim8_Empty(var int handle)
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 
 **Return value**
 
@@ -112,19 +116,19 @@ func void Anim8_RemoveIfEmpty(var int handle, var int on)
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 - `#!dae var int on`  
     `TRUE`: enable, `FALSE`: disable
 
 ### `Anim8_RemoveDataIfEmpty`
-With `Anim8_NewExt` handler and data can be set. If this function is called with `TRUE`, `data` is taken as a handle and `#!dae delete(data)` is called if the object is empty. Works only if `Anim8_RemoveIfEmpty` is also activated.
+With [`Anim8_NewExt`](#anim8_newext) handler and data can be set. If this function is called with `TRUE`, `data` is taken as a handle and `#!dae delete(data)` is called if the object is empty. Works only if [`Anim8_RemoveIfEmpty`](#anim8_removeifempty) is also activated.
 ```dae
 func void Anim8_RemoveDataIfEmpty(var int handle, var int on)
 ```
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 - `#!dae var int on`  
     `TRUE`: enable, `FALSE`: disable
 
@@ -136,7 +140,7 @@ func void Anim8(var int handle, var int target, var int span, var int interpol)
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 - `#!dae var int target`  
     Target value of this command. When the object's value has reached this value, the command is considered completed and deleted.
 - `#!dae var int span`  
@@ -152,7 +156,7 @@ func void Anim8q(var int handle, var int target, var int span, var int interpol)
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 - `#!dae var int target`  
     Target value of this command. When the object's value has reached this value, the command is considered completed and another one in the queue will start.
 - `#!dae var int span`  
@@ -161,14 +165,14 @@ func void Anim8q(var int handle, var int target, var int span, var int interpol)
     What form of movement is used (See [constants](../various/userconstants.md#anim8) for this)
 
 ### `Anim8_CallOnRemove`
-Registers a function to be called when the object is deleted (e.g. by `Anim8_RemoveIfEmpty`)
+Registers a function to be called when the object is deleted (e.g. by [`Anim8_RemoveIfEmpty`](#anim8_removeifempty))
 ```dae
 func void Anim8_CallOnRemove(var int handle, var func dfnc)
 ```
 **Parameters**
 
 - `#!dae var int handle`  
-    Handle returned from `Anim8_New`
+    Handle returned from [`Anim8_New`](#anim8_new)
 - `#!dae var func dfnc`  
     This function is called when the object is deleted
 

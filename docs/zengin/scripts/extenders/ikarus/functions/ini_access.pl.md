@@ -1,3 +1,6 @@
+---
+title: Ini File Access
+---
 # Dostęp do plików konfiguracyjnych
 Ta część Ikarusa umożliwia dostęp do `Gothic.ini` i pliku konfiguracyjnego załadowanej modyfikacji.
 
@@ -14,6 +17,17 @@ MEM_InitAll();
 [:material-github: Ikarus.d na GitHubie](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L4293)
 
 ## Funkcje odczytu
+
+### `MEM_GetCommandLine`
+Zwraca zawartość linii poleceń przekazaną do Gothica.
+```dae
+func string MEM_GetCommandLine()
+```
+**Return value**
+
+Funkcja zwraca zawartość linii poleceń przekazaną do Gothica. Może to wyglądać na przykład tak:
+
+`"-TIME:7:35 -GAME:TEST_IKARUS.INI -ZREPARSE -ZWINDOW -ZLOG:5,S -DEVMODE -ZMAXFRAMERATE:30"`
 
 ### `MEM_GetGothOpt`
 Przeszukuje `Gothic.ini` w poszukiwaniu opcji

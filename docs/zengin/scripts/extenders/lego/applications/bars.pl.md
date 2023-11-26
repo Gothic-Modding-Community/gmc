@@ -1,5 +1,5 @@
 ---
-title: Paski
+title: Bars
 ---
 # Bars - paski
 Ten pakiet bardzo ułatwia dodawanie nowych pasków, dla wyświetlania np. wytrzymałości.
@@ -7,7 +7,7 @@ Ten pakiet bardzo ułatwia dodawanie nowych pasków, dla wyświetlania np. wytrz
 ## Zależności
 
 - [PermMem](../tools/permmem.md)
-- View
+- [View](../tools/view.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Bars`.

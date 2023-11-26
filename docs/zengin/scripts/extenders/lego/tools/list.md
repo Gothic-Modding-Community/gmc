@@ -12,7 +12,7 @@ N/A
 
 ## Functions
 !!! Note
-    All functions come with an additional "S" at the end for objects of type `zCListSort`. (Example: List_Node S .) Unlike most LeGo packages, pointers are used here, not handles! 
+    All functions, expect `List_Compare` come with an additional "S" at the end for objects of type `zCListSort`. (Example: `List_NodeS` .) Unlike most LeGo packages, pointers are used here, not handles! 
 
 ### `List_Create`
 Creates a list with an initial value.
@@ -294,9 +294,25 @@ func void List_InsertSorted(var int list, var int data, var func compare)
 - `#!dae var func compare`  
     A comparison function used to determine the sort order.
 
+### `List_Compare`
+```dae
+func int List_Compare(var int data1, var int data2, var func compare)
+```
+**Parameters:**
+
+- `#!dae var int data1`  
+    The first integer value.
+- `#!dae var int data2`  
+    The second integer value.
+- `#!dae var func compare`  
+    One of comparsion functions.
+**Return value**
+
+The function returns the return value of specified comparsion funtion.
+
 ## Comparison Functions
 
-The following comparison functions can be used as the `compare` parameter in the `List_InsertSorted` function:
+The following comparison functions can be used as the `compare` parameter in the `List_InsertSorted` and `List_Compare` function:
 
 #### `List_CmpAscending`
 Compares two integer values in ascending order.

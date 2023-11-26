@@ -103,28 +103,7 @@ This section covers some of the basic things done in the editor.
 
 ### Common VOB settings
 
-VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though:
-
-- vobName: an identifier shown in the editor and sometimes used in scripts. With some VOB types it's important to set this; for example waypoints and freepoints.
-- visual: the mesh of the VOB
-- showVisual: as the name suggests. Unknown usage.
-- visualCamAlign: Unknown usage, possibly related to cutscenes.
-- visualAniMode: Wind sway animation setting.
-- visualAniModeStrength: a multiplier for the animation; small values such as `0.001` are typically used.
-- vobFarClipZScale: a multiplier for the occlusion culling distance. Almost always left as 1, but it can be used to stop models from appearing from thin air in plain sight; e.g. a VOB of a hut which can be seen from afar might benefit from increasing this distance. The effects of this are visible in the editor.
-- cdStatic: determines if the VOB will collide with the world mesh and other VOBs with `cdStatic` on. This is mostly used to help with placing objects in the editor, e.g. furniture.
-- cdDyn: determines if the VOB will collide with dynamic objects (NPCs, items, etc.). This basically determines if the object has collision during gameplay.
-
-!!! warning
-    Both collision settings affect your ability to move VOBs. This can be either useful or disruptive depending on what you want to do. For example, if you want to clip a mesh with another one, you will need to disable collision and re-enable it after putting it in place.
-
-- staticVob: determines if the VOB is taken into consideration in static lighting calculations. Usually enabled in decorative VOBs, but some of the interactive ones have it disabled.
-- dynShadow: seems to determine if the object will cast a shadow when affected by dynamic light (e.g. torches).
-- zbias: Usage unknown.
-- isAmbient: Usage unknown.
-
-!!! tip
-    One of the best ways of learning how to set up various VOBs is opening one of the original maps and checking the type and configuration of the related VOBs. Some things will require scripting to accomplish, however.
+VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though. The full descripton of a zCVob class can be found [here](Classes/zCVob.md).
 
 ## Issues
 

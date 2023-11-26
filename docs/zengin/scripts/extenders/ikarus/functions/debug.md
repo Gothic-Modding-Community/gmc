@@ -1,5 +1,5 @@
-# Preamble
-The preamble is a bunch of functions related with debug and some stuff, that doesn't fit to other sections.
+# Debug
+A set of debugging and error-handling functions for mod development with Ikarus.
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
@@ -11,7 +11,7 @@ MEM_InitAll();
 ```
 
 ## Implementation
-[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L137)
+[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L135-L327)
 
 ## Functions
 
@@ -20,7 +20,7 @@ Checks if the version of Ikarus is the specified version or newer.
 ```dae
 func int MEM_CheckVersion(var int base, var int major, var int minor)
 ```
-**Parameters**:
+**Parameters**
 
 - `#!dae var int base`  
     Base version number
@@ -32,6 +32,17 @@ func int MEM_CheckVersion(var int base, var int major, var int minor)
 **Return value**
 
 The function returns `TRUE` if the version of Ikarus is the specified version or newer, `FALSE` is returned otherwise.
+
+
+### `MEM_SetShowDebug`
+Sets the variable that is also toggled by the `toggle debug` command. As a result, messages outputted by `PrintDebug` are directed to the [zSpy](../../../../tools/zSpy.md)
+```dae
+func void MEM_SetShowDebug(var int on)
+```
+**Parameters**
+
+- `#!dae var int on`   
+	Specifies whether to turn on (`TRUE`) or off (`FALSE`) debug information.
 
 ### `MEM_SendToSpy`
 Sends a message to the debugging console.
@@ -102,7 +113,7 @@ func void MEM_AssertFail(var string assertFailText)
     The assertion failure message.
 
 ### `MEM_Debug`
-Sends a debug message to the zSpy or on screen or displays an error box basing on `zERR_DEBUG_TOSPY`, `zERR_DEBUG_TOSCREEN` and `zERR_DEBUG_ERRORBOX` constants (`TRUE` - display).
+Freely conigurable debug chanell. See how to setup it in the [Constants](../constants.md#mem_debug) article.
 ```dae
 func void MEM_Debug(var string message)
 ```

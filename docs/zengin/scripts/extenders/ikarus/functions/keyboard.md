@@ -17,11 +17,26 @@ MEM_InitAll();
 ```
 
 ## Implementation
-[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L4198)
+[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L4198-L4292)
 
 ## Functions
 !!! Tip
     Different players use different keys for specific actions! However, it is possible to get key assigned to the action from Gothic.ini. See [Ini access](ini_access.md#key-functions).
+
+### `MEM_KeyPressed`
+Checks if the key is hold right at the moment of function call.
+```dae
+func int MEM_KeyPressed(var int key)
+```
+**Parameters**
+
+- `#!dae var int key`  
+    Checked key
+
+**Return value**
+
+The function returns `TRUE` if the key is hold, `FALSE` is returned otherwise.
+
 ### `MEM_KeyState`
 Returns the state of the `key`.
 ```dae

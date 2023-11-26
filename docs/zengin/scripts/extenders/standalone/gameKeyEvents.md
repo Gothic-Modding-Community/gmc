@@ -37,7 +37,8 @@ func int Game_KeyEvent(var int key, var int pressed) {
 };
 ```
 
-- To change detected key rename `KEY_LBRACKET` to your own key e.g. taken from Ikarus constants.
-- To detect pressing a key leave `(pressed)` unchanged but if you want to detect holding change it to `(1)`
+- To change detected key rename `KEY_LBRACKET` to your own key e.g. taken from [Ikarus constants](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d#L129-L288).
+- To detect pressing a key leave `(pressed)` unchanged but if you want to detect holding change it to `(!pressed)`. That's because 
+> pressed is FALSE: key is held, pressed is TRUE: key press onset
 - To run code when a key is pressed, paste it or call a function where the comment is.
 - To detect more than one key add `else if`.

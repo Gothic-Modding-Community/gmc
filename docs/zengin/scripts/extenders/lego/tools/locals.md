@@ -27,7 +27,7 @@ It is hard to explain how to use it, but very easy to understand once you've see
 func int Final()
 ```
 
-??? abstract "Examples"
+??? abstract "Example"
     With `final()` it is very easy to emulate Java's `final` clause, i.e. a block of code can be specified, which is executed after this function is exited, regardless of when or where the function is exited.
     ```dae
     func void testFinal()

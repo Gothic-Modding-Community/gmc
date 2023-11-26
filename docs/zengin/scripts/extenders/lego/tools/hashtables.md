@@ -1,3 +1,7 @@
+---
+title: Hashtables
+description: LeGo package implementing Hashtable data structure to gothic scripts
+---
 # Hashtables
 Hashtables package is an implementation of hashtables in Gothic. Currently (version 2.8.0) only integers are supported as keys. The Hashtables grow automatically.
 
@@ -173,3 +177,59 @@ func void HT_Destroy(var int handle)
 
 - `#!dae var int handle`  
     The handle of the hashtable to be deleted
+
+## Examples
+
+### Simple operations
+```dae
+func void PrintKeyValuePair(var int key, var int val)
+{
+    Print(ConcatStrings(ConcatStrings("Key: ", IntToString(key)), ConcatStrings(", Value: ", IntToString(val))));
+};
+
+func void exapmle()
+{
+    // Create a new hashtable
+    var int hashtableHandle; hashtableHandle = HT_Create();
+
+    // Insert values into the hashtable
+    HT_Insert(hashtableHandle, 42, 1);
+    HT_Insert(hashtableHandle, 23, 2);
+    HT_Insert(hashtableHandle, 56, 3);
+
+    // Get a value from the hashtable
+    var int value; value = HT_Get(hashtableHandle, 2);
+    Print(ConcatStrings("Value associated with key 2: ", IntToString(value)));
+
+    // Check if a key exists in the hashtable
+    if (HT_Has(hashtableHandle, 3))
+    {
+        Print("Key 3 exists in the hashtable.");
+    }
+    else
+    {
+        Print("Key 3 does not exist in the hashtable.");
+    };
+
+    // Remove a key from the hashtable
+    HT_Remove(hashtableHandle, 1);
+
+    // Change the value associated with a key
+    HT_Change(hashtableHandle, 99, 3);
+
+    // Insert a value or change it if the key exists
+    HT_InsertOrChange(hashtableHandle, 123, 4);
+
+    // Get the number of entries in the hashtable
+    var int numEntries; numEntries = HT_GetNumber(hashtableHandle);
+    Print(ConcatStrings("Number of entries in the hashtable: ", IntToString(numEntries)));
+
+    
+	// Iterate through the hashtable and print key-value pairs
+    // Function from top of the example is used here
+    HT_ForEach(hashtableHandle, PrintKeyValuePair);
+
+    // Destroy the hashtable
+    HT_Destroy(hashtableHandle);
+};
+```
