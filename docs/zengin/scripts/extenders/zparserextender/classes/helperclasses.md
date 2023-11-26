@@ -47,7 +47,7 @@ func void Vob_SetVobPosition( var C_Vob vob, var C_Position pos ) {};
     The following classes define properties of `C_VOB` objects or classes derived from it.
     
 ## C_VOB_DATA
-Represents universal `zCVob` class
+Represents universal [`zCVob`](../../../../worlds/Classes/zCVob.md) class
 ```dae
 class C_VOB_DATA
 {

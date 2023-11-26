@@ -42,7 +42,7 @@ func void Gamestate_RemoveListener(var func listener)
 
 ## Przykłady
 Istnieją teraz dwie możliwości. Wszystko można zrobić bezpośrednio w `Init_Global` lub za pomocą [EventHandler](../tools/event_handler.md).
-### `Init_Global`
+### Init_Global
 ```dae
 func void Init_Global()
 {
@@ -68,8 +68,6 @@ func void Init_Global()
     };
 };
 ```
-
-Może to być przydatne podczas pracy z PermMem, gdzie obiekty PermMem nie muszą być odtwarzane po załadowaniu gry.
 
 Można to również zrobić tak:
 ```dae
@@ -99,7 +97,7 @@ func void Init_Global()
 };
 ```
 
-### EventHandler - obsługa zdarzeń
+### EventHandler
 ```dae
 func void Init_Global()
 {

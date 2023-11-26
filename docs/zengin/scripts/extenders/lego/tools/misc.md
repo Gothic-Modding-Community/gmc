@@ -29,7 +29,7 @@ Decimal: `1.5707...`
 ### `atan2f`
 Calculates the arcus tangent of an angle between the origin and (x, y) point.
 ```dae
-func float atan2f(var int x, var int y)
+func int atan2f(var int x, var int y)
 ```
 **Parameters**
 
@@ -45,73 +45,73 @@ The function returns arcus tangent in radians as Ikarus `float`.
 ### `sin`
 Calculates the sine of an angle given in radians.
 ```dae
-func float sin(var float angle)
+func int sin(var int angle)
 ```
 **Parameters**
 
-- `#!dae var float angle`  
+- `#!dae var int angle`  
     The angle in radians as a Ikarus `float`
 
 **Return value**
 
-The function returns sine of the angle.
+The function returns sine of the angle as Ikarus `float`.
 
 ### `cos`
 Calculates the cosine of an angle given in radians.
 ```dae
-func float cos(var float angle)
+func int cos(var int angle)
 ```
 **Parameters**
 
-- `#!dae var float angle`  
+- `#!dae var int angle`  
     The angle in radians as a Ikarus `float`
 
 **Return value**
 
-The function returns cosine of the angle.
+The function returns cosine of the angle as Ikarus `float`.
 
 
 ### `tan`
 Calculates the tangent of an angle given in radians.
 ```dae
-func float tan(var float angle)
+func int tan(var int angle)
 ```
 **Parameters**
 
-- `#!dae var float angle`  
+- `#!dae var int angle`  
     The angle in radians as a Ikarus `float`
 
 **Return value**
 
-The function returns tangent of the angle.
+The function returns tangent of the angle as Ikarus `float`.
 
 ### `asin`
-Calculates the arcus sine
+Calculates the arcus sine.
 ```dae
-func float asin(var float sine)
+func int asin(var int sine)
 ```
 **Parameters**
 
-- `#!dae var float sine`  
+- `#!dae var int sine`  
     The sine of an angle as a Ikarus `float`
 
 **Return value**
 
-The function returns arcus sine of the angle.
+The function returns arcus sine of the angle as Ikarus `float`.
 
 ### `acos`
 Calculates the arcus cosine
 ```dae
-func float acos(var float cosine)
+func int acos(var int cosine)
 ```
 **Parameters**
 
-- `#!dae var float cosine`  
+- `#!dae var int cosine`  
     The cosine of an angle as a Ikarus `float`
 
 **Return value**
 
-The function returns arcus cosine of the angle.
+The function returns arcus cosine of the angle as Ikarus `float`.
 
 
 ### `distance2D`
@@ -137,17 +137,17 @@ The function returns the distance between the two points.
 ### `distance2Df`
 Calculates the distance between two points on a two-dimensional plane but parameters and return values are Ikarus `floats`.
 ```dae
-func float distance2Df(var float x1, var float x2, var float y1, var float y2)
+func int distance2Df(var int x1, var int x2, var int y1, var int y2)
 ```
 **Parameters**
 
-- `#!dae var float x1`  
+- `#!dae var int x1`  
     X-coordinate of the first point
-- `#!dae var float x2`  
+- `#!dae var int x2`  
     X-coordinate of the second point
-- `#!dae var float y1`  
+- `#!dae var int y1`  
     Y-coordinate of the first point
-- `#!dae var float y2`  
+- `#!dae var int y2`  
     Y-coordinate of the second point
 
 **Return value**

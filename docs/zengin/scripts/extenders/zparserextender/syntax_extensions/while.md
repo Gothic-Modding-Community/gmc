@@ -2,7 +2,7 @@
 title: While loop
 ---
 # Native WHILE loop
-Just like [Ikarus](../../../../../notready.md) zParserExtender implements a while loop.
+Just like [Ikarus](../../ikarus/functions/jumps_loops.md#while-loop) zParserExtender implements a while loop.
 
 ```dae
 var int value; value = 10;

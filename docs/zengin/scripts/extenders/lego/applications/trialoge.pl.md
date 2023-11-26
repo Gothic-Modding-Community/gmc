@@ -114,7 +114,7 @@ Resetuje kamery dialogowe do ustawień domyślnych.
 func void DiaCAM_Enable()
 ```
 ### `TRIA_Wait`
-Makes `self` and `other` wait for each other, e.g. for `AI_GotoWP` actions for synchronization. 
+Sprawia że `self` i `other` czekają na siebie, np. podaczas dla synchronizacji po wywołaniu `AI_GotoWP`. 
 ```dae
 func void TRIA_Wait()
 ```
@@ -167,10 +167,10 @@ Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym 
 func void TRIA_Finish()
 ```
 
-## Examples
+## Przykłady
 
-### A Simple Trialogue
-The following conversation is resolved via the trialogues:
+### Prosty Trialog
+Poniższa konwersacja zostanie zaimplementowana za pomocą trialogów:
 
 1. **Arto:** Wybacz bohaterze, ale nie możesz tędy przejść.
 2. **Bohater:** Dlaczego nie?
@@ -271,4 +271,4 @@ func void TRIA_Test_info()
 };
 ```
 !!! Note
-    In addition, here are still [Dialoggestures](dialoggestures.md) used.
+    Dodatkowo w powyższym przykładzie użyty jest też pakiet [Dialoggestures](dialoggestures.md).

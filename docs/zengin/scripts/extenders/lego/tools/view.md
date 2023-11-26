@@ -321,3 +321,35 @@ func void View_Top(var int hndl)
 
 - `#!dae var int hndl`   
       Handle created with [`View_Create`](#view_get)
+
+
+## Examples
+
+### Display a texture on the screen
+Here a texture should be displayed over the entire screen:
+```dae
+func void Example1() {
+    var int View; 
+    View = View_Create(0, 0, PS_VMax, PS_VMax); // Virtual coordinates
+    View_SetTexture(View, "MyTexture.tga"); // Assign a texture to the view
+    // display the view on the screen:
+    View_Open(View);
+};
+```
+
+This would mean that the texture would be permanently visible on the screen (even after loading/saving/restarting).
+If we want it to disappear we have to use either [`View_Delete`](#view_delete) or [`View_Close`](#view_close).
+
+### Display a texture with pixel coordinates
+Now a texture should be displayed at the top right and be 256 x 256 pixels in size:
+```dae
+func void Example2() {
+    Print_GetScreenSize();
+    var int View;
+    View = View_CreatePxl(Print_Screen[PS_X] - 256, 0, Print_Screen[PS_X], 256); // Pixel coordinates
+    View_SetTexture(View, "MYTEXTURE.TGA");
+    View_Open(View);
+};
+```
+
+To get the size of the screen we use the [interface](interface.md) package.
