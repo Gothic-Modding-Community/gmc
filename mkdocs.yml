@@ -16,6 +16,7 @@ hooks:
   - overrides/.hooks/language_flags.py
   - overrides/.hooks/git_redirects.py
   - overrides/.hooks/all_plugin_patch.py
+  - overrides/.hooks/preferences.py
 
 theme:
   name: material
@@ -88,6 +89,7 @@ markdown_extensions:
       # it's required for the <a> links to work and to allow <span> highlighting via JavaScript
       line_anchors: example
       line_spans: example
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       base_path: ['./overrides/.snippets/']
@@ -184,6 +186,7 @@ plugins:
       timezone: Europe/Warsaw
       exclude:
         - index*.md
+        - preferences*.md
         - genome/index*.md
         - zengin/index*.md
   - redirects:

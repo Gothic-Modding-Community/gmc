@@ -13,4 +13,5 @@
 /* Color */
 :root {
     --gmc-blue-tint: #00aafc;
+    --gmc-tabs-bg-hue: 210deg;
 }
