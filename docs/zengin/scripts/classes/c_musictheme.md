@@ -81,7 +81,7 @@ const INT TRANSITION_SUB_TYPE_MEASURE   = 3;    // Gradual transition
 ```
 
 ## Name features
-The musical themes of the game are played depending on the game situation. By default, the theme with the ending is played `_STD` (standard). In case of a threat, the theme will be played with the ending `_THR` (threat). Theme plays during combat `_FGT` (fight). 
+The musical themes of the game are played depending on the game situation. By default, the theme with the `_STD` (standard) suffix is played. In case of a threat, the `_THR` (threat) theme will be played. During the combat the `_FGT` (fight) theme plays. 
 
 ```dae
 instance WOO_DAY_STD(C_MUSICTHEME_STANDARD)
@@ -99,7 +99,7 @@ instance WOO_DAY_FGT(C_MUSICTHEME_FIGHT)
     file = "woo_dayfgt.sgt";
 };
 ```
-In addition, with the suffix `_DAY_` and `_NGT_` determined by day or night, the theme is played.
+In addition, the suffix `_DAY_` and `_NGT_` determines whether the theme should be played on day or night.
 ```dae
 instance OWD_DAY_FGT(C_MUSICTHEME_FIGHT)
 {
@@ -111,4 +111,5 @@ instance OWD_NGT_STD(C_MUSICTHEME_STANDARD)
     file = "owd_daystd.sgt";
 };
 ```
-Themes from prototypes are used by default `C_MUSICTHEME_STANDARD`, `C_MUSICTHEME_THREAT` and `C_MUSICTHEME_FIGHT`.
+!!! Tip
+    In G2 the `C_MUSICTHEME_STANDARD`, `C_MUSICTHEME_THREAT` and `C_MUSICTHEME_FIGHT` prototypes are used by default.

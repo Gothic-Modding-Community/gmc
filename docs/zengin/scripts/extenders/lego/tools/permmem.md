@@ -153,7 +153,7 @@ func int numHandles()
 ```
 
 ### `sizeof`
-Returns Size of the instance's class in bytes 
+Gets the size of the given instance's class.
 ```dae
 func int sizeof(var int inst)
 ```
@@ -161,6 +161,10 @@ func int sizeof(var int inst)
 
 - `#!dae var int inst`  
     Any instance
+
+**Return value**
+
+The function returns the size of a given instance's class in bytes.
 
 ### `Hlp_IsValidHandle`
 Indicates whether the handle exists and is managed by PermMem. 
@@ -242,6 +246,7 @@ func int PM_Exists(var string name)
     Name of the field
 
 **Return value**
+
 The function returns `TRUE` if the field exists in the archive, `FALSE` is returned otherwise. 
 
 ## Archiver

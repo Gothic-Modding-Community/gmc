@@ -16,7 +16,7 @@ Before unpacking the downloaded archive it's needed to create a dedicated folder
 ## Parsing
 Ikarus consists of three main parts, [constants](./constants.md), classes and the Ikarus core. It's essential to parse these in a specific order. Additionally, there is a [floats package](floats.md) which isn't essential, but it is highly recommended to parse it, especially if you are working with [LeGo](../lego/index.md) that depends on it.
 
-The Ikarus Core is identical for both Gothic 1 and 2 and is contained in a single file, `Ikarus.d`. However, there are separate files for the constants and classes for each engine, and they must be parsed correctly. Ikarus uses a C_NPC and therefore has to be parsed after the C_NPC class (after the `classes.d` file). There are no other dependencies.
+The Ikarus Core is identical for both Gothic 1 and 2 and is contained in a single file, [`Ikarus.d`](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d). However, there are separate files for the constants and classes for each engine, and they must be parsed correctly. Ikarus uses a C_NPC and therefore has to be parsed after the C_NPC class (after the `classes.d` file). There are no other dependencies.
 
 Since Ikarus 1.2.1 there is additional `.src` file for each game engine, to simplify adding files to `Gothic.src` 
 

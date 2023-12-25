@@ -345,13 +345,13 @@ func void printf(var int x)
 
 ### Simple operations
 ```dae
-var int float1 = mkf(5);        // Create an Ikarus float with value 5
-var int float2 = mkf(2);        // Create an Ikarus float with value 2
+var int float1; float1 = mkf(5);        // Create an Ikarus float with value 5
+var int float2; float2 = mkf(2);        // Create an Ikarus float with value 2
 
-var int addResult = addf(float1, float2);     // Add float1 and float2
-var int subResult = subf(float1, float2);     // Subtract float2 from float1
-var int mulResult = mulf(float1, float2);     // Multiply float1 by float2
-var int divResult = divf(float1, float2);     // Divide float1 by float2
+var int addResult; addResluts  = addf(float1, float2);     // Add float1 and float2
+var int subResult; subResults  = subf(float1, float2);     // Subtract float2 from float1
+var int mulResult; mulRelsults = mulf(float1, float2);     // Multiply float1 by float2
+var int divResult; divResults  = divf(float1, float2);     // Divide float1 by float2
 
 printf(addResult);   // Output: 7
 printf(subResult);   // Output: 3

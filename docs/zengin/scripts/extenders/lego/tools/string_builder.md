@@ -1,6 +1,6 @@
 ---
 title: StringBuilder
-description: LeGo package for working with the 2D interface
+description: LeGo package for creating strings without using a 'ConcatStrings' function
 ---
 # StringBuilder
 The StringBuilder is a package, designed to easily concatenate multiple elements into a string (without `ConcatStrings` and `IntToString`).
