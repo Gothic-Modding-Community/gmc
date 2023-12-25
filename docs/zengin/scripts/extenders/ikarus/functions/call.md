@@ -41,16 +41,6 @@ func int hero_GetAssessEnemy() {
 
 ### Recyclable
 The second version produces code that can be used more than once. Instead of the parameters the user specifies the address where the parameters are to be taken from. In addition to executing the code, the user will receive an address that he can use to repeat the call. This is much faster than rebuilding the call from scratch.
- 
-```
-/* Receives a pointer. In case the pointer is non-zero,
- * the code at this position is executed and 0 is returned.
- * In case pointer is zero, the current mode is changed
- * into recyclable mode, this means that the call functions
- * expect instructions to build a recyclable call. This
- * mode will continue until CALL_End(). This allows code like this:
- ```
-
 
 ```dae
 func int Npc_GetPercFunc(var C_Npc npc, var int type) {
@@ -70,6 +60,7 @@ func int Npc_GetPercFunc(var C_Npc npc, var int type) {
     return +funcID;
 };
 ```
+> Receives a pointer. In case the pointer is non-zero, the code at this position is executed and 0 is returned. In case pointer is zero, the current mode is changed into recyclable mode, this means that the call functions expect instructions to build a recyclable call. This mode will continue until `CALL_End()`. This allows code like this:
 
 ## Start and End
 
