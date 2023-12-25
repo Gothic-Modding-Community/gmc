@@ -42,6 +42,51 @@ Since Ikarus 1.2.1 there is additional `.src` file for each game engine, to simp
 ## Initialization
 Before you can use Ikarus in your scripts, it must be properly initialized. The initialization process differs between Gothic 1 and Gothic 2.
 
+### `MEM_InitAll`
+This is main ikarus initialization function, however it consists of some smaller initialization functions.
+=== "Declaration"
+    ```dae
+    func void MEM_InitAll()
+    ```
+
+=== "Definition"
+
+    ```dae
+    func void MEM_InitAll() {
+        if (!MEMINT_ReportVersionCheck()) {
+            return;
+        };
+
+        MEM_ReinitParser(); /* depends on nothing */
+        MEM_InitLabels(); /* depends in MEM_ReinitParser */
+        MEM_InitGlobalInst(); /* depends on MEM_ReinitParser */
+        
+        /* now I can use MEM_ReplaceFunc, MEM_GetFuncID */
+        MEM_GetAddress_Init(); /* depends on MEM_ReinitParser and MEM_InitLabels */
+        /* now the nicer operators are available */
+        
+        MEM_InitStatArrs(); /* depends on MEM_ReinitParser and MEM_InitLabels */
+        ASMINT_Init();
+        
+        MEMINT_ReplaceLoggingFunctions();
+        MEMINT_ReplaceSlowFunctions();
+        MEM_InitRepeat();
+        
+        /* takes a wail the first time it is called.
+            call it to avoid delay later */
+        var int dump; dump = MEM_GetFuncIDByOffset(0);
+    };
+    ```
+
+=== "List of functions"
+    - [MEM_ReinitParser](functions/parser.md#mem_reinitparser)
+    - [MEM_InitLabels](functions/jumps_loops.md#initialization)
+    - [MEM_InitGlobalInst](functions/objects.md#mem_initglobalinst)
+    - [MEM_GetAddress_Init](functions/parser.md#mem_getaddress_init)
+    - [MEM_InitStatArrs](functions/parser.md#mem_initstatarrs)
+    - [ASMINT_Init](functions/asm.md#asmint_init)
+    - [MEM_InitRepeat](functions/jumps_loops.md#initialization_1)
+
 ### Gothic 1
 To initialize Ikarus in Gothic 1 you must define your own `INIT_GLOBAL` function at the top of the `Startup.d` file. Then the `INIT_GLOBAL` should be called in every `INIT_<location>` function (e.g. `INIT_SURFACE`,`INIT_OLDCAMP` etc.). `INIT_SUB_<location>` functions can be skipped in that process.
 
