@@ -281,6 +281,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/asm/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/call/</loc>
+        <lastmod>2024-01-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/call/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/call/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/call/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/debug/</loc>
         <lastmod>2024-01-18</lastmod>
         <changefreq>daily</changefreq>
@@ -343,6 +351,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/objects/"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/objects/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/objects/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/parser/</loc>
+        <lastmod>2024-01-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/parser/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/parser/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/parser/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/string/</loc>
@@ -1401,6 +1417,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/asm/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/call/</loc>
+        <lastmod>2024-01-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/call/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/call/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/call/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/debug/</loc>
         <lastmod>2024-01-18</lastmod>
         <changefreq>daily</changefreq>
@@ -1463,6 +1487,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/objects/"/>
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/objects/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/objects/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/parser/</loc>
+        <lastmod>2024-01-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/parser/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/parser/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/parser/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/string/</loc>
@@ -2521,6 +2553,14 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/asm/"/>
     </url>
     <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/call/</loc>
+        <lastmod>2024-01-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/call/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/call/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/call/"/>
+    </url>
+    <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/debug/</loc>
         <lastmod>2024-01-18</lastmod>
         <changefreq>daily</changefreq>
@@ -2583,6 +2623,14 @@
         <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/objects/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/objects/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/objects/"/>
+    </url>
+    <url>
+        <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/parser/</loc>
+        <lastmod>2024-01-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/parser/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://auronen.cokoliv.eu/gmc/zengin/scripts/extenders/ikarus/functions/parser/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://auronen.cokoliv.eu/gmc/pl/zengin/scripts/extenders/ikarus/functions/parser/"/>
     </url>
     <url>
         <loc>https://auronen.cokoliv.eu/gmc/cs/zengin/scripts/extenders/ikarus/functions/string/</loc>
