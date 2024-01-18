@@ -85,7 +85,7 @@ func void Wld_SetWeatherType( var int type ) {};
 
 - `type` - weather type
 
-## Wld_GetWeatherType()
+## Wld_GetWeatherType
 Returns the weather type.
 Types:
 
@@ -93,7 +93,7 @@ Types:
 `1` - rain
 
 ```dae
-func int Wld_GetWeatherType {};
+func int Wld_GetWeatherType() {};
 ```
 
 - `return` - weather type
