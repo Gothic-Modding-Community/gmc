@@ -18,6 +18,17 @@ class C_Color
 };
 ```
 
+## zVEC3
+Represents 3D position in the world (float version for internal functions)
+```dae
+class zVEC3
+{
+    var float X; // X coordinate
+    var float Y; // Y coordinate
+    var float Z; // Z coordinate
+};
+```
+
 ## C_Position
 Represents 3D position in the world
 ```dae

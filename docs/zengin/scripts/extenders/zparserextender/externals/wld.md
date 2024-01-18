@@ -56,7 +56,7 @@ func void Wld_PlayEffectAt( var string effect,
 ```
 
 - `effect` - effect name
-- `coord` - world coordinates (`C_Position`) to play the effect at
+- `coord` - world coordinates (`zVEC3`) to play the effect at
 - `level` - effect level
 - `damage` - damage amount
 - `damage_type` - damage type
