@@ -23,7 +23,6 @@ func instance Wld_FindVob( var string vobname ) {};
 
 - `vobname` - name of the vob
 - `return` - zCVob pointer
-- `return` -
 
 ## Wld_PlayEffectVob
 Play a visual effect at specified vob
@@ -38,7 +37,7 @@ func void Wld_PlayEffectVob(    var string effect,
 ```
 
 - `effect` - effect name
-- `pvob` - Vob to play the effect at
+- `pvob` - zCVob to play the effect at
 - `level` - effect level
 - `damage` - damage amount
 - `damage_type` - damage type
@@ -57,7 +56,7 @@ func void Wld_PlayEffectAt( var string effect,
 ```
 
 - `effect` - effect name
-- `coord` - world coordinates to play the effect at
+- `coord` - world coordinates (`C_Position`) to play the effect at
 - `level` - effect level
 - `damage` - damage amount
 - `damage_type` - damage type
@@ -94,7 +93,7 @@ Types:
 `1` - rain
 
 ```dae
-func int Wld_GetWeatherType() {};
+func int Wld_GetWeatherType {};
 ```
 
 - `return` - weather type
