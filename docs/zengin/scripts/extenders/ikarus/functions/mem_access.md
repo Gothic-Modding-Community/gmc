@@ -114,7 +114,7 @@ func void MEM_WriteInt(var int address, var int value)
 - `#!dae var int value`  
     Integer value to write
 
-??? abstract "Examples"
+??? abstract "Example"
     An example of using this function is the following Ikarus function, which turns debugging messages on and off:
     ```dae
     func void MEM_SetShowDebug(var int on)

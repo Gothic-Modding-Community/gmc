@@ -192,7 +192,7 @@ Executes the code dictated up to that point, similar to how an external function
 func void ASM_RunOnce()
 ```
 
-## Examples
+## Example
 The following function sets the NPC passed as slf as the player, as if you had pressed **O** in Marvin mode with this NPC in focus. This is so short because there is already a function for this exact purpose, it's just not normally accessible from the scripts. It is therefore sufficient to write assembly code that pushes the parameter of the function (the `this` pointer) into the appropriate register and then calls the function.
 ```dae
 func void SetAsPlayer(var C_NPC slf) { /* Adresse der Funktion */
@@ -216,7 +216,7 @@ func void SetAsPlayer(var C_NPC slf) { /* Adresse der Funktion */
 !!! Note
     Call targets are specified relative to the instruction that would have been executed after the actual call instruction. Therefore, both ASM_Here() and the subtraction of 4 in the call parameter are necessary.
 
-The above example describes, among other things, [`CALL__thiscall`](#) function form the [CALL Package](#) that can be also used to implement `SetAsPlayer`.
+The above example describes, among other things, [`CALL__thiscall`](#) function form the [CALL Package](call.md) that can be also used to implement `SetAsPlayer`.
 ```dae
 func void SetAsPlayer(var C_NPC slf) { 
     const int oCNpc__SetAsPlayer = 7612064;
