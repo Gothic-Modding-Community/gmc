@@ -4,7 +4,7 @@ ZenGin uses `.wav` files for playing Sound Effects and Dubbing.
 !!! Info
     In-game soundtrack isn't saved in `.wav` sound files. See [Music](../music.md).
 
-## Poperties
+## Properties
 Original gothic sound files has following properties:
 
 - One channel (Mono)
