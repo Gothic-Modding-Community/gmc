@@ -160,17 +160,19 @@ function gmcExpandNavigation() {
         return;
     }
 
-    const activeLink = document.querySelector(".md-nav__link--active");
+    const activeLinkLabel = document.querySelector("label.md-nav__link--active");
 
-    if (!activeLink) {
+    if (!activeLinkLabel) {
         return;
     }
 
-    let activeNav = activeLink.parentElement.querySelector("nav");
+    const navID = activeLinkLabel.id;
+
+    let activeNav = document.querySelector(`nav[aria-labelledby="${navID}"]`);
 
     if (!activeNav || activeNav.className.includes("md-nav--secondary")) {
-        // gmcDebug(`nav not foundInParent`);
-        activeNav = activeLink.closest("nav");
+        // gmcDebug(`nav with id ${navID} not found`);
+        activeNav = activeLinkLabel.closest("nav");
     }
 
     if (activeNav.dataset.hasOwnProperty("mdLevel")) {
