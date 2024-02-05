@@ -1,5 +1,6 @@
 ---
 title: Console Commands
+description: Pakiet LeGo umożliwiający rejestrację nowych poleceń konsoli
 ---
 # Console Commands - polecenia konsoli
 Ten Pakiet pozwala na tworzenie nowych poleceń konsoli dostępnej po naciśnięciu klawisza F2 w trybie marvin.

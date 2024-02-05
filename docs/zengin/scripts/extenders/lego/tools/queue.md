@@ -1,3 +1,7 @@
+---
+title: Queue
+description: LeGo package implementing queue data structure
+---
 # Queue
 This package is an implementation of the Queue data structure and a queue for function calls.
 

@@ -233,7 +233,7 @@ Constants are described in the file [`Scripts/System/_intern/Menu.d`](https://gi
 CONST INT SEL_ACTION_UNDEF			= 0; // No action. Used when setting game parameters, calling functions...
 CONST INT SEL_ACTION_BACK			= 1; // Return to the previous menu or game
 CONST INT SEL_ACTION_STARTMENU		= 2; // Open a menu
-CONST INT SEL_ACTION_STARTITEM		= 3; // Special commanf for save slots
+CONST INT SEL_ACTION_STARTITEM		= 3; // Special command for save slots
 CONST INT SEL_ACTION_CLOSE			= 4; // Close menu or game
 CONST INT SEL_ACTION_CONCOMMANDS	= 5; // Execute console command
 CONST INT SEL_ACTION_PLAY_SOUND		= 6; // Play sound from C_SFX instance
@@ -541,18 +541,18 @@ Constants for all flags are described in the file [`Scripts/System/_intern/Menu.
 ```dae
 const int IT_CHROMAKEYED            = 1;
 const int IT_TRANSPARENT            = 2;
-const int IT_SELECTABLE             = 4;        // Elment can be selected
+const int IT_SELECTABLE             = 4;        // Element can be selected
 const int IT_MOVEABLE               = 8;
 const int IT_TXT_CENTER             = 16;       // Align text to center
-const int IT_DISABLED               = 32;       // Inteactive item
+const int IT_DISABLED               = 32;       // Interactive item
 const int IT_FADE                   = 64;
 const int IT_EFFECTS_NEXT           = 128;      // Flag for influencing an adjacent menu item
 const int IT_ONLY_OUT_GAME          = 256;      // Element available only outside the game
 const int IT_ONLY_IN_GAME           = 512;      // Element available only in-game
 const int IT_PERF_OPTION            = 1 << 10;  // Option responsible for performance
-const int IT_MULTILINE              = 1 << 11;  // Multiline text element
+const int IT_MULTILINE              = 1 << 11;  // Multi-line text element
 const int IT_NEEDS_APPLY            = 1 << 12;  // Need to apply a settings. Used when changing screen resolution
-const int IT_NEEDS_RESTART          = 1 << 13;  // The game need to be resterted
+const int IT_NEEDS_RESTART          = 1 << 13;  // The game need to be restarted
 const int IT_EXTENDED_MENU          = 1 << 14;  // Advanced menu flag
 ```
 
@@ -571,9 +571,9 @@ const int IT_EXTENDED_MENU          = 1 << 14;  // Advanced menu flag
     ??? Example "Intended use"
         In early engine versions, the initial position of the element could be specified using the `startPosX` and `startPosY` properties. The element moved from these coordinates to the desired position.
 
-        At the begining of the video below, it can be seen that the elements slides into the screen. That was probably done using this flag and mentionsed parameters.
+        At the beginning of the video below, it can be seen that the elements slides into the screen. That was probably done using this flag and mentioned parameters.
 
-        ![type:video](https://www.youtube.com/watch?v=mfJag6fkfH8)
+        ![type:video](https://www.youtube.com/embed/mfJag6fkfH8)
 
 - `IT_TXT_CENTER`   
     Aligns the text in the element to the center.

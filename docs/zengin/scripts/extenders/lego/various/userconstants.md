@@ -1,3 +1,7 @@
+---
+title: User constants
+description: LeGo package user-configurable constants description
+---
 # User constants
 All constants that the user can either use or even change freely are defined in [Userconst.d](https://github.com/Lehona/LeGo/blob/dev/Userconst.d) file.
 

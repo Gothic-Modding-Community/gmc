@@ -1,3 +1,7 @@
+---
+title: Console Commands
+description: LeGo package allowing the registering of new console commands
+---
 # Console Commands
 This package allows you to create new console commands.
 

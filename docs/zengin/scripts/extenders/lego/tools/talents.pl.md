@@ -1,5 +1,6 @@
 ---
 title: Talents
+description: Pakiet LeGo zapewniający rozszerzenie dla tablicy AIVar
 ---
 # Talents - talenty
 Ten pakiet robi dwie rzeczy:

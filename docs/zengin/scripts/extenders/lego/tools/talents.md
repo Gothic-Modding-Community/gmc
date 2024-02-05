@@ -1,3 +1,7 @@
+---
+title: Talents
+description: LeGo package providing an extension for AIVar array
+---
 # Talents
 The Talents package does two things:
 

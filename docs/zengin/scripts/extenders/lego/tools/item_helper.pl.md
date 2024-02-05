@@ -1,5 +1,6 @@
 ---
 title: ItemHelper
+description: Pakiet LeGo umożliwiający zmianę instancji `C_ITEM` na pointer `oCItem`
 ---
 # ItemHelper - pomocnik do przedmiotów
 Ten pakiet jest bardzo prosty - pobiera wskaźnik `oCItem` z instancji `C_ITEM` ważnej dla bieżącego świata i sesji.
