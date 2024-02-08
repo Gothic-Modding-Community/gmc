@@ -127,17 +127,17 @@ func string IntToString(var int x) {};
 
 /// Creates a new log topic with the name `topicName` under the section `logSection`
 ///
-/// @param topicName unique string used to identifiy and name the topic
+/// @param topicName unique string used to identify and name the topic
 /// @param logSection [LOG_MISSION, LOG_NOTE] indicates in which section to create the topic in
 func void Log_CreateTopic(var string topicName, var int logSection) {};
 /// Adds an entry to a log topic with the name `topicName` under the section `logSection`
 ///
-/// @param topicName unique string used to identifiy and name the topic
+/// @param topicName unique string used to identify and name the topic
 /// @param entry content of the new entry
 func void Log_AddEntry(var string topicName, var string entry) {};
 /// Changes the status of the topic with the name `topicName`
 ///
-/// @param topicName unique string used to identifiy and name the topic
+/// @param topicName unique string used to identify and name the topic
 /// @param status [LOG_RUNNING, LOG_SUCCESS, LOG_FAILED, LOG_OBSOLETE] the status to be set
 func void Log_SetTopicStatus(var string TopicName, var int status) {};
 

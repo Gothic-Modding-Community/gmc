@@ -208,7 +208,7 @@ func void Mdl_ApplyRandomFaceAni(var c_npc npc,
 - `#!dae var float timemaxvar`   
     Maximum boundary variation (in seconds)
 - `#!dae var float probmin`   
-    Probablity (0.0 to 1.0) to choose the lower boundary time
+    Probability (0.0 to 1.0) to choose the lower boundary time
 
 ## Externals with docu comments
 
@@ -235,7 +235,7 @@ func void Mdl_RemoveOverlayMDS(var c_npc npc, var string overlay_name) {};
 /// Assign a random animation `ani2` to random animation list of animation `ani1`
 ///
 /// @param npc NPC owning the animation
-/// @param ani1 the animation to asign random animation to
+/// @param ani1 the animation to assign random animation to
 /// @param ani2 animation to be assigned
 func void Mdl_ApplyRandomAni(var c_npc npc, var string ani1, var string ani2) {};
 
@@ -304,7 +304,7 @@ func void Mdl_StartFaceAni(var c_npc npc,
 /// @param timeminvar minimum boundary variation (in seconds)
 /// @param timemax maximum time after which the ani should be started (in seconds)
 /// @param timemaxvar maximum boundary variation (in seconds)
-/// @param probmin probablity (0.0 to 1.0) to choose the lower boundary time
+/// @param probmin probability (0.0 to 1.0) to choose the lower boundary time
 func void Mdl_ApplyRandomFaceAni(var c_npc npc,
                                  var string name,
                                  var float timemin,

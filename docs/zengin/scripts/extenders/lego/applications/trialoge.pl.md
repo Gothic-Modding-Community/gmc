@@ -31,11 +31,11 @@ func void EquipWeapon(var C_NPC slf, var int ItemInstance)
 - `#!dae var int ItemInstance`  
     Instancja broni do wyposażenia
 
-**Konfigurcja**
+**Konfiguracja**
 
 `#!dae const int EquipWeapon_TogglesEquip = 1`
 
-Powyższa stała ustala zachowanie funkcji podczas próby założenia już założonej bronii:
+Powyższa stała ustala zachowanie funkcji podczas próby założenia już założonej broni:
 
 - `0` - `EquipWeapon` nic nie zrobi
 - `1` - `EquipWeapon` zdejmie tą broń
@@ -87,7 +87,7 @@ Podmienia broń założoną przez NPC.
 ```dae
 func void Npc_TradeItem(var c_npc slf, var int itm0, var int itm1) 
 ```
-**Parameters**
+**Parametry**
 
 - `#!dae var C_NPC slf`  
     NPC na którym wykonywana jest operacja
@@ -114,7 +114,7 @@ Resetuje kamery dialogowe do ustawień domyślnych.
 func void DiaCAM_Enable()
 ```
 ### `TRIA_Wait`
-Sprawia że `self` i `other` czekają na siebie, np. podaczas dla synchronizacji po wywołaniu `AI_GotoWP`. 
+Sprawia że `self` i `other` czekają na siebie, np. podczas dla synchronizacji po wywołaniu `AI_GotoWP`. 
 ```dae
 func void TRIA_Wait()
 ```
@@ -142,7 +142,7 @@ func void TRIA_Barrier()
 ```
 
 ### `TRIA_Next`
-Ustawia podanego npc na `self`.
+Ustawia podanego NPC na `self`.
 ```dae
 func void TRIA_Next(var C_NPC n0)
 ```

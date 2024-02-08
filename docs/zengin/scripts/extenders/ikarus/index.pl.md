@@ -8,7 +8,7 @@ Ikarus jest biblioteką Daedalusa - języka skryptowego Gothica. Wykorzystuje in
 | Forum   | [:material-forum: Ikarus](https://forum.worldofplayers.de/forum/threads/1299679-Skriptpaket-Ikarus-4)                   |
 
 !!! Trivia "Notatka autora (Sektenspinner)"
-    Ten pakiet skryptów niebez powodu nazywa się **Ikarus**:
+    Ten pakiet skryptów nie bez powodu nazywa się **Ikarus**:
 
     Można opuścić granice Dedala, ale można też rozbić się i spalić. Na przykład odczyt z nieprawidłowych adresów nie wywoła ostrzeżenia [zSpy](../../../tools/zSpy.md), ale spowoduje wyjście do pulpitu wraz z Access Violation. Nie jest to powód do paniki, ale wymaga tolerancji na frustrację (co może być ogólnie przydatne dla skrypterów).
 

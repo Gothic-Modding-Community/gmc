@@ -113,7 +113,7 @@ func void MEM_AssertFail(var string assertFailText)
     The assertion failure message.
 
 ### `MEM_Debug`
-Freely conigurable debug chanell. See how to setup it in the [Constants](../constants.md#mem_debug) article.
+Freely configurable debug channel. See how to setup it in the [Constants](../constants.md#mem_debug) article.
 ```dae
 func void MEM_Debug(var string message)
 ```

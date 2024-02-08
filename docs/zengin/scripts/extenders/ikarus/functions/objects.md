@@ -72,7 +72,7 @@ func void MEM_InitGlobalInst()
     };
     ```
 
-    Full Ikarus definition of this class, with members decription can be found in [`Misc.d`](https://github.com/Lehona/Ikarus/blob/master/EngineClasses_G1/Misc.d#L490-L537) file. The class is same for G1 and G2A engines.
+    Full Ikarus definition of this class, with members description can be found in [`Misc.d`](https://github.com/Lehona/Ikarus/blob/master/EngineClasses_G1/Misc.d#L490-L537) file. The class is same for G1 and G2A engines.
 
 ### `MEM_GetClassDef`
 Returns a pointer to the `zCClassDef` of the object. For more info see the **About zCClassDef** section above.
@@ -194,7 +194,7 @@ func void MEM_DeleteVob(var int vobPtr)
 **Parameters**
 
 - `#!dae var int vobPtr`   
-    Pointer to a [`zCVob`](./../../../worlds/Classes/zCVob.md) object to be deleted
+    Pointer to a [`zCVob`](../../../../worlds/Classes/zCVob.md) object to be deleted
 
 ### `MEM_RenameVob`
 Renames the passed Vob to the `newName` that is also passed. 
@@ -206,7 +206,7 @@ func void MEM_RenameVob(var int vobPtr, var string newName)
 **Parameters**
 
 - `#!dae var int vobPtr`   
-    Pointer to a [`zCVob`](./../../../worlds/Classes/zCVob.md) object to be renamed
+    Pointer to a [`zCVob`](../../../../worlds/Classes/zCVob.md) object to be renamed
 - `#!dae var string newName`   
     The new Name of the Vob
 
@@ -220,7 +220,7 @@ func void MEM_RenameVob(var int vobPtr, var string newName)
     **Parameters**
 
     - `#!dae var int vobPtr`   
-        Pointer to a triggered [`zCVob`](./../../../worlds/Classes/zCVob.md)
+        Pointer to a triggered [`zCVob`](../../../../worlds/Classes/zCVob.md)
 
     !!! Danger
         If triggering the Vob has immediate effects (even before MEM_TriggerVob is exited), the name of the Vob is corrupted during this time. It is not advisable to rename, trigger again or destroy the object at this moment, the behavior in such cases is untested.
@@ -234,24 +234,24 @@ func void MEM_RenameVob(var int vobPtr, var string newName)
     **Parameters**
 
     - `#!dae var int vobPtr`   
-        Pointer to an untriggered [`zCVob`](./../../../worlds/Classes/zCVob.md)
+        Pointer to an untriggered [`zCVob`](../../../../worlds/Classes/zCVob.md)
 
     !!! Danger
         If untriggering the Vob has immediate effects (even before MEM_TriggerVob is exited), the name of the Vob is corrupted during this time. It is not advisable to rename, trigger again or destroy the object at this moment, the behavior in such cases is untested.
 
 ### `MEM_SearchVobByName`
-Returns the address of a [`zCVob`](./../../../worlds/Classes/zCVob.md) named `str` if such a Vob exists.
+Returns the address of a [`zCVob`](../../../../worlds/Classes/zCVob.md) named `str` if such a Vob exists.
 ```dae
 func int MEM_SearchVobByName(var string str)
 ```
 **Parameters**
 
 - `#!dae var string str`   
-    Name of searched [`zCVob`](./../../../worlds/Classes/zCVob.md)
+    Name of searched [`zCVob`](../../../../worlds/Classes/zCVob.md)
 
 **Return value**
 
-The function returns a pointer to the [`zCVob`](./../../../worlds/Classes/zCVob.md) if the object with the given name exist. `0` is returned otherwise.
+The function returns a pointer to the [`zCVob`](../../../../worlds/Classes/zCVob.md) if the object with the given name exist. `0` is returned otherwise.
 
 
 ### `MEM_SearchAllVobsByName`
@@ -262,11 +262,11 @@ func int MEM_SearchAllVobsByName(var string str)
 **Parameters**
 
 - `#!dae var string str`   
-    Name of searched [`zCVob`](./../../../worlds/Classes/zCVob.md)
+    Name of searched [`zCVob`](../../../../worlds/Classes/zCVob.md)
 
 **Return value**
 
-The function returns a pointer to the created `zCArray`, taht contains pointers to the all Vobs with the specified name. 
+The function returns a pointer to the created `zCArray`, that contains pointers to the all Vobs with the specified name. 
 
 ### `MEM_GetBufferCRC32`
 Calculates the CRC32 hash value from a byte array starting at the address specified by `buf` and having a length of `buflen`.

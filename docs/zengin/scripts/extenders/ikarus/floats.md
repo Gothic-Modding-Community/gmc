@@ -1,5 +1,5 @@
 # Floats
-This part of ikarus implements support for 32 bit IEEE 754 floats in Daedalus. The script was originally created to edit `zFLOAT` and `zREAL` variables, but can also be used to arthmetic operations on real float values (not to be confused with Daedalus floats).
+This part of ikarus implements support for 32 bit IEEE 754 floats in Daedalus. The script was originally created to edit `zFLOAT` and `zREAL` variables, but can also be used to arithmetic operations on real float values (not to be confused with Daedalus floats).
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
@@ -15,7 +15,7 @@ MEM_InitAll();
 
 ## Functions
 !!! Danger
-    Ikarus floats are saved as int but it doesn't mean that you can use arthmetic operators on them. All operations on floats must be done with functions listed below.
+    Ikarus floats are saved as int but it doesn't mean that you can use arithmetic operators on them. All operations on floats must be done with functions listed below.
 
 ### `mkf`
 (make float) Converts the input integer x to a float value.

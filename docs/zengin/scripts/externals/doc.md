@@ -79,7 +79,7 @@ func void Doc_SetLevelCoords(var int docID, var int left, var int top, var int r
     ```
 
 ## `Doc_SetFont`
-Sets a `font` to be used on a `page` in a document with `docID`. Can be called multiple times to diplay different lines with different fonts.
+Sets a `font` to be used on a `page` in a document with `docID`. Can be called multiple times to display different lines with different fonts.
 
 ```dae
 func void Doc_SetFont(var int docID, var int page, var string font) {};
@@ -251,7 +251,7 @@ func void Doc_PrintLine(var int docID, var int page, var string text) {};
 /// @param text text to be printed
 func void Doc_PrintLines(var int docID, var int page, var string text) {};
 
-/// Sets a `font` to be used on a `page` in a document with `docID`. Can be called multiple times to diplay different lines with different fonts.
+/// Sets a `font` to be used on a `page` in a document with `docID`. Can be called multiple times to display different lines with different fonts.
 ///
 /// @param docID document manager ID
 /// @param page page index

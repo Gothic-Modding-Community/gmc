@@ -25,7 +25,7 @@ func int MEM_GetSystemTime()
 The function returns the elapsed time since the start of Gothic in milliseconds. This value is used for timing measurements, in the `BenchmarkMS` functions.
 
 ### `MEM_GetPerformanceCounter`
-Call to the WinAPI [`QueryPerformanceCounter`](https://learn.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) funciton.
+Call to the WinAPI [`QueryPerformanceCounter`](https://learn.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) function.
 ```dae
 func int MEM_GetPerformanceCounter()
 ```

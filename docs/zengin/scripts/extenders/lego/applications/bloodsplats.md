@@ -42,14 +42,14 @@ func void Bloodsplats_Rage()
 ```
 
 ### `Npc_GetPercFunc`
-`oCNpc::GetPerceptionFunc` engine function wraper
+`oCNpc::GetPerceptionFunc` engine function wrapper
 ```dae
 func int Npc_GetPercFunc(var C_Npc npc, var int type)
 ```
 **Parameters**
 
 - `#!dae var C_NPC npc`  
-    NPC whose percepcion is checked
+    NPC whose perception is checked
 - `#!dae var int type`  
     Checked perception type (form [`Constant.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L213-L258))
 

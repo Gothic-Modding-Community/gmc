@@ -209,7 +209,7 @@ The function returns the index at which the first occurrence of `tok` begins wit
 ### `STR_SplitCount`
 Counts the number of parts a string splits into when using a specified separator.
 ```dae
-func int STR_SplitCount(var string str, var string seperator)
+func int STR_SplitCount(var string str, var string separator)
 ```
 **Parameters**
 

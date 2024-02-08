@@ -20,7 +20,7 @@ Misc package implements the `phi` constant
 ```dae
 const int phi = 1070141312; // PI/2
 ```
-whitch is actualy `pi` divided by 2 saved as an ikarus float. 
+which is actually `pi` divided by 2 saved as an ikarus float. 
 
 Decimal: `1.5707...`
 
