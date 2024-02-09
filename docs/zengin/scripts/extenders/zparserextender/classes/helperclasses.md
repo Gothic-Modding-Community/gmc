@@ -18,6 +18,17 @@ class C_Color
 };
 ```
 
+## zVEC3
+Represents 3D position in the world (float version for internal functions)
+```dae
+class zVEC3
+{
+    var float X; // X coordinate
+    var float Y; // Y coordinate
+    var float Z; // Z coordinate
+};
+```
+
 ## C_Position
 Represents 3D position in the world
 ```dae
@@ -33,7 +44,7 @@ Externals:
 /// Returns the current position of the object in the world
 /// 
 /// @param vob vob to ge the position of
-/// @return C_Position instace - position of the VOB
+/// @return C_Position instance - position of the VOB
 func C_Position Vob_GetVobPosition( var C_Vob vob ) {};
 
 /// Sets the current position of the object in the world
@@ -47,7 +58,7 @@ func void Vob_SetVobPosition( var C_Vob vob, var C_Position pos ) {};
     The following classes define properties of `C_VOB` objects or classes derived from it.
     
 ## C_VOB_DATA
-Represents universal `zCVob` class
+Represents universal [`zCVob`](../../../../worlds/Classes/zCVob.md) class
 ```dae
 class C_VOB_DATA
 {
@@ -61,8 +72,8 @@ class C_VOB_DATA
     var int CollDetectionStatic;  // allow collision with static world polygons
     var int CollDetectionDynamic; // allow collision with dynamic world objects
     var int CastDynShadow;        // display shadow of the object
-    var int LightColorStatDirty;  // allow static liging of the object
-    var int LightColorDynDirty;   // allow dynamic lighing of the object
+    var int LightColorStatDirty;  // allow static lighting of the object
+    var int LightColorDynDirty;   // allow dynamic lighting of the object
     var int SleepingMode;         // sets object's activity mode (0 - inactive, 1 - active, 2 - AI only)
     var int DontWriteIntoArchive; // turns of the serialization of this object to the save file 
 };

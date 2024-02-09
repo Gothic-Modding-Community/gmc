@@ -41,7 +41,7 @@ Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https
     
         // Benötigte Attribute zum Benutzen des Items
         var int    cond_atr[3];                // Array of NPC attributes needed to equip the item
-        var int    cond_value[3];              // Array of values corresponding to the cond_atr arry
+        var int    cond_value[3];              // Array of values corresponding to the cond_atr array
     
         // Attributes to be changed on equip
         var int    change_atr[3];              // Array of attributes that will be changed on equip

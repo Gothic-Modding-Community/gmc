@@ -1,10 +1,14 @@
+---
+title: Render
+description: LeGo package for rendering items on a screen
+---
 # Render
 With this package items can be rendered on the screen. Since items are rendered independently of the normal views, textures that are 'below' the items must also be managed by this package, this behaviour is managed by the priority system. The view with the highest priority is always rendered first, so it is at the bottom. In theory, any .3DS model can be rendered if you just create a suitable item script.
 ## Dependencies
 
-- List
-- View
-- PermMem
+- [List](../tools/list.md)
+- [View](../tools/view.md)
+- [PermMem](../tools/permmem.md)
 
 ## Initialization
 Initialize with `LeGo_Render` flag.

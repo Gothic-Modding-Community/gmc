@@ -1,3 +1,7 @@
+---
+title: HookDaedalus
+description: LeGo package for hooking daedalus script functions
+---
 # HookDaedalus
 This package allows hooking daedalus functions. The principle is similar [HookEngine](hook_engine.md). We have a function (hooked function) into which we would like to hook another function (hook function).
 
@@ -19,6 +23,18 @@ N/A
 Hooks the function.
 ```dae
 func void HookDaedalusFunc(var func hooked, var func hook)
+```
+**Parameters**
+
+- `#!dae var func hooked`  
+    Hooked function
+- `#!dae var func hook`  
+    Hook function
+
+### `HookDaedalusFuncF`
+Alias to the `HookDaedalusFunc` function.
+```dae
+func void HookDaedalusFuncF(var func hooked, var func hook)
 ```
 **Parameters**
 
@@ -62,6 +78,7 @@ func int IsHookD(var int funcID)
     Symbol index of a hook function
 
 **Return value**
+
 The function returns `TRUE` if the function is already hooking another, `FALSE` is returned otherwise.
 
 ### `ContinueCall`
@@ -77,7 +94,7 @@ func void PassArgumentI(var int i)
 ```
 **Parameters**
 
-- `#!dae var int i`
+- `#!dae var int i`   
     Integer argument to forward
 
 ### `PassArgumentS`
@@ -87,7 +104,7 @@ func void PassArgumentS(var string s)
 ```
 **Parameters**
 
-- `#!dae var string s`
+- `#!dae var string s`   
     String argument to forward
 
 ### `PassArgumentN`
@@ -97,7 +114,7 @@ func void PassArgumentN(var instance n)
 ```
 **Parameters**
 
-- `#!dae var instance n`
+- `#!dae var instance n`   
     Instance argument to forward
 
 ## Examples
@@ -111,7 +128,7 @@ The functions can look like that:
 ```dae
 func void hooked() 
 {
-    Print("Orginal function");
+    Print("Original function");
 };
 
 func void hook() 
@@ -123,7 +140,7 @@ func void hook()
 The results should look like that
 ```dae
 Our hook
-Orginal function
+Original function
 ```
 
 ### Hook after function
@@ -135,7 +152,7 @@ The functions are also similar, but the `ContinueCall();` is called first:
 ```dae
 func void hooked() 
 {
-    Print("Orginal function");
+    Print("Original function");
 };
 
 func void hook() 
@@ -146,7 +163,7 @@ func void hook()
 ```
 The results should look like that:
 ```dae
-Orginal function
+Original function
 Our hook
 ```
 
@@ -155,7 +172,7 @@ If a function to be hooked expects parameters or returns a value, our hooking fu
 ```dae
 func int hooked(var int i) 
 {
-     Print("Orginal function");
+     Print("Original function");
      return i+1;
 };
 

@@ -1,3 +1,7 @@
+---
+title: Trialoge
+description: LeGo package implementing trialogues to gothic
+---
 # Trialoge
 This package allows you to create conversations with any number of NPCs and control the camera during the dialog.
 
@@ -16,7 +20,7 @@ LeGo_Init(LeGo_Trialoge);
 ## Functions
 
 ### `EquipWeapon`
-Sektenspinner's function. (Taken from the forum.) 
+Sektenspinner's function. Makes NPC equip a weapon.
 ```dae
 func void EquipWeapon(var C_NPC slf, var int ItemInstance)
 ```
@@ -25,7 +29,16 @@ func void EquipWeapon(var C_NPC slf, var int ItemInstance)
 - `#!dae var C_NPC slf`  
     NPC to have a weapon equipped
 - `#!dae var int ItemInstance`  
-    Weapon instance to be equipped
+    Weapon instance ID to be equipped
+
+**Configuration**
+
+`#!dae const int EquipWeapon_TogglesEquip = 1`
+
+Above constant configures the behaviour of the function when trying to equip an already equipped weapon:
+
+- `0` - `EquipWeapon` will do nothing
+- `1` - `EquipWeapon` will unequip this weapon
 
 ### `Npc_GetArmor`
 Returns NPC's equipped armor.
@@ -53,7 +66,36 @@ func int Npc_GetMeleeWeapon(var C_NPC slf)
 
 **Return value**
 
-The function returns instance of melee weapon equipped by the NPC.
+The function returns instance ID of melee weapon equipped by the NPC.
+
+### `Npc_GetRangedWeapon`
+Returns NPC's equipped ranged weapon.
+```dae
+func int Npc_GetRangedWeapon(var c_npc slf)
+```
+**Parameters**
+
+- `#!dae var C_NPC slf`  
+    NPC to get the weapon from
+
+**Return value**
+
+The function returns instance ID of ranged weapon equipped by the NPC.
+
+### `Npc_TradeItem`
+Swaps NPCs equipped weapon.
+```dae
+func void Npc_TradeItem(var c_npc slf, var int itm0, var int itm1) 
+```
+**Parameters**
+
+- `#!dae var C_NPC slf`  
+    NPC to perform operation on
+- `#!dae var int itm0`  
+    instance ID of item to remove
+- `#!dae var int itm1`  
+    instance ID of item to create and equip
+
 
 ### `DiaCAM_Update`
 Sektenspinner's function that updates the dialogue camera. (Used internally.)

@@ -1,3 +1,7 @@
+---
+title: Cursor
+description: LeGo package implementing in-game mouse cursor support
+---
 # Cursor
 This package implements Gothic in-game mouse cursor support. To visually display the cursor there is a `Cursor.tga` file in the resources, but the texture can be changed in [user constants](../various/userconstants.md#cursor-1).
 
@@ -7,9 +11,9 @@ This package implements Gothic in-game mouse cursor support. To visually display
     
 ## Dependencies
 
-- Floats
+- [Floats](../../ikarus/floats.md)
 - [FrameFunctions](../tools/frame_functions.md)
-- View
+- [View](../tools/view.md)
 
 ## Initialization
 Initialize with `LeGo_Cursor` flag.
@@ -115,7 +119,7 @@ func void Button_Click()
 };
 ```
 
-This also can be done by the Buttons package instead of View.
+This also can be done by the Buttons package instead of [View](../tools/view.md).
 
 ### Event handler
 Since LeGo 2.2 there is also an event handler (`#!dae var int Cursor_Event`) in the cursor package. This example briefly explains how it works:

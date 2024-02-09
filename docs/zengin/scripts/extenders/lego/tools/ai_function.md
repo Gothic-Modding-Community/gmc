@@ -1,8 +1,9 @@
 ---
 title: AI_Function
+description: LeGo package for enqueuing functions to NPC's AI queue
 ---
-# AI Function
-This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful e.g. cutscenes.
+# AI_Function
+This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful in writing cutscenes on engine or implementing new routines.
 
 ## Dependencies
 
@@ -39,13 +40,13 @@ func void AI_Function_SS (var C_NPC slf, var func function, var string param1, v
 func void AI_Function_IS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Int, String
 func void AI_Function_SI (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Int
 func void AI_Function_NS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Instance, String
-func void AI_Function_SN (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Istance
+func void AI_Function_SN (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Instance
 func void AI_Function_IN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Instance
 func void AI_Function_NI (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Int
 ```
 Functions with more than two parameters cannot be called, but parameters can be passed indirectly via global variables.
 
-In the called function, `slf` can be accessed as follows:
+In the called function, `self` can be accessed as follows:
 ```dae
 var oCNpc slf; slf = _^(ECX);
 ```

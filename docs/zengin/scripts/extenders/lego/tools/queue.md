@@ -1,9 +1,13 @@
+---
+title: Queue
+description: LeGo package implementing queue data structure
+---
 # Queue
 This package is an implementation of the Queue data structure and a queue for function calls.
 
 ## Dependencies
 
-- PermMem
+- [PermMem](permmem.md)
 
 ## Initialization
 N/A
@@ -99,7 +103,7 @@ func void Q_ForF(var int queue, var func f)
 - `#!dae var int queue`  
     Handle of a queue
 - `#!dae var func f`  
-    This function is executed for all values in the queue (signature: void (zCList*))
+    This function is executed for all values in the queue (signature: `void (zCList*)`)
 
 ## CallbackQueue
 
@@ -188,5 +192,3 @@ func void CQ_Exhaust(var int queue)
 
 - `#!dae var int queue`  
     Handle of a callback queue
-
-[//]: # (//TODO check if there are missing functions by Emu)

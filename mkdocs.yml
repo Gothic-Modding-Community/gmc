@@ -1,16 +1,22 @@
 site_name: Gothic Modding Community
-site_url: https://gothic-modding-community.github.io/gmc/
+site_url: !ENV [GMC_DEV_URL, 'https://gothic-modding-community.github.io/gmc/']
+site_description: 'Gothic Modding Community is a collection of helpful resources for modding Gothic and Risen games.'
 
 repo_name: Gothic-Modding-Community/gmc
 repo_url: https://github.com/Gothic-Modding-Community/gmc/
 edit_uri: edit/main/docs/
 
 watch:
-  - overrides
+  - overrides/assets
+  - overrides/.snippets
+  - overrides/main.html
 
 hooks:
+  - overrides/.hooks/theme_overrides_manager.py
   - overrides/.hooks/language_flags.py
   - overrides/.hooks/git_redirects.py
+  - overrides/.hooks/all_plugin_patch.py
+  - overrides/.hooks/preferences.py
 
 theme:
   name: material
@@ -47,6 +53,7 @@ theme:
     - content.code.copy
     - content.action.edit
     - content.action.view
+    - content.tooltips
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -58,10 +65,10 @@ extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/mCpS5b5SUY
-      name: Gothic Modding Comunity Discord Server
+      name: Gothic Modding Community Discord Server
     - icon: fontawesome/brands/github
       link: https://github.com/Gothic-Modding-Community/gmc
-      name: Gothic Modding Comunity Github repository
+      name: Gothic Modding Community GitHub repository
 
 
 
@@ -75,13 +82,14 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.highlight:
-      use_pygments: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      use_pygments: true
       linenums: true
       anchor_linenums: true
       # This sets the same ID for the <a> and <span> tags,
       # it's required for the <a> links to work and to allow <span> highlighting via JavaScript
       line_anchors: example
       line_spans: example
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       base_path: ['./overrides/.snippets/']
@@ -92,8 +100,8 @@ markdown_extensions:
   - footnotes
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
       alternate_style: true
@@ -125,59 +133,64 @@ plugins:
       js_files:
         - assets/javascripts/extra.js
   - i18n:
-      default_language: !ENV [GMC_DEFAULT_LANG, en]
-      default_language_only: !ENV [GMC_ONLY_DEFAULT_LANG, False]
+      build_only_locale: !ENV [GMC_DEV_LOCALE]
+      docs_structure: suffix
       languages:
-        en:
-          name: en - English
-          # Disable the /en/ path, a duplicate of the `default_language` build.
-          build: false
-        pl:
-          name: pl - Polski
+        - name: en - English
+          locale: en
+          default: true
           build: true
-        cs:
-          name: cs - Čeština
-          build: true
-      material_alternate: true
-      # Only 1 global scope, if 2 nav elements are named the same, input translation only once.
-      # Translate only the section/directory titles, page titles should be in the meta header of the `.md` file.
-      nav_translations:
-        en:
-          Afsp: AFSP
-          Anims: Animations
-          Contribute: How To Contribute
-          Daedalus tools: Daedalus
-          General info: General information
-          Genome: Genome (G3/R1)
-          Lego: LeGo
-          Vdfs tools: VDFS
-          Zengin: ZenGin (G1/G2)
-          Zgamepad: zGamePad
-          Zparserextender: zParserExtender
-        pl:
-          Anims: Animacje
-          Applications: Zastosowania
-          Classes: Klasy
-          Contribute: Jak Się Udzielić
-          Examples: Przykłady
-          Extensions: Rozszerzenia
-          Functions: Funkcje
-          General info: Informacje ogólne
-          Home: Strona Główna
-          Plugins: Wtyczki
-          Scripts: Skrypty
-          Syntax extensions: Rozszerzenia składni
-          Tools: Narzędzia
-          Tutorials: Poradniki
-          Various: Różne
+          nav_translations:
+            Afsp: AFSP
+            Anims: Animations
+            Contribute: How To Contribute
+            Daedalus tools: Daedalus
+            General info: General information
+            Genome: Genome (G3/R1)
+            Lego: LeGo
+            Vdfs tools: VDFS
+            Zengin: ZenGin (G1/G2)
+            Zgamepad: zGamePad
+            Zparserextender: zParserExtender
+        - name: pl - Polski
+          locale: pl
+          build: !ENV [GMC_ENABLE_ON_PUBLISH, GMC_BUILD_ALTERNATES, False]
+          site_description: 'Gothic Modding Community to zbiór pomocnych materiałów do modowania gier Gothic i Risen.'
+          nav_translations:
+            Anims: Animacje
+            Applications: Zastosowania
+            Classes: Klasy
+            Contribute: Jak Się Udzielić
+            Examples: Przykłady
+            Extenders: Extendery
+            Extensions: Rozszerzenia
+            Functions: Funkcje
+            General info: Informacje ogólne
+            Home: Strona Główna
+            Plugins: Pluginy
+            Scripts: Skrypty
+            Sound: Dźwięk
+            Standalone: Samodzielne
+            Syntax extensions: Rozszerzenia składni
+            Tools: Narzędzia
+            Tutorials: Poradniki
+            Various: Różne
+            Worlds: Światy
+        - name: cs - Čeština
+          locale: cs
+          build: !ENV [GMC_ENABLE_ON_PUBLISH, GMC_BUILD_ALTERNATES, False]
+          site_description: 'Dokumentace, návody a články zaměřené na modování her Gothic a Risen.'
   - git-revision-date-localized:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       type: iso_datetime
       timezone: Europe/Warsaw
       exclude:
         - index*.md
+        - preferences*.md
         - genome/index*.md
         - zengin/index*.md
   - redirects:
       # Empty dict to fill with the `meta_redirects.py` hook.
       redirect_maps: {}
+  - social:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]

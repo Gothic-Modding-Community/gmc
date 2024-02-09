@@ -17,7 +17,7 @@ META
         Menu    parserMenu        Menu.dat
         Music   parserMusic       Music.dat
     */
-    MergeMode   // 0 - if confilct occurs = comilation error, 1 - if conflict occurs = hook
+    MergeMode   // 0 - if conflict occurs = compilation error, 1 - if conflict occurs = hook
     Engine      // comma separated list of engines for which the scripts will be injected 
     /*
         Code  Engine          Human readable name

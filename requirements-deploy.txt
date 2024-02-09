@@ -1,0 +1,4 @@
+# Deployment Requirements
+# Could be replaced with `pip install mkdocs-material[imaging]` in the future
+Pillow==10.1.0
+CairoSVG==2.7.1

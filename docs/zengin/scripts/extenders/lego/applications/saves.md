@@ -1,5 +1,9 @@
+---
+title: Saves
+description: LeGo package offering open data stream to the game save file
+---
 # Saves
-Offers an open file stream that can read/write variables on save/load. It is used by PermMem, so you don't need to address it manually anymore.
+Offers an open file stream that can read/write variables on save/load. It is used by [PermMem](../tools/permmem.md), so you don't need to address it manually anymore.
 
 ## Dependencies
 
@@ -17,13 +21,13 @@ LeGo_Init(LeGo_Saves);
 ## Functions
 
 ### `BW_Savegame`
-Custom function. It creates a stream to its own memory file, this can be filled with the `BW_*` functions from the [BinaryMachines](../tools/binary_machines.md).
+Custom function. It creates a stream to its own memory file, this can be filled with the `BW_*` functions from the [BinaryMachines](../tools/binary_machines.md#binarywriter).
 ```dae
 func void BW_Savegame()
 ```
 
 ### `BR_Savegame`
-Custom function. It opens a stream to a previously saved memory file, which can be read from the [BinaryMachines](../tools/binary_machines.md) using the `BR_*` functions.
+Custom function. It opens a stream to a previously saved memory file, which can be read from the [BinaryMachines](../tools/binary_machines.md#binaryreader) using the `BR_*` functions.
 ```dae
 func void BR_Savegame()
 ```

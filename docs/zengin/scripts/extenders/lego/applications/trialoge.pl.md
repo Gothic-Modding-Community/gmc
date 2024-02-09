@@ -1,3 +1,7 @@
+---
+title: Trialoge
+description: Pakiet LeGo implementujący trialogi w gothicu
+---
 # Trialogi
 Ten pakiet pozwala na tworzenie rozmów z dowolną liczbą NPC i sterowanie kamerą podczas dialogu.
 
@@ -16,7 +20,7 @@ LeGo_Init(LeGo_Trialoge);
 ## Funkcje
 
 ### `EquipWeapon`
-Funkcja Sektenspinnera. (wzięta z forum)
+Funkcja Sektenspinnera. Sprawia, że NPC wyposaża broń.
 ```dae
 func void EquipWeapon(var C_NPC slf, var int ItemInstance)
 ```
@@ -26,6 +30,15 @@ func void EquipWeapon(var C_NPC slf, var int ItemInstance)
     NPC który wyposaża broń
 - `#!dae var int ItemInstance`  
     Instancja broni do wyposażenia
+
+**Konfiguracja**
+
+`#!dae const int EquipWeapon_TogglesEquip = 1`
+
+Powyższa stała ustala zachowanie funkcji podczas próby założenia już założonej broni:
+
+- `0` - `EquipWeapon` nic nie zrobi
+- `1` - `EquipWeapon` zdejmie tą broń
 
 ### `Npc_GetArmor`
 Pobiera pancerz wyposażony przez NPC.
@@ -39,7 +52,7 @@ func int Npc_GetArmor(var C_NPC slf)
 
 **Zwracana wartość**
 
-Funkcja zwraca instancje pancerza założonego przez NPC.
+Funkcja zwraca ID instancji pancerza założonego przez NPC.
 
 ### `Npc_GetMeleeWeapon`
 Pobiera wyposażoną przez NPC broń białą.
@@ -53,7 +66,35 @@ func int Npc_GetMeleeWeapon(var C_NPC slf)
 
 **Zwracana wartość**
 
-Funkcja zwraca instancje broni białej wyposażonej przez NPC.
+Funkcja zwraca ID instancji broni białej wyposażonej przez NPC.
+
+### `Npc_GetRangedWeapon`
+Pobiera wyposażoną przez NPC broń dystansową.
+```dae
+func int Npc_GetRangedWeapon(var C_NPC slf)
+```
+**Parametry**
+
+- `#!dae var C_NPC slf`  
+    NPC którego broń jest pobierana
+
+**Zwracana wartość**
+
+Funkcja zwraca ID instancji broni dystansowej wyposażonej przez NPC.
+
+### `Npc_TradeItem`
+Podmienia broń założoną przez NPC.
+```dae
+func void Npc_TradeItem(var c_npc slf, var int itm0, var int itm1) 
+```
+**Parametry**
+
+- `#!dae var C_NPC slf`  
+    NPC na którym wykonywana jest operacja
+- `#!dae var int itm0`  
+    ID instancji przedmiotu do usunięcia
+- `#!dae var int itm1`  
+    ID instancji przedmiotu do stworzenia i założenia
 
 ### `DiaCAM_Update`
 Funkcja Sektenspinnera. Aktualizuje kamerę dialogową. (Używana wewnętrznie)
@@ -73,7 +114,7 @@ Resetuje kamery dialogowe do ustawień domyślnych.
 func void DiaCAM_Enable()
 ```
 ### `TRIA_Wait`
-Makes `self` and `other` wait for each other, e.g. for `AI_GotoWP` actions for synchronization. 
+Sprawia że `self` i `other` czekają na siebie, np. podczas dla synchronizacji po wywołaniu `AI_GotoWP`. 
 ```dae
 func void TRIA_Wait()
 ```
@@ -101,7 +142,7 @@ func void TRIA_Barrier()
 ```
 
 ### `TRIA_Next`
-Ustawia podanego npc na `self`.
+Ustawia podanego NPC na `self`.
 ```dae
 func void TRIA_Next(var C_NPC n0)
 ```
@@ -118,7 +159,7 @@ func void TRIA_Cam(var string evt)
 **Parametry**
 
 - `#!dae var string evt`  
-    Nazwa ruchu kamery w Spacerze. Jeśli zostanie przekazany pusty łańcuch znaków, nastąpi przerwanie ruchu kamery.
+    Nazwa ruchu kamery w Spacerze. Jeśli zostanie przekazany pusty ciąg znaków, nastąpi przerwanie ruchu kamery.
 
 ### `TRIA_Finish`
 Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym razie dalsze trialogi nie będą mogły zostać rozpoczęte.
@@ -126,10 +167,10 @@ Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym 
 func void TRIA_Finish()
 ```
 
-## Examples
+## Przykłady
 
-### A Simple Trialogue
-The following conversation is resolved via the trialogues:
+### Prosty Trialog
+Poniższa konwersacja zostanie zaimplementowana za pomocą trialogów:
 
 1. **Arto:** Wybacz bohaterze, ale nie możesz tędy przejść.
 2. **Bohater:** Dlaczego nie?
@@ -230,4 +271,4 @@ func void TRIA_Test_info()
 };
 ```
 !!! Note
-    In addition, here are still [Dialoggestures](dialoggestures.md) used.
+    Dodatkowo w powyższym przykładzie użyty jest też pakiet [Dialoggestures](dialoggestures.md).

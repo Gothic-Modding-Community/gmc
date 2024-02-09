@@ -1,5 +1,6 @@
 ---
-title: Różne
+title: Misc
+description: Pakiet LeGo implementujący różne funkcje pomocnicze
 ---
 # Misc - różne
 Pakiet Misc wprowadza różne funkcje pomocnicze, które nie pasowały do żadnego innego pakietu.
@@ -13,12 +14,22 @@ Nie dotyczy.
 ## Implementacja
 [:material-github: Misc.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Misc.d)
 
+## Stałe
+Pakiet Misc implementuje satłą `phi`
+```dae
+const int phi = 1070141312; // PI/2
+```
+która w rzeczywistości jest liczbą `pi` podzieloną przez 2 zapisaną jako ikarusowy float.
+
+Decymalnie: `1.5707...`
+
+
 ## Funkcje
 
 ### `atan2f`
 Oblicza arcus tangens kąta między początkiem a punktem (x, y).
 ```dae
-func float atan2f(var int x, var int y)
+func int atan2f(var int x, var int y)
 ```
 **Parametry**
 
@@ -29,78 +40,78 @@ func float atan2f(var int x, var int y)
 
 **Zwracana wartość**
 
-Funkcja zwraca arcus tangens w radianach jako ikarusowy `float`
+Funkcja zwraca arcus tangens w radianach, jako ikarusowy `float`.
 
 ### `sin`
 Oblicza sinus kąta podanego w radianach.
 ```dae
-func float sin(var float angle)
+func int sin(var int angle)
 ```
 **Parametry**
 
-- `#!dae var float angle`  
+- `#!dae var int angle`  
     Kąt w radianach jako ikarusowy `float`
 
 **Zwracana wartość**
 
-Funkcja zwraca sinus kąta.
+Funkcja zwraca sinus kąta, jako ikarusowy `float`.
 
 ### `cos`
 Oblicza cosinus kąta podanego w radianach.
 ```dae
-func float cos(var float angle)
+func int cos(var int angle)
 ```
 **Parametry**
 
-- `#!dae var float angle`  
+- `#!dae var int angle`  
     Kąt w radianach jako ikarusowy `float`
 
 **Zwracana wartość**
 
-Funkcja zwraca cosinus kąta.
+Funkcja zwraca cosinus kąta, jako ikarusowy `float`.
 
 
 ### `tan`
 Oblicza tangens kąta podanego w radianach.
 ```dae
-func float tan(var float angle)
+func int tan(var int angle)
 ```
 **Parametry**
 
-- `#!dae var float angle`  
+- `#!dae var int angle`  
     Kąt w radianach jako ikarusowy `float`
 
 **Zwracana wartość**
 
-Funkcja zwraca tangens kąta.
+Funkcja zwraca tangens kąta, jako ikarusowy `float`.
 
 ### `asin`
 Oblicza arcus sinus
 ```dae
-func float asin(var float sine)
+func int asin(var int sine)
 ```
 **Parametry**
 
-- `#!dae var float sine`  
+- `#!dae var int sine`  
     Sinus kąta jako ikarusowy `float`
 
 **Zwracana wartość**
 
-Funkcja zwraca arcus sinus kąta.
+Funkcja zwraca arcus sinus kąta, jako ikarusowy `float`.
 
 ### `acos`
 Oblicza arcus cosinus
 ```dae
-func float acos(var float cosine)
+func int acos(var int cosine)
 ```
 **Parametry**
 
-- `#!dae var float cosine`  
+- `#!dae var int cosine`  
     Cosinus kąta jako ikarusowy `float`
 
 **Zwracana wartość**
 
-Funkcja zwraca arcus cosinus kąta.
+Funkcja zwraca arcus cosinus kąta, jako ikarusowy `float`.
 
 
 ### `distance2D`
@@ -127,17 +138,17 @@ Funkcja zwraca odległość między dwoma punktami.
 ### `distance2Df`
 Oblicza odległość między dwoma punktami na płaszczyźnie dwuwymiarowej, ale na liczbach zmiennoprzecinkowych (float).
 ```dae
-func float distance2Df(var float x1, var float x2, var float y1, var float y2)
+func int distance2Df(var int x1, var int x2, var int y1, var int y2)
 ```
 **Parametry**
 
-- `#!dae var float x1`  
+- `#!dae var int x1`  
     współrzędna x pierwszego punktu
-- `#!dae var float x2`  
+- `#!dae var int x2`  
     współrzędna x drugiego punktu
-- `#!dae var float y1`  
+- `#!dae var int y1`  
     współrzędna y pierwszego punktu
-- `#!dae var float y2`  
+- `#!dae var int y2`  
     współrzędna y drugiego punktu
 
 **Zwracana wartość**

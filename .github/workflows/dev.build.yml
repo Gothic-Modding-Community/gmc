@@ -7,39 +7,48 @@ on:
 
 env:
   GMC_ENABLE_ON_PUBLISH: true
+  GMC_DEV_URL: 'https://auronen.cokoliv.eu/gmc/'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Install Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Number of commits to fetch. 0 indicates all history.
           # Default: 1
           # 0 is needed for the update time plugin to work properly
           fetch-depth: 0
       - name: Install Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: 3.12
           cache: pip
-      - name: Cache `requirements.txt`
+      - name: Process Python Cache
         id: cache-requirements
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
-          path: '**/venv/*'
-          key: requirements-${{ hashFiles('**/requirements*.txt') }}
-      - name: Install Dependencies into `venv`
+          path: venv
+          key: requirements-${{ hashFiles('requirements*.txt') }}
+      - name: Install Uncached Requirements
         if: steps.cache-requirements.outputs.cache-hit != 'true'
         run: |
           python -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
+          pip install -r requirements-deploy.txt
       - name: Run prebuild tests
         run: |
           source venv/bin/activate
           python -m unittest discover tests/ -v
+      - name: Process MkDocs Plugins & Hooks Cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: mkdocs-${{ github.sha }}
+          restore-keys: |
+            mkdocs-
       - name: Build and deploy site
         run: |
           source venv/bin/activate

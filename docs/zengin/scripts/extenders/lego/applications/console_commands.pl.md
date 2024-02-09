@@ -1,12 +1,13 @@
 ---
-title: Polecenia konsoli
+title: Console Commands
+description: Pakiet LeGo umożliwiający rejestrację nowych poleceń konsoli
 ---
 # Console Commands - polecenia konsoli
 Ten Pakiet pozwala na tworzenie nowych poleceń konsoli dostępnej po naciśnięciu klawisza F2 w trybie marvin.
 
 ## Zależności
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - [HookEngine](../tools/hook_engine.md)
 
 ## Inicjalizacja
@@ -32,7 +33,7 @@ func void CC_Register(var func f, var string cmdPrefix, var string description)
 - `#!dae var string cmdPrefix`  
     Jest to polecenie, które można wprowadzić w konsoli.
 - `#!dae var string description`  
-    Ten tekst pojawia się obok polecenia (w zSpy), gdy używasz polecenia `help` w konsoli.
+    Ten tekst pojawia się obok polecenia (w [zSpy](../../../../tools/zSpy.md)), gdy używasz polecenia `help` w konsoli.
 
 ### `CC_Remove`
 Usuwa funkcje z konsoli komend.
@@ -61,7 +62,7 @@ Funkcja zwraca `TRUE` jeśli znajdzie odpowiednią funkcję, inaczej `FALSE`.
 ## Przykłady
 
 ### Proste polecenie konsoli
-Jako prosty przykład stwórzmy polecenie version, które wyświetli nam wersję modyfikacji. 
+Jako prosty przykład stwórzmy polecenie **version**, które wyświetli nam wersję modyfikacji. 
 Po pierwsze, deklarujemy stałą zmienną `string` do przechowywania informacji o wersji.
 ```dae
 const string Mod_Version = "Wersja modyfikacji - 0.1alpha";
@@ -69,7 +70,7 @@ const string Mod_Version = "Wersja modyfikacji - 0.1alpha";
 Następnie tworzymy nową funkcję.
 
 !!! Note
-    Zwróć uwagę na poprawną sygnaturę funkcji. Jeśli nie będzie błędna, polecenie spowoduje awarię gry.
+    Zwróć uwagę na poprawną sygnaturę funkcji. Jeśli będzie ona błędna, polecenie spowoduje awarię gry.
 
 ```dae
 // Ta funkcja jest wywoływana przez nasze nowe polecenie
@@ -82,7 +83,7 @@ Następnie musimy zarejestrować polecenie. Dla wygody stworzyłem nową funkcj�
 ```dae
 func void RegisterConsoleFunctions()
 {
-    CC_Register (CC_ModVersion, "wersja_moda", "Wersja mojej modyfikacji.");
+    CC_Register (CC_ModVersion, "version", "Wersja mojej modyfikacji.");
 };
 ```
 Na koniec musimy wywołać tę funkcję w `INIT_GLOBAL`.

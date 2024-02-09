@@ -1,3 +1,7 @@
+---
+title: Dialoggestures
+description: LeGo package for modifying the NPCs' gestures during dialogue
+---
 # Dialoggestures
 This package can modify the NPCs' gestures during dialogue to better bring out emotions.
 

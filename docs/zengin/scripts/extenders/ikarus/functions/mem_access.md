@@ -82,7 +82,7 @@ The function returns integer value from the array if the address is correct.
 
 ### `MEM_ReadStringArray`
 !!! Info
-    `MEM_ReadStringArray` has been already moved to the LeGo PermMem package.
+    `MEM_ReadStringArray` has been already moved to the LeGo [PermMem](../../lego/tools/permmem.md#mem_readstringarray) package.
 
 ### `MEM_ReadByteArray`
 Reads byte from the array at the `arrayAddress`.
@@ -114,7 +114,7 @@ func void MEM_WriteInt(var int address, var int value)
 - `#!dae var int value`  
     Integer value to write
 
-??? abstract "Examples"
+??? abstract "Example"
     An example of using this function is the following Ikarus function, which turns debugging messages on and off:
     ```dae
     func void MEM_SetShowDebug(var int on)

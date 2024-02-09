@@ -188,25 +188,25 @@ Aby móc pracować lokalnie:
 #### Preferencje budowy strony
 Podczas pracy z projektem można ustawić różne zmienne środowiskowe, żeby przystosować konfigurację do własnych preferencji:
 
-- `GMC_DEFAULT_LANG` - to dwuznakowy identyfikator języka (musi być obecny w pliku `mkdocs.yml`), ustawia domyślny język strony
-- `GMC_ONLY_DEFAULT_LANG` - wartość `True` albo `False`, aktywuje budowanie strony wyłącznie w domyślnym języku 
+- `GMC_DEV_LOCALE` - to dwuznakowy identyfikator języka (np. `en`, `pl`), ustawia język testowy. To ustawi ten języki jako domyślny oraz jedyny renderowany podczas budowy strony. Pomaga w zmniejszeniu czasu budowy strony oraz pozwala na łatwe zmienianie języka zamiast modyfikowania pliku konfiguracyjnego. **Przez zmiany w pluginie `mkdocs-static-i18n` jest to jedyny sposób na tymczasową zmianę domyślnego języka**
+- `GMC_BUILD_ALTERNATES` - wartość `True` albo `False`, aktywuje budowanie strony wraz z alternatywnymi językami. Domyślnie alternatywne języki są pomijane, aby zmenijszyć czas budowy strony. 
 - `GMC_ENABLE_ON_PUBLISH` - wartość `True` albo `False`, aktywuje wszystkie finalne procesy, jak dodanie daty ostatniej aktualizacji, minimalizacja zasobów itp. 
 
 Dla otwartego okna poleceń można tymczasowo je ustawić:
 
 ```bash title="Linux"
-export GMC_DEFAULT_LANG=en export GMC_ONLY_DEFAULT_LANG=True; mkdocs serve
+export GMC_DEV_LOCALE=en export GMC_BUILD_ALTERNATES=False; mkdocs serve
 ```
 
 ```powershell title="Windows Powershell"
-$env:GMC_DEFAULT_LANG="en"
-$env:GMC_ONLY_DEFAULT_LANG="True"
+$env:GMC_DEV_LOCALE="en"
+$env:GMC_BUILD_ALTERNATES="False"
 mkdocs serve
 ```
 
 ```batch title="Windows Konsola Poleceń (cmd)"
-set GMC_DEFAULT_LANG=en
-set GMC_ONLY_DEFAULT_LANG=True
+set GMC_DEV_LOCALE=en
+set GMC_BUILD_ALTERNATES=False
 mkdocs serve
 ```
 

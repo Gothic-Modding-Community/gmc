@@ -1,6 +1,7 @@
 nav:
     - Home:
         - ... | index*.md
+        - ... | preferences*.md
     - zengin
     - genome
     - contribute

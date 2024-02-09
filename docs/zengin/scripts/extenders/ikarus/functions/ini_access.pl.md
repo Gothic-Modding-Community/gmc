@@ -1,3 +1,6 @@
+---
+title: Ini File Access
+---
 # Dostęp do plików konfiguracyjnych
 Ta część Ikarusa umożliwia dostęp do `Gothic.ini` i pliku konfiguracyjnego załadowanej modyfikacji.
 
@@ -15,6 +18,17 @@ MEM_InitAll();
 
 ## Funkcje odczytu
 
+### `MEM_GetCommandLine`
+Zwraca zawartość linii poleceń przekazaną do Gothica.
+```dae
+func string MEM_GetCommandLine()
+```
+**Zwracana wartość**
+
+Funkcja zwraca zawartość linii poleceń przekazaną do Gothica. Może to wyglądać na przykład tak:
+
+`"-TIME:7:35 -GAME:TEST_IKARUS.INI -ZREPARSE -ZWINDOW -ZLOG:5,S -DEVMODE -ZMAXFRAMERATE:30"`
+
 ### `MEM_GetGothOpt`
 Przeszukuje `Gothic.ini` w poszukiwaniu opcji
 ```dae
@@ -29,7 +43,7 @@ func string MEM_GetGothOpt(var string sectionname, var string optionname)
 
 **Zwracana wartość**
 
-Funkcja zwraca wartość opcji w postaci łańcucha znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
+Funkcja zwraca wartość opcji w postaci ciągu znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
 
 ### `MEM_GetModOpt`
 Przeszukuje ini załadowanej modyfikacji w poszukiwaniu opcji.
@@ -45,7 +59,7 @@ func void MEM_GetModOpt(var string sectionname, var string optionname)
 
 **Zwracana wartość**
 
-Funkcja zwraca wartość opcji w postaci łańcucha znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
+Funkcja zwraca wartość opcji w postaci ciągu znaków, albo pustą zmienną, gdy opcja nie istnieje w danej sekcji.
 
 ### `MEM_GothOptSectionExists`
 Sprawdza, czy dana sekcja istnieje w `Gothic.ini`
@@ -178,7 +192,7 @@ func void MEM_SetKeys(var string name, var int primary, var int secondary)
 - `#!dae var int primary`  
     Podstawowy klawisz do przypisania, można go pobrać z pliku [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
 - `#!dae var int secondary`  
-    Zapasowy klawisz do przypisania, można go pobrać z pliku[Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
+    Zapasowy klawisz do przypisania, można go pobrać z pliku [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
 
 ### `MEM_SetKey`
 Ustawia podstawowy klawisz klawiatury dla klawisza logicznego.

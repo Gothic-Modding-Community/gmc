@@ -45,7 +45,7 @@ This property might not be present in older archives.
 This is the most important part of the header as it specifies in which format should the data be stored. There are 4 different modes:
 
 - **ASCII** - The simplest one. It stores data in human-readable ASCII notation (not unlike JSON for example). This is usually used when saving data during development and/or testing, while the final version of said data will most likely be stored as BIN_SAFE.
-- **ASCII_PROPS** - Same as ASCII except with more additional data that the developer can specify for visual clarity. In practice, it is not used anywhere and mostly serves only to prettify debug info (try typing `ZWORLD VOBPROPS` in the console and look in zSpy ;) ).
+- **ASCII_PROPS** - Same as ASCII except with more additional data that the developer can specify for visual clarity. In practice, it is not used anywhere and mostly serves only to prettify debug info (try typing `ZWORLD VOBPROPS` in the console and look in [zSpy](../tools/zSpy.md) ;) ).
 - **BINARY** - Binary representation of the class instance, which mostly copies the data 1:1 into/from the stream. In practice, this format is only used to store savefiles (.SAV).
 - **BIN_SAFE** - BinSafe, short for Binary Safe, is an extended version of Binary which stores type information along with the data itself. This is meant to make error checking for invalid data easier. There are other changes which are explained below. Most, if not all world files (.ZEN), are stored in this format.
 

@@ -1,3 +1,7 @@
+---
+title: Gamestate
+description: LeGo package for calling functions during different game states
+---
 # Gamestate
 Gamestate package allows to check for different game states (game start, game load or level change).
 
@@ -64,8 +68,6 @@ func void Init_Global()
     };
 };
 ```
-
-This might be useful when working with PermMem, where PermMem objects do not need to be recreated after the game loads.
 
 It can also be done like that:
 ```dae

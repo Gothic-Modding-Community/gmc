@@ -1,13 +1,14 @@
 ---
-title: Paski
+title: Bars
+description: Pakiet LeGo do tworzenia nowych pasków statusu
 ---
 # Bars - paski
 Ten pakiet bardzo ułatwia dodawanie nowych pasków, dla wyświetlania np. wytrzymałości.
 
 ## Zależności
 
-- PermMem
-- View
+- [PermMem](../tools/permmem.md)
+- [View](../tools/view.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Bars`.

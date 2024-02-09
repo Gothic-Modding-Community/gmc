@@ -1,5 +1,6 @@
 ---
-title: Talenty
+title: Talents
+description: Pakiet LeGo zapewniający rozszerzenie dla tablicy AIVar
 ---
 # Talents - talenty
 Ten pakiet robi dwie rzeczy:
@@ -11,7 +12,7 @@ Pakiet `Talents` używa jednego wolnego AIVara, domyślnie jest to AIVar z numer
 
 ## Zależności
 
-- PermMem
+- [PermMem](permmem.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_PermMem`.

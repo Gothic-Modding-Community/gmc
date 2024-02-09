@@ -5,12 +5,12 @@ import glob
 import json
 import os
 import unittest
+
 import regex
 
 # noinspection PyPackageRequirements
-import yaml
-
-from tests.path_constants import DOCS_DIR, OVERRIDES_DIR, ROOT_DIR
+from mkdocs.utils import yaml_load
+from path_constants import DOCS_DIR, OVERRIDES_DIR, ROOT_DIR
 
 
 class LocalizationTest(unittest.TestCase):
@@ -19,18 +19,54 @@ class LocalizationTest(unittest.TestCase):
     """
 
     config: dict = None
+    settings_to_check: list[tuple] = None
+    expected_settings: dict = None
 
     @classmethod
     def setUpClass(cls) -> None:
         with open(os.path.join(ROOT_DIR, "mkdocs.yml"), encoding="utf8") as file:
-            lines = file.readlines()
+            content = file.read()
 
-        # The default safe loader doesn't handle values containing !, they're not needed for localization
-        # for the exception of !ENV which are important
-        lines = [regex.sub(r"!ENV.*,\s*?(\w+)\]", r"\g<1>", line) for line in lines]
-        output = "\n".join([regex.sub(r"!.*", "", line) for line in lines])
+        # Extract the ENV options, and assert that the selected boolean variables
+        # are set to the correct boolean values (aka weren't changed by mistake)
+        dirty_settings = regex.findall(r"\s*(.*?):\s*!ENV\s*\[(.*?)\]", content)
+        cls.settings_to_check = []
 
-        for plugin in yaml.safe_load(output)["plugins"]:
+        # Assure only controlled cases use undefined fallback values
+        allow_undefined = {
+            "GMC_DEV_LOCALE",
+        }
+
+        # some settings might have multiple !ENV toggles, so the catch all regex
+        # result needs to be cleaned up
+        for setting_group in dirty_settings:
+            if len(setting_group) != 2:
+                raise ValueError("Unhandled case setting_group isn't 2 values")
+
+            prop_name, envar = setting_group
+
+            fallback_value = None
+            splitted = list(map(str.strip, envar.split(",")))
+
+            if splitted[-1].lower() in {"true", "false"} or "'" in splitted[-1]:
+                fallback_value = eval(splitted.pop())
+
+            if fallback_value is None:
+                for var in splitted:
+                    if var not in allow_undefined:
+                        raise ValueError(
+                            f"{prop_name} - {envar} should also define a default fallback"
+                        )
+            else:
+                for var in splitted:
+                    cls.settings_to_check.append((prop_name, var, fallback_value))
+
+        cls.expected_settings = {
+            "GMC_ENABLE_ON_PUBLISH": False,
+            "GMC_BUILD_ALTERNATES": False,
+        }
+
+        for plugin in yaml_load(content)["plugins"]:
             if isinstance(plugin, dict):
                 cls.config = plugin.get("i18n")
             if cls.config is not None:
@@ -38,28 +74,41 @@ class LocalizationTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.assertIsNot(self.config, None, msg="Localization config is None")
+        for setting_name, envar_name, actual in self.settings_to_check:
+            if envar_name not in self.expected_settings:
+                continue
+            expected = self.expected_settings[envar_name]
+            self.assertEqual(
+                actual,
+                expected,
+                msg=f"Setting '{setting_name}'->{envar_name} is set to {actual} instead of {expected}",
+            )
 
     def test_default(self) -> None:
         """
         Test that the default language is properly set, and that all languages are built
         """
         default = "en"
-        self.assertEqual(
-            self.config["default_language"], default, msg=f"Default must be '{default}'"
-        )
-        self.assertTrue(
-            default in self.config["languages"], msg=f"Language selector must contain '{default}'"
-        )
-        self.assertFalse(
-            self.config["default_language_only"], msg=f"All languages must be deployed"
-        )
+        default_present = False
+
+        for lang in self.config["languages"]:
+            lang_default = lang.get("default", False)
+            if lang["locale"] == default:
+                default_present = True
+                self.assertTrue(lang_default, msg=f"'{default}' must be set Default")
+            else:
+                self.assertFalse(lang_default, msg=f"Only '{default}' can be set Default")
+            self.assertTrue(
+                lang["build"], msg=f"All languages must be deployed - '{lang['locale']}' isn't"
+            )
+
+        self.assertTrue(default_present, msg=f"Language selector must contain '{default}'")
 
     def test_announcement(self) -> None:
         """
         Test that every localization has an announcement for untranslated content
         """
-        languages = list(self.config["languages"].keys())
-        languages.remove("en")
+        languages: list = self.config["languages"]
 
         with open(os.path.join(OVERRIDES_DIR, "main.html"), encoding="utf8") as file:
             main = file.read()
@@ -93,13 +142,14 @@ class LocalizationTest(unittest.TestCase):
         action = json.loads(regex.sub(r",\s*}", "}", regex.sub(r"\s+", " ", action_content)))
 
         for language in languages:
+            locale = language["locale"]
             self.assertTrue(
-                language in announcement and language in action,
-                msg=f"'{language}' is missing from at least one of the announcement dicts in main.html",
+                locale in announcement and locale in action,
+                msg=f"'{locale}' is missing from at least one of the announcement dicts in main.html",
             )
             self.assertTrue(
-                len(announcement[language]) > 0 and len(action[language]) > 0,
-                msg=f"'{language}' is empty in at least one of the announcement dicts in main.html",
+                len(announcement[locale]) > 0 and len(action[locale]) > 0,
+                msg=f"'{locale}' is empty in at least one of the announcement dicts in main.html",
             )
 
     def test_files(self) -> None:

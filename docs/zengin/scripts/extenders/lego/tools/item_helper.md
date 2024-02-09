@@ -1,3 +1,7 @@
+---
+title: ItemHelper
+description: LeGo package that makes changing `C_ITEM` instance to `oCItem` pointer possible
+---
 # ItemHelper
 This package is very simple - it retrieves a `oCItem` pointer from an `C_ITEM` instance valid for the current world and session.
 
@@ -16,9 +20,9 @@ N/A
 
 ## Functions
 
-### `ITM_GetPtr`
+### `Itm_GetPtr`
 ```dae
-func int ITM_GetPtr(var int instance)
+func int Itm_GetPtr(var int instance)
 ```
 **Parameters**
 

@@ -1,10 +1,14 @@
+---
+title: Bars
+description: LeGo package for creating new status bars
+---
 # Bars
 This package makes it very easy to add new bars, for e.g. stamina.
 
 ## Dependencies
 
-- PermMem
-- View
+- [PermMem](../tools/permmem.md)
+- [View](../tools/view.md)
 
 ## Initialization
 Initialize with `LeGo_Bars` flag.

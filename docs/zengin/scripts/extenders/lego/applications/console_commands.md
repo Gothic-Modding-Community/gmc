@@ -1,9 +1,13 @@
+---
+title: Console Commands
+description: LeGo package allowing the registering of new console commands
+---
 # Console Commands
 This package allows you to create new console commands.
 
 ## Dependencies
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - [HookEngine](../tools/hook_engine.md)
 
 ## Initialization
@@ -29,7 +33,7 @@ func void CC_Register(var func f, var string cmdPrefix, var string description)
 - `#!dae var string cmdPrefix`  
     This is a command, which can be entered in the console.
 - `#!dae var string description`  
-    This text appears next to the command (in zSpy) when you use the `help` command in the console.
+    This text appears next to the command (in [zSpy](../../../../tools/zSpy.md)) when you use the `help` command in the console.
 
 ### `CC_Remove`
 Removes a function from the console commands.
@@ -58,7 +62,7 @@ The function returns `TRUE` if there is a corresponding function, `FALSE` is ret
 ## Examples
 
 ### Basic command example
-As a basic example - let us create a version command, which prints a version of our modification.  
+As a basic example - let us create a **version** command, which prints a version of our modification.  
 Firstly, we declare a constant `string` variable to hold the version string to be shown.
 ```dae
 const string Mod_Version = "My mod version 0.1alpha";
@@ -78,7 +82,7 @@ We then have to register the functions. For convenience, I created a new `Regist
 ```dae
 func void RegisterConsoleFunctions()
 {
-    CC_Register (CC_ModVersion, "mod_version", "Version of my amazing mod.");
+    CC_Register (CC_ModVersion, "version", "Version of my amazing mod.");
 };
 ```
 Lastly, we have to call this function from `INIT_GLOBAL` function.

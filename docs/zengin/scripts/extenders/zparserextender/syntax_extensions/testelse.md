@@ -11,7 +11,7 @@ Valid values:
 - engine tag - `G1`, `G1A`, `G2`, `G2A`
 - Steam Overlay activity - `Steam`
 
-The result can be combined from several arguments. Round brackets `()` ca be used to specify priority and expressions support the logical negation operator `!`, logical AND `&&` and OR `||`.
+The result can be combined from several arguments. Round brackets `()` can be used to specify priority and expressions support the logical negation operator `!`, logical AND `&&` and OR `||`.
 
 
 The operator can be used anywhere in the script file. It is syntactically similar to `if else` statement, but curly braces `{}` can be omitted for single-line operations. For example:

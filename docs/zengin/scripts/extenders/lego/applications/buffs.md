@@ -1,10 +1,14 @@
+---
+title: Buffs
+description: LeGo package allowing to create status effects and apply them on NPCs
+---
 # Buffs
 This package allows you to easily create status effects that can affect any NPC.
 Status effects on the hero are displayed graphically in a bar.
 
 ## Dependencies
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - [FrameFunctions](../tools/frame_functions.md)
 
 ## Initialization
@@ -39,7 +43,7 @@ func int Buff_Apply(var C_NPC npc, var int buff)
 The function returns the handle of the buff, which was just generated.
 
 ### `Buff_ApplyUnique`
-`Buff_Apply`, but nothing happens if a status effect of that kind is already on the NPC.
+[`Buff_Apply`](#buff_apply), but nothing happens if a status effect of that kind is already on the NPC.
 ```dae
 func int Buff_ApplyUnique(var C_NPC npc, var int buff)
 ```
@@ -56,7 +60,7 @@ func int Buff_ApplyUnique(var C_NPC npc, var int buff)
 The function returns the handle of the buff, which was just generated or `0` if the buff is already applied on the NPC.
 
 ### `Buff_ApplyOrRefresh`
-`Buff_Apply`, but if a status effect of this type is already affecting the NPC, the duration will be reset.
+[`Buff_Apply`](#buff_apply), but if a status effect of this type is already affecting the NPC, the duration will be reset.
 ```dae
 func int Buff_ApplyOrRefresh(var C_NPC n, var int buff)
 ```
@@ -84,8 +88,6 @@ func void Buff_Refresh(var int buffHandle)
 
 ### `Buff_Remove`
 Removes the buff from the all NPCs.
-
-[//]: # (TODO Needs to be checked)
 ```dae
 func void Buff_Remove(var int buffHandle)
 ```
@@ -96,8 +98,6 @@ func void Buff_Remove(var int buffHandle)
 
 ### `Buff_RemoveAll`
 Removes the buffs form the NPC.
-
-[//]: # (TODO Needs to be checked)
 ```dae
 func void Buff_RemoveAll(var C_NPC npc, var int buffInstance)
 ```
@@ -173,13 +173,13 @@ class lCBuff
 
     // Internal, no need to set during instance construction
     var int _startedTime;
-    var int _endTime;    // Not rendundant with durationMS because buffs can be refreshed
+    var int _endTime;    // Not redundant with durationMS because buffs can be refreshed
 };
 ```
 
 ## Examples
 
-## Delayed poison
+### Delayed poison
 ```dae
 instance deadly_poison(lCBuff)
 {
