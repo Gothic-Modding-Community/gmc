@@ -1,3 +1,7 @@
+---
+title: Random
+description: LeGo package providing a better alternative for a `Hlp_Random()` function
+---
 # Random
 Provides more random randomization than `Hlp_Random()` function.
 

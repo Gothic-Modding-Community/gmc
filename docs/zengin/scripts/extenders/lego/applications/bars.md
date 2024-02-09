@@ -1,3 +1,7 @@
+---
+title: Bars
+description: LeGo package for creating new status bars
+---
 # Bars
 This package makes it very easy to add new bars, for e.g. stamina.
 

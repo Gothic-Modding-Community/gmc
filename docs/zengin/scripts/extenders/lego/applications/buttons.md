@@ -1,3 +1,7 @@
+---
+title: Buttons
+description: LeGo package for creating buttons that reacts to mouse
+---
 # Buttons
 This package extends the handling of the mouse and allows creating rectangular buttons, which react to mouse (hover) entry and exit as well as a mouse click.
 

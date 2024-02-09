@@ -1,3 +1,7 @@
+---
+title: Focusnames
+description: LeGo package that change NPCs/Object's focus name color based on its attitude
+---
 # Focusnames
 This package colors the focus names of the NPCs in appropriate colors according to the behavior defined below (alpha values are taken into account). Also affects monsters. (Mobs/Items get Color_Neutral)
 

@@ -1,3 +1,7 @@
+---
+title: Names
+description: LeGo package for changing NPCs display name during the game
+---
 # Names
 Allows the user to change NPC name e.g. after he shows up.
 

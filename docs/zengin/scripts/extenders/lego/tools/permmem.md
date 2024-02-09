@@ -1,3 +1,7 @@
+---
+title: PermMem
+description: LeGo package implementing automatic instances saving and loading
+---
 # PermMem
 PermMem is a powerful package that allows classes (or instances) to be used permanently even after loading or restarting by saving them to the ASCII `.ZEN` archive in the savegame directory. PermMem manages handles that are used to access instances, and provides various functions to manipulate these handles and instances.
 

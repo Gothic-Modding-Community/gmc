@@ -1,3 +1,7 @@
+---
+title: Cursor
+description: LeGo package implementing in-game mouse cursor support
+---
 # Cursor
 This package implements Gothic in-game mouse cursor support. To visually display the cursor there is a `Cursor.tga` file in the resources, but the texture can be changed in [user constants](../various/userconstants.md#cursor-1).
 

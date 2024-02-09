@@ -1,3 +1,7 @@
+---
+title: HookEngine
+description: LeGo package for hooking engine functions
+---
 # HookEngine
 This package allows you to hook anywhere in an engine function to run your own Daedalus code.
 

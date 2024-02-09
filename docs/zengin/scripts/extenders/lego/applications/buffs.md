@@ -1,3 +1,7 @@
+---
+title: Buffs
+description: LeGo package allowing to create status effects and apply them on NPCs
+---
 # Buffs
 This package allows you to easily create status effects that can affect any NPC.
 Status effects on the hero are displayed graphically in a bar.

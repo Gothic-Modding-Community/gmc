@@ -1,3 +1,7 @@
+---
+title: View
+description: LeGo package for `zCView` handling in daedalus
+---
 # View
 This package can create textures on the screen and work with them in an extended manner.
 

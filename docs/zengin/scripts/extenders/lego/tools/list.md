@@ -1,3 +1,7 @@
+---
+title: List
+description: LeGo package implementing `zCList` and `zCListSort` data types handling
+---
 # List
 The List package is a collection of functions designed to simplify the handling of `zCList` and `zCListSort` lists in daedalus. It offers a range of functions for creating, manipulating, and querying lists.
 

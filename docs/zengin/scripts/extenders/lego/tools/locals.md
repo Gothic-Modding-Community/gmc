@@ -1,3 +1,7 @@
+---
+title: Locals
+description: LeGo package adding true local variables and final clause
+---
 # Locals
 Daedalus doesn't offer any local variables, which can quickly lead to problems with recursive functions. The Locals package allows variables to be saved temporarily on a pseudo-stack.
 Locals is a very specific package. People who work normally with Daedalus will probably never need it.
