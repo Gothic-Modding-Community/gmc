@@ -56,7 +56,7 @@ func int ASMINT_Pop()
 ```
 **Return value**
 
-The function returns a data poped form the internal stack.
+The function returns a data popped form the internal stack.
  
 ## Functions (Core)
 
@@ -195,7 +195,7 @@ func void ASM_RunOnce()
 ## Example
 The following function sets the NPC passed as slf as the player, as if you had pressed **O** in Marvin mode with this NPC in focus. This is so short because there is already a function for this exact purpose, it's just not normally accessible from the scripts. It is therefore sufficient to write assembly code that pushes the parameter of the function (the `this` pointer) into the appropriate register and then calls the function.
 ```dae
-func void SetAsPlayer(var C_NPC slf) { /* Adresse der Funktion */
+func void SetAsPlayer(var C_NPC slf) { /* Address of the function */
     const int oCNpc__SetAsPlayer = 7612064; //0x7426A0 (Gothic2.exe)
 
     var int slfPtr;

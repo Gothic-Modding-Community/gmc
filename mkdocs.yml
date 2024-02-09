@@ -7,13 +7,16 @@ repo_url: https://github.com/Gothic-Modding-Community/gmc/
 edit_uri: edit/main/docs/
 
 watch:
-  - overrides
+  - overrides/assets
+  - overrides/.snippets
+  - overrides/main.html
 
 hooks:
   - overrides/.hooks/theme_overrides_manager.py
   - overrides/.hooks/language_flags.py
   - overrides/.hooks/git_redirects.py
-  - overrides/.hooks/social_patch.py
+  - overrides/.hooks/all_plugin_patch.py
+  - overrides/.hooks/preferences.py
 
 theme:
   name: material
@@ -50,6 +53,7 @@ theme:
     - content.code.copy
     - content.action.edit
     - content.action.view
+    - content.tooltips
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -85,6 +89,7 @@ markdown_extensions:
       # it's required for the <a> links to work and to allow <span> highlighting via JavaScript
       line_anchors: example
       line_spans: example
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       base_path: ['./overrides/.snippets/']
@@ -95,8 +100,8 @@ markdown_extensions:
   - footnotes
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
       alternate_style: true
@@ -128,8 +133,8 @@ plugins:
       js_files:
         - assets/javascripts/extra.js
   - i18n:
+      build_only_locale: !ENV [GMC_DEV_LOCALE]
       docs_structure: suffix
-      development_locale: !ENV [GMC_DEV_LOCALE]
       languages:
         - name: en - English
           locale: en
@@ -181,10 +186,11 @@ plugins:
       timezone: Europe/Warsaw
       exclude:
         - index*.md
+        - preferences*.md
         - genome/index*.md
         - zengin/index*.md
   - redirects:
       # Empty dict to fill with the `meta_redirects.py` hook.
       redirect_maps: {}
   - social:
-      cards: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]

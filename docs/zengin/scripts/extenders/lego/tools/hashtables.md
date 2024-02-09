@@ -187,7 +187,7 @@ func void PrintKeyValuePair(var int key, var int val)
     Print(ConcatStrings(ConcatStrings("Key: ", IntToString(key)), ConcatStrings(", Value: ", IntToString(val))));
 };
 
-func void exapmle()
+func void example()
 {
     // Create a new hashtable
     var int hashtableHandle; hashtableHandle = HT_Create();

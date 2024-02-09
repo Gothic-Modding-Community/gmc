@@ -8,10 +8,10 @@ zParserExtender also implements cyclical functions called triggers - not to be c
 To define a trigger, the `C_Trigger` class is used:
 
 ```dae
-/// Union zPraserExtender Trigger class
+/// Union zParserExtender Trigger class
 class C_Trigger
 {
-    var int Delay; // defines the frequency (in miliseconds) at which the function will be called.
+    var int Delay; // defines the frequency (in milliseconds) at which the function will be called.
     var int Enabled; // determines if the trigger is active. If the value is equal to zero, the trigger is destroyed.
     var int AIVariables[16]; // user data, which can be set independently when creating trigger (yes, you can write there absolutely everything you want).
 
@@ -93,12 +93,12 @@ To search for a specific trigger, for example by NPC, the [trigger external func
 
 ```dae
 // This way you can disable all triggers running on the `hero` instance
-var C_Trigger trigget = FirstTrigger;
-var C_Trigger trigget_saved;
-while (!Hlp_IsNULL(trigget))
+var C_Trigger trigger = FirstTrigger;
+var C_Trigger trigger_saved;
+while (!Hlp_IsNULL(trigger))
 {
-    trigget_saved = trigger;
+    trigger_saved = trigger;
     trigger = AI_GetNextTriggerBySelf(hero);
-    trigget_saved.Enabled = false;
+    trigger_saved.Enabled = false;
 };
 ```

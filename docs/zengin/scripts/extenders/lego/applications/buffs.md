@@ -169,7 +169,7 @@ class lCBuff
 
     // Internal, no need to set during instance construction
     var int _startedTime;
-    var int _endTime;    // Not rendundant with durationMS because buffs can be refreshed
+    var int _endTime;    // Not redundant with durationMS because buffs can be refreshed
 };
 ```
 

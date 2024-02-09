@@ -116,7 +116,7 @@ func void Button_SetTexture(var int hndl, var string tex)
     Name of the new texture
 
 ### `Button_SetCaption`
-Displays a centred text on the button.
+Displays a centered text on the button.
 ```dae
 func void Button_SetCaption(var int hndl, var string caption, var string font)
 ```

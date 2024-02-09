@@ -305,10 +305,10 @@ func int List_Compare(var int data1, var int data2, var func compare)
 - `#!dae var int data2`  
     The second integer value.
 - `#!dae var func compare`  
-    One of comparsion functions.
+    One of comparison functions.
 **Return value**
 
-The function returns the return value of specified comparsion funtion.
+The function returns the return value of specified comparison function.
 
 ## Comparison Functions
 

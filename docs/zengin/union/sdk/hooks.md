@@ -102,7 +102,7 @@ enum EInterMode
     // Hook will not intercept the function.
     IVK_DISABLED  = 1 << 1,
 
-    // Normal hook. If other hook is alredy defined for the same address, an error pops up.
+    // Normal hook. If other hook is already defined for the same address, an error pops up.
     IVK_NORMAL    = 1 << 2,
 
     // Hook will automatically create an interception tree to allow multiple hooks for the same address.

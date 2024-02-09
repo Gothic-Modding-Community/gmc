@@ -28,7 +28,7 @@ func int BW_NewFile(var string file)
 
 **Return value**
 
-The function returns `TRUE` if the file is successfully created and initialized, `FALSE`is returned otherwise.
+The function returns `TRUE` if the file is successfully created and initialized, `FALSE` is returned otherwise.
 
 ### `BW_Close`
 Closes the current write stream.

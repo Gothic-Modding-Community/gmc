@@ -1,7 +1,7 @@
 # CALL Package
 This part of Ikarus makes possible to call engine functions directly from scripts.
 
-In order to be able to invoke an engine function, you must know some of its roperties. This includes the number and types of parameters, the type of return value, address of function and calling convention.
+In order to be able to invoke an engine function, you must know some of its properties. This includes the number and types of parameters, the type of return value, address of function and calling convention.
 
 Knowledge about engine functions can be obtained using tools like IDA, which can analyze and convert GothicMod.exe / Gothic2.exe into a more human-readable format.
 
@@ -242,7 +242,7 @@ As soon as the function call has taken place, i.e. after step 2, the return valu
 !!! Note 
     Some return values are not stored in the EAX. In that case the call of the special function `RetValIs` is required to get the return value.
 
-    Folowing funcitons are provided: [`CALL_RetValIsFloat`](#call_retvalisfloat), [`CALL_RetValIszString`](#call_retvaliszstring), [`CALL_RetValIsStruct`](#call_retvalisstruct).
+    Following functions are provided: [`CALL_RetValIsFloat`](#call_retvalisfloat), [`CALL_RetValIszString`](#call_retvaliszstring), [`CALL_RetValIsStruct`](#call_retvalisstruct).
 
 ### `CALL_PutRetValTo`
 Simply places the return value to the given address (mostly the address of a daedalus integer). Must be called before [The Call](#the-call) function.
@@ -324,7 +324,7 @@ func string CALL_RetValAszString()
     `CALL_RetValAszStringPtr` and `CALL_RetValAszString` are quite different and should not be confused. Using `CALL_RetValAszString` frees up memory that may still be needed. In a reverse with `CALL_RetValAszStringPtr` memory that is no longer needed is not freed and can cause memory leak.
 
 ### `CALL_RetValAszStringPtr`
-Retrievs a `zString` pointer and converts it to the daedalus string. (don't frees the memory)
+Retrieves a `zString` pointer and converts it to the daedalus string. (don't frees the memory)
 ```dae
 func string CALL_RetValAszStringPtr()
 ```
@@ -334,7 +334,7 @@ The function returns a daedalus string form a `zString` returned by the previous
 
 
 ### `CALL_RetValAszString`
-Retrievs a `zString` pointer and converts it to the daedalus string. (frees the memory)
+Retrieves a `zString` pointer and converts it to the daedalus string. (frees the memory)
 ```dae
 func string CALL_RetValAszString()
 ```

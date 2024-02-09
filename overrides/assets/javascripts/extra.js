@@ -100,13 +100,18 @@ window.addEventListener("DOMContentLoaded", _ => {
     gmcExpandNavigation();
     gmcAddVersionToggle();
     gmcLinksForVersion();
-    if (gGMC_PAGE_LOCALE !== gGMC_DEFAULT_LOCALE && gGMC_PAGE_LOCALE !== gGMC_FILE_LOCALE) {
+    if (gGMC_PAGE_LOCALE !== gGMC_DEFAULT_LOCALE
+        && gGMC_PAGE_LOCALE !== gGMC_FILE_LOCALE
+        && !gGMC_REMOVE_TRANSLATION_PROMPTS) {
         gmcTranslateButton();
     }
     gmcRemoveCodeLines();
     gmcExternalLinks();
-    new gMutationObserver(gmcSearchMutationCallback)
-        .observe(document.querySelector(".md-search-result__list"), {childList: true});
+    const searchResults = document.querySelector(".md-search-result__list");
+    if (searchResults) {
+        new gMutationObserver(gmcSearchMutationCallback)
+            .observe(searchResults, {childList: true});
+    }
 });
 
 window.addEventListener("hashchange", _ => {
@@ -155,17 +160,19 @@ function gmcExpandNavigation() {
         return;
     }
 
-    const activeLink = document.querySelector(".md-nav__link--active");
+    const activeLinkLabel = document.querySelector("label.md-nav__link--active");
 
-    if (!activeLink) {
+    if (!activeLinkLabel) {
         return;
     }
 
-    let activeNav = activeLink.parentElement.querySelector("nav");
+    const navID = activeLinkLabel.id;
+
+    let activeNav = document.querySelector(`nav[aria-labelledby="${navID}"]`);
 
     if (!activeNav || activeNav.className.includes("md-nav--secondary")) {
-        // gmcDebug(`nav not foundInParent`);
-        activeNav = activeLink.closest("nav");
+        // gmcDebug(`nav with id ${navID} not found`);
+        activeNav = activeLinkLabel.closest("nav");
     }
 
     if (activeNav.dataset.hasOwnProperty("mdLevel")) {
@@ -402,6 +409,7 @@ const gmcTranslateButton = () => {
         "*GitHub's file editor doesn't provide `.md` formatting options, if you want those, consider using https://stackedit.io/*",
     ].join("  \n"));
     const newAnchor = document.createElement("a");
+    newAnchor.id = "gmc-new-translation-button";
     newAnchor.classList = anchor.classList;
     // Weird quirk. The topDirectory needs to be in both, the link and in the filename param to put the file in the correct directory.
     // -- This quirk stopped quirking with the introduction of the new GitHub UI, sadge.
@@ -409,7 +417,7 @@ const gmcTranslateButton = () => {
     newAnchor.innerHTML = gGMC_TRANSLATE_SVG;
     newAnchor.title = gGMC_TRANSLATE_CTA;
     anchor.parentElement.prepend(newAnchor);
-}
+};
 
 const gmcRemoveCodeLines = () => {
     const nodesForRemoval = [];
@@ -433,7 +441,7 @@ const gmcFadingNavigation = () => {
 
     activeNavItems[0].classList.add("gmc-fade-nav");
     activeNavItems[activeNavItems.length - 1].classList.add("gmc-fade-nav-off");
-}
+};
 
 function gmcDebug(...message) {
     if (gGMC_LOCAL)

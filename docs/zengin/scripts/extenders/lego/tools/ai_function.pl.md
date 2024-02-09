@@ -17,12 +17,12 @@ LeGo_Init(LeGo_AI_Function);
 ## Implementacja
 [:material-github: AI_Function.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/AI_Function.d)
 
-## Functions
+## Funkcje
 Funkcja `function` jest wywoływana z opóźnieniem: dołącza do kolejki AI `slf`.
 ```dae
 func void AI_Function(var C_NPC slf, var func function)
 ```
-**Parameters**
+**Parametry**
 
 - `#!dae var C_NPC slf`  
     NPC, do którego kolejki AI dołącza funkcja
@@ -40,7 +40,7 @@ func void AI_Function_SS (var C_NPC slf, var func function, var string param1, v
 func void AI_Function_IS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Int, String
 func void AI_Function_SI (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Int
 func void AI_Function_NS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Instance, String
-func void AI_Function_SN (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Istance
+func void AI_Function_SN (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Instance
 func void AI_Function_IN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Instance
 func void AI_Function_NI (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Int
 ```

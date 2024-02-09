@@ -128,7 +128,7 @@ The functions can look like that:
 ```dae
 func void hooked() 
 {
-    Print("Orginal function");
+    Print("Original function");
 };
 
 func void hook() 
@@ -140,7 +140,7 @@ func void hook()
 The results should look like that
 ```dae
 Our hook
-Orginal function
+Original function
 ```
 
 ### Hook after function
@@ -152,7 +152,7 @@ The functions are also similar, but the `ContinueCall();` is called first:
 ```dae
 func void hooked() 
 {
-    Print("Orginal function");
+    Print("Original function");
 };
 
 func void hook() 
@@ -163,7 +163,7 @@ func void hook()
 ```
 The results should look like that:
 ```dae
-Orginal function
+Original function
 Our hook
 ```
 
@@ -172,7 +172,7 @@ If a function to be hooked expects parameters or returns a value, our hooking fu
 ```dae
 func int hooked(var int i) 
 {
-     Print("Orginal function");
+     Print("Original function");
      return i+1;
 };
 

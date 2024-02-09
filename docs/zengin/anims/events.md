@@ -62,7 +62,7 @@ General Syntax:
 | [eventSFXGRND](#eventsfxgrnd)         | create sound effect on the ground                                                   |
 | [eventTag](#eventtag)                 | generic event, does action specified in parameters                                  |
 | Defined in engine but never used ?    |                                                                                     |
-| [eventPFXGRND](#eventpfxgrnd)         | creats particle effect on the ground                                                |
+| [eventPFXGRND](#eventpfxgrnd)         | create particle effect on the ground                                                |
 | [eventSetMesh](#eventsetmesh)         | ?                                                                                   |
 | [modelTag](#modeltag)                 | same as eventTag, but applies to morphmesh?                                         |
 
@@ -260,7 +260,7 @@ Depending on the material of the texture, the character is standing on, the game
 | default             | _Stone     |     ✔️    |     ✔️    |
 
 
-NPC running on grass texture, with material set to EARTH in world editor,  will play sound `Run_Earth` by using `*eventSFXGrnd (12 "Run")` in run animation. `_Earh` suffix is determined and added by the engine.
+NPC running on grass texture, with material set to EARTH in world editor,  will play sound `Run_Earth` by using `*eventSFXGrnd (12 "Run")` in run animation. `_Earth` suffix is determined and added by the engine.
 
 
 ## eventTag
@@ -335,7 +335,7 @@ Syntax:
 Insert the interaction item into the specified slot. 
 
  - during mob interaction, inserted item instance is of instance taken from **UseWithItem** mob property.
- - during item interation (i.e. drink potion) item that started the **SceneName** will be inserted. 
+ - during item interaction (i.e. drink potion) item that started the **SceneName** will be inserted. 
 
 In the example below: `(1)` inserts `ItMiSwordrawhot` that is defined in spacer into `ZS_LEFTHAND`, then `(2)` spawns `ItMw_1H_Mace_L_04` (hammer) into `ZS_RIGHTHAND` for anvil interaction.
 
@@ -833,7 +833,7 @@ ani	("s_1hAttack"   1   "s_1hAttack"    0.0	0.1	M.  "Hum_1hAttackComboT3_M05.asc
 }
 ```
 
-| Frames        | Aniamtion                                                 |  Description                                                                                  |
+| Frames        | Animation                                                 |  Description                                                                                  |
 |---------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | 1       | animation start                                           |                                                                                                     |
 | 1..4    | swing of the sword                                        |                                                                                                     |

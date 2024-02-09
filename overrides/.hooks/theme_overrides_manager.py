@@ -3,7 +3,7 @@
 On its own it is not that useful. It acts as the manager for other hooks.
 It gathers all files from other hooks and triggers their functions.
 
-MIT Licence 2023 Kamil Krzyśków
+MIT Licence 2023 Kamil Krzyśków (HRY)
 """
 import enum
 import filecmp
@@ -17,6 +17,7 @@ import jinja2
 from mkdocs import plugins
 from mkdocs.config import Config
 from mkdocs.config.defaults import MkDocsConfig
+from mkdocs.plugins import PrefixedLogger
 from mkdocs.structure.files import Files
 
 # region Core Logic Events
@@ -29,12 +30,12 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
     Initializes the ThemeOverridesManager class to pass data between hooks.
     """
 
-    LOG.debug(f'{HOOK_NAME}: Running "on_config"')
+    LOG.debug('Running "on_config"')
 
     ThemeOverridesManager.initialize()
     config.extra[HOOK_NAME] = ThemeOverridesManager
 
-    LOG.info(f"{HOOK_NAME}: Theme overrides manager initialized")
+    LOG.info("Theme overrides manager initialized")
 
     return None
 
@@ -45,13 +46,13 @@ def on_env(
 ) -> Optional[jinja2.Environment]:
     """Main function. Triggers just before the build begins."""
 
-    LOG.debug(f'{HOOK_NAME}: Running "on_env"')
+    LOG.debug('Running "on_env"')
 
     if not ThemeOverridesManager.all_paths_exist():
         return None
 
     if not ThemeOverridesManager.paths_with_processors:
-        LOG.info(f"{HOOK_NAME}: No file processors were registered")
+        LOG.info("No file processors were registered")
         return None
 
     ThemeOverridesManager.create_backup()
@@ -71,7 +72,7 @@ def on_env(
 def on_build_error(*_, **__) -> None:
     """Restores backup. Triggers when the build errors, safety measure if "on_shutdown" won't trigger."""
 
-    LOG.debug(f'{HOOK_NAME}: Running "on_build_error"')
+    LOG.debug('Running "on_build_error"')
 
     ThemeOverridesManager.restore_backup()
 
@@ -79,7 +80,7 @@ def on_build_error(*_, **__) -> None:
 def on_post_build(*_, **__) -> None:
     """Restores backup. Triggers when a build finishes."""
 
-    LOG.debug(f'{HOOK_NAME}: Running "on_post_build"')
+    LOG.debug('Running "on_post_build"')
 
     ThemeOverridesManager.restore_backup()
 
@@ -87,7 +88,7 @@ def on_post_build(*_, **__) -> None:
 def on_shutdown(*_, **__) -> None:
     """Restores backup. Triggers when MkDocs terminates."""
 
-    LOG.debug(f'{HOOK_NAME}: Running "on_shutdown"')
+    LOG.debug('Running "on_shutdown"')
 
     ThemeOverridesManager.restore_backup()
 
@@ -128,7 +129,7 @@ class ThemeOverridesManager:
 
         for src, _ in cls.paths_with_processors:
             if not src.exists():
-                LOG.error(f"{HOOK_NAME}: File doesn't exist {src}")
+                LOG.error(f"File doesn't exist {src}")
                 result = False
 
         return result
@@ -142,19 +143,19 @@ class ThemeOverridesManager:
 
         backup_len: int = len(cls.sources)
 
-        LOG.info(f'{HOOK_NAME}: Backing up {backup_len} file{"" if backup_len == 1 else "s"}...')
+        LOG.info(f'Backing up {backup_len} file{"" if backup_len == 1 else "s"}...')
 
         for src in cls.sources:
             backup: Path = Path(f"{src}.backup")
             if backup.exists():
-                LOG.info(f'{HOOK_NAME}: Found "{backup.name}" before creation, restoring...')
+                LOG.info(f'Found "{backup.name}" before creation, restoring...')
                 shutil.copy2(backup, src)
                 assert filecmp.cmp(backup, src, shallow=False)
                 continue
 
             shutil.copy2(src, backup)
             assert filecmp.cmp(src, backup, shallow=False)
-            LOG.debug(f'{HOOK_NAME}: Created "{backup.name}"')
+            LOG.debug(f'Created "{backup.name}"')
 
         if backup_len > 0:
             cls.backup_state = BackupState.CREATED
@@ -168,17 +169,17 @@ class ThemeOverridesManager:
 
         backup_len: int = len(cls.sources)
 
-        LOG.info(f'{HOOK_NAME}: Restoring {backup_len} file{"" if backup_len == 1 else "s"}...')
+        LOG.info(f'Restoring {backup_len} file{"" if backup_len == 1 else "s"}...')
         for src in cls.sources:
             backup: Path = Path(f"{src}.backup")
             if not backup.exists():
-                LOG.error(f'{HOOK_NAME}: Backup "{backup.name}" doesn\'t exist')
+                LOG.error(f'Backup "{backup.name}" doesn\'t exist')
                 continue
 
             shutil.copy2(backup, src)
             assert filecmp.cmp(backup, src, shallow=False)
             backup.unlink()
-            LOG.debug(f'{HOOK_NAME}: Restored "{src.name}"')
+            LOG.debug(f'Restored "{src.name}"')
 
         cls.backup_state = BackupState.NONE
 
@@ -209,7 +210,7 @@ class ThemeOverridesManager:
         # Theme update, or another dynamic hook could have removed needed tokens
         if not section_ended or not section_started:
             message: str = "started" if not section_started else "ended"
-            LOG.error(f'{HOOK_NAME}: Section in file "{partial.name}" never {message}')
+            LOG.error(f'Section in file "{partial.name}" never {message}')
             cls.write_log(loaded_section, f"{partial.name}_read_error.html")
             return ""
 
@@ -219,7 +220,7 @@ class ThemeOverridesManager:
             for value in tokens.values():
                 assert value in loaded_section
         except AssertionError:
-            LOG.error(f'{HOOK_NAME}: Section mismatch in "{partial.name}"')
+            LOG.error(f'Section mismatch in "{partial.name}"')
             log_content = ""
             for value in tokens.values():
                 log_content += f"{value in loaded_section} - {value}\n"
@@ -242,7 +243,7 @@ class ThemeOverridesManager:
         """Write `content` to TEMP_DIR/`file_name`"""
         crash_log = Path(tempfile.gettempdir()) / file_name
         crash_log.write_text(data=content, encoding="utf8")
-        LOG.info(f'{HOOK_NAME}: File saved "{crash_log}"')
+        LOG.info(f'File saved "{crash_log}"')
 
     backup_state: BackupState
     """Status of the backup process"""
@@ -270,7 +271,9 @@ class ThemeOverridesManager:
 HOOK_NAME: str = "theme_overrides_manager"
 """Name of this hook. Used in logging."""
 
-LOG: logging.Logger = logging.getLogger(f"mkdocs.hooks.theme_overrides.__main__")
+LOG: PrefixedLogger = PrefixedLogger(
+    HOOK_NAME, logging.getLogger("mkdocs.hooks.theme_overrides.__main__")
+)
 """Logger instance for this hook."""
 
 # endregion

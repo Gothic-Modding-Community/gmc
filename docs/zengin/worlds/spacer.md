@@ -94,7 +94,7 @@ This section covers some of the basic things done in the editor.
 - Make sure to click the Apply button. Do this after making any changes in the Object window or they will be lost.
 
 !!! tip
-    You can use the VOB Bilder tool to comfortably browse model images and names. An online version is currently available [here](https://dziejekhorinis.org/dev/vobbilder/). The UI on the website is in Polish but it's simple enough to not matter.
+    You can use the VOB Bilder tool to comfortably browse model images and names. An online version is currently available [here](https://vobbilder.dziejekhorinis.org/vobbilder/). The UI on the website is in Polish but it's simple enough to not matter.
 
 - To make the VOB have collision in-game, double click on `cdDyn` ("collision detection dynamic") to set it to true. Sometimes this is unadvised, e.g. with bushes or grass.
 
@@ -103,7 +103,7 @@ This section covers some of the basic things done in the editor.
 
 ### Common VOB settings
 
-VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though. The full descripton of a zCVob class can be found [here](Classes/zCVob.md).
+VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though. The full description of a zCVob class can be found [here](Classes/zCVob.md).
 
 ## Issues
 

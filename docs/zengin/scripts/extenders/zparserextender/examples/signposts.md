@@ -9,7 +9,7 @@ The goal is to introduce a function that will teleport you to every signpost in 
 In ZenGin you can teleport to named game objects with the `goto vob {vobname}` command. But since the signposts do not have a vobname defined, I had to figure out a different approach.
 
 ## ASCII ZEN
-We want to get all the signposts position from Khorinis. The game world was loaded into one of the available world editor, I found one of the signposts and noted the `visual` which dictates the model of the in-game object `nw_misc_sign_01.3DS`. Alternatively, you can find the standard vanilla objects from both games on this [website](https://dziejekhorinis.org/dev/vobbilder/).  
+We want to get all the signposts position from Khorinis. The game world was loaded into one of the available world editor, I found one of the signposts and noted the `visual` which dictates the model of the in-game object `nw_misc_sign_01.3DS`. Alternatively, you can find the standard vanilla objects from both games on this [website](https://vobbilder.dziejekhorinis.org/vobbilder/).  
 Next, the world was saved as a `ASCII ZEN` format. This allows us to write a macro to search for all instances of objects with a specific visual and extract the position vector.
 
 ```ini title="One signpost object" hl_lines="6 8"
@@ -59,7 +59,7 @@ Next, the world was saved as a `ASCII ZEN` format. This allows us to write a mac
 
 ## The injectable script
 As it is an injectable script, we have to specify the `META` tag.  
-Lets tell zParseExtender to insert this code into the game parser.  
+Lets tell zParserExtender to insert this code into the game parser.  
 ```dae
 META
 {
@@ -87,8 +87,8 @@ class C_VOB_DATA
     var int CollDetectionStatic;  // allow collision with static world polygons
     var int CollDetectionDynamic; // allow collision with dynamic world objects
     var int CastDynShadow;        // display shadow of the object
-    var int LightColorStatDirty;  // allow static liging of the object
-    var int LightColorDynDirty;   // allow dynamic lighing of the object
+    var int LightColorStatDirty;  // allow static lighting of the object
+    var int LightColorDynDirty;   // allow dynamic lighting of the object
     var int SleepingMode;         // sets object's activity mode (0 - inactive, 1 - active, 2 - AI only)
     var int DontWriteIntoArchive; // turns of the serialization of this object to the save file 
 };

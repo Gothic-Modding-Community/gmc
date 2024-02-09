@@ -4,7 +4,7 @@ The hook uses GitPython to iterate over the commit history constrained
 by the `MAX_DATE` and `MAX_HASH` constants. It checks the diff between 2 adjacent commits
 and processes the diff items marked with the "R" (moved/renamed) status.
 
-MIT Licence 2023 Kamil Krzyśków
+MIT Licence 2023 Kamil Krzyśków (HRY)
 """
 import datetime
 import json
@@ -21,6 +21,7 @@ else:
     GIT_MODULE = True
 from mkdocs.config import Config
 from mkdocs.config.defaults import MkDocsConfig
+from mkdocs.plugins import PrefixedLogger
 
 # region Core Logic
 
@@ -31,33 +32,33 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
     try:
         hook_enabled = custom_getenv(HOOK_VAR, False)
     except ValueError as err:
-        LOG.error(f"{HOOK_NAME}: {err}")
+        LOG.error(err)
         return None
 
     if not hook_enabled:
-        LOG.info(f"{HOOK_NAME}: {HOOK_VAR} is not set to True in the environment")
+        LOG.info(f"{HOOK_VAR} is not set to True in the environment")
         return None
 
     if not GIT_MODULE:
-        LOG.warning(f"{HOOK_NAME}: The `GitPython` module is not installed")
+        LOG.warning("The `GitPython` module is not installed")
         return None
 
     if "redirects" not in config["plugins"]:
-        LOG.warning(f"{HOOK_NAME}: The `redirects` plugin is not in the config")
+        LOG.warning("The `redirects` plugin is not in the config")
         return None
 
     if "redirect_maps" not in config["plugins"]["redirects"].config:
-        LOG.warning(f"{HOOK_NAME}: The `redirects` plugin is not configured correctly")
+        LOG.warning("The `redirects` plugin is not configured correctly")
         return None
 
     if config.extra.get("git_redirects_finished", False):
-        LOG.info(f"{HOOK_NAME}: MkDocsConfig wasn't reset since last run, skipping run...")
+        LOG.info("MkDocsConfig wasn't reset since last run, skipping run...")
         return None
 
     try:
         cache_enabled = custom_getenv(CACHE_VAR, False)
     except ValueError as err:
-        LOG.error(f"{HOOK_NAME}: {err}")
+        LOG.error(err)
         return None
 
     if cache_enabled:
@@ -102,23 +103,23 @@ def _add_redirects_based_on_git_history(
     project_root: Path = docs_dir.parent
     repo = Repo(project_root)
 
-    if MAX_HASH and len(repo.commit(MAX_HASH).parents) > 1:
-        LOG.warning(f"{HOOK_NAME}: Using a Merge commit revision for 'MAX_HASH' is not supported")
-        return None
-
-    if cache_enabled and repo.head.commit.hexsha == CacheHelper.cache_obj["commit_hash"]:
-        LOG.info(f"{HOOK_NAME}: HEAD commit already cached")
-        return None
-
-    file_paths: Set[str] = {str(path) for path in docs_dir.glob("**/*.md")}
     redirects: Dict[str, str] = config["plugins"]["redirects"].config["redirect_maps"]
-
     if cache_enabled:
         redirects.update(CacheHelper.cache_obj["redirects"])
 
+    if MAX_HASH and len(repo.commit(MAX_HASH).parents) > 1:
+        LOG.warning("Using a Merge commit revision for 'MAX_HASH' is not supported")
+        return None
+
+    if cache_enabled and repo.head.commit.hexsha == CacheHelper.cache_obj["commit_hash"]:
+        LOG.info("HEAD commit already cached")
+        return None
+
+    file_paths: Set[str] = {str(path) for path in docs_dir.glob("**/*.md")}
+
     initial_len: int = len(redirects)
 
-    LOG.info(f"{HOOK_NAME}: Processing Git history with{'' if cache_enabled else 'out'} cache...")
+    LOG.info(f"Processing Git history with{'' if cache_enabled else 'out'} cache...")
 
     for commit in repo.iter_commits(since=MAX_DATE, max_parents=1):
         if not commit.parents:
@@ -157,21 +158,19 @@ def _add_redirects_based_on_git_history(
             if old_inner not in redirects:
                 redirects[old_inner] = new_inner
             else:
-                LOG.info(
-                    f"{HOOK_NAME}: '{old_inner}' already in redirects, keeping more recent one"
-                )
+                LOG.info(f"'{old_inner}' already in redirects, keeping more recent one")
 
         if commit.hexsha == MAX_HASH:
             break
 
         if cache_enabled and commit.parents[0].hexsha == CacheHelper.cache_obj["commit_hash"]:
-            LOG.info(f"{HOOK_NAME}: Reached cached commits")
+            LOG.info("Reached cached commits")
             break
 
     len_diff: int = len(redirects) - initial_len
 
     if len_diff > 0:
-        LOG.info(f"{HOOK_NAME}: Created {len_diff} redirects")
+        LOG.info(f"Created {len_diff} redirects")
 
     if cache_enabled:
         return repo.head.commit.hexsha
@@ -225,7 +224,7 @@ CACHE_PATH: str = f".cache/hooks/{HOOK_NAME}"
 HOOK_VAR: str = "GMC_ENABLE_ON_PUBLISH"
 """Name of the environmental variable to enable the hook."""
 
-LOG: logging.Logger = logging.getLogger(f"mkdocs.hooks.{HOOK_NAME}")
+LOG: PrefixedLogger = PrefixedLogger(HOOK_NAME, logging.getLogger(f"mkdocs.hooks.{HOOK_NAME}"))
 """Logger instance for this hook."""
 
 # MAX_DATE: datetime.datetime = datetime.datetime.now() - datetime.timedelta(days=99)

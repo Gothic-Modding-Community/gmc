@@ -131,20 +131,20 @@ func void MEM_InitLabels()
 
 ## Label and Goto
 
-Besides the normal [Jupms](#jumps) Ikarus implements `MEM_Label` and `MEM_Goto` functions. They work similar to the stack manipulation with `var int label` but the interface is much more user-friendly and defineing new variables is not needed.
+Besides the normal [jumps](#jumps) Ikarus implements `MEM_Label` and `MEM_Goto` functions. They work similar to the stack manipulation with `var int label` but the interface is much more user-friendly and defining new variables is not needed.
 
 ### `MEM_Label`
-Function taht works like a `label = MEM_StackPos.position;`. You could jump to it with [`MEM_Goto`](#mem_goto).
+Function that works like a `label = MEM_StackPos.position;`. You could jump to it with [`MEM_Goto`](#mem_goto).
 ```dae
 func void MEM_Label(var int lbl)
 ```
 **Parameters**
 
 - `#!dae var int lbl`   
-    Number of the label, used for nested loop or multible loops within one functon
+    Number of the label, used for nested loop or multiple loops within one function
 
 ### `MEM_Goto`
-Function taht works like a `MEM_StackPos.position = label;`. Executes a jump to a [`MEM_Label`](#mem_label) with specified number.
+Function that works like a `MEM_StackPos.position = label;`. Executes a jump to a [`MEM_Label`](#mem_label) with specified number.
 ```dae
 func void MEM_Goto(var int lbl)
 ```
@@ -154,7 +154,7 @@ func void MEM_Goto(var int lbl)
     Number of the label, the function will jump to
 
 ### Usage
-Usage of Label and Goto is probably self-explanatory, since it is same as in the regular Ikarus Jump. But before using it reading the [Notes and warnings](#notes-and-warnings) of the Jumps is recomended.
+Usage of Label and Goto is probably self-explanatory, since it is same as in the regular Ikarus Jump. But before using it reading the [Notes and warnings](#notes-and-warnings) of the Jumps is recommended.
 
 **Label-Goto loop flowchart**
     ```mermaid
@@ -259,7 +259,7 @@ func void LabelGoto_test() {
 
 ## While loop
 
-Ikarus also implements a while loop. Its syntax isn't as good as the loop from [zParserExtedner](../../zparserextender/syntax_extensions/while.md), due to the daedalus limitations, but it works as a normal while loop that can be found in many programming languages.
+Ikarus also implements a while loop. Its syntax isn't as good as the loop from [zParserExtender](../../zparserextender/syntax_extensions/while.md), due to the daedalus limitations, but it works as a normal while loop that can be found in many programming languages.
 
 ### Syntax
 The Ikarus while loop consist of three things:

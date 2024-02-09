@@ -12,7 +12,7 @@ Original gothic sound files has following properties:
 - 32-bit [depth](https://en.wikipedia.org/wiki/Audio_bit_depth)
 
 ## SFX
-Sound effects (SFX) are sounds made by monsters, spells, weapons etc. Sound effects are defined in multiple places, in `.mds` files as part of the animation [EventBlocks](../anims/events.md), or in the SFX Daeduls scripts. Sounds are located in the `_work/Data/Sound/SFX` directory. 
+Sound effects (SFX) are sounds made by monsters, spells, weapons etc. Sound effects are defined in multiple places, in `.mds` files as part of the animation [EventBlocks](../anims/events.md), or in the SFX Daedalus scripts. Sounds are located in the `_work/Data/Sound/SFX` directory. 
 
 ## Speech
 Dubbing for dialogues is located into `_work/Data/Sound/Speech` folder. Every single `AI_Output` has its own sound file with name defined in the function itself.

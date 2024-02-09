@@ -63,7 +63,7 @@ func void Log_SetTopicStatus(var string topicName, var int status) {};
 
 ## zParserExtender
 The log external function selection is missing functions to retrieve the status of a log entry. There are only functions to read the log status (as discussed on [Inside Gothic](https://ataulien.github.io/Inside-Gothic/QuestLog/)). As a result of this the original scriptwriters had to define additional variable to track the log status in the scripts, even though the value is being already tracked by the engine. 
-zParserExtender fixes this by introducing new [log external functions](../extenders/zparserextender/externals/log/).
+zParserExtender fixes this by introducing new [log external functions](../extenders/zparserextender/externals/log.md).
 
 
 ## Externals with docu comments
@@ -71,19 +71,19 @@ zParserExtender fixes this by introducing new [log external functions](../extend
 ```dae
 /// Creates a new log topic with the name `topicName` under the section `logSection`
 /// 
-/// @param topicName unique string used to identifiy and name the topic
+/// @param topicName unique string used to identify and name the topic
 /// @param logSection [LOG_MISSION, LOG_NOTE] indicates in which section to create the topic in
 func void Log_CreateTopic(var string topicName, var int logSection) {};
 
 /// Creates a new log topic with the name `topicName` under the section `logSection`
 /// 
-/// @param topicName unique string used to identifiy and name the topic
+/// @param topicName unique string used to identify and name the topic
 /// @param logSection [LOG_MISSION, LOG_NOTE] indicates in which section to create the topic in
 func void Log_AddEntry(var string topicName, var string entry) {};
 
 /// Changes the status of the topic with the name `topicName`
 ///
-/// @param topicName unique string used to identifiy and name the topic
+/// @param topicName unique string used to identify and name the topic
 /// @param status [LOG_RUNNING, LOG_SUCCESS, LOG_FAILED, LOG_OBSOLETE] the status to be set
 func void Log_SetTopicStatus(var string topicName, var int status) {};
 ```

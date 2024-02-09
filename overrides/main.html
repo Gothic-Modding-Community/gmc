@@ -1,5 +1,37 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+    {{ super() }}
+    <script>
+        let gGMC_REMOVE_TRANSLATION_PROMPTS = false;
+        const preferencesKey = "preferences";
+        const gmcLoadSetPreferences = () => {
+            let prefStyles = document.querySelector("#gmc-style-preferences");
+
+            if (!prefStyles) {
+                prefStyles = document.createElement("style");
+                prefStyles.id = "gmc-style-preferences";
+                document.head.insertAdjacentElement("beforeend", prefStyles);
+            }
+
+            prefStyles.innerHTML = "";
+
+            const loadedPreferences = __md_get(preferencesKey);
+
+            if (!loadedPreferences) {
+                __md_set(preferencesKey, { "__global": { "cssRaw": "" } });
+                return;
+            }
+
+            prefStyles.innerHTML = loadedPreferences["__global"]["cssRaw"];
+
+            console.debug("loadedPreferences");
+            console.debug(loadedPreferences);
+        };
+        gmcLoadSetPreferences();
+    </script>
+{% endblock %}
+
 {#
     Extend the last block in the `base.html` before the changes are applicable
     to avoid any issues with the hacky page.meta

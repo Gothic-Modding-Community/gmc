@@ -37,7 +37,7 @@ StringIndexingMode = -1
 zParserExtender adds console commands that save copies of the `.dat` files with the injected code.
 
 !!! warning
-    If the mod uses Ikarus, the `CompileDat` option (in the `.ini` file) should be used since a fatal error may occur whe using the command.
+    If the mod uses Ikarus, the `CompileDat` option (in the `.ini` file) should be used since a fatal error may occur when using the command.
 
 ```
 Parser SaveDat OU        - exports OU.Edited.bin

@@ -23,7 +23,7 @@ Zwraca zawartość linii poleceń przekazaną do Gothica.
 ```dae
 func string MEM_GetCommandLine()
 ```
-**Return value**
+**Zwracana wartość**
 
 Funkcja zwraca zawartość linii poleceń przekazaną do Gothica. Może to wyglądać na przykład tak:
 
@@ -192,7 +192,7 @@ func void MEM_SetKeys(var string name, var int primary, var int secondary)
 - `#!dae var int primary`  
     Podstawowy klawisz do przypisania, można go pobrać z pliku [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
 - `#!dae var int secondary`  
-    Zapasowy klawisz do przypisania, można go pobrać z pliku[Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
+    Zapasowy klawisz do przypisania, można go pobrać z pliku [Ikarus_Const_G1](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d) / [Ikarus_Const_G2](https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d).
 
 ### `MEM_SetKey`
 Ustawia podstawowy klawisz klawiatury dla klawisza logicznego.
