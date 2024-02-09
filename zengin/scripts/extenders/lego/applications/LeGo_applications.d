@@ -310,7 +310,7 @@ func void Button_Hide(var int hndl) {};
 /// @param tex Name of the new texture
 func void Button_SetTexture(var int hndl, var string tex) {};
 
-/// Displays a centred text on the button.
+/// Displays a centered text on the button.
 ///
 /// @param hndl Handle returned from `Button_Create`
 /// @param caption The text to be displayed
