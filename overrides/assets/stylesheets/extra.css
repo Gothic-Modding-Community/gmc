@@ -404,7 +404,8 @@ ul .sp-bool,
 ul .sp-enum,
 ul .sp-vec,
 ul .sp-float,
-ul .sp-color {
+ul .sp-color,
+ul .sp-none {
     margin: 0 0 0 0.5em !important;
     padding: 0 !important;
     list-style-type: none;
@@ -459,13 +460,6 @@ ul .sp-color {
 .sp-color::before {
     content: url("/gmc/assets/icons/spacer-color.png");
     padding-right: 0.5em;
-}
-
-.sp-none {
-    margin: 0 0 0 0.5em !important;
-    padding: 0 !important;
-    list-style: none;
-    font-family: monospace;
 }
 
 /* endregion */
