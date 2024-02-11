@@ -392,3 +392,80 @@ div.md-nav__link--index {
 }
 
 /* endregion */
+
+/* region spacer type icons */
+
+ul .sp-folder,
+ul .sp-class,
+ul .sp-int,
+ul .sp-string,
+ul .sp-misc,
+ul .sp-bool,
+ul .sp-enum,
+ul .sp-vec,
+ul .sp-float,
+ul .sp-color {
+    margin: 0 0 0 0.5em !important;
+    padding: 0 !important;
+    list-style-type: none;
+    font-family: monospace;
+}
+
+.sp-folder::before {
+    content: url("/gmc/assets/icons/spacer-folder.png");
+    padding-right: 0.5em;
+}
+
+.sp-int::before {
+    content: url("/gmc/assets/icons/spacer-int.png");
+    padding-right: 0.5em;
+}
+
+.sp-float::before {
+    content: url("/gmc/assets/icons/spacer-float.png");
+    padding-right: 0.5em;
+}
+
+.sp-string::before {
+    content: url("/gmc/assets/icons/spacer-string.png");
+    padding-right: 0.5em;
+}
+
+.sp-misc::before {
+    content: url("/gmc/assets/icons/spacer-misc.png");
+    padding-right: 0.5em;
+}
+
+.sp-vec::before {
+    content: url("/gmc/assets/icons/spacer-vec.png");
+    padding-right: 0.5em;
+}
+
+.sp-bool::before {
+    content: url("/gmc/assets/icons/spacer-bool.png");
+    padding-right: 0.5em;
+}
+
+.sp-enum::before {
+    content: url("/gmc/assets/icons/spacer-enum.png");
+    padding-right: 0.5em;
+}
+
+.sp-class::before {
+    content: url("/gmc/assets/icons/spacer-class.png");
+    padding-right: 0.5em;
+}
+
+.sp-color::before {
+    content: url("/gmc/assets/icons/spacer-color.png");
+    padding-right: 0.5em;
+}
+
+.sp-none {
+    margin: 0 0 0 0.5em !important;
+    padding: 0 !important;
+    list-style: none;
+    font-family: monospace;
+}
+
+/* endregion */
