@@ -26,3 +26,7 @@ video games Gothic and Gothic 2 Night of the Raven.
 - [Union Gothic World Editor](https://worldofplayers.ru/threads/42322/) - Saturas' world editor, supports new object classes created with Union
 - [Gothic World Editor](https://worldofplayers.ru/threads/40530/) - World editor for vanilla worlds, works with G1, G2 and G2 NotR worlds
 - [Spacer.NET](https://forum.worldofplayers.de/forum/threads/1557793-WORLD-EDITOR-Spacer-NET) - A modernised version of Spacer available as a Gothic Mod.
+
+**Libraries**
+
+- [ZenKit](libraries/zenkit.md) - A library to load, save and use almost all ZenGin asset files
