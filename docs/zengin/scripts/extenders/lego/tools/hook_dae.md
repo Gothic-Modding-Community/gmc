@@ -3,119 +3,129 @@ title: HookDaedalus
 description: LeGo package for hooking daedalus script functions
 ---
 # HookDaedalus
+
+!!! info inline end
+    **Dependencies:**<br/>
+    - None<br/>
+    **Implementation:**<br/>
+    [:material-github: HookDaedalus.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/HookDaedalus.d)
+
 This package allows hooking daedalus functions. The principle is similar [HookEngine](hook_engine.md). We have a function (hooked function) into which we would like to hook another function (hook function).
 
 !!! Tip
     Having to hook a Daedalus function should be pretty rare, because you can simply adjust the corresponding function. However, it may become necessary in some contexts.
 
-## Dependencies
-N/A
-
 ## Initialization
 N/A
-
-## Implementation
-[:material-github: HookDaedalus.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/HookDaedalus.d)
 
 ## Functions
 
 ### `HookDaedalusFunc`
-Hooks the function.
-```dae
-func void HookDaedalusFunc(var func hooked, var func hook)
-```
-**Parameters**
+!!! function "`HookDaedalusFunc`"
+    Hooks the function.
+    ```dae
+    func void HookDaedalusFunc(var func hooked, var func hook)
+    ```
+    **Parameters**
 
-- `#!dae var func hooked`  
-    Hooked function
-- `#!dae var func hook`  
-    Hook function
+    - `#!dae var func hooked`  
+        Hooked function
+    - `#!dae var func hook`  
+        Hook function
 
 ### `HookDaedalusFuncF`
-Alias to the `HookDaedalusFunc` function.
-```dae
-func void HookDaedalusFuncF(var func hooked, var func hook)
-```
-**Parameters**
+!!! function "`HookDaedalusFuncF`"
+    Alias to the `HookDaedalusFunc` function.
+    ```dae
+    func void HookDaedalusFuncF(var func hooked, var func hook)
+    ```
+    **Parameters**
 
-- `#!dae var func hooked`  
-    Hooked function
-- `#!dae var func hook`  
-    Hook function
+    - `#!dae var func hooked`  
+        Hooked function
+    - `#!dae var func hook`  
+        Hook function
 
 ### `HookDaedalusFuncI`
-`HookDaedalusFunc` but with function ID.
-```dae
-func void HookDaedalusFuncI(var int hookedID, var int hookID)
-```
-**Parameters**
+!!! function "`HookDaedalusFuncI`"
+    `HookDaedalusFunc` but with function ID.
+    ```dae
+    func void HookDaedalusFuncI(var int hookedID, var int hookID)
+    ```
+    **Parameters**
 
-- `#!dae var int hookedID`  
-    ID of hooked function
-- `#!dae var int hookID`  
-    ID of hook function
+    - `#!dae var int hookedID`  
+        ID of hooked function
+    - `#!dae var int hookID`  
+        ID of hook function
 
 ### `HookDaedalusFuncS`
-`HookDaedalusFunc` but with function name.
-```dae
-func void HookDaedalusFuncS(var string hookedName, var string hookName)
-```
-**Parameters**
+!!! function "`HookDaedalusFuncS`"
+    `HookDaedalusFunc` but with function name.
+    ```dae
+    func void HookDaedalusFuncS(var string hookedName, var string hookName)
+    ```
+    **Parameters**
 
-- `#!dae var string hookedName`  
-    Name of hooked function
-- `#!dae var string hookName`  
-    Name of hook function
+    - `#!dae var string hookedName`  
+        Name of hooked function
+    - `#!dae var string hookName`  
+        Name of hook function
 
 ### `IsHookD`
-Checks whether a function is already hooking another. Each function can be hooked any number of times, but each function can only hook one other.
-```dae
-func int IsHookD(var int funcID)
-```
-**Parameters**
+!!! function "`IsHookD`"
+    Checks whether a function is already hooking another. Each function can be hooked any number of times, but each function can only hook one other.
+    ```dae
+    func int IsHookD(var int funcID)
+    ```
+    **Parameters**
 
-- `#!dae var int funcID`
-    Symbol index of a hook function
+    - `#!dae var int funcID`
+        Symbol index of a hook function
 
-**Return value**
+    **Return value**
 
-The function returns `TRUE` if the function is already hooking another, `FALSE` is returned otherwise.
+    The function returns `TRUE` if the function is already hooking another, `FALSE` is returned otherwise.
 
 ### `ContinueCall`
-Continues the program run with the original function.
-```dae
-func void ContinueCall()
-```
+!!! function "`ContinueCall`"
+    Continues the program run with the original function.
+    ```dae
+    func void ContinueCall()
+    ```
 
 ### `PassArgumentI`
-Passes an integer as an argument to the original function. Must be called before `ContinueCall`.
-```dae
-func void PassArgumentI(var int i)
-```
-**Parameters**
+!!! function "`PassArgumentI`"
+    Passes an integer as an argument to the original function. Must be called before `ContinueCall`.
+    ```dae
+    func void PassArgumentI(var int i)
+    ```
+    **Parameters**
 
-- `#!dae var int i`   
-    Integer argument to forward
+    - `#!dae var int i`   
+        Integer argument to forward
 
 ### `PassArgumentS`
-Passes a string as an argument to the original function. Must be called before `ContinueCall`.
-```dae
-func void PassArgumentS(var string s)
-```
-**Parameters**
+!!! function "`PassArgumentS`"
+    Passes a string as an argument to the original function. Must be called before `ContinueCall`.
+    ```dae
+    func void PassArgumentS(var string s)
+    ```
+    **Parameters**
 
-- `#!dae var string s`   
-    String argument to forward
+    - `#!dae var string s`   
+        String argument to forward
 
 ### `PassArgumentN`
-Passes an instance as an argument to the original function. Must be called before `ContinueCall`.
-```dae
-func void PassArgumentN(var instance n)
-```
-**Parameters**
+!!! function "`PassArgumentN`"
+    Passes an instance as an argument to the original function. Must be called before `ContinueCall`.
+    ```dae
+    func void PassArgumentN(var instance n)
+    ```
+    **Parameters**
 
-- `#!dae var instance n`   
-    Instance argument to forward
+    - `#!dae var instance n`   
+        Instance argument to forward
 
 ## Examples
 
