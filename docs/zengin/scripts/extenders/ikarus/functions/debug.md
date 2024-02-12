@@ -16,124 +16,134 @@ MEM_InitAll();
 ## Functions
 
 ### `MEM_CheckVersion`
-Checks if the version of Ikarus is the specified version or newer.
-```dae
-func int MEM_CheckVersion(var int base, var int major, var int minor)
-```
-**Parameters**
+!!! function "`MEM_CheckVersion`"
+    Checks if the version of Ikarus is the specified version or newer.
+    ```dae
+    func int MEM_CheckVersion(var int base, var int major, var int minor)
+    ```
+    **Parameters**
 
-- `#!dae var int base`  
-    Base version number
-- `#!dae var int major`  
-    Major revision number
-- `#!dae var int minor`  
-    Minor revision number
+    - `#!dae var int base`  
+        Base version number
+    - `#!dae var int major`  
+        Major revision number
+    - `#!dae var int minor`  
+        Minor revision number
 
-**Return value**
+    **Return value**
 
-The function returns `TRUE` if the version of Ikarus is the specified version or newer, `FALSE` is returned otherwise.
-
+    The function returns `TRUE` if the version of Ikarus is the specified version or newer, `FALSE` is returned otherwise.
 
 ### `MEM_SetShowDebug`
-Sets the variable that is also toggled by the `toggle debug` command. As a result, messages outputted by `PrintDebug` are directed to the [zSpy](../../../../tools/zSpy.md)
-```dae
-func void MEM_SetShowDebug(var int on)
-```
-**Parameters**
+!!! function "`MEM_SetShowDebug`"
+    Sets the variable that is also toggled by the `toggle debug` command. As a result, messages outputted by `PrintDebug` are directed to the [zSpy](../../../../tools/zSpy.md)
+    ```dae
+    func void MEM_SetShowDebug(var int on)
+    ```
+    **Parameters**
 
-- `#!dae var int on`   
-	Specifies whether to turn on (`TRUE`) or off (`FALSE`) debug information.
+    - `#!dae var int on`   
+        Specifies whether to turn on (`TRUE`) or off (`FALSE`) debug information.
 
 ### `MEM_SendToSpy`
-Sends a message to the debugging console.
-```dae
-func void MEM_SendToSpy(var int errorType, var string text)
-```
-**Parameters**
+!!! function "`MEM_SendToSpy`"
+    Sends a message to the debugging console.
+    ```dae
+    func void MEM_SendToSpy(var int errorType, var string text)
+    ```
+    **Parameters**
 
-- `#!dae var int errorType`  
-    Type of error (e.g., `zERR_TYPE_FAULT`, `zERR_TYPE_WARN`, `zERR_TYPE_INFO`)
-- `#!dae var string text`  
-    The message to be sent.
+    - `#!dae var int errorType`  
+        Type of error (e.g., `zERR_TYPE_FAULT`, `zERR_TYPE_WARN`, `zERR_TYPE_INFO`)
+    - `#!dae var string text`  
+        The message to be sent.
 
 ### `MEM_ErrorBox`
-Displays an error message in a message box.
-```dae
-func void MEM_ErrorBox(var string text)
-```
-**Parameters**
+!!! function "`MEM_ErrorBox`"
+    Displays an error message in a message box.
+    ```dae
+    func void MEM_ErrorBox(var string text)
+    ```
+    **Parameters**
 
-- `#!dae var string text`  
-    The error message to be displayed.
+    - `#!dae var string text`  
+        The error message to be displayed.
 
 ### `MEM_PrintStackTrace`
-Prints the stack trace.
-```dae
-func void MEM_PrintStackTrace()
-```
+!!! function "`MEM_PrintStackTrace`"
+    Prints the stack trace.
+    ```dae
+    func void MEM_PrintStackTrace()
+    ```
 
 ### `MEM_Error`
-Handles a fatal error, displaying the error message and printing the stack trace.
-```dae
-func void MEM_Error(var string error)
-```
-**Parameters**
+!!! function "`MEM_Error`"
+    Handles a fatal error, displaying the error message and printing the stack trace.
+    ```dae
+    func void MEM_Error(var string error)
+    ```
+    **Parameters**
 
-- `#!dae var string error`  
-    The error message.
+    - `#!dae var string error`  
+        The error message.
 
 ### `MEM_Warn`
-Handles a warning, displaying the warning message and printing the stack trace.
-```dae
-func void MEM_Warn(var string warn)
-```
-**Parameters**
+!!! function "`MEM_Warn`"
+    Handles a warning, displaying the warning message and printing the stack trace.
+    ```dae
+    func void MEM_Warn(var string warn)
+    ```
+    **Parameters**
 
-- `#!dae var string warn`  
-    The warning message.
+    - `#!dae var string warn`  
+        The warning message.
 
 ### `MEM_Info`
-Handles an information message, printing it if enabled in the settings.
-```dae
-func void MEM_Info(var string info)
-```
-**Parameters**
+!!! function "`MEM_Info`"
+    Handles an information message, printing it if enabled in the settings.
+    ```dae
+    func void MEM_Info(var string info)
+    ```
+    **Parameters**
 
-- `#!dae var string info`  
-    The information message.
+    - `#!dae var string info`  
+        The information message.
 
 ### `MEM_AssertFail`
-Handles an assertion failure, reporting the error message as a fatal error.
-```dae
-func void MEM_AssertFail(var string assertFailText)
-```
-**Parameters**
+!!! function "`MEM_AssertFail`"
+    Handles an assertion failure, reporting the error message as a fatal error.
+    ```dae
+    func void MEM_AssertFail(var string assertFailText)
+    ```
+    **Parameters**
 
-- `#!dae var string assertFailText`  
-    The assertion failure message.
+    - `#!dae var string assertFailText`  
+        The assertion failure message.
 
 ### `MEM_Debug`
-Freely configurable debug channel. See how to setup it in the [Constants](../constants.md#mem_debug) article.
-```dae
-func void MEM_Debug(var string message)
-```
-**Parameters**
+!!! function "`MEM_Debug`"
+    Freely configurable debug channel. See how to setup it in the [Constants](../constants.md#mem_debug) article.
+    ```dae
+    func void MEM_Debug(var string message)
+    ```
+    **Parameters**
 
-- `#!dae var string message`  
-    The debug message.
+    - `#!dae var string message`  
+        The debug message.
 
 ### `MEMINT_SwitchG1G2`
-Switches between values based on the game version. Used mainly to change addresses in multi-platform hooks or function calls.
-```dae
-func int MEMINT_SwitchG1G2(var int g1Val, var int g2Val)
-```
-**Parameters**
+!!! function "`MEMINT_SwitchG1G2`"
+    Switches between values based on the game version. Used mainly to change addresses in multi-platform hooks or function calls.
+    ```dae
+    func int MEMINT_SwitchG1G2(var int g1Val, var int g2Val)
+    ```
+    **Parameters**
 
-- `#!dae var int g1Val` 
-    The value to return if the game version is Gothic 1.
-- `#!dae var int g2Val`  
-    The value to return if the game version is Gothic 2.
+    - `#!dae var int g1Val` 
+        The value to return if the game version is Gothic 1.
+    - `#!dae var int g2Val`  
+        The value to return if the game version is Gothic 2.
 
-**Return value**
+    **Return value**
 
-The function returns an appropriate value based on the game version.
+    The function returns an appropriate value based on the game version.
