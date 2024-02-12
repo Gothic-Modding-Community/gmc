@@ -3,178 +3,190 @@ title: Anim8
 description: LeGo package for "animating" float values over a period of time
 ---
 # Anim8
+
+!!! info inline end
+    **Dependencies:**<br/>
+    - [Floats](../../ikarus/floats.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: Anim8.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Anim8.d)
+
 This package allows int or float values to be "animated" over a period of time. It is possible to string several commands together and to set the type of movement. The new version of [`PrintS`](../tools/interface.md#prints) from [Interface](../tools/interface.md) uses Anim8.
-
-## Dependencies
-
-- [Floats](../../ikarus/floats.md)
 
 ## Initialization
 Initialize with `LeGo_Anim8` flag.
 ```dae
 LeGo_Init(LeGo_Anim8);
 ```
-## Implementation
-[:material-github: Anim8.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Anim8.d)
 
 ## Functions
 
 ### `Anim8_New`
-Creates a new Anim8 object that can be filled with commands.
-```dae
-func int Anim8_New(var int initialValue, var int IsFloat)
-```
-**Parameters**
+!!! function "`Anim8_New`"
+    Creates a new Anim8 object that can be filled with commands.
+    ```dae
+    func int Anim8_New(var int initialValue, var int IsFloat)
+    ```
+    **Parameters**
 
-- `#!dae var int initialValue`  
-    The initial value to start animating from. Can be an integer, or an Ikarus float.
-- `var int IsFloat`  
-    If the `initialValue` is an Ikarus float, this parameter must be set to `TRUE`. If it is an integer, it must be set to `FALSE`.
+    - `#!dae var int initialValue`  
+        The initial value to start animating from. Can be an integer, or an Ikarus float.
+    - `var int IsFloat`  
+        If the `initialValue` is an Ikarus float, this parameter must be set to `TRUE`. If it is an integer, it must be set to `FALSE`.
 
-**Return value**
+    **Return value**
 
-The function returns handle of the Anim8 object.
+    The function returns handle of the Anim8 object.
 
 ### `Anim8_NewExt`
-Creates a new Anim8 object with advanced options. Extends the [`Anim8_New`](#anim8_new) function.
-```dae
-func int Anim8_NewExt(var int value, var func handler, var int data, var int IsFloat)
-```
-**Parameters**
+!!! function "`Anim8_NewExt`"
+    Creates a new Anim8 object with advanced options. Extends the [`Anim8_New`](#anim8_new) function.
+    ```dae
+    func int Anim8_NewExt(var int value, var func handler, var int data, var int IsFloat)
+    ```
+    **Parameters**
 
-- `#!dae var int value`  
-    The initial value to start animating from. Can be an integer, or an Ikarus float.
-- `#!dae var func handler`  
-    This function is called whenever the object is updated. 
-    The signature of the functions depends on the `data` value:  
-        `data != 0`: `#!dae func void handler(var int data, var int value)`,  
-        `data == 0`: `#!dae func void handler(var int value)`.
-- `#!dae var int data`  
-    Optional parameter to send an additional value to the `handler` function. If `data == 0`, it is ignored.
-- `#!dae var int IsFloat`  
-    If the `initialValue` is an Ikarus float, this parameter must be set to `TRUE`. If it is an integer, it must be set to `FALSE`.
+    - `#!dae var int value`  
+        The initial value to start animating from. Can be an integer, or an Ikarus float.
+    - `#!dae var func handler`  
+        This function is called whenever the object is updated. 
+        The signature of the functions depends on the `data` value:  
+            `data != 0`: `#!dae func void handler(var int data, var int value)`,  
+            `data == 0`: `#!dae func void handler(var int value)`.
+    - `#!dae var int data`  
+        Optional parameter to send an additional value to the `handler` function. If `data == 0`, it is ignored.
+    - `#!dae var int IsFloat`  
+        If the `initialValue` is an Ikarus float, this parameter must be set to `TRUE`. If it is an integer, it must be set to `FALSE`.
 
-**Return value**
+    **Return value**
 
-The function returns handle of the Anim8 object.
+    The function returns handle of the Anim8 object.
 
 ### `Anim8_Delete`
-Deletes an Anim8 object created with [`Anim8_New`](#anim8_new).
-```dae
-func void Anim8_Delete(var int handle)
-```
-**Parameters**
+!!! function "`Anim8_Delete`"
+    Deletes an Anim8 object created with [`Anim8_New`](#anim8_new).
+    ```dae
+    func void Anim8_Delete(var int handle)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
 
 ### `Anim8_Get`
-Get current value of the object.
-```dae
-func int Anim8_Get(var int handle)
-```
-**Parameters**
+!!! function "`Anim8_Get`"
+    Get current value of the object.
+    ```dae
+    func int Anim8_Get(var int handle)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
 
-**Return value**
+    **Return value**
 
-The function returns value of the object.
+    The function returns value of the object.
 
 ### `Anim8_Set`
-Sets the value of the object.
-```dae
-func void Anim8_Set(var int handle, var int value)
-```
-**Parameters**
+!!! function "`Anim8_Set`"
+    Sets the value of the object.
+    ```dae
+    func void Anim8_Set(var int handle, var int value)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
-- `#!dae var int value`  
-    New value of the object
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var int value`  
+        New value of the object
 
 ### `Anim8_Empty`
-Indicates whether the object is empty, i.e. has no more commands to process.
-```dae
-func int Anim8_Empty(var int handle)
-```
-**Parameters**
+!!! function "`Anim8_Empty`"
+    Indicates whether the object is empty, i.e. has no more commands to process.
+    ```dae
+    func int Anim8_Empty(var int handle)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
 
-**Return value**
+    **Return value**
 
-The function returns `TRUE` if object is empty (has no more commands), `FALSE` is returned otherwise.
+    The function returns `TRUE` if object is empty (has no more commands), `FALSE` is returned otherwise.
 
 ### `Anim8_RemoveIfEmpty`
-If desired, Anim8 can automatically delete an object after it is empty.
-```dae
-func void Anim8_RemoveIfEmpty(var int handle, var int on)
-```
-**Parameters**
+!!! function "`Anim8_RemoveIfEmpty`"
+    If desired, Anim8 can automatically delete an object after it is empty.
+    ```dae
+    func void Anim8_RemoveIfEmpty(var int handle, var int on)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
-- `#!dae var int on`  
-    `TRUE`: enable, `FALSE`: disable
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var int on`  
+        `TRUE`: enable, `FALSE`: disable
 
 ### `Anim8_RemoveDataIfEmpty`
-With [`Anim8_NewExt`](#anim8_newext) handler and data can be set. If this function is called with `TRUE`, `data` is taken as a handle and `#!dae delete(data)` is called if the object is empty. Works only if [`Anim8_RemoveIfEmpty`](#anim8_removeifempty) is also activated.
-```dae
-func void Anim8_RemoveDataIfEmpty(var int handle, var int on)
-```
-**Parameters**
+!!! function "`Anim8_RemoveDataIfEmpty`"
+    With [`Anim8_NewExt`](#anim8_newext) handler and data can be set. If this function is called with `TRUE`, `data` is taken as a handle and `#!dae delete(data)` is called if the object is empty. Works only if [`Anim8_RemoveIfEmpty`](#anim8_removeifempty) is also activated.
+    ```dae
+    func void Anim8_RemoveDataIfEmpty(var int handle, var int on)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
-- `#!dae var int on`  
-    `TRUE`: enable, `FALSE`: disable
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var int on`  
+        `TRUE`: enable, `FALSE`: disable
 
 ### `Anim8`
-Packet core. Gives the object a new command to process.
-```dae
-func void Anim8(var int handle, var int target, var int span, var int interpol)
-```
-**Parameters**
+!!! function "`Anim8`"
+    Packet core. Gives the object a new command to process.
+    ```dae
+    func void Anim8(var int handle, var int target, var int span, var int interpol)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
-- `#!dae var int target`  
-    Target value of this command. When the object's value has reached this value, the command is considered completed and deleted.
-- `#!dae var int span`  
-    Action duration in milliseconds
-- `#!dae var int interpol`  
-    What form of movement is used (See [constants](../various/userconstants.md#anim8) for this)
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var int target`  
+        Target value of this command. When the object's value has reached this value, the command is considered completed and deleted.
+    - `#!dae var int span`  
+        Action duration in milliseconds
+    - `#!dae var int interpol`  
+        What form of movement is used (See [constants](../various/userconstants.md#anim8) for this)
 
 ### `Anim8q`
-As already mentioned above, Anim8 can also process several commands one after the other. While Anim8 completely resets the object and deletes all commands, Anim8q just appends a new command to the list. This will be processed as soon as the previous one is completed.
-```dae
-func void Anim8q(var int handle, var int target, var int span, var int interpol)
-```
-**Parameters**
+!!! function "`Anim8q`"
+    As already mentioned above, Anim8 can also process several commands one after the other. While Anim8 completely resets the object and deletes all commands, Anim8q just appends a new command to the list. This will be processed as soon as the previous one is completed.
+    ```dae
+    func void Anim8q(var int handle, var int target, var int span, var int interpol)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
-- `#!dae var int target`  
-    Target value of this command. When the object's value has reached this value, the command is considered completed and another one in the queue will start.
-- `#!dae var int span`  
-    Action duration in milliseconds
-- `#!dae var int interpol`  
-    What form of movement is used (See [constants](../various/userconstants.md#anim8) for this)
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var int target`  
+        Target value of this command. When the object's value has reached this value, the command is considered completed and another one in the queue will start.
+    - `#!dae var int span`  
+        Action duration in milliseconds
+    - `#!dae var int interpol`  
+        What form of movement is used (See [constants](../various/userconstants.md#anim8) for this)
 
 ### `Anim8_CallOnRemove`
-Registers a function to be called when the object is deleted (e.g. by [`Anim8_RemoveIfEmpty`](#anim8_removeifempty))
-```dae
-func void Anim8_CallOnRemove(var int handle, var func dfnc)
-```
-**Parameters**
+!!! function "`Anim8_CallOnRemove`"
+    Registers a function to be called when the object is deleted (e.g. by [`Anim8_RemoveIfEmpty`](#anim8_removeifempty))
+    ```dae
+    func void Anim8_CallOnRemove(var int handle, var func dfnc)
+    ```
+    **Parameters**
 
-- `#!dae var int handle`  
-    Handle returned from [`Anim8_New`](#anim8_new)
-- `#!dae var func dfnc`  
-    This function is called when the object is deleted
+    - `#!dae var int handle`  
+        Handle returned from [`Anim8_New`](#anim8_new)
+    - `#!dae var func dfnc`  
+        This function is called when the object is deleted
 
 ## Examples
 

@@ -3,42 +3,45 @@ title: Gamestate
 description: Pakiet LeGo do wywoływania funkcji podczas różnych stanów gry
 ---
 # Gamestate - stan gry
-Pakiet Gamestate pozwala sprawdzić stan gry (rozpoczęcie gry, ładowanie gry lub zmiana poziomu).
 
-## Zależności  
-- [EventHandler](../tools/event_handler.md)
-- [Saves](../applications/saves.md)
+!!! info inline end
+    **Zależności:**<br/>
+    - [EventHandler](../tools/event_handler.md)<br/>
+    - [Saves](../applications/saves.md)<br/>
+    **Implementacja:**<br/>
+    [:material-github: Gamestate.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Gamestate.d)
+
+Pakiet Gamestate pozwala sprawdzić stan gry (rozpoczęcie gry, ładowanie gry lub zmiana poziomu).
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Gamestate`.
 ```dae
 LeGo_Init(LeGo_Gamestate);
 ```
-## Implementacja
-[:material-github: Gamestate.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Gamestate.d)
 
 ## Funkcje
 
 ### `Gamestate_AddListener`
-Dodaje listener/handler zmiany stanu gry.
-```dae
-func void Gamestate_AddListener(var func listener)
-```
-**Parametry**
+!!! function "`Gamestate_AddListener`"
+    Dodaje listener/handler zmiany stanu gry.
+    ```dae
+    func void Gamestate_AddListener(var func listener)
+    ```
+    **Parametry**
 
-- `#!dae var func listener`  
-    Ta funkcja zostanie wywołana przy zmianie stanu gry. Bieżący stan gry jest przekazywany jako parametr.
-
+    - `#!dae var func listener`  
+        Ta funkcja zostanie wywołana przy zmianie stanu gry. Bieżący stan gry jest przekazywany jako parametr.
 
 ### `Gamestate_RemoveListener`
-Usuwa listener zmiany stanu gry.
-```dae
-func void Gamestate_RemoveListener(var func listener)
-```
-**Parametry**
+!!! function "`Gamestate_RemoveListener`"
+    Usuwa listener zmiany stanu gry.
+    ```dae
+    func void Gamestate_RemoveListener(var func listener)
+    ```
+    **Parametry**
 
-- `#!dae var func listener`  
-    Listener do usunięcia.
+    - `#!dae var func listener`  
+        Listener do usunięcia.
 
 ## Przykłady
 Istnieją teraz dwie możliwości. Wszystko można zrobić bezpośrednio w `Init_Global` lub za pomocą [EventHandler](../tools/event_handler.md).

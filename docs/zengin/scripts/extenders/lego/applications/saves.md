@@ -3,11 +3,14 @@ title: Saves
 description: LeGo package offering open data stream to the game save file
 ---
 # Saves
+
+!!! info inline end
+    **Dependencies:**<br/>
+    - [BinaryMachines](../tools/binary_machines.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: Saves.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Saves.d)
+
 Offers an open file stream that can read/write variables on save/load. It is used by [PermMem](../tools/permmem.md), so you don't need to address it manually anymore.
-
-## Dependencies
-
-- [BinaryMachines](../tools/binary_machines.md)
 
 ## Initialization
 Initialize with `LeGo_Saves` flag.
@@ -15,22 +18,21 @@ Initialize with `LeGo_Saves` flag.
 LeGo_Init(LeGo_Saves);
 ```
 
-## Implementation
-[:material-github: Saves.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Saves.d)
-
 ## Functions
 
 ### `BW_Savegame`
-Custom function. It creates a stream to its own memory file, this can be filled with the `BW_*` functions from the [BinaryMachines](../tools/binary_machines.md#binarywriter).
-```dae
-func void BW_Savegame()
-```
+!!! function "`BW_Savegame`"
+    Custom function. It creates a stream to its own memory file, this can be filled with the `BW_*` functions from the [BinaryMachines](../tools/binary_machines.md#binarywriter).
+    ```dae
+    func void BW_Savegame()
+    ```
 
 ### `BR_Savegame`
-Custom function. It opens a stream to a previously saved memory file, which can be read from the [BinaryMachines](../tools/binary_machines.md#binaryreader) using the `BR_*` functions.
-```dae
-func void BR_Savegame()
-```
+!!! function "`BR_Savegame`"
+    Custom function. It opens a stream to a previously saved memory file, which can be read from the [BinaryMachines](../tools/binary_machines.md#binaryreader) using the `BR_*` functions.
+    ```dae
+    func void BR_Savegame()
+    ```
 
 ## Examples
 

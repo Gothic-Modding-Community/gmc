@@ -3,13 +3,16 @@ title: Buffs
 description: LeGo package allowing to create status effects and apply them on NPCs
 ---
 # Buffs
+
+!!! info inline end
+    **Dependencies:**<br/>
+    - [PermMem](../tools/permmem.md)<br/>
+    - [FrameFunctions](../tools/frame_functions.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: Buffs.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Buffs.d)
+
 This package allows you to easily create status effects that can affect any NPC.
 Status effects on the hero are displayed graphically in a bar.
-
-## Dependencies
-
-- [PermMem](../tools/permmem.md)
-- [FrameFunctions](../tools/frame_functions.md)
 
 ## Initialization
 Initialize with `LeGo_Buffs` flag.
@@ -20,136 +23,142 @@ LeGo_Init(LeGo_Buffs);
 !!! Warning
     This package is still experimental and not included in the `LeGo_All` initialization flag.
 
-## Implementation
-[:material-github: Buffs.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Buffs.d)
-
 ## Functions
 
 ### `Buff_Apply`
-Applies a status effect to an NPC.
-```dae
-func int Buff_Apply(var C_NPC npc, var int buff)
-```
-**Parameters**
+!!! function "`Buff_Apply`"
+    Applies a status effect to an NPC.
+    ```dae
+    func int Buff_Apply(var C_NPC npc, var int buff)
+    ```
+    **Parameters**
 
-- `#!dae var C_NPC npc`  
-    NPC to be affected by this effect
+    - `#!dae var C_NPC npc`  
+        NPC to be affected by this effect
 
-- `#!dae var int buff`  
-    The instance of the effect to apply to the NPC
+    - `#!dae var int buff`  
+        The instance of the effect to apply to the NPC
 
-**Return value**
+    **Return value**
 
-The function returns the handle of the buff, which was just generated.
+    The function returns the handle of the buff, which was just generated.
 
 ### `Buff_ApplyUnique`
-[`Buff_Apply`](#buff_apply), but nothing happens if a status effect of that kind is already on the NPC.
-```dae
-func int Buff_ApplyUnique(var C_NPC npc, var int buff)
-```
-**Parameters**
+!!! function "`Buff_ApplyUnique`"
+    [`Buff_Apply`](#buff_apply), but nothing happens if a status effect of that kind is already on the NPC.
+    ```dae
+    func int Buff_ApplyUnique(var C_NPC npc, var int buff)
+    ```
+    **Parameters**
 
-- `#!dae var C_NPC npc`  
-    NPC to be affected by this effect
+    - `#!dae var C_NPC npc`  
+        NPC to be affected by this effect
 
-- `#!dae var int buff`  
-    The instance of the effect to apply to the NPC
+    - `#!dae var int buff`  
+        The instance of the effect to apply to the NPC
 
-**Return value**
+    **Return value**
 
-The function returns the handle of the buff, which was just generated or `0` if the buff is already applied on the NPC.
+    The function returns the handle of the buff, which was just generated or `0` if the buff is already applied on the NPC.
 
 ### `Buff_ApplyOrRefresh`
-[`Buff_Apply`](#buff_apply), but if a status effect of this type is already affecting the NPC, the duration will be reset.
-```dae
-func int Buff_ApplyOrRefresh(var C_NPC n, var int buff)
-```
-**Parameters**
+!!! function "`Buff_ApplyOrRefresh`"
+    [`Buff_Apply`](#buff_apply), but if a status effect of this type is already affecting the NPC, the duration will be reset.
+    ```dae
+    func int Buff_ApplyOrRefresh(var C_NPC n, var int buff)
+    ```
+    **Parameters**
 
-- `#!dae var C_NPC npc`  
-    NPC to be affected by this effect
+    - `#!dae var C_NPC npc`  
+        NPC to be affected by this effect
 
-- `#!dae var int buff`  
-    The instance of the effect to apply to the NPC
+    - `#!dae var int buff`  
+        The instance of the effect to apply to the NPC
 
-**Return value**
+    **Return value**
 
-The function returns the handle of the buff, which was just generated or refreshed.
+    The function returns the handle of the buff, which was just generated or refreshed.
 
 ### `Buff_Refresh`
-Resets the duration of the buff.
-```dae
-func void Buff_Refresh(var int buffHandle)
-```
-**Parameters**
+!!! function "`Buff_Refresh`"
+    Resets the duration of the buff.
+    ```dae
+    func void Buff_Refresh(var int buffHandle)
+    ```
+    **Parameters**
 
-- `#!dae var int buffHandle`  
-    Handle of the buff to refresh
+    - `#!dae var int buffHandle`  
+        Handle of the buff to refresh
 
 ### `Buff_Remove`
-Removes the buff from the all NPCs.
-```dae
-func void Buff_Remove(var int buffHandle)
-```
-**Parameters**
+!!! function "`Buff_Remove`"
+    Removes the buff from the all NPCs.
+    ```dae
+    func void Buff_Remove(var int buffHandle)
+    ```
+    **Parameters**
 
-- `#!dae var int buffHandle`  
-    Handle of the buff to remove
+    - `#!dae var int buffHandle`  
+        Handle of the buff to remove
 
 ### `Buff_RemoveAll`
-Removes the buffs form the NPC.
-```dae
-func void Buff_RemoveAll(var C_NPC npc, var int buffInstance)
-```
-**Parameters**
+!!! function "`Buff_RemoveAll`"
+    Removes the buffs form the NPC.
+    ```dae
+    func void Buff_RemoveAll(var C_NPC npc, var int buffInstance)
+    ```
+    **Parameters**
 
-- `#!dae var C_NPC npc`  
-    NPC whose buff should be removed
+    - `#!dae var C_NPC npc`  
+        NPC whose buff should be removed
 
 ### `Buff_GetNpc`
-Returns a pointer to the NPC, which is affected by the buff.
-```dae
-func int Buff_GetNpc(var int buffHandle)
-```
-**Parameters**
+!!! function "`Buff_GetNpc`"
+    Returns a pointer to the NPC, which is affected by the buff.
+    ```dae
+    func int Buff_GetNpc(var int buffHandle)
+    ```
+    **Parameters**
 
-- `#!dae var int buffHandle`  
-    Handle of the buff
+    - `#!dae var int buffHandle`  
+        Handle of the buff
 
-**Return value**
+    **Return value**
 
-The function returns a pointer to the NPC, which is affected by the buff.
+    The function returns a pointer to the NPC, which is affected by the buff.
 
 ### `Buff_Has`
-Checks if the NPC already has an effect applied.
-```dae
-func int Buff_Has(var C_NPC npc, var int buff)
-```
-**Parameters**
+!!! function "`Buff_Has`"
+    Checks if the NPC already has an effect applied.
+    ```dae
+    func int Buff_Has(var C_NPC npc, var int buff)
+    ```
+    **Parameters**
 
-- `#!dae var C_NPC npc`  
-    Checked NPC
+    - `#!dae var C_NPC npc`  
+        Checked NPC
 
-- `#!dae var int buff`  
-    The instance of the effect
+    - `#!dae var int buff`  
+        The instance of the effect
 
-**Return value**
+    **Return value**
 
-The function returns `TRUE` if the NPC has an effect applied. `FALSE` is returned otherwise.
+    The function returns `TRUE` if the NPC has an effect applied. `FALSE` is returned otherwise.
 
 ### `SAVE_GetFuncID`
-Same as `MEM_GetFuncID` but gets the current instance.
-```dae
-func int SAVE_GetFuncID(var func f)
-```
-**Parameters**
+!!! function "`SAVE_GetFuncID`"
+    Same as `MEM_GetFuncID` but gets the current instance.
+    ```dae
+    func int SAVE_GetFuncID(var func f)
+    ```
+    **Parameters**
 
-`#!dae var func f`  
-    Function whose ID is got
+    `#!dae var func f`  
+        Function whose ID is got
 
-**Return value**
+    **Return value**
 
-The function returns the ID of given function.
+    The function returns the ID of given function.
 
 ## lCBuff class
 The buffs package implements an `lCBuff` class, which looks like this:

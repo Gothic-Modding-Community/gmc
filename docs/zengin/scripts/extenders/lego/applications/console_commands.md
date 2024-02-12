@@ -3,12 +3,15 @@ title: Console Commands
 description: LeGo package allowing the registering of new console commands
 ---
 # Console Commands
+
+!!! info inline end
+    **Dependencies:**<br/>
+    - [PermMem](../tools/permmem.md)<br/>
+    - [HookEngine](../tools/hook_engine.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: ConsoleCommands.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/ConsoleCommands.d)
+
 This package allows you to create new console commands.
-
-## Dependencies
-
-- [PermMem](../tools/permmem.md)
-- [HookEngine](../tools/hook_engine.md)
 
 ## Initialization
 Initialize with `LeGo_ConsoleCommands` flag.
@@ -16,48 +19,48 @@ Initialize with `LeGo_ConsoleCommands` flag.
 LeGo_Init(LeGo_ConsoleCommands);
 ```
 
-## Implementation
-[:material-github: ConsoleCommands.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/ConsoleCommands.d)
-
 ## Functions
 
 ### `CC_Register`
-Registers a new console command.
-```dae
-func void CC_Register(var func f, var string cmdPrefix, var string description)
-```
-**Parameters**
+!!! function "`CC_Register`"
+    Registers a new console command.
+    ```dae
+    func void CC_Register(var func f, var string cmdPrefix, var string description)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    This function is executed when the `cmdPrefix` command is entered in the console. The function signature is `func string f(var string p0)`. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.
-- `#!dae var string cmdPrefix`  
-    This is a command, which can be entered in the console.
-- `#!dae var string description`  
-    This text appears next to the command (in [zSpy](../../../../tools/zSpy.md)) when you use the `help` command in the console.
+    - `#!dae var func f`  
+        This function is executed when the `cmdPrefix` command is entered in the console. The function signature is `func string f(var string p0)`. The string passed is everything that was specified in the console after the actual command. The return value is then displayed in the console.
+    - `#!dae var string cmdPrefix`  
+        This is a command, which can be entered in the console.
+    - `#!dae var string description`  
+        This text appears next to the command (in [zSpy](../../../../tools/zSpy.md)) when you use the `help` command in the console.
 
 ### `CC_Remove`
-Removes a function from the console commands.
-```dae
-func void CC_Remove(var func f)
-```
-**Parameters**
+!!! function "`CC_Remove`"
+    Removes a function from the console commands.
+    ```dae
+    func void CC_Remove(var func f)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    This function will be removed, i.e. the associated command will no longer work.
+    - `#!dae var func f`  
+        This function will be removed, i.e. the associated command will no longer work.
 
 ### `CC_Active`
-Checks whether the function passed is already part of a console command.
-```dae
-func int CC_Active(var func f)
-```
-**Parameters**
+!!! function "`CC_Active`"
+    Checks whether the function passed is already part of a console command.
+    ```dae
+    func int CC_Active(var func f)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    Function being checked
+    - `#!dae var func f`  
+        Function being checked
 
-**Return value**
+    **Return value**
 
-The function returns `TRUE` if there is a corresponding function, `FALSE` is returned otherwise.
+    The function returns `TRUE` if there is a corresponding function, `FALSE` is returned otherwise.
 
 ## Examples
 
