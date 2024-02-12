@@ -3,16 +3,15 @@ title: Trialoge
 description: LeGo package implementing trialogues to gothic
 ---
 
+# Trialoge
+
 !!! info inline end
     **Dependencies:**<br/>
     - [AI_Function](../tools/ai_function.md)<br/>
     **Implementation:**<br/>
     [:material-github: Trialoge.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Trialoge.d)
-    
 
-# Trialoge
 This package allows you to create conversations with any number of NPCs and control the camera during the dialog.
-
 
 ## Initialization
 Initialize with `LeGo_Trialoge` flag.
@@ -23,7 +22,7 @@ LeGo_Init(LeGo_Trialoge);
 
 ## Functions
 
-#### `EquipWeapon`
+### `EquipWeapon`
 !!! function "`EquipWeapon`"
     Sektenspinner's function. Makes NPC equip a weapon.
 
@@ -46,7 +45,7 @@ LeGo_Init(LeGo_Trialoge);
     - `0` - `EquipWeapon` will do nothing
     - `1` - `EquipWeapon` will unequip this weapon
 
-#### `Npc_GetArmor`
+### `Npc_GetArmor`
 !!! function "`Npc_GetArmor`"
     Returns NPC's equipped armor.
     ```dae
@@ -61,7 +60,7 @@ LeGo_Init(LeGo_Trialoge);
     
     The function returns instance of armor worn by the NPC.
 
-#### `Npc_GetMeleeWeapon`
+### `Npc_GetMeleeWeapon`
 !!! function "`Npc_GetMeleeWeapon`"
     Returns NPC's equipped melee weapon.
     ```dae
@@ -76,7 +75,7 @@ LeGo_Init(LeGo_Trialoge);
     
     The function returns instance ID of melee weapon equipped by the NPC.
 
-#### `Npc_GetRangedWeapon`
+### `Npc_GetRangedWeapon`
 !!! function "`Npc_GetRangedWeapon`"
     Returns NPC's equipped ranged weapon.
     ```dae
@@ -91,7 +90,7 @@ LeGo_Init(LeGo_Trialoge);
     
     The function returns instance ID of ranged weapon equipped by the NPC.
 
-#### `Npc_TradeItem`
+### `Npc_TradeItem`
 !!! function "`Npc_TradeItem`"
     Swaps NPCs equipped weapon.
     ```dae
@@ -106,35 +105,35 @@ LeGo_Init(LeGo_Trialoge);
     - `#!dae var int itm1`  
         instance ID of item to create and equip
 
-#### `DiaCAM_Update`
+### `DiaCAM_Update`
 !!! function "`DiaCAM_Update`"
     Sektenspinner's function that updates the dialogue camera. (Used internally.)
     ```dae
     func void DiaCAM_Update()
     ```
 
-#### `DiaCAM_Disable`
+### `DiaCAM_Disable`
 !!! function "`DiaCAM_Disable`"
     Completely disable the dialogue cameras.
     ```dae
     func void DiaCAM_Disable()
     ```
 
-#### `DiaCAM_Enable`
+### `DiaCAM_Enable`
 !!! function "`DiaCAM_Enable`"
     Resets the dialogue cameras to the default settings.
     ```dae
     func void DiaCAM_Enable()
     ```
 
-#### `TRIA_Wait`
+### `TRIA_Wait`
 !!! function "`TRIA_Wait`"
     Makes `self` and `other` wait for each other, e.g. for `AI_GotoWP` actions for synchronization. 
     ```dae
     func void TRIA_Wait()
     ```
 
-#### `TRIA_Invite`
+### `TRIA_Invite`
 !!! function "`TRIA_Invite`"
     Invites an NPC into a conversation. Must be called before `TRIA_Start`.
     ```dae
@@ -145,21 +144,21 @@ LeGo_Init(LeGo_Trialoge);
     - `#!dae var C_NPC slf`  
         The invited NPC
 
-#### `TRIA_Start`
+### `TRIA_Start`
 !!! function "`TRIA_Start`"
     Starts trialogues. Before that, all NPCs should be invited by `TRIA_Invite`.
     ```dae
     func void TRIA_Start()
     ```
 
-#### `TRIA_Barrier`
+### `TRIA_Barrier`
 !!! function "`TRIA_Barrier`"
     Similar to `TRIA_Wait` but applies to all participating NPCs.
     ```dae
     func void TRIA_Barrier()
     ```
 
-#### `TRIA_Next`
+### `TRIA_Next`
 !!! function "`TRIA_Next`"
     Sets the called npc to `self`.
     ```dae
@@ -170,7 +169,7 @@ LeGo_Init(LeGo_Trialoge);
     - `#!dae var C_NPC n0`  
         NPC to set to `self`
 
-#### `TRIA_Cam`
+### `TRIA_Cam`
 !!! function "`TRIA_Cam`"
     Starts a tracking shot. 
     ```dae
@@ -181,7 +180,7 @@ LeGo_Init(LeGo_Trialoge);
     - `#!dae var string evt`  
         The name of the tracking shot in Spacer. If `""` is passed, the running trace shot will be aborted.
 
-#### `TRIA_Finish`
+### `TRIA_Finish`
 !!! function "`TRIA_Finish`"
     Ends an ongoing trialogue. Must always be called at the end, otherwise no further trialogues can be started.
     ```dae
