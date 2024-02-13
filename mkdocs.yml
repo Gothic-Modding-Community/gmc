@@ -189,6 +189,17 @@ plugins:
         - preferences*.md
         - genome/index*.md
         - zengin/index*.md
+  - git-authors:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      show_email_address: false
+      sort_authors_by: contribution
+      authorship_threshold_percent: 8
+      count_empty_lines: false
+      exclude:
+        - index*.md
+        - preferences*.md
+        - genome/index*.md
+        - zengin/index*.md
   - redirects:
       # Empty dict to fill with the `meta_redirects.py` hook.
       redirect_maps: {}
