@@ -16,22 +16,24 @@ MEM_InitAll();
 ## Time functions
 
 ### `MEM_GetSystemTime`
-Returns the elapsed time since Gothic started.
-```dae
-func int MEM_GetSystemTime()
-```
-**Return value**
+!!! function "`MEM_GetSystemTime`"
+    Returns the elapsed time since Gothic started.
+    ```dae
+    func int MEM_GetSystemTime()
+    ```
+    **Return value**
 
-The function returns the elapsed time since the start of Gothic in milliseconds. This value is used for timing measurements, in the `BenchmarkMS` functions.
+    The function returns the elapsed time since the start of Gothic in milliseconds. This value is used for timing measurements, in the `BenchmarkMS` functions.
 
 ### `MEM_GetPerformanceCounter`
-Call to the WinAPI [`QueryPerformanceCounter`](https://learn.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) function.
-```dae
-func int MEM_GetPerformanceCounter()
-```
-**Return value**
+!!! function "`MEM_GetPerformanceCounter`"
+    Call to the WinAPI [`QueryPerformanceCounter`](https://learn.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) function.
+    ```dae
+    func int MEM_GetPerformanceCounter()
+    ```
+    **Return value**
 
-The function returns a value representing the number of elapsed ticks since the system was started. This value is used for timing measurements, in the `BenchmarkPC` functions.
+    The function returns a value representing the number of elapsed ticks since the system was started. This value is used for timing measurements, in the `BenchmarkPC` functions.
 
 ## Benchmark functions
 
@@ -56,91 +58,97 @@ The function returns a value representing the number of elapsed ticks since the 
     ```
 
 ### `MEM_BenchmarkMS`
-Benchmark of the execution time for a specified function. (Milliseconds)
-```dae
-func int MEM_BenchmarkMS(var func f)
-```
-**Parameters**
+!!! function "`MEM_BenchmarkMS`"
+    Benchmark of the execution time for a specified function. (Milliseconds)
+    ```dae
+    func int MEM_BenchmarkMS(var func f)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    Function to benchmark
+    - `#!dae var func f`  
+        Function to benchmark
 
-**Return value**
+    **Return value**
 
-The function returns the duration of a function execution in milliseconds.
+    The function returns the duration of a function execution in milliseconds.
 
 ### `MEM_BenchmarkMMS`
-Benchmark of the execution time for a specified function. (microseconds)
-```dae
-func int MEM_BenchmarkMMS(var func f)
-```
-**Parameters**
+!!! function "`MEM_BenchmarkMMS`"
+    Benchmark of the execution time for a specified function. (microseconds)
+    ```dae
+    func int MEM_BenchmarkMMS(var func f)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    Function to benchmark
+    - `#!dae var func f`  
+        Function to benchmark
 
-**Return value**
+    **Return value**
 
-The function returns the duration of a function execution in microseconds.
+    The function returns the duration of a function execution in microseconds.
 
 ### `MEM_BenchmarkPC`
-Benchmark of the execution time for a specified function, using the [Performancecounter](#mem_getperformancecounter).
-```dae
-func int MEM_BenchmarkMS(var func f)
-```
-**Parameters**
+!!! function "`MEM_BenchmarkPC`"
+    Benchmark of the execution time for a specified function, using the [Performancecounter](#mem_getperformancecounter).
+    ```dae
+    func int MEM_BenchmarkMS(var func f)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    Function to benchmark
+    - `#!dae var func f`  
+        Function to benchmark
 
-**Return value**
+    **Return value**
 
-The function returns the number of [Performancecounter](#mem_getperformancecounter) ticks the function needs.
+    The function returns the number of [Performancecounter](#mem_getperformancecounter) ticks the function needs.
 
 ### `MEM_BenchmarkMS_N`
-[`MEM_BenchmarkMS`](#mem_benchmarkms), but with the parameter to specify the number of function runs.
-```dae
-func int MEM_BenchmarkMS_N(var func f, var int n)
-```
-**Parameters**
+!!! function "`MEM_BenchmarkMS_N`"
+    [`MEM_BenchmarkMS`](#mem_benchmarkms), but with the parameter to specify the number of function runs.
+    ```dae
+    func int MEM_BenchmarkMS_N(var func f, var int n)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    Function to benchmark
-- `#!dae var int n`  
-    Number of runs
+    - `#!dae var func f`  
+        Function to benchmark
+    - `#!dae var int n`  
+        Number of runs
 
-**Return value**
+    **Return value**
 
-The function returns a summed duration of multiple (`n`) runs of the function in milliseconds.
+    The function returns a summed duration of multiple (`n`) runs of the function in milliseconds.
 
 ### `MEM_BenchmarkMMS_N`
-[`MEM_BenchmarkMMS`](#mem_benchmarkmms), but with the parameter to specify the number of function runs.
-```dae
-func int MEM_BenchmarkMMS_N(var func f, var int n)
-```
-**Parameters**
+!!! function "`MEM_BenchmarkMMS_N`"
+    [`MEM_BenchmarkMMS`](#mem_benchmarkmms), but with the parameter to specify the number of function runs.
+    ```dae
+    func int MEM_BenchmarkMMS_N(var func f, var int n)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    Function to benchmark
-- `#!dae var int n`  
-    Number of runs
+    - `#!dae var func f`  
+        Function to benchmark
+    - `#!dae var int n`  
+        Number of runs
 
-**Return value**
+    **Return value**
 
-The function returns a summed duration of multiple (`n`) runs of the function in microseconds.
+    The function returns a summed duration of multiple (`n`) runs of the function in microseconds.
 
 ### `MEM_BenchmarkPC_N`
-[`MEM_BenchmarkPC`](#mem_benchmarkpc), but with the parameter to specify the number of function runs.
-```dae
-func int MEM_BenchmarkPC_N(var func f, var int n)
-```
-**Parameters**
+!!! function "`MEM_BenchmarkPC_N`"
+    [`MEM_BenchmarkPC`](#mem_benchmarkpc), but with the parameter to specify the number of function runs.
+    ```dae
+    func int MEM_BenchmarkPC_N(var func f, var int n)
+    ```
+    **Parameters**
 
-- `#!dae var func f`  
-    Function to benchmark
-- `#!dae var int n`  
-    Number of runs
+    - `#!dae var func f`  
+        Function to benchmark
+    - `#!dae var int n`  
+        Number of runs
 
-**Return value**
+    **Return value**
 
-The function returns a summed number of [Performancecounter](#mem_getperformancecounter) ticks needed to execute function multiple (`n`) times.
+    The function returns a summed number of [Performancecounter](#mem_getperformancecounter) ticks needed to execute function multiple (`n`) times.

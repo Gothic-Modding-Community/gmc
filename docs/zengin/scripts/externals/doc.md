@@ -6,222 +6,224 @@ title: Doc functions
 Doc functions are used to control the document manager. They allow you to fine tune the display of maps, letters and books.
 
 ## `Doc_Create`
-
-Creates a new instance of the document manager and returns its ID.
-```dae
-func int Doc_Create() {};
-```
-
-**Return value**  
-Returns the ID of the document manager instance.
-
-!!! Example
+!!! function "`Doc_Create`"
+    Creates a new instance of the document manager and returns its ID.
     ```dae
-    var int nDocID; // Variable to store the id in
-    nDocID = Doc_Create();
+    func int Doc_Create() {};
     ```
+
+    **Return value**  
+    Returns the ID of the document manager instance.
+
+    !!! Example
+        ```dae
+        var int nDocID; // Variable to store the id in
+        nDocID = Doc_Create();
+        ```
 
 ## `Doc_CreateMap`
-
-Creates a new instance of the document manager with the arrow showing players position on the map and returns its ID.
-```dae
-func int Doc_CreateMap() {};
-```
-
-**Return value**  
-Returns the ID of the document manager instance.
-
-!!! Example
+!!! function "`Doc_CreateMap`"
+    Creates a new instance of the document manager with the arrow showing players position on the map and returns its ID.
     ```dae
-    var int nDocID; // Variable to store the id in
-    nDocID = Doc_CreateMap();
+    func int Doc_CreateMap() {};
     ```
+
+    **Return value**  
+    Returns the ID of the document manager instance.
+
+    !!! Example
+        ```dae
+        var int nDocID; // Variable to store the id in
+        nDocID = Doc_CreateMap();
+        ```
 
 ## `Doc_SetLevel`
-
-Set a world level to a map. This maps the texture of the document to the bounding box of the provided level.
-```dae
-func void Doc_SetLevel(var int docID, var string level) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-- `#!dae var string level` - name of the ZEN file
-
-!!! Example
+!!! function "`Doc_SetLevel`"
+    Set a world level to a map. This maps the texture of the document to the bounding box of the provided level.
     ```dae
-    nDocID = Doc_CreateMap();
-    Doc_SetLevel(nDocID, "WORLD.ZEN");
+    func void Doc_SetLevel(var int docID, var string level) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+    - `#!dae var string level` - name of the ZEN file
+
+    !!! Example
+        ```dae
+        nDocID = Doc_CreateMap();
+        Doc_SetLevel(nDocID, "WORLD.ZEN");
+        ```
 
 ## `Doc_SetLevelCoords`
+!!! function "`Doc_SetLevelCoords`"
 
-!!! Warning
-    This function is only available in Gothic 2
+    !!! Warning
+        This function is only available in Gothic 2
 
-Sets the map coordinates. This is used to map smaller portions of the world map to the document map to correctly show players position on the map.
-```dae
-func void Doc_SetLevelCoords(var int docID, var int left, var int top, var int right, var int bottom) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-- `#!dae var int left` - left coordinate
-- `#!dae var int top` - top coordinate
-- `#!dae var int right` - right coordinate
-- `#!dae var int bottom` - bottom coordinate
-
-!!! Example
+    Sets the map coordinates. This is used to map smaller portions of the world map to the document map to correctly show players position on the map.
     ```dae
-    Doc_SetLevelCoords(nDocID, -28000, 50500, 95500, -42500);
+    func void Doc_SetLevelCoords(var int docID, var int left, var int top, var int right, var int bottom) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+    - `#!dae var int left` - left coordinate
+    - `#!dae var int top` - top coordinate
+    - `#!dae var int right` - right coordinate
+    - `#!dae var int bottom` - bottom coordinate
+
+    !!! Example
+        ```dae
+        Doc_SetLevelCoords(nDocID, -28000, 50500, 95500, -42500);
+        ```
 
 ## `Doc_SetFont`
-Sets a `font` to be used on a `page` in a document with `docID`. Can be called multiple times to display different lines with different fonts.
+!!! function "`Doc_SetFont`"
+    Sets a `font` to be used on a `page` in a document with `docID`. Can be called multiple times to display different lines with different fonts.
 
-```dae
-func void Doc_SetFont(var int docID, var int page, var string font) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-- `#!dae var int page` - page index, if set to `-1`, fonts will be applied to all pages 
-- `#!dae var string font` - font to be used
-
-!!! Example
     ```dae
-    Doc_SetFont(nDocID, -1, "FONT_10_BOOK.TGA");
+    func void Doc_SetFont(var int docID, var int page, var string font) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+    - `#!dae var int page` - page index, if set to `-1`, fonts will be applied to all pages 
+    - `#!dae var string font` - font to be used
+
+    !!! Example
+        ```dae
+        Doc_SetFont(nDocID, -1, "FONT_10_BOOK.TGA");
+        ```
 
 ## `Doc_SetPages`
-
-Sets the number of pages `numOfPages` of the document.
-```dae
-func void Doc_SetPages(var int docID, var int numOfPages) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-- `#!dae var int numOfPages` - number of pages
-
-!!! Example
+!!! function "`Doc_SetPages`"
+    Sets the number of pages `numOfPages` of the document.
     ```dae
-    nDocID = Doc_Create();
-    Doc_SetPages(nDocID, 2);
+    func void Doc_SetPages(var int docID, var int numOfPages) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+    - `#!dae var int numOfPages` - number of pages
+
+    !!! Example
+        ```dae
+        nDocID = Doc_Create();
+        Doc_SetPages(nDocID, 2);
+        ```
 
 ## `Doc_SetPage`
-
-Set `page` to have `texture` as a background with `scale`.
-```dae
-func void Doc_SetPage(var int docID, var int page, var string texture, var int scale) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-- `#!dae var int page` - page index, if set to `-1`, settings are applied to all pages
-- `#!dae var string texture` - texture of the background
-- `#!dae var int scale` - scale of the texture, `TRUE` to scale the page, `FALSE` to not scale 
-
-!!! Example
+!!! function "`Doc_SetPage`"
+    Set `page` to have `texture` as a background with `scale`.
     ```dae
-    Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", FALSE);
-    Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", FALSE);
+    func void Doc_SetPage(var int docID, var int page, var string texture, var int scale) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+    - `#!dae var int page` - page index, if set to `-1`, settings are applied to all pages
+    - `#!dae var string texture` - texture of the background
+    - `#!dae var int scale` - scale of the texture, `TRUE` to scale the page, `FALSE` to not scale 
+
+    !!! Example
+        ```dae
+        Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", FALSE);
+        Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", FALSE);
+        ```
 
 ## `Doc_SetMargins`
-
-Sets text margins of the page
-```dae
-func void Doc_SetMargins(var int docID,
-                         var int page,
-                         var int left,
-                         var int top,
-                         var int right,
-                         var int bottom,
-                         var int pixels) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-- `#!dae var int page` - page index, if set to `-1`, settings are applied to all pages
-- `#!dae var int left` - left margin
-- `#!dae var int top` - top margin
-- `#!dae var int right` - right margin
-- `#!dae var int bottom` - bottom margin
-- `#!dae var int pixels` - `TRUE` to use pixels, `FALSE` to use virtual coordinates
-!!! Warning
-    After a thorough examination of this external function in the decompiler, it looks like the function works in pixels only regardless of this parameter.
-
-!!! Example
+!!! function "`Doc_SetMargins`"
+    Sets text margins of the page
     ```dae
-    Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, TRUE);
+    func void Doc_SetMargins(var int docID,
+                             var int page,
+                             var int left,
+                             var int top,
+                             var int right,
+                             var int bottom,
+                             var int pixels) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+    - `#!dae var int page` - page index, if set to `-1`, settings are applied to all pages
+    - `#!dae var int left` - left margin
+    - `#!dae var int top` - top margin
+    - `#!dae var int right` - right margin
+    - `#!dae var int bottom` - bottom margin
+    - `#!dae var int pixels` - `TRUE` to use pixels, `FALSE` to use virtual coordinates
+    !!! Warning
+        After a thorough examination of this external function in the decompiler, it looks like the function works in pixels only regardless of this parameter.
+
+    !!! Example
+        ```dae
+        Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, TRUE);
+        ```
 
 ## `Doc_PrintLine`
-
-Prints a line of `text` (font is set using [Doc_SetFont](#doc_setfont)) onto the document with `docID`, onto the `page`. Does not split the text into multiple lines if they do not fit onto the page.
-```dae
-func void Doc_PrintLine(var int docID, var int page, var string text) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-- `#!dae var int page` - page index
-- `#!dae var string text` - text to be printed
-
-!!! Example
+!!! function "`Doc_PrintLine`"
+    Prints a line of `text` (font is set using [Doc_SetFont](#doc_setfont)) onto the document with `docID`, onto the `page`. Does not split the text into multiple lines if they do not fit onto the page.
     ```dae
-    Doc_PrintLine(nDocID, 0, ""); // insert empty line
-    Doc_PrintLine(nDocID, 0, "The Book");
+    func void Doc_PrintLine(var int docID, var int page, var string text) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+    - `#!dae var int page` - page index
+    - `#!dae var string text` - text to be printed
+
+    !!! Example
+        ```dae
+        Doc_PrintLine(nDocID, 0, ""); // insert empty line
+        Doc_PrintLine(nDocID, 0, "The Book");
+        ```
 
 ## `Doc_PrintLines`
-
-Prints a line of `text` (font is set using [Doc_SetFont](#doc_setfont)) onto the document with `docID`, onto the `page`. Splits the text into multiple lines if they do not fit onto the page.
-```dae
-func void Doc_PrintLines(var int docID, var int page, var string text) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-- `#!dae var int page` - page index
-- `#!dae var string text` - text to be printed
-
-!!! Example
+!!! function "`Doc_PrintLines`"
+    Prints a line of `text` (font is set using [Doc_SetFont](#doc_setfont)) onto the document with `docID`, onto the `page`. Splits the text into multiple lines if they do not fit onto the page.
     ```dae
-    Doc_PrintLines(nDocID, 0, "The war had been decided. Varant had lost its seaports, vital to army supplies. King Rhobar had not lingered on the battle fields for a long time, but left his generals to deal with the few remaining enemy troops. Varant had only one large force left, commanded by Lukkor, the most capable warlord of the Varant army, who had more than once turned defeat into victory.");
-    Doc_PrintLines(nDocID, 0, "But now his army was trapped. The situation was hopeless, even though his army greatly outnumbered the enemy. Lee, a war hero from Myrtana, had lured him into this trap. The heavy cavalry had been unable to fight on the thick, swamped ground of the narrow valley. Lee's soldiers had occupied the range of hills surrounding the swamp, and they had struck repeatedly, decimating the army. The desperate sallies his troops had launched had been cut short in pools of blood. He was beaten.");
+    func void Doc_PrintLines(var int docID, var int page, var string text) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+    - `#!dae var int page` - page index
+    - `#!dae var string text` - text to be printed
+
+    !!! Example
+        ```dae
+        Doc_PrintLines(nDocID, 0, "The war had been decided. Varant had lost its seaports, vital to army supplies. King Rhobar had not lingered on the battle fields for a long time, but left his generals to deal with the few remaining enemy troops. Varant had only one large force left, commanded by Lukkor, the most capable warlord of the Varant army, who had more than once turned defeat into victory.");
+        Doc_PrintLines(nDocID, 0, "But now his army was trapped. The situation was hopeless, even though his army greatly outnumbered the enemy. Lee, a war hero from Myrtana, had lured him into this trap. The heavy cavalry had been unable to fight on the thick, swamped ground of the narrow valley. Lee's soldiers had occupied the range of hills surrounding the swamp, and they had struck repeatedly, decimating the army. The desperate sallies his troops had launched had been cut short in pools of blood. He was beaten.");
+        ```
 
 ## `Doc_Show`
-
-Display the document using the document manager ID
-```dae
-func void Doc_Show(var int docID) {};
-```
-
-**Parameters**
-
-- `#!dae var int docID` - document manager ID
-
-!!! Example
+!!! function "`Doc_Show`"
+    Display the document using the document manager ID
     ```dae
-    var int nDocID; // Variable to store the id in
-    nDocID = Doc_Create();
-    
-    // ... document configuration
-    
-    Doc_Show(nDocID);
+    func void Doc_Show(var int docID) {};
     ```
+
+    **Parameters**
+
+    - `#!dae var int docID` - document manager ID
+
+    !!! Example
+        ```dae
+        var int nDocID; // Variable to store the id in
+        nDocID = Doc_Create();
+        
+        // ... document configuration
+        
+        Doc_Show(nDocID);
+        ```
 
 ## Externals with docu comments
 

@@ -30,11 +30,6 @@
     }
 }
 
-/* Add left padding indent to the content */
-article > div > :is(:not(h1, h2, h3, h4)) {
-    padding-left: 1em !important;
-}
-
 /* Shrink header and footer to the content size*/
 .md-grid {
     /* Default 61rem */
@@ -146,12 +141,6 @@ div.md-nav__link--index {
     /*--md-default-fg-color--light:hsla(0, 0%, 0%, .54);*/
     [data-md-color-scheme=default] :is(h1, h2, h3, h4, h5, h6) {
         --md-default-fg-color--light: #000;
-    }
-    [data-md-color-scheme=slate] :is(h3, h4, h5, h6) {
-        border-top: 1px solid hsla(var(--md-hue), 100%, 100%, 0.15);
-    }
-    [data-md-color-scheme=default] :is(h3, h4, h5, h6) {
-        border-top: 1px solid hsla(0, 0%, 0%, 0.15);
     }
 }
 
@@ -307,6 +296,22 @@ div.md-nav__link--index {
     -webkit-mask-image: var(--md-admonition-icon--trivia);
     mask-image: var(--md-admonition-icon--trivia);
     animation: heart 1000ms infinite;
+}
+
+
+.md-typeset .admonition.function,
+.md-typeset details.function {
+  border-color: rgb(163, 159, 159);
+}
+.md-typeset .function > .admonition-title,
+.md-typeset .function > summary {
+  background-color: rgba(148, 148, 148, 0.1);
+}
+.md-typeset .function > .admonition-title::before,
+.md-typeset .function > summary::before {
+  background-color: rgb(163, 159, 159);
+  -webkit-mask-image: var(--md-admonition-icon--function);
+          mask-image: var(--md-admonition-icon--function);
 }
 
 /* Beautiful heart beat animation I found here: https://github.com/squidfunk/mkdocs-material/discussions/3850 */
