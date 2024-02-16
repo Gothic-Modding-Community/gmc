@@ -1,5 +1,14 @@
 # zCVob
 
+!!! abstract inline end "Quick Infos"
+    **Class Name:** `zCVob`<br/>
+    **Version Identifiers:**<br />
+    — Gothic I: `12289`<br/>
+    — Gothic II: `52224`<br/>
+    **Sources:**<br/>
+    — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
+    — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zcvob/1-1-0-467)
+
 Represents so-called virtual objects which appear in the game world. `zCVob` is the base class for all virtual objects which include everything from static models like boxes to interactive elements like doors and chests and invisible trigger objects.
 
 ## Class members
@@ -217,7 +226,7 @@ Coordinates of the object in world space relative to the center.
 !!! Note
     This refers to the center of coordinates of the `.3DS` file of the game world on which the `ZEN` file is built. 
 
-The coordinates are set automatically the first time an instance of the class is inserted into the game world. You can change them either directly by entering numerical values ​​in the corresponding fields of the parameter, by [moving the vob](../spacer.md#viewport-controls) in spacer.
+The coordinates are set automatically the first time an instance of the class is inserted into the game world. You can change them either directly by entering numerical values in the corresponding fields of the parameter, by [moving the vob](../spacer.md#viewport-controls) in spacer.
 
 ### `vobName` {: .sp-string}
 An identifier of a zCVob shown in the editor and sometimes used in scripts. The name can be left blank.
