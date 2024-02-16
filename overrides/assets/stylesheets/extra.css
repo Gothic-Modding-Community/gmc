@@ -395,6 +395,30 @@ div.md-nav__link--index {
 
 /* region spacer type icons */
 
+.sp-folder,
+.sp-class,
+.sp-int,
+.sp-string,
+.sp-misc,
+.sp-bool,
+.sp-enum,
+.sp-vec,
+.sp-float,
+.sp-color,
+.sp-none {
+    font-family: monospace;
+
+    margin: 0 0 0 0.5em;
+    padding: 0 0 0 1.6em;
+
+    background-repeat: no-repeat;
+    background-size: 1.3em 1.3em;
+    image-rendering: pixelated;
+
+    background-position-y: 0.65em;
+}
+
+
 ul .sp-folder,
 ul .sp-class,
 ul .sp-int,
@@ -406,60 +430,50 @@ ul .sp-vec,
 ul .sp-float,
 ul .sp-color,
 ul .sp-none {
-    margin: 0 0 0 0.5em !important;
-    padding: 0 !important;
     list-style-type: none;
-    font-family: monospace;
+    padding-left: 1.8em !important;
+    background-position-y: 3px !important;
 }
 
-.sp-folder::before {
-    content: url("/gmc/assets/icons/spacer-folder.png");
-    padding-right: 0.5em;
+
+.sp-folder {
+    background-image: url("/gmc/assets/icons/spacer-folder.png");
 }
 
-.sp-int::before {
-    content: url("/gmc/assets/icons/spacer-int.png");
-    padding-right: 0.5em;
+.sp-int {
+    background-image: url("/gmc/assets/icons/spacer-int.png");
 }
 
-.sp-float::before {
-    content: url("/gmc/assets/icons/spacer-float.png");
-    padding-right: 0.5em;
+.sp-float {
+    background-image: url("/gmc/assets/icons/spacer-float.png");
 }
 
-.sp-string::before {
-    content: url("/gmc/assets/icons/spacer-string.png");
-    padding-right: 0.5em;
+.sp-string{
+    background-image: url("/gmc/assets/icons/spacer-string.png");
 }
 
-.sp-misc::before {
-    content: url("/gmc/assets/icons/spacer-misc.png");
-    padding-right: 0.5em;
+.sp-misc{
+    background-image: url("/gmc/assets/icons/spacer-misc.png");
 }
 
-.sp-vec::before {
-    content: url("/gmc/assets/icons/spacer-vec.png");
-    padding-right: 0.5em;
+.sp-vec{
+    background-image: url("/gmc/assets/icons/spacer-vec.png");
 }
 
-.sp-bool::before {
-    content: url("/gmc/assets/icons/spacer-bool.png");
-    padding-right: 0.5em;
+.sp-bool{
+    background-image: url("/gmc/assets/icons/spacer-bool.png");
 }
 
-.sp-enum::before {
-    content: url("/gmc/assets/icons/spacer-enum.png");
-    padding-right: 0.5em;
+.sp-enum{
+    background-image: url("/gmc/assets/icons/spacer-enum.png");
 }
 
-.sp-class::before {
-    content: url("/gmc/assets/icons/spacer-class.png");
-    padding-right: 0.5em;
+.sp-class {
+    background-image: url("/gmc/assets/icons/spacer-class.png");
 }
 
-.sp-color::before {
-    content: url("/gmc/assets/icons/spacer-color.png");
-    padding-right: 0.5em;
+.sp-color {
+    background-image: url("/gmc/assets/icons/spacer-color.png");
 }
 
 /* endregion */
