@@ -7,7 +7,8 @@
     — Gothic II: `52224`<br/>
     **Sources:**<br/>
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
-    — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zcvob/1-1-0-467)
+    — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zcvob/1-1-0-467)<br/>
+    — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCVob/)
 
 Represents so-called virtual objects which appear in the game world. `zCVob` is the base class for all virtual objects which include everything from static models like boxes to interactive elements like doors and chests and invisible trigger objects.
 
@@ -362,9 +363,3 @@ Unknown.
 
 !!! warning
     This property is only available in saved games.
-
-[^1]:
-    Heavily inspired by the zCVob article at [gothic-library](http://www.gothic-library.ru/publ/class_zcvob/1-1-0-467).
-
-[^2]:
-    Corrected with information found in [ZenKit ZenGin Reference](https://zk.gothickit.dev/engine/objects/zCVob/).

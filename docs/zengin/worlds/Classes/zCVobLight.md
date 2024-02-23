@@ -313,7 +313,7 @@ Whether the color animation should smoothly interpolate between keyframes.
 !!! warning
     This value is only valid for dynamic lights. Check [`lightStatic`](#lightstatic) before use.
 
-#### `canMove` {: .sp-bool}
+### `canMove` {: .sp-bool}
 
 Unknown.
 
