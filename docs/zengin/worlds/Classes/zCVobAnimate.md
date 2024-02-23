@@ -21,6 +21,8 @@ and `OnUntrigger` events.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [zCEffect](zCEffect.md)
+      {: .sp-class}
     - zCVobAnimate
       {: .sp-class}
         - [startOn](#starton) = ""
@@ -30,6 +32,8 @@ and `OnUntrigger` events.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [zCEffect](zCEffect.md)
+      {: .sp-class}
     - zCVobAnimate
       {: .sp-class}
         - [startOn](#starton) = ""
@@ -38,6 +42,8 @@ and `OnUntrigger` events.
 === "Gothic 1 (Save)"
 
     - [zCVob](zCVob.md)
+      {: .sp-class}
+    - [zCEffect](zCEffect.md)
       {: .sp-class}
     - zCVobAnimate
       {: .sp-class}
@@ -49,6 +55,8 @@ and `OnUntrigger` events.
 === "Gothic 2 (Save)"
 
     - [zCVob](zCVob.md)
+      {: .sp-class}
+    - [zCEffect](zCEffect.md)
       {: .sp-class}
     - zCVobAnimate
       {: .sp-class}
