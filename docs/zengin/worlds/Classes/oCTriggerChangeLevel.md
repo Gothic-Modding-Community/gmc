@@ -7,7 +7,7 @@
     — Gothic II: `24577`<br/>
     **Sources:**<br/>
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
-    — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/oCTouchDamage/)
+    — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/oCTriggerChangeLevel/)
 
 A special [`zCTrigger`](zCTrigger.md) which in addition to performing all other trigger actions also causes the engine
 to load another level when activated.

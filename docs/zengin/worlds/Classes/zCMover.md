@@ -284,7 +284,7 @@ Controls how the mover behaves in response to events ("activation").
   to the "closed" state after a fixed amount of time specified by [`stayOpenTimeSec`](#stayopentimesec).
 * `NSTATE_LOOP` —  The mover opens and closes in a loop indefinitely.
 * `NSTATE_SINGLE_KEYS` — The mover can transition to each keyframe separately. Often used in conjunction
-  with a [`zCMoverController`](zCMoverControler).
+  with a [`zCMoverControler`](zCMoverControler.md).
 
 ### `touchBlockerDamage` {: .sp-float}
 

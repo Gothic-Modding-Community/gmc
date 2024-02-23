@@ -37,11 +37,7 @@ from all slaves, it emits an `OnTrigger` event to the [`triggerTarget`](#trigger
               {: .sp-folder}
                 - [untriggerCancels](#untriggercancels) = FALSE
                   {: .sp-bool}
-            - [slaveVobName0](#slavevobname) = ""
-              {: .sp-string}
-            - [slaveVobName1](#slavevobname) = ""
-              {: .sp-string}
-            - [slaveVobName2](#slavevobname) = ""
+            - [slaveVobName](#slavevobname) ... = ""
               {: .sp-string}
 
 === "Gothic 2"
@@ -66,11 +62,7 @@ from all slaves, it emits an `OnTrigger` event to the [`triggerTarget`](#trigger
               {: .sp-folder}
                 - [untriggerCancels](#untriggercancels) = FALSE
                   {: .sp-bool}
-            - [slaveVobName0](#slavevobname) = ""
-              {: .sp-string}
-            - [slaveVobName1](#slavevobname) = ""
-              {: .sp-string}
-            - [slaveVobName2](#slavevobname) = ""
+            - [slaveVobName](#slavevobname) ... = ""
               {: .sp-string}
 
 === "Gothic 1 (Save)"
@@ -95,11 +87,7 @@ from all slaves, it emits an `OnTrigger` event to the [`triggerTarget`](#trigger
               {: .sp-folder}
                 - [untriggerCancels](#untriggercancels) = FALSE
                   {: .sp-bool}
-            - [slaveVobName0](#slavevobname) = ""
-              {: .sp-string}
-            - [slaveVobName1](#slavevobname) = ""
-              {: .sp-string}
-            - [slaveVobName2](#slavevobname) = ""
+            - [slaveVobName](#slavevobname) ... = ""
               {: .sp-string}
 
 === "Gothic 2 (Save)"
@@ -124,18 +112,12 @@ from all slaves, it emits an `OnTrigger` event to the [`triggerTarget`](#trigger
               {: .sp-folder}
                 - [untriggerCancels](#untriggercancels) = FALSE
                   {: .sp-bool}
-            - [slaveVobName0](#slavevobname) = ""
+            - [slaveVobName](#slavevobname) ... = ""
               {: .sp-string}
-            - [slaveVobName1](#slavevobname) = ""
-              {: .sp-string}
-            - [slaveVobName2](#slavevobname) = ""
-              {: .sp-string}
-            - [numSlavesTriggered](#numslavestriggered)
+            - [numSlavesTriggered](#numslavestriggered) = 0
               {: .sp-int}
-            - slaveTriggered0
-              {: .sp-type}
-            - slaveTriggered1
-              {: .sp-type}
+            - slaveTriggered ... = NULL
+              {: .sp-class}
 
 ## Class member overview
 
@@ -195,3 +177,6 @@ The name of a slave VObject.
 ### `numSlavesTriggered` {: .sp-int}
 
 Unknown.
+
+!!! warning
+    This property is only available in saved games.

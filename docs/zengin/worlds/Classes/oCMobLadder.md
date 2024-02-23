@@ -1,4 +1,4 @@
-# oCMobDoor
+# oCMobLadder
 
 !!! abstract inline end "Quick Infos"
     **Class Name:** `oCMobLadder`<br/>

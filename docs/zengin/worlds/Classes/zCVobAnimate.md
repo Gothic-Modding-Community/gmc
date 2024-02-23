@@ -11,10 +11,9 @@
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCVobAnimate/)
 
 
-A VObject used to create animated models. The visual of such objects can either be a
-[morph mesh](../../engine/formats/morph-mesh.md) or a model with a skeletal animation
-(i.e. a [model script](../../engine/formats/model-script.md)). The animation of these objects can be started
-and stopped using `OnTrigger` and `OnUntrigger` events.
+A VObject used to create animated models. The visual of such objects can either be a morph mesh or a model with a 
+skeletal animation (i.e. a model script). The animation of these objects can be started and stopped using `OnTrigger` 
+and `OnUntrigger` events.
 
 ## Class members
 
