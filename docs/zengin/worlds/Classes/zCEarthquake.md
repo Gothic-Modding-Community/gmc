@@ -27,6 +27,8 @@ by a shaking camera.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [zCEffect](zCEffect.md)
+      {: .sp-class}
     - zCEarthquake
       {: .sp-class}
         - Earthquake
@@ -45,6 +47,8 @@ by a shaking camera.
 === "Gothic 2 (Save)"
 
     - [zCVob](zCVob.md)
+      {: .sp-class}
+    - [zCEffect](zCEffect.md)
       {: .sp-class}
     - zCEarthquake
       {: .sp-class}
