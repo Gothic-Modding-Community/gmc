@@ -16,9 +16,9 @@ A VObject which can optionally be moved and/or carried.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../index.md)
       {: .sp-class}
     - oCMOB
       {: .sp-class}
@@ -49,9 +49,9 @@ A VObject which can optionally be moved and/or carried.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../index.md)
       {: .sp-class}
     - oCMOB
       {: .sp-class}
@@ -82,9 +82,9 @@ A VObject which can optionally be moved and/or carried.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../index.md)
       {: .sp-class}
     - oCMOB
       {: .sp-class}
@@ -115,9 +115,9 @@ A VObject which can optionally be moved and/or carried.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../index.md)
       {: .sp-class}
     - oCMOB
       {: .sp-class}

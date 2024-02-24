@@ -17,7 +17,7 @@ the game to put the player at its location and in its orientation when the world
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobStartpoint
       {: .sp-class}
@@ -26,7 +26,7 @@ the game to put the player at its location and in its orientation when the world
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobStartpoint
       {: .sp-class}
@@ -35,7 +35,7 @@ the game to put the player at its location and in its orientation when the world
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobStartpoint
       {: .sp-class}
@@ -44,7 +44,7 @@ the game to put the player at its location and in its orientation when the world
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobStartpoint
       {: .sp-class}

@@ -17,9 +17,9 @@ from all slaves, it emits an `OnTrigger` event to the [`triggerTarget`](index.md
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCCodeMaster
       {: .sp-class}
@@ -42,9 +42,9 @@ from all slaves, it emits an `OnTrigger` event to the [`triggerTarget`](index.md
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCCodeMaster
       {: .sp-class}
@@ -67,9 +67,9 @@ from all slaves, it emits an `OnTrigger` event to the [`triggerTarget`](index.md
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCCodeMaster
       {: .sp-class}
@@ -92,9 +92,9 @@ from all slaves, it emits an `OnTrigger` event to the [`triggerTarget`](index.md
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCCodeMaster
       {: .sp-class}

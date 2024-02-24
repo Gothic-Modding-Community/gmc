@@ -17,9 +17,9 @@ for a cinematic feel to the game and other post-processing effects.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCVobScreenFX
       {: .sp-class}
@@ -28,9 +28,9 @@ for a cinematic feel to the game and other post-processing effects.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCVobScreenFX
       {: .sp-class}
@@ -39,9 +39,9 @@ for a cinematic feel to the game and other post-processing effects.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCVobScreenFX
       {: .sp-class}
@@ -50,9 +50,9 @@ for a cinematic feel to the game and other post-processing effects.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCVobScreenFX
       {: .sp-class}

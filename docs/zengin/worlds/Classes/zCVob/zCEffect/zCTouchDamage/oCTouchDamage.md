@@ -13,11 +13,11 @@
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](../index.md)
       {: .sp-class}
-    - [zCTouchDamage](zCTouchDamage.md)
+    - [zCTouchDamage](index.md)
       {: .sp-class}
     - oCTouchDamage
       {: .sp-class}
@@ -26,11 +26,11 @@
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](../index.md)
       {: .sp-class}
-    - [zCTouchDamage](zCTouchDamage.md)
+    - [zCTouchDamage](index.md)
       {: .sp-class}
     - oCTouchDamage
       {: .sp-class}
@@ -39,11 +39,11 @@
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](../index.md)
       {: .sp-class}
-    - [zCTouchDamage](zCTouchDamage.md)
+    - [zCTouchDamage](index.md)
       {: .sp-class}
     - oCTouchDamage
       {: .sp-class}
@@ -52,11 +52,11 @@
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](../index.md)
       {: .sp-class}
-    - [zCTouchDamage](zCTouchDamage.md)
+    - [zCTouchDamage](index.md)
       {: .sp-class}
     - oCTouchDamage
       {: .sp-class}

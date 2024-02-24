@@ -16,9 +16,9 @@ Represents a lens flare effect. Behaves exactly like the base [`zCVob`](../index
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCVobLensFlare
       {: .sp-class}
@@ -27,9 +27,9 @@ Represents a lens flare effect. Behaves exactly like the base [`zCVob`](../index
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCVobLensFlare
       {: .sp-class}
@@ -38,9 +38,9 @@ Represents a lens flare effect. Behaves exactly like the base [`zCVob`](../index
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCVobLensFlare
       {: .sp-class}
@@ -49,9 +49,9 @@ Represents a lens flare effect. Behaves exactly like the base [`zCVob`](../index
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCVobLensFlare
       {: .sp-class}

@@ -16,11 +16,11 @@ function when the trigger is activated. `OnUntrigger` events do not result in th
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
+    - [zCTrigger](index.md)
       {: .sp-class}
     - oCTriggerScript
       {: .sp-class}
@@ -29,11 +29,11 @@ function when the trigger is activated. `OnUntrigger` events do not result in th
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
+    - [zCTrigger](index.md)
       {: .sp-class}
     - oCTriggerScript
       {: .sp-class}
@@ -42,11 +42,11 @@ function when the trigger is activated. `OnUntrigger` events do not result in th
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
+    - [zCTrigger](index.md)
       {: .sp-class}
     - oCTriggerScript
       {: .sp-class}
@@ -55,11 +55,11 @@ function when the trigger is activated. `OnUntrigger` events do not result in th
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
+    - [zCTrigger](index.md)
       {: .sp-class}
     - oCTriggerScript
       {: .sp-class}

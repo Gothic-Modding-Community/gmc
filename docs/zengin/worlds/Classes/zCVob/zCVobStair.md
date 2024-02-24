@@ -21,7 +21,7 @@ routines to properly ascend and descend staircases.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobStair
       {: .sp-class}
@@ -34,7 +34,7 @@ routines to properly ascend and descend staircases.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobStair
       {: .sp-class}

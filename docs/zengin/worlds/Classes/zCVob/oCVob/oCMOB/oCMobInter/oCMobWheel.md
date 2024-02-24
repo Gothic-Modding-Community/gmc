@@ -15,13 +15,13 @@ A wheel with four different states. For example, this is used for the gates of t
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](index.md)
       {: .sp-class}
     - oCMobWheel
       {: .sp-class}
@@ -30,13 +30,13 @@ A wheel with four different states. For example, this is used for the gates of t
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](index.md)
       {: .sp-class}
     - oCMobWheel
       {: .sp-class}
@@ -45,13 +45,13 @@ A wheel with four different states. For example, this is used for the gates of t
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](index.md)
       {: .sp-class}
     - oCMobWheel
       {: .sp-class}
@@ -60,13 +60,13 @@ A wheel with four different states. For example, this is used for the gates of t
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](index.md)
       {: .sp-class}
     - oCMobWheel
       {: .sp-class}

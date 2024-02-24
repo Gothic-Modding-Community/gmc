@@ -16,9 +16,9 @@ their attributes. They have physics enabled and can be targeted and picked up by
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](index.md)
       {: .sp-class}
     - oCItem
       {: .sp-class}
@@ -27,9 +27,9 @@ their attributes. They have physics enabled and can be targeted and picked up by
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](index.md)
       {: .sp-class}
     - oCItem
       {: .sp-class}
@@ -38,9 +38,9 @@ their attributes. They have physics enabled and can be targeted and picked up by
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](index.md)
       {: .sp-class}
     - oCItem
       {: .sp-class}
@@ -53,9 +53,9 @@ their attributes. They have physics enabled and can be targeted and picked up by
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](index.md)
       {: .sp-class}
     - oCItem
       {: .sp-class}

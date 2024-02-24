@@ -18,7 +18,7 @@ free points and can be used in scripts to spawn other objects at their location.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobSpot
       {: .sp-class}
@@ -27,7 +27,7 @@ free points and can be used in scripts to spawn other objects at their location.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobSpot
       {: .sp-class}
@@ -36,7 +36,7 @@ free points and can be used in scripts to spawn other objects at their location.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobSpot
       {: .sp-class}
@@ -45,7 +45,7 @@ free points and can be used in scripts to spawn other objects at their location.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobSpot
       {: .sp-class}

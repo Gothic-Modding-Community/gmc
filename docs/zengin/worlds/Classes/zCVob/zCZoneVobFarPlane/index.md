@@ -15,7 +15,7 @@ A VObject which defines the loading range of VObjects within its bounding box.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
     - zCZoneVobFarPlane
       {: .sp-class}
@@ -26,7 +26,7 @@ A VObject which defines the loading range of VObjects within its bounding box.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
     - zCZoneVobFarPlane
       {: .sp-class}
@@ -37,7 +37,7 @@ A VObject which defines the loading range of VObjects within its bounding box.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
     - zCZoneVobFarPlane
       {: .sp-class}
@@ -48,7 +48,7 @@ A VObject which defines the loading range of VObjects within its bounding box.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
     - zCZoneVobFarPlane
       {: .sp-class}

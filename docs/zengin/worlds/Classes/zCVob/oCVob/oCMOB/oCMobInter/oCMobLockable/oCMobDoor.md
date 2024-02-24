@@ -15,15 +15,15 @@ A VObject representing a door. This is also used for NPCs navigating the waynet.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](../index.md)
       {: .sp-class}
-    - [*oCMobLockable*](oCMobLockable.md)
+    - [*oCMobLockable*](index.md)
       {: .sp-class}
     - oCMobDoor
       {: .sp-class}
@@ -32,15 +32,15 @@ A VObject representing a door. This is also used for NPCs navigating the waynet.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](../index.md)
       {: .sp-class}
-    - [*oCMobLockable*](oCMobLockable.md)
+    - [*oCMobLockable*](index.md)
       {: .sp-class}
     - oCMobDoor
       {: .sp-class}
@@ -49,15 +49,15 @@ A VObject representing a door. This is also used for NPCs navigating the waynet.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](../index.md)
       {: .sp-class}
-    - [*oCMobLockable*](oCMobLockable.md)
+    - [*oCMobLockable*](index.md)
       {: .sp-class}
     - oCMobDoor
       {: .sp-class}
@@ -66,15 +66,15 @@ A VObject representing a door. This is also used for NPCs navigating the waynet.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](../index.md)
       {: .sp-class}
-    - [*oCMobLockable*](oCMobLockable.md)
+    - [*oCMobLockable*](index.md)
       {: .sp-class}
     - oCMobDoor
       {: .sp-class}

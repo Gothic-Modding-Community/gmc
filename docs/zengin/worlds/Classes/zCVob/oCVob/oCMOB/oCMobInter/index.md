@@ -18,11 +18,11 @@ Interactive objects can be interacted with by NPCs and the player. Every time th
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../index.md)
       {: .sp-class}
     - oCMobInter
       {: .sp-class}
@@ -41,11 +41,11 @@ Interactive objects can be interacted with by NPCs and the player. Every time th
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../index.md)
       {: .sp-class}
     - oCMobInter
       {: .sp-class}
@@ -64,11 +64,11 @@ Interactive objects can be interacted with by NPCs and the player. Every time th
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../index.md)
       {: .sp-class}
     - oCMobInter
       {: .sp-class}
@@ -87,11 +87,11 @@ Interactive objects can be interacted with by NPCs and the player. Every time th
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../index.md)
       {: .sp-class}
     - oCMobInter
       {: .sp-class}

@@ -18,7 +18,7 @@ has no relevance to other VObjects in the hierarchy.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobLevelCompo
       {: .sp-class}
@@ -27,7 +27,7 @@ has no relevance to other VObjects in the hierarchy.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobLevelCompo
       {: .sp-class}
@@ -36,7 +36,7 @@ has no relevance to other VObjects in the hierarchy.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobLevelCompo
       {: .sp-class}
@@ -45,7 +45,7 @@ has no relevance to other VObjects in the hierarchy.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobLevelCompo
       {: .sp-class}

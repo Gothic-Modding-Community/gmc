@@ -17,7 +17,7 @@
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCCamTrj_KeyFrame
       {: .sp-class}
@@ -52,7 +52,7 @@
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCCamTrj_KeyFrame
       {: .sp-class}
@@ -87,7 +87,7 @@
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCCamTrj_KeyFrame
       {: .sp-class}
@@ -122,7 +122,7 @@
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCCamTrj_KeyFrame
       {: .sp-class}

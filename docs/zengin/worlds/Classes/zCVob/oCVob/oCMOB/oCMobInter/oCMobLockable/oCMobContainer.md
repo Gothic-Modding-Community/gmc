@@ -16,15 +16,15 @@ An object which contains items.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](../index.md)
       {: .sp-class}
-    - [*oCMobLockable*](oCMobLockable.md)
+    - [*oCMobLockable*](index.md)
       {: .sp-class}
     - oCMobContainer
       {: .sp-class}
@@ -35,15 +35,15 @@ An object which contains items.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](../index.md)
       {: .sp-class}
-    - [*oCMobLockable*](oCMobLockable.md)
+    - [*oCMobLockable*](index.md)
       {: .sp-class}
     - oCMobContainer
       {: .sp-class}
@@ -54,15 +54,15 @@ An object which contains items.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](../index.md)
       {: .sp-class}
-    - [*oCMobLockable*](oCMobLockable.md)
+    - [*oCMobLockable*](index.md)
       {: .sp-class}
     - oCMobContainer
       {: .sp-class}
@@ -72,20 +72,20 @@ An object which contains items.
               {: .sp-string}
         - [NumOfEntries](#numofentries) = 0
           {: .sp-int}
-        - [oCItem](oCItem.md) ... = NULL
+        - [oCItem](../../../oCItem.md) ... = NULL
           {: .sp-class}
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../../../index.md)
       {: .sp-class}
-    - [oCVob](oCVob.md)
+    - [oCVob](../../../index.md)
       {: .sp-class}
-    - [oCMOB](oCMOB.md)
+    - [oCMOB](../../index.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - [oCMobInter](../index.md)
       {: .sp-class}
-    - [*oCMobLockable*](oCMobLockable.md)
+    - [*oCMobLockable*](index.md)
       {: .sp-class}
     - oCMobContainer
       {: .sp-class}
@@ -95,7 +95,7 @@ An object which contains items.
               {: .sp-string}
         - [NumOfEntries](#numofentries) = 0
           {: .sp-int}
-        - [oCItem](oCItem.md) ... = NULL
+        - [oCItem](../../../oCItem.md) ... = NULL
           {: .sp-class}
 
 ## Class member overview

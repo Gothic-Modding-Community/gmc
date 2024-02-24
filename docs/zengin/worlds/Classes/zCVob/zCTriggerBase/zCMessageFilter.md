@@ -18,9 +18,9 @@ in the [`triggerTarget`](index.md#triggertarget).
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCMessageFilter
       {: .sp-class}
@@ -31,9 +31,9 @@ in the [`triggerTarget`](index.md#triggertarget).
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCMessageFilter
       {: .sp-class}
@@ -44,9 +44,9 @@ in the [`triggerTarget`](index.md#triggertarget).
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCMessageFilter
       {: .sp-class}
@@ -57,9 +57,9 @@ in the [`triggerTarget`](index.md#triggertarget).
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCMessageFilter
       {: .sp-class}

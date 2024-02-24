@@ -26,9 +26,9 @@ and disabled by firing `OnEnable`, `OnDisable` and `OnToggleEnabled` events at t
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
     - zCTrigger
       {: .sp-class}
@@ -67,9 +67,9 @@ and disabled by firing `OnEnable`, `OnDisable` and `OnToggleEnabled` events at t
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
     - zCTrigger
       {: .sp-class}
@@ -108,9 +108,9 @@ and disabled by firing `OnEnable`, `OnDisable` and `OnToggleEnabled` events at t
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
     - zCTrigger
       {: .sp-class}
@@ -155,9 +155,9 @@ and disabled by firing `OnEnable`, `OnDisable` and `OnToggleEnabled` events at t
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
     - zCTrigger
       {: .sp-class}

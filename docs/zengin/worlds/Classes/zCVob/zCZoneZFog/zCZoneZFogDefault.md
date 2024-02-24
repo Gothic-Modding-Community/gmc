@@ -16,9 +16,9 @@ Its effect can be overridden using [zCZoneZFog](index.md) objects.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [zCZoneZFog](zCZoneZFog.md)
+    - [zCZoneZFog](index.md)
       {: .sp-class}
     - zCZoneZFogDefault
       {: .sp-class}
@@ -27,9 +27,9 @@ Its effect can be overridden using [zCZoneZFog](index.md) objects.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [zCZoneZFog](zCZoneZFog.md)
+    - [zCZoneZFog](index.md)
       {: .sp-class}
     - zCZoneZFogDefault
       {: .sp-class}
@@ -38,9 +38,9 @@ Its effect can be overridden using [zCZoneZFog](index.md) objects.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [zCZoneZFog](zCZoneZFog.md)
+    - [zCZoneZFog](index.md)
       {: .sp-class}
     - zCZoneZFogDefault
       {: .sp-class}
@@ -49,9 +49,9 @@ Its effect can be overridden using [zCZoneZFog](index.md) objects.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [zCZoneZFog](zCZoneZFog.md)
+    - [zCZoneZFog](index.md)
       {: .sp-class}
     - zCZoneZFogDefault
       {: .sp-class}

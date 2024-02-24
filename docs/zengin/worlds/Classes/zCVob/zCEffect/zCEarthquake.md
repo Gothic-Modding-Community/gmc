@@ -25,9 +25,9 @@ by a shaking camera.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCEarthquake
       {: .sp-class}
@@ -46,9 +46,9 @@ by a shaking camera.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCEarthquake
       {: .sp-class}

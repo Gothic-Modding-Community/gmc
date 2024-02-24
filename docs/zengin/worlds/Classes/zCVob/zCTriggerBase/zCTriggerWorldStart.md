@@ -16,9 +16,9 @@ world is loaded and started.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCTriggerWorldStart
       {: .sp-class}
@@ -27,9 +27,9 @@ world is loaded and started.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCTriggerWorldStart
       {: .sp-class}
@@ -38,9 +38,9 @@ world is loaded and started.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCTriggerWorldStart
       {: .sp-class}
@@ -49,9 +49,9 @@ world is loaded and started.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](index.md)
       {: .sp-class}
     - zCTriggerWorldStart
       {: .sp-class}

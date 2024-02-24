@@ -21,11 +21,11 @@ How the events are sent can be configured through [`listProcess`](#listprocess).
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
+    - [zCTrigger](index.md)
       {: .sp-class}
     - zCTriggerList
       {: .sp-class}
@@ -48,11 +48,11 @@ How the events are sent can be configured through [`listProcess`](#listprocess).
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
+    - [zCTrigger](index.md)
       {: .sp-class}
     - zCTriggerList
       {: .sp-class}
@@ -75,11 +75,11 @@ How the events are sent can be configured through [`listProcess`](#listprocess).
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
+    - [zCTrigger](index.md)
       {: .sp-class}
     - zCTriggerList
       {: .sp-class}
@@ -106,11 +106,11 @@ How the events are sent can be configured through [`listProcess`](#listprocess).
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [*zCTriggerBase*](zCTriggerBase.md)
+    - [*zCTriggerBase*](../index.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
+    - [zCTrigger](index.md)
       {: .sp-class}
     - zCTriggerList
       {: .sp-class}

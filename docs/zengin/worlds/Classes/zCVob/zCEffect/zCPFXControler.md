@@ -17,9 +17,9 @@ events.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCPFXController
       {: .sp-class}
@@ -32,9 +32,9 @@ events.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCPFXController
       {: .sp-class}
@@ -47,9 +47,9 @@ events.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCPFXController
       {: .sp-class}
@@ -62,9 +62,9 @@ events.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](../index.md)
       {: .sp-class}
-    - [*zCEffect*](zCEffect.md)
+    - [*zCEffect*](index.md)
       {: .sp-class}
     - zCPFXController
       {: .sp-class}

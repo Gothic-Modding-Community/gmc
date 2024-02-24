@@ -21,7 +21,7 @@ may be animated with different colors and ranges.
 
 === "Gothic 1"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobLight
       {: .sp-class}
@@ -62,7 +62,7 @@ may be animated with different colors and ranges.
 
 === "Gothic 2"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobLight
       {: .sp-class}
@@ -105,7 +105,7 @@ may be animated with different colors and ranges.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobLight
       {: .sp-class}
@@ -146,7 +146,7 @@ may be animated with different colors and ranges.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](zCVob.md)
+    - [zCVob](index.md)
       {: .sp-class}
     - zCVobLight
       {: .sp-class}
