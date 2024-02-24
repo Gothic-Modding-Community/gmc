@@ -19,7 +19,7 @@ for a cinematic feel to the game and other post-processing effects.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCVobScreenFX
       {: .sp-class}
@@ -30,7 +30,7 @@ for a cinematic feel to the game and other post-processing effects.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCVobScreenFX
       {: .sp-class}
@@ -41,7 +41,7 @@ for a cinematic feel to the game and other post-processing effects.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCVobScreenFX
       {: .sp-class}
@@ -52,7 +52,7 @@ for a cinematic feel to the game and other post-processing effects.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCVobScreenFX
       {: .sp-class}

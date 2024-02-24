@@ -18,7 +18,7 @@ A VObject which damages other VObjects colliding with it.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCTouchDamage
       {: .sp-class}
@@ -55,7 +55,7 @@ A VObject which damages other VObjects colliding with it.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCTouchDamage
       {: .sp-class}
@@ -92,7 +92,7 @@ A VObject which damages other VObjects colliding with it.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCTouchDamage
       {: .sp-class}
@@ -129,7 +129,7 @@ A VObject which damages other VObjects colliding with it.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCTouchDamage
       {: .sp-class}

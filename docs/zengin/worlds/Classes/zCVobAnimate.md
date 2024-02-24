@@ -21,7 +21,7 @@ and `OnUntrigger` events.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCVobAnimate
       {: .sp-class}
@@ -32,7 +32,7 @@ and `OnUntrigger` events.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCVobAnimate
       {: .sp-class}
@@ -43,7 +43,7 @@ and `OnUntrigger` events.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCVobAnimate
       {: .sp-class}
@@ -56,7 +56,7 @@ and `OnUntrigger` events.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCVobAnimate
       {: .sp-class}

@@ -15,7 +15,7 @@
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - [zCTouchDamage](zCTouchDamage.md)
       {: .sp-class}
@@ -28,6 +28,8 @@
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [*zCEffect*](zCEffect.md)
+      {: .sp-class}
     - [zCTouchDamage](zCTouchDamage.md)
       {: .sp-class}
     - oCTouchDamage
@@ -39,6 +41,8 @@
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [*zCEffect*](zCEffect.md)
+      {: .sp-class}
     - [zCTouchDamage](zCTouchDamage.md)
       {: .sp-class}
     - oCTouchDamage
@@ -49,6 +53,8 @@
 === "Gothic 2 (Save)"
 
     - [zCVob](zCVob.md)
+      {: .sp-class}
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - [zCTouchDamage](zCTouchDamage.md)
       {: .sp-class}

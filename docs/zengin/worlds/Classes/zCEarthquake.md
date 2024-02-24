@@ -27,7 +27,7 @@ by a shaking camera.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCEarthquake
       {: .sp-class}
@@ -48,7 +48,7 @@ by a shaking camera.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCEffect](zCEffect.md)
+    - [*zCEffect*](zCEffect.md)
       {: .sp-class}
     - zCEarthquake
       {: .sp-class}
