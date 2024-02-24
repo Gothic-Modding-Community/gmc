@@ -15,7 +15,7 @@ A VObject which defines the music to be played within its bounding box. Music zo
 music zone applies. If no music zone applies the music defined in the optional [`oCZoneMusicDefault`](oCZoneMusicDefault.md)
 is used.
 
-The name of the music theme to be played is defined by the [`vobName`](../index.md#vobname).
+The name of the music theme to be played is defined by the [`vobName`](../../index.md#vobname).
 
 !!! tip
     If the suffix `_NCI` or `_NCO` is added to the end of the zone name, it snows instead of rains in the zone.
@@ -24,7 +24,9 @@ The name of the music theme to be played is defined by the [`vobName`](../index.
 
 === "Gothic 1"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - oCZoneMusic
       {: .sp-class}
@@ -43,7 +45,9 @@ The name of the music theme to be played is defined by the [`vobName`](../index.
 
 === "Gothic 2"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - oCZoneMusic
       {: .sp-class}
@@ -62,7 +66,9 @@ The name of the music theme to be played is defined by the [`vobName`](../index.
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - oCZoneMusic
       {: .sp-class}
@@ -87,7 +93,9 @@ The name of the music theme to be played is defined by the [`vobName`](../index.
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - oCZoneMusic
       {: .sp-class}

@@ -16,7 +16,9 @@ volume-related options of the zone are ignored. There may only be one `oCZoneMus
 
 === "Gothic 1"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - [oCZoneMusic](index.md)
       {: .sp-class}
@@ -27,7 +29,9 @@ volume-related options of the zone are ignored. There may only be one `oCZoneMus
 
 === "Gothic 2"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - [oCZoneMusic](index.md)
       {: .sp-class}
@@ -38,7 +42,9 @@ volume-related options of the zone are ignored. There may only be one `oCZoneMus
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - [oCZoneMusic](index.md)
       {: .sp-class}
@@ -49,7 +55,9 @@ volume-related options of the zone are ignored. There may only be one `oCZoneMus
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - [oCZoneMusic](index.md)
       {: .sp-class}

@@ -17,7 +17,9 @@ objects in each world. Its effect can be overridden using [zCZoneVobFarPlane](in
 
 === "Gothic 1"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - [zCZoneVobFarPlane](index.md)
       {: .sp-class}
@@ -28,9 +30,9 @@ objects in each world. Its effect can be overridden using [zCZoneVobFarPlane](in
 
 === "Gothic 2"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
       {: .sp-class}
-    - [zCZoneVobFarPlane](index.md)
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - zCZoneVobFarPlane
       {: .sp-class}
@@ -39,7 +41,9 @@ objects in each world. Its effect can be overridden using [zCZoneVobFarPlane](in
 
 === "Gothic 1 (Save)"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - [zCZoneVobFarPlane](index.md)
       {: .sp-class}
@@ -50,7 +54,9 @@ objects in each world. Its effect can be overridden using [zCZoneVobFarPlane](in
 
 === "Gothic 2 (Save)"
 
-    - [zCVob](../index.md)
+    - [zCVob](../../index.md)
+      {: .sp-class}
+    - [*zCZone*](../index.md)
       {: .sp-class}
     - [zCZoneVobFarPlane](index.md)
       {: .sp-class}
