@@ -23,16 +23,12 @@ A VObject representing a door. This is also used for NPCs navigating the waynet.
       {: .sp-class}
     - [oCMobInter](oCMobInter.md)
       {: .sp-class}
-    - oCMobContainer
+    - [*oCMobLockable*](oCMobLockable.md)
       {: .sp-class}
-        - Lockable
-          {: .sp-folder}
-            - [locked](#locked) = FALSE
-              {: .sp-bool}
-            - [keyInstance](#keyinstance) = ""
-              {: .sp-string}
-            - [pickLockStr](#picklockstr) = ""
-              {: .sp-string}
+    - oCMobDoor
+      {: .sp-class}
+        - &lt;empty&gt;
+          {: .sp-empty}
 
 === "Gothic 2"
 
@@ -44,16 +40,12 @@ A VObject representing a door. This is also used for NPCs navigating the waynet.
       {: .sp-class}
     - [oCMobInter](oCMobInter.md)
       {: .sp-class}
-    - oCMobContainer
+    - [*oCMobLockable*](oCMobLockable.md)
       {: .sp-class}
-        - Lockable
-          {: .sp-folder}
-            - [locked](#locked) = FALSE
-              {: .sp-bool}
-            - [keyInstance](#keyinstance) = ""
-              {: .sp-string}
-            - [pickLockStr](#picklockstr) = ""
-              {: .sp-string}
+    - oCMobDoor
+      {: .sp-class}
+        - &lt;empty&gt;
+          {: .sp-empty}
 
 === "Gothic 1 (Save)"
 
@@ -65,16 +57,12 @@ A VObject representing a door. This is also used for NPCs navigating the waynet.
       {: .sp-class}
     - [oCMobInter](oCMobInter.md)
       {: .sp-class}
-    - oCMobContainer
+    - [*oCMobLockable*](oCMobLockable.md)
       {: .sp-class}
-        - Lockable
-          {: .sp-folder}
-            - [locked](#locked) = FALSE
-              {: .sp-bool}
-            - [keyInstance](#keyinstance) = ""
-              {: .sp-string}
-            - [pickLockStr](#picklockstr) = ""
-              {: .sp-string}
+    - oCMobDoor
+      {: .sp-class}
+        - &lt;empty&gt;
+          {: .sp-empty}
 
 === "Gothic 2 (Save)"
 
@@ -86,40 +74,9 @@ A VObject representing a door. This is also used for NPCs navigating the waynet.
       {: .sp-class}
     - [oCMobInter](oCMobInter.md)
       {: .sp-class}
-    - oCMobContainer
+    - [*oCMobLockable*](oCMobLockable.md)
       {: .sp-class}
-        - Lockable
-          {: .sp-folder}
-            - [locked](#locked) = FALSE
-              {: .sp-bool}
-            - [keyInstance](#keyinstance) = ""
-              {: .sp-string}
-            - [pickLockStr](#picklockstr) = ""
-              {: .sp-string}
-
-## Class member overview
-
-### `locked` {: .sp-bool}
-
-Determines whether the container is locked.
-
-**Accepted values:**
-
-* `TRUE` — The container is locked
-* `FALSE` — The container is not locked
-
-### `keyInstance` {: .sp-string}
-
-The name of the item script instance which unlocks the container.
-
-!!! tip
-    Only relevant if the container is locked.
-
-### `pickLockStr` {: .sp-string}
-
-The combination which unlocks this container when picking the lock. Each character of the string is either `R` or
-`L` where `R` stands for "Right" and `L` stands for "Left". If empty, the lock can not be picked.
-<br />Example: `LRRLLRL`.
-
-!!! tip
-    Only relevant if the container is locked.
+    - oCMobDoor
+      {: .sp-class}
+        - &lt;empty&gt;
+          {: .sp-empty}
