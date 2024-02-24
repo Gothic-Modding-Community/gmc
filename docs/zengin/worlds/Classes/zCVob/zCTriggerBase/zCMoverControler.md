@@ -10,9 +10,9 @@
     — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zcmovercontroler/1-1-0-528)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCMoverController/)
 
-A VObject used to control [`zCMover`](zCMover.md) objects of type `NSTATE_SINGLE_KEYS` specifically.
+A VObject used to control [`zCMover`](zCTrigger/zCMover.md) objects of type `NSTATE_SINGLE_KEYS` specifically.
 `zCMoverControler` objects react to incoming `OnTrigger` events to send a pre-configured event to the target mover
-object named by the [`triggerTarget`](zCTriggerBase.md#triggertarget) propery, controlling its animation. Mover
+object named by the [`triggerTarget`](index.md#triggertarget) propery, controlling its animation. Mover
 controllers can make movers go to a specific keyframe in their animation or just step one keyframe back and forth
 at a time.
 
@@ -74,7 +74,7 @@ at a time.
 
 ### `moverMessage` {: .sp-enum}
 
-The type of event to emit to the [`triggerTarget`](zCTriggerBase.md#triggertarget) when this controller receives an `OnTrigger` event.
+The type of event to emit to the [`triggerTarget`](index.md#triggertarget) when this controller receives an `OnTrigger` event.
 
 **Accepted values:**
 
@@ -87,7 +87,7 @@ The type of event to emit to the [`triggerTarget`](zCTriggerBase.md#triggertarge
 
 ### `gotoFixedKey` {: .sp-int}
 
-The keyframe of the mover referred to by [`triggerTarget`](zCTriggerBase.md#triggertarget) to move to.
+The keyframe of the mover referred to by [`triggerTarget`](index.md#triggertarget) to move to.
 
 !!! warning
     Only relevant if [`moverMessage`](#movermessage) is `GOTO_KEY_FIXED_DIRECTLY` or `GOTO_KEY_FIXED_ORDER`.

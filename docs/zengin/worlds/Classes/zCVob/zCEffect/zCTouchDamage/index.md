@@ -241,10 +241,10 @@ The type of collision detection to use for damage calculations.
 **Accepted values:**
 
 * `NONE` — Disable collision detection and thus damage application.
-* `BOX` — Scale the [`bbox3dws`](zCVob.md#bbox3dws) of the `zCTouchDamage` object by
+* `BOX` — Scale the [`bbox3dws`](../../index.md#bbox3dws) of the `zCTouchDamage` object by
   [`damageVolDownScale`](#damagevoldownscale) and use this new bounding box to calculate
   collisions with other VObjects
-* `POINT` — Scale the [`bbox3dws`](zCVob.md#bbox3dws) of the colliding object by
+* `POINT` — Scale the [`bbox3dws`](../../index.md#bbox3dws) of the colliding object by
   [`damageVolDownScale`](#damagevoldownscale) and only deal damage if it contains the center
   point of the `zCTouchDamage` object. If the `visual` of the `zCTouchDamage` object is a particle effect, 
   test against every particle instead.

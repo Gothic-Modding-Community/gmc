@@ -1,16 +1,17 @@
-# zCZoneZFogDefault
+# zCZoneVobFarPlaneDefault
 
 !!! abstract inline end "Quick Infos"
-    **Class Name:** `zCZoneZFogDefault`<br/>
+    **Class Name:** `zCZoneVobFarPlaneDefault`<br/>
     **Version Identifiers:**<br />
     — Gothic I: `12289`<br/>
     — Gothic II: `52224`<br/>
     **Sources:**<br/>
-    — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zczonezfogdefault/1-1-0-10)<br />
-    — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCZoneZFogDefault/)
+    — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zczonevobfarplanedefault/1-1-0-707)<br/>
+    — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCZoneVobFarPlaneDefault/)
 
-A VObject which defines the default fog for the entire world. There may only be one of these objects in each world.
-Its effect can be overridden using [zCZoneZFog](zCZoneZFog.md) objects.
+
+A VObject which defines the default loading range of VObjects in the entire world. There may only be one of these
+objects in each world. Its effect can be overridden using [zCZoneVobFarPlane](index.md) objects.
 
 ## Class members
 
@@ -18,9 +19,9 @@ Its effect can be overridden using [zCZoneZFog](zCZoneZFog.md) objects.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCZoneZFog](zCZoneZFog.md)
+    - [zCZoneVobFarPlane](zCZoneVobFarPlane.md)
       {: .sp-class}
-    - zCZoneZFogDefault
+    - zCZoneVobFarPlane
       {: .sp-class}
         - &lt;empty&gt;
           {: .sp-none}
@@ -29,9 +30,9 @@ Its effect can be overridden using [zCZoneZFog](zCZoneZFog.md) objects.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCZoneZFog](zCZoneZFog.md)
+    - [zCZoneVobFarPlane](zCZoneVobFarPlane.md)
       {: .sp-class}
-    - zCZoneZFogDefault
+    - zCZoneVobFarPlane
       {: .sp-class}
         - &lt;empty&gt;
           {: .sp-none}
@@ -40,9 +41,9 @@ Its effect can be overridden using [zCZoneZFog](zCZoneZFog.md) objects.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCZoneZFog](zCZoneZFog.md)
+    - [zCZoneVobFarPlane](zCZoneVobFarPlane.md)
       {: .sp-class}
-    - zCZoneZFogDefault
+    - zCZoneVobFarPlane
       {: .sp-class}
         - &lt;empty&gt;
           {: .sp-none}
@@ -51,9 +52,9 @@ Its effect can be overridden using [zCZoneZFog](zCZoneZFog.md) objects.
 
     - [zCVob](zCVob.md)
       {: .sp-class}
-    - [zCZoneZFog](zCZoneZFog.md)
+    - [zCZoneVobFarPlane](zCZoneVobFarPlane.md)
       {: .sp-class}
-    - zCZoneZFogDefault
+    - zCZoneVobFarPlane
       {: .sp-class}
         - &lt;empty&gt;
           {: .sp-none}

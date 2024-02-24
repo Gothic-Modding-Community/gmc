@@ -10,7 +10,7 @@
     — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zcvoblensflare/1-1-0-524)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCVobLensFlare/)
 
-Represents a lens flare effect. Behaves exactly like the base [`zCVob`](zCVob.md) but has a lens flare effect.
+Represents a lens flare effect. Behaves exactly like the base [`zCVob`](../index.md) but has a lens flare effect.
 
 ## Class members
 

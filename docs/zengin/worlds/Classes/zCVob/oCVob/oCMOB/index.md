@@ -197,7 +197,7 @@ The sound to play when the object is hit.
 
 ### `visualDestroyed` {: .sp-string}
 
-The name of the visual to use when the object is destroyed. Behaves like [zCVob.visual](zCVob.md#visual).
+The name of the visual to use when the object is destroyed. Behaves like [zCVob.visual](../../index.md#visual).
 
 ### `owner` {: .sp-string}
 

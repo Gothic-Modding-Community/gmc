@@ -10,10 +10,14 @@
     — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zcvob/1-1-0-467)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCVob/)
 
-Represents so-called virtual objects which appear in the game world. `zCVob` is the base class for all virtual objects which include everything from static models like boxes to interactive elements like doors and chests and invisible trigger objects.
+Represents so-called virtual objects which appear in the game world. `zCVob` is the base class for all virtual objects 
+which include everything from static models like boxes to interactive elements like doors and chests and invisible 
+trigger objects.
 
 ## Class members
-Properties of a zCVob class are split into two parts. The **Internals** are hardly ever needed to be edited manually, they are changed by e.g. moving an object in [Spacer](../spacer.md). On the other hand the **Vob** properties can only be changed by the Objects context menu in [Spacer](../spacer.md).
+Properties of a zCVob class are split into two parts. The **Internals** are hardly ever needed to be edited manually, 
+they are changed by e.g. moving an object in [Spacer](../../spacer.md). On the other hand the **Vob** properties can 
+only be changed by the Objects context menu in [Spacer](../../spacer.md).
 
 === "Gothic 1"
 
@@ -227,7 +231,7 @@ Coordinates of the object in world space relative to the center.
 !!! Note
     This refers to the center of coordinates of the `.3DS` file of the game world on which the `ZEN` file is built. 
 
-The coordinates are set automatically the first time an instance of the class is inserted into the game world. You can change them either directly by entering numerical values in the corresponding fields of the parameter, by [moving the vob](../spacer.md#viewport-controls) in spacer.
+The coordinates are set automatically the first time an instance of the class is inserted into the game world. You can change them either directly by entering numerical values in the corresponding fields of the parameter, by [moving the vob](../../spacer.md#viewport-controls) in spacer.
 
 ### `vobName` {: .sp-string}
 An identifier of a zCVob shown in the editor and sometimes used in scripts. The name can be left blank.

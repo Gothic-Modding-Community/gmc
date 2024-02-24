@@ -9,7 +9,7 @@
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCTriggerWorldStart/)
 
-A special trigger which fires an `OnTrigger` event to its [`triggerTarget`](zCTriggerBase.md#triggertarget) when the
+A special trigger which fires an `OnTrigger` event to its [`triggerTarget`](index.md#triggertarget) when the
 world is loaded and started.
 
 ## Class members

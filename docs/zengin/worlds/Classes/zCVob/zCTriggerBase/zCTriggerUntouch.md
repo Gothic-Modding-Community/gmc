@@ -1,18 +1,16 @@
-# oCCSTrigger
+# zCTriggerUntouch
 
 !!! abstract inline end "Quick Infos"
-    **Class Name:** `oCCSTrigger`<br/>
+    **Class Name:** `zCTriggerUntouch`<br/>
     **Version Identifiers:**<br />
-    — Gothic I: `24577`<br/>
-    — Gothic II: `24577`<br/>
+    — Gothic I: `52224`<br/>
+    — Gothic II: `52224`<br/>
     **Sources:**<br/>
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
-    — [gothic-library.ru](http://www.gothic-library.ru/publ/class_occstrigger/1-1-0-530)<br/>
-    — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/oCCSTrigger/)
+    — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCTriggerUntouch/)
 
-A special trigger VObject which can start a cutscene. The [`triggerTarget`](zCTrigger.md#triggertarget) must be the
-name of the cutscene (without the extension) to be started. For this to work, the cutscene must already be loaded.
-`OnUntrigger` events are ignored by `oCCSTrigger`s.
+A trigger which fires an `OnTrigger` event to its [`triggerTarget`](index.md#triggertarget) if any `OnUntouch`
+event is emitted from an inanimate object within the object's bounding box.
 
 ## Class members
 
@@ -22,9 +20,7 @@ name of the cutscene (without the extension) to be started. For this to work, th
       {: .sp-class}
     - [*zCTriggerBase*](zCTriggerBase.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
-      {: .sp-class}
-    - oCCSTrigger
+    - zCTriggerUntouch
       {: .sp-class}
         - &lt;empty&gt;
           {: .sp-none}
@@ -35,9 +31,7 @@ name of the cutscene (without the extension) to be started. For this to work, th
       {: .sp-class}
     - [*zCTriggerBase*](zCTriggerBase.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
-      {: .sp-class}
-    - oCCSTrigger
+    - zCTriggerUntouch
       {: .sp-class}
         - &lt;empty&gt;
           {: .sp-none}
@@ -48,9 +42,7 @@ name of the cutscene (without the extension) to be started. For this to work, th
       {: .sp-class}
     - [*zCTriggerBase*](zCTriggerBase.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
-      {: .sp-class}
-    - oCCSTrigger
+    - zCTriggerUntouch
       {: .sp-class}
         - &lt;empty&gt;
           {: .sp-none}
@@ -61,9 +53,7 @@ name of the cutscene (without the extension) to be started. For this to work, th
       {: .sp-class}
     - [*zCTriggerBase*](zCTriggerBase.md)
       {: .sp-class}
-    - [zCTrigger](zCTrigger.md)
-      {: .sp-class}
-    - oCCSTrigger
+    - zCTriggerUntouch
       {: .sp-class}
         - &lt;empty&gt;
           {: .sp-none}

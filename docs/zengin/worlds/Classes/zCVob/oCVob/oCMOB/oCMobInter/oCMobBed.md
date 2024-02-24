@@ -14,7 +14,7 @@
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/oCMobBed/)
 
 VObject marking beds for NPCs and the player to sleep on. In the original Gothic I, there is a bug which prevents
-`oCMobBed`s from working correctly, so it is recommended to instead use [`oCMobDoor`](oCMobDoor.md) and attach the
+`oCMobBed`s from working correctly, so it is recommended to instead use [`oCMobDoor`](oCMobLockable/oCMobDoor.md) and attach the
 visual of a bed when targeting that platform.
 
 ## Class members

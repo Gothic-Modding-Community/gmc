@@ -9,7 +9,7 @@
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/oCTriggerChangeLevel/)
 
-A special [`zCTrigger`](zCTrigger.md) which in addition to performing all other trigger actions also causes the engine
+A special [`zCTrigger`](index.md) which in addition to performing all other trigger actions also causes the engine
 to load another level when activated.
 
 ## Class members

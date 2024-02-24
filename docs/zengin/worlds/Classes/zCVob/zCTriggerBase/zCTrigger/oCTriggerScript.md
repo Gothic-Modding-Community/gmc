@@ -9,7 +9,7 @@
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/oCTriggerScript/)
 
-A special [`zCTrigger`](zCTrigger.md) which in addition to performing all other trigger actions also calls a script
+A special [`zCTrigger`](index.md) which in addition to performing all other trigger actions also calls a script
 function when the trigger is activated. `OnUntrigger` events do not result in the script function being called.
 
 ## Class members

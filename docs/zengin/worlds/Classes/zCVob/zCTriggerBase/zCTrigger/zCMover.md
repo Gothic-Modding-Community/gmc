@@ -24,9 +24,9 @@ their [`moverBehavior`](#moverbehavior) set to `NSTATE_SINGLE_KEYS` are an excep
 individually be addressed as a state.
 
 Movers are specialized triggers. Before beginning their animation, movers first filter the incoming events as per the
-[`zCTrigger`](zCTrigger.md)'s rules and only start the animation if the event passes through the filters. When the mover reaches
+[`zCTrigger`](index.md)'s rules and only start the animation if the event passes through the filters. When the mover reaches
 the "open" state after being activated, it emits an `OnTrigger` event according to the fire behavior set for the
-[`zCTrigger`](zCTrigger.md). Similarly, when it reaches the "closed" state it emits an `OnUntrigger` event.
+[`zCTrigger`](index.md). Similarly, when it reaches the "closed" state it emits an `OnUntrigger` event.
 
 Movers can be enabled and disabled using the `OnEnable`, `OnDisable` and `OnToggleDisabled` events.
 
@@ -292,7 +292,7 @@ Controls how the mover behaves in response to events ("activation").
   to the "closed" state after a fixed amount of time specified by [`stayOpenTimeSec`](#stayopentimesec).
 * `NSTATE_LOOP` —  The mover opens and closes in a loop indefinitely.
 * `NSTATE_SINGLE_KEYS` — The mover can transition to each keyframe separately. Often used in conjunction
-  with a [`zCMoverControler`](zCMoverControler.md).
+  with a [`zCMoverControler`](../zCMoverControler.md).
 
 ### `touchBlockerDamage` {: .sp-float}
 

@@ -12,7 +12,7 @@
 Transforms any incoming `OnTrigger` and `OnUntrigger` events before passing them on to the trigger target. All
 `OnTrigger` and `OnUntrigger` messages received by this `zCMessageFilter` VObject are transformed according to
 [`onTrigger`](#ontrigger) and [`onUntrigger`](#onuntrigger) and then passed on to the VObject with the name specified
-in the [`triggerTarget`](zCTriggerBase.md#triggertarget).
+in the [`triggerTarget`](index.md#triggertarget).
 
 ## Class members
 
