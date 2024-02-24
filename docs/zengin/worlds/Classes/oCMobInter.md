@@ -24,7 +24,7 @@ Interactive objects can be interacted with by NPCs and the player. Every time th
       {: .sp-class}
     - [oCMOB](oCMOB.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - oCMobInter
       {: .sp-class}
         - [stateNum](#statenum) = 0
           {: .sp-int}
@@ -47,7 +47,7 @@ Interactive objects can be interacted with by NPCs and the player. Every time th
       {: .sp-class}
     - [oCMOB](oCMOB.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - oCMobInter
       {: .sp-class}
         - [stateNum](#statenum) = 0
           {: .sp-int}
@@ -70,7 +70,7 @@ Interactive objects can be interacted with by NPCs and the player. Every time th
       {: .sp-class}
     - [oCMOB](oCMOB.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - oCMobInter
       {: .sp-class}
         - [stateNum](#statenum) = 0
           {: .sp-int}
@@ -93,7 +93,7 @@ Interactive objects can be interacted with by NPCs and the player. Every time th
       {: .sp-class}
     - [oCMOB](oCMOB.md)
       {: .sp-class}
-    - [oCMobInter](oCMobInter.md)
+    - oCMobInter
       {: .sp-class}
         - [stateNum](#statenum) = 0
           {: .sp-int}
