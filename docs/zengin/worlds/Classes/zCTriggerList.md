@@ -12,7 +12,7 @@
 
 A special trigger which emits the `OnTrigger` events emitted by the [`zCTrigger`](zCTrigger.md) to multiple targets.
 How the events are sent can be configured through [`listProcess`](#listprocess). The
-[`triggerTarget`](zCTrigger.md#triggertarget) and [`fireDelaySec`](zCTrigger.md#firedelaysec) properties of
+[`triggerTarget`](zCTriggerBase.md#triggertarget) and [`fireDelaySec`](zCTrigger.md#firedelaysec) properties of
 [`zCTrigger`](zCTrigger.md) should be ignored.
 
 `OnUntrigger` events sent to the trigger list are propagated to all targets in the list.
@@ -22,6 +22,8 @@ How the events are sent can be configured through [`listProcess`](#listprocess).
 === "Gothic 1"
 
     - [zCVob](zCVob.md)
+      {: .sp-class}
+    - [*zCTriggerBase*](zCTriggerBase.md)
       {: .sp-class}
     - [zCTrigger](zCTrigger.md)
       {: .sp-class}
@@ -48,6 +50,8 @@ How the events are sent can be configured through [`listProcess`](#listprocess).
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [*zCTriggerBase*](zCTriggerBase.md)
+      {: .sp-class}
     - [zCTrigger](zCTrigger.md)
       {: .sp-class}
     - zCTriggerList
@@ -72,6 +76,8 @@ How the events are sent can be configured through [`listProcess`](#listprocess).
 === "Gothic 1 (Save)"
 
     - [zCVob](zCVob.md)
+      {: .sp-class}
+    - [*zCTriggerBase*](zCTriggerBase.md)
       {: .sp-class}
     - [zCTrigger](zCTrigger.md)
       {: .sp-class}
@@ -101,6 +107,8 @@ How the events are sent can be configured through [`listProcess`](#listprocess).
 === "Gothic 2 (Save)"
 
     - [zCVob](zCVob.md)
+      {: .sp-class}
+    - [*zCTriggerBase*](zCTriggerBase.md)
       {: .sp-class}
     - [zCTrigger](zCTrigger.md)
       {: .sp-class}
@@ -142,11 +150,11 @@ Controls how events are sent to the targets.
 
 ### `triggerTarget` {: .sp-string}
 
-The name of the VObject to send events to. Behaves like [`zCTrigger.triggerTarget`](zCTrigger.md#triggertarget).
+The name of the VObject to send events to. Behaves like [`triggerTarget`](zCTriggerBase.md#triggertarget).
 
 ### `fireDelay` {: .sp-float}
 
-The delay after which to fire the event to the target. Behaves like [`zCTrigger.fireDelaySec`](zCTrigger.md#firedelaysec).
+The delay after which to fire the event to the target. Behaves like [`fireDelaySec`](zCTrigger.md#firedelaysec).
 
 ### `actTarget` {: .sp-int}
 

@@ -9,7 +9,8 @@
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCTriggerWorldStart/)
 
-A special trigger which fires an `OnTrigger` event to its [target](#triggertarget) when the world is loaded and started.
+A special trigger which fires an `OnTrigger` event to its [`triggerTarget`](zCTriggerBase.md#triggertarget) when the
+world is loaded and started.
 
 ## Class members
 
@@ -17,10 +18,10 @@ A special trigger which fires an `OnTrigger` event to its [target](#triggertarge
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [*zCTriggerBase*](zCTriggerBase.md)
+      {: .sp-class}
     - zCTriggerWorldStart
       {: .sp-class}
-        - [triggerTarget](#triggertarget) = ""
-          {: .sp-string}
         - [fireOnlyFirstTime](#fireonlyfirsttime) = FALSE
           {: .sp-bool}
 
@@ -28,10 +29,10 @@ A special trigger which fires an `OnTrigger` event to its [target](#triggertarge
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [*zCTriggerBase*](zCTriggerBase.md)
+      {: .sp-class}
     - zCTriggerWorldStart
       {: .sp-class}
-        - [triggerTarget](#triggertarget) = ""
-          {: .sp-string}
         - [fireOnlyFirstTime](#fireonlyfirsttime) = FALSE
           {: .sp-bool}
 
@@ -39,10 +40,10 @@ A special trigger which fires an `OnTrigger` event to its [target](#triggertarge
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [*zCTriggerBase*](zCTriggerBase.md)
+      {: .sp-class}
     - zCTriggerWorldStart
       {: .sp-class}
-        - [triggerTarget](#triggertarget) = ""
-          {: .sp-string}
         - [fireOnlyFirstTime](#fireonlyfirsttime) = FALSE
           {: .sp-bool}
 
@@ -50,18 +51,14 @@ A special trigger which fires an `OnTrigger` event to its [target](#triggertarge
 
     - [zCVob](zCVob.md)
       {: .sp-class}
+    - [*zCTriggerBase*](zCTriggerBase.md)
+      {: .sp-class}
     - zCTriggerWorldStart
       {: .sp-class}
-        - [triggerTarget](#triggertarget) = ""
-          {: .sp-string}
         - [fireOnlyFirstTime](#fireonlyfirsttime) = FALSE
           {: .sp-bool}
 
 ## Class member overview
-
-### `triggerTarget` {: .sp-string}
-
-The name of VObject to send an `OnTrigger` event to when the world is loaded and started.
 
 ### `fireOnlyFirstTime` {: .sp-bool}
 
