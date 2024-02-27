@@ -175,7 +175,7 @@ The classes used here all have one thing in common: there is a maximum of one ob
     Inserts a Vob with the visual `vis` at the waypoint `wp`. If the visual or waypoint does not exist, this is the behaviour this function undefined. 
 
     !!! Note
-        The inserted Vob is even an `oCMob`, so it can be given a focus name, for example. But you can treat it like a [`zCVob`](../../../../worlds/Classes/zCVob.md)), if you don't need the additional properties. 
+        The inserted Vob is even an `oCMob`, so it can be given a focus name, for example. But you can treat it like a [`zCVob`](../../../../worlds/Classes/zCVob/index.md)), if you don't need the additional properties. 
     ```dae
     func int MEM_InsertVob(var string vis, var string wp)
     ```
@@ -199,7 +199,7 @@ The classes used here all have one thing in common: there is a maximum of one ob
     **Parameters**
 
     - `#!dae var int vobPtr`   
-        Pointer to a [`zCVob`](../../../../worlds/Classes/zCVob.md) object to be deleted
+        Pointer to a [`zCVob`](../../../../worlds/Classes/zCVob/index.md) object to be deleted
 
 ### `MEM_RenameVob`
 !!! function "`MEM_RenameVob`"
@@ -212,7 +212,7 @@ The classes used here all have one thing in common: there is a maximum of one ob
     **Parameters**
 
     - `#!dae var int vobPtr`   
-        Pointer to a [`zCVob`](../../../../worlds/Classes/zCVob.md) object to be renamed
+        Pointer to a [`zCVob`](../../../../worlds/Classes/zCVob/index.md) object to be renamed
     - `#!dae var string newName`   
         The new Name of the Vob
 
@@ -227,7 +227,7 @@ The classes used here all have one thing in common: there is a maximum of one ob
         **Parameters**
 
         - `#!dae var int vobPtr`   
-            Pointer to a triggered [`zCVob`](../../../../worlds/Classes/zCVob.md)
+            Pointer to a triggered [`zCVob`](../../../../worlds/Classes/zCVob/index.md)
 
         !!! Danger
             If triggering the Vob has immediate effects (even before MEM_TriggerVob is exited), the name of the Vob is corrupted during this time. It is not advisable to rename, trigger again or destroy the object at this moment, the behavior in such cases is untested.
@@ -242,25 +242,25 @@ The classes used here all have one thing in common: there is a maximum of one ob
         **Parameters**
 
         - `#!dae var int vobPtr`   
-            Pointer to an untriggered [`zCVob`](../../../../worlds/Classes/zCVob.md)
+            Pointer to an untriggered [`zCVob`](../../../../worlds/Classes/zCVob/index.md)
 
         !!! Danger
             If untriggering the Vob has immediate effects (even before MEM_TriggerVob is exited), the name of the Vob is corrupted during this time. It is not advisable to rename, trigger again or destroy the object at this moment, the behavior in such cases is untested.
 
 ### `MEM_SearchVobByName`
 !!! function "`MEM_SearchVobByName`"
-    Returns the address of a [`zCVob`](../../../../worlds/Classes/zCVob.md) named `str` if such a Vob exists.
+    Returns the address of a [`zCVob`](../../../../worlds/Classes/zCVob/index.md) named `str` if such a Vob exists.
     ```dae
     func int MEM_SearchVobByName(var string str)
     ```
     **Parameters**
 
     - `#!dae var string str`   
-        Name of searched [`zCVob`](../../../../worlds/Classes/zCVob.md)
+        Name of searched [`zCVob`](../../../../worlds/Classes/zCVob/index.md)
 
     **Return value**
 
-    The function returns a pointer to the [`zCVob`](../../../../worlds/Classes/zCVob.md) if the object with the given name exist. `0` is returned otherwise.
+    The function returns a pointer to the [`zCVob`](../../../../worlds/Classes/zCVob/index.md) if the object with the given name exist. `0` is returned otherwise.
 
 ### `MEM_SearchAllVobsByName`
 !!! function "`MEM_SearchAllVobsByName`"
@@ -271,7 +271,7 @@ The classes used here all have one thing in common: there is a maximum of one ob
     **Parameters**
 
     - `#!dae var string str`   
-        Name of searched [`zCVob`](../../../../worlds/Classes/zCVob.md)
+        Name of searched [`zCVob`](../../../../worlds/Classes/zCVob/index.md)
 
     **Return value**
 
