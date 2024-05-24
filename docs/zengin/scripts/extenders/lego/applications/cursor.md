@@ -3,26 +3,25 @@ title: Cursor
 description: LeGo package implementing in-game mouse cursor support
 ---
 # Cursor
+
+!!! info inline end
+    **Dependencies:**<br/>
+    - [Floats](../../ikarus/floats.md)<br/>
+    - [FrameFunctions](../tools/frame_functions.md)<br/>
+    - [View](../tools/view.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: Cursor.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Cursor.d)
+
 This package implements Gothic in-game mouse cursor support. To visually display the cursor there is a `Cursor.tga` file in the resources, but the texture can be changed in [user constants](../various/userconstants.md#cursor-1).
 
 !!! Warning
     The cursor only works if the mouse is activated in the Gothic settings. It can be done directly from the scripts. See the [Ini file access](../../ikarus/functions/ini_access.md).
-
-    
-## Dependencies
-
-- [Floats](../../ikarus/floats.md)
-- [FrameFunctions](../tools/frame_functions.md)
-- [View](../tools/view.md)
 
 ## Initialization
 Initialize with `LeGo_Cursor` flag.
 ```dae
 LeGo_Init(LeGo_Cursor);
 ```
-
-## Implementation
-[:material-github: Cursor.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Cursor.d)
 
 ## Variables
 
@@ -51,26 +50,29 @@ LeGo_Init(LeGo_Cursor);
 ## Functions
 
 ### `Cursor_Hide`
-Hides the displayed mouse cursor.
-```dae
-func void Cursor_Hide()
-```
+!!! function "`Cursor_Hide`"
+    Hides the displayed mouse cursor.
+    ```dae
+    func void Cursor_Hide()
+    ```
 
 ### `Cursor_Show`
-Shows the mouse cursor.
-```dae
-func void Cursor_Show()
-```
+!!! function "`Cursor_Show`"
+    Shows the mouse cursor.
+    ```dae
+    func void Cursor_Show()
+    ```
 
 ### `SetMouseEnabled`
-Can manually enable or disable the mouse.
-```dae
-func void SetMouseEnabled(var int enabled)
-```
-**Parameters**
+!!! function "`SetMouseEnabled`"
+    Can manually enable or disable the mouse.
+    ```dae
+    func void SetMouseEnabled(var int enabled)
+    ```
+    **Parameters**
 
-- `#!dae var int enabled`  
-    `TRUE` - Mouse activated
+    - `#!dae var int enabled`  
+        `TRUE` - Mouse activated
 
 ## Examples
 

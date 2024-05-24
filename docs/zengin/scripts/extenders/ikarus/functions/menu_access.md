@@ -18,31 +18,31 @@ MEM_InitAll();
 ## Functions
 
 ### `MEM_GetMenuByString`
+!!! function "`MEM_GetMenuByString`"
+    ```dae
+    func int MEM_GetMenuByString(var string menuName)
+    ```
 
-```dae
-func int MEM_GetMenuByString(var string menuName)
-```
+    **Parameters**
 
-**Parameters**
+    - `#!dae var string menuName`  
+        Name of the Gothic menu e.g. `MENU_STATUS`
 
-- `#!dae var string menuName`  
-    Name of the Gothic menu e.g. `MENU_STATUS`
+    **Return value**
 
-**Return value**
-
-The function returns the address of the menu if a menu with this name exists, null otherwise.
+    The function returns the address of the menu if a menu with this name exists, null otherwise.
 
 ### `MEM_GetMenuItemByString`
+!!! function "`MEM_GetMenuItemByString`"
+    ```dae
+    func int MEM_GetMenuItemByString(var string menuItemName)
+    ```
 
-```dae
-func int MEM_GetMenuItemByString(var string menuItemName)
-```
+    **Parameters**
 
-**Parameters**
+    - `#!dae var string menuItemName`  
+        Name of the Gothic menu item e.g. `MENU_ITEM_PLAYERGUILD_TITLE`
 
-- `#!dae var string menuItemName`  
-    Name of the Gothic menu item e.g. `MENU_ITEM_PLAYERGUILD_TITLE`
+    **Return value**
 
-**Return value**
-
-The function returns the address of the menu item if a menu item with this name exists, null otherwise.
+    The function returns the address of the menu item if a menu item with this name exists, null otherwise.

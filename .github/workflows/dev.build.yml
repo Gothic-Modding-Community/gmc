@@ -21,6 +21,7 @@ jobs:
           # 0 is needed for the update time plugin to work properly
           fetch-depth: 0
       - name: Install Python
+        id: install-python
         uses: actions/setup-python@v5
         with:
           python-version: 3.12
@@ -30,7 +31,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: venv
-          key: requirements-${{ hashFiles('requirements*.txt') }}
+          key: requirements-${{ steps.install-python.outputs.python-version }}-${{ hashFiles('requirements*.txt') }}
       - name: Install Uncached Requirements
         if: steps.cache-requirements.outputs.cache-hit != 'true'
         run: |

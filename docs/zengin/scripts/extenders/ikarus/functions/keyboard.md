@@ -24,50 +24,53 @@ MEM_InitAll();
     Different players use different keys for specific actions! However, it is possible to get key assigned to the action from Gothic.ini. See [Ini access](ini_access.md#key-functions).
 
 ### `MEM_KeyPressed`
-Checks if the key is hold right at the moment of function call.
-```dae
-func int MEM_KeyPressed(var int key)
-```
-**Parameters**
+!!! function "`MEM_KeyPressed`"
+    Checks if the key is hold right at the moment of function call.
+    ```dae
+    func int MEM_KeyPressed(var int key)
+    ```
+    **Parameters**
 
-- `#!dae var int key`  
-    Checked key
+    - `#!dae var int key`  
+        Checked key
 
-**Return value**
+    **Return value**
 
-The function returns `TRUE` if the key is hold, `FALSE` is returned otherwise.
+    The function returns `TRUE` if the key is hold, `FALSE` is returned otherwise.
 
 ### `MEM_KeyState`
-Returns the state of the `key`.
-```dae
-func int MEM_KeyState(var int key)
-```
-**Parameters**
+!!! function "`MEM_KeyState`"
+    Returns the state of the `key`.
+    ```dae
+    func int MEM_KeyState(var int key)
+    ```
+    **Parameters**
 
-- `#!dae var int key`  
-    Checked key
+    - `#!dae var int key`  
+        Checked key
 
-**Return value**
+    **Return value**
 
-The function returns actual key state.
+    The function returns actual key state.
 
-**Key states**
+    **Key states**
 
-- `KEY_UP` - The key is not pressed and was not pressed before. ("not pressed")
-- `KEY_PRESSED` - The key is pressed and was not previously pressed. ("new pressed")
-- `KEY_HOLD` - The key is pressed and was also pressed before. ("still pressed")
-- `KEY_RELEASED` - The key is not pressed and was previously pressed. ("let go")
+    - `KEY_UP` - The key is not pressed and was not pressed before. ("not pressed")
+    - `KEY_PRESSED` - The key is pressed and was not previously pressed. ("new pressed")
+    - `KEY_HOLD` - The key is pressed and was also pressed before. ("still pressed")
+    - `KEY_RELEASED` - The key is not pressed and was previously pressed. ("let go")
 
-`KEY_PRESSED` or `KEY_RELEASED` will be returned if the state of the key has changed since the last query.
+    `KEY_PRESSED` or `KEY_RELEASED` will be returned if the state of the key has changed since the last query.
 
-`KEY_UP` or `KEY_HOLD` are returned if the state has not changed.
+    `KEY_UP` or `KEY_HOLD` are returned if the state has not changed.
 
 ### `MEM_InsertKeyEvent`
-Makes the game think that the key was pressed.
-```dae
-func void MEM_InsertKeyEvent(var int key)
-```
-**Parameters**
+!!! function "`MEM_InsertKeyEvent`"
+    Makes the game think that the key was pressed.
+    ```dae
+    func void MEM_InsertKeyEvent(var int key)
+    ```
+    **Parameters**
 
-- `#!dae var int key`  
-    Key to be "pressed"
+    - `#!dae var int key`  
+        Key to be "pressed"

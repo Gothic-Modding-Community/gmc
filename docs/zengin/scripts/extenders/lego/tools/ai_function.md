@@ -3,55 +3,59 @@ title: AI_Function
 description: LeGo package for enqueuing functions to NPC's AI queue
 ---
 # AI_Function
+
+!!! info inline end
+    **Dependencies:**<br/>
+    - [HookEngine](hook_engine.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: AI_Function.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/AI_Function.d)
+
 This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful in writing cutscenes on engine or implementing new routines.
-
-## Dependencies
-
-- [HookEngine](hook_engine.md)
 
 ## Initialization
 Initialize with `LeGo_AI_Function` flag.
 ```dae
 LeGo_Init(LeGo_AI_Function);
 ```
-## Implementation
-[:material-github: AI_Function.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/AI_Function.d)
 
 ## Functions
-The script function `function` is called with a delay: it joins the AI queue of `slf`.
-```dae
-func void AI_Function(var C_NPC slf, var func function)
-```
-**Parameters**
 
-- `#!dae var C_NPC slf`  
-    NPC in whose AI queue the function is queued
-- `#!dae var func function`  
-    Name of function to be queued
+### `AI_Function`
+!!! function "`AI_Function`"
+    The script function `function` is called with a delay: it joins the AI queue of `slf`.
+    ```dae
+    func void AI_Function(var C_NPC slf, var func function)
+    ```
+    **Parameters**
 
-Additionally, there are some overloads of `AI_Function`, which allow to call functions with parameters.
-```dae
-func void AI_Function_I  (var C_NPC slf, var func function, var int    param) {}; // Int
-func void AI_Function_N  (var C_NPC slf, var func function, var int    param) {}; // Instance (e.g. NPC)
-func void AI_Function_S  (var C_NPC slf, var func function, var string param) {}; // String
-func void AI_Function_II (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Int
-func void AI_Function_NN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Instance
-func void AI_Function_SS (var C_NPC slf, var func function, var string param1, var string param2) {}; // String, String
-func void AI_Function_IS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Int, String
-func void AI_Function_SI (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Int
-func void AI_Function_NS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Instance, String
-func void AI_Function_SN (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Instance
-func void AI_Function_IN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Instance
-func void AI_Function_NI (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Int
-```
-Functions with more than two parameters cannot be called, but parameters can be passed indirectly via global variables.
+    - `#!dae var C_NPC slf`  
+        NPC in whose AI queue the function is queued
+    - `#!dae var func function`  
+        Name of function to be queued
 
-In the called function, `self` can be accessed as follows:
-```dae
-var oCNpc slf; slf = _^(ECX);
-```
-!!! Info
-    From LeGo 2.7.2 the global instance `self` is provided correctly and can be used directly.
+    Additionally, there are some overloads of `AI_Function`, which allow to call functions with parameters.
+    ```dae
+    func void AI_Function_I  (var C_NPC slf, var func function, var int    param) {}; // Int
+    func void AI_Function_N  (var C_NPC slf, var func function, var int    param) {}; // Instance (e.g. NPC)
+    func void AI_Function_S  (var C_NPC slf, var func function, var string param) {}; // String
+    func void AI_Function_II (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Int
+    func void AI_Function_NN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Instance
+    func void AI_Function_SS (var C_NPC slf, var func function, var string param1, var string param2) {}; // String, String
+    func void AI_Function_IS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Int, String
+    func void AI_Function_SI (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Int
+    func void AI_Function_NS (var C_NPC slf, var func function, var int    param1, var string param2) {}; // Instance, String
+    func void AI_Function_SN (var C_NPC slf, var func function, var string param1, var int    param2) {}; // String, Instance
+    func void AI_Function_IN (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Int, Instance
+    func void AI_Function_NI (var C_NPC slf, var func function, var int    param1, var int    param2) {}; // Instance, Int
+    ```
+    Functions with more than two parameters cannot be called, but parameters can be passed indirectly via global variables.
+
+    In the called function, `self` can be accessed as follows:
+    ```dae
+    var oCNpc slf; slf = _^(ECX);
+    ```
+    !!! Info
+        From LeGo 2.7.2 the global instance `self` is provided correctly and can be used directly.
 
 ## Examples
 

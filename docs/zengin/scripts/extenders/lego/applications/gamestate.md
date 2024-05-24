@@ -3,42 +3,45 @@ title: Gamestate
 description: LeGo package for calling functions during different game states
 ---
 # Gamestate
-Gamestate package allows to check for different game states (game start, game load or level change).
 
-## Dependencies  
-- [EventHandler](../tools/event_handler.md)
-- [Saves](../applications/saves.md)
+!!! info inline end
+    **Dependencies:**<br/>
+    - [EventHandler](../tools/event_handler.md)<br/>
+    - [Saves](../applications/saves.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: Gamestate.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Gamestate.d)
+
+Gamestate package allows to check for different game states (game start, game load or level change).
 
 ## Initialization
 Initialize with `LeGo_Gamestate` flag.
 ```dae
 LeGo_Init(LeGo_Gamestate);
 ```
-## Implementation
-[:material-github: Gamestate.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Gamestate.d)
 
 ## Functions
 
 ### `Gamestate_AddListener`
-Adds a listener/handler to the game-state event.
-```dae
-func void Gamestate_AddListener(var func listener)
-```
-**Parameters**
+!!! function "`Gamestate_AddListener`"
+    Adds a listener/handler to the game-state event.
+    ```dae
+    func void Gamestate_AddListener(var func listener)
+    ```
+    **Parameters**
 
-- `#!dae var func listener`  
-    This function will be called on a game-state change. The current game-state is passed as a parameter.
-
+    - `#!dae var func listener`  
+        This function will be called on a game-state change. The current game-state is passed as a parameter.
 
 ### `Gamestate_RemoveListener`
-Removes game-state listener.
-```dae
-func void Gamestate_RemoveListener(var func listener)
-```
-**Parameters**
+!!! function "`Gamestate_RemoveListener`"
+    Removes game-state listener.
+    ```dae
+    func void Gamestate_RemoveListener(var func listener)
+    ```
+    **Parameters**
 
-- `#!dae var func listener`  
-    Listener function to be removed.
+    - `#!dae var func listener`  
+        Listener function to be removed.
 
 ## Examples
 There are now two possibilities. Everything can be done directly into the `Init_Global`, or with [EventHandler](../tools/event_handler.md).
