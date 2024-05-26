@@ -30,7 +30,7 @@ LeGo_Init(LeGo_Anim8);
 
     - `#!dae var int initialValue`  
         The initial value to start animating from. Can be an integer, or an Ikarus float.
-    - `var int IsFloat`  
+    - `#!dae var int IsFloat`  
         If the `initialValue` is an Ikarus float, this parameter must be set to `TRUE`. If it is an integer, it must be set to `FALSE`.
 
     **Return value**
