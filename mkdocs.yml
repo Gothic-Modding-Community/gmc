@@ -70,7 +70,16 @@ extra:
       link: https://github.com/Gothic-Modding-Community/gmc
       name: Gothic Modding Community GitHub repository
 
-
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
 
 markdown_extensions:
   - toc:
