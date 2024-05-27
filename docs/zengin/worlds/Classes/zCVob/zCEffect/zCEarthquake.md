@@ -35,9 +35,9 @@ by a shaking camera.
           {: .sp-folder}
             - [radius](#radius) = 200
               {: .sp-float}
-            - [timeSec](#timeSec) = 5
+            - [timeSec](#timesec) = 5
               {: .sp-float}
-            - [amplitudeCM](#amplitudeCM) = 0
+            - [amplitudeCM](#amplitudecm) = 0
               {: .sp-vec}
 
 === "Gothic 1 (Save)"
@@ -56,9 +56,9 @@ by a shaking camera.
           {: .sp-folder}
             - [radius](#radius) = 200
               {: .sp-float}
-            - [timeSec](#timeSec) = 5
+            - [timeSec](#timesec) = 5
               {: .sp-float}
-            - [amplitudeCM](#amplitudeCM) = 0
+            - [amplitudeCM](#amplitudecm) = 0
               {: .sp-vec}
 
 ## Class member overview

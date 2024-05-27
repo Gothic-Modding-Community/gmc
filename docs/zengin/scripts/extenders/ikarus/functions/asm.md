@@ -76,7 +76,7 @@ The ASM core functionality provides a framework for assembling machine code inst
 !!! function "`ASM_Open`"
     Changes the size of the memory allocated at the start o the dictation
 
-    The memory in which the machine code is stored is allocated at the beginning of the dictation. If this function isn't called a default size (see **Constant** below) is allocated by [`ASM`](#asm) or [`ASM_Here`](#ams_here) function. The 256 bytes is often sufficient for simple applications, but if more memory is required, this function must be called at the beginning of the dictation.
+    The memory in which the machine code is stored is allocated at the beginning of the dictation. If this function isn't called a default size (see **Constant** below) is allocated by [`ASM`](#asm) or [`ASM_Here`](#asm_here) function. The 256 bytes is often sufficient for simple applications, but if more memory is required, this function must be called at the beginning of the dictation.
     ```dae
     func void ASM_Open(var int space)
     ```

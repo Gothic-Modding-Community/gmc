@@ -21,7 +21,7 @@ The base class for many triggers.
       {: .sp-class}
     - zCTriggerBase
       {: .sp-class}
-        - [triggerTarget](#triggerTarget) = ""
+        - [triggerTarget](#triggertarget) = ""
           {: .sp-string}
 
 === "Gothic 2"
@@ -30,7 +30,7 @@ The base class for many triggers.
       {: .sp-class}
     - zCTriggerBase
       {: .sp-class}
-        - [triggerTarget](#triggerTarget) = ""
+        - [triggerTarget](#triggertarget) = ""
           {: .sp-string}
 
 === "Gothic 1 (Save)"
@@ -39,7 +39,7 @@ The base class for many triggers.
       {: .sp-class}
     - zCTriggerBase
       {: .sp-class}
-        - [triggerTarget](#triggerTarget) = ""
+        - [triggerTarget](#triggertarget) = ""
           {: .sp-string}
 
 === "Gothic 2 (Save)"
@@ -48,7 +48,7 @@ The base class for many triggers.
       {: .sp-class}
     - zCTriggerBase
       {: .sp-class}
-        - [triggerTarget](#triggerTarget) = ""
+        - [triggerTarget](#triggertarget) = ""
           {: .sp-string}
 
 ## Class member overview

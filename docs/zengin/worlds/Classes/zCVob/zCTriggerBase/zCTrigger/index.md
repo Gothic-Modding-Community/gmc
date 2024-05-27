@@ -13,10 +13,10 @@
 VObject to process and relay specific filtered events. When a `zCTrigger` receives an `OnTrigger`, `OnDamage`, or 
 `OnTouch` event it checks whether the event source (an `oCNpc`, the player or another VObject) should
 be acknowledged (see [`respondToNPC`](#respondtonpc), [`respondToPC`](#respondtopc) and
-[`respondToObject`](#respondToObject) respectively). It then verifies if it should react to the specific event by
+[`respondToObject`](#respondtoobject) respectively). It then verifies if it should react to the specific event by
 checking the [`reactToOnTrigger`](#reacttoontrigger), [`reactToOnDamage`](#reacttoondamage) and
 [`reactToOnTouch`](#reacttoontouch) properties. If both checks succeed, an `OnTrigger` event is sent to the
-[`triggerTarget`](#triggertarget) and the trigger is considered to be *activated*. `zCTrigger` objects can be enabled
+[`triggerTarget`](../index.md#triggertarget) and the trigger is considered to be *activated*. `zCTrigger` objects can be enabled
 and disabled by firing `OnEnable`, `OnDisable` and `OnToggleEnabled` events at them.
 
 !!! tip
@@ -210,8 +210,8 @@ Whether this trigger should react to `OnTrigger` events.
 
 **Accepted values:**
 
-* `TRUE` — Do react to `OnTrigger` events by sending an `OnTrigger` message to the [`triggerTarget`](#triggertarget)
-  If [`sendUntrigger`](#senduntrigger) is set to `TRUE`, also sends an `OnUntrigger` event to the [`triggerTarget`](#triggertarget)
+* `TRUE` — Do react to `OnTrigger` events by sending an `OnTrigger` message to the [`triggerTarget`](../index.md#triggertarget)
+  If [`sendUntrigger`](#senduntrigger) is set to `TRUE`, also sends an `OnUntrigger` event to the [`triggerTarget`](../index.md#triggertarget)
   if the trigger receives an `OnUntrigger` event.
 * `FALSE` — Ignore `OnTrigger` events.
 
@@ -221,8 +221,8 @@ Whether this trigger should react to `OnTouch` events.
 
 **Accepted values:**
 
-* `TRUE` — Do react to `OnTouch` events by sending an `OnTrigger` message to the [`triggerTarget`](#triggertarget)
-  If [`sendUntrigger`](#senduntrigger) is set to `TRUE`, also sends an `OnUntrigger` event to the [`triggerTarget`](#triggertarget)
+* `TRUE` — Do react to `OnTouch` events by sending an `OnTrigger` message to the [`triggerTarget`](../index.md#triggertarget)
+  If [`sendUntrigger`](#senduntrigger) is set to `TRUE`, also sends an `OnUntrigger` event to the [`triggerTarget`](../index.md#triggertarget)
   if the trigger receives an `OnUntouch` event.
 * `FALSE` — Ignore `OnTouch` events.
 
@@ -232,7 +232,7 @@ Whether this trigger should react to `OnDamage` events.
 
 **Accepted values:**
 
-* `TRUE` — Do react to `OnDamage` events by sending an `OnTrigger` message to the [`triggerTarget`](#triggertarget)
+* `TRUE` — Do react to `OnDamage` events by sending an `OnTrigger` message to the [`triggerTarget`](../index.md#triggertarget)
 * `FALSE` — Ignore `OnDamage` events.
 
 ### `respondToObject` {: .sp-bool}
@@ -298,7 +298,7 @@ The number of seconds to wait before emitting the `OnTrigger` event after proces
 
 ### `sendUntrigger` {: .sp-bool}
 
-Whether to send and `OnUntrigger` event to the [`triggerTarget`](#triggertarget) after the trigger receives an
+Whether to send and `OnUntrigger` event to the [`triggerTarget`](../index.md#triggertarget) after the trigger receives an
 `OnUntrigger` or `OnUntouch` event. Only fires the `OnUntrigger` event if [`reactToOnTrigger`](#reacttoontrigger)
 and [`reactToOnTouch`](#reacttoontouch) are set to `TRUE` respectively.
 

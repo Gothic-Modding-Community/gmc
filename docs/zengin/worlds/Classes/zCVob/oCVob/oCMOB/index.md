@@ -24,7 +24,7 @@ A VObject which can optionally be moved and/or carried.
       {: .sp-class}
         - MOB
           {: .sp-folder}
-            - [focusName](#focusName) = ""
+            - [focusName](#focusname) = ""
               {: .sp-string}
             - [hitpoints](#hitpoints) = 0
               {: .sp-int}
@@ -34,17 +34,17 @@ A VObject which can optionally be moved and/or carried.
               {: .sp-bool}
             - [takeable](#takeable) = FALSE
               {: .sp-bool}
-            - [focusOverride](#focusOverride) = FALSE
+            - [focusOverride](#focusoverride) = FALSE
               {: .sp-bool}
-            - [soundMaterial](#soundMaterial) = WOOD
+            - [soundMaterial](#soundmaterial) = WOOD
               {: .sp-enum}
-            - [visualDestroyed](#visualDestroyed) = ""
+            - [visualDestroyed](#visualdestroyed) = ""
               {: .sp-string}
             - [owner](#owner) = ""
               {: .sp-string}
-            - [ownerGuild](#ownerGuild) = ""
+            - [ownerGuild](#ownerguild) = ""
               {: .sp-string}
-        - [isDestroyed](#isDestroyed) = ""
+        - [isDestroyed](#isdestroyed) = ""
           {: .sp-bool}
 
 === "Gothic 2"
@@ -57,7 +57,7 @@ A VObject which can optionally be moved and/or carried.
       {: .sp-class}
         - MOB
           {: .sp-folder}
-            - [focusName](#focusName) = ""
+            - [focusName](#focusname) = ""
               {: .sp-string}
             - [hitpoints](#hitpoints) = 0
               {: .sp-int}
@@ -67,17 +67,17 @@ A VObject which can optionally be moved and/or carried.
               {: .sp-bool}
             - [takeable](#takeable) = FALSE
               {: .sp-bool}
-            - [focusOverride](#focusOverride) = FALSE
+            - [focusOverride](#focusoverride) = FALSE
               {: .sp-bool}
-            - [soundMaterial](#soundMaterial) = WOOD
+            - [soundMaterial](#soundmaterial) = WOOD
               {: .sp-enum}
-            - [visualDestroyed](#visualDestroyed) = ""
+            - [visualDestroyed](#visualdestroyed) = ""
               {: .sp-string}
             - [owner](#owner) = ""
               {: .sp-string}
-            - [ownerGuild](#ownerGuild) = ""
+            - [ownerGuild](#ownerguild) = ""
               {: .sp-string}
-        - [isDestroyed](#isDestroyed) = ""
+        - [isDestroyed](#isdestroyed) = ""
           {: .sp-bool}
 
 === "Gothic 1 (Save)"
@@ -90,7 +90,7 @@ A VObject which can optionally be moved and/or carried.
       {: .sp-class}
         - MOB
           {: .sp-folder}
-            - [focusName](#focusName) = ""
+            - [focusName](#focusname) = ""
               {: .sp-string}
             - [hitpoints](#hitpoints) = 0
               {: .sp-int}
@@ -100,17 +100,17 @@ A VObject which can optionally be moved and/or carried.
               {: .sp-bool}
             - [takeable](#takeable) = FALSE
               {: .sp-bool}
-            - [focusOverride](#focusOverride) = FALSE
+            - [focusOverride](#focusoverride) = FALSE
               {: .sp-bool}
-            - [soundMaterial](#soundMaterial) = WOOD
+            - [soundMaterial](#soundmaterial) = WOOD
               {: .sp-enum}
-            - [visualDestroyed](#visualDestroyed) = ""
+            - [visualDestroyed](#visualdestroyed) = ""
               {: .sp-string}
             - [owner](#owner) = ""
               {: .sp-string}
-            - [ownerGuild](#ownerGuild) = ""
+            - [ownerGuild](#ownerguild) = ""
               {: .sp-string}
-        - [isDestroyed](#isDestroyed) = ""
+        - [isDestroyed](#isdestroyed) = ""
           {: .sp-bool}
 
 === "Gothic 2 (Save)"
@@ -123,7 +123,7 @@ A VObject which can optionally be moved and/or carried.
       {: .sp-class}
         - MOB
           {: .sp-folder}
-            - [focusName](#focusName) = ""
+            - [focusName](#focusname) = ""
               {: .sp-string}
             - [hitpoints](#hitpoints) = 0
               {: .sp-int}
@@ -133,17 +133,17 @@ A VObject which can optionally be moved and/or carried.
               {: .sp-bool}
             - [takeable](#takeable) = FALSE
               {: .sp-bool}
-            - [focusOverride](#focusOverride) = FALSE
+            - [focusOverride](#focusoverride) = FALSE
               {: .sp-bool}
-            - [soundMaterial](#soundMaterial) = WOOD
+            - [soundMaterial](#soundmaterial) = WOOD
               {: .sp-enum}
-            - [visualDestroyed](#visualDestroyed) = ""
+            - [visualDestroyed](#visualdestroyed) = ""
               {: .sp-string}
             - [owner](#owner) = ""
               {: .sp-string}
-            - [ownerGuild](#ownerGuild) = ""
+            - [ownerGuild](#ownerguild) = ""
               {: .sp-string}
-        - [isDestroyed](#isDestroyed) = ""
+        - [isDestroyed](#isdestroyed) = ""
           {: .sp-bool}
 
 ## Class member overview

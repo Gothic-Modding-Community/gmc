@@ -72,7 +72,7 @@ in the [`triggerTarget`](index.md#triggertarget).
 
 ### `onTrigger` {: .sp-enum}
 
-The type of event to emit to the [`triggerTarget`](#triggertarget) if this VObject receives an `OnTrigger` message.
+The type of event to emit to the [`triggerTarget`](index.md#triggertarget) if this VObject receives an `OnTrigger` message.
 
 **Accepted values:**
 
@@ -85,7 +85,7 @@ The type of event to emit to the [`triggerTarget`](#triggertarget) if this VObje
 
 ### `onUntrigger` {: .sp-enum}
 
-The type of event to emit to the [`triggerTarget`](#triggertarget) if this VObject receives an `OnUntrigger` message.
+The type of event to emit to the [`triggerTarget`](index.md#triggertarget) if this VObject receives an `OnUntrigger` message.
 
 **Accepted values:**
 
