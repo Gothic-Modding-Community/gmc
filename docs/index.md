@@ -38,7 +38,7 @@ This GitHub page is designed to contain community maintained set of articles, tu
 
     ---
 
-    This site has a public repo hosted on GitHub.
+    Check out our GitHub repository for the site's source code and updates.
 
     [:octicons-arrow-right-24: GitHub](https://github.com/Gothic-Modding-Community/gmc/)
 
