@@ -40,7 +40,7 @@ This GitHub page is designed to contain community maintained set of articles, tu
 
     This site has a public repo hosted on GitHub.
 
-    [:octicons-arrow-right-24: GitHub](https://github.com/Silver-Ore-Team/zBassMusic)
+    [:octicons-arrow-right-24: GitHub](https://github.com/Gothic-Modding-Community/gmc/)
 
 
 </div>
