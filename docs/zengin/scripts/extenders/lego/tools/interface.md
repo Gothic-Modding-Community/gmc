@@ -600,7 +600,7 @@ LeGo_Init(LeGo_Interface | LeGo_PrintS);
 
 ### `PrintS`
 !!! function "`PrintS`"
-    Same function as the external `Print`, but with smooth animations. The effect can be changed as desired with the [user constants](../various/userconstants.md#prints).
+    Same function as the external `Print`, but with smooth animations. The effect can be changed as desired with the [user constants](../userconstants.md#prints).
     ```dae
     func void PrintS(var string txt)
     ```

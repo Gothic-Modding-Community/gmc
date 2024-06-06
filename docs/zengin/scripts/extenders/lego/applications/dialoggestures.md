@@ -25,7 +25,7 @@ N/A
     ```dae
     DIAG_Prefix + aniName + DIAG_Suffix + ((rand() % (max - (min - 1))) + min).ToString("00");
     ```
-    `DIAG_Prefix` and `DIAG_Suffix` are [user constants](../various/userconstants.md#dialoggestures).
+    `DIAG_Prefix` and `DIAG_Suffix` are [user constants](../userconstants.md#dialoggestures).
 
     ```dae
     func void DIAG(var string AniName, var int Min, var int Max)

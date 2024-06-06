@@ -156,7 +156,7 @@ LeGo_Init(LeGo_Anim8);
     - `#!dae var int span`  
         Action duration in milliseconds
     - `#!dae var int interpol`  
-        What form of movement is used (See [constants](../various/userconstants.md#anim8) for this)
+        What form of movement is used (See [constants](../userconstants.md#anim8) for this)
 
 ### `Anim8q`
 !!! function "`Anim8q`"
@@ -173,7 +173,7 @@ LeGo_Init(LeGo_Anim8);
     - `#!dae var int span`  
         Action duration in milliseconds
     - `#!dae var int interpol`  
-        What form of movement is used (See [constants](../various/userconstants.md#anim8) for this)
+        What form of movement is used (See [constants](../userconstants.md#anim8) for this)
 
 ### `Anim8_CallOnRemove`
 !!! function "`Anim8_CallOnRemove`"

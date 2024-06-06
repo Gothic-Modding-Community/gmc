@@ -12,7 +12,7 @@ description: LeGo package implementing in-game mouse cursor support
     **Implementation:**<br/>
     [:material-github: Cursor.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Cursor.d)
 
-This package implements Gothic in-game mouse cursor support. To visually display the cursor there is a `Cursor.tga` file in the resources, but the texture can be changed in [user constants](../various/userconstants.md#cursor_1).
+This package implements Gothic in-game mouse cursor support. To visually display the cursor there is a `Cursor.tga` file in the resources, but the texture can be changed in [user constants](../userconstants.md#cursor_1).
 
 !!! Warning
     The cursor only works if the mouse is activated in the Gothic settings. It can be done directly from the scripts. See the [Ini file access](../../ikarus/functions/ini_access.md).
@@ -160,4 +160,4 @@ func void MyCursorListener(var int state)
     };
 };
 ```
-Constants used in the example can be found in the [user constants](../various/userconstants.md#cursor).
+Constants used in the example can be found in the [user constants](../userconstants.md#cursor).

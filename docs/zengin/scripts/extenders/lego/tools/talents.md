@@ -15,7 +15,7 @@ The Talents package does two things:
 1. save any number of values for a specific NPC (effectively AIVar array extension).
 2. identify NPC by unique ID.
 
-Talents package uses one free AIVar variables, the default is AIVar with the index 89 that can be customized in `Userconst.d` the [`AIV_TALENT` constant](../various/userconstants.md#talents).
+Talents package uses one free AIVar variables, the default is AIVar with the index 89 that can be customized in `Userconst.d` the [`AIV_TALENT` constant](../userconstants.md#talents).
 
 ## Initialization
 Initialize with `LeGo_PermMem` flag.
