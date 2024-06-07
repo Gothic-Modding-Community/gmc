@@ -10,7 +10,7 @@ Silnik gry **ZenGin** jest używany w grach Gothic 1 i 2. Ta sekcja zawiera doku
 
     ZenGin używa własnego języka skryptowego o nazwie Daedalus. Sprawdź jego funkcje, klasy i extendery.
 
-    [:octicons-arrow-right-24: Scripts](scripts/index.md)
+    [:octicons-arrow-right-24: Skrypty](scripts/index.md)
 
 
 -  :fontawesome-solid-cube:{ .lg .middle } __Klasy Vob__
