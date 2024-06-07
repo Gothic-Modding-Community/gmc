@@ -17,6 +17,21 @@
     }
 }
 
+/* Fix position of the links in grid cards */
+.md-typeset .grid.cards > ul > li {
+    display: flex;
+    flex-direction: column;
+    /* outline: 1px solid green; */
+  }
+  .grid.cards li p:last-child {
+    display: flex;
+    flex-grow: 5; /* Probably 2 would be enough, as the grids shouldn't hold too much text to begin with, but to be safe I set it to 5 */
+    /* outline: 1px solid red;	 */
+  }
+  .grid.cards li p:last-child a {
+    align-self: flex-end;
+  }
+
 /* Stretch content area */
 .md-main__inner.md-grid {
     /* Default 61rem */
