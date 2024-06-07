@@ -35,7 +35,7 @@ The game engine **ZenGin** is used by Gothic 1 and 2. This section contains the 
 
     ---
 
-    Learn how to create plugins with Union SDK, a community software development kit for ZenGin.
+    Learn how to create plugins with Union SDK, a community-made software development kit for ZenGin.
 
     [:octicons-arrow-right-24: Getting Started](union/sdk/getting_started.md)
 </div>

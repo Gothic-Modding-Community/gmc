@@ -22,7 +22,7 @@ This GitHub page is designed to contain community maintained set of articles, tu
 
     Feel free to open a pull request with your article or propose changes. Here is detailed contribution guide.
 
-    [:octicons-arrow-right-24: How to Contibute](./contribute/index.md)
+    [:octicons-arrow-right-24: How to Contibute](contribute/index.md)
 
 -  :material-file-document:{ .lg .middle } __Gothic Archive__
 
