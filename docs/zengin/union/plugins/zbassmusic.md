@@ -4,7 +4,6 @@ zBassMusic is a modern music system for Gothic games based on ZenGin.
 It replaces the original DirectMusic system with a custom engine built on top
 of [BASS Library](https://www.un4seen.com/)
 to provide easier workflow for composers and additional functions for the perfect soundtrack design.
-The most important features include:
 
 !!! Info
     The plugin has its very own [docuentation site](https://silver-ore-team.github.io/zBassMusic/), if you are interested in including zBassMusic into your project see the detailed [User Guide](https://silver-ore-team.github.io/zBassMusic/user-guide/).
