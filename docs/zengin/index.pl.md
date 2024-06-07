@@ -28,7 +28,7 @@ Silnik gry **ZenGin** jest używany w grach Gothic 1 i 2. Ta sekcja zawiera doku
 
     Twórz nowe animacje i umieszczaj je w grze.
 
-    [:octicons-arrow-right-24: Animations](anims/index.md)
+    [:octicons-arrow-right-24: Animacje](anims/index.md)
 
 
 -  :material-code-block-tags:{ .lg .middle } __Union SDK__
@@ -37,5 +37,5 @@ Silnik gry **ZenGin** jest używany w grach Gothic 1 i 2. Ta sekcja zawiera doku
 
     Naucz się jak tworzyć pluginy za pomocą Union SDK, stworzonego przez fanów narzędzia deweloperskiego dla silnika ZenGin.
 
-    [:octicons-arrow-right-24: Getting Started](union/sdk/getting_started.md)
+    [:octicons-arrow-right-24: Pierwsze kroki](union/sdk/getting_started.md)
 </div>
