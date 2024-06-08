@@ -81,7 +81,10 @@ const INT TRANSITION_SUB_TYPE_MEASURE   = 3;    // Gradual transition
 ```
 
 ## Name features
-The musical themes of the game are played depending on the game situation. By default, the theme with the `_STD` (standard) suffix is played. In case of a threat, the `_THR` (threat) theme will be played. During the combat the `_FGT` (fight) theme plays. 
+The musical themes of the game are played depending on the game situation. By default, the theme with the `_STD` (standard) suffix is played. In case of a threat, the `_THR` (threat) theme will be played. During the combat the `_FGT` (fight) theme plays.
+
+!!! Danger
+    Make sure that you use proper naming convention for MusicThemes and [`oCZoneMusic`](../../worlds/Classes/zCVob/zCZone/oCZoneMusic/index.md) vobs. The theme with `OC_` prefix will play in a zone with name like `OLDCAMP_OC` or any other ending with `_OC`
 
 ```dae
 instance WOO_DAY_STD(C_MUSICTHEME_STANDARD)
