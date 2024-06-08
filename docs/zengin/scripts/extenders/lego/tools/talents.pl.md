@@ -15,7 +15,7 @@ Ten pakiet robi dwie rzeczy:
 1. Zapisuje dowolną liczbę wartości dla określonego NPC (efektywne rozszerzenie tablicy AIVar).
 2. Pozwala zidentyfikować NPC za pomocą unikalnego ID.
 
-Pakiet `Talents` używa jednego wolnego AIVara, domyślnie jest to AIVar z numerem 89, który można dostosować w `Userconst.d` [`AIV_TALENT`](../various/userconstants.md#talents).
+Pakiet `Talents` używa jednego wolnego AIVara, domyślnie jest to AIVar z numerem 89, który można dostosować w `Userconst.d` [`AIV_TALENT`](../userconstants.md#talents).
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_PermMem`.

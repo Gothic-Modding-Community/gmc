@@ -212,7 +212,7 @@ LeGo_Init(LeGo_Buttons);
 
 ### `Button_GetState`
 !!! function "`Button_GetState`"
-    Gets the status of the button as a bit field. See [User Constants](../various/userconstants.md#buttons).
+    Gets the status of the button as a bit field. See [User Constants](../userconstants.md#buttons).
     ```dae
     func int Button_GetState(var int hndl)
     ```
