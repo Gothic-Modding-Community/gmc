@@ -127,6 +127,11 @@ plugins:
       order: asc
       sort_type: natural
       order_by: title
+  - blog:
+      archive: false
+      post_url_format: "{categories}/{slug}"
+      categories_allowed:  # Case-sensitive
+        - GMC  # Posts about internal topics concerning the site or the Discord server.
   - mkdocs-video:
       css_style:
         width: "100%"
@@ -153,6 +158,7 @@ plugins:
           nav_translations:
             Afsp: AFSP
             Anims: Animations
+            Blog: Community Posts
             Contribute: How To Contribute
             Daedalus tools: Daedalus
             General info: General information
@@ -169,6 +175,7 @@ plugins:
           nav_translations:
             Anims: Animacje
             Applications: Zastosowania
+            Blog: Posty Społeczności
             Classes: Klasy
             Contribute: Jak Się Udzielić
             Examples: Przykłady

@@ -75,10 +75,17 @@
 }
 
 /* center the images */
-.md-content img {
+.md-content__inner img {
     display: block;
     margin: 1em auto;
     min-width: 75%;
+}
+
+/* enforce icon height for emojis in blog author profiles */
+/* fix margin that is incorrectly applied here */
+.md-post img {
+    height: 100%;
+    margin: unset;
 }
 
 /* Code in a list */
@@ -134,6 +141,11 @@ div.md-nav__link--index {
     font-weight: 700;
     color: var(--md-default-fg-color--light);
     text-shadow: 0 0 0 var(--md-default-fg-color--light);
+}
+
+/* fix headings for posts excerpts */
+.md-post :is(h1, h2, h3, h4, h5, h6) {
+    text-shadow: unset;
 }
 
 .md-typeset :is(h3, h4, h5, h6) {

@@ -20,6 +20,7 @@ Search Plugin (from the Material theme)
 
 MIT Licence 2023 Kamil Krzyśków (HRY)
 """
+
 import logging
 from copy import deepcopy
 from pathlib import Path
@@ -28,7 +29,9 @@ from typing import Optional
 from mkdocs import plugins
 from mkdocs.config import Config
 from mkdocs.config.defaults import MkDocsConfig
+from mkdocs.exceptions import PluginError
 from mkdocs.plugins import PrefixedLogger
+from mkdocs.structure.files import File, Files
 from mkdocs.utils import get_markdown_title
 from pygments import lexers
 from pymdownx import highlight
@@ -36,9 +39,13 @@ from pymdownx import highlight
 
 @plugins.event_priority(100)
 def on_config(config: MkDocsConfig) -> Optional[Config]:
+    global BLOG_URL_COLLISIONS
+    BLOG_URL_COLLISIONS = set()
+
     social_plugin = config.plugins.get("material/social") or config.plugins.get("social")
     i18n_plugin = config.plugins.get("i18n")
     redirects_plugin = config.plugins.get("redirects")
+    mkdocs_video_plugin = config.plugins.get("mkdocs-video")
 
     has_been_patched = hasattr(config.extra, "all_plugin_patch")
 
@@ -46,6 +53,9 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
     # as they are aware of multiple executions
     if i18n_plugin and redirects_plugin:
         process_i18n_redirects(has_been_patched, i18n_plugin, redirects_plugin)
+
+    if mkdocs_video_plugin:
+        allow_for_empty_html_mkdocs_video(mkdocs_video_plugin, config)
 
     # the rest of the patches only need to be applied once
     # as they aren't aware of multiple executions
@@ -66,6 +76,44 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
         process_i18n_nav_translations(i18n_plugin)
 
     return None
+
+
+@plugins.event_priority(-95)
+def _on_files_disconnect_blog_files(files: Files, config, *_, **__):
+    """Disconnect blog files before on_files from the i18n plugin runs (-100) after blog (-50)"""
+    global BLOG_FILES
+    BLOG_FILES = []
+    non_blog_files: list[File] = []
+    blog_prefixes = []
+
+    for name, instance in config.plugins.items():
+        if name.startswith("material/blog"):
+            blog_prefixes.append(instance.config.blog_dir)
+
+    blog_prefixes = tuple(map(lambda x: x.rstrip("/") + "/", blog_prefixes))
+
+    # i18n blog prefix awareness
+    config.extra.i18n_blog_prefixes = blog_prefixes
+
+    for file in files:
+        if file.src_uri.startswith(blog_prefixes):
+            BLOG_FILES.append(file)
+        else:
+            non_blog_files.append(file)
+
+    return non_blog_files
+
+
+@plugins.event_priority(-105)
+def _on_files_connect_blog_files(files, *_, **__):
+    """Breaking the convention of a maximal -100. Restore blog files after i18n on_files"""
+    for file in BLOG_FILES:
+        files.append(file)
+
+    return files
+
+
+on_files = plugins.CombinedEvent(_on_files_disconnect_blog_files, _on_files_connect_blog_files)
 
 
 @plugins.event_priority(100)
@@ -92,6 +140,15 @@ def on_env(env, config, **_):
 
 
 @plugins.event_priority(100)
+def on_post_page(output: str, page, config):
+
+    # The blog plugin doesn't do that
+    if page.url in BLOG_URL_COLLISIONS:
+        raise PluginError(f"{HOOK_NAME}: URL collision: {page.url}")
+
+    BLOG_URL_COLLISIONS.add(page.url)
+
+@plugins.event_priority(100)
 def on_post_build(config) -> None:
     has_been_patched = hasattr(config.extra, "all_plugin_patch")
     if has_been_patched:
@@ -108,7 +165,7 @@ def on_post_build(config) -> None:
 
 
 class Mock:
-    ...
+    pass
 
 
 def patch_social_font_crash(func):
@@ -152,6 +209,34 @@ def patch_lexers_cache(func):
         return lexer
 
     return wrap_get_lexer_by_name
+
+
+def allow_for_empty_html_mkdocs_video(plugin, config):
+    """
+    To keep the blog page clean the index file needs to be empty. This causes an error,
+    therefore we need to make sure it is handled properly.
+    """
+
+    def on_page_content_wrapper(func):
+
+        if func.__name__ == "wrapper":
+            return func
+
+        LOG.info("Fixing mkdocs-video empty html crash")
+
+        def wrapper(html, page, config, files):
+            if not html.strip():
+                return html
+            return func(html, page, config, files)
+
+        return wrapper
+
+    for i, event in enumerate(config.plugins.events["page_content"]):
+        if not hasattr(event, "__self__"):
+            continue
+        if event.__self__.__class__ is plugin.__class__:
+            config.plugins.events["page_content"][i] = on_page_content_wrapper(event)
+            break
 
 
 def process_i18n_redirects(has_been_patched, i18n_plugin, redirects_plugin):
@@ -270,7 +355,16 @@ def patch_search_entry_title(func):
     return wrap_create_entry_for_section
 
 
-CUSTOM_DIR_PATH = "overrides"
+BLOG_FILES: Optional[list[File]] = None
+"""
+List of files that belong to a blog they will be temporarily removed and added back to hide them 
+from the i18n plugin.
+"""
+
+BLOG_URL_COLLISIONS: Optional[set[str]] = None
+"""The blog plugin doesn't check for url collisions, so we do it in the patch"""
+
+CUSTOM_DIR_PATH: str = "overrides"
 """A relative path to the custom directory based from the `docs_dir` parent directory."""
 
 HOOK_NAME: str = "all_plugin_patch"
