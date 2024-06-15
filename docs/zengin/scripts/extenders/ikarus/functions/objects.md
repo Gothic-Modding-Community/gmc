@@ -1,4 +1,7 @@
-# zCObjects
+---
+title: "zCObjects"
+---
+# Ikarus `zCObject` manipulation functions
 
 Set of functions for working with `zCObject` and its subclasses instances.
 
