@@ -125,21 +125,21 @@ Sound accompaniment of the material. Must be specified to produce the correct so
 - `SNOW` - Snow.
 
 ### `color` {: .sp-color}
-Texture replacement color in RGBA format. The color the polygon will be painted in until the texture is applied.
+Texture replacement color in RGBA format. Polygon is in this color until engine applies the texture.
 
 ### `smoothAngle` {: .sp-float}
 Defines the angle of material smoothing between two faces.
 
 ### `texture` {: .sp-string}
-Defines the name of the texture file used for the material. Also determines by file name whether the texture is animated or static. An animated texture is recognized by its file name.
+Defines the name of the texture file used for the material, which also determines whether the texture is animated or static.
 
-To create animated textures, add a prefix to the file name `_A0`, e.g., `NW_Fire_A0.TGA`, `NW_Fire_A1.TGA` etc. The texture `NW_Fire_A0.TGA` is the first frame. The game engine will automatically search your hard drive for remaining animation files.
+To create animated textures, add a suffix to the file name `_A0`, e.g., `NW_Fire_A0.TGA`, `NW_Fire_A1.TGA` etc. The texture `NW_Fire_A0.TGA` is the first frame. The game engine will automatically search your hard drive for remaining animation files.
 
 ### `texScale` {: .sp-string}
-Scaling along the x and y axes. Assigning the necessary texture coordinates to polygons.
+Defines the scaling along the X and Y axes. Assigns the necessary texture coordinates to polygons.
 
 ### `texAniFPS` {: .sp-float}
-If the texture is animated (`NAME_A0.*`), then the speed of texture animation is indicated here.
+Defines the FPS (frames per seconds) of texture animation, but only if the texture is animated (`NAME_A0.*`).
 
 ### `texAniMapMode` {: .sp-enum}
 Texture animation mode.
@@ -150,18 +150,21 @@ Texture animation mode.
 - `LINEAR` - Linear texture animation.
 
 ### `texAniMapDir` {: .sp-string}
-The direction of movement and speed of movement of animated textures by polygons. The Accepted values should be significantly lower than 1 (For example 0.00005). The animation is only enabled when [`texAniMapMode`](#texanimapmode) is set to `LINEAR` mode.
+Defines the direction and movement speed of animated textures. The values should be significantly lower than 1 (For example 0.00005). 
+
+!!! Danger
+    The animation movement is only enabled when [`texAniMapMode`](#texanimapmode) is set to `LINEAR` mode.
 
 ### `noCollDet` {: .sp-bool}
-Handling collisions with dynamic objects. In other words, whether the character will be able to pass through this texture or not.
+Defines if collision detection is disabled.
 
 **Accepted values:**
 
-- `TRUE` - Passes through.
-- `FALSE` - Does not pass.
+- `TRUE` - Collisions disabled.
+- `FALSE` - Collisions enabled.
 
 ### `noLightmap` {: .sp-bool}
-Light map enable/disable switch.
+Defines if light map is disabled.
 
 **Accepted values:**
 
@@ -180,10 +183,10 @@ If you activate this option, the texture will not degrade when the camera moves 
     To prevent the texture from being distorted, you can cancel the creation of a MipMap. It is advisable to use for small objects.
 
 ### `detailObject` {: .sp-string}
-An option that allows you to complement the material with a different texture.
+An option that allows you to complement the material with an additional texture.
 
 ### `detailObjectScale` {: .sp-float}
-Tiling the overlay image selected in the [`detailObject`](#detailobject) property.
+Tiling of the overlay image selected in the [`detailObject`](#detailobject) property.
 
 !!! Warning
     This option is only available in Gothic II (Spacer2).
@@ -200,7 +203,7 @@ No information provided.
     This option is only available in Gothic II (Spacer2).
 
 ### `environmentalMapping` {: .sp-bool}
-Environment reflection mode, creating glare.
+Environment mapping mode. Creates glare on the texture.
 
 **Accepted values:**
 
@@ -211,7 +214,7 @@ Environment reflection mode, creating glare.
     This option is only available in Gothic II (Spacer2).
 
 ### `environmentalMappingStrength` {: .sp-float}
-The amount of reflection of the environment.
+The strength of environmental reflection on a model.
 
 !!! Warning
     This option is only available in Gothic II (Spacer2).
@@ -258,7 +261,7 @@ Wave mesh size.
     This option is only available in Gothic II (Spacer2).
 
 ### `ignoreSunLight` {: .sp-bool}
-Ignoring sunlight. In effect, the material will no longer support shadows.
+Defines if the material ignores sunlight (doesn't cast shadows).
 
 **Accepted values:**
 
@@ -269,7 +272,7 @@ Ignoring sunlight. In effect, the material will no longer support shadows.
     This option is only available in Gothic II (Spacer2).
 
 ### `alphaFunc` {: .sp-bool}
-Alpha channel calculation function.
+Alpha channel blending function.
 
 **Accepted values:**
 
