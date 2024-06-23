@@ -105,15 +105,26 @@ def _on_files_disconnect_blog_files(files: Files, config, *_, **__):
 
 
 @plugins.event_priority(-105)
-def _on_files_connect_blog_files(files, *_, **__):
+def _on_files_connect_blog_files(files: Files, *_, **__):
     """Breaking the convention of a maximal -100. Restore blog files after i18n on_files"""
     for file in BLOG_FILES:
         files.append(file)
 
     return files
 
+@plugins.event_priority(100)
+def _on_files_disconnect_zengin(files: Files, config, *_, **__):
+    faster_files = []
 
-on_files = plugins.CombinedEvent(_on_files_disconnect_blog_files, _on_files_connect_blog_files)
+    for file in files:
+        if file.src_uri.startswith("zengin"):
+            continue
+        else:
+            faster_files.append(file)
+
+    return Files(faster_files)
+
+on_files = plugins.CombinedEvent(_on_files_disconnect_zengin, _on_files_disconnect_blog_files, _on_files_connect_blog_files)
 
 
 @plugins.event_priority(100)

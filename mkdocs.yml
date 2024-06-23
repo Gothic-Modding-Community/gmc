@@ -130,8 +130,20 @@ plugins:
   - blog:
       archive: false
       post_url_format: "{categories}/{slug}"
+      post_excerpt_max_categories: 4  # Default 5
       categories_allowed:  # Case-sensitive
-        - GMC  # Posts about internal topics concerning the site or the Discord server.
+        - Animation    # Posts about creating animations.
+        - Analysis     # Posts about deep dives into certain topics.
+        - 3D           # Posts about 3d modeling etc.
+        - General      # Posts about topics that don't fit other categories.
+        - Genome       # Posts about the Genome engine.
+        - GMC          # Posts about internal topics concerning the site or the Discord server.
+        - Programming  # Posts about scripting in any language.
+        - Sound        # Posts about sound related topics.
+        - Tutorial     # Posts with the intention to teach others.
+        - Tool         # Post with the intention to show a tool.
+        - Union        # Posts about Union SDK or Plugins.
+        - ZenGin       # Posts about the ZenGin engine.
   - mkdocs-video:
       css_style:
         width: "100%"
@@ -222,3 +234,5 @@ plugins:
       redirect_maps: {}
   - social:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+  - tags:
+      tags_file: blog/tags.md

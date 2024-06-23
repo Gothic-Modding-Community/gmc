@@ -2,12 +2,17 @@
 date: 2024-06-09
 authors:
   - kamilkrzyskow 
+  - kamilkrzyskow
 categories:
   - GMC
+tags:
+  - MkDocs
+  - Meta
 ---
 # Introducing Community Posts
 
-> Made possible thanks to the built-in Blog plugin of Material for MkDocs.
+> Made possible thanks to the built-in Blog plugin of Material for MkDocs.  
+> [![Material for MkDocs][badge]{: .normalImgStyling}](#usage)
 
 This is a blog-like section of GMC, where users can post their tutorials, guides, analytical 
 articles, useful snippets, promote their modding tools etc.  
@@ -15,6 +20,8 @@ articles, useful snippets, promote their modding tools etc.
 Basically this should allow for more flexibility when it comes to content creation on the website.
 
 <!-- more -->
+
+[badge]: https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white
 
 ## Why a blog?
 
@@ -43,3 +50,5 @@ internal code of the Blog plugin, and as it updates together with the theme, peo
 localization could end up blocked from updating and this would create a rather bad situation where 
 @ultrabug has to constantly make fixes. Add to it different versions of the Blog plugin for the
 Community and Insiders version
+
+## Comments

@@ -75,7 +75,7 @@
 }
 
 /* center the images */
-.md-content__inner img {
+.md-content__inner img:not(.normalImgStyling) {
     display: block;
     margin: 1em auto;
     min-width: 75%;
