@@ -17,7 +17,7 @@ Here are some tips for working with Gothic textures:
 When working with textures in ZenGin, it is recommended to use the default texture format if you are unsure about other options. Many of the other formats are either unsupported or buggy in gothic. For transparency, `DXT3` format should be used. For pure RGB colors, `DXT1` format is recommended.
 
 !!! Tip
-    Formats like `rgba8888`, `bgra8888`, `argb8888` and `abgr8888` are properly supported with the zSurface32 patch. It is advised to use `bgra8888` due to performance reasons, as other colorspaces require additional conversion at runtime. 
+    Formats like `RGBA8888`, `BGRA8888`, `ARGB8888` and `ABGR8888` are properly supported with the zSurface32 patch. Learn more about it in the [32 Bit texture support](./32bit_texture.md) article.
 
 By default, `.tga` files with a proper resolution are converted to `.TEX` files by the engine, when they appear in the game or a game is started with `-convertall` parameter. Also, you can convert textures to `.TEX` manually using one of the [available tools](#tools).
 
