@@ -22,7 +22,12 @@ When you specify the `Filename` the VDFS will load the volume and display some i
 
 ![Viewer](../../../assets/images/vdfs_viewer2.png){ style="width:500px;"} 
 
-**Comment** is an information about loaded volume left by the author and **Timestamp** is a date and time set by the author. Usually the date coincides with the actual date of the volume's build, but it cannot be taken for granted as it can be easily changed.
+**Comment** is an information about loaded volume left by the author.
+
+**Timestamp** is a date and time set by the author. Usually the date coincides with the actual date of the volume's build, but it cannot be taken for granted as it can be easily changed.
+
+!!! Tip
+    The timestamp defines order of loading volumes into the game. Volumes with the latest timestamp are loaded first.
 
 At the bottom there are three different options for extracting files from archive:
 
@@ -30,12 +35,12 @@ At the bottom there are three different options for extracting files from archiv
 2. Extract Directory - extract only selected folder
 3. Extract Selected - extract currently selected files
 
-In addition, you can choose if files should keep their stucture after extraction or get extracted directly to the Root Path.
+In addition, you can choose if files should keep their structure after extraction or get extracted directly to the Root Path.
 
 ### Builder
 The second working area is the Builder. It allows you to create new VDF archives.
 
-Thats how initial builder looks like:
+That's how initial builder looks like:
 
 ![Builder](../../../assets/images/vdfs_builder1.png){ style="width:500px;"} 
 
@@ -61,7 +66,7 @@ Example build configuration could look like this:
 ![Builder](../../../assets/images/vdfs_builder2.png){ style="width:500px;"}
 
 ## CLI Interface
-CLI interface is very simple and allows to build and extract VDF archives without GUI. Thats good for automation and scripting.
+CLI interface is very simple and allows building and extracting VDF archives without GUI. That's good for automation and scripting.
 
 ### Build VDF from script 
 ```shell
@@ -80,15 +85,15 @@ GothicVDFS uses simple script language to define VDF archives. The script is a s
 
 Marks the start of script and contains VDF properties.
 
-#### `Comment=`
+#### `Comment`
 
-Comment of VDF achive. Equivalent of "Comment" from GUI.
+Comment of VDF archive. Equivalent of "Comment" from GUI.
 
-#### `BaseDir=`
+#### `BaseDir`
 
 Root path of local files (relative to working directory). Equivalent of "Root Path" from GUI.
 
-#### `VDFName=`
+#### `VDFName`
 
 Name of final VDF file (relative to working directory). Equivalent of "Filename" from GUI.
 
