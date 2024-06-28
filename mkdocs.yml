@@ -129,21 +129,24 @@ plugins:
       order_by: title
   - blog:
       archive: false
-      post_url_format: "{categories}/{slug}"
-      post_excerpt_max_categories: 4  # Default 5
       categories_allowed:  # Case-sensitive
-        - Animation    # Posts about creating animations.
-        - Analysis     # Posts about deep dives into certain topics.
-        - 3D           # Posts about 3d modeling etc.
-        - General      # Posts about topics that don't fit other categories.
-        - Genome       # Posts about the Genome engine.
-        - GMC          # Posts about internal topics concerning the site or the Discord server.
-        - Programming  # Posts about scripting in any language.
-        - Sound        # Posts about sound related topics.
-        - Tutorial     # Posts with the intention to teach others.
-        - Tool         # Post with the intention to show a tool.
-        - Union        # Posts about Union SDK or Plugins.
-        - ZenGin       # Posts about the ZenGin engine.
+        # Primary level categories for the URLs
+        - Analysis         # Posts about deep dives into certain topics.
+        - Community News   # Posts about updates in the Gothic Modding Community.
+        - Devlogs          # Posts about stories from mod development.
+        - Off-Topic        # Posts about topics that don't fit other categories, e.g., WebDev.
+        - Showcase         # Posts about tools, workflows etc.
+        - Tutorials        # Posts including guides or follow-along tutorials.
+        # Secondary level categories for better granularity.
+        - Assets           # Posts about 2D, 3D, Sound or other non-code file assets.
+        - Genome           # Posts about Genome engine.
+        - Scripts          # Posts about internal built-in scripting like Daedalus.
+        - SDK              # Posts about external development kits like Union.
+        - Tools            # Posts about tools.
+        - Workflows        # Posts about workflows.
+        - ZenGin           # Posts about ZenGin engine.
+      post_excerpt_max_categories: 3  # Default 5
+      post_url_format: "{categories}/{slug}"  # Default {date}/{slug}
   - mkdocs-video:
       css_style:
         width: "100%"

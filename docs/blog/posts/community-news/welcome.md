@@ -1,18 +1,18 @@
 ---
-date: 2024-06-09
 authors:
-  - kamilkrzyskow 
   - kamilkrzyskow
+date: 2024-07-02
 categories:
-  - GMC
+  - Community News
 tags:
+  - Documentation
+  - i18n
   - MkDocs
-  - Meta
 ---
 # Introducing Community Posts
 
 > Made possible thanks to the built-in Blog plugin of Material for MkDocs.  
-> [![Material for MkDocs][badge]{: .normalImgStyling}](#usage)
+> [![Material for MkDocs][badge]{: .gmc-default-img}][mkdocs-material]
 
 This is a blog-like section of GMC, where users can post their tutorials, guides, analytical 
 articles, useful snippets, promote their modding tools etc.  
@@ -22,6 +22,7 @@ Basically this should allow for more flexibility when it comes to content creati
 <!-- more -->
 
 [badge]: https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white
+[mkdocs-material]: https://squidfunk.github.io/mkdocs-material/
 
 ## Why a blog?
 
