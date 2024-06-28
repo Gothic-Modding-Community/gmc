@@ -45,7 +45,7 @@
           {: .sp-bool}
         - [lodDontCollapse](#loddontcollapse) = FALSE
           {: .sp-bool}
-        - [detailObject](#detailObject) = ""
+        - [detailObject](#detailobject) = ""
           {: .sp-string}
 
 === "Gothic 2"

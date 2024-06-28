@@ -2,12 +2,12 @@
 
 The plugin for a dubbing creators. And not only.
 
-Union plugin by [Top Layer](worldofplayers.ru/members/107921/), which gives possibility to extract dialogues from compiled scripts simply by putting `zSplitDialogs.vdf` file into `Data\` directory and run the game. You can configure, that already dubbed subtitles will be outputed.
+Union plugin by [Top Layer](https://worldofplayers.ru/members/107921/), which gives possibility to extract dialogues from compiled scripts simply by putting `zSplitDialogs.vdf` file into `Data\` directory and run the game. You can configure, that already dubbed subtitles will be outputed.
 
 The output is the `Dialogs\` directory with `.txt` files with a structure as follow:
 
 ??? example "Example of a plugin output"
-    ![zSpy](../../assets/images/zSplitDialogs.png)
+    ![zSpy](../../assets/images/zsplitdialogs.png)
 
 
 ## [Download](https://drive.google.com/file/d/1v3t0_Oyynf8LPyYa46G4cu5NSDLX5Ds1/view)

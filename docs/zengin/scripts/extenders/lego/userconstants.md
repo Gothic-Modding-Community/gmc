@@ -9,7 +9,7 @@ All constants that the user can either use or even change freely are defined in 
 These constants may only be used, not changed.
 
 ### Anim8
-These constants are used by [Anim8](../applications/anim8.md#anim8_1) and [Anim8q](../applications/anim8.md#anim8q).
+These constants are used by [Anim8](applications/anim8.md#anim8_1) and [Anim8q](applications/anim8.md#anim8q).
 
 - `#!dae const int A8_Constant`  
     Constant movement speed
@@ -58,7 +58,7 @@ The following bit masks can be applied to the status of a button:
 - `#!dae const int COL_Yellow`
 
 ### Gamestate
-[Gamestate](../applications/gamestate.md) can assume these values:
+[Gamestate](applications/gamestate.md) can assume these values:
 
 - `#!dae const int Gamestate_NewGame`  
     New game started
