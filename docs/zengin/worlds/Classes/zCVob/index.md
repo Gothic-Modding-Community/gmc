@@ -258,8 +258,8 @@ Indicates whether this object should display its visual.
 
 **Accepted values:**
 
-- **TRUE** - Display.
-- **FALSE** - Do not display.
+- `TRUE` - Display.
+- `FALSE` - Do not display.
 
 
 ### `visualCamAlign` {: .sp-enum}
@@ -267,9 +267,9 @@ Option to align objects relative to the camera.
 
 **Accepted values:**
 
-- **NONE** - Not used.
-- **YAW** - The object always faces the player.
-- **FULL** - The object is aligned relative to the world axes.
+- `NONE` - Not used.
+- `YAW` - The object always faces the player.
+- `FULL` - The object is aligned relative to the world axes.
 
 !!! Note
     This may be used with grass or flowers which only consist of a 2-dimensional sprite to have it always face the camera.
@@ -279,9 +279,9 @@ Wind simulation option. Used in conjunction with the [visualAniModeStrength](#vi
 
 **Accepted values:**
 
-- **NONE** - Not used.
-- **WIND** - Strong wind effect. Acceptable for herbs.
-- **WIND2** - Light wind effect. Acceptable for trees.
+- `NONE` - Not used.
+- `WIND` - Strong wind effect. Acceptable for herbs.
+- `WIND2` - Light wind effect. Acceptable for trees.
 
 !!! Warning
     This option is only available in Gothic II (Spacer2).
@@ -307,19 +307,19 @@ Determines if the virtual object will collide with the static objects (world mes
 
 **Accepted values:**
 
-- TRUE - Collide with static objects.
-- FALSE - Don't collide static objects.
+- `TRUE` - Collide with static objects.
+- `FALSE` - Don't collide static objects.
 
 !!! Tip    
-    A situation often arises when objects “refuse” to move beyond a certain point on the surface. This happens when **cdStatic** is set to **TRUE**, i.e. the object cannot cross the surface another static object. In this case, it is enough to disable the **cdStatic** parameter for the duration of the move, and turn it on again after the move.
+    A situation often arises when objects “refuse” to move beyond a certain point on the surface. This happens when **cdStatic** is set to `TRUE`, i.e. the object cannot cross the surface another static object. In this case, it is enough to disable the **cdStatic** parameter for the duration of the move, and turn it on again after the move.
 
 ### `cdDyn` {: .sp-bool}
 Determines if the virtual object will collide with dynamic objects (NPCs, items, etc.). This basically determines if the object has collision during gameplay.
 
 **Accepted values:**
 
-- **TRUE** - Collide with dynamic objects.
-- **FALSE** - Don't collide with dynamic objects.
+- `TRUE` - Collide with dynamic objects.
+- `FALSE` - Don't collide with dynamic objects.
 
 
 ### `staticVob` {: .sp-bool}
@@ -327,8 +327,8 @@ Determines if the VOB is taken into consideration in static lighting calculation
 
 **Accepted values:**
 
-- **TRUE** - Calculate the shadow of the object.
-- **FALSE** - Do not calculate the shadow of the object.
+- `TRUE` - Calculate the shadow of the object.
+- `FALSE` - Do not calculate the shadow of the object.
 
 !!! Note
     The shadow is calculated when compiling light in Low, Middle or High mode.
@@ -338,8 +338,8 @@ Indicates whether the object will cast a shadow when affected by dynamic light (
 
 **Accepted values:**
 
-- **DS_NONE** - No shadow.
-- **DS_BLOB** - Casts a circular shadow.
+- `DS_NONE` - No shadow.
+- `DS_BLOB` - Casts a circular shadow.
 
 ### `zbias` {: .sp-int}
 The depth-bias for this virtual object.
