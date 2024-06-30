@@ -124,7 +124,7 @@ def _on_files_disconnect_zengin(files: Files, config, *_, **__):
 
     return Files(faster_files)
 
-on_files = plugins.CombinedEvent(_on_files_disconnect_zengin, _on_files_disconnect_blog_files, _on_files_connect_blog_files)
+on_files = plugins.CombinedEvent(_on_files_disconnect_blog_files, _on_files_connect_blog_files)
 
 
 @plugins.event_priority(100)
