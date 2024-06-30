@@ -243,7 +243,7 @@ plugins:
   - tags:
       tags_file: blog/tags.md
   - rss:
-      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, True]
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       categories:
         - tags
         - categories
