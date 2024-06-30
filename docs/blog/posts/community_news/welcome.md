@@ -60,7 +60,7 @@ Especially since our community is still primarily composed of English speakers.
 We don't plan to restrict posts too much. As long as they are not meme content, they will likely be 
 accepted. For up-to-date guidelines, you can read the [how-to guide].
 
-[how to guide]: ../tutorials/how_to_write_blog_posts.md
+[how-to guide]: ../tutorials/how_to_write_blog_posts.md
 
 ## Comments
 
