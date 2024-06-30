@@ -8,3 +8,4 @@ mkdocs-static-i18n==1.2.3
 git+https://github.com/kamilkrzyskow/gothic-lexer.git@b5ee7868a7e7397cd129ff1f847daa7d39c0e416#egg=gothic_lexer
 mkdocs-awesome-pages-plugin==2.9.2
 mkdocs-git-authors-plugin==0.9.0
+mkdocs-rss-plugin==1.14.0

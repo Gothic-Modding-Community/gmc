@@ -69,6 +69,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Gothic-Modding-Community/gmc
       name: Gothic Modding Community GitHub repository
+    - icon: material/rss
+      link: /feed_rss_updated.xml
+      name: Subscribe to our RSS Feed
 
 validation:
   nav:
@@ -239,3 +242,14 @@ plugins:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
   - tags:
       tags_file: blog/tags.md
+  - rss:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, True]
+      categories:
+        - tags
+        - categories
+      comments_path: "#__comments"
+      json_feed_enabled: false
+      match_path: "blog.posts..*"  # regex, dots as dir separators to support Linux and Windows
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
