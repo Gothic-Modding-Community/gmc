@@ -248,8 +248,8 @@ plugins:
         - tags
         - categories
       comments_path: "#__comments"
-      json_feed_enabled: false
-      match_path: "blog.posts..*"  # regex, dots as dir separators to support Linux and Windows
       date_from_meta:
         as_creation: date.created
         as_update: date.updated
+      json_feed_enabled: false
+      match_path: "blog.posts..*"  # regex, dots as dir separators to support Linux and Windows
