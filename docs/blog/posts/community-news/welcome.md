@@ -11,13 +11,13 @@ tags:
 ---
 # Introducing Community Posts
 
-> Made possible thanks to the built-in Blog plugin of Material for MkDocs.  
+> Enabled by the built-in Blog plugin of Material for MkDocs.  
 > [![Material for MkDocs][badge]{: .gmc-default-img}][mkdocs-material]
 
-This is a blog-like section of GMC, where users can post their tutorials, guides, analytical 
-articles, useful snippets, promote their modding tools etc.  
+Welcome to the new blog section of the GMC, where users can share tutorials, guides, analytical 
+articles, useful snippets, promote their modding tools, and more.
 
-Basically this should allow for more flexibility when it comes to content creation on the website.
+This addition brings greater flexibility to content creation on our website.
 
 <!-- more -->
 
@@ -26,30 +26,42 @@ Basically this should allow for more flexibility when it comes to content creati
 
 ## Why a blog?
 
-Many times over the span of running Gothic Modding Community one issue has resurfaced over and over
-again. The issue concerns the fact that some pages don't fit the "docs" idea. Therefore, a new 
-section was required. At first, we wanted to just put everything into a plain new area, but the Blog
-plugin was supposed to be released to the Community version of the Material theme, so we pushed back
-the idea and waited for that to happen, but while waiting for it, we started supporting i18n 
-localization, in hopes of getting new users for both translation and content creation, but after
-a year has passed no new members have become regular contributors. Also the GitHub/PayPal fiasco
-took place which pushed back the release of the Blog plugin to the public to use.
+Throughout the history of the Gothic Modding Community, we've encountered a recurring issue: some 
+content doesn't fit neatly into the "docs" format. To address this, we needed a new section. 
+Initially, we considered a simple new area, but then the Blog plugin was announced for the Community
+version of the Material theme. We decided to wait for its release.
 
-Finally, the Blog plugin arrived in the Community version, but then it turned out that the 
-mkdocs-static-i18n plugin unfortunately can't handle the internally generated blog pages of the Blog
-plugin. So we waited a bit longer, in hopes of the situation resolving itself via some nifty fix. 
-Unfortunately, nothing did change, and the initial issue kept resurfacing. 
+While waiting, we added support for i18n localization to attract new users for translation and 
+content creation. However, despite our efforts, we didn't gain many regular contributors. 
+Additionally, delays caused by the GitHub/PayPal issues further postponed the Blog plugin's release.
+
+The Blog plugin eventually arrived in the Community version. Unfortunately, we discovered that the 
+mkdocs-static-i18n plugin couldn't handle the internally generated blog pages. We hoped for a fix
+upstream, but the issue persisted.
 
 ## i18n support
 
 !!! failure "Not supported"
-    As of the day of writing this post (2024-06-09) the i18n plugin doesn't support blog pages.
+    As of July 02, 2024, the i18n plugin doesn't support blog pages.
 
-Given the skill of the developer maintaining the i18n plugin ([@ultrabug]()) I don't think this is an
-easy issue to solve, as it would get solved already. The solution probably requires overriding 
-internal code of the Blog plugin, and as it updates together with the theme, people using it with 
-localization could end up blocked from updating and this would create a rather bad situation where 
-@ultrabug has to constantly make fixes. Add to it different versions of the Blog plugin for the
-Community and Insiders version
+Given the complexity of this issue, it likely requires overriding the Blog plugin's internal code. 
+This could prevent users with localization from updating, creating a problematic situation for 
+[@ultrabug], who would need to constantly make fixes. The issue is further complicated by different 
+versions of the Blog plugin for the Community and Insiders editions.
+
+This applies to us as well. Despite many fixes and patches added to our docs on top of other 
+plugins, we don't plan to add i18n support for the blog ourselves to maintain general flexibility. 
+Especially since our community is still primarily composed of English speakers.
+
+[@ultrabug]: https://github.com/ultrabug/
+
+## Who can add posts, what topics are allowed?
+
+We don't plan to restrict posts too much. As long as they are not meme content, they will likely be 
+accepted. For up-to-date guidelines, you can read the [how-to guide].
+
+[how to guide]: ../tutorials/how_to_write_blog_posts.md
 
 ## Comments
+
+Let us know what do you think about the new feature!

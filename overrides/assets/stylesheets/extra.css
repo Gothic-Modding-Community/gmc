@@ -83,7 +83,7 @@
 
 /* enforce icon height for emojis in blog author profiles */
 /* fix margin that is incorrectly applied here */
-.md-post__authors .md-author img {
+.md-content__inner .md-author img {
     height: 100%;
     margin: unset;
 }

@@ -7,7 +7,7 @@ date: 2024-07-01
 tags:
   - Best Practices
   - Documentation
-  - How To
+  - How-To
   - MkDocs
 ---
 # Guidelines For Community Posts
@@ -45,10 +45,20 @@ categories:
 
 ## Mandatory opinionated requirements
 
-### Keep the posts and assets organized
+### Use categories defined in the mkdocs.yml config
+
+Some categories can be used for slugs, some don't, if you want to add a new on with your post please
+ask first. To read an up-to-date list check the `categories_allowed` option in the `mkdocs.yml` 
+file. If you want more granularity, please use [tags], which allow for more leeway. You can check 
+currently used tags [here][current-tags].
+
+[tags]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
+[current-tags]: ../../tags.md
+
+### Keep the files organized
 
 Put posts under the `blog/posts` directory into a subdirectory matching the category `slug`, so 
-lowercase and with `-` in place of spaces:
+lowercase and with `_` in place of spaces:
 
 > The filenames should use `_` for spaces, and should be lowercase.
 
@@ -97,9 +107,25 @@ limit, which is a bit narrow. As of the time of writing this post the CSS settin
 the content is roughly ~140 characters, which is a bit wide. This Markdown file uses a 100-character
 limit. Keep things reasonable and use the same width throughout the file. 
 
+### Use alternative link definitions
+
+To add to the previous point, when using the normal Markdown link definitions like `[text](url)` you
+will run into problems with too long lines. To mitigate that, define links before the next heading
+using this syntax: `[text]: url`. Then you can organically use the `[text]` in your parahraph and it
+will be converted to an URL.
+
 ### Don't be lazy when a name conflict occurs
 
 If there isn't any better alternative you can add a lazy `-2` at the end of the name, but for better
 search-ability your name should be distinct in some way. For example an image with a success message
 `result.png` can be quite common, so prepend a slug `blender_modifier_result.png` or the slug of the
 blog post you're writing.
+
+### Add a H2 Comments heading at the bottom
+
+This will add an TOC element for users to easily skip the post and read the comments. The RSS plugin
+also expects that this heading exists.
+
+## Comments
+
+Let us know what you think about those restrictions!

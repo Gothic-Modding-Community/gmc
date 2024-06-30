@@ -69,8 +69,8 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Gothic-Modding-Community/gmc
       name: Gothic Modding Community GitHub repository
-    - icon: material/rss
-      link: /feed_rss_updated.xml
+    - icon: simple/rss
+      link: /gmc/feed_rss_updated.xml
       name: Subscribe to our RSS Feed
 
 validation:
@@ -224,6 +224,7 @@ plugins:
         - preferences*.md
         - genome/index*.md
         - zengin/index*.md
+        - blog/posts/**/*.md
   - git-authors:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       show_email_address: false
@@ -235,6 +236,17 @@ plugins:
         - preferences*.md
         - genome/index*.md
         - zengin/index*.md
+        - blog/posts/**/*.md
+  - git-committers:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      repository: Gothic-Modding-Community/gmc
+      branch: dev
+      exclude:
+        - index*.md
+        - preferences*.md
+        - genome/index*.md
+        - zengin/index*.md
+        - blog/posts/**/*.md
   - redirects:
       # Empty dict to fill with the `meta_redirects.py` hook.
       redirect_maps: {}
@@ -247,7 +259,7 @@ plugins:
       categories:
         - tags
         - categories
-      comments_path: "#__comments"
+      comments_path: "#comments"  # Needs to be added manually to each file at the end
       date_from_meta:
         as_creation: date.created
         as_update: date.updated
