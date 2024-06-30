@@ -69,6 +69,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Gothic-Modding-Community/gmc
       name: Gothic Modding Community GitHub repository
+    - icon: simple/rss
+      link: /gmc/feed_rss_updated.xml
+      name: Subscribe to our RSS Feed
 
 validation:
   nav:
@@ -127,6 +130,26 @@ plugins:
       order: asc
       sort_type: natural
       order_by: title
+  - blog:
+      archive: false
+      categories_allowed:  # Case-sensitive
+        # Primary level categories for the URLs
+        - Analysis         # Posts about deep dives into certain topics.
+        - Community News   # Posts about updates in the Gothic Modding Community.
+        - Devlogs          # Posts about stories from mod development.
+        - Off-Topic        # Posts about topics that don't fit other categories, e.g., WebDev.
+        - Showcase         # Posts about tools, workflows etc.
+        - Tutorials        # Posts including guides or follow-along tutorials.
+        # Secondary level categories for better granularity.
+        - Assets           # Posts about 2D, 3D, Sound or other non-code file assets.
+        - Genome           # Posts about Genome engine.
+        - Scripts          # Posts about internal built-in scripting like Daedalus.
+        - SDK              # Posts about external development kits like Union.
+        - Tools            # Posts about tools.
+        - Workflows        # Posts about workflows.
+        - ZenGin           # Posts about ZenGin engine.
+      post_excerpt_max_categories: 3  # Default 5
+      post_url_format: "{categories}/{slug}"  # Default {date}/{slug}
   - mkdocs-video:
       css_style:
         width: "100%"
@@ -153,6 +176,7 @@ plugins:
           nav_translations:
             Afsp: AFSP
             Anims: Animations
+            Blog: Community Posts
             Contribute: How To Contribute
             Daedalus tools: Daedalus
             General info: General information
@@ -169,6 +193,7 @@ plugins:
           nav_translations:
             Anims: Animacje
             Applications: Zastosowania
+            Blog: Posty Społeczności
             Classes: Klasy
             Contribute: Jak Się Udzielić
             Examples: Przykłady
@@ -199,6 +224,7 @@ plugins:
         - preferences*.md
         - genome/index*.md
         - zengin/index*.md
+        - blog/posts/**/*.md
   - git-authors:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       show_email_address: false
@@ -210,8 +236,32 @@ plugins:
         - preferences*.md
         - genome/index*.md
         - zengin/index*.md
+        - blog/posts/**/*.md
+  - git-committers:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      repository: Gothic-Modding-Community/gmc
+      branch: dev
+      exclude:
+        - index*.md
+        - preferences*.md
+        - genome/index*.md
+        - zengin/index*.md
+        - blog/posts/**/*.md
   - redirects:
       # Empty dict to fill with the `meta_redirects.py` hook.
       redirect_maps: {}
   - social:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+  - tags:
+      tags_file: blog/tags.md
+  - rss:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      categories:
+        - tags
+        - categories
+      comments_path: "#comments"  # Needs to be added manually to each file at the end
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
+      json_feed_enabled: false
+      match_path: "blog.posts..*"  # regex, dots as dir separators to support Linux and Windows

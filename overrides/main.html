@@ -64,11 +64,14 @@
             "cs": "Podpoř nás a pomoz nám s překladem!",
         }
     %}
-    {% if i18n_page_locale != "en" and i18n_file_locale != i18n_page_locale %}
-        <div class="gmc-announce">
-            {{ announcement[i18n_page_locale] }}
-            <a href="/gmc/{{ i18n_page_locale }}/contribute/#translations">{{ call_to_action[i18n_page_locale] }}</a>
-        </div>
+    {# Wrapper for non-i18n blog files #}
+    {% if page and not page.file.src_uri.startswith(config.extra.i18n_blog_prefixes) %}
+        {% if i18n_page_locale != "en" and i18n_file_locale != i18n_page_locale -%}
+            <div class="gmc-announce">
+                {{ announcement[i18n_page_locale] }}
+                <a href="/gmc/{{ i18n_page_locale }}/contribute/#translations">{{ call_to_action[i18n_page_locale] }}</a>
+            </div>
+        {%- endif %}
     {% endif %}
     {# Add script with additional localization for use in extra.js #}
     <script>
