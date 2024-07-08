@@ -8,7 +8,6 @@
     **Version Identifiers:**<br />
     — Gothic I: `30720`<br/>
     — Gothic II: `33793`<br/>
-    **ZenKit Class:** `VCutsceneCamera`<br/>
     **Sources:**<br/>
     — [gothic-library.ru](http://www.gothic-library.ru/publ/zccscamera/1-1-0-494)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCCSCamera/)

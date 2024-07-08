@@ -5,7 +5,6 @@
     **Version Identifiers:**<br />
     — Gothic I: `36865`<br/>
     — Gothic II: `36865`<br/>
-    **ZenKit Class:** `VTouchDamage`<br/>
     **Sources:**<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/oCTouchDamage/)
 
