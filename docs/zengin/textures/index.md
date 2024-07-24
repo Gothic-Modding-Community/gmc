@@ -1,9 +1,9 @@
 # Textures
 
-Textures are pictures that get projected onto 3D models and on a 2D user interface in the game. ZenGin uses its own texture format `.TEX`, that in fact is a container for the texture in one of available formats. This section will discuss how to work with textures in ZenGin.
+Textures are pictures that get projected onto 3D models and on a 2D user interface in the game. ZenGin uses its own texture format `.TEX`, that actually is a container for the texture in one of available formats. This section will discuss how to work with textures in ZenGin.
 
 !!! Note
-    Technical documentaion of the `.TEX` texture format can be found in the [ZenKit documentaion](https://zk.gothickit.dev/engine/formats/texture/).
+    Technical documentation of the `.TEX` texture format can be found in the [ZenKit documentation](https://zk.gothickit.dev/engine/formats/texture/).
 
 ## Basics
 
