@@ -15,11 +15,11 @@ The `.3ds` files can be opened with any 3D modeling software that supports this 
 
 **3DS limitations**
 
-The 3DS format has some disadvantages when building levels. With very large levels such as `SURFACE.3DS`, you reach the upper limit of 65,536 polygons per object that are permitted in a `.3ds` file. To get around this problem, proceed as follows: simply “cut” the mesh into several small parts that are below the 64K poly limit. For example, the `SURFACE.3DS` was dismantled into 4 parts of roughly equal size and then completely exported. This mesh is then melted together again into an object in the spacer. This happens due to overlapping vertices.
+The 3DS format has some disadvantages when building levels. With very large levels such as `SURFACE.3DS`, you reach the upper limit of 65,536 triangles per object that are permitted in a `.3ds` file. To get around this problem, proceed as follows: simply “cut” the mesh into several small parts that are below the 64K triangle limit. For example, the `SURFACE.3DS` was dismantled into 4 parts of roughly equal size and then completely exported. This meshes are then merged during the world compilation process into single object in the spacer.
 
 ### Compiled
 
-Source formats are great for editing, but can be a bit heavy for the engine use (ASCII based formats are slower to parse and work with), because of that ZenGin compiles these meshes into internal compiled formats. In the case of the world it is `.MSH` format and in the case of objects in the world it is the `.MRM` (multi resolution mesh) with LOD information
+Source formats are great for editing, but can be a bit heavy for the engine use (ASCII based formats are slower to parse and work with), because of that ZenGin compiles these meshes into internal compiled formats. In the case of the world it is `.MSH` format and in the case of objects in the world it is the `.MRM` (multi resolution mesh) with LOD information.
 
 ## Tools
 
