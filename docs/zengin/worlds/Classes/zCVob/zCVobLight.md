@@ -8,7 +8,6 @@
     **Version Identifiers:**<br />
     — Gothic I: `46080`<br/>
     — Gothic II: `39168`<br/>
-    **ZenKit Class:** `VLight`<br/>
     **Sources:**<br/>
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
     — [gothic-library.ru](http://www.gothic-library.ru/publ/class_zcvoblight/1-1-0-497)<br/>

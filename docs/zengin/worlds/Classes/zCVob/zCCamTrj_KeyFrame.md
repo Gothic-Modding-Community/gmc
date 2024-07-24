@@ -8,7 +8,6 @@
     **Version Identifiers:**<br />
     — Gothic I: `12289`<br/>
     — Gothic II: `52224`<br/>
-    **ZenKit Class:** `VCameraTrajectoryFrame`<br/>
     **Sources:**<br/>
     — [gothic-library.ru](http://www.gothic-library.ru/publ/zccamtrj_keyframe/1-1-0-495)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/zCCamTrj_KeyFrame/)

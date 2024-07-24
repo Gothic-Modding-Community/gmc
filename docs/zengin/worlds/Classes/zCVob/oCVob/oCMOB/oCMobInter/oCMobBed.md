@@ -8,7 +8,6 @@
     **Version Identifiers:**<br />
     — Gothic I: `35585`<br/>
     — Gothic II: `35585`<br/>
-    **ZenKit Class:** `VBed`<br/>
     **Sources:**<br/>
     — [spacerhilfedatei.sph](https://wiki.worldofgothic.de/doku.php?id=spacer:hilfedatei)<br/>
     — [zk.gothickit.dev](https://zk.gothickit.dev/engine/objects/oCMobBed/)
