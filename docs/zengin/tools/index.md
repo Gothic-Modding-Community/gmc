@@ -29,6 +29,12 @@ video games Gothic and Gothic 2 Night of the Raven.
 - [Gothic World Editor](https://worldofplayers.ru/threads/40530/) - World editor for vanilla worlds, works with G1, G2 and G2 NotR worlds
 - [Spacer.NET](https://forum.worldofplayers.de/forum/threads/1557793-WORLD-EDITOR-Spacer-NET) - A modernised version of Spacer available as a Gothic Mod.
 
+**[Texture tools](../textures/index.md#tools)**
+
+- [GoMan](https://www.worldofgothic.de/dl/download_97.htm) - Oldest tool, for viewing and converting textures.
+- [GoTex](https://forum.worldofplayers.de/forum/threads/1601349-Tool-GoTex) - Simple texture converter.
+- [zTEXiPy](https://gitlab.com/Shoun2137/ztexipy) - Latest texture tool, offers batch conversion and an intuitive viewer.
+
 **Libraries**
 
 - [ZenKit](libraries/zenkit.md) - A library to load, save and use almost all ZenGin asset files
