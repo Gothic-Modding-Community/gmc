@@ -63,7 +63,7 @@ int __fastcall zCVob_Render(zCVob* _this, zTRenderContext& context) {
 ```
 
 #### Option #2 - User API
-In `Engine SDK/User API` we can find a `.inc` file for the class we are hooking and define a new member method there. In this case, we are looking for `zCVob.inc`:
+In `Engine SDK/User API` we can find a `.inl` file for the class we are hooking and define a new member method there. In this case, we are looking for `zCVob.inl`:
 ```cpp 
 // Supported with union (c) 2020 Union team
 
