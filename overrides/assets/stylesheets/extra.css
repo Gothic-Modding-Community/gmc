@@ -160,11 +160,6 @@ div.md-nav__link--index {
     }
 }
 
-/* override md-content min-height */
-.md-content {
-    min-height: 100vh;
-}
-
 /* override md-banner*/
 .md-banner {
     background: #0091eb;
