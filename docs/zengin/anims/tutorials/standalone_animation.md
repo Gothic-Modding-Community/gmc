@@ -28,8 +28,8 @@ Click import and wait for the magic to happen.
 
 This video shows a freshly imported model with all default meshes.
 
-!!! note  
-    If we now want to play (or edit) existing animation, we can now load it on top of this. Just as before **File > Import > Kerrax ASCII model (.asc)** and select different animation file (or armor file), for example `Hum_SmokeHerb_Layer_M01.asc` for an animation file.  
+!!! How to play or edit animations  
+    If we now want to play (or edit) an existing animation, we can now load the animation file in .asc on top of our currently loaded model. Just as before, **File > Import > Shoun's ASCII Model importer (.asc)** and select the desired animation file (or armor file), for example `Hum_SmokeHerb_Layer_M01.asc`.  
 ![type:video](https://www.youtube.com/embed/FDicnSwhv0w)
 
 Gothic characters are modular and you can change their heads on the fly, even during gameplay as seen in this amazing video from my dear friend and colleague Fawkes - [Head changing](https://www.youtube.com/watch?v=2GBmpeyqKIA). Let's add a head so that we can see how the whole body will behave while we are animating. **File > Import > Kerrax ASCII model (.asc)**, navigate to your head model. You will have to decompile it like we did with the body itself. We will import `HUM_HEAD_PONY.ASC`. Please make sure to select the target bone for importing **Bip01 Head**, this will attach the head to the proper bone, just like the engine does it.
