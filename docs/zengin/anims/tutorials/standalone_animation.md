@@ -10,7 +10,7 @@ Let us start with the easiest animation - a very simple gesturing animation.
 Firstly we have to have the animation source files ready. Best way to decompile them is using [Gothic Sourcer](https://worldofplayers.ru/threads/41942/). In GothicSourcer you choose **Tools > Decompiler models > Dynamic (MDS or MSB)** and choose an MDS file of your choice - `Humans.mds` in our case and then click the decompile button.
 
 ## Animating
-Open Blender, **File > Import > Kerrax ASCII model (.asc)**, navigate to the folder with your decompiled animation files and select `HUM_BODY_NAKED0.ASC`. This file contains the skeleton and skin model for human NPCs.
+Open Blender, **File > Import > Shoun's ASCII Model Importer (.asc)**, navigate to the folder with your decompiled animation files and select `HUM_BODY_NAKED0.ASC`. This file contains the skeleton and skin model for human NPCs.
 
 !!! tip "What bone hierarchy is this model using?"  
     If you open the `.mds` file, you can see a command `meshAndTree` that specifies what model contains the skeleton. And there lies our answer:
