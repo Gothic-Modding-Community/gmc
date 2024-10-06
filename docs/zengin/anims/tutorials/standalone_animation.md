@@ -28,7 +28,7 @@ Click import and wait for the magic to happen.
 
 This video shows a freshly imported model with all default meshes.
 
-!!! How to play or edit animations  
+!!! note "How to play or edit animations"
     If we now want to play (or edit) an existing animation, we can now load the animation file in .asc on top of our currently loaded model. Just as before, **File > Import > Shoun's ASCII Model importer (.asc)** and select the desired animation file (or armor file), for example `Hum_SmokeHerb_Layer_M01.asc`.  
 ![type:video](https://www.youtube.com/embed/FDicnSwhv0w)
 
