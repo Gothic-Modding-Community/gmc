@@ -1,5 +1,5 @@
 # Daedalus Language Server
-[Daedalus Language Server](https://github.com/Kirides/DaedalusLanguageServer) is a language server for Gothic's scripting language - Daedalus, created by [Kirides](https://github.com/kirides). However, it is mostly known as VSCode extension, that is in fact named [vscode-daedalus](https://github.com/kirides/vscode-daedalus).
+[Daedalus Language Server](https://github.com/Kirides/DaedalusLanguageServer) is a language server for Gothic's scripting language - Daedalus, created by [Kirides](https://github.com/kirides). However, it is mostly known for a VSCode extension - [vscode-daedalus](https://github.com/kirides/vscode-daedalus).
 
 !!! Warning
     This article is focused on the vscode-daedalus extension, but since DLS uses [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) it could be implemented into other editors.
