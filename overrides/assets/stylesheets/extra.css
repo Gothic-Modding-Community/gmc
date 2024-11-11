@@ -36,7 +36,7 @@
 /* Stretch content area */
 .md-main__inner.md-grid {
     /* Default 61rem */
-    max-width: 75rem;
+    max-width: 70rem;
 }
 
 /* override md-main on the page */
@@ -49,7 +49,7 @@
 /* Shrink header and footer to the content size*/
 .md-grid {
     /* Default 61rem */
-    max-width: 50rem;
+    max-width: 45rem;
 }
 
 @media screen and (min-width: 60em) {
