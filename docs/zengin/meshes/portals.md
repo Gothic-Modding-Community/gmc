@@ -12,19 +12,19 @@ In outdoor levels, only the interiors of buildings, caves, etc. are marked as se
 
 ### Naming
 
-Outdoor portals materials have followning naming convention: 
+Outdoor portals materials have the following naming convention: 
 ```
 P[N]:Front_Back
 ```
 
-All materials of portal type, have to start with `P:` or `PN:`, the difference between each of them is only in game engine, `PN:` stands for Portal NonFading, and`P:` stands for Portals and if player is standing close by, then opacity of near portals will increase.
+All materials of portal type, have to start with `P:` or `PN:`, the difference between each of them is only in game engine, `PN:` stands for Portal NonFading, and`P:` stands for Portals and if player is standing close by, when a player is close to the portal then it becomes more transparent, so the opacity decreases.
 
 !!! Note
-    Material names with the prefix `PN:` (“N” for NoFade) “open” visually as the camera approaches, but do not fade out like the other `P:` portals. This makes sense, for example, if there is a texture with an alpha channel on such a portal.
+    Material names with the prefix `PN:` (N for NoFade) "open" visually as the camera approaches, but do not fade out like the other `P:` portals. This makes sense, for example, if there is a texture with an alpha channel on such a portal.
 
-For every portal, 2 materials have to be created - one for each direction. Their names have to be set in proper order. First name `Front` is always place or room to which you are entering from, and second `Back` name is place where you want to go. For example, if you are entering room 2 from room 1, then you need to name portal `P:room1_room2`. If you want to go back from room 2 to room 1, then you need to name portal `P:room2_room1`.
+For every portal, 2 materials have to be created - one for each direction. Their names have to match the direction they're facing. For example, the portal for entering room 2 from room 1 should be named `P:room1_room2`. And vice versa the second portal to go back from room 2 to room 1 should be named `P:room2_room1`.
 
-In addition, the empty string `""` is used to mark the portal to the outside world. For example, if you are entering corridor 1 from the outside world, then you need to name portal `P:corridor1_`. If you want to go back from corridor 1 to the outside world, then you need to name portal `P:_corridor1`.
+In addition, a blank string `""` is used to refer to the outside world. For example, if you are entering corridor 1 from the outside world, then you need to name portal `P:_corridor1`. If you want to go back from corridor 1 to the outside world, then you need to name portal `P:corridor1_`.
 
 
 ![](../../assets/images/portals/outdoor_naming.png)
@@ -39,16 +39,14 @@ The sectors should be tightly closed, and contain no gaps between the walls i.e.
 
 ![](../../assets/images/portals/outdoor_modeling2.png)   
 
-Also the polys inside the sector must be connected to the walls of the setor. If some polys will be floating in the air, the engine could not render them properly.
+Also, the polys inside the sector must be connected to the walls of the sector. If some polys will be floating in the air, the engine could not render them properly.
 
 ![](../../assets/images/portals/outdoor_modeling3.JPG)
 
 
-
-
 ### Ghostoccluder
 
-Ghostoccluders are polys in outdoor levels that have a material called `GHOSTOCCLUDER`. Such polygons are not displayed in the game, but serve to mask areas of the level that are unnecessary for visualization (“Occlusion”). Unlike other polygons, Ghostoccluder polys  do not depend on size, and also do not need to be segmented, as in the case of [water modeling](water.md#segmentation). 
+Ghostoccluders are polys in outdoor levels that have a material called `GHOSTOCCLUDER`. Such polygons are not displayed in the game, but serve to mask areas of the level that are unnecessary for visualization (“Occlusion”). Unlike other polygons, Ghostoccluder polys do not depend on size, and also do not need to be segmented, as in the case of [water modeling](water.md#segmentation). 
 
 ![](../../assets/images/portals/ghostoccluder.png)
 
@@ -67,18 +65,18 @@ Portals are typically placed at passageways/doors or at tunnel beginnings and en
 
 ![](../../assets/images/portals/indoor_modeling1.png)
 
-**Additional notes for modeling:**
+**Additional notes for level modeling:**
 
-- Polys are not allowed to penetrate each other
-- All polys that cannot be seen by the player from any permitted, legal position/angle must be eliminated.
-- It is important to ensure that there is really no space between polygons that are supposed to form a gap-free surface. For example, the bottom edge of a wall should be identical to an edge of the floor and therefore rest directly on the floor. Basically, this requirement means precise vertex placement. This could be achieved, for example, with a fine grid for vertex placement.
-- Indoor levels (as opposed to outdoor levels) should be modeled to be completely enclosed. This means that if you (purely theoretically) filled a level with water, then the level's mesh would have no gaps or 'leaks' from which water could escape. This point is very important! Great care should be taken to ensure that there are no gaps between the polys. 'Waterproof' or 'leak-free' can be defined as follows:
-    - You cannot set up a line of sight between a point inside the level and a point outside the level.
-    - There are no 'paper walls' or polys whose invisible backside can be seen from within the level.
-    - There must be no polys whose front cannot be seen from any position within the level. Or to put it another way: no poly can have its front side in contact with the 'nothing' surrounding the level. A negative example: a cube with 4 walls facing outwards is placed in the middle of the empty space around the level ⇒ not allowed!
-- In general, so-called 'T-junctions' should be avoided by inserting collinear vertices into polygons.
+- Polys must not penetrate each other.
+- Remove all polys that are never visible to the player.
+- Ensure no gaps between polygons meant to form a continuous surface. For example, the bottom edge of a wall should align perfectly with the floor edge. Basically, this requirement means precise vertex placement. 
+- Indoor levels must be completely enclosed, with no gaps or 'leaks'. This means:
+    - No line of sight from inside to outside the level.
+    - No 'paper walls' where the invisible backside is visible from within.
+    - No polys with fronts that can't be seen from any position inside the level.
+- Avoid 'T-junctions' by adding collinear vertices to polygons.
 
 
 
-[^1]: Inspired by the article about potrals from [Gothic Editing Wiki](https://wiki.worldofgothic.de/doku.php?id=zengin:portale)
+[^1]: Inspired by the article about portals from [Gothic Editing Wiki](https://wiki.worldofgothic.de/doku.php?id=zengin:portale)
 [^2]: Special thanks to Anrez_ for help with images and naming conventions explanation.
