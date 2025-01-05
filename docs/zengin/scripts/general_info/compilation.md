@@ -1,8 +1,8 @@
 ---
-title: Parsing
+title: Compilation
 ---
-# Daedalus parsing
-Before loading the data by game the Daeadlus scripts have to be parsed to the `.DAT` format (bytecode). This is done by the engine itself, but the parsed `.d` files have to be listed in `.src` files.
+# Daedalus Compilation
+Before loading the data by game the Daedalus scripts have to be parsed and compiled into a `.dat` file. This is done by the engine itself, but the `.d` files have to be listed in `.src` files first.
 
 ## Parsers
 The engine itself has multiple parser instances used for parsing different `.src` files.
@@ -19,7 +19,7 @@ The engine itself has multiple parser instances used for parsing different `.src
 The `.src` files are simple text files that contain the paths to the `.d` files that have to be parsed. The paths are relative to the folder where the `.src` file is located.
 
 !!! Warning
-    Booth `\` and `/` can be used as path separators, but in the wildcards only `\` is supported, as the `/*` is used for comments.
+    Booth `\` and `/` can be used as path separators, but in the wildcards only `\` is supported.
 
 
 **Example file structure:**
@@ -40,7 +40,7 @@ The `.src` files are simple text files that contain the paths to the `.d` files 
         └── Gothic.src
 ```
 
-Thats how the `Gothic.src` file can look like:
+That is how the `Gothic.src` file can look like:
 
 ``` title="Gothic.src"
 Story\Constants.d
