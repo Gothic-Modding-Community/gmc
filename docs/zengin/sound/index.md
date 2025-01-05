@@ -22,3 +22,6 @@ For this dialogue line
 AI_Output(self,hero,"Info_Diego_Gamestart_11_00"); //I'm Diego.
 ```
 the engine will play `Info_Diego_Gamestart_11_00.wav` sound file (if it exists).
+
+## SystemPack
+SystemPack 1.5+ adds support for `ogg` sound files playback, but in the hacky way. The `.ogg` file extension have to be changed into `.wav` creating "pseudo-wav" file that will work. This could be helpful for reducing the size of the mod. 
