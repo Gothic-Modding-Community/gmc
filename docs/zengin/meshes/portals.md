@@ -30,6 +30,9 @@ In addition, a blank string `""` is used to refer to the outside world. For exam
 ![](../../assets/images/portals/outdoor_naming.png)
 
 
+!!! Warning
+    Names such as `room1`, `room2` are just examples. You can name your sectors as you wish, but the naming convention should be followed.
+
 ### Modeling
 Outdoor portals must be double-sided polygons, pointing the opposite directions. The portal should close the area between two sectors, by touching all vertices of the sector entrance/exit. 
 
