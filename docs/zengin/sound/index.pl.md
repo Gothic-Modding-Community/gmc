@@ -22,3 +22,6 @@ W przypadku tej linii dialogowej
 AI_Output(self,hero,"Info_Diego_Gamestart_11_00"); //Jestem Diego.
 ```
 silnik odtworzy plik dźwiękowy `Info_Diego_Gamestart_11_00.wav` (jeśli istnieje).
+
+## SystemPack
+SystemPack 1.5+ dodaje obsługę formatu `ogg`, ale w nietypowy sposób. Rozszerzenie pliku `.ogg` musi zostać zmienione na `.wav`, tworząc plik "pseudo-wav", który będzie działał. Może to być pomocne w zmniejszeniu rozmiaru moda.
