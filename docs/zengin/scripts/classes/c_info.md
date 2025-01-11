@@ -183,3 +183,5 @@ zParserExtender implements some Quality of Life features for dialogues. More inf
 ## AF Script Packet
 Enhanced Info Manager (implemented using Ikarus and LeGo) adds tons of customizations and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../extenders/afsp/index.md).
 
+## zMultilogue
+[zMultilogue](../../union/plugins/zmultilogue.md) union plugin implements a Multi-NPC dialogue system similar to LeGo's [Trialoge](../extenders/lego/applications/trialoge.md) package.
