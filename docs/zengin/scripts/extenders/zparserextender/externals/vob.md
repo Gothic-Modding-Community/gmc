@@ -134,7 +134,7 @@ VOB functions allow you to manipulate game world objects.
     Returns the data of the oCMobInter object
 
     ```dae
-    func MobInter_Data Vob_GetMobInterData( var C_Vob mobInter ) {};
+    func C_MobInter_Data Vob_GetMobInterData( var C_Vob mobInter ) {};
     ```
 
     - `mobInter` - oCMobInter object
@@ -149,26 +149,25 @@ VOB functions allow you to manipulate game world objects.
     ```
 
     - `mobInter` - oCMobInter object
-    - `data` - MobInter_Data of the object
+    - `data` - C_MobInter_Data of the object
 
-## `Vob_GetMobInterData`
-!!! function "`Vob_GetMobInterData`"
+## `Vob_GetMobLockableData`
+!!! function "`Vob_GetMobLockableData`"
     Returns the data of the oCMobLockable object
 
     ```dae
-    func C_MobLockable_Data Vob_GetMobInterData( var C_Vob mobLock ) {};
+    func C_MobLockable_Data Vob_GetMobLockableData( var C_Vob mobLock ) {};
     ```
 
     - `mobLock` - oCMobLockable object
-    - `data` - MobInter_Data of the object
     - `return` - C_MobLockable_Data of the object
 
-## `Vob_SetMobInterData`
-!!! function "`Vob_SetMobInterData`"
+## `Vob_SetMobLockableData`
+!!! function "`Vob_SetMobLockableData`"
     Sets the data of the oCMobLockable object
 
     ```dae
-    func void Vob_SetMobInterData( var C_Vob mobLock, var C_MobLockable_Data data ) {};
+    func void Vob_SetMobLockableData( var C_Vob mobLock, var C_MobLockable_Data data ) {};
     ```
 
     - `mobLock` - oCMobLockable object
