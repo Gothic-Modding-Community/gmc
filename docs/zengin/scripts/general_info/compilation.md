@@ -2,18 +2,21 @@
 title: Compilation
 ---
 # Daedalus Compilation
-Before loading the data by game the Daedalus scripts have to be parsed and compiled into a `.dat` file. This is done by the engine itself, but the `.d` files have to be listed in `.src` files first.
+Before loading the data by game the Daedalus scripts have to be parsed and compiled into a `.dat` file. This is done by the engine itself, but the files that are parsed have to be listed in the `.src` files.
 
 ## Parsers
 The engine itself has multiple parser instances used for parsing different `.src` files.
 
-- Game Parser - parses `Scripts\Content\Gothic.src` and creates `Gothic.dat`
-- SFX Parser - parses `Scripts\System\SFX.src` and creates `SFX.dat`
-- PFX Parser - parses `Scripts\System\ParticleFX.src` and creates `ParticleFX.dat`
-- VFX Parser - parses `Scripts\System\VisualFX.src` and creates `VisualFX.dat`
-- Camera Parser - parses `Scripts\System\Camera.src` and creates `Camera.dat`
-- Menu Parser - parses `Scripts\System\Menu.src` and creates `Menu.dat`
-- Music Parser - parses `Scripts\System\Music.src` and creates `Music.dat`
+| Parser | Source file | Output file |
+|--------|-------------|-------------|
+| Game Parser | `Scripts\Content\Gothic.src` | `Gothic.dat` |
+| SFX Parser | `Scripts\System\SFX.src` | `SFX.dat` |
+| PFX Parser | `Scripts\System\ParticleFX.src` | `ParticleFX.dat` |
+| VFX Parser | `Scripts\System\VisualFX.src` | `VisualFX.dat` |
+| Camera Parser | `Scripts\System\Camera.src` | `Camera.dat` |
+| Menu Parser | `Scripts\System\Menu.src` | `Menu.dat` |
+| Music Parser | `Scripts\System\Music.src` | `Music.dat` |
+
 
 ## SRC syntax
 The `.src` files are simple text files that contain the paths to the `.d` files that have to be parsed. The paths are relative to the folder where the `.src` file is located.
