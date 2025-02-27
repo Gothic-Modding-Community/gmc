@@ -1,15 +1,12 @@
----
-title: Daedalus Script
----
 # Daedalus Script Language
 
 ZenGin engine uses its own script language called Daedalus. The language is used to define the game logic, dialogues, AI, missions, and other game-related content.
 
-## Synatx
+Daedalus synatx is a mix of `C` and `C++`. The script language is not case-sensitive and whitespace is ignored.
 
-Daedalus synatx is a mix of C and C++, designed to be easy to use. The script language is not case-sensitive and whitespace is ignored. 
+## Identifiers and Keywords
 
-Identifier are names for variables, constants, instances, prototypes, classes and functions. An identifier is a sequence of letters and ciphers. The first sign must be a letter. Thereafter, are allowed: letters, ciphers 0 to 9 and underscores. The length of identifiers is not restricted.
+Identifier are names for variables, constants, instances, prototypes, classes and functions. An identifier is a sequence of letters and ciphers. The first sign must be a letter. Thereafter, are allowed: letters, ciphers `0` to `9` and underscores. The length of identifiers is not restricted.
 
 Keywords are:
 
@@ -30,8 +27,6 @@ The string `//` begins a comment, which goes until the end of the line.
 // This is a comment
 ```
 The strings `//` and `/*` within a comment as well as `*/` after a line comment have no further meaning and are handled like other signs.
-
-The commentary concept was adopted from C++.
 
 ## Variables and Constants
 
