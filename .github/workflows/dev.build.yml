@@ -53,4 +53,4 @@ jobs:
       - name: Build and deploy site
         run: |
           source venv/bin/activate
-          mkdocs gh-deploy --force --remote-branch gh-dev-page
+          mkdocs gh-deploy --strict --force --remote-branch gh-dev-page
