@@ -1,6 +1,6 @@
 # Water
 
-Water in ZenGin is a special surface. Therefore, there are some rules that have to be followed, to make it work properly.
+Water[^1] in ZenGin is a special surface. Therefore, there are some rules that have to be followed, to make it work properly.
 
 ## Water Modeling
 
@@ -39,7 +39,7 @@ To make water look like actual water consider changing following parameters:
 Some parameters have only been available since Gothic 2:
 
 - [environmentalMapping](../worlds/Classes/zCMaterial.md#environmentalmapping) - Simulation of a reflection of the surface.
-- [environmentalMappingStrength](../worlds/Classes/zCMaterial.md#environmentalmappingstrenght) - Strength of surface reflection.
+- [environmentalMappingStrength](../worlds/Classes/zCMaterial.md#environmentalmappingstrength) - Strength of surface reflection.
 - [waveMode](../worlds/Classes/zCMaterial.md#wavemode) - Type of wave motion.
 - [waveSpeed](../worlds/Classes/zCMaterial.md#wavespeed) - Wave speed. The higher the value, the faster the waves move.
 - [waveMaxAmplitude](../worlds/Classes/zCMaterial.md#wavemaxamplitude) - Wave height. 

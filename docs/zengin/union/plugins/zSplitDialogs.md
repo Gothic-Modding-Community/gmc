@@ -8,7 +8,7 @@ Union plugin created by [Top Layer](https://worldofplayers.ru/members/107921/), 
 
 ## Usage
 
-1. Install Union 1.0l+ ([zParserExtender](../../../scripts/extenders/zparserextender/index.md) is needed - it is inside Union since 1.0l version)
+1. Install Union 1.0l+ ([zParserExtender](../../scripts/extenders/zparserextender/index.md) is needed - it is inside Union since 1.0l version)
 2. Make sure zParserExtender is enabled in `SystemPack.ini`
 ```ini
 [CORE]

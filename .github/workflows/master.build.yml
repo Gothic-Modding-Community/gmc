@@ -52,4 +52,4 @@ jobs:
       - name: Build and deploy site
         run: |
           source venv/bin/activate
-          mkdocs gh-deploy --force
+          mkdocs gh-deploy --strict --force

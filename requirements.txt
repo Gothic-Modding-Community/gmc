@@ -1,5 +1,5 @@
 # Core Requirements
-mkdocs-material==9.5.24
+mkdocs-material==9.6.7
 mkdocs-git-revision-date-localized-plugin==1.2.5
 mkdocs-video==1.5.0
 mkdocs-redirects==1.2.1
