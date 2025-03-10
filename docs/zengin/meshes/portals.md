@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Static level meshes are created in modeling programs, like Blender, and then imported into the [Spacer](../worlds/spacer.md) as `.3ds` files. To increase rendering performance, certain contiguous areas of the level are identified as sectors during the modeling of the level meshes and separated from each other by portals. At runtime, the engine is then able to determine and exclude from the rendering process those sectors that are not visible or are far away from the current camera position due to occlusion.
+Static level meshes[^1] are created in modeling programs, like Blender, and then imported into the [Spacer](../worlds/spacer.md) as `.3ds` files. To increase rendering performance, certain contiguous areas of the level are identified as sectors during the modeling of the level meshes and separated from each other by portals. At runtime, the engine is then able to determine and exclude from the rendering process those sectors that are not visible or are far away from the current camera position due to occlusion.
 
 !!! Danger
     The distinction between outdoor/indoor levels must be explicitly selected when compiling a level within the Spacer editor, as the conventions for equipping levels with sectors/portals for outdoor and indoor levels differ slightly.
@@ -12,7 +12,7 @@ In outdoor levels, only the interiors of buildings, caves, etc. are marked as se
 
 ### Naming
 
-Outdoor portals materials have the following naming convention: 
+Outdoor portals materials have the following naming convention[^2]:
 ```
 P[N]:Front_Back
 ```

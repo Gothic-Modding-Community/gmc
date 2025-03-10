@@ -183,7 +183,7 @@ LeGo_Init(LeGo_Trialoge);
     func void TRIA_Finish()
     ```
 
-## Przykłady
+## Przykłady {: id="examples" }
 
 ### Prosty Trialog
 Poniższa konwersacja zostanie zaimplementowana za pomocą trialogów:

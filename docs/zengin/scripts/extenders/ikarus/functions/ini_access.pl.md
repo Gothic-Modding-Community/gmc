@@ -157,7 +157,7 @@ MEM_InitAll();
     !!! Tip
         Jeśli wprowadzasz nowe opcje, najlepiej kierować się paroma zasadami. Dobrą praktyką jest nazywanie swoich opcji tak, aby inni mogli je zrozumieć i umieszczanie ich w sekcji o takiej samej nazwie jak twój mod. Nie umieszczaj opcji swojej modyfikacji w sekcji `[GAME]` lub `[PERFORMANCE]`.
 
-## Funkcje klawiszy
+## Funkcje klawiszy {: id="key-functions" }
 `Gothic.ini` zawiera przypisanie klawiszy fizycznych (np. "W") do klawiszy logicznych (np. "keyUp").
 
 ### `MEM_GetKey`

@@ -1,6 +1,6 @@
 # Daedalus Script Language
 
-ZenGin engine uses its own script language called Daedalus. The language is used to define the game logic, dialogues, AI, missions, and other game-related content.
+ZenGin engine uses its own script language called Daedalus[^1]. The language is used to define the game logic, dialogues, AI, missions, and other game-related content.
 
 Daedalus synatx is a mix of `C` and `C++`. The script language is not case-sensitive and whitespace is ignored.
 
