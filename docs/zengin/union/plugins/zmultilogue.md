@@ -9,7 +9,7 @@ Its goal is to replace Trialoue packages based on [Ikarus](../../scripts/extende
 | Contacts ||
 |:---------| :--- |
 | Authors  | [:material-badge-account-horizontal: Silver Ore Team](https://github.com/Silver-Ore-Team) - [muczc1wek](https://github.com/muczc1wek) |
-| GitHub   | [:material-github: zBassMusic](https://github.com/Silver-Ore-Team/zMultilogue)|
+| GitHub   | [:material-github: zMultilogue](https://github.com/Silver-Ore-Team/zMultilogue)|
 | Discord  | [:simple-discord: Gothic Modding Community server](https://discord.gg/mCpS5b5SUY) |
 
 ## Features
