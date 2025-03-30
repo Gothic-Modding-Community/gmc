@@ -188,7 +188,7 @@ In order to work locally:
 #### Build preferences
 While working with the project, it's possible to set various environmental variables to configure it to your own preferences:
 
-- `GMC_DEV_LOCALE` - is a 2-character language identifier (ex. `en`, `pl`), it sets the development language of the site. This will enforce that language to be the default and only built language. Helps to decrease build time and allows to easily change the language without modyfying the config file. **Because of changes in the `mkdocs-static-i18n` plugin, this is the only way to temporarily change the default language**
+- `GMC_DEV_LOCALE` - is a 2-character language identifier (ex. `en`, `pl`), it sets the development language of the site. This will enforce that language to be the default and only built language. Helps to decrease build time and allows to easily change the language without modifying the config file. **Because of changes in the `mkdocs-static-i18n` plugin, this is the only way to temporarily change the default language**
 - `GMC_BUILD_ALTERNATES` - `True` or `False` value, activates the site build to also include alternate languages apart of the default language. Default behaviour is to omit alternates to decrease build time.
 - `GMC_ENABLE_ON_PUBLISH` - `True` or `False` value, activates all of the final build procedures, like adding of the last modified date, minifying of the resources etc. 
 

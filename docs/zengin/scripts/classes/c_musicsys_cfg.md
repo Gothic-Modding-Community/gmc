@@ -34,7 +34,7 @@ Class definition as it is defined in [`Scripts/System/_intern/Music.d`](https://
 | [bitResolution](#bitresolution)             | int    | Sound quality                                                |
 | [globalReverbEnabled](#globalreverbenabled) | int    | Enable global reverb                                         |
 | [sampleRate](#samplerate)                   | int    | Frequency                                                    |
-| [numChannels](#numchannels)                 | int    | Number of sound chanells                                     |
+| [numChannels](#numchannels)                 | int    | Number of sound channels                                     |
 | [reverbBufferSize](#reverbbuffersize)       | int    | The size of reverb buffer                                    |
 
 ## Class member overview

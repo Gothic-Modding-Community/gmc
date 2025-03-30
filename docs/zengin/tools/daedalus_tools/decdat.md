@@ -1,8 +1,8 @@
 # DecDat
 
-DecDat[^1] is a daedalus scripts decompiler orginaly created by [Gottfried](https://forum.worldofplayers.de/forum/members/28709-Gottfried). Its goal is to replace Gothic Sourcer's decompiler, which wouldn't been able to decompile scripts with [Ikarus](../../scripts/extenders/ikarus/index.md) and [LeGo](../../scripts/extenders/lego/index.md). However, that doesn't mean that DecDat is able to produce data that can be compiled again. This tool should be used mainly for research and educational purposes. Source code is available [here](https://github.com/auronen/DecDat/).
+DecDat[^1] is a daedalus scripts decompiler originally created by [Gottfried](https://forum.worldofplayers.de/forum/members/28709-Gottfried). Its goal is to replace Gothic Sourcer's decompiler, which wouldn't been able to decompile scripts with [Ikarus](../../scripts/extenders/ikarus/index.md) and [LeGo](../../scripts/extenders/lego/index.md). However, that doesn't mean that DecDat is able to produce data that can be compiled again. This tool should be used mainly for research and educational purposes. Source code is available [here](https://github.com/auronen/DecDat/).
 
-## Instalation
+## Installation
 
 The tool is written in Java, allowing it to be executed seamlessly on both Windows and Linux operating systems. To utilize the tool, ensure that Java is installed on your system. We recommend using the Java version available [here](https://adoptium.net/temurin/releases/). Once you have your Java installed, download the latest tool version from GitHub [releases page](https://github.com/auronen/DecDat/releases/), and run the `DecDat.jar` file.
 

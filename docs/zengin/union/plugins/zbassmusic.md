@@ -6,7 +6,7 @@ of [BASS Library](https://www.un4seen.com/)
 to provide easier workflow for composers and additional functions for the perfect soundtrack design.
 
 !!! Info
-    The plugin has its very own [docuentation site](https://silver-ore-team.github.io/zBassMusic/), if you are interested in including zBassMusic into your project see the detailed [User Guide](https://silver-ore-team.github.io/zBassMusic/user-guide/).
+    The plugin has its very own [documentation site](https://silver-ore-team.github.io/zBassMusic/), if you are interested in including zBassMusic into your project see the detailed [User Guide](https://silver-ore-team.github.io/zBassMusic/user-guide/).
 
 | Contacts ||
 |:---------| :--- |

@@ -3,7 +3,7 @@ title: Events
 ---
 
 !!! example "Acknowledgment"
-    This tutorial was possible thanks to Kerrax, VAM and their excelent articles ([MDS](https://worldofplayers.ru/threads/36653/), [EventTags](https://worldofplayers.ru/threads/37708/)) and Avallach from [theModders](http://themodders.org/index.php?topic=13214.0) who provided valuable insight.
+    This tutorial was possible thanks to Kerrax, VAM and their excellent articles ([MDS](https://worldofplayers.ru/threads/36653/), [EventTags](https://worldofplayers.ru/threads/37708/)) and Avallach from [theModders](http://themodders.org/index.php?topic=13214.0) who provided valuable insight.
 
 ## Animation event block overview
 
@@ -301,7 +301,7 @@ Here is a list of event tag types:
 | [DEF_DROP_TORCH](#def_drop_torch)                 | Drops torch from slot to world                        |
 | [DEF_HIT_LIMB](#def_hit_limb)                     | Defines node which deals damage                       |
 | [DEF_DIR](#def_dir)                               | Defines attack direction                              |
-| [DEF_DAM_MULTIPLIER](#def_dam_multiplier)         | Defines damage mutliplier                             |
+| [DEF_DAM_MULTIPLIER](#def_dam_multiplier)         | Defines damage multiplier                             |
 | [DEF_PAR_FRAME](#def_par_frame)                   | Defines frame range for blocking                      |
 | [DEF_OPT_FRAME](#def_opt_frame)                   | Defines damage frames                                 |
 | [DEF_HIT_END](#def_hit_end)                       | Defines last frame to continue combo                  |

@@ -247,7 +247,7 @@ LeGo_Init(LeGo_FrameFunctions);
 
 ### `FF_RemoveAll`
 !!! function "`FF_RemoveAll`"
-    Stops all intsnces of a specific FrameFunction.
+    Stops all instances of a specific FrameFunction.
     ```dae
     func void FF_RemoveAll(var func function)
     ```
