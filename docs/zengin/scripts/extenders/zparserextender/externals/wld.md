@@ -4,96 +4,103 @@ title: WLD functions
 # WLD - world manipulation functions
 Functions related to the world. 
 
-## Wld_ChangeLevel
-Trigger level change.
+## `Wld_ChangeLevel`
+!!! function "`Wld_ChangeLevel`"
+    Trigger level change.
 
-```dae
-func void Wld_ChangeLevel( var string world, var string waypoint ) {};
-```
+    ```dae
+    func void Wld_ChangeLevel( var string world, var string waypoint ) {};
+    ```
 
-- `world` - name of the world
-- `waypoint` - target waypoint
+    - `world` - name of the world
+    - `waypoint` - target waypoint
 
-## Wld_FindVob
-Return the VOB instance based on its name.
+## `Wld_FindVob`
+!!! function "`Wld_FindVob`"
+    Return the VOB instance based on its name.
 
-```dae
-func instance Wld_FindVob( var string vobname ) {};
-```
+    ```dae
+    func instance Wld_FindVob( var string vobname ) {};
+    ```
 
-- `vobname` - name of the vob
-- `return` - zCVob pointer
+    - `vobname` - name of the vob
+    - `return` - zCVob pointer
 
-## Wld_PlayEffectVob
-Play a visual effect at specified vob
+## `Wld_PlayEffectVob`
+!!! function "`Wld_PlayEffectVob`"
+    Play a visual effect at specified vob
 
-```dae
-func void Wld_PlayEffectVob(    var string effect,
-                                var instance pvob,
+    ```dae
+    func void Wld_PlayEffectVob(    var string effect,
+                                    var instance pvob,
+                                    var int level,
+                                    var int damage,
+                                    var int damage_type,
+                                    var int damage_speed ) {};
+    ```
+
+    - `effect` - effect name
+    - `pvob` - zCVob to play the effect at
+    - `level` - effect level
+    - `damage` - damage amount
+    - `damage_type` - damage type
+    - `damage_speed` - damage interval
+
+## `Wld_PlayEffectAt`
+!!! function "`Wld_PlayEffectAt`"
+    Play a visual effect at specified world coordinates
+
+    ```dae
+    func void Wld_PlayEffectAt( var string effect,
+                                var instance coord,
                                 var int level,
                                 var int damage,
                                 var int damage_type,
                                 var int damage_speed ) {};
-```
+    ```
 
-- `effect` - effect name
-- `pvob` - zCVob to play the effect at
-- `level` - effect level
-- `damage` - damage amount
-- `damage_type` - damage type
-- `damage_speed` - damage interval
+    - `effect` - effect name
+    - `coord` - world coordinates (`zVEC3`) to play the effect at
+    - `level` - effect level
+    - `damage` - damage amount
+    - `damage_type` - damage type
+    - `damage_speed` - damage interval
 
-## Wld_PlayEffectAt
-Play a visual effect at specified world coordinates
+## `Wld_ToggleRain`
+!!! function "`Wld_ToggleRain`"
+    Turns on the rain
 
-```dae
-func void Wld_PlayEffectAt( var string effect,
-                            var instance coord,
-                            var int level,
-                            var int damage,
-                            var int damage_type,
-                            var int damage_speed ) {};
-```
+    ```dae
+    func void Wld_ToggleRain( var float weight, var float time ) {};
+    ```
 
-- `effect` - effect name
-- `coord` - world coordinates (`zVEC3`) to play the effect at
-- `level` - effect level
-- `damage` - damage amount
-- `damage_type` - damage type
-- `damage_speed` - damage interval
+    - `weight` - the strength of the rain
+    - `time` - rain duration
 
-## Wld_ToggleRain
-Turns on the rain
+## `Wld_SetWeatherType`
+!!! function "`Wld_SetWeatherType`"
+    Sets the weather type.
+    Types:
 
-```dae
-func void Wld_ToggleRain( var float weight, var float time ) {};
-```
+    `0` - snow
+    `1` - rain
 
-- `weight` - the strength of the rain
-- `time` - rain duration
+    ```dae
+    func void Wld_SetWeatherType( var int type ) {};
+    ```
 
-## Wld_SetWeatherType
-Sets the weather type.
-Types:
+    - `type` - weather type
 
-`0` - snow
-`1` - rain
+## `Wld_GetWeatherType`
+!!! function "`Wld_GetWeatherType`"
+    Returns the weather type.
+    Types:
 
-```dae
-func void Wld_SetWeatherType( var int type ) {};
-```
+    `0` - snow
+    `1` - rain
 
-- `type` - weather type
+    ```dae
+    func int Wld_GetWeatherType() {};
+    ```
 
-## Wld_GetWeatherType
-Returns the weather type.
-Types:
-
-`0` - snow
-`1` - rain
-
-```dae
-func int Wld_GetWeatherType() {};
-```
-
-- `return` - weather type
+    - `return` - weather type

@@ -3,171 +3,187 @@ title: Trialoge
 description: Pakiet LeGo implementujący trialogi w gothicu
 ---
 # Trialogi
+
+!!! info inline end
+    **Zależności:**<br/>
+    - [AI_Function](../tools/ai_function.md)<br/>
+    **Implementacja:**<br/>
+    [:material-github: Trialoge.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Trialoge.d)
+
 Ten pakiet pozwala na tworzenie rozmów z dowolną liczbą NPC i sterowanie kamerą podczas dialogu.
-
-## Zależności
-
-- [AI_Function](../tools/ai_function.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_Trialoge`.
 ```dae
 LeGo_Init(LeGo_Trialoge);
 ```
-## Implementacja
-[:material-github: Trialoge.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/Trialoge.d)
-
 ## Funkcje
 
 ### `EquipWeapon`
-Funkcja Sektenspinnera. Sprawia, że NPC wyposaża broń.
-```dae
-func void EquipWeapon(var C_NPC slf, var int ItemInstance)
-```
-**Parametry**
+!!! function "`EquipWeapon`"
+    Funkcja Sektenspinnera. Sprawia, że NPC wyposaża broń.
+    ```dae
+    func void EquipWeapon(var C_NPC slf, var int ItemInstance)
+    ```
+    **Parametry**
 
-- `#!dae var C_NPC slf`  
-    NPC który wyposaża broń
-- `#!dae var int ItemInstance`  
-    Instancja broni do wyposażenia
+    - `#!dae var C_NPC slf`  
+        NPC który wyposaża broń
+    - `#!dae var int ItemInstance`  
+        Instancja broni do wyposażenia
 
-**Konfiguracja**
+    **Konfiguracja**
 
-`#!dae const int EquipWeapon_TogglesEquip = 1`
+    `#!dae const int EquipWeapon_TogglesEquip = 1`
 
-Powyższa stała ustala zachowanie funkcji podczas próby założenia już założonej broni:
+    Powyższa stała ustala zachowanie funkcji podczas próby założenia już założonej broni:
 
-- `0` - `EquipWeapon` nic nie zrobi
-- `1` - `EquipWeapon` zdejmie tą broń
+    - `0` - `EquipWeapon` nic nie zrobi
+    - `1` - `EquipWeapon` zdejmie tą broń
 
 ### `Npc_GetArmor`
-Pobiera pancerz wyposażony przez NPC.
-```dae
-func int Npc_GetArmor(var C_NPC slf)
-```
-**Parametry**
+!!! function "`Npc_GetArmor`"
+    Pobiera pancerz wyposażony przez NPC.
+    ```dae
+    func int Npc_GetArmor(var C_NPC slf)
+    ```
+    **Parametry**
 
-- `#!dae var C_NPC slf`  
-    NPC którego pancerz jest pobierany
+    - `#!dae var C_NPC slf`  
+        NPC którego pancerz jest pobierany
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca ID instancji pancerza założonego przez NPC.
+    Funkcja zwraca ID instancji pancerza założonego przez NPC.
 
 ### `Npc_GetMeleeWeapon`
-Pobiera wyposażoną przez NPC broń białą.
-```dae
-func int Npc_GetMeleeWeapon(var C_NPC slf)
-```
-**Parametry**
+!!! function "`Npc_GetMeleeWeapon`"
+    Pobiera wyposażoną przez NPC broń białą.
+    ```dae
+    func int Npc_GetMeleeWeapon(var C_NPC slf)
+    ```
+    **Parametry**
 
-- `#!dae var C_NPC slf`  
-    NPC którego broń jest pobierana
+    - `#!dae var C_NPC slf`  
+        NPC którego broń jest pobierana
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca ID instancji broni białej wyposażonej przez NPC.
+    Funkcja zwraca ID instancji broni białej wyposażonej przez NPC.
 
 ### `Npc_GetRangedWeapon`
-Pobiera wyposażoną przez NPC broń dystansową.
-```dae
-func int Npc_GetRangedWeapon(var C_NPC slf)
-```
-**Parametry**
+!!! function "`Npc_GetRangedWeapon`"
+    Pobiera wyposażoną przez NPC broń dystansową.
+    ```dae
+    func int Npc_GetRangedWeapon(var C_NPC slf)
+    ```
+    **Parametry**
 
-- `#!dae var C_NPC slf`  
-    NPC którego broń jest pobierana
+    - `#!dae var C_NPC slf`  
+        NPC którego broń jest pobierana
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca ID instancji broni dystansowej wyposażonej przez NPC.
+    Funkcja zwraca ID instancji broni dystansowej wyposażonej przez NPC.
 
 ### `Npc_TradeItem`
-Podmienia broń założoną przez NPC.
-```dae
-func void Npc_TradeItem(var c_npc slf, var int itm0, var int itm1) 
-```
-**Parametry**
+!!! function "`Npc_TradeItem`"
+    Podmienia broń założoną przez NPC.
+    ```dae
+    func void Npc_TradeItem(var c_npc slf, var int itm0, var int itm1) 
+    ```
+    **Parametry**
 
-- `#!dae var C_NPC slf`  
-    NPC na którym wykonywana jest operacja
-- `#!dae var int itm0`  
-    ID instancji przedmiotu do usunięcia
-- `#!dae var int itm1`  
-    ID instancji przedmiotu do stworzenia i założenia
+    - `#!dae var C_NPC slf`  
+        NPC na którym wykonywana jest operacja
+    - `#!dae var int itm0`  
+        ID instancji przedmiotu do usunięcia
+    - `#!dae var int itm1`  
+        ID instancji przedmiotu do stworzenia i założenia
 
 ### `DiaCAM_Update`
-Funkcja Sektenspinnera. Aktualizuje kamerę dialogową. (Używana wewnętrznie)
-```dae
-func void DiaCAM_Update()
-```
+!!! function "`DiaCAM_Update`"
+    Funkcja Sektenspinnera. Aktualizuje kamerę dialogową. (Używana wewnętrznie)
+    ```dae
+    func void DiaCAM_Update()
+    ```
 
 ### `DiaCAM_Disable`
-Całkowicie wyłącza kamery dialogowe.
-```dae
-func void DiaCAM_Disable()
-```
+!!! function "`DiaCAM_Disable`"
+    Całkowicie wyłącza kamery dialogowe.
+    ```dae
+    func void DiaCAM_Disable()
+    ```
 
 ### `DiaCAM_Enable`
-Resetuje kamery dialogowe do ustawień domyślnych.
-```dae
-func void DiaCAM_Enable()
-```
+!!! function "`DiaCAM_Enable`"
+    Resetuje kamery dialogowe do ustawień domyślnych.
+    ```dae
+    func void DiaCAM_Enable()
+    ```
+
 ### `TRIA_Wait`
-Sprawia że `self` i `other` czekają na siebie, np. podczas dla synchronizacji po wywołaniu `AI_GotoWP`. 
-```dae
-func void TRIA_Wait()
-```
+!!! function "`TRIA_Wait`"
+    Sprawia że `self` i `other` czekają na siebie, np. podczas dla synchronizacji po wywołaniu `AI_GotoWP`. 
+    ```dae
+    func void TRIA_Wait()
+    ```
 
 ### `TRIA_Invite`
-Zaprasza NPC do rozmowy. Należy wywołać przed `TRIA_Start`.`TRIA_Start`.
-```dae
-func void TRIA_Invite(var C_NPC slf)
-```
-**Parametry**
+!!! function "`TRIA_Invite`"
+    Zaprasza NPC do rozmowy. Należy wywołać przed `TRIA_Start`.`TRIA_Start`.
+    ```dae
+    func void TRIA_Invite(var C_NPC slf)
+    ```
+    **Parametry**
 
-- `#!dae var C_NPC slf`  
-    Zapraszany NPC
+    - `#!dae var C_NPC slf`  
+        Zapraszany NPC
 
 ### `TRIA_Start`
-Rozpoczyna trialog. Wcześniej wszyscy NPC powinni zostać zaproszeni przez `TRIA_Invite`.
-```dae
-func void TRIA_Start()
-```
+!!! function "`TRIA_Start`"
+    Rozpoczyna trialog. Wcześniej wszyscy NPC powinni zostać zaproszeni przez `TRIA_Invite`.
+    ```dae
+    func void TRIA_Start()
+    ```
 
 ### `TRIA_Barrier`
-Robi to samo co `TRIA_Wait`, ale dotyczy wszystkich uczestniczących NPC.
-```dae
-func void TRIA_Barrier()
-```
+!!! function "`TRIA_Barrier`"
+    Robi to samo co `TRIA_Wait`, ale dotyczy wszystkich uczestniczących NPC.
+    ```dae
+    func void TRIA_Barrier()
+    ```
 
 ### `TRIA_Next`
-Ustawia podanego NPC na `self`.
-```dae
-func void TRIA_Next(var C_NPC n0)
-```
-**Parametry**
+!!! function "`TRIA_Next`"
+    Ustawia podanego NPC na `self`.
+    ```dae
+    func void TRIA_Next(var C_NPC n0)
+    ```
+    **Parametry**
 
-- `#!dae var C_NPC n0`  
-    NPC ustawiany na `self`
+    - `#!dae var C_NPC n0`  
+        NPC ustawiany na `self`
 
 ### `TRIA_Cam`
-Rozpoczyna zdefiniowany wcześniej ruch kamery.
-```dae
-func void TRIA_Cam(var string evt)
-```
-**Parametry**
+!!! function "`TRIA_Cam`"
+    Rozpoczyna zdefiniowany wcześniej ruch kamery.
+    ```dae
+    func void TRIA_Cam(var string evt)
+    ```
+    **Parametry**
 
-- `#!dae var string evt`  
-    Nazwa ruchu kamery w Spacerze. Jeśli zostanie przekazany pusty ciąg znaków, nastąpi przerwanie ruchu kamery.
+    - `#!dae var string evt`  
+        Nazwa ruchu kamery w Spacerze. Jeśli zostanie przekazany pusty ciąg znaków, nastąpi przerwanie ruchu kamery.
 
 ### `TRIA_Finish`
-Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym razie dalsze trialogi nie będą mogły zostać rozpoczęte.
-```dae
-func void TRIA_Finish()
-```
+!!! function "`TRIA_Finish`"
+    Kończy trwający trialog. Musi być zawsze wywoływana na końcu, w przeciwnym razie dalsze trialogi nie będą mogły zostać rozpoczęte.
+    ```dae
+    func void TRIA_Finish()
+    ```
 
-## Przykłady
+## Przykłady {: id="examples" }
 
 ### Prosty Trialog
 Poniższa konwersacja zostanie zaimplementowana za pomocą trialogów:

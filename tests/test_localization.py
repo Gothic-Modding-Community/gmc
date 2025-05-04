@@ -4,9 +4,8 @@ Test suite to check if everything related to localization is in order.
 import glob
 import json
 import os
+import re
 import unittest
-
-import regex
 
 # noinspection PyPackageRequirements
 from mkdocs.utils import yaml_load
@@ -29,7 +28,7 @@ class LocalizationTest(unittest.TestCase):
 
         # Extract the ENV options, and assert that the selected boolean variables
         # are set to the correct boolean values (aka weren't changed by mistake)
-        dirty_settings = regex.findall(r"\s*(.*?):\s*!ENV\s*\[(.*?)\]", content)
+        dirty_settings = re.findall(r"\s*(.*?):\s*!ENV\s*\[(.*?)\]", content)
         cls.settings_to_check = []
 
         # Assure only controlled cases use undefined fallback values
@@ -137,9 +136,9 @@ class LocalizationTest(unittest.TestCase):
         action_content = main[action_start : action_end + 2]
 
         announcement = json.loads(
-            regex.sub(r",\s*}", "}", regex.sub(r"\s+", " ", announcement_content))
+            re.sub(r",\s*}", "}", re.sub(r"\s+", " ", announcement_content))
         )
-        action = json.loads(regex.sub(r",\s*}", "}", regex.sub(r"\s+", " ", action_content)))
+        action = json.loads(re.sub(r",\s*}", "}", re.sub(r"\s+", " ", action_content)))
 
         for language in languages:
             locale = language["locale"]
@@ -161,8 +160,8 @@ class LocalizationTest(unittest.TestCase):
             if path.endswith(".en.md"):
                 continue
 
-            default_path = os.path.join(DOCS_DIR, regex.sub(r"\.[a-z]{2}\.md", ".md", path))
-            en_path = os.path.join(DOCS_DIR, regex.sub(r"\.[a-z]{2}\.md", ".en.md", path))
+            default_path = os.path.join(DOCS_DIR, re.sub(r"\.[a-z]{2}\.md", ".md", path))
+            en_path = os.path.join(DOCS_DIR, re.sub(r"\.[a-z]{2}\.md", ".en.md", path))
 
             path_exists = os.path.exists(en_path) or os.path.exists(default_path)
             self.assertTrue(path_exists, msg=f"Path '{path}' doesn't have any English equivalent")

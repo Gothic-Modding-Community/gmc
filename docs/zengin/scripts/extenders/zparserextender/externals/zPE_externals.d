@@ -920,26 +920,25 @@ func void Vob_SetMobData( var C_Vob mob, var C_Mob_Data data ) {};
 ///
 /// @param mobInter oCMobInter object
 /// @return MobInter_Data of the object
-func MobInter_Data Vob_GetMobInterData( var C_Vob mobInter ) {};
+func C_MobInter_Data Vob_GetMobInterData( var C_Vob mobInter ) {};
 
 /// Sets the data of the oCMobInter object
 ///
 /// @param mobInter oCMobInter object
-/// @param data MobInter_Data of the object
+/// @param data C_MobInter_Data of the object
 func void Vob_SetMobInterData( var C_Vob mobInter, var C_MobInter_Data data ) {};
 
 /// Returns the data of the oCMobLockable object
 ///
 /// @param mobLock oCMobLockable object
-/// @param data MobInter_Data of the object
 /// return C_MobLockable_Data of the object
-func C_MobLockable_Data Vob_GetMobInterData( var C_Vob mobLock ) {};
+func C_MobLockable_Data Vob_GetMobLockableData( var C_Vob mobLock ) {};
 
 /// Sets the data of the oCMobLockable object
 ///
 /// @param mobLock oCMobLockable object
 /// @param data C_MobLockable_Data of the object
-func void Vob_SetMobInterData( var C_Vob mobLock, var C_MobLockable_Data data ) {};
+func void Vob_SetMobLockableData( var C_Vob mobLock, var C_MobLockable_Data data ) {};
 
 // =========================================================
 //

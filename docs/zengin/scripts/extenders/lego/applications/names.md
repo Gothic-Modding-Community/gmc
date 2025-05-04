@@ -3,40 +3,43 @@ title: Names
 description: LeGo package for changing NPCs display name during the game
 ---
 # Names
-Allows the user to change NPC name e.g. after he shows up.
 
-## Dependencies
-- [Talents](../tools/talents.md)
+!!! info inline end
+    **Dependencies:**<br/>
+    - [Talents](../tools/talents.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: Names.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Names.d)
+
+Allows the user to change NPC name e.g. after he shows up.
 
 ## Initialization
 N/A
 
-## Implementation
-[:material-github: Names.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Names.d)
-
 ## Functions
 
 ### `SetName`
-Should be set in InitGlobal().
-```dae
-func void SetName(var C_NPC npc, var string name)
-```
-**Parameters**
+!!! function "`SetName`"
+    Should be set in InitGlobal().
+    ```dae
+    func void SetName(var C_NPC npc, var string name)
+    ```
+    **Parameters**
 
-- `#!dae var C_NPC npc`  
-    The NPC to be named
-- `#!dae var string name`  
-    The name of the NPC
+    - `#!dae var C_NPC npc`  
+        The NPC to be named
+    - `#!dae var string name`  
+        The name of the NPC
 
 ### `ShowName`
-Permanently displays the name set by `SetName` function above the npc.
-```dae
-func void ShowName(var C_NPC npc)
-```
-**Parameters**
+!!! function "`ShowName`"
+    Permanently displays the name set by `SetName` function above the npc.
+    ```dae
+    func void ShowName(var C_NPC npc)
+    ```
+    **Parameters**
 
-- `#!dae var C_NPC npc`  
-    The NPC whose name should be shown
+    - `#!dae var C_NPC npc`  
+        The NPC whose name should be shown
 
 ## Examples
 

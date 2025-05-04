@@ -70,7 +70,16 @@ extra:
       link: https://github.com/Gothic-Modding-Community/gmc
       name: Gothic Modding Community GitHub repository
 
-
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
 
 markdown_extensions:
   - toc:
@@ -110,6 +119,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - md_in_html
 
 plugins:
   - search
@@ -184,6 +194,17 @@ plugins:
       enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
       type: iso_datetime
       timezone: Europe/Warsaw
+      exclude:
+        - index*.md
+        - preferences*.md
+        - genome/index*.md
+        - zengin/index*.md
+  - git-authors:
+      enabled: !ENV [GMC_ENABLE_ON_PUBLISH, False]
+      show_email_address: false
+      sort_authors_by: contribution
+      authorship_threshold_percent: 8
+      count_empty_lines: false
       exclude:
         - index*.md
         - preferences*.md

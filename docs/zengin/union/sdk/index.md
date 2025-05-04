@@ -3,6 +3,9 @@ Union SDK is a software development kit for making Union plugins that directly i
 
 Working with Union SDK requires at least basic knowledge of C++ programming. Knowledge of the x86 (32-bit) architecture, dynamically linked libraries, and reverse engineering is also welcomed as we need to understand what the Gothic engine does under the hood to use it effectively. 
 
+!!! Warning
+    Union SDK has been discontinued in favor of the [Union Framework](../framework.md), however, it is still available for download and use.
+
 ## Requirements
 Union SDK requires Visual Studio IDE, NET Framework 4.7.2, and Visual C++ 2010 libraries. They are available on Microsoft websites:
 

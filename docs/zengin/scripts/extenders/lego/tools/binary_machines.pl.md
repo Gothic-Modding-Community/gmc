@@ -3,298 +3,325 @@ title: BinaryMachines
 description: Pakiet LeGo do tworzenia, zapisywania i odczytywania własnych plików
 ---
 # BinaryMachines
-Ten pakiet pozwala tworzyć i zapisywać własne pliki w dowolnym miejscu w systemie plików.
 
-## Zależności
-Brak
+!!! info inline end
+    **Zależności:**<br/>
+    - Brak
+    **Implementacja:**<br/>
+    [:material-github: BinaryMachines.d na GitHub](https://github.com/Lehona/LeGo/blob/dev/BinaryMachines.d)
+
+Ten pakiet pozwala tworzyć i zapisywać własne pliki w dowolnym miejscu w systemie plików.
 
 ## Inicjalizacja
 Brak
 
-## Implementacja
-[:material-github: BinaryMachines.d na GitHub](https://github.com/Lehona/LeGo/blob/dev/BinaryMachines.d)
-
 ## BinaryWriter
 
 ### `BW_NewFile`
-Tworzy plik o nazwie `file` i otwiera strumień. Nie działa, jeśli strumień jest już otwarty.
-```dae
-func int BW_NewFile(var string file)
-```
-**Parametry**
+!!! function "`BW_NewFile`"
+    Tworzy plik o nazwie `file` i otwiera strumień. Nie działa, jeśli strumień jest już otwarty.
+    ```dae
+    func int BW_NewFile(var string file)
+    ```
+    **Parametry**
 
-- `#!dae var string file`  
-    Nazwa tworzonego pliku
+    - `#!dae var string file`  
+        Nazwa tworzonego pliku
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca `TRUE` jeśli plik został pomyślnie utworzony i zainicjalizowany, w przeciwnym razie zwracane jest `FALSE`.
+    Funkcja zwraca `TRUE` jeśli plik został pomyślnie utworzony i zainicjalizowany, w przeciwnym razie zwracane jest `FALSE`.
 
 ### `BW_Close`
-Zamyka aktualny strumień zapisu.
-```dae
-func void BW_Close()
-```
+!!! function "`BW_Close`"
+    Zamyka aktualny strumień zapisu.
+    ```dae
+    func void BW_Close()
+    ```
 
 ### `BW`
-Zapisuje `length` bajtów z `data` do strumienia, maksymalnie 4 bajty.
-```dae
-func void BW(var int data, var int length)
-```
-**Parametry**
+!!! function "`BW`"
+    Zapisuje `length` bajtów z `data` do strumienia, maksymalnie 4 bajty.
+    ```dae
+    func void BW(var int data, var int length)
+    ```
+    **Parametry**
 
-- `#!dae var int data`  
-    Wartość bajtów
-- `#!dae var int length`  
-    Liczba bajtów
+    - `#!dae var int data`  
+        Wartość bajtów
+    - `#!dae var int length`  
+        Liczba bajtów
 
 ### `BW_Int`
-Zapisuje 4 bajty z `data` do strumienia. To samo co `BW(data, 4)`.
-```dae
-func void BW_Int(var int data)
-```
-**Parametry**
+!!! function "`BW_Int`"
+    Zapisuje 4 bajty z `data` do strumienia. To samo co `BW(data, 4)`.
+    ```dae
+    func void BW_Int(var int data)
+    ```
+    **Parametry**
 
-- `#!dae var int data`  
-    Wartość całkowita do zapisania
+    - `#!dae var int data`  
+        Wartość całkowita do zapisania
 
 ### `BW_Char`
-Zapisuje pierwszy znak z `data` do strumienia. To samo co `BW(Str_GetCharAt(data, 0), 1)`.
-```dae
-func void BW_Char(var string data)
-```
-**Parametry**
+!!! function "`BW_Char`"
+    Zapisuje pierwszy znak z `data` do strumienia. To samo co `BW(Str_GetCharAt(data, 0), 1)`.
+    ```dae
+    func void BW_Char(var string data)
+    ```
+    **Parametry**
 
-- `#!dae var string data`  
-    Znak do zapisania
+    - `#!dae var string data`  
+        Znak do zapisania
 
 ### `BW_String`
-Zapisuje `data` zakończone znakiem `\0` do strumienia.
-```dae
-func void BW_String(var string data)
-```
-**Parametry**
+!!! function "`BW_String`"
+    Zapisuje `data` zakończone znakiem `\0` do strumienia.
+    ```dae
+    func void BW_String(var string data)
+    ```
+    **Parametry**
 
-- `#!dae var string data`  
-    Ciąg znaków do zapisania
+    - `#!dae var string data`  
+        Ciąg znaków do zapisania
 
 ### `BW_Byte`
-Zapisuje bajt z `data` do strumienia. To samo co `BW(data, 1)`.
-```dae
-func void BW_Byte(var int data)
-```
-**Parametry**
+!!! function "`BW_Byte`"
+    Zapisuje bajt z `data` do strumienia. To samo co `BW(data, 1)`.
+    ```dae
+    func void BW_Byte(var int data)
+    ```
+    **Parametry**
 
-- `#!dae var int data`  
-    Wartość bajtowa do zapisania
+    - `#!dae var int data`  
+        Wartość bajtowa do zapisania
 
 ### `BW_Bytes`
-Zapisuje `length` bajtów ze wskaźnika `dataPtr` do strumienia.
-```dae
-func void BW_Bytes(var int dataPtr, var int length)
-```
-**Parametry**
+!!! function "`BW_Bytes`"
+    Zapisuje `length` bajtów ze wskaźnika `dataPtr` do strumienia.
+    ```dae
+    func void BW_Bytes(var int dataPtr, var int length)
+    ```
+    **Parametry**
 
-- `#!dae var int dataPtr`  
-    Wskaźnik danych do zapisania
-- `#!dae var int length`  
-    Liczba bajtów
+    - `#!dae var int dataPtr`  
+        Wskaźnik danych do zapisania
+    - `#!dae var int length`  
+        Liczba bajtów
 
 ### `BW_Text`
-Zapisuje ciąg znaków do strumienia bez jego zakończenia. Nie można go już odczytać.
-```dae
-func void BW_Text(var string data)
-```
-**Parametry**
+!!! function "`BW_Text`"
+    Zapisuje ciąg znaków do strumienia bez jego zakończenia. Nie można go już odczytać.
+    ```dae
+    func void BW_Text(var string data)
+    ```
+    **Parametry**
 
-- `#!dae var string data`  
-    Tekst do zapisania
+    - `#!dae var string data`  
+        Tekst do zapisania
 
 ### `BW_NextLine`
-Zapisuje akapit do strumienia.
-```dae
-func void BW_NextLine()
-```
+!!! function "`BW_NextLine`"
+    Zapisuje akapit do strumienia.
+    ```dae
+    func void BW_NextLine()
+    ```
 
 ## BinaryReader
 
 ### `BR_OpenFile`
-Otwiera plik o nazwie `file` i otwiera strumień. Nie działa, jeśli strumień jest już otwarty.
-```dae
-func int BR_OpenFile(var string file)
-```
-**Parametry**
+!!! function "`BR_OpenFile`"
+    Otwiera plik o nazwie `file` i otwiera strumień. Nie działa, jeśli strumień jest już otwarty.
+    ```dae
+    func int BR_OpenFile(var string file)
+    ```
+    **Parametry**
 
-- `#!dae var string file`  
-    Plik, który ma być otwarty
+    - `#!dae var string file`  
+        Plik, który ma być otwarty
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca `TRUE` jeśli plik został pomyślnie otworzony i zainicjalizowany, w przeciwnym razie zwracane jest `FALSE`.
-
+    Funkcja zwraca `TRUE` jeśli plik został pomyślnie otworzony i zainicjalizowany, w przeciwnym razie zwracane jest `FALSE`.
 
 ### `BR_Close`
-Zamyka aktualny strumień odczytu.
-```dae
-func void BR_Close()
-```
+!!! function "`BR_Close`"
+    Zamyka aktualny strumień odczytu.
+    ```dae
+    func void BR_Close()
+    ```
 
 ### `BR`
-Odczytuje bajty ze strumienia.
-```dae
-func int BR(var int length)
-```
-**Parametry**
+!!! function "`BR`"
+    Odczytuje bajty ze strumienia.
+    ```dae
+    func int BR(var int length)
+    ```
+    **Parametry**
 
-- `#!dae var int length`  
-    Liczba bajtów do odczytania (maksymalnie 4)
+    - `#!dae var int length`  
+        Liczba bajtów do odczytania (maksymalnie 4)
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca odczytaną wartość bajtów.
+    Funkcja zwraca odczytaną wartość bajtów.
 
 ### `BR_Int`
-Odczytuje 4 bajty ze strumienia. To samo co `BR(4)`.
-```dae
-func int BR_Int()
-```
-**Zwracana wartość**
+!!! function "`BR_Int`"
+    Odczytuje 4 bajty ze strumienia. To samo co `BR(4)`.
+    ```dae
+    func int BR_Int()
+    ```
+    **Zwracana wartość**
 
-Funkcja zwraca odczytaną liczbę całkowitą.
+    Funkcja zwraca odczytaną liczbę całkowitą.
 
 ### `BR_Char`
-Odczytuje znak ze strumienia. To samo co `BR(1)`.
-```dae
-func string BR_Char()
-```
-**Zwracana wartość**
+!!! function "`BR_Char`"
+    Odczytuje znak ze strumienia. To samo co `BR(1)`.
+    ```dae
+    func string BR_Char()
+    ```
+    **Zwracana wartość**
 
-Funkcja zwraca odczytany znak jako `string`.
+    Funkcja zwraca odczytany znak jako `string`.
 
 ### `BR_String`
-Odczytuje ciąg znaków zakończony znakiem `\0` ze strumienia.
-```dae
-func string BR_String()
-```
-**Zwracana wartość**
+!!! function "`BR_String`"
+    Odczytuje ciąg znaków zakończony znakiem `\0` ze strumienia.
+    ```dae
+    func string BR_String()
+    ```
+    **Zwracana wartość**
 
-Funkcja zwraca odczytany ciąg znaków.
+    Funkcja zwraca odczytany ciąg znaków.
 
 ### `BR_Byte`
-Odczytuje bajt ze strumienia.
-```dae
-func int BR_Byte()
-```
-**Zwracana wartość**
+!!! function "`BR_Byte`"
+    Odczytuje bajt ze strumienia.
+    ```dae
+    func int BR_Byte()
+    ```
+    **Zwracana wartość**
 
-Funkcja zwraca odczytany bajt.
+    Funkcja zwraca odczytany bajt.
 
 ### `BR_Bytes`
-Odczytuje bajty ze strumienia.
-```dae
-func int BR_Bytes(var int length)
-```
-**Parametry**
+!!! function "`BR_Bytes`"
+    Odczytuje bajty ze strumienia.
+    ```dae
+    func int BR_Bytes(var int length)
+    ```
+    **Parametry**
 
-- `#!dae var int length`  
-    Liczba bajtów do odczytania
+    - `#!dae var int length`  
+        Liczba bajtów do odczytania
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca wskaźnik do odczytanych bajtów.
+    Funkcja zwraca wskaźnik do odczytanych bajtów.
 
 ### `BR_TextLine`
-Odczytuje linię ze strumienia.
-```dae
-func string BR_TextLine()
-```
-**Zwracana wartość**
+!!! function "`BR_TextLine`"
+    Odczytuje linię ze strumienia.
+    ```dae
+    func string BR_TextLine()
+    ```
+    **Zwracana wartość**
 
-Funkcja zwraca odczytaną linię.
+    Funkcja zwraca odczytaną linię.
 
 ### `BR_Text`
-Odczytuje ciąg znaków o podanej długości ze strumienia.
-```dae
-func string BR_Text(var int length)
-```
-**Parametry**
+!!! function "`BR_Text`"
+    Odczytuje ciąg znaków o podanej długości ze strumienia.
+    ```dae
+    func string BR_Text(var int length)
+    ```
+    **Parametry**
 
-- `#!dae var int length`  
-    Liczba znaków do odczytania
+    - `#!dae var int length`  
+        Liczba znaków do odczytania
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca odczytany ciąg znaków.
+    Funkcja zwraca odczytany ciąg znaków.
 
 ### `BR_NextLine`
-Zmienia pozycję odczytu na następny akapit, utworzony za pomocą [`BW_NextLine`](#bw_nextline).
-```dae
-func void BR_NextLine()
-```
+!!! function "`BR_NextLine`"
+    Zmienia pozycję odczytu na następny akapit, utworzony za pomocą [`BW_NextLine`](#bw_nextline).
+    ```dae
+    func void BR_NextLine()
+    ```
 
 ## Wywołania funkcji silnika
 
 ### `WIN_GetLastError`
-Wywołanie [funkcji `GetLastError`](https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) z Win32 API.
-```dae
-func int WIN_GetLastError()
-```
-**Zwracana wartość**
+!!! function "`WIN_GetLastError`"
+    Wywołanie [funkcji `GetLastError`](https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) z Win32 API.
+    ```dae
+    func int WIN_GetLastError()
+    ```
+    **Zwracana wartość**
 
-Funkcja zwraca kod ostatniego błędu wątku wywołującego.
+    Funkcja zwraca kod ostatniego błędu wątku wywołującego.
 
 ### `WIN_CreateFile`
-Wywołanie [funkcji `CreateFileA`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea) z Win32 API.
-```dae
-func int WIN_CreateFile(var string lpFileName,var int dwDesiredAccess,var int dwShareMode,var int lpSecurityAttributes,var int dwCreationDisposition,var int dwFlagsAndAttributes,var int hTemplateFile)
-```
-**Parametry**
+!!! function "`WIN_CreateFile`"
+    Wywołanie [funkcji `CreateFileA`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea) z Win32 API.
+    ```dae
+    func int WIN_CreateFile(var string lpFileName,var int dwDesiredAccess,var int dwShareMode,var int lpSecurityAttributes,var int dwCreationDisposition,var int dwFlagsAndAttributes,var int hTemplateFile)
+    ```
+    **Parametry**
 
-Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea#parameters)
+    Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea#parameters)
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Informacje o zwracanej wartości znajdziesz [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea#return-value)
+    Informacje o zwracanej wartości znajdziesz [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea#return-value)
 
 ### `WIN_WriteFile`
-Wywołanie [funkcji `WriteFile`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile) z Win32 API.
-```dae
-func void WIN_WriteFile(var int hFile,var int lpBuffer,var int nNumberOfBytesToWrite,var int lpNumberOfBytesWritten,var int lpOverlapped)
-```
-**Parametry**
+!!! function "`WIN_WriteFile`"
+    Wywołanie [funkcji `WriteFile`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile) z Win32 API.
+    ```dae
+    func void WIN_WriteFile(var int hFile,var int lpBuffer,var int nNumberOfBytesToWrite,var int lpNumberOfBytesWritten,var int lpOverlapped)
+    ```
+    **Parametry**
 
-Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile#parameters)
+    Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile#parameters)
 
 ### `WIN_ReadFile`
-Wywołanie [funkcji `ReadFile`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile) z Win32 API.
-```dae
-func void WIN_ReadFile(var int hFile,var int lpBuffer,var int nNumberOfBytesToRead,var int lpNumberOfBytesRead,var int lpOverlapped)
-```
-**Parametry**
+!!! function "`WIN_ReadFile`"
+    Wywołanie [funkcji `ReadFile`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile) z Win32 API.
+    ```dae
+    func void WIN_ReadFile(var int hFile,var int lpBuffer,var int nNumberOfBytesToRead,var int lpNumberOfBytesRead,var int lpOverlapped)
+    ```
+    **Parametry**
 
-Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile#parameters)
+    Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile#parameters)
 
 ### `WIN_CloseHandle`
-Wywołanie [funkcji `CloseHandle`](https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle) z Win32 API.
-```dae
-func void WIN_CloseHandle(var int hObject)
-```
-**Parametry**
+!!! function "`WIN_CloseHandle`"
+    Wywołanie [funkcji `CloseHandle`](https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle) z Win32 API.
+    ```dae
+    func void WIN_CloseHandle(var int hObject)
+    ```
+    **Parametry**
 
-Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle#parameters)
+    Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle#parameters)
 
 ### `WIN_GetFileSize`
-Wywołanie [funkcji `GetFileSize`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize) z Win32 API.
-```dae
-func int WIN_GetFileSize(var int hFile,var int lpFileSizeHigh)
-```
-**Parametry**
+!!! function "`WIN_GetFileSize`"
+    Wywołanie [funkcji `GetFileSize`](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize) z Win32 API.
+    ```dae
+    func int WIN_GetFileSize(var int hFile,var int lpFileSizeHigh)
+    ```
+    **Parametry**
 
-Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize#parameters)
+    Pełny opis parametrów można znaleźć [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize#parameters)
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Informacje o zwracanej wartości znajdziesz [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize#return-value)
+    Informacje o zwracanej wartości znajdziesz [tutaj](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesize#return-value)
 
 ### Constants
 Dodatkowo istnieją pewne stałe zdefiniowane do użycia z określonymi wywołaniami funkcji silnika.

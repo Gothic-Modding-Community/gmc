@@ -3,15 +3,17 @@ title: Interface
 description: LeGo package for working with the 2D interface
 ---
 # Interface
+
+!!! info inline end
+    **Dependencies:**<br/>
+    - [AI_Function](ai_function.md)<br/>
+    - [Anim8](../applications/anim8.md)<br/>
+    - [HookEngine](hook_engine.md)<br/>
+    - [PermMem](permmem.md)<br/>
+    **Implementation:**<br/>
+    [:material-github: Interface.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Interface.d)
+
 This package offers a lot of useful functions to work with the 2D interface.
-
-## Dependencies
-
-- [AI_Function](ai_function.md)
-- [Anim8](../applications/anim8.md)
-- [HookEngine](hook_engine.md)
-- [PermMem](permmem.md)
-
 
 ## Initialization
 Initialize with `LeGo_Interface` and `LeGo_PrintS` flag.
@@ -19,596 +21,634 @@ Initialize with `LeGo_Interface` and `LeGo_PrintS` flag.
 LeGo_Init(LeGo_Interface | LeGo_PrintS);
 ```
 
-## Implementation
-[:material-github: Interface.d on GitHub](https://github.com/Lehona/LeGo/blob/dev/Interface.d)
-
 ## Functions
 
 ### `sysGetTime`
-Better alternative for `MEM_GetSysTime()` from [Ikarus](../../ikarus/index.md).
-```dae
-func int sysGetTime()
-```
-**Return value**
+!!! function "`sysGetTime`"
+    Better alternative for `MEM_GetSysTime()` from [Ikarus](../../ikarus/index.md).
+    ```dae
+    func int sysGetTime()
+    ```
+    **Return value**
 
-The function returns elapsed time since game (system) startup.
+    The function returns elapsed time since game (system) startup.
 
 ### `RGBA`
-Generates a full `zColor`.
-```dae
-func int RGBA(var int r, var int g, var int b, var int a)
-```
-**Parameters**
+!!! function "`RGBA`"
+    Generates a full `zColor`.
+    ```dae
+    func int RGBA(var int r, var int g, var int b, var int a)
+    ```
+    **Parameters**
 
-- `#!dae var int r`  
-    Red channel value (0..255)
-- `#!dae var int g`  
-    Green channel value (0..255)
-- `#!dae var int b`  
-    Blue channel value (0..255)
-- `#!dae var int a`  
-    Alpha (0..255, 0 = invisible)
+    - `#!dae var int r`  
+        Red channel value (0..255)
+    - `#!dae var int g`  
+        Green channel value (0..255)
+    - `#!dae var int b`  
+        Blue channel value (0..255)
+    - `#!dae var int a`  
+        Alpha (0..255, 0 = invisible)
 
-**Return value**
+    **Return value**
 
-The function returns a `zColor` object.
+    The function returns a `zColor` object.
 
 ### `ChangeAlpha`
-Overrides the alpha value of a given `zColor`.
-```dae
-func int ChangeAlpha(var int zCol, var int a)
-```
-**Parameters**
+!!! function "`ChangeAlpha`"
+    Overrides the alpha value of a given `zColor`.
+    ```dae
+    func int ChangeAlpha(var int zCol, var int a)
+    ```
+    **Parameters**
 
-- `#!dae var int zCol`  
-    `zColor` to modify
-- `#!dae var int a`  
-    New alpha value
+    - `#!dae var int zCol`  
+        `zColor` to modify
+    - `#!dae var int a`  
+        New alpha value
 
-**Return value**
+    **Return value**
 
-The function returns a modified `zColor` object.
+    The function returns a modified `zColor` object.
 
 ### `GetAlpha`
-Returns the alpha value of a given `zColor`.
-```dae
-func int GetAlpha(var int zCol)
-```
-**Parameters**
+!!! function "`GetAlpha`"
+    Returns the alpha value of a given `zColor`.
+    ```dae
+    func int GetAlpha(var int zCol)
+    ```
+    **Parameters**
 
-- `#!dae var int zCol`  
-    `zColor` to get alpha from
+    - `#!dae var int zCol`  
+        `zColor` to get alpha from
 
 ### `Print_CreateText`
-Creates a new `zCViewText` on the screen with PermMem that can be freely edited.
-```dae
-func int Print_CreateText(var string text, var string font)
-```
-**Parameters**
+!!! function "`Print_CreateText`"
+    Creates a new `zCViewText` on the screen with PermMem that can be freely edited.
+    ```dae
+    func int Print_CreateText(var string text, var string font)
+    ```
+    **Parameters**
 
-- `#!dae var string text`  
-    The text of the `zCViewText`
-- `#!dae var string font`  
-    Font of text
+    - `#!dae var string text`  
+        The text of the `zCViewText`
+    - `#!dae var string font`  
+        Font of text
 
-**Return value**
+    **Return value**
 
-The function returns a handle to `zCViewText`.
+    The function returns a handle to `zCViewText`.
 
 ### `Print_CreateTextPtr`
-`Print_CreateText` but returns pointer to `zCViewText` instead of handle.
-```dae
-func int Print_CreateTextPtr(var string text, var string font)
-```
-**Parameters**
+!!! function "`Print_CreateTextPtr`"
+    `Print_CreateText` but returns pointer to `zCViewText` instead of handle.
+    ```dae
+    func int Print_CreateTextPtr(var string text, var string font)
+    ```
+    **Parameters**
 
-- `#!dae var string text`  
-    The text of the `zCViewText`
-- `#!dae var string font`  
-    Font of text
+    - `#!dae var string text`  
+        The text of the `zCViewText`
+    - `#!dae var string font`  
+        Font of text
 
-**Return value**
+    **Return value**
 
-The function returns a pointer to `zCViewText`.
+    The function returns a pointer to `zCViewText`.
 
 ### `Print_CreateTextPtrColored`
-`Print_CreateTextPtr` but with additional parameter to chose color of text.
-```dae
-func int Print_CreateTextPtrColored(var string text, var string font, var int color)
-```
-**Parameters**
+!!! function "`Print_CreateTextPtrColored`"
+    `Print_CreateTextPtr` but with additional parameter to chose color of text.
+    ```dae
+    func int Print_CreateTextPtrColored(var string text, var string font, var int color)
+    ```
+    **Parameters**
 
-- `#!dae var string text`  
-    The text of the `zCViewText`
-- `#!dae var string font`  
-    Font of text
-- `#!dae var int color`  
-    `zColor` e.g. generated with [RGBA](#rgba) function
+    - `#!dae var string text`  
+        The text of the `zCViewText`
+    - `#!dae var string font`  
+        Font of text
+    - `#!dae var int color`  
+        `zColor` e.g. generated with [RGBA](#rgba) function
 
-**Return value**
+    **Return value**
 
-The function returns a pointer to `zCViewText`.
+    The function returns a pointer to `zCViewText`.
 
 ### `Print_GetText`
-Returns `zCViewText` instance from handle.
-```dae
-func zCViewText Print_GetText(var int hndl)
-```
-**Parameters**
+!!! function "`Print_GetText`"
+    Returns `zCViewText` instance from handle.
+    ```dae
+    func zCViewText Print_GetText(var int hndl)
+    ```
+    **Parameters**
 
-- `#!dae var int hndl`  
-    Handle to `zCViewText`
+    - `#!dae var int hndl`  
+        Handle to `zCViewText`
 
 ### `Print_GetTextPtr`
-Returns `zCViewText` pointer from handle.
-```dae
-func int Print_GetTextPtr(var int hndl)
-```
-**Parameters**
+!!! function "`Print_GetTextPtr`"
+    Returns `zCViewText` pointer from handle.
+    ```dae
+    func int Print_GetTextPtr(var int hndl)
+    ```
+    **Parameters**
 
-- `#!dae var int hndl`  
-    Handle to `zCViewText`
+    - `#!dae var int hndl`  
+        Handle to `zCViewText`
 
 ### `Print_DeleteText`
-Removes a `zCViewText` from the screen.
-```dae
-func void Print_DeleteText(var int hndl)
-```
-**Parameters**
+!!! function "`Print_DeleteText`"
+    Removes a `zCViewText` from the screen.
+    ```dae
+    func void Print_DeleteText(var int hndl)
+    ```
+    **Parameters**
 
-- `#!dae var int hndl`  
-    Handle to `zCViewText` (form [`Print_CreateText`](#print_createtext) or [`Print_Ext`](#print_ext))
+    - `#!dae var int hndl`  
+        Handle to `zCViewText` (form [`Print_CreateText`](#print_createtext) or [`Print_Ext`](#print_ext))
 
 ### `Print_SetAlpha`
-Changes the alpha value of a given `zCViewText`.
-```dae
-func void Print_SetAlpha(var int hndl, var int a)
-```
-**Parameters**
+!!! function "`Print_SetAlpha`"
+    Changes the alpha value of a given `zCViewText`.
+    ```dae
+    func void Print_SetAlpha(var int hndl, var int a)
+    ```
+    **Parameters**
 
-- `#!dae var int hndl`  
-    Handle to `zCViewText`
-- `#!dae var int a`  
-    New alpha value
+    - `#!dae var int hndl`  
+        Handle to `zCViewText`
+    - `#!dae var int a`  
+        New alpha value
 
 ### `PrintPtr_SetAlpha`
-`Print_SetAlpha` but with pointer to `zCViewText` instead of handle.
-```dae
-func void PrintPtr_SetAlpha(var int ptr, var int a)
-```
-**Parameters**
+!!! function "`PrintPtr_SetAlpha`"
+    `Print_SetAlpha` but with pointer to `zCViewText` instead of handle.
+    ```dae
+    func void PrintPtr_SetAlpha(var int ptr, var int a)
+    ```
+    **Parameters**
 
-- `#!dae var int ptr`  
-    Pointer to `zCViewText`
-- `#!dae var int a`  
-    New alpha value
+    - `#!dae var int ptr`  
+        Pointer to `zCViewText`
+    - `#!dae var int a`  
+        New alpha value
 
 ### `Print_GetScreenSize`
-Writes the current resolution to the Print_Screen array and the current aspect ratio to Print_Ratio variable.
-```dae
-func void Print_GetScreenSize()
-```
+!!! function "`Print_GetScreenSize`"
+    Writes the current resolution to the Print_Screen array and the current aspect ratio to Print_Ratio variable.
+    ```dae
+    func void Print_GetScreenSize()
+    ```
 
 #### `Print_Screen`
-An int array holding the current resolution. (Filled by `Print_GetScreenSize`)
-```dae
-int Print_Screen[2];
-```
+!!! function "`Print_Screen`"
+    An int array holding the current resolution. (Filled by `Print_GetScreenSize`)
+    ```dae
+    int Print_Screen[2];
+    ```
 
-- `Print_Screen[PS_X]` is the horizontal resolution
+    - `Print_Screen[PS_X]` is the horizontal resolution
 
-- `Print_Screen[PS_Y]` is the vertical resolution
+    - `Print_Screen[PS_Y]` is the vertical resolution
 
 #### `Print_Ratio`
-A float variable that holds the current aspect ratio. (Filled by `Print_GetScreenSize`)
-```dae
-int Print_Ratio;
-```
+!!! function "`Print_Ratio`"
+    A float variable that holds the current aspect ratio. (Filled by `Print_GetScreenSize`)
+    ```dae
+    int Print_Ratio;
+    ```
 
 #### `PS_VMax`
-An int constant that holds the highest possible value of a virtual coordinate.
-```dae
-const int PS_VMax = 8192;
-```
+!!! function "`PS_VMax`"
+    An int constant that holds the highest possible value of a virtual coordinate.
+    ```dae
+    const int PS_VMax = 8192;
+    ```
 
 ### `Print_ToVirtual`
-Convents pixel position to a virtual position.
-```dae
-func int Print_ToVirtual(var int pxl, var int dim)
-```
-**Parameters**
+!!! function "`Print_ToVirtual`"
+    Convents pixel position to a virtual position.
+    ```dae
+    func int Print_ToVirtual(var int pxl, var int dim)
+    ```
+    **Parameters**
 
-- `#!dae var int pxl`  
-    Pixel position to convert
-- `#!dae var int dim`  
-    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
+    - `#!dae var int pxl`  
+        Pixel position to convert
+    - `#!dae var int dim`  
+        PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
-**Return value**
+    **Return value**
 
-The function returns a virtual position of a given pixel position.
+    The function returns a virtual position of a given pixel position.
 
 ### `Print_ToVirtualF`
-`Print_ToVirtual` but returns Ikarus float value instead of integer.
-```dae
-func int Print_ToVirtualF(var int pxl, var int dim)
-```
-**Parameters**
+!!! function "`Print_ToVirtualF`"
+    `Print_ToVirtual` but returns Ikarus float value instead of integer.
+    ```dae
+    func int Print_ToVirtualF(var int pxl, var int dim)
+    ```
+    **Parameters**
 
-- `#!dae var int pxl`  
-    Pixel position to convert
-- `#!dae var int dim`  
-    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
+    - `#!dae var int pxl`  
+        Pixel position to convert
+    - `#!dae var int dim`  
+        PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
-**Return value**
+    **Return value**
 
-The function returns a virtual position of a given pixel position as Ikarus float.
+    The function returns a virtual position of a given pixel position as Ikarus float.
 
 ### `Print_ToPixel`
-Convents virtual position to a pixel position.
-```dae
-func int Print_ToPixel(var int vrt, var int dim)
-```
-**Parameters**
+!!! function "`Print_ToPixel`"
+    Convents virtual position to a pixel position.
+    ```dae
+    func int Print_ToPixel(var int vrt, var int dim)
+    ```
+    **Parameters**
 
-- `#!dae var int vrt`  
-    Virtual position to convert
-- `#!dae var int dim`  
-    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
+    - `#!dae var int vrt`  
+        Virtual position to convert
+    - `#!dae var int dim`  
+        PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
-**Return value**
+    **Return value**
 
-The function returns a pixel position of a given virtual position.
+    The function returns a pixel position of a given virtual position.
 
 ### `Print_ToPixelF`
-`Print_ToPixel` but returns Ikarus float value instead of integer.
-```dae
-func int Print_ToPixelF(var int vrt, var int dim)
-```
-**Parameters**
+!!! function "`Print_ToPixelF`"
+    `Print_ToPixel` but returns Ikarus float value instead of integer.
+    ```dae
+    func int Print_ToPixelF(var int vrt, var int dim)
+    ```
+    **Parameters**
 
-- `#!dae var int vrt`  
-    Virtual position to convert
-- `#!dae var int dim`  
-    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
+    - `#!dae var int vrt`  
+        Virtual position to convert
+    - `#!dae var int dim`  
+        PS_X or PS_Y (see [`Print_Screen`](#print_screen))
 
-**Return value**
+    **Return value**
 
-The function returns a pixel position of a given virtual position as Ikarus float.
+    The function returns a pixel position of a given virtual position as Ikarus float.
 
 ### `Print_ToRatio`
-Gets the size in the specified dimension in ratioed by the screen.
-```dae
-func int Print_ToRatio(var int size, var int dim)
-```
-**Parameters**
-
-- `#!dae var int size`  
-    Size to convert
-- `#!dae var int dim`  
-    PS_X or PS_Y (see [`Print_Screen`](#print_screen))
-
-**Return value**
-
-The function returns size correctly calculated to the ratio.
-
-??? abstract "Example"
-    If you have a view and the view you need to be a square of 400 units, you would do:
+!!! function "`Print_ToRatio`"
+    Gets the size in the specified dimension in ratioed by the screen.
     ```dae
-    height = Print_ToRatio(400, PS_Y);
-    width = 400;
+    func int Print_ToRatio(var int size, var int dim)
     ```
-    This is because width is always the max in virtual coordinates - 8192 virtual points and the height has a different height based on the ratio, this function calculates it for you.
+    **Parameters**
 
-    `PS_X` can be used in function, if you already have the height but need the width in the correct ratio.
+    - `#!dae var int size`  
+        Size to convert
+    - `#!dae var int dim`  
+        PS_X or PS_Y (see [`Print_Screen`](#print_screen))
+
+    **Return value**
+
+    The function returns size correctly calculated to the ratio.
+
+    ??? abstract "Example"
+        If you have a view and the view you need to be a square of 400 units, you would do:
+        ```dae
+        height = Print_ToRatio(400, PS_Y);
+        width = 400;
+        ```
+        This is because width is always the max in virtual coordinates - 8192 virtual points and the height has a different height based on the ratio, this function calculates it for you.
+
+        `PS_X` can be used in function, if you already have the height but need the width in the correct ratio.
 
 ### `Print_ToRadian`
-Converts angle in degrees to radians.
-```dae
-func int Print_ToRadian(var int angle)
-```
-**Parameters**
+!!! function "`Print_ToRadian`"
+    Converts angle in degrees to radians.
+    ```dae
+    func int Print_ToRadian(var int angle)
+    ```
+    **Parameters**
 
-- `#!dae var int angle`  
-    Angle in degrees
+    - `#!dae var int angle`  
+        Angle in degrees
 
-**Return value**
+    **Return value**
 
-The function returns calculated angle in radians.
+    The function returns calculated angle in radians.
 
 ### `Print_ToDegree`
-Converts angle in radians to degrees.
-```dae
-func int Print_ToDegree(var int angle)
-```
-**Parameters**
+!!! function "`Print_ToDegree`"
+    Converts angle in radians to degrees.
+    ```dae
+    func int Print_ToDegree(var int angle)
+    ```
+    **Parameters**
 
-- `#!dae var int angle`  
-    Angle in radians
+    - `#!dae var int angle`  
+        Angle in radians
 
-**Return value**
+    **Return value**
 
-The function returns calculated angle in degrees.
+    The function returns calculated angle in degrees.
 
 ### `Print_GetFontPtr`
-Returns a pointer to a `zCFont` by its name.
-```dae
-func int Print_GetFontPtr(var string font)
-```
-**Parameters**
+!!! function "`Print_GetFontPtr`"
+    Returns a pointer to a `zCFont` by its name.
+    ```dae
+    func int Print_GetFontPtr(var string font)
+    ```
+    **Parameters**
 
-- `#!dae var string font`  
-    Name of font
+    - `#!dae var string font`  
+        Name of font
 
 ### `Print_GetFontName`
-Returns a name of a `zCFont` from its pointer.
-```dae
-func string Print_GetFontName(var int fontPtr)
-```
-**Parameters**
+!!! function "`Print_GetFontName`"
+    Returns a name of a `zCFont` from its pointer.
+    ```dae
+    func string Print_GetFontName(var int fontPtr)
+    ```
+    **Parameters**
 
-- `#!dae var int fontPtr`  
-    Pointer to font
+    - `#!dae var int fontPtr`  
+        Pointer to font
 
 ### `Print_GetStringWidth`
-Returns the width of a string in pixels.
-```dae
-func int Print_GetStringWidth(var string s, var string font)
-```
-**Parameters**
+!!! function "`Print_GetStringWidth`"
+    Returns the width of a string in pixels.
+    ```dae
+    func int Print_GetStringWidth(var string s, var string font)
+    ```
+    **Parameters**
 
-- `#!dae var string s`  
-    Measured string
-- `#!dae var string font`  
-    Name of font
+    - `#!dae var string s`  
+        Measured string
+    - `#!dae var string font`  
+        Name of font
 
 ### `Print_GetStringWidthPtr`
-`Print_GetStringWidth` but with `zCFont` pointer instead of name.
-```dae
-func int Print_GetStringWidthPtr(var string s, var int font)
-```
-**Parameters**
+!!! function "`Print_GetStringWidthPtr`"
+    `Print_GetStringWidth` but with `zCFont` pointer instead of name.
+    ```dae
+    func int Print_GetStringWidthPtr(var string s, var int font)
+    ```
+    **Parameters**
 
-- `#!dae var string s`  
-    Measured string
-- `#!dae var int font`  
-    `zCFont` pointer
+    - `#!dae var string s`  
+        Measured string
+    - `#!dae var int font`  
+        `zCFont` pointer
 
 ### `Print_GetFontHeight`
-Returns the height of a string in pixels.
-```dae
-func int Print_GetFontHeight(var string font)
-```
-**Parameters**
+!!! function "`Print_GetFontHeight`"
+    Returns the height of a string in pixels.
+    ```dae
+    func int Print_GetFontHeight(var string font)
+    ```
+    **Parameters**
 
-- `#!dae var string font`  
-    Name of font
+    - `#!dae var string font`  
+        Name of font
 
 ### `Print_Ext`
-Like the external `PrintScreen`, writes a text on the screen, but with more options.
-```dae
-func int Print_Ext(var int x, var int y, var string text, var string font, var int color, var int time)
-```
-**Parameters**
-
-- `#!dae var int x`  
-    X coordinate on the screen (virtual)
-- `#!dae var int y`  
-    Y coordinate on the screen (virtual)
-- `#!dae var string text`  
-    Displayed text
-- `#!dae var string font`  
-    Name of font
-- `#!dae var int color`  
-    `zColor` e.g. generated with [RGBA](#rgba) function
-- `#!dae var int time`  
-    display time in milliseconds (-1 = permanent)
-
-**Return value**
-
-If `time == -1`, a valid handle is returned. If `time != -1`, the print is only volatile and no handle is returned.
-
-??? abstract "Example"
+!!! function "`Print_Ext`"
+    Like the external `PrintScreen`, writes a text on the screen, but with more options.
     ```dae
-    func void Example1()
-    {
-        //           x, y, text,   font,        color,                time
-        Print_ExtPxl(2, 2, "Text", FONT_Screen, RGBA(255, 0, 0, 128), 500);
-    };
+    func int Print_Ext(var int x, var int y, var string text, var string font, var int color, var int time)
     ```
+    **Parameters**
+
+    - `#!dae var int x`  
+        X coordinate on the screen (virtual)
+    - `#!dae var int y`  
+        Y coordinate on the screen (virtual)
+    - `#!dae var string text`  
+        Displayed text
+    - `#!dae var string font`  
+        Name of font
+    - `#!dae var int color`  
+        `zColor` e.g. generated with [RGBA](#rgba) function
+    - `#!dae var int time`  
+        display time in milliseconds (-1 = permanent)
+
+    **Return value**
+
+    If `time == -1`, a valid handle is returned. If `time != -1`, the print is only volatile and no handle is returned.
+
+    ??? abstract "Example"
+        ```dae
+        func void Example1()
+        {
+            //           x, y, text,   font,        color,                time
+            Print_ExtPxl(2, 2, "Text", FONT_Screen, RGBA(255, 0, 0, 128), 500);
+        };
+        ```
 
 ### `Print_ExtPxl`
-`Print_Ext` but with pixel coordinates instead of virtual.
-```dae
-func int Print_ExtPxl(var int x, var int y, var string text, var string font, var int color, var int time)
-```
-**Parameters**
+!!! function "`Print_ExtPxl`"
+    `Print_Ext` but with pixel coordinates instead of virtual.
+    ```dae
+    func int Print_ExtPxl(var int x, var int y, var string text, var string font, var int color, var int time)
+    ```
+    **Parameters**
 
-- `#!dae var int x`  
-    X coordinate on the screen (pixel)
-- `#!dae var int y`  
-    Y coordinate on the screen (pixel)
-- `#!dae var string text`  
-    Displayed text
-- `#!dae var string font`  
-    Name of font
-- `#!dae var int color`  
-    `zColor` e.g. generated with [RGBA](#rgba) function
-- `#!dae var int time`  
-    display time in milliseconds (-1 = permanent)
+    - `#!dae var int x`  
+        X coordinate on the screen (pixel)
+    - `#!dae var int y`  
+        Y coordinate on the screen (pixel)
+    - `#!dae var string text`  
+        Displayed text
+    - `#!dae var string font`  
+        Name of font
+    - `#!dae var int color`  
+        `zColor` e.g. generated with [RGBA](#rgba) function
+    - `#!dae var int time`  
+        display time in milliseconds (-1 = permanent)
 
-**Return value**
+    **Return value**
 
-If `time == -1`, a valid handle is returned. If `time != -1`, the print is only volatile and no handle is returned.
+    If `time == -1`, a valid handle is returned. If `time != -1`, the print is only volatile and no handle is returned.
 
 ### `Print_LongestLine`
-Returns the longest line from `text` as a string, using default line separator tilde `~`.
-```dae
-func string Print_LongestLine(var string text, var string font)
-```
-**Parameters**
+!!! function "`Print_LongestLine`"
+    Returns the longest line from `text` as a string, using default line separator tilde `~`.
+    ```dae
+    func string Print_LongestLine(var string text, var string font)
+    ```
+    **Parameters**
 
-- `#!dae var string text`  
-    Measured text
-- `#!dae var string font`  
-    Name of font
+    - `#!dae var string text`  
+        Measured text
+    - `#!dae var string font`  
+        Name of font
 
 ### `Print_LongestLineExt`
-Returns the longest line from `text` as a string, but you specify new line separator.
-```dae
-func string Print_LongestLineExt(var string text, var string font, var string separator)
-```
-**Parameters**
+!!! function "`Print_LongestLineExt`"
+    Returns the longest line from `text` as a string, but you specify new line separator.
+    ```dae
+    func string Print_LongestLineExt(var string text, var string font, var string separator)
+    ```
+    **Parameters**
 
-- `#!dae var string text`  
-    Measured text
-- `#!dae var string font`  
-    Name of font
-- `#!dae var string separator`  
-    New line separator
+    - `#!dae var string text`  
+        Measured text
+    - `#!dae var string font`  
+        Name of font
+    - `#!dae var string separator`  
+        New line separator
 
 ### `Print_LongestLineLength`
-Returns the longest line width in pixels, using default line separator tilde `~`.
-```dae
-func int Print_LongestLineLength(var string text, var string font)
-```
-**Parameters**
+!!! function "`Print_LongestLineLength`"
+    Returns the longest line width in pixels, using default line separator tilde `~`.
+    ```dae
+    func int Print_LongestLineLength(var string text, var string font)
+    ```
+    **Parameters**
 
-- `#!dae var string text`  
-    Measured text
-- `#!dae var string font`  
-    Name of font
+    - `#!dae var string text`  
+        Measured text
+    - `#!dae var string font`  
+        Name of font
 
 ### `Print_LongestLineLengthExt`
-Returns the longest line width in pixels, but allows you to specify new line separator.
-```dae
-func int Print_LongestLineLengthExt(var string text, var string font, var string separator)
-```
-**Parameters**
+!!! function "`Print_LongestLineLengthExt`"
+    Returns the longest line width in pixels, but allows you to specify new line separator.
+    ```dae
+    func int Print_LongestLineLengthExt(var string text, var string font, var string separator)
+    ```
+    **Parameters**
 
-- `#!dae var string text`  
-    Measured text
-- `#!dae var string font`  
-    Name of font
-- `#!dae var string separator`  
-    New line separator
+    - `#!dae var string text`  
+        Measured text
+    - `#!dae var string font`  
+        Name of font
+    - `#!dae var string separator`  
+        New line separator
 
 ### `Print_TextField`
-Creates a text field (view with text) using virtual coordinates.
-```dae
-func int Print_TextField(var int x, var int y, var string text, var string font, var int height)
-```
-**Parameters**
+!!! function "`Print_TextField`"
+    Creates a text field (view with text) using virtual coordinates.
+    ```dae
+    func int Print_TextField(var int x, var int y, var string text, var string font, var int height)
+    ```
+    **Parameters**
 
-- `#!dae var int x`  
-    X coordinate (virtual)
-- `#!dae var int y`  
-    Y coordinate (virtual)
-- `#!dae var string text`  
-    Text to be printed
-- `#!dae var string font`  
-    Name of font
-- `#!dae var int height`  
-    A specific line `height`
+    - `#!dae var int x`  
+        X coordinate (virtual)
+    - `#!dae var int y`  
+        Y coordinate (virtual)
+    - `#!dae var string text`  
+        Text to be printed
+    - `#!dae var string font`  
+        Name of font
+    - `#!dae var int height`  
+        A specific line `height`
 
-**Return value**
+    **Return value**
 
-The function returns a text field pointer. Here is how it is used:
-```dae
-var zCView view; view = get(viewHndl);
-view.textLines_next = Print_TextField(x, y, text, FONT, fontHeight);
-```
+    The function returns a text field pointer. Here is how it is used:
+    ```dae
+    var zCView view; view = get(viewHndl);
+    view.textLines_next = Print_TextField(x, y, text, FONT, fontHeight);
+    ```
 
 ### `Print_TextFieldPxl`
-`Print_TextField` but with pixel coordinates.
-```dae
-func int Print_TextFieldPxl(var int x, var int y, var string text, var string font)
-```
-**Parameters**
+!!! function "`Print_TextFieldPxl`"
+    `Print_TextField` but with pixel coordinates.
+    ```dae
+    func int Print_TextFieldPxl(var int x, var int y, var string text, var string font)
+    ```
+    **Parameters**
 
-- `#!dae var int x`  
-    X coordinate (pixel)
-- `#!dae var int y`  
-    Y coordinate (pixel)
-- `#!dae var string text`  
-    Text to be printed
-- `#!dae var string font`  
-    Name of font
+    - `#!dae var int x`  
+        X coordinate (pixel)
+    - `#!dae var int y`  
+        Y coordinate (pixel)
+    - `#!dae var string text`  
+        Text to be printed
+    - `#!dae var string font`  
+        Name of font
 
-**Return value**
+    **Return value**
 
-The function returns a text field pointer. Look at the `Print_TextField` return value to see an example.
+    The function returns a text field pointer. Look at the `Print_TextField` return value to see an example.
 
 ### `Print_TextFieldColored`
-`Print_TextField` but you specify the color of text.
-```dae
-func int Print_TextFieldColored(var int x, var int y, var string text, var string font, var int height, var int color)
-```
-**Parameters**
+!!! function "`Print_TextFieldColored`"
+    `Print_TextField` but you specify the color of text.
+    ```dae
+    func int Print_TextFieldColored(var int x, var int y, var string text, var string font, var int height, var int color)
+    ```
+    **Parameters**
 
-- `#!dae var int x`  
-    X coordinate (virtual)
-- `#!dae var int y`  
-    Y coordinate (virtual)
-- `#!dae var string text`  
-    Text to be printed
-- `#!dae var string font`  
-    Name of font
-- `#!dae var int height`  
-    A specific line `height`
-- `#!dae var int color`  
-    `zColor` e.g. generated with [RGBA](#rgba) function
+    - `#!dae var int x`  
+        X coordinate (virtual)
+    - `#!dae var int y`  
+        Y coordinate (virtual)
+    - `#!dae var string text`  
+        Text to be printed
+    - `#!dae var string font`  
+        Name of font
+    - `#!dae var int height`  
+        A specific line `height`
+    - `#!dae var int color`  
+        `zColor` e.g. generated with [RGBA](#rgba) function
 
-**Return value**
+    **Return value**
 
-The function returns a text field pointer. Look at the `Print_TextField` return value to see an example.
+    The function returns a text field pointer. Look at the `Print_TextField` return value to see an example.
 
 ### `PrintS`
-Same function as the external `Print`, but with smooth animations. The effect can be changed as desired with the [user constants](../various/userconstants.md#prints).
-```dae
-func void PrintS(var string txt)
-```
-**Parameters**
+!!! function "`PrintS`"
+    Same function as the external `Print`, but with smooth animations. The effect can be changed as desired with the [user constants](../userconstants.md#prints).
+    ```dae
+    func void PrintS(var string txt)
+    ```
+    **Parameters**
 
-- `#!dae var string txt`  
-    Printed text
+    - `#!dae var string txt`  
+        Printed text
 
 ### `PrintS_Ext`
-`PrintS` but with an additional parameter to choose the color of the text.
-```dae
-func void PrintS_Ext(var string txt, var int color)
-```
-**Parameters**
+!!! function "`PrintS_Ext`"
+    `PrintS` but with an additional parameter to choose the color of the text.
+    ```dae
+    func void PrintS_Ext(var string txt, var int color)
+    ```
+    **Parameters**
 
-- `#!dae var string txt`  
-    Printed text
-- `#!dae var int color`  
-    `zColor` e.g. generated with [RGBA](#rgba) function
+    - `#!dae var string txt`  
+        Printed text
+    - `#!dae var int color`  
+        `zColor` e.g. generated with [RGBA](#rgba) function
 
 ### `AI_PrintS`
-Version of `PrintS` that enqueue in given NPCs AI queue.
-```dae
-func void AI_PrintS(var c_npc slf, var string txt)
-```
-**Parameters**
+!!! function "`AI_PrintS`"
+    Version of `PrintS` that enqueue in given NPCs AI queue.
+    ```dae
+    func void AI_PrintS(var c_npc slf, var string txt)
+    ```
+    **Parameters**
 
-- `#!dae var c_npc slf`  
-    NPC to whose AI queue the function is enqueued
-- `#!dae var string txt`  
-    Printed text
+    - `#!dae var c_npc slf`  
+        NPC to whose AI queue the function is enqueued
+    - `#!dae var string txt`  
+        Printed text
 
 ### `AI_PrintS_Ext`
-Version of `PrintS_Ext` that enqueue in given NPCs AI queue.
-```dae
-func void AI_PrintS_Ext(var c_npc slf, var string txt, var int color)
-```
-**Parameters**
+!!! function "`AI_PrintS_Ext`"
+    Version of `PrintS_Ext` that enqueue in given NPCs AI queue.
+    ```dae
+    func void AI_PrintS_Ext(var c_npc slf, var string txt, var int color)
+    ```
+    **Parameters**
 
-- `#!dae var c_npc slf`  
-    NPC to whose AI queue the function is enqueued
-- `#!dae var string txt`  
-    Printed text
-- `#!dae var int color`  
-    `zColor` e.g. generated with [RGBA](#rgba) function
+    - `#!dae var c_npc slf`  
+        NPC to whose AI queue the function is enqueued
+    - `#!dae var string txt`  
+        Printed text
+    - `#!dae var int color`  
+        `zColor` e.g. generated with [RGBA](#rgba) function
 
 ## Examples
 

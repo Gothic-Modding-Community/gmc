@@ -3,12 +3,15 @@ title: Console Commands
 description: Pakiet LeGo umożliwiający rejestrację nowych poleceń konsoli
 ---
 # Console Commands - polecenia konsoli
+
+!!! info inline end
+    **Zależności:**<br/>
+    - [PermMem](../tools/permmem.md)<br/>
+    - [HookEngine](../tools/hook_engine.md)<br/>
+    **Implementacja:**<br/>
+    [:material-github: ConsoleCommands.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/ConsoleCommands.d)
+
 Ten Pakiet pozwala na tworzenie nowych poleceń konsoli dostępnej po naciśnięciu klawisza F2 w trybie marvin.
-
-## Zależności
-
-- [PermMem](../tools/permmem.md)
-- [HookEngine](../tools/hook_engine.md)
 
 ## Inicjalizacja
 Zainicjuj za pomocą flagi `LeGo_ConsoleCommands`.
@@ -16,48 +19,48 @@ Zainicjuj za pomocą flagi `LeGo_ConsoleCommands`.
 LeGo_Init(LeGo_ConsoleCommands);
 ```
 
-## Implementacja
-[:material-github: ConsoleCommands.d na GitHubie](https://github.com/Lehona/LeGo/blob/dev/ConsoleCommands.d)
-
 ## Funkcje
 
 ### `CC_Register`
-Rejestruje nowe polecenie konsoli.
-```dae
-func void CC_Register(var func f, var string cmdPrefix, var string description)
-```
-**Parametry**
+!!! function "`CC_Register`"
+    Rejestruje nowe polecenie konsoli.
+    ```dae
+    func void CC_Register(var func f, var string cmdPrefix, var string description)
+    ```
+    **Parametry**
 
-- `#!dae var func f`  
-    Ta funkcja jest wykonywana po wprowadzeniu polecenia `cmdPrefix` w konsoli. Sygnatura funkcji to `func string f(var string p0)`. Przekazany string to wszystko, co zostało określone w konsoli po faktycznym poleceniu. Zwracana wartość jest następnie wyświetlana w konsoli.
-- `#!dae var string cmdPrefix`  
-    Jest to polecenie, które można wprowadzić w konsoli.
-- `#!dae var string description`  
-    Ten tekst pojawia się obok polecenia (w [zSpy](../../../../tools/zSpy.md)), gdy używasz polecenia `help` w konsoli.
+    - `#!dae var func f`  
+        Ta funkcja jest wykonywana po wprowadzeniu polecenia `cmdPrefix` w konsoli. Sygnatura funkcji to `func string f(var string p0)`. Przekazany string to wszystko, co zostało określone w konsoli po faktycznym poleceniu. Zwracana wartość jest następnie wyświetlana w konsoli.
+    - `#!dae var string cmdPrefix`  
+        Jest to polecenie, które można wprowadzić w konsoli.
+    - `#!dae var string description`  
+        Ten tekst pojawia się obok polecenia (w [zSpy](../../../../tools/zSpy.md)), gdy używasz polecenia `help` w konsoli.
 
 ### `CC_Remove`
-Usuwa funkcje z konsoli komend.
-```dae
-func void CC_Remove(var func f)
-```
-**Parametry**
+!!! function "`CC_Remove`"
+    Usuwa funkcje z konsoli komend.
+    ```dae
+    func void CC_Remove(var func f)
+    ```
+    **Parametry**
 
-- `#!dae var func f`  
-    Ta funkcja zostanie usunięta, a powiązane z nią polecenie przestanie działać.
+    - `#!dae var func f`  
+        Ta funkcja zostanie usunięta, a powiązane z nią polecenie przestanie działać.
 
 ### `CC_Active`
-Sprawdza, czy dana funkcja jest już częścią polecenia konsoli.
-```dae
-func int CC_Active(var func f)
-```
-**Parametry**
+!!! function "`CC_Active`"
+    Sprawdza, czy dana funkcja jest już częścią polecenia konsoli.
+    ```dae
+    func int CC_Active(var func f)
+    ```
+    **Parametry**
 
-- `#!dae var func f`  
-    Sprawdzana funkcja
+    - `#!dae var func f`  
+        Sprawdzana funkcja
 
-**Zwracana wartość**
+    **Zwracana wartość**
 
-Funkcja zwraca `TRUE` jeśli znajdzie odpowiednią funkcję, inaczej `FALSE`.
+    Funkcja zwraca `TRUE` jeśli znajdzie odpowiednią funkcję, inaczej `FALSE`.
 
 ## Przykłady
 

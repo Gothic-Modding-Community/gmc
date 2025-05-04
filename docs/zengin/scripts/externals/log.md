@@ -4,61 +4,63 @@ title: Log functions
 # Log external functions
 Log externals are used to manipulate players log and to track quest progress.
 
+## ``Log_CreateTopic``
+!!! function "``Log_CreateTopic``"
+    Creates a new log topic with the name `topicName` under the section `logSection`
 
-## `Log_CreateTopic`
-Creates a new log topic with the name `topicName` under the section `logSection`
+    ```dae
+    func void Log_CreateTopic(var string topicName, var int logSection) {};
+    ```
+    **Parameters**
 
-```dae
-func void Log_CreateTopic(var string topicName, var int logSection) {};
-```
-**Parameters**
-
-- `#!dae var string topicName`   
-    Unique string used to identify and name the topic
-- `#!dae var int logSection`   
-    Indicates in which section to create the topic in.  
-    Takes constants `LOG_MISSION`, `LOG_NOTE` as values
+    - `#!dae var string topicName`   
+        Unique string used to identify and name the topic
+    - `#!dae var int logSection`   
+        Indicates in which section to create the topic in.  
+        Takes constants `LOG_MISSION`, `LOG_NOTE` as values
 
 ## `Log_AddEntry`
-Adds an entry to a log topic with the name `topicName` under the section `logSection`
+!!! function "`Log_AddEntry`"
+    Adds an entry to a log topic with the name `topicName` under the section `logSection`
 
-```dae
-func void Log_AddEntry(var string topicName, var string entry) {};
-```
-**Parameters**
-
-- `#!dae var string topicName`   
-    Unique string used to identify and name the topic
-- `#!dae var string entry`   
-    Content of the new entry
-
-!!! Info
-    In the engine the `#!dae Log_AddEntry()` is wrapped in a `#!dae B_LogEntry()` function. This function also handles printing the "New Journal Entry" message to the screen and playing the sound effect.
     ```dae
-    func void B_LogEntry(var string topic, var string entry)
-    {
-        PrintDebugNpc(PD_ZS_DETAIL, "B_LogEntry"); // Logging
-
-        Log_AddEntry(topic, entry);
-
-        PrintScreen(NAME_NewLogEntry, -1, _YPOS_MESSAGE_LOGENTRY, "font_old_10_white.tga", _TIME_MESSAGE_LOGENTRY);
-        Snd_Play("LogEntry");
-    };
+    func void Log_AddEntry(var string topicName, var string entry) {};
     ```
+    **Parameters**
+
+    - `#!dae var string topicName`   
+        Unique string used to identify and name the topic
+    - `#!dae var string entry`   
+        Content of the new entry
+
+    !!! Info
+        In the engine the `#!dae Log_AddEntry()` is wrapped in a `#!dae B_LogEntry()` function. This function also handles printing the "New Journal Entry" message to the screen and playing the sound effect.
+        ```dae
+        func void B_LogEntry(var string topic, var string entry)
+        {
+            PrintDebugNpc(PD_ZS_DETAIL, "B_LogEntry"); // Logging
+
+            Log_AddEntry(topic, entry);
+
+            PrintScreen(NAME_NewLogEntry, -1, _YPOS_MESSAGE_LOGENTRY, "font_old_10_white.tga", _TIME_MESSAGE_LOGENTRY);
+            Snd_Play("LogEntry");
+        };
+        ```
 
 ## `Log_SetTopicStatus`
-Changes the status of the topic with the name `topicName`
+!!! function "`Log_SetTopicStatus`"
+    Changes the status of the topic with the name `topicName`
 
-```dae
-func void Log_SetTopicStatus(var string topicName, var int status) {};
-```
-**Parameters**
+    ```dae
+    func void Log_SetTopicStatus(var string topicName, var int status) {};
+    ```
+    **Parameters**
 
-- `#!dae var string topicName`   
-    Unique string used to identify and name the topic
-- `#!dae var int status`   
-    The status to be set.  
-    Takes constants `LOG_RUNNING`, `LOG_SUCCESS`, `LOG_FAILED`, `LOG_OBSOLETE` as values
+    - `#!dae var string topicName`   
+        Unique string used to identify and name the topic
+    - `#!dae var int status`   
+        The status to be set.  
+        Takes constants `LOG_RUNNING`, `LOG_SUCCESS`, `LOG_FAILED`, `LOG_OBSOLETE` as values
 
 
 ## zParserExtender

@@ -36,3 +36,14 @@ META
 };
 ```
   
+!!! Example
+    This is an example of a META block, that will inject the script into the `Menu.dat` file, for `Gothic II Classic` and `Gothic II Addon` engines, after the `TestScript.d` and `HelpFunctions.d` scripts, for `GothicGame.mod` and `LHiver.mod`.
+    ```dae
+    META
+    {
+        Parser = Menu;
+        After  = TestScript.d, HelpFunctions.d;
+        Engine = G2, G2A;
+        Mod    = GothicGame.mod, LHiver.mod;
+    };
+    ```

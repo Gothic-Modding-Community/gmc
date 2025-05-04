@@ -3,7 +3,7 @@
 !!! example "Acknowledgment"
     This article is heavily inspired by various tutorials from the polish [TheModders forums](https://themodders.org/index.php#c13).
 
-Worlds, saved as `.ZEN` files in ZenGin, are archives that contain the world mesh (model), BSP tree and the information of all objects in the world. These objects are called VOBs ("virtual objects"). ZEN files can be saved in two ways; compiled and uncompiled. The compiled version is a full-fledged level with a terrain model. Uncompiled ZENs only save the VOB tree and are meant for specific use-cases.
+Worlds, saved as `.ZEN` files in ZenGin, are archives that contain the world mesh (model), BSP tree, materials and the information of all objects in the world. These objects are called VOBs ("virtual objects"). ZEN files can be saved in two ways; compiled and uncompiled. The compiled version is a full-fledged level with a terrain model. Uncompiled ZENs only save the VOB tree and are meant for specific use-cases.
 
 Spacer is used to create these `.ZEN` files. There are also [other world editors](../tools/index.md). The way of doing things can vary between these editors, so the specifics will be discussed in separate articles for those tools; at the same time, a lot of knowledge carries over between them. Also have in mind that Spacer is the least comfortable of the editors.
 
@@ -11,23 +11,25 @@ Spacer is used to create these `.ZEN` files. There are also [other world editors
 
 The content of worlds in Gothic can be roughly separated in the following way:
 
-- Base level mesh: terrain and buildings, sometimes also trees
-- VOBs: all interactive objects, items, foliage, small rocks, huts, furniture, ramps etc.
+- Base level mesh - terrain and buildings, sometimes also trees.
+- VOBs ([`zCVob`](Classes/zCVob/index.md) and subclasses) - all interactive objects, items, foliage, small rocks, huts, furniture, ramps etc.
 
 Asides from those elements, there are also many invisible VOBs, such as:
 
-- Waypoints - used for NPC navigation
-- Freepoints (zCVobSpot) - used mainly for NPC routines and roaming behavior for monsters
-- Startpoints - used only to spawn the player when starting a new game. Teleporting between levels is handled with scripts and uses freepoints to determine where the player will appear.
+- Waypoints ([`zCVobWaypoint`](Classes/zCVob/zCVobWaypoint.md)) - used for NPC navigation.
+- Freepoints ([`zCVobSpot`](Classes/zCVob/zCVobSpot.md)) - used mainly for NPC routines and roaming behavior for monsters.
+- Startpoints ([`zCVobStartpoint`](Classes/zCVob/zCVobStartpoint.md)) - used only to spawn the player when starting a new game. Teleporting between levels is handled with scripts and uses freepoints to determine where the player will appear.
 - Sound emitters
-- Music zones
-  - oCZoneMusic - music which plays inside the bounding box of this zone
-  - oCZoneMusicDefault - default music which plays whenever the player is not inside some oCZoneMusic
-- Fog zones (zCZoneZFog) - areas which add fog, e.g. like in swamp areas where the sky is not visible. The setting to fade out the sky is optional though.
+- Music zones  
+    - [`oCZoneMusic`](Classes/zCVob/zCZone/oCZoneMusic/index.md) - music which plays inside the bounding box of this zone.
+    - [`oCZoneMusicDefault`](Classes/zCVob/zCZone/oCZoneMusic/oCZoneMusicDefault.md) - default music which plays whenever the player is not inside some `oCZoneMusic`.
+- Fog zones ([`zCZoneZFog`](Classes/zCVob/zCZone/zCZoneZFog/index.md)) - areas which add fog, e.g. like in swamp areas where the sky is not visible. The setting to fade out the sky is optional though.
 - PFX - particle effects (fire, smoke, fireflies, falling leaves etc.)
 
 !!! note
     This list isn't exhaustive.
+
+World also contains information about all materials used by level mesh and VOBs. They are stored in the form of [`zCMaterial`](Classes/zCMaterial.md) instances.
 
 ## Creating a ZEN file
 
@@ -52,6 +54,10 @@ It is generally advised to use static lights whenever possible.
 ## Portals
 
 Portals are special parts of outdoor world meshes which separate interiors from exteriors. This allows the level to have dark areas: otherwise interiors are lit the same way as any outside area. Additionally, portals help with performance (interiors aren't rendered unless the player is nearby). Creation of portals has many caveats and will be discussed in a separate article. Portals are also related to NPC behavior (e.g. setting ownership of a room).
+
+## Water
+
+Water is a special surface in the world. It has to be properly modelled, and its material has to be set up correctly. You can read more about it in the [dedicated article](../meshes/water.md).
 
 ## Optimisation
 

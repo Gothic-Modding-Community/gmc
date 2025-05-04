@@ -103,7 +103,7 @@ This section covers some of the basic things done in the editor.
 
 ### Common VOB settings
 
-VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though. The full description of a zCVob class can be found [here](Classes/zCVob.md).
+VOB settings vary depending on what the VOB type is. They all have common parameters of the base VOB class though. The full description of a zCVob class can be found [here](Classes/zCVob/index.md).
 
 ## Issues
 

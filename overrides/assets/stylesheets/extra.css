@@ -17,10 +17,26 @@
     }
 }
 
+/* Fix position of the links in grid cards */
+.md-typeset .grid.cards > ul > li {
+    display: flex;
+    flex-direction: column;
+}
+.grid.cards li p:last-child {
+    display: flex;
+    flex-grow: 5; /* Probably 2 would be enough, as the grids shouldn't hold too much text to begin with, but to be safe I set it to 5 */
+}
+.grid.cards li p:last-child a {
+    align-self: flex-end;
+}
+.grid.cards li > p:first-child > strong {
+    vertical-align: middle;
+}
+
 /* Stretch content area */
 .md-main__inner.md-grid {
     /* Default 61rem */
-    max-width: 75rem;
+    max-width: 70rem;
 }
 
 /* override md-main on the page */
@@ -30,15 +46,10 @@
     }
 }
 
-/* Add left padding indent to the content */
-article > div > :is(:not(h1, h2, h3, h4)) {
-    padding-left: 1em !important;
-}
-
 /* Shrink header and footer to the content size*/
 .md-grid {
     /* Default 61rem */
-    max-width: 50rem;
+    max-width: 45rem;
 }
 
 @media screen and (min-width: 60em) {
@@ -147,17 +158,6 @@ div.md-nav__link--index {
     [data-md-color-scheme=default] :is(h1, h2, h3, h4, h5, h6) {
         --md-default-fg-color--light: #000;
     }
-    [data-md-color-scheme=slate] :is(h3, h4, h5, h6) {
-        border-top: 1px solid hsla(var(--md-hue), 100%, 100%, 0.15);
-    }
-    [data-md-color-scheme=default] :is(h3, h4, h5, h6) {
-        border-top: 1px solid hsla(0, 0%, 0%, 0.15);
-    }
-}
-
-/* override md-content min-height */
-.md-content {
-    min-height: 100vh;
 }
 
 /* override md-banner*/
@@ -309,6 +309,22 @@ div.md-nav__link--index {
     animation: heart 1000ms infinite;
 }
 
+
+.md-typeset .admonition.function,
+.md-typeset details.function {
+  border-color: rgb(163, 159, 159);
+}
+.md-typeset .function > .admonition-title,
+.md-typeset .function > summary {
+  background-color: rgba(148, 148, 148, 0.1);
+}
+.md-typeset .function > .admonition-title::before,
+.md-typeset .function > summary::before {
+  background-color: rgb(163, 159, 159);
+  -webkit-mask-image: var(--md-admonition-icon--function);
+          mask-image: var(--md-admonition-icon--function);
+}
+
 /* Beautiful heart beat animation I found here: https://github.com/squidfunk/mkdocs-material/discussions/3850 */
 @keyframes heart
 {
@@ -384,6 +400,91 @@ div.md-nav__link--index {
 {
     color: var(--md-code-hl-keyword-color);
     font-style: italic;
+}
+
+/* endregion */
+
+/* region spacer type icons */
+
+.sp-folder,
+.sp-class,
+.sp-int,
+.sp-string,
+.sp-misc,
+.sp-bool,
+.sp-enum,
+.sp-vec,
+.sp-float,
+.sp-color,
+.sp-none {
+    font-family: monospace;
+
+    margin: 0 0 0 0.5em;
+    padding: 0 0 0 1.6em;
+
+    background-repeat: no-repeat;
+    background-size: 1.3em 1.3em;
+    image-rendering: pixelated;
+
+    background-position-y: 0.65em;
+}
+
+
+ul .sp-folder,
+ul .sp-class,
+ul .sp-int,
+ul .sp-string,
+ul .sp-misc,
+ul .sp-bool,
+ul .sp-enum,
+ul .sp-vec,
+ul .sp-float,
+ul .sp-color,
+ul .sp-none {
+    list-style-type: none;
+    padding-left: 1.8em !important;
+    background-position-y: 3px !important;
+}
+
+
+.sp-folder {
+    background-image: url("/gmc/assets/icons/spacer-folder.png");
+}
+
+.sp-int {
+    background-image: url("/gmc/assets/icons/spacer-int.png");
+}
+
+.sp-float {
+    background-image: url("/gmc/assets/icons/spacer-float.png");
+}
+
+.sp-string{
+    background-image: url("/gmc/assets/icons/spacer-string.png");
+}
+
+.sp-misc{
+    background-image: url("/gmc/assets/icons/spacer-misc.png");
+}
+
+.sp-vec{
+    background-image: url("/gmc/assets/icons/spacer-vec.png");
+}
+
+.sp-bool{
+    background-image: url("/gmc/assets/icons/spacer-bool.png");
+}
+
+.sp-enum{
+    background-image: url("/gmc/assets/icons/spacer-enum.png");
+}
+
+.sp-class {
+    background-image: url("/gmc/assets/icons/spacer-class.png");
+}
+
+.sp-color {
+    background-image: url("/gmc/assets/icons/spacer-color.png");
 }
 
 /* endregion */

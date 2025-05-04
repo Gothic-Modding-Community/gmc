@@ -134,24 +134,26 @@ func void MEM_InitLabels()
 Besides the normal [jumps](#jumps) Ikarus implements `MEM_Label` and `MEM_Goto` functions. They work similar to the stack manipulation with `var int label` but the interface is much more user-friendly and defining new variables is not needed.
 
 ### `MEM_Label`
-Function that works like a `label = MEM_StackPos.position;`. You could jump to it with [`MEM_Goto`](#mem_goto).
-```dae
-func void MEM_Label(var int lbl)
-```
-**Parameters**
+!!! function "`MEM_Label`"
+    Function that works like a `label = MEM_StackPos.position;`. You could jump to it with [`MEM_Goto`](#mem_goto).
+    ```dae
+    func void MEM_Label(var int lbl)
+    ```
+    **Parameters**
 
-- `#!dae var int lbl`   
-    Number of the label, used for nested loop or multiple loops within one function
+    - `#!dae var int lbl`   
+        Number of the label, used for nested loop or multiple loops within one function
 
 ### `MEM_Goto`
-Function that works like a `MEM_StackPos.position = label;`. Executes a jump to a [`MEM_Label`](#mem_label) with specified number.
-```dae
-func void MEM_Goto(var int lbl)
-```
-**Parameters**
+!!! function "`MEM_Goto`"
+    Function that works like a `MEM_StackPos.position = label;`. Executes a jump to a [`MEM_Label`](#mem_label) with specified number.
+    ```dae
+    func void MEM_Goto(var int lbl)
+    ```
+    **Parameters**
 
-- `#!dae var int lbl`   
-    Number of the label, the function will jump to
+    - `#!dae var int lbl`   
+        Number of the label, the function will jump to
 
 ### Usage
 Usage of Label and Goto is probably self-explanatory, since it is same as in the regular Ikarus Jump. But before using it reading the [Notes and warnings](#notes-and-warnings) of the Jumps is recommended.
