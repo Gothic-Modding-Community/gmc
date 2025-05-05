@@ -59,10 +59,6 @@ Doc functions are used to control the document manager. They allow you to fine t
 
 ### `Doc_SetLevelCoords`
 !!! function "`Doc_SetLevelCoords`"
-
-    !!! Warning
-        This function is only available in Gothic 2
-
     Sets the map coordinates. This is used to map smaller portions of the world map to the document map to correctly show players position on the map.
     ```dae
     func void Doc_SetLevelCoords(var int docID, var int left, var int top, var int right, var int bottom) {};
@@ -80,6 +76,9 @@ Doc functions are used to control the document manager. They allow you to fine t
         ```dae
         Doc_SetLevelCoords(nDocID, -28000, 50500, 95500, -42500);
         ```
+    
+    !!! Warning
+        This function is only available in Gothic 2
 
 ### `Doc_SetFont`
 !!! function "`Doc_SetFont`"

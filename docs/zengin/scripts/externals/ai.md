@@ -371,7 +371,7 @@ Functions for working with NPCs AI queue. Every function is added to the AI queu
     - `#!dae var string effect` - name of the visual effect
 
     !!! Warning
-        The function is only present in Gothic 2.
+        This function is only available in Gothic 2
 
 ### `AI_StopFX`
 !!! function "`AI_StopFX`"
@@ -386,7 +386,7 @@ Functions for working with NPCs AI queue. Every function is added to the AI queu
     - `#!dae var string effect` - name of the visual effect
 
     !!! Warning
-        The function is only present in Gothic 2.
+        This function is only available in Gothic 2
 
 ### `AI_PointAt`
 !!! function "`AI_PointAt`"
@@ -428,7 +428,7 @@ Functions for working with NPCs AI queue. Every function is added to the AI queu
     - `#!dae var int timesec` - display duration in seconds
 
     !!! Warning
-        The function is only present in Gothic 2.
+        This function is only available in Gothic 2
 
 ### `AI_ProcessInfos`
 !!! function "`AI_ProcessInfos`"
@@ -549,7 +549,7 @@ Functions for working with NPCs AI queue. Every function is added to the AI queu
     - `#!dae var string sndName` - C_SFX instance name
 
     !!! Warning
-        The function is only present in Gothic 2.
+        This function is only available in Gothic 2
 
 ### `AI_Snd_Play3D`
 !!! function "`AI_Snd_Play3D`"
@@ -565,7 +565,7 @@ Functions for working with NPCs AI queue. Every function is added to the AI queu
     - `#!dae var string sndName` - C_SFX instance name
 
     !!! Warning
-        The function is only present in Gothic 2.
+        This function is only available in Gothic 2
 
 ### `AI_StandUp`
 !!! function "`AI_StandUp`"
