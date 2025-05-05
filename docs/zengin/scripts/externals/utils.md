@@ -62,7 +62,7 @@ Utility functions are used for data types operations, such as type conversion.
 
 ### `ConcatStrings`
 !!! function "`ConcatStrings`"
-	Concatenates two strings and returns the new string
+    Concatenates two strings and returns the new string
 	```dae
 	func string ConcatStrings(var string str1, var string str2) {};
 	```
