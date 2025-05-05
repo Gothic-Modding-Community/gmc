@@ -4,7 +4,9 @@ title: Log functions
 # Log external functions
 Log externals are used to manipulate players log and to track quest progress.
 
-## ``Log_CreateTopic``
+## Functions
+
+### ``Log_CreateTopic``
 !!! function "``Log_CreateTopic``"
     Creates a new log topic with the name `topicName` under the section `logSection`
 
@@ -19,7 +21,7 @@ Log externals are used to manipulate players log and to track quest progress.
         Indicates in which section to create the topic in.  
         Takes constants `LOG_MISSION`, `LOG_NOTE` as values
 
-## `Log_AddEntry`
+### `Log_AddEntry`
 !!! function "`Log_AddEntry`"
     Adds an entry to a log topic with the name `topicName` under the section `logSection`
 
@@ -47,7 +49,7 @@ Log externals are used to manipulate players log and to track quest progress.
         };
         ```
 
-## `Log_SetTopicStatus`
+### `Log_SetTopicStatus`
 !!! function "`Log_SetTopicStatus`"
     Changes the status of the topic with the name `topicName`
 
@@ -66,26 +68,3 @@ Log externals are used to manipulate players log and to track quest progress.
 ## zParserExtender
 The log external function selection is missing functions to retrieve the status of a log entry. There are only functions to read the log status (as discussed on [Inside Gothic](https://ataulien.github.io/Inside-Gothic/QuestLog/)). As a result of this the original scriptwriters had to define additional variable to track the log status in the scripts, even though the value is being already tracked by the engine. 
 zParserExtender fixes this by introducing new [log external functions](../extenders/zparserextender/externals/log.md).
-
-
-## Externals with docu comments
-
-```dae
-/// Creates a new log topic with the name `topicName` under the section `logSection`
-/// 
-/// @param topicName unique string used to identify and name the topic
-/// @param logSection [LOG_MISSION, LOG_NOTE] indicates in which section to create the topic in
-func void Log_CreateTopic(var string topicName, var int logSection) {};
-
-/// Creates a new log topic with the name `topicName` under the section `logSection`
-/// 
-/// @param topicName unique string used to identify and name the topic
-/// @param logSection [LOG_MISSION, LOG_NOTE] indicates in which section to create the topic in
-func void Log_AddEntry(var string topicName, var string entry) {};
-
-/// Changes the status of the topic with the name `topicName`
-///
-/// @param topicName unique string used to identify and name the topic
-/// @param status [LOG_RUNNING, LOG_SUCCESS, LOG_FAILED, LOG_OBSOLETE] the status to be set
-func void Log_SetTopicStatus(var string topicName, var int status) {};
-```
