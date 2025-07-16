@@ -1,4 +1,4 @@
-# Dialog funtions
+# Dialog functions
 Functions related to the dialog system. For more information about the dialog system, see [`C_INFO`](../classes/c_info.md).
 
 ## Functions
