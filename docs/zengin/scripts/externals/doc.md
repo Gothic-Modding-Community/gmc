@@ -1,7 +1,7 @@
 ---
 title: Doc functions
 ---
-# Doc external functions
+# Doc functions
 
 Doc functions are used to control the document manager. They allow you to fine tune the display of maps, letters and books.
 

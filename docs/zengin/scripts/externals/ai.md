@@ -1,7 +1,7 @@
 ---
 title: AI functions
 ---
-# AI functions
+# AI functions (Vanilla)
 Functions for working with NPCs AI queue. Every function is added to the AI queue of the specified NPC and executed in the order they were added.
 
 ## Functions

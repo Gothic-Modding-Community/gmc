@@ -1,7 +1,7 @@
 ---
-title: HLP functions
+title: HLP functions 
 ---
-# HLP - help functions
+# HLP functions (Vanilla)
 Helper functions, generally used for safety checks, and specific operations.
 
 ## Functions

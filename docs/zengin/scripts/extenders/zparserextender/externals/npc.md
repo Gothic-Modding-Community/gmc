@@ -1,7 +1,7 @@
 ---
 title: NPC functions
 ---
-# NPC - character functions
+# NPC functions (zPE)
 NPC related functions.
 
 ## `Npc_SetAsHero`

@@ -1,7 +1,7 @@
 ---
 title: WLD functions
 ---
-# WLD - world manipulation functions
+# WLD functions (Vanilla)
 Functions related to the world. 
 
 ## Functions

@@ -1,7 +1,7 @@
 ---
 title: MDL functions
 ---
-# MDL functions
+# MDL functions (Vanilla)
 Functions to tweak animation and other model related settings.
 
 ## Functions
