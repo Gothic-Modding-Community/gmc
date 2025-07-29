@@ -1,4 +1,7 @@
-# MOB functions
+---
+title: MOB functions
+---
+# MOB functions (Vanilla)
 Functions for creating and checking items in a oCMobContainers (chests etc.).
 
 ## Functions

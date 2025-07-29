@@ -1,7 +1,7 @@
 ---
 title: HLP functions
 ---
-# HLP - help functions
+# HLP functions (zPE)
 Helper functions generally used for safety checks, to get specific information from the engine or to interface with the configuration `.ini` files.
 
 ## `Hlp_HasFocusVob`

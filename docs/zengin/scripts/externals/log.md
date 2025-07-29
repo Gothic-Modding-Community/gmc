@@ -1,7 +1,7 @@
 ---
-title: Log functions
+title: Log functions 
 ---
-# Log external functions
+# Log functions (Vanilla)
 Log externals are used to manipulate players log and to track quest progress.
 
 ## Functions

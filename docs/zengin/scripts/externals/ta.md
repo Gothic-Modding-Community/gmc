@@ -2,8 +2,8 @@
 title: TA functions
 ---
 
-# TA - routine functions
-Functions for setting NPC daily routines.
+# TA routine functions
+External functions for setting NPC daily routines.
 
 ## Functions
 

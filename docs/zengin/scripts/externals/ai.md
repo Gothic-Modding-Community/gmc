@@ -1,7 +1,7 @@
 ---
 title: AI functions
 ---
-# AI functions
+# AI functions (Vanilla)
 Functions for working with NPCs AI queue. Every function is added to the AI queue of the specified NPC and executed in the order they were added.
 
 ## Functions
@@ -803,8 +803,8 @@ Functions for working with NPCs AI queue. Every function is added to the AI queu
 
     **Parameters**  
 
-    - `#!dae var C_NPC slf` - instance of the NPC
-    - `#!dae other` - instance of the other NPC
+    - `#!dae var C_NPC slf` - instance of the waiting NPC
+    - `#!dae var C_NPC oth` - instance of the NPC to wait for
 
 ## Deprecated
 

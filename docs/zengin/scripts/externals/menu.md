@@ -1,4 +1,7 @@
-# Menu functions
+---
+title: Menu functions
+---
+# Menu functions (Vanilla)
 Menu functions are used to perform operations while being in the menu.
 
 !!! Danger

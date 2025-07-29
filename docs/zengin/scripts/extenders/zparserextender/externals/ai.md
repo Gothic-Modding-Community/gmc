@@ -1,7 +1,7 @@
 ---
 title: AI functions
 ---
-# AI - functions for working with AI
+# AI functions (zPE)
 Functions to work with the new [`C_Trigger`](../classes/c_trigger.md) class and NPC's AI queue.
 
 ## `AI_CallScript`

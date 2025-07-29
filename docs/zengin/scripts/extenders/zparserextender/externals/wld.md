@@ -1,8 +1,8 @@
 ---
 title: WLD functions
 ---
-# WLD - world manipulation functions
-Functions related to the world. 
+# WLD functions (zPE)
+External functions related to the world.
 
 ## `Wld_ChangeLevel`
 !!! function "`Wld_ChangeLevel`"

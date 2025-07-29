@@ -1,4 +1,8 @@
-# Menu function
+---
+title: Menu functions
+---
+# Menu functions (zPE)
+External functions for working with menu.
 
 ## `Menu_SearchItems`
 !!! function "`Menu_SearchItems`"
@@ -9,6 +13,16 @@
     ```
 
     - `mask` - regex like mask for searching
+
+## `Open_Link`
+!!! function "`Open_Link`"
+    Opens a link in the browser
+
+    ```dae
+    func void Open_Link( var string link ) {};
+    ```
+    
+    - `link` - link to open in the browser
 
 ### Example
 This function is used in the Union Menu [API script](../daedalus_injection/index.md#api-script).  
