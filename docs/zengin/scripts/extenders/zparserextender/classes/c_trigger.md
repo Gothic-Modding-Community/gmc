@@ -51,31 +51,63 @@ Both of these functions return an instance of `C_Trigger` instance. You can of c
 // When the function is called, the instance hero will be placed in self (although it can be any other NPC if desired).
 // The rest of the instances are left null (not used).
 
+META
+{
+    Engine = G1, G2A;
+    Parser = Game;
+    MergeMode = 1;
+};
+
+class C_Trigger
+{
+    var int Delay; // defines the frequency (in miliseconds) at which the function will be called.
+    var int Enabled; // determines if the trigger is active. If the value is equal to zero, the trigger is destroyed.
+    var int AIVariables[16]; // user data, which can be set independently when creating trigger (yes, you can write there absolutely everything you want).
+
+    // Hidden variable members
+    /*
+        - Func   - The function that the trigger will call.
+        - Self   - The NPC that will be placed in `self` when the function is called.
+        - Other  - An NPC that will be placed in `other` when the function is called.
+        - Victim - The NPC that will be placed in `victim` when the function is called.
+    */
+};
+
 var C_Trigger trigger;
-trigger = AI_StartTriggerScriptEx("c_loop", 1000, hero, null, null);
-trigger.AIVariables[0] = 15; // how many times the function should be called
-trigger.AIVariables[1] = 5;  // how much damage to deal each iteration
-```
 
-The trigger function
+func void poison_me() {
+     var C_Trigger trigger;
+     trigger = AI_StartTriggerScriptEx("poison_me_loop", 1000, hero, null, null);
+     NadjaTrigger.Delay = 500;    // repeat loop each call by 500ms
+     trigger.AIVariables[0] = 15; // how many times the function should be called
+     trigger.AIVariables[1] = 5;  // how much damage to deal each iteration
+};
 
-```dae
-func int c_loop()
+func int poison_me_loop()
 {
     // Create a loop end check, if the number of
     // available iterations has reached 0. If it did
     // we stop the trigger by returning the LOOP_END value.
-    if (SelfTrigger.AIVariables[0] <= 0)
+    if (trigger.AIVariables[0] <= 0)
     {
         return Loop_end;
     };
-    
-    SelfTrigger.Delay -= 20;         // Accelerate loop each call by 20 ms
-    SelfTrigger.AIVariables[0] -= 1; // Reduce number of remaining repeats
-    self.Attribute[ATR_HITPOINTS] -= SelfTrigger.AIVariables[1]; // Take health from self
+
+    trigger.AIVariables[0] -= 1; // Reduce number of remaining repeats
+    self.Attribute[ATR_HITPOINTS] -= trigger.AIVariables[1]; // Take health from self
     return LOOP_CONTINUE;
 };
+
+func event GameLoop()
+{
+    if (Hlp_KeyToggled(KEY_Z))
+    {
+        poison_me();
+    };
+};
 ```
+On `Z` key press it will poison the hero.
+
 ## Trigger scope
 
 Triggers can be divided into two types:
