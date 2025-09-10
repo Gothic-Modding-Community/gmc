@@ -1,4 +1,7 @@
-# Externals
+---
+title: Externals
+---
+# Custom externals
 Externals are functions defined by the Gothic engine that can be called from scripts. Union SDK provides symbols for pointers to global `zCParser` instances that we can use to interact with the parser and to define a custom external function.
 
 ```cpp
@@ -11,7 +14,7 @@ extern zCParser*&   parserMenu;
 extern zCParser*&   parserMusic;
 ```
 
-## Creating custom external
+## Creating external
 To create an external we need to define a function handler and register it in the parser. Before we start, it's good to write down a Daedalus function signature so we can see the return and argument types that will be important later.
 ```dae
 func string AddNumbers(var int FirstArgument, var int SecondArgument, var string ThirdArgument)  {}
