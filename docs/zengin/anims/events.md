@@ -61,10 +61,9 @@ General Syntax:
 | [eventSFX](#eventsfx)                 | create sound effect                                                                 |
 | [eventSFXGRND](#eventsfxgrnd)         | create sound effect on the ground                                                   |
 | [eventTag](#eventtag)                 | generic event, does action specified in parameters                                  |
-| Defined in engine but never used ?    |                                                                                     |
 | [eventPFXGRND](#eventpfxgrnd)         | create particle effect on the ground                                                |
 | [eventSetMesh](#eventsetmesh)         | ?                                                                                   |
-| [modelTag](#modeltag)                 | same as eventTag, but applies to morphmesh?                                         |
+| [modelTag](#modeltag)                 | same as eventTag, but applies to all amiations in aniEnum                           |
 
 
 ### eventCamTremor
@@ -125,7 +124,7 @@ Syntax:
 
 Both `INTENSITY` and `HOLD_TIME` can be specified in the MMS script. All gothic morph meshes specify those values in .MMS, therefore behavior when both specified in eventMMStartAni and .MMS file is unknown/untested
 
-## eventPfx
+### eventPfx
 
 Start particle effect at the specified bone. 
 
@@ -155,7 +154,7 @@ Syntax:
     `ATTACH` is used to create demons burning hand during the attack, while without this keyword dust particles are made to stay at the position where NPC landed after falling.
 
 
-## eventPFXStop
+### eventPFXStop
 
 Stops particle effect previously started by [eventPfx](#eventpfx)
 
@@ -177,7 +176,7 @@ Syntax:
 `PFX_HANDLE`        - an integer value. *Handle* of the particle effect, that should be destroyed. Particle effect must be spawned using the same handle by [eventPfx](#eventpfx) first
 
 
-## eventSwapMesh
+### eventSwapMesh
 
 Move mesh from source `NODE` to target node.  Item should be present in the node already. Only mesh of the Items is moved, engine internally still keeps a reference to items in the original slot? Never used in game?
 
@@ -201,7 +200,7 @@ Syntax:
 !!! Note
     In some rare occasions duplicates item 
 
-## eventSfx
+### eventSfx
 
 Play sound effect. It can be either `SFX` instance from scripts, or `.WAV` file.
 
@@ -230,7 +229,7 @@ Syntax:
     A lot of original game animations contain `EMTPY_SLOT` instead of `EMPTY_SLOT` which was probably unintended. Gothic therefore acts as no keyword was provided, which causes a lot of sound interruptions. Therefore be mindful of spelling when copying original MDS scripts
 
 
-## eventSfxGrnd
+### eventSfxGrnd
 
 the same as [eventSfx](#eventsfx) with only one difference, the sound effect name is appended with the current material name.
 
@@ -263,7 +262,7 @@ Depending on the material of the texture, the character is standing on, the game
 NPC running on grass texture, with material set to EARTH in world editor,  will play sound `Run_Earth` by using `*eventSFXGrnd (12 "Run")` in run animation. `_Earth` suffix is determined and added by the engine.
 
 
-## eventTag
+### eventTag
 
 This is a generic type of event that does different actions based on the first parameter after the frame parameter. It was probably later in development to extend MDS functionality without the need to expand parser itself.
 All parameters except `FRAME` are passed inside quotes Further parameters are specific for every `EVENT_TAG_TYPE`. 
@@ -848,27 +847,25 @@ ani	("s_1hAttack"   1   "s_1hAttack"    0.0	0.1	M.  "Hum_1hAttackComboT3_M05.asc
 
 
 
+### eventPfxGrnd
 
-
-## eventPfxGrnd
-
-Not used anywhere in the original game. Could possibly spawn particle effect like [eventPfx](#eventpfx) but with an added suffix similar to how [eventSfxGrnd](#eventsfxgrnd) works. Needs to be investigated.
+Not used anywhere in the original game. Probably meant to spawn particle effect like [eventPfx](#eventpfx) but with an added suffix similar to how [eventSfxGrnd](#eventsfxgrnd) works. In practice, it does nothing.
 
 Syntax:
 ```dae
 *eventPFXGRND (FRAME)
 ```
 
-## eventSetMesh
+### eventSetMesh
 
 Unknown
 
 Syntax:
 ```dae
-*eventSETMESH (FRAME "NODE_NAME")
+*eventSETMESH (FRAME "SOUND_NAME")
 ```
 
-## modelTag
+### modelTag
 
 Should work similarly to [eventTag](#eventtag), but can be defined inside aniEnum block and applies to all animations of the Model.
 

@@ -1,50 +1,93 @@
 
 # Animation
+Animations in ZenGin consist of animation files and animation scripts. Working with them require deep understanding of the architecture and concepts. This section provides information necessary to effectively work with animations within the engine.
+
+## Types
+There are two main types of animations - `skeletal` and `morphmesh`. Skeletal animations are used for animating characters and objects with a skeleton, while morph mesh animations are used for animating facial expressions and other models that require vertex-based deformations.
+
+## Formats
+
+### Raw
+
+**Animation files**
+
+ZenGin uses the `.ASC` file format for raw animation files. Following things could be saved as the `.ASC` file:
+
+- Animation model (skeleton + skin or morph mesh)
+- Actual animation data (keyframes)
+- Animation targets (like doors, beds etc.)
 
 
-# Animations in ZenGin
-Animations are (apart from maybe advanced programming work using Ikarus or Union) one of the most advanced modding techniques, since you not only must understand the way they work, but also know how to write the animation script and understand the whole scheme selection system, naming convention and of course know how to animate (that is my biggest problem :D). To get a new animation into ZenGin (the Gothic engine) is not difficult per se, I would describe it as tedious.
+The `.ASC` files can be opened in blender using the [KrxImpExp](#krximpexp) add-on.
 
-Luckily, there are tools to help us to achieve our goal - get a new animation to be used by the engine, and in effect, to be used and seen in the game.
+**Script files**
 
-To describe the whole process, I constructed this small tutorial, to help other people to get animations working and to spare them many hours of searching the excellent forum posts, that describe parts of the process.  
-__
+Every animated model in ZenGin has its own animation script file with the `.MDS` extension for skeleton based models and `.MMS` for morph mesh based models. These files are used to define animation data. You can find more about these files in the [MDS](mds.md) and [MMS](mms.md) sections.
 
-Excluding advanced programming work with Ikarus or Union, animations are arguably the most advanced modding discipline of ZenGin engine. Its difficulty stems for the fact that you not only have to understand the general concept, but also learn how to write the animation scripts and understand the whole scheme selection system, including naming conventions and, most important for last - actually know how to animate. Adding new animations into ZenGin is more tedious than actually difficult.
+### Compiled
+Raw formats are great for editing, but can be a bit heavy for the engine use (ASCII based formats are slower to parse and work with), because of that ZenGin compiles these animations into various internal formats.
 
-There are tool to help with this endeavor - to get a new animation implemented in the engine, and seeing its effects in game. Following tutorial has been constructed to help others to get their animations working without having to scour old forum posts for hours.
-
-## Prerequisites - Tools & Materials
-1. Gothic Mod Development Kit (MDK)
-    - Gothic 1 MDK - [link](https://github.com/PhoenixTales/gothic-devkit)
-    - Gothic 2 MDK - [link](https://www.worldofgothic.de/dl/download_94.htm)
-2. [Blender](https://www.blender.org/)
-3. [Kerrax's Import Export plugin](https://gitlab.com/Patrix9999/krximpexp) - follow the installation instructions to install the plugin, make sure to set up the texture paths too
-4. Tool for decompiling animations [GothicSourcer](https://worldofplayers.ru/threads/41942/), or use [phoenix](https://github.com/lmichaelis/phoenix) or write your own using [ZenLib](https://github.com/Try/ZenLib)
+| Format | Extension | Content |
+|--------|-----------|-------------|
+| Model Animation | `.MAN` | Single animation data |
+| Model Hierarchy | `.MDH` | Skeletal structure and slots for a model |
+| Model Mesh | `.MDM` | Softskin mesh and proto mesh structure for a model |
+| Model | `.MDL` | `.MDH` + `.MDM` combined |
+| Model Script | `.MSB` | Compiled version of the `.MDS` file |
+| Morph Mesh | `.MMB` | Morph mesh with its mesh and animation data |
 
 
 
-##  The workflow
-This is the basic step-by-step workflow on how to get the animation into the game.
+## Engine compilation
+By default, animations are compiled by the engine when the model appears in the game or a game is started with `-zconvertall` parameter.
 
-1. Load the actor (character or object) into your 3D software
-2. Create your animation
-3. Export the animation as an `.asc` file
-4. Write the MDS file
-5. Run the game to compile your animations
-6. Test your animations in-game using a Daedalus script or a console command
+!!! Danger
+    If you want to recompile animations, make sure that the `.MSB` or `.MMS` files are deleted, including the ones in the VDF volumes, otherwise the engine will not recompile them.
 
-Sounds simple enough, except there is a lot missing. Even though the steps start with loading the actor into blender, understanding the system of animations to get high quality assets into your mod is more important.
+### Graphical overview
 
-## Animation "types"
-There are two main types of animations - `skeletal` and `morphmesh` animations. Character body animations are skeletal, and we animate the skeleton and the entire model (skin) moves around it. Morph mesh animation is, on the other hand, used for facial animations such as eating, blinking or talking and for animated meshes like wave water ferns or fish in Khorinis' harbor.
+A star `*` means that multiple files could be used/generated.
 
-This guide focuses on skeletal animations. There are few different ones, all of which will have their own demonstration in the future. Categories are:
+<div class="grid" markdown>
 
-1. Standalone animation - waving, bowing, eating
-2. MOBSI animations - bed, alchemy table, anvil
-3. Item animations - sweeping the floor with a broomstick, using the horn, playing the lute
-4. Mandatory animations - running, walking, sneaking
-5. Combined/interpolated animations - picking stuff up, aiming with a bow/crossbow
+=== "Skeletal Animation"
+    ``` mermaid
+    flowchart TD
+    A[Model .ASC] --> D(Compilation)
+    B[Animation .ASC *] --> D
+    C[Model Script .MDS] --> D
+    D --> E[Compiled Model Script .MSB]
+    D --> F[Model Animation .MAN *]
+    D --> G[Model Hierarchy .MDH]
+    D --> H[Model Mesh .MDM]
+    ```
 
-All of these animations are defined in an MDS file which will be talked about in the next sections.
+
+=== "Morph Mesh Animation"
+    ``` mermaid
+    flowchart TD
+    A[Model .ASC] --> D(Compilation)
+    B[Animation .ASC *] --> D
+    C[Morph Mesh Script .MMS] --> D
+    D --> E[Morph Mesh .MMB]
+    ```
+    
+</div>
+
+
+## Tools
+
+### KrxImpExp
+Blender add-on that implements support for Gothic 3D formats.
+
+[:fontawesome-brands-gitlab: GitLab](https://gitlab.com/Patrix9999/krximpexp)
+
+### Gothic Sourcer
+Tool for decompiling animation files.
+
+[:octicons-arrow-right-24: Read more](../tools/gothic_sourcer.md)
+
+### ZenKit
+C++ Library for loading and saving various ZenGin files (including some animation formats).
+
+[:octicons-arrow-right-24: Read More](../tools/libraries/zenkit.md)
