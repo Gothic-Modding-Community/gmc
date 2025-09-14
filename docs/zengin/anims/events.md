@@ -862,7 +862,7 @@ Unknown
 
 Syntax:
 ```dae
-*eventSETMESH (FRAME "SOUND_NAME")
+*eventSETMESH (FRAME "ASC_NAME")
 ```
 
 ### modelTag

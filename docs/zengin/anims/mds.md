@@ -236,6 +236,8 @@ Disables an animation, so it is not played by the engine.
 ```dae
 aniDisable ("ANI_NAME")
 ```
+!!! Bug
+    This command is broken and doesn't work as expected
 **Parameters**
 
 `ANI_NAME` - name of the animation to disable
@@ -274,7 +276,7 @@ Unknown command, never used in the game files.
 aniSync ("ANI_NAME" "NEXT_ANI")
 ```
 
-### Example ModelScript
+## Example ModelScript
 For a better understanding of the MDS syntax, here is a simple example of a human model script.
 
 ```dae
