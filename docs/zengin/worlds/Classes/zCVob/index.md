@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # zCVob
 
 !!! abstract inline end "Quick Infos"
