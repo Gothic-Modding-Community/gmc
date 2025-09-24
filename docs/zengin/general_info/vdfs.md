@@ -31,11 +31,15 @@ VDF=MyMod.mod  MyMod_Textures.mod
 
 The community created variety of different modding tools for work with VDFS volumes over the times, such as:
 
-### [GothicVDFS](../tools/vdfs_tools/gothic_vdfs.md)
+### GothicVDFS
 Most popular tool for working with VDFS volumes. Allows viewing, extracting and building `.vdf` and `.mod` archives, and has CLI interface.
 
-### [VDFS Tool](../tools/vdfs_tools/vdfs_tool.md)
+[:octicons-arrow-right-24: Read more](../tools/vdfs_tools/gothic_vdfs.md)
+
+### VDFS Tool
 New tool for working with VDFS volumes, created to support features introduced by [Union](../union/index.md). Apart from viewing, extracting and building `.vdf` and `.mod` archives, it also supports optimizing and compressing them.
+
+[:octicons-arrow-right-24: Read more](../tools/vdfs_tools/vdfs_tool.md)
 
 
 ### Comparison

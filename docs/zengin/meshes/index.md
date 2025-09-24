@@ -3,7 +3,7 @@
 In 3D graphics, meshes are collections of vertices, edges, and faces that create 3D objects. ZenGin use meshes to create the world model and objects in the world.
 
 !!! Info
-    Not all objects that seem to be a mesh are in the "Meshes" category. Except every animated objects, the animation targets (like beds or doors) also belong to the [Animations](../anims/index.md).
+    Not all objects that seem to be a mesh are in the "Meshes" category. Except all animated objects, the animation targets (like beds or doors) also belong to the [Animations](../anims/index.md).
 
 ## Formats
 
@@ -19,7 +19,10 @@ The 3DS format has some disadvantages when building levels. With very large leve
 
 ### Compiled
 
-Source formats are great for editing, but can be a bit heavy for the engine use (ASCII based formats are slower to parse and work with), because of that ZenGin compiles these meshes into internal compiled formats. In the case of the world it is `.MSH` format and in the case of objects in the world it is the `.MRM` (multi resolution mesh) with LOD information.
+Source formats are great for editing, but can be a bit heavy for the engine use, because of that ZenGin compiles these meshes into internal compiled formats. In the case of the world it is `.MSH` format and in the case of objects in the world it is the `.MRM` (multi resolution mesh) with LOD information.
+
+## Engine compilation
+By default, `.3ds` files are compiled by the engine when they appear in the game or a game is started with `-zconvertall` parameter.
 
 ## Tools
 
