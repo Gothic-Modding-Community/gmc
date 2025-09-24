@@ -1,7 +1,7 @@
 # Mis functions
 
 !!! Warning
-    These mission external functions are part of a cut feature in ZenGin, they are deprecated and udefined behaviour. To add quests use [Log functions](../externals/log.md) instead.
+    These mission external functions are part of a cut feature in ZenGin, they are deprecated and should not be used. To add quests use [Log functions](../externals/log.md) instead.
 
 ## Deprecated
 

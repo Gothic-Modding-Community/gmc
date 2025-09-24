@@ -42,43 +42,15 @@ Since Ikarus 1.2.1 there is additional `.src` file for each game engine, to simp
 ## Initialization
 Before you can use Ikarus in your scripts, it must be properly initialized. The initialization process differs between Gothic 1 and Gothic 2.
 
-### `MEM_InitAll`
-This is main ikarus initialization function, however it consists of some smaller initialization functions.
-=== "Declaration"
+### `MEM_InitAll` 
+This is main ikarus initialization function that initializes all Ikarus functions. It consists of multiple other initialization functions, but it is recommended to use this one.
+=== "MEM_InitAll"
+
     ```dae
     func void MEM_InitAll()
     ```
 
-=== "Definition"
-
-    ```dae
-    func void MEM_InitAll() {
-        if (!MEMINT_ReportVersionCheck()) {
-            return;
-        };
-
-        MEM_ReinitParser(); /* depends on nothing */
-        MEM_InitLabels(); /* depends in MEM_ReinitParser */
-        MEM_InitGlobalInst(); /* depends on MEM_ReinitParser */
-        
-        /* now I can use MEM_ReplaceFunc, MEM_GetFuncID */
-        MEM_GetAddress_Init(); /* depends on MEM_ReinitParser and MEM_InitLabels */
-        /* now the nicer operators are available */
-        
-        MEM_InitStatArrs(); /* depends on MEM_ReinitParser and MEM_InitLabels */
-        ASMINT_Init();
-        
-        MEMINT_ReplaceLoggingFunctions();
-        MEMINT_ReplaceSlowFunctions();
-        MEM_InitRepeat();
-        
-        /* takes a wail the first time it is called.
-            call it to avoid delay later */
-        var int dump; dump = MEM_GetFuncIDByOffset(0);
-    };
-    ```
-
-=== "List of functions"
+=== "Other functions"
     - [MEM_ReinitParser](functions/parser.md#mem_reinitparser)
     - [MEM_InitLabels](functions/jumps_loops.md#initialization)
     - [MEM_InitGlobalInst](functions/objects.md#mem_initglobalinst)
