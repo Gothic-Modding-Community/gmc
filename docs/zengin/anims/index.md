@@ -1,6 +1,6 @@
 
 # Animation
-Animations in ZenGin consist of animation files and animation scripts. Working with them require deep understanding of the architecture and concepts. This section provides information necessary to effectively work with animations within the engine.
+Animations in ZenGin consist of animation files and animation scripts. Working with them requires deep understanding of the architecture and concepts. This section provides information necessary to effectively work with animations within the engine.
 
 ## Types
 There are two main types of animations - `skeletal` and `morphmesh`. Skeletal animations are used for animating characters and objects with a skeleton, while morph mesh animations are used for animating facial expressions and other models that require vertex-based deformations.
@@ -18,7 +18,7 @@ ZenGin uses the `.ASC` file format for raw animation files. Following things cou
 - Animation targets (like doors, beds etc.)
 
 
-The `.ASC` files can be opened in blender using the [KrxImpExp](#krximpexp) add-on.
+The `.ASC` files can be imported into blender using the [KrxImpExp](#krximpexp) add-on.
 
 **Script files**
 

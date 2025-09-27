@@ -73,7 +73,7 @@ ani ("ANI_NAME" LAYER "NEXT_ANI" BLEND_IN BLEND_OUT FLAGS "ASC_NAME" ANI_DIR STA
     ```
 **Parameters**
 
-`ANI_NAME`    - animation name, used in scripts and code as indentifier
+`ANI_NAME`    - animation name, used in scripts and code as identifier
 
 There is a naming convention, that is recommended and sometimes required to be used.
 
@@ -185,7 +185,7 @@ aniBlend ("ANI_NAME" "NEXT_ANI" BLEND_IN BLEND_OUT)
 
 ---
 #### aniComb
-Command that defines an animation that is created by interpolating several animatios with an equal number of frames.
+Command that defines an animation that is created by interpolating several animations with an equal number of frames.
 ```dae
 aniComb ("ANI_NAME" LAYER "NEXT_ANI" BLEND_IN BLEND_OUT FLAGS "ANI_PREFIX" NUM_ANI)
 ```
