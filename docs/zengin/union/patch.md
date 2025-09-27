@@ -5,7 +5,7 @@
 Patches could be launched from any directory monitored by the file system (`System`, `Saves`, `_work` etc.). The launch is performed both from physical directories and from VDF/MOD volumes. If physical and virtual directories contain identical patches with identical paths, physical copies will have read priority.
 
 ## Documentation
-The desctiption of the patch format could be found [here](https://worldofplayers.ru/threads/42178/).
+The description of the patch format could be found [here](https://worldofplayers.ru/threads/42178/).
 
 ## Community patches
 Following repositories contain collections of various patches:
