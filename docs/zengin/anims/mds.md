@@ -116,7 +116,7 @@ Some additional parameters could be specified at the end of the command, these a
 
 `FPS:XX` - sets the frames per second for this animation
 
-`SPD:XX` - sets the speed??? (not used in the game)
+`SPD:XX` - sets the speed multiplier
 
 `CVS:XX` - sets the collision volume scale
 
