@@ -529,7 +529,7 @@ The height of the menu item in virtual coordinates.
 
 ### sizeStartScale
 
-!!! Warning "Deprecated setting"
+!!! Danger "Deprecated setting"
     Size of the menu item at the beginning.
 
 
@@ -653,12 +653,12 @@ const int IT_EXTENDED_MENU          = 1 << 14;  // Advanced menu flag
 
 ### openDelayTime
 
-!!! Warning "Deprecated setting"
+!!! Danger "Deprecated setting"
     Delay before opening a menu item.
 
 ### openDuration
 
-!!! Warning "Deprecated setting"
+!!! Danger "Deprecated setting"
     The time the menu item was opened.
 
 ### userFloat
