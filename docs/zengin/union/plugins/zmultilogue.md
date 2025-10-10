@@ -1,6 +1,6 @@
 # zMultilogue
 
-zMultilogue is a plugin that implements Multi-NPC dialog system for Gothic 1 and Gothic 2 NotR. Its working principle is based on the solution from [AFSP Trialogue package](https://github.com/Bad-Scientists/AF-Script-Packet/blob/main/Standalone-Packages/G12-Trialogue/trialogue.d). The main project goal is to replace Trialog packages based on [Ikarus](../../scripts/extenders/ikarus/index.md) and [LeGo](../../scripts/index.md) with an union-based plugin.
+zMultilogue is a plugin that implements Multi-NPC dialog system for Gothic 1 and Gothic 2 NotR. Its working principle is based on the solution from [AFSP Trialogue package](https://github.com/Bad-Scientists/AF-Script-Packet/blob/main/Standalone-Packages/G12-Trialogue/trialogue.d). The main project goal is to replace Trialog packages based on [Ikarus](../../scripts/extenders/ikarus/index.md) and [LeGo](../../scripts/extenders/lego/index.md) with an union-based plugin.
 
 
 !!! Info
