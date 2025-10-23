@@ -3,7 +3,7 @@ title: MDS ModelScript
 ---
 
 # MDS - Model Script
-Model script is a file describing what skeleton should be used, what body meshes work with this set of animations and how should the animations be named, how fast they run, what animation is supposed to start after the current one is finished and much more.
+Model script[^1] is a file describing what skeleton should be used, what body meshes work with this set of animations and how should the animations be named, how fast they run, what animation is supposed to start after the current one is finished and much more.
 
 !!! Info
     If you are unfamiliar with the animation naming conventions, please read the [naming conventions](naming.md) article first.
