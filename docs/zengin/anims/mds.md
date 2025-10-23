@@ -2,66 +2,78 @@
 title: MDS ModelScript
 ---
 
-# MDS - model animation script
+# MDS - Model Script
+Model script is a file describing what skeleton should be used, what body meshes work with this set of animations and how should the animations be named, how fast they run, what animation is supposed to start after the current one is finished and much more.
+
+!!! Info
+    If you are unfamiliar with the animation naming conventions, please read the [naming conventions](naming.md) article first.
+
+## Syntax
+The MDS file consists of blocks and commands. Blocks are wrapped in curly braces `{}` and commands are single lines that end with a newline character.
+
+**Comments**
+
+Comments start with `//` and continue to the end of the line.
+```dae
+// This is a comment
+```
 
 !!! Tip
-    The MDS syntax is very simple and scripts can be edited in any text editor. It is, however, easier to work in an editor with a proper syntax highlighting. [Daedalus Language Server](https://github.com/kirides/vscode-daedalus/releases)'s dev branch already merged the MDS grammar for syntax highlighting, we can expect it in the next release.
+    The MDS syntax is very simple and scripts can be edited in any text editor. It is, however, easier to work in an editor with a proper syntax highlighting. [vscode-daedalus](../tools/daedalus_tools/daedalus_language_server.md) extension for Visual Studio Code supports MDS syntax highlighting.
 
-Model animation script is a file describing what skeleton should be used, what body meshes work with this set of animations and how should the animations be named, how fast they run, what animation is supposed to start after the current one is finished and much more. These files are located in `Gothic\_work\DATA\Anims\` directory.
-
-Whilst the code seems long and terrifying, it is in fact rather simple, and this guide will try to explain it whole.
-
-!!! hint "Don't forget to use the search"
-    If you search this file for `t_Yes`, you will get an example of the first type of animation - "standalone"
-
-    To play the animation in game you use this console command `play ani t_yes`.
-
-    ![type:video](https://www.youtube.com/embed/aOyuGVWDefc)
-
-
-## Syntax and keywords
-
-Let us get a quick look at the naming convention to get a basic idea what is going on before we start.
-
-The first letter indicates a type of animation (transition - `t_` - or state - `s_`).
-Then depending on the animation type we have:
-
-**Transition animation**
-```
-t_Run_2_Sneak
-```
-Transition animation from the run animation to the sneak animation.
-```
-t_BSANVIL_Stand_2_S0
-```
-Transition animation for the blacksmith's anvil from standing to state 0.
-
-**State animation**
-```
-s_Run
-```
-State animation for the looping animation.
-```
-s_BSANVIL_S0
-```
-State animation for the blacksmith's anvil and its first state.
-
-### ani
-This is the main command you will be using while defining new animations.
-
-Example:
+## Model
+The whole script is wrapped in the `Model` block. It defines the name of the model this script belongs to.
 ```dae
-ani    ("t_Yes" 2 "" 0.1 0.1 M. "Hum_Yes_M01.asc" F 1 44)
+Model ("MODEL_NAME")
+{
+    //...
+}
 ```
-Syntax:
+
+### meshAndTree
+This command defines the source file for the model mesh and skeleton in the neutral pose.
 ```dae
-ani (ANI_NAME LAYER NEXT_ANI BLEND_IN BLEND_OUT FLAGS ASC_NAME ANI_DIR START_FRAME END_FRAME)
+meshAndTree ("ASC_NAME" DONT_USE_MESH)
 ```
-`ani` - is a keyword, we are defining new animation
+**Parameters**
 
-Let's describe all the parameters
+`ASC_NAME` - name of the source file  
+`DONT_USE_MESH` - optional parameter, if specified the mesh from the source file is not used, only the skeleton. This is used for humans and creatures, since different meshes could use the same skeleton.
 
-`ANI_NAME`    - animation name, we use it in Daedalus as animation identifier
+### registerMesh
+This command registers a body mesh that can be used with this model (e.g armor or clothing).
+```dae
+registerMesh ("ASC_NAME")
+```
+**Parameters**
+
+`ASC_NAME` - name of the source file
+
+### aniEnum
+This block contains all the animations for this model.
+```dae
+aniEnum
+{
+    //...
+}
+```
+
+---
+#### ani
+This is the main command for defining an animation.
+```dae
+ani ("ANI_NAME" LAYER "NEXT_ANI" BLEND_IN BLEND_OUT FLAGS "ASC_NAME" ANI_DIR START_FRAME END_FRAME)
+```
+!!! Info
+    Inside the `ani` command [animation events](events.md) could be used.
+
+!!! Example
+    ```dae
+    ani    ("t_Yes" 2 "" 0.1 0.1 M. "Hum_Yes_M01.asc" F 1 44)
+    ```
+**Parameters**
+
+`ANI_NAME`    - animation name, used in scripts and code as identifier
 
 There is a naming convention, that is recommended and sometimes required to be used.
 
@@ -87,7 +99,7 @@ If we set it to 0.5, it takes 0.5 seconds for this animation to take full effect
 - **F** - the engine ignores height coordinate - doesn't keep the model "glued" to the ground (falling/flying animation)
 - **I** - specifies idle animation - breathing, standing with a drawn weapon and moving the weapon
 
-`ASC_NAME`    - name of the source file exported from Blender
+`ASC_NAME`    - name of the source file
 
 `ANI_DIR`     - direction of the animation
 
@@ -98,17 +110,32 @@ If we set it to 0.5, it takes 0.5 seconds for this animation to take full effect
 
 `END_FRAME`   - on what frame from the source file the animation ends
 
-### aniAlias
-Generally considered as one of the most useful commands, `aniAlias` is used to create an alias (hard link for UNIX users) for an already defined animation.
+**Additional parameters**
 
-Example:
+Some additional parameters could be specified at the end of the command, these are optional and not used in all animations.
+
+`FPS:XX` - sets the frames per second for this animation
+
+`SPD:XX` - sets the speed multiplier
+
+`CVS:XX` - sets the collision volume scale
+
+!!! Example
+    ```dae
+    ani ("s_Run" 1 "s_Run" 0.0 0.0 M. "Hum_Run_M01.asc" F 1 30 FPS:30 CVS:0.1)
+    ```
+
+---
+#### aniAlias
+Command to create an alias (hard link for UNIX users) for an already defined animation.
 ```dae
-aniAlias ("t_Sneak_2_Run" 1 "s_Run" 0.0    0.1    M. "t_Run_2_Sneak" R)
+aniAlias ("ANI_NAME" LAYER "NEXT_ANI" BLEND_IN BLEND_OUT FLAGS "ALIAS_NAME" ANI_DIR)
 ```
-Syntax:
-```dae
-aniAlias (ANI_NAME LAYER NEXT_ANI BLEND_IN BLEND_OUT FLAGS ALIAS_NAME ANI_DIR)
-```
+!!! Example
+    ```dae
+    aniAlias ("t_Sneak_2_Run" 1 "s_Run" 0.0    0.1    M. "t_Run_2_Sneak" R)
+    ```
+**Parameters**
 
 `ANI_NAME`   - name of the new animation
 
@@ -133,17 +160,20 @@ aniAlias    ("t_Sneak_2_Run" 1 "s_Run"      0.0 0.1 M. "t_Run_2_Sneak"      R)
 ```
 In this example we are defining `t_Sneak_2_Run` animation and we are specifying that the animation after this one is finished will be `s_Run` and that it is being made by reversing animation `t_Run_2_Sneak` by specifying the `R` flag.
 
-### aniBlend
-AniBlend is used to define animations that are a result of blending of two animations. This animation is not animated by hand, but it is dynamically generated by the engine during run-time.
+---
+#### aniBlend
+Command to define animations that are a result of blending of two animations. This animation is not animated by hand, but it is dynamically generated by the engine during run-time.
 
-Example
-```dae
-aniBlend ("t_RunR_2_Run" "s_Run" 0.2 0.2)
-```
 Syntax:
 ```dae
-aniBlend (ANI_NAME NEXT_ANI BLEND_IN BLEND_OUT)
+aniBlend ("ANI_NAME" "NEXT_ANI" BLEND_IN BLEND_OUT)
 ```
+
+!!! Example
+    ```dae
+    aniBlend ("t_RunR_2_Run" "s_Run" 0.2 0.2)
+    ```
+**Parameters**
 
 `ANI_NAME`   - name of the new animation
 
@@ -153,12 +183,139 @@ aniBlend (ANI_NAME NEXT_ANI BLEND_IN BLEND_OUT)
 
 `BLEND_OUT`  - time in seconds describing animation blending at the end
 
+---
+#### aniComb
+Command that defines an animation that is created by interpolating several animations with an equal number of frames.
+```dae
+aniComb ("ANI_NAME" LAYER "NEXT_ANI" BLEND_IN BLEND_OUT FLAGS "ANI_PREFIX" NUM_ANI)
+```
+!!! Example
+    ```dae
+    ani ("c_bow_1" 4 "" 0.1 0.1 .. "bow_shoot.asc" F 41 41)
+    ani ("c_bow_2" 4 "" 0.1 0.1 .. "bow_shoot.asc" F 43 43)
+    ani ("c_bow_3" 4 "" 0.1 0.1 .. "bow_shoot.asc" F 47 47)
+    ani ("c_bow_4" 4 "" 0.1 0.1 .. "bow_shoot.asc" F 49 49)
 
-### aniSync
-Not used in the game.
+    aniComb ("s_bow_aim" 1 "s_bow_aim" 0.1 0.1 M. "c_bow_" 4)
+    ```
 
-### aniBatch
-Not used in the game.
+    In this example, `aniComb` creates the `s_bow_aim` animation by combining four preceding `ani` phases (`c_bow_1` to `c_bow_4`). Each phase uses the same source file but different frame ranges.
+
+**Parameters**
+
+`ANI_NAME`   - name of the new animation
+
+`LAYER`      - layer the animation is on
+
+`NEXT_ANI`   - name of the next animations
+
+`BLEND_IN`   - time in seconds describing animation blending at the start
+
+`BLEND_OUT`  - time in seconds describing animation blending at the end
+
+`FLAGS`      - flags, that describe animation behavior
+
+`ANI_PREFIX` - prefix of the animations to combine
+
+`NUM_ANI` – number of previous `ani` commands to combine
+
+
+---
+#### aniMaxFPS
+Sets the default maximum frame rate for all animations, if not specified, the default value (25 FPS) is used.
+```dae
+aniMaxFPS (FPS_VALUE)
+```
+**Parameters**
+
+`FPS_VALUE` - maximum frames per second
+
+---
+#### aniDisable
+Disables an animation, so it is not played by the engine.
+```dae
+aniDisable ("ANI_NAME")
+```
+!!! Bug
+    This command is broken and doesn't work as expected
+**Parameters**
+
+`ANI_NAME` - name of the animation to disable
+
+---
+#### aniBatch
+Command to combine multiple animations into one. When the combined animation is played, all the animations in the batch are played simultaneously. This could be used e.g. to split the upper and lower body animations.
+```dae
+aniBatch ("ANI_NAME")
+{
+    *aniBatch ("BATCH_ANI_NAME")
+    // ...
+}
+```
+!!! Danger
+    This command is not used in the game files and might not work as expected.
+
+!!! Example
+    ```dae
+    aniBatch ("t_1h_slash1")
+    {
+        *aniBatch ("t_1h_slash1_top")
+        *aniBatch ("t_1h_slash1_bot")
+    }
+    ```
+**Parameters**
+
+`ANI_NAME`   - name of the new animation
+
+`BATCH_ANI_NAME` - name of the animation to be played in the batch, it must be defined previously in the script
+
+---
+#### aniSync
+Unknown command, never used in the game files.
+```dae
+aniSync ("ANI_NAME" "NEXT_ANI")
+```
+
+## Example ModelScript
+For a better understanding of the MDS syntax, here is a simple example of a human model script.
+
+```dae
+Model ("HuS")
+{
+    meshAndTree  ("Hum_Body_Naked0.ASC" DONT_USE_MESH)
+
+    registerMesh ("Hum_Body_Naked0.ASC")
+    registerMesh ("Hum_Body_CookSmith.ASC")
+
+    aniEnum
+    {
+        modelTag ("DEF_HIT_LIMB"    "zs_RightHand")
+
+        ani  ("s_stand"  1  "s_stand" 0.5 0.5 M. "stand_pause2.asc"  F 0 -1)
+        ani  ("t_strafe_l"  1  "s_stand" 0.1 0.1 M. "Strafe_Left.asc"  F 0 -1)
+
+        aniBlend ("t_stand_2_run" "s_run")
+
+        aniSync  ("t_run_2_walk"  "s_walk")
+
+        aniAlias ("t_strafe_r" 1 "s_stand" 0.1 0.1 M. "t_strafe_l" R)
+
+        aniBatch ("t_1h_slash1")
+        {
+            *aniBatch ("t_1h_slash1_top")
+
+            *aniBatch ("t_1h_slash1_bot")
+        }
+
+        ani  ("t_1h_shield_ready" 5 "" 0.2 0.2 .. "shield_ready.asc" F 0 -1)
+        {
+            *eventSwapMesh(13 "zs_Shield" "zs_LeftArm")
+        }
+        //...
+    }
+
+}
+```
 
 ## Animation state machine
 More complex animations such as MOBSI animations form a state machine - an animation set.
@@ -214,3 +371,5 @@ stateDiagram-v2
     s_S0 --> t_S0_Try
     t_S0_Try --> s_S0
 ```
+
+[^1]: Inspired by the [MDS article](https://worldofplayers.ru/threads/36653/) by VAM.

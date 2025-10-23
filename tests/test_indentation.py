@@ -32,6 +32,11 @@ class IndentationTest(unittest.TestCase):
 
             contents, meta = mkdocs.utils.meta.get_data(source)
 
+            # If the file only has the meta, then it's not stripped, instead it's the contents
+            maybe_meta_contents: str = contents.strip()
+            if maybe_meta_contents.startswith("---") and maybe_meta_contents.endswith("---"):
+                continue
+
             last_line = ""
             inside_admonition = False
             admonition_valid = False
@@ -62,8 +67,12 @@ class IndentationTest(unittest.TestCase):
                 if line.strip() == "":
                     inside_list = False
 
+                comment_ending = line.lstrip(" ").startswith("-->")
+
+                assert_line = not inside_codeblock and not comment_ending and not line.strip() == "---"
+
                 # TODO rewrite it someday with regex
-                if line.startswith(self.list_prefixes) and not inside_codeblock:
+                if line.startswith(self.list_prefixes) and assert_line:
                     self.assertTrue(
                         len(line) >= 2,
                         "List entries must have content\n"
