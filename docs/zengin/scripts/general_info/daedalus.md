@@ -6,7 +6,7 @@ Daedalus syntax is a mix of `C` and `C++`. The script language is not case-sensi
 
 ## Identifiers and Keywords
 
-Identifier are names for variables, constants, instances, prototypes, classes and functions. An identifier is a sequence of letters and ciphers. The first sign must be a letter. Thereafter, are allowed: letters, ciphers `0` to `9` and underscores. The length of identifiers is not restricted.
+Identifiers are names for variables, constants, instances, prototypes, classes and functions. An identifier is a sequence of letters and digits. The first character must be a letter. Thereafter, are allowed: letters, digits `0` to `9` and underscores. The length of identifiers is not restricted.
 
 Keywords are:
 

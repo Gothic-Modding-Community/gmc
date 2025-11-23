@@ -57,7 +57,7 @@ Description of the class member variables.
 `backPic` is just a name of background image of the menu in `.tga` format.
 
 ### backWorld
-!!! Warning "Deprecated setting"
+!!! Danger "Deprecated setting"
     The background world of the game menu in `.ZEN` format.
 
 ### posx
