@@ -1,3 +1,4 @@
 nav:
+    - setup.md
     - ...
     - ... | examples*.md

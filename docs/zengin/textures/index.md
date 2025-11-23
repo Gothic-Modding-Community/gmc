@@ -38,7 +38,7 @@ The engine compilation may be affected by keywords in the texture name or direct
 
 **Color depth**
 
-Textures are compiled by default with a color depth of 16 bits per pixel and needs 4 bits of memory per pixel. To force the engine to convert textures with a different color depth, you need to add an ending to the name of the texture or directory `_16BIT` or `_32BIT`. Using 16/32 bit images makes sense when there are visual problems or noise after compression, but they take up more memory. 
+Textures are compiled by default with a color depth of 16 bits per pixel and need 4 bits of memory per pixel. To force the engine to convert textures with a different color depth, you need to add an ending to the name of the texture or directory `_16BIT` or `_32BIT`. Using 16/32 bit images makes sense when there are visual problems or noise after compression, but they take up more memory. 
 
 Example: `_WORK\DATA\TEXTURES\SKY\NOMIP_16BIT\CLOUDS.TGA`.
 

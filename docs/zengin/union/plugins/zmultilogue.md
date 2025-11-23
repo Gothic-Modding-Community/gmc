@@ -14,7 +14,7 @@ zMultilogue is a plugin that implements Multi-NPC dialog system for Gothic 1 and
 
 ## Features
 
-- System for creating dialogues with multiple NPCs that doesn't fuck up AI queue
+- System for creating dialogs with multiple NPCs without breaking the AI queue
 - Manual script interface based on the [LeGo Trialoge package](https://github.com/Lehona/LeGo/blob/dev/Trialoge.d)
-- Auto script interface for that makes writing multilogs as easy as normal dialogs
+- Auto script interface that makes writing multilogs as easy as normal dialogs
 - Advanced camera manipulation system

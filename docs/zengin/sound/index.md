@@ -2,14 +2,14 @@
 ZenGin uses `.wav` files for playing Sound Effects and Dubbing.
 
 !!! Info
-    In-game soundtrack isn't saved in `.wav` sound files. See [Music](../music.md).
+    In-game soundtrack isn't saved in `.wav` sound files. See [Music](../music.md) for more information.
 
 ## Properties
 Original gothic sound files has following properties:
 
 - One channel (Mono)
 - [44100 Hz](https://en.wikipedia.org/wiki/44,100_Hz) frequency
-- 32-bit [depth](https://en.wikipedia.org/wiki/Audio_bit_depth)
+- 16-bit PCM encoding
 
 ## SFX
 Sound effects (SFX) are sounds made by monsters, spells, weapons etc. Sound effects are defined in multiple places, in `.mds` files as part of the animation [EventBlocks](../anims/events.md), or in the SFX Daedalus scripts. Sounds are located in the `_work/Data/Sound/SFX` directory. 
