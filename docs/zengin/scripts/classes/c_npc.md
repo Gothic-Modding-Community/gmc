@@ -4,7 +4,7 @@ title: C_NPC
 
 # C_NPC Daedalus class
 
-Class `C_Npc` describes the character and monsters. The playable character is also an NPC.
+Class `C_Npc` describes the character and monsters[^1]. The playable character is also an NPC.
 
 !!! Tip
     You can call externals inside the instance of `C_NPC` class e.g. to give an item or customize look of the NPC.
@@ -490,4 +490,4 @@ Disable focus on the NPC. The NPC will not be highlighted when the player looks 
 !!! Warning
     This property is only available in Gothic 2 Addon.
 
-[^1]: Heavily inspired by the amazing documentation site [Gothic library](http://gothic-library.ucoz.org/)
+[^1]: Heavily inspired by the amazing documentation site [Gothic library](http://gothic-library.ucoz.org/publ/class_c_npc/1-1-0-42)
