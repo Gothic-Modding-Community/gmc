@@ -309,21 +309,23 @@ div.md-nav__link--index {
     animation: heart 1000ms infinite;
 }
 
-
+/* function admonition is now a simple block with left border - muczc1wek */
 .md-typeset .admonition.function,
 .md-typeset details.function {
-  border-color: rgb(163, 159, 159);
+  padding-left: 25px;
+  border-radius: 0%;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: .1rem solid var(--md-typeset-table-color);
+  box-shadow: none;
+  display: block;
 }
 .md-typeset .function > .admonition-title,
 .md-typeset .function > summary {
-  background-color: rgba(148, 148, 148, 0.1);
+  display: none;
 }
-.md-typeset .function > .admonition-title::before,
-.md-typeset .function > summary::before {
-  background-color: rgb(163, 159, 159);
-  -webkit-mask-image: var(--md-admonition-icon--function);
-          mask-image: var(--md-admonition-icon--function);
-}
+
 
 /* Beautiful heart beat animation I found here: https://github.com/squidfunk/mkdocs-material/discussions/3850 */
 @keyframes heart
