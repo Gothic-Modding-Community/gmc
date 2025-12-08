@@ -503,8 +503,6 @@ ul .sp-none {
     border-radius: 0.2em;
     font-size: 0.85em;
     font-family: var(--md-code-font-family);
-    background-color: var(--type-default-bg);
-    color: var(--type-default-color);
 }
 
 /* Header color schemes */
