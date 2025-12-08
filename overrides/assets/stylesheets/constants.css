@@ -15,3 +15,19 @@
     --gmc-blue-tint: #00aafc;
     --gmc-tabs-bg-hue: 210deg;
 }
+
+/* Type colors */
+:root {
+    --type-int-bg: rgba(183, 180, 0, 0.15);
+    --type-int-color: #b7b400;
+    --type-float-bg: rgba(74, 144, 226, 0.15);
+    --type-float-color: #4a90e2;
+    --type-string-bg: rgba(206, 145, 114, 0.15);
+    --type-string-color: #ce9172;
+    --type-func-bg: rgba(80, 192, 0, 0.15);
+    --type-func-color: #50c000;
+    --type-class-builtin-bg: rgba(158, 127, 176, 0.15);
+    --type-class-builtin-color: #9e7fb0;
+    --type-class-custom-bg: rgba(220, 20, 60, 0.15);
+    --type-class-custom-color: #dc143c;
+}

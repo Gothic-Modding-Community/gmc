@@ -3,13 +3,9 @@ title: C_SVM
 ---
 # C_SVM Daedalus class
 
-!!! example "Acknowledgment"
-    Heavily inspired by the amazing documentation site [Gothic library](http://www.gothic-library.ru)
+The `C_SVM` class is used to define sound dialogues (smalltalk, reactions) that are defined for every [C_NPC.voice](c_npc.md#int-voice)[^1].
 
-
-The `C_SVM` class is used to define sound dialogues (smalltalk, reactions) that are defined for every [C_NPC.voice](c_npc.md#voice).
-
-## Class definition
+## Definition
 `C_SVM` class is the only class with variable number of members. The `C_SVM` definition in the scripts dictates the content of the class. Every Gothic game has a different number of SVM entries. As an interesting information (more than anything else) we include a table with the numbers of voice lines and voices below.
 
 | Game                  | voice lines | voices          |
@@ -66,3 +62,5 @@ class C_SVM
     //...
 };
 ```
+
+[^1]: Heavily inspired by the amazing documentation site [Gothic library](http://gothic-library.ucoz.org/publ/class_c_svm/1-1-0-48)

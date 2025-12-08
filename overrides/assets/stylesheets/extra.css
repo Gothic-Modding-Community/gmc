@@ -490,3 +490,143 @@ ul .sp-none {
 }
 
 /* endregion */
+
+/* region data type headers */
+
+
+/* Base styling for typed headers */
+.md-typeset :is(h3, h4, h5).typed code {
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.15em 0.35em;
+    margin-right: 0.2em;
+    border-radius: 0.2em;
+    font-size: 0.85em;
+    font-family: var(--md-code-font-family);
+    background-color: var(--type-default-bg);
+    color: var(--type-default-color);
+}
+
+/* Header color schemes */
+.md-typeset :is(h3, h4, h5).typed.int code {
+    background-color: var(--type-int-bg);
+    color: var(--type-int-color);
+}
+
+.md-typeset :is(h3, h4, h5).typed.float code {
+    background-color: var(--type-float-bg);
+    color: var(--type-float-color);
+}
+
+.md-typeset :is(h3, h4, h5).typed.string code {
+    background-color: var(--type-string-bg);
+    color: var(--type-string-color);
+}
+
+.md-typeset :is(h3, h4, h5).typed.func code {
+    background-color: var(--type-func-bg);
+    color: var(--type-func-color);
+}
+
+.md-typeset :is(h3, h4, h5).typed.class-builtin code {
+    background-color: var(--type-class-builtin-bg);
+    color: var(--type-class-builtin-color);
+}
+
+.md-typeset :is(h3, h4, h5).typed.class-custom code {
+    background-color: var(--type-class-custom-bg);
+    color: var(--type-class-custom-color);
+}
+
+.md-typeset :is(h3, h4, h5).typed.misc code {
+    background-color: var(--type-misc-bg);
+    color: var(--type-misc-color);
+}
+
+/* Base styling for code in TOC */
+.md-nav__link code {
+    display: inline-block;
+    padding: 0.12em 0.25em;
+    margin-right: 0.05em;
+    margin-top: 0.15em;
+    border-radius: 0.15em;
+    font-size: 0.75em;
+    font-weight: 600;
+    font-family: var(--md-code-font-family);
+    background-color: var(--type-default-bg);
+    color: var(--type-default-color);
+    white-space: nowrap;
+}
+
+/* TOC type-specific overrides */
+.md-nav__link code.int {
+    background-color: var(--type-int-bg);
+    color: var(--type-int-color);
+}
+
+.md-nav__link code[data-type="int"] {
+    background-color: var(--type-int-bg);
+    color: var(--type-int-color);
+}
+
+.md-nav__link code.float {
+    background-color: var(--type-float-bg);
+    color: var(--type-float-color);
+}
+
+.md-nav__link code[data-type="float"] {
+    background-color: var(--type-float-bg);
+    color: var(--type-float-color);
+}
+
+.md-nav__link code.string {
+    background-color: var(--type-string-bg);
+    color: var(--type-string-color);
+}
+
+.md-nav__link code[data-type="string"] {
+    background-color: var(--type-string-bg);
+    color: var(--type-string-color);
+}
+
+.md-nav__link code.func {
+    background-color: var(--type-func-bg);
+    color: var(--type-func-color);
+}
+
+.md-nav__link code[data-type="func"] {
+    background-color: var(--type-func-bg);
+    color: var(--type-func-color);
+}
+
+.md-nav__link code.class-builtin {
+    background-color: var(--type-class-builtin-bg);
+    color: var(--type-class-builtin-color);
+}
+
+.md-nav__link code[data-type="class-builtin"] {
+    background-color: var(--type-class-builtin-bg);
+    color: var(--type-class-builtin-color);
+}
+
+.md-nav__link code.class-custom {
+    background-color: var(--type-class-custom-bg);
+    color: var(--type-class-custom-color);
+}
+
+.md-nav__link code[data-type="class-custom"] {
+    background-color: var(--type-class-custom-bg);
+    color: var(--type-class-custom-color);
+}
+
+.md-nav__link code.misc {
+    background-color: var(--type-misc-bg);
+    color: var(--type-misc-color);
+}
+
+.md-nav__link code[data-type="misc"] {
+    background-color: var(--type-misc-bg);
+    color: var(--type-misc-color);
+}
+/* endregion */
+

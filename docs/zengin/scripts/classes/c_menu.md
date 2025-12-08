@@ -4,81 +4,58 @@ title: C_MENU
 
 # C_MENU Daedalus class
 
-!!! example "Acknowledgment"
-    Heavily inspired by the amazing documentation site [Gothic library](http://www.gothic-library.ru)
+Class `C_MENU` is responsible for the behavior and properties of the game menus (options, save etc.)[^1].
 
-Class `C_Menu` is responsible for the behavior and properties of the game menus (options, save etc.).
-## Class definition
+## Definition
 Class definition as it is defined in [`Scripts/System/_intern/Menu.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/_intern/Menu.d) script file. 
 
-??? "C_Menu Daedalus class"
-    ```dae
-    class C_Menu 
-    {
-        var     string  backPic;            // Menu background image
-        var     string  backWorld;          // Background ZEN-world of the game menu (Not used)
-        var     int     posx;               // The top left point of the menu on the screen horizontally (X-axis)
-        var     int     posy;               // The top left point of the menu on the screen vertically (Y-axis)
-        var     int     dimx;               // Menu width in virtual coordinates
-        var     int     dimy;               // Menu height in virtual coordinates
-        var     int     alpha;              // Menu transparency
-        var     string  musicTheme;         // Music track of the menu
-        var     int     eventTimerMSec;     // trigger time for the event EVENT_TIMER
-        var     string  items[150];         // Menu items
-        var     int     flags;              // Menu flags
-        var     int     defaultOutGame;     // Menu item highlighted by default when the game is not running
-        var     int     defaultInGame;      // Menu item highlighted by default when the game is running
-    };
-    ```
+```dae
+class C_Menu 
+{
+    var string backPic;        // Menu background image
+    var string backWorld;      // Background ZEN-world of the game menu (Not used)
+    var int    posx;           // The top left point of the menu on the screen horizontally (X-axis)
+    var int    posy;           // The top left point of the menu on the screen vertically (Y-axis)
+    var int    dimx;           // Menu width in virtual coordinates
+    var int    dimy;           // Menu height in virtual coordinates
+    var int    alpha;          // Menu transparency
+    var string musicTheme;     // Music track of the menu
+    var int    eventTimerMSec; // trigger time for the EVENT_TIMER event
+    var string items[150];     // Menu items
+    var int    flags;          // Menu flags
+    var int    defaultOutGame; // Menu item highlighted by default when the game is not running
+    var int    defaultInGame;  // Menu item highlighted by default when the game is running
+};
+```
 
-## Class members
+## Members
 
-| Variable                          | Type   | Description                                                                         |
-|-----------------------------------|--------|-------------------------------------------------------------------------------------|
-| [backPic](#backpic)               | string | Menu background image                                                               |
-| [backWorld](#backworld)           | string | Background ZEN-world of the game menu (Not used)                                    |
-| [posx](#posx)                     | int    | The top left point of the menu on the screen horizontally (X-axis)                  |
-| [posy](#posy)                     | int    | The top left point of the menu on the screen vertically (Y-axis)                    |
-| [dimx](#dimx)                     | int    | Menu width in virtual coordinates                                                   |
-| [dimy](#dimy)                     | int    | Menu height in virtual coordinates                                                  |
-| [alpha](#alpha)                   | int    | Menu transparency                                                                   |
-| [musicTheme](#musictheme)         | string | Music track of the menu                                                             |
-| [eventTimerMSec](#eventtimermsec) | int    | The timer that triggered the event in seconds                                       |
-| [items](#items)                   | string | Menu items                                                                          |
-| [flags](#flags)                   | int    | Menu flags                                                                          |
-| [defaultOutGame](#defaultoutgame) | int    | Menu item highlighted by default when the game is not running                       |
-| [defaultInGame](#defaultingame)   | int    | Menu item highlighted by default when the game is running                           |
-
-
-## Class member overview
-Description of the class member variables.
-
-### backPic
+### `string` backPic {: .typed .string}
 `backPic` is just a name of background image of the menu in `.tga` format.
 
-### backWorld
+### `string` backWorld {: .typed .string}
 !!! Danger "Deprecated setting"
     The background world of the game menu in `.ZEN` format.
 
-### posx
+### `int` posx {: .typed .int}
 The horizontal position of the top left point of the menu on the screen, in virtual coordinates. 
 
-### posy
+### `int` posy {: .typed .int}
 The vertical position of the top left point of the menu on the screen, in virtual coordinates. 
 
-### dimx
+### `int` dimx {: .typed .int}
 Menu width in virtual coordinates.
 
-### dimy
+### `int` dimy {: .typed .int}
 Menu height in virtual coordinates.
 
-### alpha
+### `int` alpha {: .typed .int}
 Menu transparency. Accepts values ​​from 0 to 255. Without the `backPic` property specified, the value of this parameter is ignored. 
 
 !!! Note
     Texture transparency can only be adjusted if the texture has an alpha channel.
 
-### musicTheme
+### `string` musicTheme {: .typed .string}
 Music theme of the menu.
 ```dae
 instance MENU_MAIN(C_MENU_DEF)
@@ -90,7 +67,7 @@ instance MENU_MAIN(C_MENU_DEF)
 ```
 All instances of musical themes are stored in a file [`Scripts/System/Music/MusicInst.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/Music/MusicInst.d)
 
-### eventTimerMSec
+### `int` eventTimerMSec {: .typed .int}
 Defines the trigger time for the event `EVENT_TIMER` in seconds.
 
 The list of constants for all menu events is described in the file [`Scripts/System/_intern/Menu.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/_intern/Menu.d#L51)
@@ -107,7 +84,7 @@ const int EVENT_SEL_PREV    = 7;    // Select event of the previous menu item
 const int EVENT_SEL_NEXT    = 8;    // Select event of the next menu item
 ```
 
-### items
+### `string` items {: .typed .string}
 An array of items belonging to this menu. It is possible to use up to 150 items in one menu. The same elements can be used for different menus. The element instance is specified as the value. 
 
 ```dae
@@ -139,7 +116,7 @@ instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF)
 };
 ```
 
-### flags
+### `int` flags {: .typed .int}
 Menu flags. 
 
 The list of flag constants can be found in the file [`Scripts/System/_intern/Menu.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/_intern/Menu.d#L43)
@@ -163,17 +140,18 @@ const int MENU_SHOW_INFO        = 64;   // Display information at the bottom of 
 - **MENU_ALIGN_CENTER** - Align the menu to the center of the screen.
 - **MENU_SHOW_INFO** - Display information at the bottom of menu description from menu item `text[1]`.
 
-### defaultOutGame
+### `int` defaultOutGame {: .typed .int}
 The menu item that is highlighted by default when the game is not running.
 
 A value of -1 enables automatic selection of the first selectable element.
 
 Items with the `~IT_SELECTABLE` flag are not selected.
 
-### defaultInGame
+### `int` defaultInGame {: .typed .int}
 Menu item highlighted by default when the game is running.
 
 A value of -1 enables automatic selection of the first selectable element.
 
 Items with the `~IT_SELECTABLE` flag are not selected.
 
+[^1]: Heavily inspired by the amazing documentation site [Gothic library](http://gothic-library.ucoz.org/publ/class_c_menu/1-1-0-36).

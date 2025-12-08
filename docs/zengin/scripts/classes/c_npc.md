@@ -4,7 +4,7 @@ title: C_NPC
 
 # C_NPC Daedalus class
 
-Class `C_Npc` describes the character and monsters[^1]. The playable character is also an NPC.
+Class `C_NPC` describes the character and monsters[^1]. The playable character is also an NPC.
 
 !!! Tip
     You can call externals inside the instance of `C_NPC` class e.g. to give an item or customize look of the NPC.
@@ -18,171 +18,129 @@ Class `C_Npc` describes the character and monsters[^1]. The playable character i
     };
     ```
 
-## Class definition
-`C_Npc` class definition differs between Gothic 1 and Gothic 2 Addon.
+## Definition
+`C_NPC` class definition differs between Gothic 1 and Gothic 2 Addon.
 
 === "G1"
 
     Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/VaanaCZ/gothic-1-classic-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Classes.d#L11-L59) script file.
 
-    ??? "C_Npc Daedalus class"
-        ```dae
-        class C_Npc 
-        {
-            var int     id;                                 // NPC id
-            var string 	name[5];                            // NPC name
-            var string 	slot;			                    // Slot (deprecated)
-            var int		npcType;			                // NPC type
-            var int	    flags;			                    // NPC flags
-            var int     attribute[ATR_INDEX_MAX];			// Attribute values
-            var int		protection[PROT_INDEX_MAX];			// Protection values
-            var int		damage[DAM_INDEX_MAX];			    // Damage values
-            var int		damagetype;                         // Type of damage
-            var int	    guild;                              // NPC guild
-            var int	    level;                              // NPC level
-            var func    mission[MAX_MISSIONS];			    // Missions (deprecated)
-            var int		fight_tactic;			            // NPC fight tactic
-            var int	    weapon;			                    // Current comabt mode
-            var int		voice;			                    // SVM voice assigned to the NPC
-            var int		voicePitch;			                // Pitch of the voice
-            var int		bodymass;			                // Body mass (deprecated)
+    ```dae
+    class C_Npc 
+    {
+        var int    id;                             // NPC id
+        var string name[5];                        // NPC name
+        var string slot;			               // Slot (deprecated)
+        var int	   npcType;			               // NPC type
+        var int	   flags;			               // NPC flags
+        var int    attribute[8];			       // Attribute values
+        var int	   protection[8];			       // Protection values
+        var int	   damage[8];			           // Damage values
+        var int	   damagetype;                     // Type of damage
+        var int	   guild;                          // NPC guild
+        var int	   level;                          // NPC level
+        var func   mission[5];			           // Missions (deprecated)
+        var int	   fight_tactic;			       // NPC fight tactic
+        var int	   weapon;			               // Current comabt mode
+        var int	   voice;			               // SVM voice assigned to the NPC
+        var int	   voicePitch;			           // Pitch of the voice
+        var int	   bodymass;			           // Body mass (deprecated)
 
-            // Routine	
-            var func	daily_routine;                      // Starting daily routine of the NPC
-            var func    start_aistate;                      // Starting AI state of the NPC
+        // Routine	
+        var func   daily_routine;                  // Starting daily routine of the NPC
+        var func   start_aistate;                  // Starting AI state of the NPC
 
-            // Respawn
-            var string	spawnPoint;                         // Spawn point (deprecated)
-            var int		spawnDelay;                         // Spawn delay (deprecated)
+        // Respawn
+        var string spawnPoint;                     // Spawn point (deprecated)
+        var int	   spawnDelay;                     // Spawn delay (deprecated)
 
-            // Senses
-            var int 	senses;                             // NPC senses
-            var int 	senses_range;                       // NPC senses range
+        // Senses
+        var int    senses;                         // NPC senses
+        var int    senses_range;                   // NPC senses range
 
-            // AI
-            var int		aivar[50];						    // AI variables
-            var string	wp;			                        // Currently tracked waypoint
+        // AI
+        var int	   aivar[50];					   // AI variables
+        var string wp;			                   // Currently tracked waypoint
 
-            // Experience
-            var int		exp;                                // Experience points
-            var int		exp_next;                           // Experience points needed for the next level
-            var int		lp;                                 // Learning points
-        };	
-        ```
+        // Experience
+        var int	   exp;                            // Experience points
+        var int	   exp_next;                       // Experience points needed for the next level
+        var int	   lp;                             // Learning points
+    };	
+    ```
 
 === "G2A"
 
     Class definition as it is defined in [`Scripts/Content/_intern/Classes.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Classes.d#L12-L68) script file.
 
-    ??? "C_Npc Daedalus class"
-        ```dae
-        class C_Npc 
-        {
-            var int     id;                                 // NPC id
-            var string 	name[5];                            // NPC name
-            var string 	slot;			                    // Slot (deprecated)
-            var string	effect;                             // Visual effect
-            var int		npcType;			                // NPC type
-            var int	    flags;			                    // NPC flags
-            var int     attribute[ATR_INDEX_MAX];			// Attribute values
-            var int 	hitChance[MAX_HITCHANCE];           // Fight skill values
-            var int		protection[PROT_INDEX_MAX];			// Protection values
-            var int		damage[DAM_INDEX_MAX];			    // Damage values
-            var int		damagetype;                         // Type of damage
-            var int	    guild;                              // NPC guild
-            var int	    level;                              // NPC level
-            var func    mission[MAX_MISSIONS];			    // Missions (deprecated)
-            var int		fight_tactic;			            // NPC fight tactic
-            var int	    weapon;			                    // Current comabt mode
-            var int		voice;			                    // SVM voice assigned to the NPC
-            var int		voicePitch;			                // Pitch of the voice
-            var int		bodymass;			                // Body mass (deprecated)
+    ```dae
+    class C_Npc 
+    {
+        var int    id;                             // NPC id
+        var string name[5];                        // NPC name
+        var string slot;			               // Slot (deprecated)
+        var string effect;                         // Visual effect
+        var int	   npcType;			               // NPC type
+        var int	   flags;			               // NPC flags
+        var int    attribute[8];			       // Attribute values
+        var int    hitChance[5];                   // Fight skill values
+        var int	   protection[8];			       // Protection values
+        var int	   damage[8];			           // Damage values
+        var int	   damagetype;                     // Type of damage
+        var int	   guild;                          // NPC guild
+        var int	   level;                          // NPC level
+        var func   mission[5];			           // Missions (deprecated)
+        var int	   fight_tactic;			       // NPC fight tactic
+        var int	   weapon;			               // Current comabt mode
+        var int	   voice;			               // SVM voice assigned to the NPC
+        var int	   voicePitch;			           // Pitch of the voice
+        var int	   bodymass;			           // Body mass (deprecated)
 
-            // Routine	
-            var func	daily_routine;                      // Starting daily routine of the NPC
-            var func    start_aistate;                      // Starting AI state of the NPC
+        // Routine	
+        var func   daily_routine;                  // Starting daily routine of the NPC
+        var func   start_aistate;                  // Starting AI state of the NPC
 
-            // Respawn
-            var string	spawnPoint;                         // Spawn point (deprecated)
-            var int		spawnDelay;                         // Spawn delay (deprecated)
+        // Respawn
+        var string spawnPoint;                     // Spawn point (deprecated)
+        var int	   spawnDelay;                     // Spawn delay (deprecated)
 
-            // Senses
-            var int 	senses;                             // NPC senses
-            var int 	senses_range;                       // NPC senses range
+        // Senses
+        var int    senses;                         // NPC senses
+        var int    senses_range;                   // NPC senses range
 
-            // AI
-            var int		aivar[100];						    // AI variables
-            var string	wp;			                        // Currently tracked waypoint
-            				
-            // Experience
-            var int		exp;                                // Experience points
-            var int		exp_next;                           // Experience points needed for the next level
-            var int		lp;                                 // Learning points
+        // AI
+        var int	   aivar[100];					   // AI variables
+        var string wp;			                   // Currently tracked waypoint
+                        
+        // Experience
+        var int	   exp;                            // Experience points
+        var int	   exp_next;                       // Experience points needed for the next level
+        var int	   lp;                             // Learning points
 
-            var int		bodyStateinterruptableOverride;		// Possibility to interrupt the current body state
-            var int     noFocus;							// Disable focus on the NPC
-        };		
-        ```
+        var int	   bodyStateinterruptableOverride; // Possibility to interrupt the current body state
+        var int    noFocus;						   // Disable focus on the NPC
+    };		
+    ```
 
-## Class members
+## Members
 
-| variable                          | Type   | Description                                                                         |
-|-----------------------------------|--------|-------------------------------------------------------------------------------------|
-| [id](#id)                         | int    | NPC id                                                                              |
-| [name](#name)                     | string | NPC name                                                                            |
-| [slot](#slot)                     | string | Slot (deprecated)                                                                   |
-| [effect](#effect)                 | string | Visual effect (only in G2A)                                                         |
-| [npcType](#npctype)               | int    | NPC type                                                                            |
-| [flags](#flags)                   | int    | NPC flags                                                                           |
-| [attribute](#attribute)           | int    | NPC attribute values                                                                |
-| [hitChance](#hitchance)           | int    | NPC fight skill values (only in G2A)                                                |
-| [protection](#protection)         | int    | NPC protection against damage types                                                 |
-| [damage](#damage)                 | int    | NPC damage values                                                                   |
-| [damagetype](#damagetype)         | int    | NPC damage type                                                                     |
-| [guild](#guild)                   | int    | NPC guild                                                                           |
-| [level](#level)                   | int    | NPC level                                                                           |
-| [mission](#mission)               | func   | Missions (deprecated)                                                               |
-| [fight_tactic](#fight_tactic)     | int    | NPC fight tactic                                                                    |
-| [weapon](#weapon)                 | int    | Current comabt mode                                                                 |
-| [voice](#voice)                   | int    | SVM voice assigned to the NPC                                                       |
-| [voicePitch](#voicepitch)         | int    | Pitch of the voice                                                                  |
-| [bodymass](#bodymass)             | int    | Body mass (deprecated)                                                              |
-| [daily_routine](#daily_routine)   | func   | Starting daily routine of the NPC                                                   |
-| [start_aistate](#start_aistate)   | func   | Starting AI state of the NPC                                                        |
-| [spawnPoint](#spawnpoint)         | string | Spawn point (deprecated)                                                            |
-| [spawnDelay](#spawndelay)         | int    | Spawn delay (deprecated)                                                            |
-| [senses](#senses)                 | int    | NPC senses                                                                          |
-| [senses_range](#senses_range)     | int    | NPC senses range                                                                    |       
-| [aivar](#aivar)                   | int    | NPC AI variables                                                                    |
-| [wp](#wp)                         | string | Currently tracked waypoint                                                          |
-| [exp](#exp)                       | int    | Experience points                                                                   |
-| [exp_next](#exp_next)             | int    | Experience points needed for the next level                                         |
-| [lp](#lp)                         | int    | Learning points                                                                     |
-| [bodyStateinterruptableOverride](#bodystateinterruptableoverride) | int    | Possibility to interrupt the current body state (only in G2A)  |
-| [noFocus](#nofocus)               | int    | Disable focus on the NPC (only in G2A)                                              |
-
-
-
-## Class member overview
-Description of the class member variables.
-
-### id
+### `int` id {: .typed .int}
 Unique identification number used for human NPCs.
 
-### name
+### `string` name {: .typed .string}
 Name of the NPC. Only the first name from array is used.
 
-### slot
+### `string` slot {: .typed .string}
 !!! Danger "Deprecated setting"
     Slot.
     
-### effect
+### `string` effect {: .typed .string}
 VFX visual effect aplied to the NPC. The effect must be defined as `CFx_Base` instance.
 
 !!! Warning
     This property is only available in Gothic 2 Addon.
 
-### npcType
+### `int` npcType {: .typed .int}
 Type of NPC. 
 
 === "G1"
@@ -215,7 +173,7 @@ Type of NPC.
     const int NPCTYPE_BL_MAIN		= 7; // Main NPC in Bandit Camp
     ```
 
-### flags
+### `int` flags {: .typed .int}
 NPC flags. 
 
 === "G1"
@@ -235,7 +193,7 @@ NPC flags.
     CONST INT NPC_FLAG_GHOST	=  1 << 2;	// Ghost effect
     ```
 
-### attribute
+### `int` attribute {: .typed .int}
 Array of NPC attribute values.
 
 Attribute constants are defined in [`Scripts/Content/_intern/Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L28-L42) file.
@@ -264,7 +222,7 @@ const int ATR_INDEX_MAX				=  8;
     | ATR_MANA                | `MENU_ITEM_ATTRIBUTE_3`     |
     | ATR_HITPOINTS           | `MENU_ITEM_ATTRIBUTE_4`     |   
 
-### hitChance
+### `int` hitChance {: .typed .int}
 Array of NPC skill for fighting with different types of weapons.
 
 NPC talents constants are defined in [`Scripts/Content/_intern/Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L945-L949) file.
@@ -280,7 +238,7 @@ const int NPC_TALENT_CROSSBOW			= 4; // Crossbows
 !!! Warning
     This property is only available in Gothic 2 Addon.
 
-### protection
+### `int` protection {: .typed .int}
 Array of NPC protection values against different types of damage.
 
 Protection constants are defined in [`Scripts/Content/_intern/Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L200-L211) file.
@@ -298,20 +256,20 @@ CONST INT PROT_FALL			= DAM_INDEX_FALL;    // Protection from fall damage
 CONST INT PROT_INDEX_MAX	= DAM_INDEX_MAX;     // Number of protection types
 ```
 
-### damage
-Array of maximum damage values inflicted by the NPC for different types of damage. Used with [`damagetype`](#damagetype) property.
+### `int` damage {: .typed .int}
+Array of maximum damage values inflicted by the NPC for different types of damage. Used with [`damagetype`](#int-damagetype) property.
 
 Damage type constants are defined in [`Scripts/Content/_intern/Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L163-L174) file.
 
-### damagetype
-Type of damage inflicted by the NPC. Used with [`damage`](#damage) property. 
+### `int` damagetype {: .typed .int}
+Type of damage inflicted by the NPC. Used with [`damage`](#int-damage) property. 
 
 !!! Tip
     You can combine multiple damage types using the bitwise OR operator `|`.
 
 Damage type constants are defined in [`Scripts/Content/_intern/Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L163-L174) file.
 
-### guild
+### `int` guild {: .typed .int}
 NPC guild. Guilds differ between Gothic 1 and Gothic 2 Addon, but could be devided into two main groups - `human` and `animal`.
 
 === "G1"
@@ -327,7 +285,7 @@ NPC guild. Guilds differ between Gothic 1 and Gothic 2 Addon, but could be devid
 !!! Info
     General parameters for each guild are specified inside the instance of the `C_GilValues` class.
 
-### level
+### `int` level {: .typed .int}
 Current level of the NPC.
 
 === "G1"
@@ -339,11 +297,11 @@ Current level of the NPC.
 !!! Note
     This property is available in menu as `MENU_ITEM_LEVEL` predefined instance of the [`C_MENU_ITEM`](c_menuitem.md#predefined-instances) class.
 
-### mission
+### `func` mission {: .typed .func}
 !!! Danger "Deprecated setting"
     Array of missions assigned to the NPC.
 
-### fight_tactic
+### `int` fight_tactic {: .typed .int}
 NPC fight tactic. Tactics are described by the `C_FightAI` class instances and each tactic has its own index.
 
 === "G1"
@@ -352,7 +310,7 @@ NPC fight tactic. Tactics are described by the `C_FightAI` class instances and e
 === "G2A"
     Fight tactic constants are defined in [`Scripts/Content/AI/AI_Intern/AI_Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/AI/AI_Intern/AI_Constants.d#L464-L505) file.
 
-### weapon
+### `int` weapon {: .typed .int}
 Current combat mode of the NPC. Property is never used in the game scripts but should work with following constants.
 
 ```dae
@@ -366,7 +324,7 @@ const int WEAPON_CBOW   = 6; // Crossbow
 const int WEAPON_MAGIC  = 7; // Magic
 ```
 
-### voice
+### `int` voice {: .typed .int}
 Voice assigned to the NPC. This is used for [`C_SVM`](c_svm.md) instances.
 
 For example, if the NPC has `voice` property set to `1`, it will use the `SVM_1` instance of the `C_SVM` class.
@@ -378,17 +336,17 @@ instance SVM_1(C_SVM)
 };
 ```
 
-### voicePitch
+### `int` voicePitch {: .typed .int}
 Pitch of the voice. Accepts values from `-5` to `5`. 
 
 !!! Note
     When the pitch is lowered, the playback speed is decreased and overlaing may occur.
 
-### bodymass
+### `int` bodymass {: .typed .int}
 !!! Danger "Deprecated setting"
     Body mass of the NPC.
 
-### daily_routine
+### `func` daily_routine {: .typed .func}
 Function defining the starting daily routine of the NPC.
 
 All routine functions start with the `Rtn_` prefix and end with NPC id as suffix. For example, the `Start` routine of the npc with id `1` will be defined like this:
@@ -412,19 +370,19 @@ func void Rtn_Start_1()
 
 To Change the daily routine use the [`Npc_ExchangeRoutine`](../externals/npc.md#npc_exchangeroutine) function.
 
-### start_aistate
+### `func` start_aistate {: .typed .func}
 Function defining the starting AI state of the NPC. Used mainly for monsters and animals that do not have a daily routine.
 
-### spawnPoint
+### `string` spawnPoint {: .typed .string}
 !!! Danger "Deprecated setting"
     Spawn point of the NPC.
 
-### spawnDelay
+### `int` spawnDelay {: .typed .int}
 !!! Danger "Deprecated setting"
     Spawn delay of the NPC.
 
-### senses
-Active NPC senses. Used with [`senses_range`](#senses_range) property.
+### `int` senses {: .typed .int}
+Active NPC senses. Used with [`senses_range`](#int-senses_range) property.
 
 Senses constants are defined in [`Scripts/Content/_intern/Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L222-L227) file.
 
@@ -434,10 +392,10 @@ CONST INT SENSE_HEAR	= 1 << 1; // Hearing
 CONST INT SENSE_SMELL	= 1 << 2; // Smell
 ```
 
-### senses_range
-Range of active NPC [senses](#senses) in cm. 
+### `int` senses_range {: .typed .int}
+Range of active NPC [senses](#int-senses) in cm. 
 
-### aivar
+### `int` aivar {: .typed .int}
 Array of NPC AI variables. Used inside the NPC AI scripts.
 
 === "G1"
@@ -450,41 +408,41 @@ Array of NPC AI variables. Used inside the NPC AI scripts.
 
     Aivar constants are defined in [`Scripts/Content/AI/AI_Intern/AI_Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/AI/AI_Intern/AI_Constants.d#L1-L339) file.
 
-### wp
+### `string` wp {: .typed .string}
 Currently tracked waypoint. Used with the pathfinding system.
 
-### exp
+### `int` exp {: .typed .int}
 Current experience points of the NPC. 
 
-See [`level`](#level) property for more information about leveling.
+See [`level`](#int-level) property for more information about leveling.
 
 !!! Note
     This property is available in menu as `MENU_ITEM_EXP` predefined instance of the [`C_MENU_ITEM`](c_menuitem.md#predefined-instances) class.
 
 
-### exp_next
+### `int` exp_next {: .typed .int}
 Experience points needed for the next level. 
 
-See [`level`](#level) property for more information about leveling.
+See [`level`](#int-level) property for more information about leveling.
 
 !!! Note
     This property is available in menu as `MENU_ITEM_LEVEL_NEXT` predefined instance of the [`C_MENU_ITEM`](c_menuitem.md#predefined-instances) class.
 
-### lp
+### `int` lp {: .typed .int}
 Current learning points of the NPC. Optained when the NPC levels up. 
 
-See [`level`](#level) property for more information about leveling.
+See [`level`](#int-level) property for more information about leveling.
 
 !!! Note
     This property is available in menu as `MENU_ITEM_LEARN` predefined instance of the [`C_MENU_ITEM`](c_menuitem.md#predefined-instances) class.
 
-### bodyStateinterruptableOverride
+### `int` bodyStateinterruptableOverride {: .typed .int}
 Possibility to interrupt the current body state.
 
 !!! Warning
     This property is only available in Gothic 2 Addon.
 
-### noFocus
+### `int` noFocus {: .typed .int}
 Disable focus on the NPC. The NPC will not be highlighted when the player looks at it.
 
 !!! Warning
