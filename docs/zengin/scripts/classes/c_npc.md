@@ -257,12 +257,12 @@ CONST INT PROT_INDEX_MAX	= DAM_INDEX_MAX;     // Number of protection types
 ```
 
 ### `int` damage {: .typed .int}
-Array of maximum damage values inflicted by the NPC for different types of damage. Used with [`damagetype`](#damagetype) property.
+Array of maximum damage values inflicted by the NPC for different types of damage. Used with [`damagetype`](#int-damagetype) property.
 
 Damage type constants are defined in [`Scripts/Content/_intern/Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L163-L174) file.
 
 ### `int` damagetype {: .typed .int}
-Type of damage inflicted by the NPC. Used with [`damage`](#damage) property. 
+Type of damage inflicted by the NPC. Used with [`damage`](#int-damage) property. 
 
 !!! Tip
     You can combine multiple damage types using the bitwise OR operator `|`.
@@ -382,7 +382,7 @@ Function defining the starting AI state of the NPC. Used mainly for monsters and
     Spawn delay of the NPC.
 
 ### `int` senses {: .typed .int}
-Active NPC senses. Used with [`senses_range`](#senses_range) property.
+Active NPC senses. Used with [`senses_range`](#int-senses_range) property.
 
 Senses constants are defined in [`Scripts/Content/_intern/Constants.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/Content/_intern/Constants.d#L222-L227) file.
 
@@ -393,7 +393,7 @@ CONST INT SENSE_SMELL	= 1 << 2; // Smell
 ```
 
 ### `int` senses_range {: .typed .int}
-Range of active NPC [senses](#senses) in cm. 
+Range of active NPC [senses](#int-senses) in cm. 
 
 ### `int` aivar {: .typed .int}
 Array of NPC AI variables. Used inside the NPC AI scripts.
@@ -414,7 +414,7 @@ Currently tracked waypoint. Used with the pathfinding system.
 ### `int` exp {: .typed .int}
 Current experience points of the NPC. 
 
-See [`level`](#level) property for more information about leveling.
+See [`level`](#int-level) property for more information about leveling.
 
 !!! Note
     This property is available in menu as `MENU_ITEM_EXP` predefined instance of the [`C_MENU_ITEM`](c_menuitem.md#predefined-instances) class.
@@ -423,7 +423,7 @@ See [`level`](#level) property for more information about leveling.
 ### `int` exp_next {: .typed .int}
 Experience points needed for the next level. 
 
-See [`level`](#level) property for more information about leveling.
+See [`level`](#int-level) property for more information about leveling.
 
 !!! Note
     This property is available in menu as `MENU_ITEM_LEVEL_NEXT` predefined instance of the [`C_MENU_ITEM`](c_menuitem.md#predefined-instances) class.
@@ -431,7 +431,7 @@ See [`level`](#level) property for more information about leveling.
 ### `int` lp {: .typed .int}
 Current learning points of the NPC. Optained when the NPC levels up. 
 
-See [`level`](#level) property for more information about leveling.
+See [`level`](#int-level) property for more information about leveling.
 
 !!! Note
     This property is available in menu as `MENU_ITEM_LEARN` predefined instance of the [`C_MENU_ITEM`](c_menuitem.md#predefined-instances) class.

@@ -55,9 +55,9 @@ This creates a highlighting effect.
 ### `string` text {: .typed .string}
 Text inside a menu item. 
 
-Used to determine possible values ​​for game settings. See [onChgSetOptionSection](#onchgsetoptionsection). 
+Used to determine possible values ​​for game settings. See [onChgSetOptionSection](#string-onchgsetoptionsection). 
 
-Also used to display hints about the item at the bottom of the menu when the `MENU_SHOW_INFO` [flag](#flags) is set.
+Also used to display hints about the item at the bottom of the menu when the `MENU_SHOW_INFO` [flag](#int-flags) is set.
 
 ```dae
 // Text displayed in the element
@@ -86,7 +86,7 @@ instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF)
 ```
 
 ### `string` alphaMode {: .typed .string}
-Texture transparency blending mode. Used in conjunction with the [alpha](#alpha) property. This parameter's value is ignored if the [backPic](#backpic) property is not specified.
+Texture transparency blending mode. Used in conjunction with the [alpha](#int-alpha) property. This parameter's value is ignored if the [backPic](#string-backpic) property is not specified.
 
 **Supported modes:**
 
@@ -109,12 +109,12 @@ Texture transparency blending mode. Used in conjunction with the [alpha](#alpha)
     Multiplies the alpha channel of the texture by the background.
 
 ### `int` alpha {: .typed .int}
-Menu element transparency. Accepts values ​​from 0 to 255. Without specifying the [backPic](#backpic) property, the value of this parameter is ignored. 
+Menu element transparency. Accepts values ​​from 0 to 255. Without specifying the [backPic](#string-backpic) property, the value of this parameter is ignored. 
 
-The alpha channel rendering mode is determined using the [alphaMode](#alphamode) property.
+The alpha channel rendering mode is determined using the [alphaMode](#string-alphamode) property.
 
 ### `int` type {: .typed .int}
-Interface element type. Some interface elements have their own settings determined by the [userFloat](#userfloat) and [userString](#userstring) properties.
+Interface element type. Some interface elements have their own settings determined by the [userFloat](#float-userfloat) and [userString](#string-userstring) properties.
 
 Constants for menu item types are described in the file [`Scripts/System/_intern/Menu.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/_intern/Menu.d#L18-L25).
 
@@ -133,13 +133,13 @@ CONST INT MENU_ITEM_LISTBOX		= 7; // Frame
     Undefined element type. Not used in scripts.
 
 - `MENU_ITEM_TEXT`    
-    Menu item type "Text". Text can be multiline by setting the `IT_MULTILINE` [flag](#flags).
+    Menu item type "Text". Text can be multiline by setting the `IT_MULTILINE` [flag](#int-flags).
 
 - `MENU_ITEM_SLIDER`   
     Menu item type "Slider". Additional settings are provided for the slider.
-    - [`userFloat[0]`](#userfloat) property determines the number of divisions for the slider.
-    - [`userFloat[1]`](#userfloat) property determines the width of the slider.
-    - [`userString[0]`](#userstring) property determines the background image for the slider thumb.
+    - [`userFloat[0]`](#float-userfloat) property determines the number of divisions for the slider.
+    - [`userFloat[1]`](#float-userfloat) property determines the width of the slider.
+    - [`userString[0]`](#string-userstring) property determines the background image for the slider thumb.
 
     ```dae
     INSTANCE MENUITEM_AUDIO_MUSICVOL_SLIDER(C_MENU_ITEM_DEF)
@@ -166,11 +166,11 @@ CONST INT MENU_ITEM_LISTBOX		= 7; // Frame
 
 - `MENU_ITEM_BUTTON`   
     Button. Not used in scripts.
-    - The [`userString[0]`](#userstring) property determines which image will be used for the disabled button. The [backPic](#backpic) property is responsible for the background image of the enabled button.
+    - The [`userString[0]`](#string-userstring) property determines which image will be used for the disabled button. The [backPic](#string-backpic) property is responsible for the background image of the enabled button.
 
 - `MENU_ITEM_LISTBOX`   
     Menu item type used in the "Quest Log" menu.
-    - The [`userString[0]`](#userstring) property determines which task list will be displayed in this element.
+    - The [`userString[0]`](#string-userstring) property determines which task list will be displayed in this element.
 
     ```dae
     userstring[0] = "CURRENTMISSIONS";
@@ -182,7 +182,7 @@ CONST INT MENU_ITEM_LISTBOX		= 7; // Frame
 ### `int` onSelAction {: .typed .int}
 Array of commands executed when selecting the menu item.
 
-Each command receives parameters in the [`onSelAction_S`](#onselaction_s) property.
+Each command receives parameters in the [`onSelAction_S`](#string-onselaction_s) property.
 
 Constants are described in the file [`Scripts/System/_intern/Menu.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/_intern/Menu.d#L8-L15).
 
@@ -198,7 +198,7 @@ CONST INT SEL_ACTION_EXECCOMMANDS	= 7; // Execute command specified in the onSel
 ```
 
 ### `string` onSelAction_S {: .typed .string}
-Arguments for commands specified in the [`onSelAction`](#onselaction) property. 
+Arguments for commands specified in the [`onSelAction`](#int-onselaction) property. 
 
 Below are commands and their arguments:
 
@@ -425,7 +425,7 @@ highlightMeleeFocus=2
 ### `string` onChgSetOptionSection {: .typed .string}
 The section of the Gothic.ini file in which the parameter being changed is located.
 
-See [onChgSetOption](#onchgsetoption) above.
+See [onChgSetOption](#string-onchgsetoption) above.
 
 ### `func` onEventAction {: .typed .func}
 Allows a user to call a function on a specified event.
@@ -551,7 +551,7 @@ const int IT_EXTENDED_MENU          = 1 << 14;  // Advanced menu flag
     Empty flag. Not used.
 
 - `IT_EFFECTS_NEXT`   
-    This flag affects the next neighboring element, i.e., the element specified in the [`items`](./c_menu.md#items) list of the [`C_MENU`](./c_menu.md) class.
+    This flag affects the next neighboring element, i.e., the element specified in the [`items`](./c_menu.md#string-items) list of the [`C_MENU`](./c_menu.md) class.
 
     ```dae
     instance MENU_OPT_GAME(C_MENU_DEF)
@@ -619,11 +619,11 @@ const int IT_EXTENDED_MENU          = 1 << 14;  // Advanced menu flag
 
 ### `float` userFloat {: .typed .float}
 
-Numerical settings of the interface element. Depending on the interface element, the purpose of the property changes. See [type](#type). 
+Numerical settings of the interface element. Depending on the interface element, the purpose of the property changes. See [type](#int-type). 
 
 ### `string` userString {: .typed .string}
 
-String settings of the interface element. The purpose of the property changes depending on the interface element. See [type](#type)`.
+String settings of the interface element. The purpose of the property changes depending on the interface element. See [type](#int-type)`.
 
 ### `int` frameSizeX {: .typed .int}
 
@@ -631,7 +631,7 @@ Indentation of text inside the frame along the X axis. This applies the padding 
 
 Frames are a special tool designed to work with the log of tasks and quests.
 
-Used for elements of [type](#type) `MENU_ITEM_LISTBOX`. 
+Used for elements of [type](#int-type) `MENU_ITEM_LISTBOX`. 
 
 ```dae
 instance MENU_ITEM_LIST_MISSIONS_ACT(C_MENU_ITEM_DEF)
@@ -650,19 +650,19 @@ As a result, we get the following frame (Source: [Gothic-Library](http://www.got
 
 ![](../../../assets/images/c_menu_item_farmesize.png)
 
-And the width and height of the frame are set, as for all elements, by the [dimx](#dimx) and [dimy](#dimy) properties.
+And the width and height of the frame are set, as for all elements, by the [dimx](#int-dimx) and [dimy](#int-dimy) properties.
 
 ### `int` frameSizeY {: .typed .int}
 
 Indentation of text inside the frame along the Y axis. In this case, the indentation is applied at the top and bottom of the frame. Measured in virtual coordinates from 0 to 4095.
 
-See [frameSizeX](#framesizex) above.
+See [frameSizeX](#int-framesizex) above.
 
 
 ### `string` hideIfOptionSectionSet {: .typed .string}
 The section of the `Gothic.ini` file with the option which value of determines the display of this menu item. 
 
-This property works together with the [`hideIfOptionSet`](#hideifoptionset) and [`hideOnValue`](#hideonvalue) properties.
+This property works together with the [`hideIfOptionSet`](#string-hideifoptionset) and [`hideOnValue`](#int-hideonvalue) properties.
 
 In the example below, the interface element will not be displayed until the `useGothic1Controls` parameter in the GAME section is set to 1, i.e., enabled.
 
@@ -679,17 +679,17 @@ instance MENU_ITEM_NEXTMENU(C_MENU_ITEM_DEF)
 ```
 
 !!! Tip
-    `Gothic.ini` settings can also be changed through the main menu. See [`onChgSetOption`](#onchgsetoption) and [`onChgSetOptionSection`](#onchgsetoptionsection).
+    `Gothic.ini` settings can also be changed through the main menu. See [`onChgSetOption`](#string-onchgsetoption) and [`onChgSetOptionSection`](#string-onchgsetoptionsection).
 
 ### `string` hideIfOptionSet {: .typed .string}
 The `Gothic.ini` file parameter, the value of which determines the display of this menu item. 
 
-See [hideIfOptionSectionSet](#hideifoptionsectionset).
+See [hideIfOptionSectionSet](#string-hideifoptionsectionset).
 
 ### `int` hideOnValue {: .typed .int}
 The value of the `Gothic.ini` file parameter at which this interface element is not displayed.
 
-See [hideIfOptionSectionSet](#hideifoptionsectionset).
+See [hideIfOptionSectionSet](#string-hideifoptionsectionset).
 
 ## Predefined instances
 There are a lot of predefined class instances in the menu `C_MENU_ITEM` performing a strictly defined function. They cannot be renamed, but they can be configured to a certain extent.
