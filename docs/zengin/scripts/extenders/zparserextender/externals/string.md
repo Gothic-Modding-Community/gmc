@@ -53,7 +53,7 @@ Functions to manipulate and format strings.
 
 ## `Str_GetLocalizedString`
 !!! function "`Str_GetLocalizedString`"
-    Returns a string in the current language, otherwise in English.
+    Returns a string in the current language, otherwise in German.
     Arguments MUST be encoded in UTF-8! The result string will be converted to appropriate ANSI string.
 
     ```dae
@@ -71,7 +71,7 @@ Functions to manipulate and format strings.
 
 ## `Str_GetLocalizedStringEx`
 !!! function "`Str_GetLocalizedStringEx`"
-    Returns a string in the current language, otherwise in English.
+    Returns a string in the current language, otherwise in German.
     Offers additional languages
 
     ```dae
