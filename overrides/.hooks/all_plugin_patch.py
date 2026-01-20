@@ -57,10 +57,11 @@ def on_config(config: MkDocsConfig) -> Optional[Config]:
     highlight.get_lexer_by_name = patch_lexers_cache(lexers.get_lexer_by_name)
     lexers.get_lexer_by_name = patch_lexers_cache(lexers.get_lexer_by_name)
 
-    if social_plugin:
-        LOG.info("Fixing possible social card plugin crash")
-        social_plugin._load_font = patch_social_font_crash(social_plugin._load_font)
-        social_plugin._load_logo = patch_social_custom_dir(social_plugin._load_logo)
+    # crashes in mkdocs-material 9.7.0
+    # if social_plugin:
+    #     LOG.info("Fixing possible social card plugin crash")
+    #     social_plugin._load_font = patch_social_font_crash(social_plugin._load_font)
+    #     social_plugin._load_logo = patch_social_custom_dir(social_plugin._load_logo)
 
     if i18n_plugin:
         process_i18n_nav_translations(i18n_plugin)

@@ -551,8 +551,6 @@ ul .sp-none {
     font-size: 0.75em;
     font-weight: 600;
     font-family: var(--md-code-font-family);
-    background-color: var(--type-default-bg);
-    color: var(--type-default-color);
     white-space: nowrap;
 }
 
