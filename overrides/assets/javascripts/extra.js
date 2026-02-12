@@ -358,6 +358,11 @@ const gmcLinksForVersion = () => {
 };
 
 const gmcTranslateButton = () => {
+    // Hack: detect blog pages via .md-post and ignore them
+    const postElement = document.querySelector(".md-post");
+    if (postElement) {
+        return;
+    }
     const anchor = document.querySelectorAll("a.md-content__button")[0];
     const hrefParts = anchor.href.split("/");
     const oldFileName = hrefParts.pop();
