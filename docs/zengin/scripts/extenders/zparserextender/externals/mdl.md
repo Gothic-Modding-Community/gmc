@@ -1,7 +1,7 @@
 ---
-title: MDL functions
+title: MDL functions 
 ---
-# MDL - model functions
+# MDL functions (zPE)
 Functions to tweak animation and other model related settings.
 
 ## `Mdl_GetAnimationIndex`

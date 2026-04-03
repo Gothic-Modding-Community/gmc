@@ -178,7 +178,7 @@ If the function to be called has parameters, these must first be placed on the d
         Instance to pass as a function parameter
 
 #### `MEM_PushStringParam`
-    !!! function "`MEM_PushStringParam`"
+!!! function "`MEM_PushStringParam`"
     Passes a string as a parameter to the called function.
     ```dae
     func void MEM_PushStringParam (var string str)
@@ -344,10 +344,13 @@ If a function has a return value, it should be fetched from the data stack after
 
 ### `MEM_GetFrameBoundary`
 !!! function "`MEM_GetFrameBoundary`"
-    Returns the address/pointer to the boundary of a stack frame (ESP).
+    Retrieves the boundary of the current stack frame (ESP).
     ```dae
     func int MEM_GetFrameBoundary()
     ```
+
+    **Return value**
+    The function returns an integer representing the address/pointer to the boundary of a stack frame (ESP).
 
 ### `MEM_GetCallerStackPos`
 !!! function "`MEM_GetCallerStackPos`"
@@ -430,7 +433,7 @@ If a function has a return value, it should be fetched from the data stack after
     In addition there is a function **`_@f`** with the same signature and functionality as `MEM_GetFloatAddress`.
 
     ```dae
-    func int _@s(var string s)
+    func int _@f(var float f)
     ```
 
 ### `MEM_GetStringAddress`
@@ -454,7 +457,7 @@ If a function has a return value, it should be fetched from the data stack after
 
 ### `STR_GetAddressInit`
 !!! function "`STR_GetAddressInit`"
-    Alias to [`MEM_GetAddress_Init`](#mem_getaddress_init), kept for downward compatibility.
+    Alias to [`MEM_GetAddress_Init`](#mem_getaddress_init), kept for backwards compatibility.
     ```dae
     func void STR_GetAddressInit()
     ```

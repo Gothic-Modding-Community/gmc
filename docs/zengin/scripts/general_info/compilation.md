@@ -4,6 +4,15 @@ title: Compilation
 # Daedalus Compilation
 Before loading the data by game the Daedalus scripts have to be parsed and compiled into a `.dat` file. This is done by the engine itself, but the files that are parsed have to be listed in the `.src` files.
 
+## Engine compilation
+The engine has to be started with the `-zreparse` command line argument to force the re-parsing of the scripts. If this argument is not present, the engine will use the existing `.dat` files.
+
+### zParserExtender
+Additionally, the [zParserExtender](../extenders/zparserextender/daedalus_injection/other.md#launch-options) plugin adds more options for parsing and compiling the scripts.
+
+!!! Tip
+    Using the `-zReparse_Game -zReparse_OU` is the most common way to recompile the game scripts and dialogs.
+
 ## Parsers
 The engine itself has multiple parser instances used for parsing different `.src` files.
 
@@ -22,7 +31,7 @@ The engine itself has multiple parser instances used for parsing different `.src
 The `.src` files are simple text files that contain the paths to the `.d` files that have to be parsed. The paths are relative to the folder where the `.src` file is located.
 
 !!! Warning
-    Booth `\` and `/` can be used as path separators, but in the wildcards only `\` is supported.
+    Both `\` and `/` can be used as path separators, but in the wildcards only `\` is supported.
 
 
 **Example file structure:**

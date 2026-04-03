@@ -8,5 +8,5 @@ LeGo (**Le**hona**Go**ttfried) is a script packet built on top of [Ikarus](../ik
 | Forum    | [:material-forum: LeGo](https://forum.worldofplayers.de/forum/threads/1505251-Skriptpaket-LeGo-4)                          |
 
 
-!!! Note
-    The code for LeGo is hosted on [GitHub](https://github.com/Lehona/LeGo) and LeGo has its very own [documentation page](https://lego.worldofplayers.de/). 
+## Documentation
+LeGo has its own [documentation page](https://lego.worldofplayers.de/), however it is in german and a bit outdated so we recomend reffering to the information provided here on gmc.

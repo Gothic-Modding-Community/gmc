@@ -60,6 +60,7 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/extra.js
+  - assets/javascripts/toc-types.js
 
 extra:
   social:

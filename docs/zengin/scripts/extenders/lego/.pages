@@ -1,4 +1,5 @@
 nav:
+    - setup.md
     - tools
     - applications
     - userconstants.md

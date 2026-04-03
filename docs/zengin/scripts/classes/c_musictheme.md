@@ -3,58 +3,42 @@ title: C_MUSICTHEME
 ---
 
 # C_MUSICTHEME Daedalus class
+Class `C_MUSICTHEME` describes musical themes[^1].
 
-!!! example "Acknowledgment"
-    Heavily inspired by the amazing documentation site [Gothic library](http://www.gothic-library.ru)
-
-Class `C_MusicTheme` describes musical themes.
-## Class definition
+## Definition
 Class definition as it is defined in [`Scripts/System/_intern/Music.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/_intern/Music.d#L52) script file.
 
-??? "C_MusicTheme Daedalus class"
-    ```dae
-    class C_MusicTheme
-    {
-        var string      file;           // Sound file in DirectMusic `.sgt` format
-        var float       vol;            // Sound volume
-        var int         loop;           // Enable cycle
-        var float       reverbMix;      // Reverb mixing
-        var float       reverbTime;     // Reverb time
-        var int         transType;      // Type of transition to the next theme
-        var int         transSubType;   // Subtype of transition to the next theme song
-    };
-    ```
-## Class members
+```dae
+class C_MusicTheme
+{
+    var string file;         // Sound file in DirectMusic `.sgt` format
+    var float  vol;          // Sound volume
+    var int    loop;         // Enable cycle
+    var float  reverbMix;    // Reverb mixing
+    var float  reverbTime;   // Reverb time
+    var int    transType;    // Type of transition to the next theme
+    var int    transSubType; // Subtype of transition to the next theme song
+};
+```
 
-| Variable                          | Type   | Description                                                                         |
-|-----------------------------------|--------|-------------------------------------------------------------------------------------|
-| [file](#file)                     | string | Sound file in DirectMusic `.sgt` format                                             |
-| [vol](#vol)                       | float  | Sound volume                                                                        |
-| [loop](#loop)                     | int    | Enable/disable cycle                                                                |
-| [reverbMix](#reverbmix)           | float  | Reverb mixing                                                                       |
-| [reverbTime](#reverbtime)         | float  | Reverb time                                                                         |
-| [transType](#transtype)           | int    | The type of transition to the next theme song                                       |
-| [transSubType](#transsubtype)     | int    | The subtype of transition to the next theme song                                    |
+## Members
 
-## Class member overview
-Description of the class member variables.
-
-### file
+### `string` file {: .typed .string}
 DirectMusic sound in *.sgt format or MIDI file. 
 
-### vol
+### `float` vol {: .typed .float}
 The volume of the theme song. From 0.0 to 1.0. 
 
-### loop
+### `int` loop {: .typed .int}
 Enable/disable theme music looping. Disabled = 0. Enabled = 1. 
 
-### reverbMix
+### `float` reverbMix {: .typed .float}
 Reverb mixing. Measured in decibels. 
 
-### reverbTime
+### `float` reverbTime {: .typed .float}
 Reverberation time in milliseconds.
 
-### transType
+### `int` transType {: .typed .int}
 The type of transition to the next theme song. 
 
 The list of constants for all transitions types is described in the file [`Scripts/System/_intern/Music.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/_intern/Music.d#L24)
@@ -69,7 +53,7 @@ const int TRANSITION_TYPE_END           = 6;    // End topic
 const int TRANSITION_TYPE_ENDANDINTRO   = 7;    // End and start new
 ```
 
-### transSubType
+### `int` transSubType {: .typed .int}
 The subtype of transition to the next theme song. 
 
 The list of constants for all transitions subtypes is described in the file [`Scripts/System/_intern/Music.d`](https://github.com/VaanaCZ/gothic-2-addon-scripts/blob/Unified-EN/_work/Data/Scripts/System/_intern/Music.d#L33)
@@ -116,3 +100,5 @@ instance OWD_NGT_STD(C_MUSICTHEME_STANDARD)
 ```
 !!! Tip
     In G2 the `C_MUSICTHEME_STANDARD`, `C_MUSICTHEME_THREAT` and `C_MUSICTHEME_FIGHT` prototypes are used by default.
+
+[^1]: Heavily inspired by the amazing documentation site [Gothic library](http://gothic-library.ucoz.org/publ/class_c_musictheme/1-1-0-41).

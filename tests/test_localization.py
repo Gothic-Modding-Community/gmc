@@ -48,7 +48,7 @@ class LocalizationTest(unittest.TestCase):
             splitted = list(map(str.strip, envar.split(",")))
 
             if splitted[-1].lower() in {"true", "false"} or "'" in splitted[-1]:
-                fallback_value = eval(splitted.pop())
+                fallback_value = eval(splitted.pop().title())
 
             if fallback_value is None:
                 for var in splitted:

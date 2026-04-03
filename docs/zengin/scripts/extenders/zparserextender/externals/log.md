@@ -1,4 +1,7 @@
-# Log functions
+---
+title: Log functions
+---
+# Log functions (zPE)
 As discussed on [Inside Gothic](https://ataulien.github.io/Inside-Gothic/QuestLog/), vanilla Gothic has no way of getting the status of a quest. These functions implement that functionality.
 
 ## `Log_GetTopicStatus`

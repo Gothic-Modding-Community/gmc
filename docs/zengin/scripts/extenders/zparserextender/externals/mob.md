@@ -1,7 +1,7 @@
 ---
-title: MOB functions
+title: MOB functions 
 ---
-# MOB - interactive object functions
+# MOB functions (zPE)
 Functions to manipulate interactive objects like destroying MOBs, setting lockpick combination and such.
 
 ## `Mob_Destroy`

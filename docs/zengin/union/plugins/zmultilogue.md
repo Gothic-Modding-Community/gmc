@@ -1,10 +1,10 @@
 # zMultilogue
 
-zMultilogue is a Multi-NPC dialogue system for Gothic 1 and Gothic 2 NotR, based on the solution form [AFSP Trialogue package](https://github.com/Bad-Scientists/AF-Script-Packet/blob/main/Standalone-Packages/G12-Trialogue/trialogue.d).
-Its goal is to replace Trialoue packages based on [Ikarus](../../scripts/extenders/ikarus/index.md) and [LeGo](../../scripts/extenders/lego/index.md) with an union-based plugin.
+zMultilogue is a plugin that implements Multi-NPC dialog system for Gothic 1 and Gothic 2 NotR. Its working principle is based on the solution from [AFSP Trialogue package](https://github.com/Bad-Scientists/AF-Script-Packet/blob/main/Standalone-Packages/G12-Trialogue/trialogue.d). The main project goal is to replace Trialog packages based on [Ikarus](../../scripts/extenders/ikarus/index.md) and [LeGo](../../scripts/extenders/lego/index.md) with an union-based plugin.
+
 
 !!! Info
-    The plugin has its own [wiki](https://github.com/Silver-Ore-Team/zMultilogue/wiki), if you are interested in including zMultilogue into your project see the [Getting Started guide](https://github.com/Silver-Ore-Team/zMultilogue/wiki/Getting-Started).
+    The plugin has its own [documentation site](https://silver-ore-team.github.io/zMultilogue/), if you are interested in including zMultilogue into your project see the [Getting Started guide](https://silver-ore-team.github.io/zMultilogue/getting-started/).
 
 | Contacts ||
 |:---------| :--- |
@@ -14,6 +14,7 @@ Its goal is to replace Trialoue packages based on [Ikarus](../../scripts/extende
 
 ## Features
 
-- System for creating dialogues with multiple NPCs that doesn't fuck up AI queue
-- Script interface based on the LeGo [Trialoge package](../../scripts/extenders/lego/applications/trialoge.md) (easy to port dialogues)
-- Automatic increasing of dialog-box display distance if NPC is too far
+- System for creating dialogs with multiple NPCs without breaking the AI queue
+- Manual script interface based on the [LeGo Trialoge package](https://github.com/Lehona/LeGo/blob/dev/Trialoge.d)
+- Auto script interface that makes writing multilogs as easy as normal dialogs
+- Advanced camera manipulation system

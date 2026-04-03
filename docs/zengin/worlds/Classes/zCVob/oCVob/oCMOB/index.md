@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 # oCMOB
 
 !!! abstract inline end "Quick Infos"
@@ -150,7 +154,17 @@ A VObject which can optionally be moved and/or carried.
 
 ### `focusName` {: .sp-string}
 
-The name of the object as seen in-game when focusing it.
+The name displayed when the player focuses on the object.
+
+The name is defined in the scripts as:
+```dae
+const string MOBNAME_<focusName> = "<Displayed Name>";
+```
+!!! Example
+    If you set `focusName` to `CHEST`, you should also define:
+    ```dae
+    const string MOBNAME_CHEST = "Chest";
+    ```
 
 ### `hitpoints` {: .sp-int}
 
