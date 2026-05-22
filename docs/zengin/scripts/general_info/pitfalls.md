@@ -5,10 +5,10 @@ A collection of warnings, quirks, and gotchas when working with the Daedalus scr
 ## Identifiers and Keywords
 
 ### Non-standard identifier names
-The Daedalus compiler accepts identifiers that do not start with a letter or contain non-ASCII characters — for example `const string 12AS = "Daedalus...";` or `const string 1 = "0"`. Even though this is possible, it should **not** be used. Such identifiers lead to unreadable code and may break tooling (editors, linters, generators).
+The Daedalus compiler accepts identifiers that do not start with a letter or contain non-ASCII characters - for example `const string 12AS = "Daedalus...";` or `const string 1 = "0"`. Even though this is possible, it should **not** be used. Such identifiers lead to unreadable code and may break tooling (editors, linters, generators).
 
 ### Keywords as identifiers
-Even though keywords can be used as identifiers outside of their expected context (e.g., `var int instance;` where `instance` is the variable name), this should **not** be done. Keywords only have special meaning at specific syntactic positions, so the compiler accepts them elsewhere — but doing so makes code harder to read and may cause issues with tooling.
+Even though keywords can be used as identifiers outside of their expected context (e.g., `var int instance;` where `instance` is the variable name), this should **not** be done. Keywords only have special meaning at specific syntactic positions, so the compiler accepts them elsewhere - but doing so makes code harder to read and may cause issues with tooling.
 
 ## Variables
 
@@ -61,13 +61,13 @@ var int x2 = 42;
 ## Arrays
 
 ### Variable indices are not supported
-Array elements can only be accessed with a constant index — variable indices (e.g. `x[i]`) are not supported.
+Array elements can only be accessed with a constant index - variable indices (e.g. `x[i]`) are not supported.
 
 ### Maximum array indexable via `[]` is 255, though max size is 4096
 Although the maximum array size in Daedalus is 4096 elements, the maximum indexable value via the `[]` operator is **255**.
 
 ### Constant arrays cannot be indexed with `[]`
-In vanilla Daedalus, the `[]` operator cannot be used to access elements of a constant array at all — not even with a constant index. You must declare the elemnts individually as variables if you need runtime element access.
+In vanilla Daedalus, the `[]` operator cannot be used to access elements of a constant array at all - not even with a constant index. You must declare the elemnts individually as variables if you need runtime element access.
 
 ## Operators
 
@@ -101,7 +101,7 @@ func int some_condition() {
 
 In this case, one branch of execution returns `TRUE`, but if `something_happened()` returns false, nothing is returned from this function. This results in a corrupted data stack.
 
-ZenGin has a stack underflow protection (a hack, really): if a value is popped off the stack even though the stack is empty, instead of underflowing, a 0 is returned. Relying on this functionality is not good practice, since you can easily rely on the automatic zero being there while the stack can still have some values on it — and you'll be popping values that should stay there. This creates **undefined behaviour** and should be avoided at all costs.
+ZenGin has a stack underflow protection (a hack, really): if a value is popped off the stack even though the stack is empty, instead of underflowing, a 0 is returned. Relying on this functionality is not good practice, since you can easily rely on the automatic zero being there while the stack can still have some values on it - and you'll be popping values that should stay there. This creates **undefined behaviour** and should be avoided at all costs.
 
 A more reasonable implementation would be:
 
@@ -139,4 +139,54 @@ func void do_something () {
 whenever `do_something()` is called it leaves an extra value `my_val` on the data stack. Since there is no code that consumes this value (there could be, more on that later - but it is not a good way of doing things) it stays on the stack forever (until the engine clears the entire stack).
 This is, of course, a problem and can lead to stack overflows.
 
-### Case study for data stack overflow
+### Function calls as statements
+Daedalus does not support function calls as statements, when oyu call a function in daedalus and it returns a value, even if you do not assign it to anything. This results in values being pushed to the stack, that will not be consumed and can result in a stack voerflow. Or it will be consumed by a function with an error in it...
+
+In the following example, each add_item returns an int. The data stack
+```dae
+// let's call `func int add_item(var C_NPC npc, var C_ITEM itm, var int amnt)`
+func int create_trader_items(var C_NPC trader) {
+    add_item(trader, ItFo_Beer, 6);
+    add_item(trader, ItFo_Apple, 6);
+    add_item(trader, ItFo_Mutton, 6);
+
+    // ... many more calls
+
+    add_item(trader, ItFo_Ham, 6);
+};
+```
+at the end of the function the stack is going to be full of extra values, that do not get popped. Depending on the codepath, this could easily result in a stack overflow.
+
+### Automatic stack underflow protection abuse
+You may notice that vanilla scripts frequently abuse this data stack hack:
+
+```dae
+FUNC INT Info_Diego_Gamestart_Condition()
+{
+	if (Kapitel < 2)
+	{
+		return TRUE;
+	};
+};
+```
+
+This pattern works most of the time because dialogue conditions are evaluated by the engine at initialization time — and the engine clears the data stack before each call. So when the condition `(Kapitel < 2)` evaluates to false, the stack remains empty, and the engine's underflow protection silently returns `0`.
+
+However, the stack is **not** cleared when such a function is called from within Daedalus code (i.e., not invoked directly by the engine). Consider this example:
+
+```dae
+func void example_func() {
+    // some code
+    some_function(); // func int some_function()
+
+    if (cond_1 || Info_Diego_Gamestart_Condition()) && Npc_KnowsInfo(self) {
+        // something
+    } else {
+        // something else
+    };
+};
+```
+
+In this case, `some_function()` leaves its return value on the data stack. When the `if` condition is evaluated and `Info_Diego_Gamestart_Condition()` happens to return false, the `||` operator pops two values from the stack. But instead of popping `cond_1` and the result of the condition check, it pops `cond_1` and the **leftover return value** of `some_function()` — which is the wrong operand entirely.
+
+This leads to undefined and highly unpredictable behaviour. Avoid relying on automatic underflow protection at all costs.

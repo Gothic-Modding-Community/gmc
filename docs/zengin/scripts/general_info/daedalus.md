@@ -51,7 +51,7 @@ Daedalus supports single line and multiline comments.
     ```
 ## Variables and Constants
 
-> ⚠️ See [Pitfalls](pitfalls.md#variables-and-constants)
+> ⚠️ See [Pitfalls](pitfalls.md#variables)
 
 ### Data Types
 | Data type | Default value | Description                                                                    |
@@ -284,7 +284,10 @@ prototype FooProtoType (Foo)
 ```
 
 ### Instances
-Instances represent engine isntances of classes. Instances parent can be a class or a prototype. This construct is used to define various objects (items, NPCs, dialogues).
+Instances represent engine instances of classes. An instance's parent can be a class or a prototype. This construct is used to define various objects (items, NPCs, dialogues).
+
+When an instance is created from a **class**, all members must be explicitly assigned a value. Any member that is not set in the instance body is initialized with the class's default value (e.g. `0` for `int`, `""` for `string`, etc.).
+
 ```dae
 instance FooInstance (Foo)
 {
@@ -292,13 +295,14 @@ instance FooInstance (Foo)
     s1 = "Hello World";
 };
 ```
+
+When an instance is created from a **prototype**, the instance inherits all values from the prototype and can override any of them. Members that are not explicitly set in the instance body are inherited from the prototype as-is.
+
 ```dae
 instance FooInstance (FooProtoType)
 {
-    i1 = 100;
+    i1 = 100; // overridden from prototype (was 42)
+    // s1 is inherited from prototype ("Hello World")
 };
 ```
-
-!!! Note
-    The instance definition can be used to overwrite the default values of the prototype.
 [^1]: The inspiration was taken form text written by Piranha Bytes. Its translation can be found on [Gothic MDK website](https://mdk.gothicarchive.org/docs/skripte/gothic_skriptsprache.htm).
