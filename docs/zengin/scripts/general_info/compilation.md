@@ -36,7 +36,7 @@ The `.src` files are simple text files that contain the paths to the `.d` files 
 
 **Example file structure:**
 
-``` title="&lt;gothic-root&gt;/_work/Data/"
+``` title="<gothic-root>/_work/Data/"
 └── Scripts
     ├── _compiled
     └── content

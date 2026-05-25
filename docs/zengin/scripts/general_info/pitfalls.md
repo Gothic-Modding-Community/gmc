@@ -136,13 +136,13 @@ func void do_something () {
     // something else
 };
 ```
-whenever `do_something()` is called it leaves an extra value `my_val` on the data stack. Since there is no code that consumes this value (there could be, more on that later - but it is not a good way of doing things) it stays on the stack forever (until the engine clears the entire stack).
+Whenever `do_something()` is called it leaves an extra value `my_val` on the data stack. Since there is no code that consumes this value (there could be, more on that later - but it is not a good way of doing things) it stays on the stack forever (until the engine clears the entire stack).
 This is, of course, a problem and can lead to stack overflows.
 
 ### Function calls as statements
-Daedalus does not support function calls as statements, when oyu call a function in daedalus and it returns a value, even if you do not assign it to anything. This results in values being pushed to the stack, that will not be consumed and can result in a stack voerflow. Or it will be consumed by a function with an error in it...
+Daedalus does not support function calls as statements, when you call a function in daedalus and it returns a value, even if you do not assign it to anything. This results in values being pushed to the stack, that will not be consumed and can result in a stack voerflow. Or it will be consumed by a function with an error in it...
 
-In the following example, each add_item returns an int. The data stack
+In the following example, each add_item returns an int.
 ```dae
 // let's call `func int add_item(var C_NPC npc, var C_ITEM itm, var int amnt)`
 func int create_trader_items(var C_NPC trader) {
@@ -155,7 +155,7 @@ func int create_trader_items(var C_NPC trader) {
     add_item(trader, ItFo_Ham, 6);
 };
 ```
-at the end of the function the stack is going to be full of extra values, that do not get popped. Depending on the codepath, this could easily result in a stack overflow.
+At the end of the function the stack is going to be full of extra values, that do not get popped. Depending on the codepath, this could easily result in a stack overflow.
 
 ### Automatic stack underflow protection abuse
 You may notice that vanilla scripts frequently abuse this data stack hack:
