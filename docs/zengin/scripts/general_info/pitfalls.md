@@ -69,6 +69,15 @@ Although the maximum array size in Daedalus is 4096 elements, the maximum indexa
 ### Constant arrays cannot be indexed with `[]`
 In vanilla Daedalus, the `[]` operator cannot be used to access elements of a constant array at all - not even with a constant index. You must declare the elemnts individually as variables if you need runtime element access.
 
+## Integer values
+Daedalus `int` is a signed 32-bit integer (`-2 147 483 648` to `2 147 483 647`). Writing a number outside this range produces **different results depending on context**:
+```dae
+var int x = 9999999999999;     // overflows to an unexpected value
+var int z = 2147483648;        // wraps around to INT_MIN (-2147483648)
+var int w = 2147483647;        // OK — max int value
+```
+ZenGin does **not** warn about this, so large constants can silently produce wrong results at runtime.
+
 ## Operators
 
 ### Floating-point expressions only work at compile time
@@ -128,19 +137,19 @@ func int some_condition() {
 
 Due to this lack of control flow analysis and any rigorous checks at compile time, your scripts can compile even when there are quite serious problems. If you, for example, leave a value just as a statement, that pushes that value onto the data stack.
 ```dae
-const int my_val = 35;
-
-func void do_something () {
-    // something
-    my_val;
-    // something else
+const int my_val = 42;
+func void do_something() {
+    // ...
+    my_val;        // valid! pushes 42 onto the stack — forgotten value.
+    TRUE == FALSE; // also valid — evaluates to false, pushes false to the stack, never consumed.
+    // ...
 };
 ```
 Whenever `do_something()` is called it leaves an extra value `my_val` on the data stack. Since there is no code that consumes this value (there could be, more on that later - but it is not a good way of doing things) it stays on the stack forever (until the engine clears the entire stack).
 This is, of course, a problem and can lead to stack overflows.
 
 ### Function calls as statements
-Daedalus does not support function calls as statements, when you call a function in daedalus and it returns a value, even if you do not assign it to anything. This results in values being pushed to the stack, that will not be consumed and can result in a stack voerflow. Or it will be consumed by a function with an error in it...
+Daedalus does not support function calls as statements, when you call a function in daedalus and it returns a value, even if you do not assign it to anything. This results in values being pushed to the stack, that will not be consumed and can result in a stack overflow. Or it will be consumed by a function with an error in it...
 
 In the following example, each add_item returns an int.
 ```dae
